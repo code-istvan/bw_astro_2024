@@ -1,0 +1,52 @@
+@import "/src/sass/global";
+
+.guest-teachers-mobil {
+  width: 100%;
+  height: 43px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  background-color: $color-brand-orange;
+}
+.guest-teachers-mobil::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.guest-teachers-container-mobil {
+  background-color: $color-brand-orange;
+  overflow-x: auto;
+  div:nth-child(1),
+  div:nth-child(2) {
+    margin-bottom: 8px;
+  }
+}
+
+.guest-teachers-desktop {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  background-color: $color-brand-orange;
+}
+
+@media screen and (min-width: 870px) {
+  .guest-teachers-mobil {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 871px) {
+  .guest-teachers-desktop {
+    display: none;
+  }
+}
+
+.rolunk-parampara {
+  button {
+    margin-top: 9px;
+    padding-bottom: 0;
+  }
+}

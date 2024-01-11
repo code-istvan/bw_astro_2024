@@ -1,0 +1,20 @@
+@import "/src/sass/global";
+
+#logo {
+  fill: $color-shades-lightGray;
+  -webkit-transition: -webkit-transform 1s;
+  transform-origin: center;
+  position: fixed;
+}
+
+.navbar-logo:hover {
+  #logo {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+#logo_inner {
+  fill: $color-shades-lightGray;
+}

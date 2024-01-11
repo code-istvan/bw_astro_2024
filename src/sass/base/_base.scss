@@ -1,0 +1,46 @@
+@import "_colors";
+@import "_fonts";
+
+html {
+    @include lg {
+        font-size: 14px;
+    }
+}
+
+body {
+    background-color: $primary-background-color;
+    color: $color-shades-white;
+}
+
+@include xs {
+    html,
+    body {
+        font-size: $base-font-size-mobile;
+    }
+}
+
+@include md {
+    html,
+    body {
+        font-size: $base-font-size-tablet;
+    }
+}
+
+@include xl {
+    html,
+    body {
+        font-size: $base-font-size-desktop;
+    }
+}
+
+section {
+    @include xs {
+        margin-bottom: 40px;
+    }
+    @include md {
+        margin-bottom: 70px;
+    }
+    @include xl {
+        margin-bottom: 120px;
+    }
+}

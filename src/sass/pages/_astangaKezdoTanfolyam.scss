@@ -1,0 +1,60 @@
+@import "/src/sass/global";
+
+@media screen and (max-width: 768px) {
+  .tematika__second-column {
+    margin-top: -12px;
+  }
+}
+
+.jelentkezes-date {
+  display: flex;
+  @include xs {
+    flex-direction: column;
+    gap: 16px;
+  }
+  @include md {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  margin: 16px 0;
+}
+
+.jelentkezes-teacher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.jelentkezes-teacher--avatar {
+  margin-right: 12px;
+}
+
+.jelentkezes-button {
+  button {
+    font-weight: bold;
+  }
+}
+
+.gigajs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jelentkezes-address {
+  display: flex;
+  @include xs {
+    flex-direction: column;
+  }
+  @include md {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jelentkezes-address-line {
+    display: none;
+  }
+}

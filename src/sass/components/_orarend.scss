@@ -1,0 +1,76 @@
+@import "/src/sass/global";
+
+.schedule {
+  padding-top: 20px;
+}
+.schedule-class {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-class-second-line {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  .vertical-separator {
+    display: none;
+  }
+  h3 {
+    margin-bottom: 4px;
+  }
+}
+
+.signup-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    padding-right: 12px;
+  }
+}
+
+.schedule-details {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.schedule-main-row {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include md {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.schedule-date-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+
+  div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.schedule-card {
+  border-top: 1px solid $color-shades-lightBlack;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.hide-class {
+  display: none;
+}

@@ -1,0 +1,36 @@
+@import "/src/sass/global";
+
+.section--rolunk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .section--rolunk--text {
+    display: flex;
+    justify-content: center;
+    p {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 1px) and (max-width: 576px) {
+    .btn {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 577px) {
+    p {
+      width: 600px;
+    }
+  }
+}
+
+.section--rolunk--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  p {
+    width: fit-content;
+    text-align: center;
+  }
+}

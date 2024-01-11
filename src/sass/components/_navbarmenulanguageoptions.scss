@@ -1,0 +1,17 @@
+@import "/src/sass/global";
+
+.menuLanguage--box {
+  display: block;
+  height: auto;
+
+  ul {
+    list-style: none;
+    margin-left: 16px;
+    padding-right: 16px;
+
+    li {
+      display: block;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "/src/sass/global";
+
+@media screen and (min-width: 768px) {
+  .blogsidebar-wrapper {
+    margin-top: 60px;
+  }
+}
+
+.most-popular-posts {
+  color: $color-shades-gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  svg {
+    display: block;
+  }
+}
+
+.most-popular-ul li {
+  margin-bottom: 8px;
+  a:hover {
+    color: $color-brand-orange;
+  }
+}

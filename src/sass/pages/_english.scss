@@ -1,0 +1,34 @@
+@import "/src/sass/global";
+
+.english-page-index {
+  position: relative;
+}
+
+.english-page-index---number {
+  position: absolute;
+  top: -5px;
+  font-size: large;
+  font-weight: 800;
+}
+
+.english-menu-item {
+  padding-left: 16px;
+}
+
+.english-menu-items {
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.english-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 319px) {
+  .index-namaste-english {
+    margin-top: 12px;
+  }
+}

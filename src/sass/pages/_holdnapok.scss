@@ -1,0 +1,102 @@
+@import "/src/sass/global";
+
+.holdnapok-wrapper {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: $color-brand-orange;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-shades-lightBlack;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-big-image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-mobil-image {
+    display: none !important;
+  }
+}
+
+.hirlevel-hero-container {
+  position: relative;
+  padding: 0 !important;
+}
+
+.hirlevel-title {
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  margin: 0;
+}
+
+.hirlevel-hero-image {
+  z-index: 1;
+}
+
+.holdnapok-frame {
+  @include md {
+    .moondays-right-column {
+      order: 2;
+    }
+  }
+}
+
+.holdnapok--moondayCard--buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .button--is-inactive p {
+    padding: 11px 0;
+    color: $color-shades-lightBlack;
+  }
+}
+
+.holdnapok--right-side {
+  @include lg {
+    order: 2;
+    margin-top: 40px;
+  }
+}
+
+.moondays--holdnaptar-text {
+  @include xs {
+    display: none;
+  }
+  @include lg {
+    display: block;
+  }
+}
+
+.moondays--tab {
+  @include xs {
+    margin-top: -40px;
+  }
+  @include lg {
+    margin-top: 0px;
+  }
+}
+
+.moondays--star-section {
+  @include xs {
+    display: block;
+  }
+  @include lg {
+    display: none;
+  }
+}

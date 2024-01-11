@@ -1,0 +1,124 @@
+@use "sass:math";
+@import "_fonts";
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 9992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@mixin respond($breakpoint) {
+    // Mobile Small
+    @if $breakpoint == MS {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    // Mobile Large
+    @if $breakpoint == ML {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    // Table Portrait
+    @if $breakpoint == TP {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    // Table Landscape
+    @if $breakpoint == TL {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    // Big Desktop
+    @if $breakpoint == DL {
+        @media (min-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+// // Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin xs {
+    @media (min-width: map-get($grid-breakpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: map-get($grid-breakpoints, "xxl")) {
+        @content;
+    }
+}
+
+@mixin breakpoint($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+//ezeket a mixineket ki kell váltani!!! következő 3at
+@mixin mobil-menu-fonts {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: x-large;
+    font-weight: 800 !important;
+}
+
+@mixin desktop-menu-fonts {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+@mixin desktop-submenu-fonts {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: x-large;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: white;
+}
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($base, $size) {
+    $remSize: #{math.div($size, $base)};
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}

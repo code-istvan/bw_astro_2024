@@ -1,0 +1,20 @@
+@import "/src/sass/global";
+
+.hirlevel-button {
+  @media only screen and (min-width: 1px) and (max-width: 768px) {
+    button {
+      width: 100% !important;
+    }
+  }
+}
+
+.hirlevel-input-email {
+  margin-bottom: $base-margin-items;
+}
+
+.hirlevel-acceptance {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}

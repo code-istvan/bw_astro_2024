@@ -1,0 +1,13 @@
+@import "/src/sass/global";
+
+#text {
+  fill: whitesmoke;
+}
+
+#logo_text {
+  fill: $logo-color-primary;
+}
+
+._logo_text {
+  margin-left: 10px;
+}
