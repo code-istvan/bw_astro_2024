@@ -1,6 +1,4 @@
 @use "sass:math";
-// @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 @import "_grid";
 @import "_breakpoints";
@@ -13,9 +11,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "NunitoSans";
+    src: url("/fonts/nunito_sans/NunitoSans_10pt-Regular.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 // Font familis
 $font-family-primary: "AbrilFatface", cursive;
-$font-family-secondary: "Nunito Sans", sans-serif;
+$font-family-secondary: "NunitoSans", sans-serif;
 
 // Weight
 $font-weight-light: 300;
@@ -229,51 +236,50 @@ h5 {
     @include xl {
         font-size: fontSize(body, desktop);
     }
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--span {
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-regular;
+        line-height: 1.2;
+        text-transform: none;
+
+        @include xs {
+            font-size: fontSize(span, mobile);
+        }
+        @include md {
+            font-size: fontSize(span, tablet);
+        }
+        @include xl {
+            font-size: fontSize(span, desktop);
+        }
+
+        &--bold {
+            font-weight: $font-weight-semi-bold;
+        }
+    }
+
+    &--small {
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-regular;
+        line-height: 1.4;
+        text-transform: none;
+
+        @include xs {
+            font-size: fontSize(small, mobile);
+        }
+        @include xl {
+            font-size: fontSize(small, desktop);
+        }
+
+        &--bold {
+            font-weight: $font-weight-semi-bold;
+        }
+    }
 }
 
 p {
     @extend .body;
-}
-
-.span {
-    font-family: $font-family-secondary;
-    font-weight: $font-weight-regular;
-    line-height: 1.2;
-    text-transform: none;
-
-    @include xs {
-        font-size: fontSize(span, mobile);
-    }
-    @include md {
-        font-size: fontSize(span, tablet);
-    }
-    @include xl {
-        font-size: fontSize(span, desktop);
-    }
-
-    &--bold {
-        font-weight: $font-weight-semi-bold;
-    }
-}
-
-span {
-    @extend .span;
-}
-
-.small {
-    font-family: $font-family-secondary;
-    font-weight: $font-weight-regular;
-    line-height: 1.4;
-    text-transform: none;
-    // font-size: fontSize(small, mobile);
-    @include xs {
-        font-size: fontSize(small, mobile);
-    }
-    @include xl {
-        font-size: fontSize(small, desktop);
-    }
-
-    &--bold {
-        font-weight: $font-weight-semi-bold;
-    }
 }
