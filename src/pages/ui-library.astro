@@ -1,22 +1,108 @@
 ---
+import "../sass/global.scss";
+const colors = [
+    {
+        name: "Brand Orange",
+        class: "clr-brand-orange",
+        bgClass: "bg-brand-orange",
+    },
+    {
+        name: "Shades Gray",
+        class: "clr-shades-gray",
+        bgClass: "bg-shades-gray",
+    },
+    {
+        name: "Shades Light Gray",
+        class: "clr-shades-lightGray",
+        bgClass: "bg-shades-lightGray",
+    },
+    {
+        name: "Shades White",
+        class: "clr-shades-white",
+        bgClass: "bg-shades-white",
+    },
+    {
+        name: "Shades Dark Gray",
+        class: "clr-brand-orange",
+        bgClass: "bg-shades-darkGray",
+    },
+    {
+        name: "Shades Light Black",
+        class: "clr-shades-lightBlack",
+        bgClass: "bg-shades-lightBlack",
+    },
+    {
+        name: "Shades Black",
+        class: "clr-brand-orange",
+        bgClass: "bg-shades-black",
+    },
+];
 ---
-<html lang="en">
-  <head>
-    <title>BW UI Library</title>
-    <style>
-        @import '../sass/base/_base.scss';
-      </style>
-  </head>
-  <body>
-    <h1>BANDHA WORKS - UI Library</h1><br>
-    <h1>H1 - Heading1</h1>
-    <h2>H2 - Heading2</h2>
-    <h3>H3 - Heading3</h3>
-    <h4>H4 - Heading4</h4>
-    <h5>H5 - Heading5</h5>
-    <p>Body - Body font size</p>
-    <p class="body--bold">Body Bold - Body Bold font size</p>
-    <p class="body--span">Span - Span font size</p>
-    <p class="body--small">Small - Small font size</p>
-  </body>
+
+<html lang="hu">
+    <head>
+        <title>BW UI Library</title>
+        <style>
+            .highlight {
+                display: inline-block;
+                padding: 4px 8px;
+            }
+            .circle {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                border: 3px solid white;
+                display: inline-block;
+                margin: 10px;
+            }
+            .wrapper {
+                margin-right: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mb-40px mt-40px">
+                <h1>BANDHA WORKS - UI Library</h1>
+            </div>
+            <div class="row">
+                <div class="col mb-20px">
+                    <h2 class="bg-brand-orange mb-20px highlight mb-20px">
+                        Fonts
+                    </h2>
+                    <h1>H1 - Heading1</h1>
+                    <h2>H2 - Heading2</h2>
+                    <h3>H3 - Heading3</h3>
+                    <h4>H4 - Heading4</h4>
+                    <h5>H5 - Heading5</h5>
+                    <p>Body - Body font size</p>
+                    <p class="body--bold">Body Bold - Body Bold font size</p>
+                    <p class="body--span">Span - Span font size</p>
+                    <p class="body--small">Small - Small font size</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="bg-brand-orange mb-20px highlight">Colors</h2>
+                    <div class="row">
+                        {
+                            colors.map((color) => (
+                                <div class="wrapper">
+                                    <p
+                                        class={`body ${color.class} text-center`}
+                                    >
+                                        {color.name}
+                                    </p>
+                                    <div class={`circle ${color.bgClass}`} />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
