@@ -15,7 +15,13 @@ const useBreakpoint = () => {
         };
     }, []);
 
-    return breakpoint;
+    return {
+        xs: breakpoint === "xs",
+        sm: breakpoint === "sm",
+        md: breakpoint === "md",
+        l: breakpoint === "l",
+        xl: breakpoint === "xl",
+    };
 };
 
 const getBreakpoint = () => {
