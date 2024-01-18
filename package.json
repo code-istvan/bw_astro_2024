@@ -11,7 +11,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/react": "^3.0.9",
+    "@fontsource-variable/nunito-sans": "^5.0.9",
+    "@fontsource/abril-fatface": "^5.0.18",
     "astro": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.69.7",
     "typescript": "^5.3.3"
   },

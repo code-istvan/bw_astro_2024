@@ -3,26 +3,9 @@
 @import "_grid";
 @import "_breakpoints";
 
-@font-face {
-    font-family: "AbrilFatface";
-    src: url("/fonts/abril_fatface/AbrilFatface-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "NunitoSans";
-    src: url("/fonts/nunito_sans/NunitoSans_10pt-Regular.ttf")
-        format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 // Font familis
-$font-family-primary: "AbrilFatface", cursive;
-$font-family-secondary: "NunitoSans", sans-serif;
+$font-family-primary: "Abril Fatface", serif;
+$font-family-secondary: "Nunito Sans Variable", sans-serif;
 
 // Weight
 $font-weight-light: 300;
