@@ -5,7 +5,7 @@ const Header = () => {
 
     console.log(breakpoints.sm);
 
-    return <nav> {breakpoints.sm ? "Hello" : "goodby"} </nav>;
+    return <nav> {breakpoints.sm ? "Helloka" : "goodby"} </nav>;
 };
 
 export default Header;
