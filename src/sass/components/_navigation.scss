@@ -1,41 +1,42 @@
 @import "/src/sass/global";
 
 .navigation {
-  margin: 0 !important;
-  // height: 100% !important;
-  height: 60px !important;
+    margin: 0 !important;
+    // height: 100% !important;
+    height: 60px !important;
 }
 
 nav {
-  position: relative;
+    position: relative;
 
-  .navbar-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: none;
-    height: 60px;
-  }
+    .navbar-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: none;
+        height: 60px;
+    }
 }
 
 html[style="overflow: hidden;"] {
-  .navbar_container:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: $offcanvas-menu-color;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
+    .navbar_container:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $offcanvas-menu-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 .navbar-logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: auto;
-  z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    z-index: 2;
+    margin-left: 16px;
 }

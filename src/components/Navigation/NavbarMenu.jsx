@@ -1,0 +1,112 @@
+import { CustomLink } from "../CustomLink";
+import NavbarDesktopFeatured from "./NavbarDesktopFeatured";
+import NavbarMenuMobilHeader from "./NavbarMenuMobilHeader";
+import NavbarMenuMobilFeatured from "./NavbarMenuMobilFeatured";
+import useBreakpoints from "../../hooks/useBreakpoints";
+import "../../sass/components/_navbarmenu.scss";
+
+const NavbarMenu = ({ open, setOpen }) => {
+    const breakpoints = useBreakpoints();
+
+    const menuItemsJogaorak = [
+        { link: "/orarend", label: "ÓRAREND" },
+        { link: "/arak", label: "ÁRAK" },
+        { link: "/astanga-mysore-program", label: "MYSORE-PROGRAM" },
+        { link: "/tanfolyam", label: "TANFOLYAMOK" },
+        { link: "/csapatunk", label: "CSAPATUNK" },
+        { link: "/vinyasza-jogairanyzatok", label: "JÓGAIRÁNYZATOK" },
+        { link: "/letoltesek", label: "LETÖLTÉSEK" },
+        // { link: "/galeria", label: "GALÉRIA", extraClass: "" },
+    ];
+
+    const menuItemsTudnivalok = [
+        { link: "/rolunk", label: "RÓLUNK" },
+        { link: "/elso-alkalom", label: "ELSŐ ALKALOM" },
+        { link: "/hazirend", label: "HÁZIREND" },
+        { link: "/mantra", label: "MANTRÁK" },
+        { link: "/holdnapok", label: "HOLDNAPOK" },
+        { link: "/osztondij", label: "ÖSZTÖNDÍJ", extraClass: "" },
+        // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
+        { link: "/ajanlottolvasmanyok", label: "OLVASMÁNYOK" },
+    ];
+
+    const menuGroupsFomenu = [
+        { title: "JÓGAÓRÁK", items: menuItemsJogaorak },
+        { title: "TUDNIVALÓK", items: menuItemsTudnivalok },
+    ];
+
+    const menuItemsFomenu = [
+        { link: "/blog", label: "BLOG" },
+        { link: "https://shop.bandha.works", label: "SHOP", isExternal: true },
+        { link: "/kapcsolat", label: "KAPCSOLAT" },
+    ];
+
+    return (
+        <div
+            className={`${open ? "mobil-menu" : "mobil-menu mobil-menu--closed"}`}
+        >
+            {/* {breakpoints.l ? <NavbarMenuMobilHeader /> : null} */}
+            <ul className="nav-links">
+                {menuGroupsFomenu.map(({ title, items }) => (
+                    <li className="nav-item dropdown" key={title}>
+                        <div
+                            className="nav-link dropdown-toggle clr-shades-white"
+                            // href="#"
+                            id="navbarDropdown"
+                            // role="button"
+                            data-bs-toggle="dropdown"
+                            // aria-expanded="false"
+                        >
+                            {title}
+                        </div>
+                        <ul
+                            className="dropdown-menu"
+                            aria-labelledby="navbarDropdown"
+                        >
+                            {items.map(({ link, label }) => (
+                                <li className="nav-item" as="li" key={label}>
+                                    <CustomLink
+                                        className="dropdown-item clr-shades-white"
+                                        to={link}
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        {label}
+                                    </CustomLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
+                {menuItemsFomenu.map(({ link, label, isExternal }) => (
+                    <li className="nav-item" as="li" key={label}>
+                        {isExternal ? (
+                            <a
+                                className="nav-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={link}
+                                onClick={() => setOpen(false)}
+                            >
+                                {label}
+                            </a>
+                        ) : (
+                            <CustomLink
+                                className="nav-link clr-shades-white menuItemsFomenu"
+                                to={link}
+                                onClick={() => setOpen(false)}
+                            >
+                                {label}
+                            </CustomLink>
+                        )}
+                    </li>
+                ))}
+                {/* <li className="nav-item">
+                    {breakpoints.l ? null : <NavbarDesktopFeatured />}
+                </li> */}
+            </ul>
+            {/* {breakpoints.l ? <NavbarMenuMobilFeatured /> : null} */}
+        </div>
+    );
+};
+
+export default NavbarMenu;
