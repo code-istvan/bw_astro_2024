@@ -1,4 +1,5 @@
 import { CustomLink } from "../CustomLink";
+import React, { useState } from "react";
 import NavbarDesktopFeatured from "./NavbarDesktopFeatured";
 import NavbarMenuMobilHeader from "./NavbarMenuMobilHeader";
 import NavbarMenuMobilFeatured from "./NavbarMenuMobilFeatured";
@@ -7,6 +8,16 @@ import "../../sass/components/_navbarmenu.scss";
 
 const NavbarMenu = ({ open, setOpen }) => {
     const breakpoints = useBreakpoints();
+    const [isSubmenuOpen, setSubmenuOpen] = useState({
+        JOGAORAK: false,
+        TUDNIVALOK: false,
+    });
+    const handleSubmenuOpen = (title) => {
+        setSubmenuOpen((prevState) => ({
+            ...prevState,
+            [title.toUpperCase()]: !prevState[title.toUpperCase()],
+        }));
+    };
 
     const menuItemsJogaorak = [
         { link: "/orarend", label: "ÓRAREND" },
@@ -48,7 +59,11 @@ const NavbarMenu = ({ open, setOpen }) => {
             {/* {breakpoints.l ? <NavbarMenuMobilHeader /> : null} */}
             <ul className="nav-links">
                 {menuGroupsFomenu.map(({ title, items }) => (
-                    <li className="nav-item dropdown" key={title}>
+                    <li
+                        className="nav-item dropdown"
+                        key={title}
+                        onClick={() => handleSubmenuOpen(title)}
+                    >
                         <div
                             className="nav-link dropdown-toggle clr-shades-white"
                             // href="#"
@@ -60,20 +75,27 @@ const NavbarMenu = ({ open, setOpen }) => {
                             {title}
                         </div>
                         <ul
-                            className="dropdown-menu"
+                            className={`dropdown-menu ${isSubmenuOpen[title] ? "show" : ""}`}
                             aria-labelledby="navbarDropdown"
                         >
-                            {items.map(({ link, label }) => (
-                                <li className="nav-item" as="li" key={label}>
-                                    <CustomLink
-                                        className="dropdown-item clr-shades-white"
-                                        to={link}
-                                        onClick={() => setOpen(false)}
+                            {items.map(({ link, label }) => {
+                                console.log(link, label);
+                                return (
+                                    <li
+                                        className="nav-item"
+                                        as="li"
+                                        key={label}
                                     >
-                                        {label}
-                                    </CustomLink>
-                                </li>
-                            ))}
+                                        <CustomLink
+                                            className="dropdown-item clr-shades-white"
+                                            link={link}
+                                            onClick={() => setOpen(false)}
+                                        >
+                                            {label}
+                                        </CustomLink>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </li>
                 ))}

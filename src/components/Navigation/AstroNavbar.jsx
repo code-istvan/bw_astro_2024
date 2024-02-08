@@ -1,13 +1,15 @@
 import React, { useState, useRef } from "react";
 import AstroNavigation from "./AstroNavigation";
-import ProgressBar from "./ProgressBar";
+// import ProgressBar from "./ProgressBar";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import "../../sass/components/_navbar.scss";
 
-const AstroNavbar = ({ articleProperties, isOpen, handleOpenMenu }) => {
+const AstroNavbar = () => {
     const navRef = useRef();
     const prevScrollRef = useRef(0);
     const [scroll, setScroll] = useState(0);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const handleOpenMenu = () => setIsOpenMenu(!isOpenMenu);
 
     useScrollPosition(({ currentPosition }) => {
         let { y: currentYPosition } = currentPosition;
@@ -30,18 +32,18 @@ const AstroNavbar = ({ articleProperties, isOpen, handleOpenMenu }) => {
         <>
             <div className="navbar_container fluid" ref={navRef}>
                 <AstroNavigation
-                    isOpen={isOpen}
+                    isOpen={isOpenMenu}
                     handleOpenMenu={handleOpenMenu}
                 />
             </div>
-            {articleProperties && scroll < 0 && (
+            {/* {articleProperties && scroll < 0 && (
                 <div className="progressbar_container">
                     <ProgressBar
                         scroll={scroll}
                         articleProperties={articleProperties}
                     />
                 </div>
-            )}
+            )} */}
         </>
     );
 };
