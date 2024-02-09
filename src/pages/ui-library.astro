@@ -2,6 +2,7 @@
 import "../sass/global.scss";
 import "@fontsource-variable/nunito-sans";
 import "@fontsource/abril-fatface";
+import ScreenSizeIndicator from "../components/ScreenSizeIndicator.jsx";
 
 const colors = [
     {
@@ -71,6 +72,15 @@ const colors = [
             <div class="row mb-40px mt-40px">
                 <h1 class="heading heading--1">BANDHA WORKS - UI Library</h1>
             </div>
+            <div class="row mb-20px">
+                <div class="col">
+                    <h2 class="bg-brand-orange mb-20px highlight">
+                        Screen Size Indicator
+                    </h2>
+                    <ScreenSizeIndicator client:only />
+                </div>
+            </div>
+
             <div class="row">
                 <h2 class="bg-brand-orange mb-20px highlight mb-20px">Fonts</h2>
             </div>

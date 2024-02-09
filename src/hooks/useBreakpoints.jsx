@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { breakpoints } from "../constants/index.jsx";
 
 const useBreakpoint = () => {
     const [breakpoint, setBreakpoint] = useState(getBreakpoint());
@@ -19,24 +20,26 @@ const useBreakpoint = () => {
         xs: breakpoint === "xs",
         sm: breakpoint === "sm",
         md: breakpoint === "md",
-        l: breakpoint === "l",
+        l: breakpoint === "lg",
         xl: breakpoint === "xl",
+        xxl: breakpoint === "xxl",
     };
 };
 
 const getBreakpoint = () => {
     const width = window.innerWidth;
-
-    if (width <= 320) {
+    if (width < parseInt(breakpoints.sm)) {
         return "xs";
-    } else if (width <= 720) {
+    } else if (width < parseInt(breakpoints.md)) {
         return "sm";
-    } else if (width <= 1024) {
+    } else if (width < parseInt(breakpoints.lg)) {
         return "md";
-    } else if (width <= 1536) {
-        return "l";
-    } else {
+    } else if (width < parseInt(breakpoints.xl)) {
+        return "lg";
+    } else if (width < parseInt(breakpoints.xxl)) {
         return "xl";
+    } else {
+        return "xxl";
     }
 };
 
