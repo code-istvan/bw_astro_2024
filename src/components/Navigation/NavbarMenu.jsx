@@ -67,7 +67,8 @@ const NavbarMenu = ({ open, setOpen }) => {
                         <div
                             className="nav-link dropdown-toggle clr-shades-white"
                             // href="#"
-                            id={`navbarDropdown-${index}`}
+                            // id={`navbarDropdown-${index}`}
+                            id="navbarDropdown"
                             // role="button"
                             data-bs-toggle="dropdown"
                             // aria-expanded="false"
@@ -76,7 +77,7 @@ const NavbarMenu = ({ open, setOpen }) => {
                         </div>
                         <ul
                             className={`dropdown-menu ${isSubmenuOpen[title] ? "show" : ""}`}
-                            aria-labelledby={`navbarDropdown-${index}`}
+                            aria-labelledby="navbarDropdown"
                         >
                             {items.map(({ link, label }) => {
                                 console.log(link, label);
