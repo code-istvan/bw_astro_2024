@@ -5,7 +5,7 @@ import NavbarMenu from "./NavbarMenu";
 import Hamburger from "./Hamburger";
 import "../../sass/components/_navigation.scss";
 
-export default function AstroNavigation() {
+export default function AstroNavigation({ lang }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const openAstroNavigation = () => {
@@ -23,7 +23,7 @@ export default function AstroNavigation() {
                     <Hamburger open={isOpen} />
                 </div>
             </div>
-            <NavbarMenu open={isOpen} setOpen={setIsOpen} />
+            <NavbarMenu open={isOpen} setOpen={setIsOpen} lang={lang} />
         </nav>
     );
 }

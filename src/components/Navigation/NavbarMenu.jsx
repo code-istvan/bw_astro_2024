@@ -6,7 +6,7 @@ import NavbarMenuMobilFeatured from "./NavbarMenuMobilFeatured";
 import useBreakpoints from "../../hooks/useBreakpoints";
 import "../../sass/components/_navbarmenu.scss";
 
-const NavbarMenu = ({ open, setOpen }) => {
+const NavbarMenu = ({ open, setOpen, lang }) => {
     const breakpoints = useBreakpoints();
     const [isSubmenuOpen, setSubmenuOpen] = useState({
         JOGAORAK: false,
@@ -78,6 +78,7 @@ const NavbarMenu = ({ open, setOpen }) => {
                         <ul
                             className={`dropdown-menu ${isSubmenuOpen[title] ? "show" : ""}`}
                             aria-labelledby="navbarDropdown"
+                            // aria-labelledby={`navbarDropdown-${index}`}
                         >
                             {items.map(({ link, label }) => {
                                 console.log(link, label);
@@ -89,7 +90,7 @@ const NavbarMenu = ({ open, setOpen }) => {
                                     >
                                         <CustomLink
                                             className="dropdown-item clr-shades-white"
-                                            link={link}
+                                            link={`/${lang}${link}`}
                                             onClick={() => setOpen(false)}
                                         >
                                             {label}
@@ -107,7 +108,7 @@ const NavbarMenu = ({ open, setOpen }) => {
                                 className="nav-link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href={link}
+                                href={`/${lang}` / `${link}`}
                                 onClick={() => setOpen(false)}
                             >
                                 {label}
@@ -115,7 +116,7 @@ const NavbarMenu = ({ open, setOpen }) => {
                         ) : (
                             <CustomLink
                                 className="nav-link clr-shades-white menuItemsFomenu"
-                                to={link}
+                                to={`/${lang}` / `${link}`}
                                 onClick={() => setOpen(false)}
                             >
                                 {label}
