@@ -38,7 +38,7 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
         { link: "/holdnapok", label: "HOLDNAPOK" },
         { link: "/osztondij", label: "ÖSZTÖNDÍJ", extraClass: "" },
         // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
-        { link: "/ajanlottolvasmanyok", label: "OLVASMÁNYOK" },
+        { link: "/ajanlott-olvasmanyok", label: "OLVASMÁNYOK" },
     ];
 
     const menuGroupsFomenu = [
