@@ -3,7 +3,8 @@ export const languages = {
     hu: "Hungarian",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "hu";
+export const showDefaultLang = false;
 
 export const ui = {
     en: {
