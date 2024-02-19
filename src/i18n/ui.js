@@ -7,15 +7,22 @@ export const defaultLang = "hu";
 export const showDefaultLang = false;
 
 export const ui = {
-    en: {
-        schedule: "Schedule",
-        "nav.home": "Home",
-        "nav.about": "About",
-        "nav.twitter": "Twitter",
-    },
     hu: {
-        schedule: "orarend",
-        "nav.home": "Kezdőlap",
-        "nav.about": "Rólunk",
+        orarend: "Órarend",
+        arak: "Árak",
+        mysoreprogram: "Mysore-program",
+        tanfolyamok: "Tanfolyamok",
+        csapatunk: "Csapatunk",
+        jógairányzatok: "Jógairányzatok",
+        letoltesek: "Letöltések",
+    },
+    en: {
+        orarend: "Schedule",
+        arak: "Prices",
+        mysoreprogram: "Mysore-program",
+        tanfolyamok: "Courses",
+        csapatunk: "Our team",
+        jógairányzatok: "Vinyasa yoga styles",
+        letoltesek: "Downloads",
     },
 };
