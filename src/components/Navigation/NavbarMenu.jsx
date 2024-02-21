@@ -4,6 +4,7 @@ import NavbarDesktopFeatured from "./NavbarDesktopFeatured";
 import NavbarMenuMobilHeader from "./NavbarMenuMobilHeader";
 import NavbarMenuMobilFeatured from "./NavbarMenuMobilFeatured";
 import useBreakpoints from "../../hooks/useBreakpoints";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import "../../sass/components/_navbarmenu.scss";
 
 const NavbarMenu = ({ open, setOpen, lang }) => {
@@ -19,26 +20,28 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
         }));
     };
 
+    const t = useTranslations(lang);
+
     const menuItemsJogaorak = [
-        { link: "/orarend", label: "ÓRAREND" },
-        { link: "/arak", label: "ÁRAK" },
-        { link: "/astanga-mysore-program", label: "MYSORE-PROGRAM" },
-        { link: "/tanfolyam", label: "TANFOLYAMOK" },
-        { link: "/csapatunk", label: "CSAPATUNK" },
-        { link: "/vinyasza-jogairanyzatok", label: "JÓGAIRÁNYZATOK" },
-        { link: "/letoltesek", label: "LETÖLTÉSEK" },
+        { link: "/orarend", label: t("orarend") },
+        { link: "/arak", label: t("arak") },
+        { link: "/astanga-mysore-program", label: t("mysoreprogram") },
+        { link: "/tanfolyam", label: t("tanfolyamok") },
+        { link: "/csapatunk", label: t("csapatunk") },
+        { link: "/vinyasza-jogairanyzatok", label: t("jógairányzatok") },
+        { link: "/letoltesek", label: t("letoltesek") },
         // { link: "/galeria", label: "GALÉRIA", extraClass: "" },
     ];
 
     const menuItemsTudnivalok = [
-        { link: "/rolunk", label: "RÓLUNK" },
-        { link: "/elso-alkalom", label: "ELSŐ ALKALOM" },
-        { link: "/hazirend", label: "HÁZIREND" },
-        { link: "/mantra", label: "MANTRÁK" },
-        { link: "/holdnapok", label: "HOLDNAPOK" },
-        { link: "/osztondij", label: "ÖSZTÖNDÍJ", extraClass: "" },
+        { link: "/rolunk", label: t("rolunk") },
+        { link: "/elso-alkalom", label: t("elsoalkalom") },
+        { link: "/hazirend", label: t("hazirend") },
+        { link: "/mantra", label: t("mantra") },
+        { link: "/holdnapok", label: t("holdnapok") },
+        { link: "/osztondij", label: t("osztondij"), extraClass: "" },
         // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
-        { link: "/ajanlott-olvasmanyok", label: "OLVASMÁNYOK" },
+        { link: "/ajanlott-olvasmanyok", label: t("olvasmanyok") },
     ];
 
     const menuGroupsFomenu = [
