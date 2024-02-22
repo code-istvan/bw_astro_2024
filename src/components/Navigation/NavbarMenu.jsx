@@ -4,7 +4,7 @@ import NavbarDesktopFeatured from "./NavbarDesktopFeatured";
 import NavbarMenuMobilHeader from "./NavbarMenuMobilHeader";
 import NavbarMenuMobilFeatured from "./NavbarMenuMobilFeatured";
 import useBreakpoints from "../../hooks/useBreakpoints";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { useTranslations, useTranslatedPath } from "../../i18n/utils";
 import "../../sass/components/_navbarmenu.scss";
 
 const NavbarMenu = ({ open, setOpen, lang }) => {
@@ -21,27 +21,41 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
     };
 
     const t = useTranslations(lang);
+    const translatePath = useTranslatedPath(lang);
 
     const menuItemsJogaorak = [
-        { link: "/orarend", label: t("orarend") },
-        { link: "/arak", label: t("arak") },
-        { link: "/astanga-mysore-program", label: t("mysoreprogram") },
-        { link: "/tanfolyam", label: t("tanfolyamok") },
-        { link: "/csapatunk", label: t("csapatunk") },
-        { link: "/vinyasza-jogairanyzatok", label: t("jógairányzatok") },
-        { link: "/letoltesek", label: t("letoltesek") },
+        { link: translatePath(`/orarend/`), label: t("orarend") },
+        { link: translatePath(`/arak/`), label: t("arak") },
+        {
+            link: translatePath(`/astanga-mysore-program/`),
+            label: t("mysoreprogram"),
+        },
+        { link: translatePath(`/tanfolyam/`), label: t("tanfolyamok") },
+        { link: translatePath(`/csapatunk/`), label: t("csapatunk") },
+        {
+            link: translatePath(`/vinyasza-jogairanyzatok/`),
+            label: t("jógairányzatok"),
+        },
+        { link: translatePath(`/letoltesek/`), label: t("letoltesek") },
         // { link: "/galeria", label: "GALÉRIA", extraClass: "" },
     ];
 
     const menuItemsTudnivalok = [
-        { link: "/rolunk", label: t("rolunk") },
-        { link: "/elso-alkalom", label: t("elsoalkalom") },
-        { link: "/hazirend", label: t("hazirend") },
-        { link: "/mantra", label: t("mantra") },
-        { link: "/holdnapok", label: t("holdnapok") },
-        { link: "/osztondij", label: t("osztondij"), extraClass: "" },
+        { link: translatePath(`/rolunk/`), label: t("rolunk") },
+        { link: translatePath(`/elso-alkalom/`), label: t("elsoalkalom") },
+        { link: translatePath(`/hazirend/`), label: t("hazirend") },
+        { link: translatePath(`/mantra/`), label: t("mantra") },
+        { link: translatePath(`/holdnapok/`), label: t("holdnapok") },
+        {
+            link: translatePath(`/osztondij/`),
+            label: t("osztondij"),
+            extraClass: "",
+        },
         // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
-        { link: "/ajanlott-olvasmanyok", label: t("olvasmanyok") },
+        {
+            link: translatePath(`/ajanlott-olvasmanyok/`),
+            label: t("olvasmanyok"),
+        },
     ];
 
     const menuGroupsFomenu = [
@@ -84,7 +98,6 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
                             // aria-labelledby={`navbarDropdown-${index}`}
                         >
                             {items.map(({ link, label }) => {
-                                console.log(link, label);
                                 return (
                                     <li
                                         className="nav-item"
@@ -93,7 +106,7 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
                                     >
                                         <CustomLink
                                             className="dropdown-item clr-shades-white"
-                                            link={`/${lang}${link}`}
+                                            link={`${link}`}
                                             onClick={() => setOpen(false)}
                                         >
                                             {label}
@@ -119,7 +132,7 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
                         ) : (
                             <CustomLink
                                 className="nav-link clr-shades-white menuItemsFomenu"
-                                to={`/${lang}` / `${link}`}
+                                to={`/${translatePath}` / `${link}`}
                                 onClick={() => setOpen(false)}
                             >
                                 {label}
@@ -128,7 +141,7 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
                     </li>
                 ))}
                 {/* <li className="nav-item">
-                    {breakpoints.l ? null : <NavbarDesktopFeatured />}
+                    {breakpoints.lg ? null : <NavbarDesktopFeatured />}
                 </li> */}
             </ul>
             {/* {breakpoints.l ? <NavbarMenuMobilFeatured /> : null} */}
