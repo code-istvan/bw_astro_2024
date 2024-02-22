@@ -21,8 +21,10 @@ export default function AstroNavigation({ lang, pathname }) {
                     <LogoBWtext />
                 </a>
 
-                <div onClick={openAstroNavigation}>
+                <div>
                     <LanguagePicker lang={lang} pathname={pathname} />
+                </div>
+                <div onClick={openAstroNavigation}>
                     <Hamburger open={isOpen} />
                 </div>
             </div>
