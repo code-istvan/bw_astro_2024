@@ -45,14 +45,14 @@ const NavbarMenu = ({ open, setOpen, lang }) => {
     ];
 
     const menuGroupsFomenu = [
-        { title: "JÓGAÓRÁK", items: menuItemsJogaorak },
-        { title: "TUDNIVALÓK", items: menuItemsTudnivalok },
+        { title: t("jogaorak"), items: menuItemsJogaorak },
+        { title: t("tudnivalok"), items: menuItemsTudnivalok },
     ];
 
     const menuItemsFomenu = [
         { link: "/blog", label: "BLOG" },
         { link: "https://shop.bandha.works", label: "SHOP", isExternal: true },
-        { link: "/kapcsolat", label: "KAPCSOLAT" },
+        { link: "/kapcsolat", label: t("kapcsolat") },
     ];
 
     return (

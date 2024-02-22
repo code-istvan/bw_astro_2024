@@ -22,6 +22,9 @@ export const ui = {
         holdnapok: "Holdnapok",
         osztondij: "Ösztöndij",
         olvasmanyok: "Ajánlott olvasmányok",
+        jogaorak: "JÓGAÓRÁK",
+        tudnivalok: "TUDNIVALÓK",
+        kapcsolat: "KAPCSOLAT",
     },
     en: {
         orarend: "Schedule",
@@ -38,5 +41,8 @@ export const ui = {
         holdnapok: "Moondays",
         osztondij: "Scholarship",
         olvasmanyok: "Readings",
+        jogaorak: "YOGA CLASSES",
+        tudnivalok: "STUDIES",
+        kapcsolat: "CONTACT",
     },
 };
