@@ -37,6 +37,11 @@ const AstroNavbar = ({ url }) => {
                     lang={lang}
                     isOpen={isOpenMenu}
                     handleOpenMenu={handleOpenMenu}
+                    pathname={
+                        url.pathname.startsWith("/en/")
+                            ? url.pathname.slice(3)
+                            : url.pathname
+                    }
                 />
             </div>
             {/* {articleProperties && scroll < 0 && (

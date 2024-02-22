@@ -3,9 +3,10 @@ import LogoBW from "./LogoBW";
 import LogoBWtext from "./LogoBWtext";
 import NavbarMenu from "./NavbarMenu";
 import Hamburger from "./Hamburger";
+import { LanguagePicker } from "../LanguagePicker";
 import "../../sass/components/_navigation.scss";
 
-export default function AstroNavigation({ lang }) {
+export default function AstroNavigation({ lang, pathname }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const openAstroNavigation = () => {
@@ -19,7 +20,9 @@ export default function AstroNavigation({ lang }) {
                     <LogoBW />
                     <LogoBWtext />
                 </a>
+
                 <div onClick={openAstroNavigation}>
+                    <LanguagePicker lang={lang} pathname={pathname} />
                     <Hamburger open={isOpen} />
                 </div>
             </div>
