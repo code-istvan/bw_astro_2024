@@ -4,15 +4,13 @@ import { useTranslatedPath } from "../i18n/utils";
 export const LanguagePicker = ({ lang: currentLanguage, pathname }) => {
     const translatePath = useTranslatedPath(currentLanguage);
 
-    console.log("va", pathname);
-
     return (
         <ul>
-            {Object.entries(languages).map(([lang, label]) => {
+            {Object.entries(languages).map(([lang, { name, shortName }]) => {
                 if (currentLanguage === lang) return;
                 return (
-                    <li>
-                        <a href={translatePath(pathname, lang)}>{label}</a>
+                    <li key={lang}>
+                        <a href={translatePath(pathname, lang)}>{shortName}</a>
                     </li>
                 );
             })}

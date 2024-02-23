@@ -1,6 +1,6 @@
 export const languages = {
-    en: "English",
-    hu: "Hungarian",
+    en: { name: "English", shortName: "EN" },
+    hu: { name: "Hungarian", shortName: "HU" },
 };
 
 export const defaultLang = "hu";
