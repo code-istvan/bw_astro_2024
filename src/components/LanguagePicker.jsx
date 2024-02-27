@@ -10,7 +10,9 @@ export const LanguagePicker = ({ lang: currentLanguage, pathname }) => {
                 if (currentLanguage === lang) return;
                 return (
                     <li key={lang}>
-                        <a href={translatePath(pathname, lang)}>{shortName}</a>
+                        <a href={translatePath(pathname, lang)}>
+                            <h4>{shortName}</h4>
+                        </a>
                     </li>
                 );
             })}

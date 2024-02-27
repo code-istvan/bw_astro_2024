@@ -1,5 +1,8 @@
 ---
 import AstroNavbar from "../components/Navigation/AstroNavbar";
+import { getImage } from "astro:assets";
+import faviconSrc from "../images/favicon.png";
+import faviconSvgSrc from "../images/favicon.svg";
 import "../sass/global.scss";
 import "../sass/layouts/_layout.scss";
 
@@ -7,6 +10,14 @@ interface Props {
     title: string;
     isHomePage?: boolean;
 }
+
+const appleTouchIcon = await getImage({
+    src: faviconSrc,
+    width: 180,
+    height: 180,
+    format: "png",
+});
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: "svg" });
 
 const url = Astro.url;
 const { title, isHomePage } = Astro.props as Props;
@@ -29,6 +40,11 @@ const { title, isHomePage } = Astro.props as Props;
                 </script>
             )
         } -->
+
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
+        <link rel="apple-touch-icon" href={appleTouchIcon.src} />
+        <link rel="manifest" href="/manifest.json" />
     </head>
     <body>
         <AstroNavbar client:only="react" url={url} />
