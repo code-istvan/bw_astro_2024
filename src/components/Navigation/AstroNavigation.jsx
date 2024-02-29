@@ -3,7 +3,9 @@ import LogoBW from "./LogoBW";
 import LogoBWtext from "./LogoBWtext";
 import NavbarMenu from "./NavbarMenu";
 import Hamburger from "./Hamburger";
+import { CustomLink } from "../CustomLink";
 import { LanguagePicker } from "../LanguagePicker";
+import { useTranslatedPath } from "../../i18n/utils";
 import "../../sass/components/_navigation.scss";
 
 export default function AstroNavigation({ lang, pathname }) {
@@ -13,13 +15,20 @@ export default function AstroNavigation({ lang, pathname }) {
         setIsOpen(!isOpen);
     };
 
+    const translatePath = useTranslatedPath(lang);
+
     return (
         <nav className="navigation">
             <div className="container-fluid navbar-box">
-                <a className="navbar-logo" href="/">
+                <CustomLink classNames="navbar-logo" link={translatePath(`/`)}>
                     <LogoBW />
                     <LogoBWtext />
-                </a>
+                </CustomLink>
+
+                {/* <a className="navbar-logo" href="/">
+                    <LogoBW />
+                    <LogoBWtext />
+                </a> */}
 
                 <div className="navigation-lang-section">
                     <LanguagePicker lang={lang} pathname={pathname} />
