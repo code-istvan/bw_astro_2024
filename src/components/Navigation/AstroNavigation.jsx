@@ -24,12 +24,6 @@ export default function AstroNavigation({ lang, pathname }) {
                     <LogoBW />
                     <LogoBWtext />
                 </CustomLink>
-
-                {/* <a className="navbar-logo" href="/">
-                    <LogoBW />
-                    <LogoBWtext />
-                </a> */}
-
                 <div className="navigation-lang-section">
                     <LanguagePicker lang={lang} pathname={pathname} />
                 </div>
