@@ -1,8 +1,10 @@
 ---
 import AstroNavbar from "../components/Navigation/AstroNavbar";
+import NavbarTwo from "../components/Navigation/NavbarTwo.astro";
 import { getImage } from "astro:assets";
 import faviconSrc from "../images/favicon.png";
 import faviconSvgSrc from "../images/favicon.svg";
+
 import "../sass/global.scss";
 import "../sass/layouts/_layout.scss";
 
@@ -47,7 +49,8 @@ const { title, isHomePage } = Astro.props as Props;
     </head>
     <body>
         <!-- <AstroNavbar client:only="react" url={url} /> -->
-        <AstroNavbar client:only="react" url={url} />
+        <!-- <AstroNavbar client:only="react" url={url} /> -->
+        <NavbarTwo />
         <div class="layout-content-wrapper"><slot /></div>
     </body>
 </html>
