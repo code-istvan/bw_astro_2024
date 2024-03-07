@@ -76,24 +76,26 @@ import logo from "../../images/logo.svg";
     ];
 
     const menuList = document.getElementById("menu");
+    if (menuList) {
+        menuItemsJogaorak.forEach((link) => {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
 
-    menuItemsJogaorak.forEach((link) => {
-        const listItem = document.createElement("li");
-        const anchor = document.createElement("a");
-
-        anchor.href = link.link;
-        anchor.textContent = link.label;
-        listItem.appendChild(anchor);
-        menuList.appendChild(listItem);
-    });
+            anchor.href = link.link;
+            anchor.textContent = link.label;
+            listItem.appendChild(anchor);
+            menuList.appendChild(listItem);
+        });
+    }
 
     const hamburgerMenu = document.getElementById("hamburger");
 
-    hamburgerMenu.addEventListener("click", function () {
-        menuList.classList.toggle("open");
-
-        console.log("clicked");
-    });
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener("click", function () {
+            menuList?.classList.toggle("open");
+            console.log("clicked");
+        });
+    }
 </script>
 
 <style>
