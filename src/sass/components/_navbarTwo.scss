@@ -1,0 +1,52 @@
+@import "/src/sass/global";
+
+#menu {
+    display: none;
+}
+
+#menu.open {
+    display: block;
+}
+
+.navbar-logo {
+    .navbar-logo:hover {
+        .navbar-logo-int2 {
+            -webkit-transform: rotate(360deg) translateZ(0);
+            position: relative;
+            z-index: 9999;
+        }
+    }
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: $color-shades-lightGray;
+    background-color: white;
+    display: block;
+    margin: 4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.flexyke {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 16px;
+    img:nth-child(2) {
+        margin-left: 16px;
+    }
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    div:nth-child(2) {
+        margin-right: 16px;
+    }
+}

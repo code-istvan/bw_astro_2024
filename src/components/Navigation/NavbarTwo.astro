@@ -1,112 +1,118 @@
 ---
-import LogoBW from "./LogoBW";
-import LogoBWtext from "./LogoBWtext";
 import logo from "../../images/logo.svg";
+import logotext from "../../images/logo_text.svg";
+import "../../sass/components/_navbarTwo.scss";
 ---
 
 <header>
-    <div>
-        <LogoBW client:only="react" />
-        <LogoBWtext client:only="react" />
-        <img src={logo.src} alt="image description" class="logo-round" />
+    <div class="container-fluid">
+        <nav>
+            <div class="flexyke">
+                <img
+                    src={logo.src}
+                    alt="bandha works logo"
+                    class="navbar-logo"
+                />
+                <img
+                    src={logotext.src}
+                    alt="bandha works logo"
+                    class="navbar-logo"
+                />
+            </div>
+            <!-- <div class="hamburger"> -->
+            <div class="hamburger--container">
+                <div id="hamburger" class="hamburger hamburger-closed">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <div id="menu"></div>
+        </nav>
     </div>
-</header>
-<div class="hamburger">
-    <div class="hamburger--container">
-        <div id="hamburger" class="hamburger hamburger-closed">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-    </div>
-</div>
 
-<div id="menu"></div>
+    <script>
+        import { useTranslations, useTranslatedPath } from "../../i18n/utils";
 
-<script>
-    import { useTranslations, useTranslatedPath } from "../../i18n/utils";
+        const t = useTranslations("en");
+        const translatePath = useTranslatedPath("en");
 
-    const t = useTranslations("en");
-    const translatePath = useTranslatedPath("en");
+        const menuItemsJogaorak = [
+            { link: translatePath(`/orarend/`), label: t("orarend") },
+            { link: translatePath(`/arak/`), label: t("arak") },
+            {
+                link: translatePath(`/astanga-mysore-program/`),
+                label: t("mysoreprogram"),
+            },
+            { link: translatePath(`/tanfolyam/`), label: t("tanfolyamok") },
+            { link: translatePath(`/csapatunk/`), label: t("csapatunk") },
+            {
+                link: translatePath(`/vinyasza-jogairanyzatok/`),
+                label: t("jógairányzatok"),
+            },
+            { link: translatePath(`/letoltesek/`), label: t("letoltesek") },
+            // { link: "/galeria", label: "GALÉRIA", extraClass: "" },
+        ];
 
-    const menuItemsJogaorak = [
-        { link: translatePath(`/orarend/`), label: t("orarend") },
-        { link: translatePath(`/arak/`), label: t("arak") },
-        {
-            link: translatePath(`/astanga-mysore-program/`),
-            label: t("mysoreprogram"),
-        },
-        { link: translatePath(`/tanfolyam/`), label: t("tanfolyamok") },
-        { link: translatePath(`/csapatunk/`), label: t("csapatunk") },
-        {
-            link: translatePath(`/vinyasza-jogairanyzatok/`),
-            label: t("jógairányzatok"),
-        },
-        { link: translatePath(`/letoltesek/`), label: t("letoltesek") },
-        // { link: "/galeria", label: "GALÉRIA", extraClass: "" },
-    ];
+        const menuItemsTudnivalok = [
+            { link: translatePath(`/rolunk/`), label: t("rolunk") },
+            { link: translatePath(`/elso-alkalom/`), label: t("elsoalkalom") },
+            { link: translatePath(`/hazirend/`), label: t("hazirend") },
+            { link: translatePath(`/mantra/`), label: t("mantra") },
+            { link: translatePath(`/holdnapok/`), label: t("holdnapok") },
+            {
+                link: translatePath(`/osztondij/`),
+                label: t("osztondij"),
+                extraClass: "",
+            },
+            // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
+            {
+                link: translatePath(`/ajanlott-olvasmanyok/`),
+                label: t("olvasmanyok"),
+            },
+        ];
 
-    const menuItemsTudnivalok = [
-        { link: translatePath(`/rolunk/`), label: t("rolunk") },
-        { link: translatePath(`/elso-alkalom/`), label: t("elsoalkalom") },
-        { link: translatePath(`/hazirend/`), label: t("hazirend") },
-        { link: translatePath(`/mantra/`), label: t("mantra") },
-        { link: translatePath(`/holdnapok/`), label: t("holdnapok") },
-        {
-            link: translatePath(`/osztondij/`),
-            label: t("osztondij"),
-            extraClass: "",
-        },
-        // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
-        {
-            link: translatePath(`/ajanlott-olvasmanyok/`),
-            label: t("olvasmanyok"),
-        },
-    ];
+        const menuGroupsFomenu = [
+            { title: t("jogaorak"), items: menuItemsJogaorak },
+            { title: t("tudnivalok"), items: menuItemsTudnivalok },
+        ];
 
-    const menuGroupsFomenu = [
-        { title: t("jogaorak"), items: menuItemsJogaorak },
-        { title: t("tudnivalok"), items: menuItemsTudnivalok },
-    ];
+        const menuItemsFomenu = [
+            { link: "/blog", label: "BLOG" },
+            {
+                link: "https://shop.bandha.works",
+                label: "SHOP",
+                isExternal: true,
+            },
+            { link: "/kapcsolat", label: t("kapcsolat") },
+        ];
 
-    const menuItemsFomenu = [
-        { link: "/blog", label: "BLOG" },
-        { link: "https://shop.bandha.works", label: "SHOP", isExternal: true },
-        { link: "/kapcsolat", label: t("kapcsolat") },
-    ];
+        const menuList = document.getElementById("menu");
+        if (menuList) {
+            menuItemsJogaorak.forEach((link) => {
+                const listItem = document.createElement("li");
+                const anchor = document.createElement("a");
 
-    const menuList = document.getElementById("menu");
-    if (menuList) {
-        menuItemsJogaorak.forEach((link) => {
-            const listItem = document.createElement("li");
-            const anchor = document.createElement("a");
+                anchor.href = link.link;
+                anchor.textContent = link.label;
+                listItem.appendChild(anchor);
+                menuList.appendChild(listItem);
+            });
+        }
 
-            anchor.href = link.link;
-            anchor.textContent = link.label;
-            listItem.appendChild(anchor);
-            menuList.appendChild(listItem);
-        });
-    }
+        const hamburgerMenu = document.getElementById("hamburger");
 
-    const hamburgerMenu = document.getElementById("hamburger");
+        if (hamburgerMenu) {
+            hamburgerMenu.addEventListener("click", function () {
+                menuList?.classList.toggle("open");
+                console.log("clicked");
+            });
+        }
+    </script>
 
-    if (hamburgerMenu) {
-        hamburgerMenu.addEventListener("click", function () {
-            menuList?.classList.toggle("open");
-            console.log("clicked");
-        });
-    }
-</script>
-
-<style>
-    #menu {
-        display: none;
-    }
-
-    #menu.open {
-        display: block;
-    }
-
+    <!-- <style>
     .hamburger--container {
         height: 20px;
         width: 30px;
@@ -165,5 +171,5 @@ import logo from "../../images/logo.svg";
         -ms-transform: translateY(-6px) rotate(90deg);
         -o-transform: translateY(-6px) rotate(90deg);
         transform: translateY(-6px) rotate(90deg);
-    }
-</style>
+    } -->
+</header>
