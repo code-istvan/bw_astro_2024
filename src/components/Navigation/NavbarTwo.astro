@@ -28,9 +28,8 @@ import "../../sass/components/_navbarTwo.scss";
                 </div>
             </div>
             <!-- </div> -->
-
-            <div id="menu"></div>
         </nav>
+        <div class="container" id="menu"></div>
     </div>
 
     <script>
@@ -66,6 +65,13 @@ import "../../sass/components/_navbarTwo.scss";
 
         if (hamburgerMenu) {
             hamburgerMenu.addEventListener("click", function () {
+                if (hamburgerMenu.classList.contains("hamburger-closed")) {
+                    hamburgerMenu.classList.remove("hamburger-closed");
+                    hamburgerMenu.classList.add("hamburger-open");
+                } else {
+                    hamburgerMenu.classList.remove("hamburger-open");
+                    hamburgerMenu.classList.add("hamburger-closed");
+                }
                 menuList?.classList.toggle("open");
                 console.log("clicked");
             });
