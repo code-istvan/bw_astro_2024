@@ -24,7 +24,6 @@ export const getMenuItemsTudnivalok = (translatePath, t) => [
     {
         link: translatePath(`/osztondij/`),
         label: t("osztondij"),
-        extraClass: "",
     },
     // { link: "/taplalkozas", label: "TÁPLÁLKOZÁS" },
     {
