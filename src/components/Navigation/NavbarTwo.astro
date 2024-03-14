@@ -1,46 +1,25 @@
 ---
-// import logo from "../../images/logo.svg";
-// import logotext from "../../images/logo_text.svg";
-import Icon from "../Icon.astro";
-import logo2 from "../../images/logo.svg?raw";
+import logo2 from "../../images/svg/logo.svg?raw";
+import logo3 from "../../images/svg/logo_text.svg?raw";
 import LanguagePickerAstro from "../LanguagePickerAstro.astro";
 import "../../sass/components/_navbarTwo.scss";
-
-const test = Astro.currentLocale;
-
-console.log(test);
 ---
 
 <header>
     <div class="container-fluid">
         <nav>
             <div class="logo-wrapper">
-                <!-- <img
-                    src={logo.src}
-                    alt="bandha works logo"
-                    class="navbar-logo"
-                />
-                <img
-                    src={logotext.src}
-                    alt="bandha works logo"
-                    class="navbar-logo"
-                /> -->
-                <Icon name="bw_round_logo" />
-                <Icon name="logo_text" />
                 <Fragment set:html={logo2} />
-                <!-- <Icon name="logo_text" /> -->
+                <Fragment set:html={logo3} />
             </div>
-            <!-- <div class="hamburger"> -->
-
-            <div><LanguagePickerAstro /></div>
             <div class="hamburger--container">
+                <LanguagePickerAstro />
                 <div id="hamburger" class="hamburger hamburger-closed">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
             </div>
-            <!-- </div> -->
         </nav>
         <div class="container" id="menu"></div>
     </div>

@@ -19,7 +19,13 @@
 }
 
 .hamburger--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     cursor: pointer;
+    h4 {
+        margin-right: 16px;
+    }
 }
 
 // .hamburger--container {

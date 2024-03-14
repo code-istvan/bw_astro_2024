@@ -5,7 +5,7 @@ import { useTranslatedPath } from "../i18n/utils";
 const currentLanguage = Astro.currentLocale;
 ---
 
-<ul>
+<div>
     {
         Object.entries(languages).map(([lang, { name, shortName }]) => {
             if (currentLanguage === lang) return;
@@ -16,12 +16,10 @@ const currentLanguage = Astro.currentLocale;
             console.log(currentLanguage);
 
             return (
-                <li>
-                    <a href={path} class="link-class">
-                        <h4>{shortName}</h4>
-                    </a>
-                </li>
+                <a href={path} class="link-class">
+                    <h4>{shortName}</h4>
+                </a>
             );
         })
     }
-</ul>
+</div>
