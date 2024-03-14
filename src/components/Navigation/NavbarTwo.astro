@@ -2,7 +2,13 @@
 // import logo from "../../images/logo.svg";
 // import logotext from "../../images/logo_text.svg";
 import Icon from "../Icon.astro";
+import logo2 from "../../images/logo.svg?raw";
+import LanguagePickerAstro from "../LanguagePickerAstro.astro";
 import "../../sass/components/_navbarTwo.scss";
+
+const test = Astro.currentLocale;
+
+console.log(test);
 ---
 
 <header>
@@ -21,9 +27,12 @@ import "../../sass/components/_navbarTwo.scss";
                 /> -->
                 <Icon name="bw_round_logo" />
                 <Icon name="logo_text" />
+                <Fragment set:html={logo2} />
                 <!-- <Icon name="logo_text" /> -->
             </div>
             <!-- <div class="hamburger"> -->
+
+            <div><LanguagePickerAstro /></div>
             <div class="hamburger--container">
                 <div id="hamburger" class="hamburger hamburger-closed">
                     <span class="line"></span>
@@ -48,8 +57,11 @@ import "../../sass/components/_navbarTwo.scss";
             getMenuItemsFomenu,
         } from "./menuData";
 
-        const t = useTranslations("en");
-        const translatePath = useTranslatedPath("en");
+        const language = window.location.href.includes("en") ? "en" : "hu";
+
+        console.log(window.location);
+        const t = useTranslations(language);
+        const translatePath = useTranslatedPath(language);
         const menuItemsJogaorak = getMenuItemsJogaorak(translatePath, t);
         const menuItemsTudnivalok = getMenuItemsTudnivalok(translatePath, t);
 

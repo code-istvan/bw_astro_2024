@@ -14,6 +14,11 @@ export function useTranslations(lang) {
 
 export function useTranslatedPath(lang) {
     return function translatePath(path, l = lang) {
-        return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`;
+        console.log("path:", path, lang);
+        console.log("path2", defaultLang, defaultLang === lang);
+
+        return !showDefaultLang && l === defaultLang
+            ? path.replace("/en", "")
+            : `/${l}${path}`;
     };
 }
