@@ -1,7 +1,7 @@
 ---
 import logo2 from "../../images/svg/logo.svg?raw";
 import logo3 from "../../images/svg/logo_text.svg?raw";
-import LanguagePickerAstro from "../LanguagePickerAstro.astro";
+import LanguagePicker from "../LanguagePicker.astro";
 import "../../sass/components/_navbarTwo.scss";
 
 const isEnglish = Astro.url.pathname.includes("/en");
@@ -19,7 +19,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
             >
 
             <div class="hamburger--container">
-                <LanguagePickerAstro />
+                <LanguagePicker />
                 <div id="hamburger" class="hamburger hamburger-closed">
                     <span class="line"></span>
                     <span class="line"></span>
