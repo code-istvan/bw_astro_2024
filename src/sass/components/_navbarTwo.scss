@@ -104,6 +104,19 @@ nav {
     transform: translateY(-6px) rotate(90deg);
 }
 
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+._logo_text {
+    width: 77.9px;
+    height: 28px;
+}
+
 #logo {
     fill: $color-shades-lightGray;
     -webkit-transition: -webkit-transform 1s;

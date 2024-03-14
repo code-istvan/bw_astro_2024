@@ -1,7 +1,7 @@
 ---
-import logo from "../../images/logo.svg";
-import logotext from "../../images/logo_text.svg";
-// import Icon from "../../components/icon.astro";
+// import logo from "../../images/logo.svg";
+// import logotext from "../../images/logo_text.svg";
+import Icon from "../Icon.astro";
 import "../../sass/components/_navbarTwo.scss";
 ---
 
@@ -9,7 +9,7 @@ import "../../sass/components/_navbarTwo.scss";
     <div class="container-fluid">
         <nav>
             <div class="logo-wrapper">
-                <img
+                <!-- <img
                     src={logo.src}
                     alt="bandha works logo"
                     class="navbar-logo"
@@ -18,8 +18,10 @@ import "../../sass/components/_navbarTwo.scss";
                     src={logotext.src}
                     alt="bandha works logo"
                     class="navbar-logo"
-                />
-                <!-- <Icon icon="logo" /> -->
+                /> -->
+                <Icon name="bw_round_logo" />
+                <Icon name="logo_text" />
+                <!-- <Icon name="logo_text" /> -->
             </div>
             <!-- <div class="hamburger"> -->
             <div class="hamburger--container">

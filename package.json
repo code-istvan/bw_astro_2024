@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.4",
-    "@astrojs/react": "^3.0.10",
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/react": "^3.1.0",
     "@fontsource-variable/nunito-sans": "^5.0.9",
     "@fontsource/abril-fatface": "^5.0.18",
-    "astro": "^4.4.0",
+    "astro": "^4.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.7",
