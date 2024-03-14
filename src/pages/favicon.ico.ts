@@ -19,3 +19,8 @@ export const GET: APIRoute = async () => {
         headers: { "Content-Type": "image/x-icon" },
     });
 };
+
+const buffer32 = await sharp(faviconSrc).resize(32).toFormat("png").toBuffer();
+const buffer16 = await sharp(faviconSrc).resize(16).toFormat("png").toBuffer();
+
+ico.encode([buffer16, buffer32]);
