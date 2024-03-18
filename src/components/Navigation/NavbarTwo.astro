@@ -1,6 +1,6 @@
 ---
-import logo2 from "../../images/svg/logo.svg?raw";
-import logo3 from "../../images/svg/logo_text.svg?raw";
+import brand_logo from "../../images/svg/brand_logo.svg?raw";
+import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
 import LanguagePicker from "../LanguagePicker.astro";
 import "../../sass/components/_navbarTwo.scss";
 
@@ -12,9 +12,9 @@ const hrefValue = isEnglish ? "/en/" : "/";
     <div class="container-fluid">
         <nav>
             <a href={hrefValue} class="logo-link">
-                <div class="logo-wrapper">
-                    <Fragment set:html={logo2} />
-                    <Fragment set:html={logo3} />
+                <div class="brand-logo-wrapper">
+                    <Fragment set:html={brand_logo} />
+                    <Fragment set:html={brand_logo_text} />
                 </div></a
             >
 
