@@ -20,7 +20,7 @@ const currentLanguage = Astro.currentLocale;
             console.log(currentLanguage);
 
             return (
-                <a href={path} class="link-class">
+                <a href={path} class="link-class" aria-label="Itt választhatsz nyelvet. Angol vagy magyar nyelvek közül választhatsz. You can choose your language here. You can choose between English or Hungarian.">
                     {shortName === 'HU' ? (
                     <Fragment set:html={language_HU} />
                     ) : (
