@@ -6,8 +6,9 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 9999;
     div:nth-child(2) {
-        margin-right: 16px;
+        margin-right: 8px;
     }
 }
 
@@ -15,9 +16,33 @@ nav {
     display: none;
 }
 
-#menu.open {
-    display: block;
+// MOBIL MENU starts
+
+@media only screen and (min-width: 1px) and (max-width: 992px) {
+    #menu.open {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        display: block;
+        height: calc(100vh - 60px);
+        // height: 100vh;
+        top: 0;
+        // transform: translateY(60px);
+        padding-top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        z-index: 1;
+        overflow: scroll;
+        background-color: $offcanvas-menu-color;
+        -webkit-transition: all 500ms ease-out;
+        -o-transition: all 500ms ease-out;
+        transition: all 500ms ease-out;
+    }
 }
+
+// MOBIL MENU ends
 
 // Brand Logo Starts
 
@@ -26,14 +51,15 @@ nav {
     flex-direction: row;
     align-items: center;
     margin-left: 16px;
-    img:nth-child(2) {
-        margin-left: 16px;
-    }
+    cursor: pointer;
 }
 
 .brand-logo {
     margin-right: 8px;
-    cursor: pointer;
+    z-index: 9999;
+}
+
+.brand-logo-text {
     z-index: 9999;
 }
 
@@ -64,8 +90,8 @@ nav {
     svg {
         margin-right: 16px;
     }
+    z-index: 9999;
 }
-// Hamburger Ends
 
 .hamburger .line {
     width: 30px;
@@ -117,3 +143,5 @@ nav {
     -o-transform: translateY(-6px) rotate(90deg);
     transform: translateY(-6px) rotate(90deg);
 }
+
+// Hamburger Ends
