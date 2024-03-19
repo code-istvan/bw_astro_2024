@@ -1,6 +1,10 @@
 ---
 import { languages } from "../i18n/ui";
 import { useTranslatedPath } from "../i18n/utils";
+import language_HU from "../images/svg/language_HU.svg?raw";
+import language_EN from "../images/svg/language_EN.svg?raw";
+import "../sass/components/_languagePicker.scss";
+
 
 const currentLanguage = Astro.currentLocale;
 ---
@@ -17,7 +21,12 @@ const currentLanguage = Astro.currentLocale;
 
             return (
                 <a href={path} class="link-class">
-                    <h4>{shortName}</h4>
+                    {shortName === 'HU' ? (
+                    <Fragment set:html={language_HU} />
+                    ) : (
+                    <Fragment set:html={language_EN} />
+                    )}
+                </a>
                 </a>
             );
         })
