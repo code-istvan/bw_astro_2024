@@ -40,6 +40,20 @@ nav {
         -o-transition: all 500ms ease-out;
         transition: all 500ms ease-out;
     }
+
+    .dropdown-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-content.show {
+        display: block;
+    }
 }
 
 // MOBIL MENU ends
