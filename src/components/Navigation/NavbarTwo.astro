@@ -127,9 +127,13 @@ const hrefValue = isEnglish ? "/en/" : "/";
                 menuItemsFomenu.forEach((item) => {
                     const listItem = document.createElement("li");
                     const anchor = document.createElement("a");
+                    const header = document.createElement("h3"); // H3 elem létrehozása
+
                     anchor.href = item.link;
                     anchor.textContent = item.label;
-                    listItem.appendChild(anchor);
+
+                    header.appendChild(anchor); // Az 'a' elem hozzáadása az 'h3' elemhez
+                    listItem.appendChild(header); // Az 'h3' elem hozzáadása az 'li' elemhez
                     fomenuItems.appendChild(listItem);
                 });
             }
