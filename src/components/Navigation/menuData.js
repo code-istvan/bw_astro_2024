@@ -32,11 +32,6 @@ export const getMenuItemsTudnivalok = (translatePath, t) => [
     },
 ];
 
-// export const getMenuGroupsFomenu = (translatePath, t) => [
-//     { title: t("jogaorak"), items: menuItemsJogaorak },
-//     { title: t("tudnivalok"), items: menuItemsTudnivalok },
-// ];
-
 export const getMenuItemsFomenu = (translatePath, t) => [
     { link: "/blog", label: "BLOG" },
     {
