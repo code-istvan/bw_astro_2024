@@ -34,20 +34,26 @@ const hrefValue = isEnglish ? "/en/" : "/";
         <div id="mobileMenu-wrapper">
             <MobileMenu />
         </div>
+        <div id="desktopMenu-wrapper">
+            <h3>desktop</h3>
+        </div>
     </div>
 </header>
 
 <script>
     const hamburgerMenu = document.getElementById("hamburger");
     const mobileMenuWrapper = document.getElementById("mobileMenu-wrapper");
+    const desktopMenuWrapper = document.getElementById("desktopMenu-wrapper");
     const mobileMenu = document.getElementById("mobileMenu");
 
     function checkWindowSize() {
-        if (mobileMenuWrapper) {
+        if (mobileMenuWrapper && desktopMenuWrapper) {
             if (window.innerWidth <= 991) {
                 mobileMenuWrapper.style.display = "block";
+                desktopMenuWrapper.style.display = "none";
             } else {
                 mobileMenuWrapper.style.display = "none";
+                desktopMenuWrapper.style.display = "block";
             }
         }
     }
@@ -57,13 +63,8 @@ const hrefValue = isEnglish ? "/en/" : "/";
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener("click", function () {
-            if (hamburgerMenu.classList.contains("hamburger-closed")) {
-                hamburgerMenu.classList.remove("hamburger-closed");
-                hamburgerMenu.classList.add("hamburger-open");
-            } else {
-                hamburgerMenu.classList.remove("hamburger-open");
-                hamburgerMenu.classList.add("hamburger-closed");
-            }
+            hamburgerMenu.classList.toggle("hamburger-closed");
+            hamburgerMenu.classList.toggle("hamburger-open");
             mobileMenu?.classList.toggle("open");
         });
     }
