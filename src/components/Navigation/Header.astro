@@ -3,6 +3,7 @@ import brand_logo from "../../images/svg/brand_logo.svg?raw";
 import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
 import LanguagePicker from "../LanguagePicker.astro";
 import MobileMenu from "./MobileMenu.astro";
+import DesktopMenu from "./DesktopMenu.astro";
 import "../../sass/components/_navbarTwo.scss";
 
 const isEnglish = Astro.url.pathname.includes("/en");
@@ -35,7 +36,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
             <MobileMenu />
         </div>
         <div id="desktopMenu-wrapper">
-            <h3>desktop</h3>
+            <DesktopMenu />
         </div>
     </div>
 </header>

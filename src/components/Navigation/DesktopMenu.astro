@@ -1,31 +1,105 @@
-<!-- <h3 id="desktop-menu">DESKTOP MENU</h3>
+<!-- ---
+import plus_sign from "../../images/svg/plus_sign.svg?raw";
+import "../../sass/components/_navbarTwo.scss";
+---
+
+<div class="container-fluid" id="mobileMenu">
+    <div>
+        <div class="dropdown-menu" id="toggle-jogaorak">
+            <h3>JÓGAÓRÁK</h3>
+            <Fragment set:html={plus_sign} />
+        </div>
+        <div id="jogaorak" class="menu-content"></div>
+    </div>
+    <div>
+        <div class="dropdown-menu" id="toggle-tudnivalok">
+            <h3>TUDNIVALÓK</h3>
+            <Fragment set:html={plus_sign} />
+        </div>
+        <div id="tudnivalok" class="menu-content"></div>
+    </div>
+    <div id="fomenuItems"></div>
+</div>
 
 <script>
-    function handleResize() {
-        const desktopMenu = document.getElementById("desktop-menu");
+    import { useTranslations, useTranslatedPath } from "../../i18n/utils.js";
+    import {
+        getMenuItemsJogaorak,
+        getMenuItemsTudnivalok,
+        getMenuItemsFomenu,
+    } from "./menuData";
 
-        if (!desktopMenu) return;
+    const language = window.location.href.includes("en") ? "en" : "hu";
 
-        // console.log(menu);
+    const t = useTranslations(language);
+    const translatePath = useTranslatedPath(language);
+    const menuItemsJogaorak = getMenuItemsJogaorak(translatePath, t);
+    const menuItemsTudnivalok = getMenuItemsTudnivalok(translatePath, t);
+    const menuItemsFomenu = getMenuItemsFomenu(translatePath, t);
 
-        if (window.innerWidth >= 768) {
-            desktopMenu.classList.toggle("show");
-        }
+    const jogorakList = document.getElementById("jogaorak");
+    const tudnivalokList = document.getElementById("tudnivalok");
+    const menuList = document.getElementById("menu");
+    const fomenuItems = document.getElementById("fomenuItems");
+
+    const jogorakToggle = document.getElementById("toggle-jogaorak");
+    const tudnivalokToggle = document.getElementById("toggle-tudnivalok");
+    const hamburgerMenu = document.getElementById("hamburger");
+
+    if (jogorakToggle) {
+        jogorakToggle.addEventListener("click", () => {
+            if (jogorakList) {
+                jogorakList.classList.toggle("show");
+            }
+        });
     }
-    window.addEventListener("load", (event) => {
-        console.log("page is fully loaded");
-    });
 
-    window.addEventListener("load", handleResize);
-    // window.addEventListener("resize", handleResize);
-</script>
-
-<style>
-    #desktop-menu.show {
-        display: flex;
+    if (tudnivalokToggle) {
+        tudnivalokToggle.addEventListener("click", () => {
+            if (tudnivalokList) {
+                tudnivalokList.classList.toggle("show");
+            }
+        });
     }
 
-    #desktop-menu {
-        display: none;
+    // Jógaórák menüelemek hozzáadása
+    if (jogorakList) {
+        menuItemsJogaorak.forEach((link) => {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+
+            anchor.href = link.link;
+            anchor.textContent = link.label;
+            listItem.appendChild(anchor);
+            jogorakList.appendChild(listItem);
+        });
     }
-</style> -->
+
+    // Tudnivalók menüelemek hozzáadása
+    if (tudnivalokList) {
+        menuItemsTudnivalok.forEach((link) => {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+
+            anchor.href = link.link;
+            anchor.textContent = link.label;
+            listItem.appendChild(anchor);
+            tudnivalokList.appendChild(listItem);
+        });
+    }
+
+    if (fomenuItems) {
+        menuItemsFomenu.forEach((item) => {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+            const header = document.createElement("h3"); // H3 elem létrehozása
+
+            anchor.href = item.link;
+            anchor.textContent = item.label;
+
+            header.appendChild(anchor); // Az 'a' elem hozzáadása az 'h3' elemhez
+            listItem.appendChild(header); // Az 'h3' elem hozzáadása az 'li' elemhez
+            fomenuItems.appendChild(listItem);
+        });
+    }
+</script> -->
