@@ -16,6 +16,24 @@ nav {
     display: none;
 }
 
+.mobileMenu-wrapper {
+    display: none;
+}
+
+.desktopMenu-wrapper {
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .mobileMenu-wrapper {
+        display: block;
+    }
+
+    .desktopMenu-wrapper {
+        display: none;
+    }
+}
+
 // MOBIL MENU starts
 
 // @media only screen and (min-width: 1px) and (max-width: 992px) {

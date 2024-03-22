@@ -32,10 +32,10 @@ const hrefValue = isEnglish ? "/en/" : "/";
                 </div>
             </div>
         </nav>
-        <div id="mobileMenu-wrapper">
+        <div class="mobileMenu-wrapper">
             <MobileMenu />
         </div>
-        <div id="desktopMenu-wrapper">
+        <div class="desktopMenu-wrapper">
             <DesktopMenu />
         </div>
     </div>
@@ -43,24 +43,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
 
 <script>
     const hamburgerMenu = document.getElementById("hamburger");
-    const mobileMenuWrapper = document.getElementById("mobileMenu-wrapper");
-    const desktopMenuWrapper = document.getElementById("desktopMenu-wrapper");
     const mobileMenu = document.getElementById("mobileMenu");
-
-    function checkWindowSize() {
-        if (mobileMenuWrapper && desktopMenuWrapper) {
-            if (window.innerWidth <= 991) {
-                mobileMenuWrapper.style.display = "block";
-                desktopMenuWrapper.style.display = "none";
-            } else {
-                mobileMenuWrapper.style.display = "none";
-                desktopMenuWrapper.style.display = "block";
-            }
-        }
-    }
-
-    window.addEventListener("load", checkWindowSize);
-    window.addEventListener("resize", checkWindowSize);
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener("click", function () {
