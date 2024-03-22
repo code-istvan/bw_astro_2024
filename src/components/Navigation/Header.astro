@@ -43,10 +43,12 @@ const hrefValue = isEnglish ? "/en/" : "/";
     const mobileMenu = document.getElementById("mobileMenu");
 
     function checkWindowSize() {
-        if (window.innerWidth <= 991) {
-            mobileMenuWrapper.style.display = "block";
-        } else {
-            mobileMenuWrapper.style.display = "none";
+        if (mobileMenuWrapper) {
+            if (window.innerWidth <= 991) {
+                mobileMenuWrapper.style.display = "block";
+            } else {
+                mobileMenuWrapper.style.display = "none";
+            }
         }
     }
 
