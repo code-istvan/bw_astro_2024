@@ -1,0 +1,31 @@
+<h3 id="desktop-menu">DESKTOP MENU</h3>
+
+<script>
+    function handleResize() {
+        const desktopMenu = document.getElementById("desktop-menu");
+
+        if (!desktopMenu) return;
+
+        // console.log(menu);
+
+        if (window.innerWidth >= 768) {
+            desktopMenu.classList.toggle("show");
+        }
+    }
+    window.addEventListener("load", (event) => {
+        console.log("page is fully loaded");
+    });
+
+    window.addEventListener("load", handleResize);
+    // window.addEventListener("resize", handleResize);
+</script>
+
+<style>
+    #desktop-menu.show {
+        display: flex;
+    }
+
+    #desktop-menu {
+        display: none;
+    }
+</style>

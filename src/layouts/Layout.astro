@@ -4,6 +4,8 @@ import NavbarTwo from "../components/Navigation/NavbarTwo.astro";
 import { getImage } from "astro:assets";
 import faviconSrc from "../images/favicon.png";
 import faviconSvgSrc from "../images/favicon.svg";
+import DesktopMenu from "../components/Navigation/DesktopMenu.astro";
+import Header from "../components/Navigation/Header.astro";
 
 import "../sass/global.scss";
 import "../sass/layouts/_layout.scss";
@@ -34,23 +36,15 @@ const { title, isHomePage } = Astro.props as Props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <!-- <meta http-equiv="refresh" content="0; url=/hu" /> -->
-        <!-- {
-            isHomePage && (
-                <script type="text/javascript">
-                    window.location.href = '/hu/';
-                </script>
-            )
-        } -->
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
         <link rel="apple-touch-icon" href={appleTouchIcon.src} />
         <link rel="manifest" href="/manifest.json" />
     </head>
     <body>
-        <!-- <AstroNavbar client:only="react" url={url} /> -->
-        <!-- <AstroNavbar client:only="react" url={url} /> -->
-        <NavbarTwo />
+        <!-- <DesktopMenu />
+        <NavbarTwo /> -->
+        <Header />
         <div class="layout-content-wrapper"><slot /></div>
     </body>
 </html>

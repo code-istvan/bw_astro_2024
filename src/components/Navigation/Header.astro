@@ -1,0 +1,67 @@
+---
+import brand_logo from "../../images/svg/brand_logo.svg?raw";
+import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
+import LanguagePicker from "../LanguagePicker.astro";
+import MobileMenu from "./MobileMenu.astro";
+import "../../sass/components/_navbarTwo.scss";
+
+const isEnglish = Astro.url.pathname.includes("/en");
+const hrefValue = isEnglish ? "/en/" : "/";
+---
+
+<header>
+    <div class="container-fluid">
+        <nav>
+            <a
+                href={hrefValue}
+                class="logo-link"
+                aria-label="Ez itt a brandlogo. Ha rákattintasz elvisz a kezdőlapra."
+            >
+                <div class="brand-logo-wrapper">
+                    <Fragment set:html={brand_logo} />
+                    <Fragment set:html={brand_logo_text} />
+                </div></a
+            >
+            <div class="hamburger--container">
+                <LanguagePicker />
+                <div id="hamburger" class="hamburger hamburger-closed">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu">
+            <MobileMenu />
+        </div>
+    </div>
+</header>
+
+<script>
+    const hamburgerMenu = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    function checkWindowSize() {
+        if (window.innerWidth <= 991) {
+            mobileMenu.style.display = "block";
+        } else {
+            mobileMenu.style.display = "none";
+        }
+    }
+
+    window.addEventListener("load", checkWindowSize);
+    window.addEventListener("resize", checkWindowSize);
+
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener("click", function () {
+            if (hamburgerMenu.classList.contains("hamburger-closed")) {
+                hamburgerMenu.classList.remove("hamburger-closed");
+                hamburgerMenu.classList.add("hamburger-open");
+            } else {
+                hamburgerMenu.classList.remove("hamburger-open");
+                hamburgerMenu.classList.add("hamburger-closed");
+            }
+            menu?.classList.toggle("open");
+        });
+    }
+</script>

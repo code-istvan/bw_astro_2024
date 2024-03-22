@@ -49,7 +49,23 @@ const hrefValue = isEnglish ? "/en/" : "/";
             </div>
             <div id="fomenuItems"></div>
         </div>
+        <script>
+            function handleResize() {
+                const mobileMenu = document.getElementById("menu");
 
+                if (!mobileMenu) return;
+
+                if (window.innerWidth >= 768) {
+                    console.log("mobile");
+                    mobileMenu.style.display = "none";
+                    mobileMenu.classList.remove("show");
+                }
+            }
+            window.addEventListener("load", (event) => {});
+
+            window.addEventListener("load", handleResize);
+            // window.addEventListener("resize", handleResize);
+        </script>
         <script>
             import {
                 useTranslations,
