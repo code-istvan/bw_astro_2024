@@ -1,10 +1,7 @@
 ---
-import AstroNavbar from "../components/Navigation/AstroNavbar";
-import NavbarTwo from "../components/Navigation/NavbarTwo.astro";
 import { getImage } from "astro:assets";
 import faviconSrc from "../images/favicon.png";
 import faviconSvgSrc from "../images/favicon.svg";
-import DesktopMenu from "../components/Navigation/DesktopMenu.astro";
 import Header from "../components/Navigation/Header.astro";
 
 import "../sass/global.scss";
@@ -42,8 +39,6 @@ const { title, isHomePage } = Astro.props as Props;
         <link rel="manifest" href="/manifest.json" />
     </head>
     <body>
-        <!-- <DesktopMenu />
-        <NavbarTwo /> -->
         <Header />
         <div class="layout-content-wrapper"><slot /></div>
     </body>
