@@ -12,14 +12,14 @@ nav {
     }
 }
 
-#menu {
+#mobileMenu {
     display: none;
 }
 
 // MOBIL MENU starts
 
 // @media only screen and (min-width: 1px) and (max-width: 992px) {
-#menu.open {
+#mobileMenu.open {
     opacity: 1;
     visibility: visible;
     position: absolute;

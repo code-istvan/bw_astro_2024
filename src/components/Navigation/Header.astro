@@ -31,7 +31,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
                 </div>
             </div>
         </nav>
-        <div id="mobileMenu menu">
+        <div id="mobileMenu-wrapper">
             <MobileMenu />
         </div>
     </div>
@@ -39,13 +39,13 @@ const hrefValue = isEnglish ? "/en/" : "/";
 
 <script>
     const hamburgerMenu = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuWrapper = document.getElementById("mobileMenu-wrapper");
 
     function checkWindowSize() {
         if (window.innerWidth <= 991) {
-            mobileMenu.style.display = "block";
+            mobileMenuWrapper.style.display = "block";
         } else {
-            mobileMenu.style.display = "none";
+            mobileMenuWrapper.style.display = "none";
         }
     }
 
@@ -61,7 +61,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
                 hamburgerMenu.classList.remove("hamburger-open");
                 hamburgerMenu.classList.add("hamburger-closed");
             }
-            menu?.classList.toggle("open");
+            mobileMenu?.classList.toggle("open");
         });
     }
 </script>
