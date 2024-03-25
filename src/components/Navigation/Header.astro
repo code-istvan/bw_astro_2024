@@ -4,7 +4,7 @@ import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
 import LanguagePicker from "../LanguagePicker.astro";
 import MobileMenu from "./MobileMenu.astro";
 import DesktopMenu from "./DesktopMenu.astro";
-import "../../sass/components/_navbarTwo.scss";
+import "../../sass/components/_header.scss";
 
 const isEnglish = Astro.url.pathname.includes("/en");
 const hrefValue = isEnglish ? "/en/" : "/";
@@ -23,7 +23,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
                     <Fragment set:html={brand_logo_text} />
                 </div></a
             >
-            <div class="hamburger--container">
+            <div class="hamburger-container">
                 <LanguagePicker />
                 <div id="hamburger" class="hamburger hamburger-closed">
                     <span class="line"></span>
@@ -32,10 +32,10 @@ const hrefValue = isEnglish ? "/en/" : "/";
                 </div>
             </div>
         </nav>
-        <div class="mobileMenu-wrapper">
+        <div class="mobile-menu-wrapper">
             <MobileMenu />
         </div>
-        <div class="desktopMenu-wrapper">
+        <div class="desktop-menu-wrapper">
             <DesktopMenu />
         </div>
     </div>

@@ -1,0 +1,78 @@
+@import "/src/sass/global";
+
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+.mobile-menu-wrapper {
+    display: none;
+}
+
+.desktop-menu-wrapper {
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .mobile-menu-wrapper {
+        display: block;
+    }
+
+    .desktop-menu-wrapper {
+        display: none;
+    }
+}
+
+#mobileMenu.open {
+    display: block;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 0;
+    padding-top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    background-color: $offcanvas-menu-color;
+    transition: all 500ms ease-out;
+}
+
+.brand-logo-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-open .line:nth-child(2) {
+    width: 0;
+}
+
+.hamburger-open .line:nth-child(1) {
+    transform: translateY(8px);
+}
+
+.hamburger-open .line:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
