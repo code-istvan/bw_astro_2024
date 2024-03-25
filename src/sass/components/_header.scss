@@ -14,8 +14,34 @@ nav {
 
 .brand-logo-wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin-left: 16px;
     cursor: pointer;
+
+    .brand-logo {
+        margin-right: 8px;
+        z-index: 9999;
+    }
+
+    .brand-logo-text {
+        z-index: 9999;
+    }
+}
+
+#brand-logo-circle {
+    fill: $color-shades-lightGray;
+    -webkit-transition: -webkit-transform 1s;
+    transform-origin: center;
+    position: fixed;
+}
+
+.brand-logo-wrapper:hover {
+    #brand-logo-circle {
+        -webkit-transform: rotate(360deg) translateZ(0);
+        position: relative;
+        z-index: 9999;
+    }
 }
 
 .hamburger-container {

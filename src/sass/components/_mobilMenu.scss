@@ -1,0 +1,38 @@
+@import "/src/sass/global";
+
+#mobileMenu.open {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    display: block;
+    height: calc(100vh - 60px);
+    // height: 100vh;
+    top: 0;
+    // transform: translateY(60px);
+    padding-top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    z-index: 1;
+    overflow: scroll;
+    background-color: $offcanvas-menu-color;
+    -webkit-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    // }
+
+    .dropdown-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-content.show {
+        display: block;
+    }
+}
