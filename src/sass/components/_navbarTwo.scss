@@ -1,39 +1,5 @@
 @import "/src/sass/global";
 
-nav {
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 9999;
-    div:nth-child(2) {
-        margin-right: 8px;
-    }
-}
-
-#mobileMenu {
-    display: none;
-}
-
-.mobileMenu-wrapper {
-    display: none;
-}
-
-.desktopMenu-wrapper {
-    display: block;
-}
-
-@media (max-width: 991px) {
-    .mobileMenu-wrapper {
-        display: block;
-    }
-
-    .desktopMenu-wrapper {
-        display: none;
-    }
-}
-
 // MOBIL MENU starts
 
 // @media only screen and (min-width: 1px) and (max-width: 992px) {
