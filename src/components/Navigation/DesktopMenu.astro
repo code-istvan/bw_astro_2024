@@ -1,24 +1,9 @@
-<!-- ---
-import plus_sign from "../../images/svg/plus_sign.svg?raw";
-import "../../sass/components/_navbarTwo.scss";
+---
+import "../../sass/components/_desktopMenu.scss";
 ---
 
-<div class="container-fluid" id="mobileMenu">
-    <div>
-        <div class="dropdown-menu" id="toggle-jogaorak">
-            <h3>JÓGAÓRÁK</h3>
-            <Fragment set:html={plus_sign} />
-        </div>
-        <div id="jogaorak" class="menu-content"></div>
-    </div>
-    <div>
-        <div class="dropdown-menu" id="toggle-tudnivalok">
-            <h3>TUDNIVALÓK</h3>
-            <Fragment set:html={plus_sign} />
-        </div>
-        <div id="tudnivalok" class="menu-content"></div>
-    </div>
-    <div id="fomenuItems"></div>
+<div class="container-fluid" id="desktopMenu">
+    <h3>EZ LESZ A DESKTOP MENÜ!</h3>
 </div>
 
 <script>
@@ -39,28 +24,7 @@ import "../../sass/components/_navbarTwo.scss";
 
     const jogorakList = document.getElementById("jogaorak");
     const tudnivalokList = document.getElementById("tudnivalok");
-    const menuList = document.getElementById("menu");
     const fomenuItems = document.getElementById("fomenuItems");
-
-    const jogorakToggle = document.getElementById("toggle-jogaorak");
-    const tudnivalokToggle = document.getElementById("toggle-tudnivalok");
-    const hamburgerMenu = document.getElementById("hamburger");
-
-    if (jogorakToggle) {
-        jogorakToggle.addEventListener("click", () => {
-            if (jogorakList) {
-                jogorakList.classList.toggle("show");
-            }
-        });
-    }
-
-    if (tudnivalokToggle) {
-        tudnivalokToggle.addEventListener("click", () => {
-            if (tudnivalokList) {
-                tudnivalokList.classList.toggle("show");
-            }
-        });
-    }
 
     // Jógaórák menüelemek hozzáadása
     if (jogorakList) {
@@ -102,4 +66,4 @@ import "../../sass/components/_navbarTwo.scss";
             fomenuItems.appendChild(listItem);
         });
     }
-</script> -->
+</script>

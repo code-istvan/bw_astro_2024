@@ -44,12 +44,14 @@ const hrefValue = isEnglish ? "/en/" : "/";
 <script>
     const hamburgerMenu = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
+    const desktopMenu = document.getElementById("desktopMenu");
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener("click", function () {
             hamburgerMenu.classList.toggle("hamburger-closed");
             hamburgerMenu.classList.toggle("hamburger-open");
             mobileMenu?.classList.toggle("open");
+            desktopMenu?.classList.toggle("open");
         });
     }
 </script>
