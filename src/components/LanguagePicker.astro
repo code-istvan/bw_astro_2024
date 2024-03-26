@@ -11,13 +11,11 @@ const currentLanguage = Astro.currentLocale;
 
 <div>
     {
-        Object.entries(languages).map(([lang, { name, shortName }]) => {
+        Object.entries(languages).map(([lang, { shortName }]) => {
             if (currentLanguage === lang) return;
 
             const translatePath = useTranslatedPath(lang);
             const path = translatePath(Astro.url.pathname);
-            console.log("ja", path);
-            console.log(currentLanguage);
 
             return (
                 <a href={path} class="link-class" aria-label="Itt választhatsz nyelvet. Angol vagy magyar nyelvek közül választhatsz. You can choose your language here. You can choose between English or Hungarian.">

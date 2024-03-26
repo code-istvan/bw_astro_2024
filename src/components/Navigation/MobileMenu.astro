@@ -6,17 +6,17 @@ import "../../sass/components/_mobilMenu.scss";
 <div class="container-fluid" id="mobileMenu">
     <div>
         <div class="dropdown-menu" id="toggle-jogaorak">
-            <h3>JÓGAÓRÁK</h3>
+            <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
             <Fragment set:html={plus_sign} />
         </div>
-        <div id="jogaorak" class="menu-content"></div>
+        <div id="jogaorak" class="dropdown-menu__content"></div>
     </div>
     <div>
         <div class="dropdown-menu" id="toggle-tudnivalok">
-            <h3>TUDNIVALÓK</h3>
+            <h3 id="tudnivalok-label">TUDNIVALÓK</h3>
             <Fragment set:html={plus_sign} />
         </div>
-        <div id="tudnivalok" class="menu-content"></div>
+        <div id="tudnivalok" class="dropdown-menu__content"></div>
     </div>
     <div id="fomenuItems"></div>
 </div>
@@ -39,12 +39,20 @@ import "../../sass/components/_mobilMenu.scss";
 
     const jogorakList = document.getElementById("jogaorak");
     const tudnivalokList = document.getElementById("tudnivalok");
-    const menuList = document.getElementById("menu");
     const fomenuItems = document.getElementById("fomenuItems");
-
     const jogorakToggle = document.getElementById("toggle-jogaorak");
     const tudnivalokToggle = document.getElementById("toggle-tudnivalok");
-    const hamburgerMenu = document.getElementById("hamburger");
+
+    const jogaorakLabel = document.getElementById("jogaorak-label");
+    const tudnivalokLabel = document.getElementById("tudnivalok-label");
+
+    if (jogaorakLabel) {
+        jogaorakLabel.textContent = t("jogaorak");
+    }
+
+    if (tudnivalokLabel) {
+        tudnivalokLabel.textContent = t("tudnivalok");
+    }
 
     if (jogorakToggle) {
         jogorakToggle.addEventListener("click", () => {

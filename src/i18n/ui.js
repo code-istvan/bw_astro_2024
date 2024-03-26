@@ -42,7 +42,7 @@ export const ui = {
         osztondij: "Scholarship",
         olvasmanyok: "Readings",
         jogaorak: "YOGA CLASSES",
-        tudnivalok: "STUDIES",
+        tudnivalok: "INFORMATION",
         kapcsolat: "CONTACT",
     },
 };

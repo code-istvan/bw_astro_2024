@@ -28,11 +28,11 @@
         justify-content: space-between;
     }
 
-    .menu-content {
+    .dropdown-menu__content {
         display: none;
     }
 
-    .menu-content.show {
+    .dropdown-menu__content.show {
         display: block;
     }
 }
