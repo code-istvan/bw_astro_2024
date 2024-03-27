@@ -3,7 +3,22 @@ import "../../sass/components/_desktopMenu.scss";
 ---
 
 <div class="container-fluid" id="desktopMenu">
-    <h3>EZ LESZ A DESKTOP MENÜ!</h3>
+    <div class="off-canvas-menu">
+        <div class="menu-item" id="menu1">
+            <div><h3 id="jogaorak-label-desktop">JÓGAÓRÁK</h3></div>
+            <div id="jogaorak-desktop" class="dropdown-menu__content"></div>
+        </div>
+        <div class="menu-item" id="menu2">
+            <div><h3 id="tudnivalok-label-desktop">TUDNIVALÓK</h3></div><div
+                id="tudnivalok-desktop"
+                class="dropdown-menu__content"
+            >
+            </div>
+        </div>
+        <div class="menu-item" id="menu3">
+            <div id="fomenuItems-desktop"></div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -22,9 +37,20 @@ import "../../sass/components/_desktopMenu.scss";
     const menuItemsTudnivalok = getMenuItemsTudnivalok(translatePath, t);
     const menuItemsFomenu = getMenuItemsFomenu(translatePath, t);
 
-    const jogorakList = document.getElementById("jogaorak");
-    const tudnivalokList = document.getElementById("tudnivalok");
-    const fomenuItems = document.getElementById("fomenuItems");
+    const jogorakList = document.getElementById("jogaorak-desktop");
+    const tudnivalokList = document.getElementById("tudnivalok-desktop");
+    const fomenuItems = document.getElementById("fomenuItems-desktop");
+
+    const jogaorakLabel = document.getElementById("jogaorak-label-desktop");
+    const tudnivalokLabel = document.getElementById("tudnivalok-label-desktop");
+
+    if (jogaorakLabel) {
+        jogaorakLabel.textContent = t("jogaorak");
+    }
+
+    if (tudnivalokLabel) {
+        tudnivalokLabel.textContent = t("tudnivalok");
+    }
 
     // Jógaórák menüelemek hozzáadása
     if (jogorakList) {

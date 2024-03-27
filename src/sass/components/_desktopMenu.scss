@@ -13,7 +13,7 @@
     // height: 100vh;
     top: 0;
     // transform: translateY(60px);
-    padding-top: 60px;
+    padding-top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -25,4 +25,30 @@
     -o-transition: all 500ms ease-out;
     transition: all 500ms ease-out;
     // }
+}
+
+.off-canvas-menu {
+    display: grid;
+    grid-template-columns:
+        1fr minmax(auto, 230px) minmax(auto, 230px) minmax(auto, 230px)
+        1fr;
+    // gap: 50px;
+    width: 100%; /* A teljes képernyő szélességét használja */
+}
+
+.menu-item {
+    padding: 10px; /* Kis térköz a szöveg körül */
+}
+
+/* Az első és utolsó oszlop üres, de az 1fr miatt helyet foglalnak */
+#menu1 {
+    grid-column: 2; /* A második oszlopban helyezkedik el */
+}
+
+#menu2 {
+    grid-column: 3; /* A harmadik oszlopban helyezkedik el */
+}
+
+#menu3 {
+    grid-column: 4; /* A negyedik oszlopban helyezkedik el */
 }
