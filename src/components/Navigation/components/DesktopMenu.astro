@@ -1,33 +1,33 @@
 ---
-import plus_sign from "../../images/svg/plus_sign.svg?raw";
-import "../../sass/components/_mobilMenu.scss";
+import "./_desktopMenu.scss";
 ---
 
-<div class="container-fluid" id="mobileMenu">
-    <div>
-        <div class="dropdown-menu" id="toggle-jogaorak">
-            <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
-            <Fragment set:html={plus_sign} />
+<div class="container-fluid" id="desktopMenu">
+    <div class="off-canvas-menu">
+        <div class="menu-item" id="menu1">
+            <div><h3 id="jogaorak-label-desktop">JÓGAÓRÁK</h3></div>
+            <div id="jogaorak-desktop" class="dropdown-menu__content"></div>
         </div>
-        <div id="jogaorak" class="dropdown-menu__content"></div>
-    </div>
-    <div>
-        <div class="dropdown-menu" id="toggle-tudnivalok">
-            <h3 id="tudnivalok-label">TUDNIVALÓK</h3>
-            <Fragment set:html={plus_sign} />
+        <div class="menu-item" id="menu2">
+            <div><h3 id="tudnivalok-label-desktop">TUDNIVALÓK</h3></div><div
+                id="tudnivalok-desktop"
+                class="dropdown-menu__content"
+            >
+            </div>
         </div>
-        <div id="tudnivalok" class="dropdown-menu__content"></div>
+        <div class="menu-item" id="menu3">
+            <div id="fomenuItems-desktop"></div>
+        </div>
     </div>
-    <div id="fomenuItems"></div>
 </div>
 
 <script>
-    import { useTranslations, useTranslatedPath } from "../../i18n/utils.js";
+    import { useTranslations, useTranslatedPath } from "../../../i18n/utils.js";
     import {
         getMenuItemsJogaorak,
         getMenuItemsTudnivalok,
         getMenuItemsFomenu,
-    } from "./menuData";
+    } from "../data/menuData.js";
 
     const language = window.location.href.includes("en") ? "en" : "hu";
 
@@ -37,14 +37,12 @@ import "../../sass/components/_mobilMenu.scss";
     const menuItemsTudnivalok = getMenuItemsTudnivalok(translatePath, t);
     const menuItemsFomenu = getMenuItemsFomenu(translatePath, t);
 
-    const jogorakList = document.getElementById("jogaorak");
-    const tudnivalokList = document.getElementById("tudnivalok");
-    const fomenuItems = document.getElementById("fomenuItems");
-    const jogorakToggle = document.getElementById("toggle-jogaorak");
-    const tudnivalokToggle = document.getElementById("toggle-tudnivalok");
+    const jogorakList = document.getElementById("jogaorak-desktop");
+    const tudnivalokList = document.getElementById("tudnivalok-desktop");
+    const fomenuItems = document.getElementById("fomenuItems-desktop");
 
-    const jogaorakLabel = document.getElementById("jogaorak-label");
-    const tudnivalokLabel = document.getElementById("tudnivalok-label");
+    const jogaorakLabel = document.getElementById("jogaorak-label-desktop");
+    const tudnivalokLabel = document.getElementById("tudnivalok-label-desktop");
 
     if (jogaorakLabel) {
         jogaorakLabel.textContent = t("jogaorak");
@@ -52,22 +50,6 @@ import "../../sass/components/_mobilMenu.scss";
 
     if (tudnivalokLabel) {
         tudnivalokLabel.textContent = t("tudnivalok");
-    }
-
-    if (jogorakToggle) {
-        jogorakToggle.addEventListener("click", () => {
-            if (jogorakList) {
-                jogorakList.classList.toggle("show");
-            }
-        });
-    }
-
-    if (tudnivalokToggle) {
-        tudnivalokToggle.addEventListener("click", () => {
-            if (tudnivalokList) {
-                tudnivalokList.classList.toggle("show");
-            }
-        });
     }
 
     // Jógaórák menüelemek hozzáadása

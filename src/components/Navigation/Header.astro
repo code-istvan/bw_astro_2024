@@ -2,8 +2,9 @@
 import brand_logo from "../../images/svg/brand_logo.svg?raw";
 import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
 import LanguagePicker from "../LanguagePicker.astro";
-import MobileMenu from "./MobileMenu.astro";
-import DesktopMenu from "./DesktopMenu.astro";
+import MobileMenu from "./components/MobileMenu.astro";
+import DesktopMenu from "./components/DesktopMenu.astro";
+import ProgressBar from "./components/ProgressBar.astro";
 import "../../sass/components/_header.scss";
 
 const isEnglish = Astro.url.pathname.includes("/en");
@@ -12,6 +13,7 @@ const hrefValue = isEnglish ? "/en/" : "/";
 
 <header>
     <div class="container-fluid">
+        <ProgressBar />
         <nav>
             <a
                 href={hrefValue}
@@ -42,6 +44,13 @@ const hrefValue = isEnglish ? "/en/" : "/";
 </header>
 
 <script>
+    // This script is responsible for the sticky header
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("scrolling", window.scrollY > 60);
+    });
+
+    // This script is responsible for the hamburger menu
     const hamburgerMenu = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
     const desktopMenu = document.getElementById("desktopMenu");

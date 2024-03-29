@@ -1,5 +1,16 @@
 @import "/src/sass/global";
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+}
+
+header.scrolling {
+    background-color: $color-shades-darkGray;
+    transition: background-color 0.5s;
+}
+
 nav {
     height: 60px;
     display: flex;
