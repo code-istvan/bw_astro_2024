@@ -1,24 +1,24 @@
-@import "/src/sass/global";
+// @import "/src/sass/global";
 
-@supports (animation-timeline: scroll()) {
-    @keyframes scaleProgress {
-        from {
-            transform: scaleX(0);
-        }
-        to {
-            transform: scaleX(1);
-        }
-    }
+// @supports (animation-timeline: scroll()) {
+//     @keyframes scaleProgress {
+//         from {
+//             transform: scaleX(0);
+//         }
+//         to {
+//             transform: scaleX(1);
+//         }
+//     }
 
-    .progress-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        animation: scaleProgress linear;
-        animation-timeline: scroll();
-        transform-origin: left;
-        background-color: #b45309;
-    }
-}
+//     .progress-bar {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         height: 6px;
+//         animation: scaleProgress linear;
+//         animation-timeline: scroll();
+//         transform-origin: left;
+//         background-color: #b45309;
+//     }
+// }
