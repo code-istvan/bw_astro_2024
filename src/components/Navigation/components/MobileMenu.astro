@@ -23,91 +23,39 @@ import "./_mobilMenu.scss";
 
 <script>
     import { useTranslations, useTranslatedPath } from "../../../i18n/utils.js";
-    import {
-        getMenuItemsJogaorak,
-        getMenuItemsTudnivalok,
-        getMenuItemsFomenu,
-    } from "../data/menuData.js";
+    import { initMenu, initMenuComponents } from "./menuLogic.js";
 
     const language = window.location.href.includes("en") ? "en" : "hu";
-
     const t = useTranslations(language);
     const translatePath = useTranslatedPath(language);
-    const menuItemsJogaorak = getMenuItemsJogaorak(translatePath, t);
-    const menuItemsTudnivalok = getMenuItemsTudnivalok(translatePath, t);
-    const menuItemsFomenu = getMenuItemsFomenu(translatePath, t);
+
+    // Komponensek inicializálása
+    initMenuComponents(language, t, [
+        {
+            toggleId: "toggle-jogaorak",
+            contentId: "jogaorak",
+            labelId: "jogaorak-label",
+            labelTextKey: "jogaorak",
+        },
+        {
+            toggleId: "toggle-tudnivalok",
+            contentId: "tudnivalok",
+            labelId: "tudnivalok-label",
+            labelTextKey: "tudnivalok",
+        },
+    ]);
 
     const jogorakList = document.getElementById("jogaorak");
     const tudnivalokList = document.getElementById("tudnivalok");
     const fomenuItems = document.getElementById("fomenuItems");
-    const jogorakToggle = document.getElementById("toggle-jogaorak");
-    const tudnivalokToggle = document.getElementById("toggle-tudnivalok");
 
-    const jogaorakLabel = document.getElementById("jogaorak-label");
-    const tudnivalokLabel = document.getElementById("tudnivalok-label");
-
-    if (jogaorakLabel) {
-        jogaorakLabel.textContent = t("jogaorak");
-    }
-
-    if (tudnivalokLabel) {
-        tudnivalokLabel.textContent = t("tudnivalok");
-    }
-
-    if (jogorakToggle) {
-        jogorakToggle.addEventListener("click", () => {
-            if (jogorakList) {
-                jogorakList.classList.toggle("show");
-            }
-        });
-    }
-
-    if (tudnivalokToggle) {
-        tudnivalokToggle.addEventListener("click", () => {
-            if (tudnivalokList) {
-                tudnivalokList.classList.toggle("show");
-            }
-        });
-    }
-
-    // Jógaórák menüelemek hozzáadása
-    if (jogorakList) {
-        menuItemsJogaorak.forEach((link) => {
-            const listItem = document.createElement("li");
-            const anchor = document.createElement("a");
-
-            anchor.href = link.link;
-            anchor.textContent = link.label;
-            listItem.appendChild(anchor);
-            jogorakList.appendChild(listItem);
-        });
-    }
-
-    // Tudnivalók menüelemek hozzáadása
-    if (tudnivalokList) {
-        menuItemsTudnivalok.forEach((link) => {
-            const listItem = document.createElement("li");
-            const anchor = document.createElement("a");
-
-            anchor.href = link.link;
-            anchor.textContent = link.label;
-            listItem.appendChild(anchor);
-            tudnivalokList.appendChild(listItem);
-        });
-    }
-
-    if (fomenuItems) {
-        menuItemsFomenu.forEach((item) => {
-            const listItem = document.createElement("li");
-            const anchor = document.createElement("a");
-            const header = document.createElement("h3"); // H3 elem létrehozása
-
-            anchor.href = item.link;
-            anchor.textContent = item.label;
-
-            header.appendChild(anchor); // Az 'a' elem hozzáadása az 'h3' elemhez
-            listItem.appendChild(header); // Az 'h3' elem hozzáadása az 'li' elemhez
-            fomenuItems.appendChild(listItem);
-        });
-    }
+    // Menüelemek dinamikus hozzáadása
+    initMenu(
+        language,
+        translatePath,
+        t,
+        jogorakList,
+        tudnivalokList,
+        fomenuItems
+    );
 </script>

@@ -1,10 +1,8 @@
-// src/menuLogic.js
-
 import {
     getMenuItemsJogaorak,
     getMenuItemsTudnivalok,
     getMenuItemsFomenu,
-} from "./data/menuData.js";
+} from "../data/menuData.js";
 
 function initMenu(
     language,
@@ -47,4 +45,29 @@ function populateMenu(menuElement, menuItems, isHeader = false) {
     });
 }
 
-export { initMenu };
+function setupMenuToggle(toggleElement, contentElement) {
+    if (!toggleElement || !contentElement) return;
+
+    toggleElement.addEventListener("click", () => {
+        contentElement.classList.toggle("show");
+    });
+}
+
+function setLabelText(labelElement, text) {
+    if (labelElement) {
+        labelElement.textContent = text;
+    }
+}
+
+function initMenuComponents(language, t, components) {
+    components.forEach(({ toggleId, contentId, labelId, labelTextKey }) => {
+        const toggleElement = document.getElementById(toggleId);
+        const contentElement = document.getElementById(contentId);
+        const labelElement = document.getElementById(labelId);
+
+        setupMenuToggle(toggleElement, contentElement);
+        setLabelText(labelElement, t(labelTextKey));
+    });
+}
+
+export { initMenu, initMenuComponents };
