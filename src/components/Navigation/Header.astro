@@ -54,11 +54,13 @@ const hrefValue = isEnglish ? "/en/" : "/";
     const hamburgerMenu = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
     const desktopMenu = document.getElementById("desktopMenu");
+    const languagePicker = document.getElementById("language-picker");
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener("click", function () {
             hamburgerMenu.classList.toggle("hamburger-closed");
             hamburgerMenu.classList.toggle("hamburger-open");
+            languagePicker.classList.toggle("hide");
             mobileMenu?.classList.toggle("open");
             desktopMenu?.classList.toggle("open");
         });
