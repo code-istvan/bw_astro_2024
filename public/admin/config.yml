@@ -4,8 +4,8 @@ backend:
     branch: master
     site_domain: https://voluble-crumble-cbe048.netlify.app
 
-media_folder: "src/assets/images"
-public_folder: "src/assets/images"
+media_folder: "src/images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "src/images/uploads"
 
 slug:
     encoding: "ascii"
