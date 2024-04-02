@@ -36,9 +36,28 @@ const { title, isHomePage } = Astro.props as Props;
         <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
         <link rel="apple-touch-icon" href={appleTouchIcon.src} />
         <link rel="manifest" href="/manifest.json" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
     </head>
     <body>
         <Header />
         <div class="layout-content-wrapper"><slot /></div>
+        <script>
+            declare global {
+                interface Window {
+                    netlifyIdentity: any;
+                }
+            }
+
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
