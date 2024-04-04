@@ -1,64 +1,79 @@
 backend:
-    name: git-gateway
-    repo: code-istvan/bw
-    branch: main
-    site_domain: https://voluble-crumble-cbe048.netlify.app
-
+  name: git-gateway
+  repo: code-istvan/bw
+  branch: main
+  site_domain: "https://voluble-crumble-cbe048.netlify.app"
 publish_mode: editorial_workflow
-media_folder: "src/images/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "src/images/uploads"
-
+media_folder: src/images/uploads
+public_folder: src/images/uploads
 slug:
-    encoding: "ascii"
-    clean_accents: true
-    sanitize_replacement: "-"
-
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
 collections:
-    - name: "blog" # Used in routes, e.g., /admin/collections/blog
-      label: "Blog" # Used in the UI
-      folder: "src/pages/blog" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-      extension: ".md"
-      format: frontmatter
-      fields: # The fields for each document, usually in front matter # - { label: Slug, name: slug, required: true, widget: string }
-          - {
-                label: "Published",
-                name: "published",
-                widget: "boolean",
-                default: true,
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - {
-                label: "Author",
-                name: "author",
-                widget: "relation",
-                collection: "authors",
-                value_field: "name",
-                display_fields: ["name"],
-                search_fields: ["name", "email"],
-            }
-          - { label: "Tags", name: "tags", widget: "list" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Featured Image", name: "thumbnail", widget: "image" }
-          - {
-                label: "Featured Image Mobil",
-                name: "thumbnailMobil",
-                widget: "image",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
-
-    - name: "authors"
-      label: "Authors"
-      folder: "src/pages/blog/authors"
-      media_folder: ""
-      public_folder: ""
-      format: "json"
-      create: true
-      slug: "{{name}}"
-      fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Title, name: title, widget: string }
-          - { label: Email, name: email, widget: string, required: false }
-          - { label: Image, name: authorimage, widget: image, required: false }
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
+    create: true
+    slug: "{{slug}}"
+    extension: .md
+    format: frontmatter
+    fields:
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Author
+        name: author
+        widget: relation
+        collection: authors
+        value_field: name
+        display_fields:
+          - name
+        search_fields:
+          - name
+          - email
+      - label: Tags
+        name: tags
+        widget: list
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Featured Image
+        name: thumbnail
+        widget: image
+      - label: Featured Image Mobil
+        name: thumbnailMobil
+        widget: image
+      - label: Body
+        name: body
+        widget: markdown
+  - name: authors
+    label: Authors
+    folder: src/pages/blog/authors
+    media_folder: ""
+    public_folder: ""
+    format: json
+    create: true
+    slug: "{{name}}"
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Email
+        name: email
+        widget: string
+        required: false
+      - label: Image
+        name: authorimage
+        widget: image
+        required: false

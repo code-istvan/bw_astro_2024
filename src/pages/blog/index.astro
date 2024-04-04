@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-let posts = await Astro.glob('./blog/*.md');
-// posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
-console.log(posts[0].frontmatter);
+import Layout from '../../layouts/Layout.astro';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
 <Layout title="Árak">
@@ -13,7 +13,7 @@ console.log(posts[0].frontmatter);
                 return (
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title">{post.frontmatter.title}</h2>
+                            <h2 class="card-title">{post.data.title}</h2>
                         </div>
                     </div>
                 );
