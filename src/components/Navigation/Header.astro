@@ -41,10 +41,10 @@ const hrefValue = isEnglish ? '/en/' : '/';
 
 <script>
     // This script is responsible for the sticky header
-    // window.addEventListener('scroll', function () {
-    //     const header = document.querySelector('header');
-    //     header.classList.toggle('scrolling', window.scrollY > 60);
-    // });
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolling', window.scrollY > 60);
+    });
 
     // This script is responsible for the hamburger menu
     const hamburgerMenu = document.getElementById('hamburger-icon');

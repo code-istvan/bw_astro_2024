@@ -1,9 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+// import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 let posts = await Astro.glob('./blog/*.md');
 // posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
-console.log(posts[0].frontmatter);
 ---
 
 <Layout title="Árak">
