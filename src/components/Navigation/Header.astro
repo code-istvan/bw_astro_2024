@@ -1,33 +1,29 @@
 ---
-import brand_logo from "../../images/svg/brand_logo.svg?raw";
-import brand_logo_text from "../../images/svg/brand_logo_text.svg?raw";
-import LanguagePicker from "../LanguagePicker.astro";
-import MobileMenu from "./components/MobileMenu.astro";
-import DesktopMenu from "./components/DesktopMenu.astro";
-import ProgressBar from "./components/ProgressBar.astro";
-import "./_header.scss";
+import brand_logo from '../../images/svg/brand_logo.svg?raw';
+import brand_logo_text from '../../images/svg/brand_logo_text.svg?raw';
+import LanguagePicker from '../LanguagePicker.astro';
+import MobileMenu from './components/MobileMenu.astro';
+import DesktopMenu from './components/DesktopMenu.astro';
+import ProgressBar from './components/ProgressBar.astro';
+import './_header.scss';
 
-const isEnglish = Astro.url.pathname.includes("/en");
-const hrefValue = isEnglish ? "/en/" : "/";
+const isEnglish = Astro.url.pathname.includes('/en');
+const hrefValue = isEnglish ? '/en/' : '/';
 ---
 
 <header>
     <div class="container-fluid">
         <ProgressBar />
         <nav>
-            <a
-                href={hrefValue}
-                class="logo-link"
-                aria-label="Ez itt a brandlogo. Ha rákattintasz elvisz a kezdőlapra."
-            >
+            <a href={hrefValue} class="logo-link" aria-label="Ez itt a brandlogo. Ha rákattintasz elvisz a kezdőlapra.">
                 <div class="brand-logo-wrapper">
                     <Fragment set:html={brand_logo} />
                     <Fragment set:html={brand_logo_text} />
-                </div></a
-            >
+                </div>
+            </a>
             <div class="hamburger-container">
                 <LanguagePicker />
-                <div id="hamburger" class="hamburger hamburger-closed">
+                <div id="hamburger-icon" class="hamburger hamburger-closed">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -45,24 +41,24 @@ const hrefValue = isEnglish ? "/en/" : "/";
 
 <script>
     // This script is responsible for the sticky header
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        header.classList.toggle("scrolling", window.scrollY > 60);
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolling', window.scrollY > 60);
     });
 
     // This script is responsible for the hamburger menu
-    const hamburgerMenu = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const desktopMenu = document.getElementById("desktopMenu");
-    const languagePicker = document.getElementById("language-picker");
+    const hamburgerMenu = document.getElementById('hamburger-icon');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const desktopMenu = document.getElementById('desktopMenu');
+    const languagePicker = document.getElementById('language-picker');
 
     if (hamburgerMenu) {
-        hamburgerMenu.addEventListener("click", function () {
-            hamburgerMenu.classList.toggle("hamburger-closed");
-            hamburgerMenu.classList.toggle("hamburger-open");
-            languagePicker.classList.toggle("hide");
-            mobileMenu?.classList.toggle("open");
-            desktopMenu?.classList.toggle("open");
+        hamburgerMenu.addEventListener('click', function () {
+            hamburgerMenu.classList.toggle('hamburger-closed');
+            hamburgerMenu.classList.toggle('hamburger-open');
+            languagePicker.classList.toggle('hide');
+            mobileMenu?.classList.toggle('open');
+            desktopMenu?.classList.toggle('open');
         });
     }
 </script>
