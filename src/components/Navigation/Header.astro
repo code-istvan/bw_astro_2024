@@ -52,6 +52,10 @@ const hrefValue = isEnglish ? '/en/' : '/';
     const desktopMenu = document.getElementById('desktopMenu');
     const languagePicker = document.getElementById('language-picker');
 
+    document.body.addEventListener('click', function (event) {
+        console.log('Klikk történt a body-n', event.target);
+    });
+
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener('click', function () {
             hamburgerMenu.classList.toggle('hamburger-closed');
