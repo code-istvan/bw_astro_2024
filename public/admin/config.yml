@@ -17,7 +17,7 @@ collections:
     create: true
     slug: '{{slug}}'
     extension: .md
-    format: yaml-frontmatter
+    format: frontmatter
     fields:
       - label: Published
         name: published
@@ -60,7 +60,7 @@ collections:
     media_folder: ''
     public_folder: ''
     extension: .md
-    format: yaml-frontmatter
+    format: frontmatter
     create: true
     slug: '{{name}}'
     fields:
