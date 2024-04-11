@@ -1,0 +1,17 @@
+---
+// [slug].astro
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+const { slug } = Astro.params;
+let posts = await Astro.glob('./blog/*.md');
+const post = posts.find((p) => p.url.endsWith(`${slug}/`));
+---
+
+{
+    post ? (
+        <BlogPostLayout frontmatter={post.frontmatter}>
+            <post.Content />
+        </BlogPostLayout>
+    ) : (
+        <p>Post not found.</p>
+    )
+}

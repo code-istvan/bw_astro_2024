@@ -2,23 +2,27 @@ backend:
   name: git-gateway
   repo: code-istvan/bw
   branch: main
-  site_domain: "https://voluble-crumble-cbe048.netlify.app"
+  site_domain: 'https://voluble-crumble-cbe048.netlify.app'
 publish_mode: editorial_workflow
 media_folder: src/images/uploads
 public_folder: src/images/uploads
 slug:
   encoding: ascii
   clean_accents: true
-  sanitize_replacement: "-"
+  sanitize_replacement: '-'
 collections:
   - name: blog
     label: Blog
     folder: src/pages/blog
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     extension: .md
     format: frontmatter
     fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: '../../layouts/BlogPostLayout.astro'
       - label: Published
         name: published
         widget: boolean
@@ -57,11 +61,11 @@ collections:
   - name: authors
     label: Authors
     folder: src/pages/blog/authors
-    media_folder: ""
-    public_folder: ""
+    media_folder: ''
+    public_folder: ''
     format: json
     create: true
-    slug: "{{name}}"
+    slug: '{{name}}'
     fields:
       - label: Name
         name: name

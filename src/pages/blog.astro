@@ -1,22 +1,31 @@
 ---
-// import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 let posts = await Astro.glob('./blog/*.md');
-// posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+posts.sort((a, b) => {
+    let dateA = new Date(a.frontmatter.date).getTime();
+    let dateB = new Date(b.frontmatter.date).getTime();
+
+    return dateB - dateA;
+});
 ---
 
-<Layout title="Árak">
+<Layout title="BLOG">
     <div class="container">
         {
             posts.map((post) => {
+                const slug = post.file.split('/').pop().replace(/\.md$/, '');
+                const postUrl = `/blog/${slug}`;
                 return (
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title">{post.frontmatter.title}</h2>
-                            <p class="card-title">Description: {post.frontmatter.description}</p>
-                            <p class="card-title">Author: {post.frontmatter.author}</p>
-                            <p class="card-title">Tags: {post.frontmatter.tags}</p>
-                            <p class="card-title">Date: {post.frontmatter.date}</p>
+                            <a href={postUrl} class="card-body">
+                                <h2 class="card-title">{post.frontmatter.title}</h2>
+                                <p class="card-title">Description: {post.frontmatter.description}</p>
+                                <p class="card-title">Author: {post.frontmatter.author}</p>
+                                <p class="card-title">Tags: {post.frontmatter.tags}</p>
+                                <p class="card-title">Date: {post.frontmatter.date}</p>
+                                <p class="card-title">Url: {postUrl}</p>
+                            </a>
                         </div>
                     </div>
                 );
