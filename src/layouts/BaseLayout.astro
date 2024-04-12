@@ -1,10 +1,10 @@
 ---
-import { getImage } from "astro:assets";
-import faviconSrc from "../images/favicon.png";
-import faviconSvgSrc from "../images/favicon.svg";
-import Header from "../components/Navigation/Header.astro";
-import "../sass/global.scss";
-import "../sass/layouts/_layout.scss";
+import { getImage } from 'astro:assets';
+import faviconSrc from '../images/favicon.png';
+import faviconSvgSrc from '../images/favicon.svg';
+import Header from '../components/Navigation/Header.astro';
+import '../sass/global.scss';
+import '../sass/layouts/_layout.scss';
 
 interface Props {
     title: string;
@@ -15,9 +15,9 @@ const appleTouchIcon = await getImage({
     src: faviconSrc,
     width: 180,
     height: 180,
-    format: "png",
+    format: 'png',
 });
-const faviconSvg = await getImage({ src: faviconSvgSrc, format: "svg" });
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' });
 
 const url = Astro.url;
 const { title, isHomePage } = Astro.props as Props;
@@ -36,8 +36,7 @@ const { title, isHomePage } = Astro.props as Props;
         <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
         <link rel="apple-touch-icon" href={appleTouchIcon.src} />
         <link rel="manifest" href="/manifest.json" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
+        <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
         <Header />
@@ -49,10 +48,10 @@ const { title, isHomePage } = Astro.props as Props;
                 }
             }
             if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", (user: any) => {
+                window.netlifyIdentity.on('init', (user: any) => {
                     if (!user) {
-                        window.netlifyIdentity.on("login", () => {
-                            document.location.href = "/admin/";
+                        window.netlifyIdentity.on('login', () => {
+                            document.location.href = '/admin/';
                         });
                     }
                 });
