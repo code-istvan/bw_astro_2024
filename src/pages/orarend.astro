@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const pageTitle = 'Órarend';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BaseLayout title="Órarend">
+<BaseLayout title={pageTitle}>
     <div class="container">
         <div class="row"><h1>{t('orarend')}</h1></div>
     </div>
