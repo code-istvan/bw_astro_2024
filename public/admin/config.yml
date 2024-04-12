@@ -13,7 +13,7 @@ slug:
 collections:
   - name: blog
     label: Blog
-    folder: src/blog/posts
+    folder: src/pages/blog/posts
     create: true
     slug: '{{slug}}'
     extension: .md
@@ -60,7 +60,7 @@ collections:
         default: '../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
-    folder: src/blog/posts
+    folder: src/pages/blog/authors
     media_folder: ''
     public_folder: ''
     extension: .md
