@@ -1,15 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Órarend">
+<BaseLayout title="Órarend">
     <div class="container">
-        <div class="row"><h1>{t("orarend")}</h1></div>
+        <div class="row"><h1>{t('orarend')}</h1></div>
     </div>
-</Layout>
+</BaseLayout>
 
 <style></style>
