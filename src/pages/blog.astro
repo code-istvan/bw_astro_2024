@@ -1,37 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'BLOG';
-// import { getCollection } from 'astro:content';
-// const posts = await getCollection('posts');
-// posts.sort((a, b) => {
-//     let dateA = new Date(a.data.date).getTime();
-//     let dateB = new Date(b.data.date).getTime();
+import BlogPost from '../components/BlogPost.astro';
 
-//     return dateB - dateA;
-// });
+const pageTitle = 'BLOG';
+const allPosts = await Astro.glob('../pages/blog/posts/*.md');
 ---
 
 <BaseLayout title={pageTitle}>
     <div class="container">
-        <!-- {
-            posts.map((post) => {
-                console.log(post);
-                const postUrl = `/blog/${post.slug}`;
-                return (
-                    <div class="card">
-                        <div class="card-body">
-                            <a href={postUrl} class="card-body">
-                                <h2 class="card-title">{post.data.title}</h2>
-                                <p class="card-title">Description: {post.data.description}</p>
-                                <p class="card-title">Author: {post.data.author}</p>
-                                <p class="card-title">Tags: {post.data.tags}</p>
-                                <p class="card-title">Date: {post.data.date}</p>
-                                <p class="card-title">Url: {postUrl}</p>
-                            </a>
-                        </div>
-                    </div>
-                );
-            })
-        } -->
+        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
     </div>
 </BaseLayout>
