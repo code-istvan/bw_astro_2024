@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BlogPost from '../components/Blog/BlogPost.astro';
+import TagList from '../components/Blog/TagList.astro';
 
 const pageTitle = 'BLOG';
 const allPosts = await Astro.glob('../pages/blog/posts/*.md');
@@ -8,6 +9,10 @@ const allPosts = await Astro.glob('../pages/blog/posts/*.md');
 
 <BaseLayout title={pageTitle}>
     <div class="container">
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        <div class="tags">
+            <h3>Tags</h3>
+            <TagList />
+        </div>
+        <div>{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}</div>
     </div>
 </BaseLayout>
