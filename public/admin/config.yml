@@ -13,7 +13,7 @@ slug:
 collections:
   - name: blog
     label: Blog
-    folder: src/content/posts
+    folder: src/blog/posts
     create: true
     slug: '{{slug}}'
     extension: .md
@@ -54,9 +54,13 @@ collections:
       - label: Body
         name: body
         widget: markdown
+      - label: Layout # Új mező hozzáadása
+        name: layout
+        widget: hidden
+        default: '../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
-    folder: src/content/authors
+    folder: src/blog/posts
     media_folder: ''
     public_folder: ''
     extension: .md

@@ -1,13 +1,13 @@
 ---
-import Layout from './BaseLayout.astro';
+import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title="My Blog">
+<BaseLayout title="My Blog">
     <div class="container">
         <div class="row">
             <slot />
         </div>
     </div>
-</Layout>
+</BaseLayout>
