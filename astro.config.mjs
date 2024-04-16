@@ -14,5 +14,5 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
   },
   integrations: [react()],
-  site: 'http://localhost:4321',
+  site: 'https://voluble-crumble-cbe048.netlify.app',
 });
