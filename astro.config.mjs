@@ -14,4 +14,5 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
   },
   integrations: [react()],
+  site: 'https://bandha.works',
 });
