@@ -5,7 +5,7 @@ export async function GET(context) {
     title: 'Bandha Works Jógaiskola | Blog',
     description: 'Astanga jóga blog',
     site: context.site,
-    items: await pagesGlobToRssItems(import.meta.glob('./posts/**/*.md')),
+    items: await pagesGlobToRssItems(import.meta.glob('/posts/**/*.md')),
     customData: `<language>hu-hu</language>`,
   });
 }
