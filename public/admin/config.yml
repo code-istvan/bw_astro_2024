@@ -13,7 +13,7 @@ slug:
 collections:
   - name: blog
     label: Blog
-    folder: src/pages/blog/posts
+    folder: src/pages/blog/
     create: true
     slug: '{{slug}}'
     extension: .md
@@ -57,7 +57,7 @@ collections:
       - label: Layout # Új mező hozzáadása
         name: layout
         widget: hidden
-        default: '../../../layouts/BlogPostLayout.astro'
+        default: '../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
     folder: src/pages/blog/authors
