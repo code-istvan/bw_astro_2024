@@ -4,7 +4,7 @@ import BlogPost from '../components/Blog/BlogPost.astro';
 import TagList from '../components/Blog/TagList.astro';
 
 const pageTitle = 'BLOG';
-const allPosts = await Astro.glob('../pages/blog/posts/*.md');
+const allPosts = await Astro.glob('../pages/blog/*.md');
 ---
 
 <BaseLayout title={pageTitle}>
