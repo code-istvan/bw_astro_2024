@@ -1,15 +1,18 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-// const { minutesRead } = Astro.props.frontmatter;
 
-const { title } = Astro.props;
+const { frontmatter, title } = Astro.props;
+const { minutesRead } = frontmatter;
 ---
 
 <BaseLayout title={title}>
     <div class="container">
+        <h1>{frontmatter.title}</h1>
         <div class="row">
-            <!-- <p>{minutesRead}</p> -->
-            <slot />
+            <p>{minutesRead}</p>
+            <article>
+                <slot />
+            </article>
         </div>
     </div>
 </BaseLayout>
