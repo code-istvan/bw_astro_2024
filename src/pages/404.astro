@@ -1,0 +1,23 @@
+---
+// component imports
+import Link from '../components/Link.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found">
+    <div
+        class="container"
+        style={{
+            display: 'grid',
+            placeItems: 'center',
+            textAlign: 'center',
+            gap: 'var(--space-sm)',
+        }}
+    >
+        <div>
+            <h1 class="h1">404! Nem találom</h1>
+            <p>A keresett oldal nem létezik, vagy eltávolításra került.</p>
+        </div>
+        <Link href="/" style="secondary" text="Vissza a FŐOLDALRA" />
+    </div>
+</BaseLayout>
