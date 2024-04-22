@@ -1,7 +1,7 @@
-<!-- ---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Link from '../../../components/Link.astro';
-const allPosts = await Astro.glob('../*.md');
+const allPosts = await Astro.glob('../../../content/blog/*.md');
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = 'Blog cimkék oldal';
 ---
@@ -16,4 +16,4 @@ const pageTitle = 'Blog cimkék oldal';
             ))
         }
     </div>
-</BaseLayout> -->
+</BaseLayout>
