@@ -4,8 +4,8 @@ backend:
   branch: main
   site_domain: 'https://voluble-crumble-cbe048.netlify.app'
 publish_mode: editorial_workflow
-media_folder: src/content/blog/images/uploads
-public_folder: src/content/blog/images/uploads
+media_folder: src/content/blog/images
+public_folder: src/content/blog/images
 slug:
   encoding: ascii
   clean_accents: true
