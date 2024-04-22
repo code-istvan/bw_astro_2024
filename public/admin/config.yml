@@ -53,10 +53,6 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: Layout
-        name: layout
-        widget: hidden
-        default: '../../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
     folder: src/content/blog/authors/
