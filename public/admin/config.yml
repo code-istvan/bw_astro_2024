@@ -4,8 +4,8 @@ backend:
   branch: main
   site_domain: 'https://voluble-crumble-cbe048.netlify.app'
 publish_mode: editorial_workflow
-media_folder: src/images/uploads
-public_folder: src/images/uploads
+media_folder: src/content/blog/images/uploads
+public_folder: src/content/blog/images/uploads
 slug:
   encoding: ascii
   clean_accents: true
@@ -13,7 +13,7 @@ slug:
 collections:
   - name: blog
     label: Blog
-    folder: src/pages/blog/
+    folder: src/content/blog/
     create: true
     slug: '{{slug}}'
     extension: .md
@@ -60,7 +60,7 @@ collections:
         default: '../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
-    folder: src/pages/blog/authors
+    folder: src/content/blog/authors/
     media_folder: ''
     public_folder: ''
     extension: .md
