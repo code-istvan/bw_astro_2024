@@ -45,10 +45,10 @@ collections:
         name: date
         widget: datetime
       - label: Featured Image
-        name: thumbnail
+        name: image
         widget: image
       - label: Featured Image Mobil
-        name: thumbnailMobil
+        name: imageMobil
         widget: image
       - label: Body
         name: body
@@ -56,7 +56,7 @@ collections:
       - label: Layout
         name: layout
         widget: hidden
-        default: '../../layouts/BlogPostLayout.astro'
+        default: '../../../layouts/BlogPostLayout.astro'
   - name: authors
     label: Authors
     folder: src/content/blog/authors/
