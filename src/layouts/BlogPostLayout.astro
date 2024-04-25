@@ -1,15 +1,17 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import { formatDate } from '../components/js/utils';
+import { formatDate, slugify } from '../components/js/utils';
 
-const { frontmatter, title } = Astro.props;
+const { frontmatter } = Astro.props;
 const { minutesRead } = frontmatter;
+
+const { title, date } = frontmatter;
 ---
 
-<BaseLayout title={frontmatter.title}>
+<BaseLayout {title}>
     <div class="container">
-        <h1>{frontmatter.title}</h1>
-        <p>{formatDate(frontmatter.date)}</p>
+        <h1>{title}</h1>
+        <p>{formatDate(date)}</p>
         <div class="row">
             <p>{minutesRead}</p>
             <article>

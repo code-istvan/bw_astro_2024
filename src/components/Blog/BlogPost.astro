@@ -1,5 +1,7 @@
 ---
-const { title, url } = Astro.props;
+const { title, url, slug } = Astro.props;
+
+console.log('title:', url);
 ---
 
 <li><a href={url}>{title}</a></li>
