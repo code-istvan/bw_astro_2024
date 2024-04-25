@@ -5,13 +5,10 @@ import { getCollection } from 'astro:content';
 import PostList from '../../components/Blog/PostList.astro';
 const posts = await getCollection('blog');
 const pageTitle = 'Blog';
-
-console.log(posts);
 ---
 
 <BaseLayout title={pageTitle}>
     <div>
-        <!-- {posts.map((post) => <p>{post.data.title}</p>)} -->
         <PostList posts={posts} />
     </div>
 </BaseLayout>
