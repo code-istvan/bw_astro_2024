@@ -43,7 +43,9 @@ const hrefValue = isEnglish ? '/en/' : '/';
     // This script is responsible for the sticky header
     window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
-        header.classList.toggle('scrolling', window.scrollY > 60);
+        if (header) {
+            header.classList.toggle('scrolling', window.scrollY > 60);
+        }
     });
 
     // This script is responsible for the hamburger menu
@@ -56,7 +58,9 @@ const hrefValue = isEnglish ? '/en/' : '/';
         hamburgerMenu.addEventListener('click', function () {
             hamburgerMenu.classList.toggle('hamburger-closed');
             hamburgerMenu.classList.toggle('hamburger-open');
-            languagePicker.classList.toggle('hide');
+            if (languagePicker) {
+                languagePicker.classList.toggle('hide');
+            }
             mobileMenu?.classList.toggle('open');
             desktopMenu?.classList.toggle('open');
         });
