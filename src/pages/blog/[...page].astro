@@ -1,0 +1,27 @@
+---
+import Pagination from '../../components/Blog/Pagination.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await Astro.glob('../../content/blog/*.md');
+
+    return paginate(allPosts, { pageSize: 3 });
+}
+import { getEntryBySlug, type CollectionEntry } from 'astro:content';
+
+type Props = {
+    post: CollectionEntry<'blog'>;
+};
+
+const { page } = Astro.props;
+const pageTitle = `Blog`;
+---
+
+<!--Display the current page number. Astro.params.page can also be used!-->
+<BaseLayout title={pageTitle}>
+    <ul>
+        <!--List the array of astronaut info-->
+
+        {page.data.map((post) => <li>{post.frontmatter.title}</li>)}
+    </ul>
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+</BaseLayout>
