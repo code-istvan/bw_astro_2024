@@ -55,7 +55,7 @@ collections:
         widget: markdown
   - name: authors
     label: Authors
-    folder: src/content/blog/authors/
+    folder: src/content/authors/
     media_folder: ''
     public_folder: ''
     extension: .md
