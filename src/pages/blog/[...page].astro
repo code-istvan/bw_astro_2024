@@ -2,15 +2,23 @@
 import Pagination from '../../components/Blog/Pagination.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blog/PostCard.astro';
-import { getEntryBySlug, type CollectionEntry } from 'astro:content';
+import { type CollectionEntry } from 'astro:content';
+import { slugify, calculateReadingTime } from '../../components/js/utils.js';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths({ paginate }) {
-    const allPosts = await Astro.glob('../../content/blog/*.md');
-    return paginate(allPosts, { pageSize: 3 });
+    const allPosts = await getCollection('blog');
+    const postsWithSlugsAndReadingTime = allPosts.map((post) => ({
+        ...post,
+        slug: slugify(post.data.title), // Alkalmazd a slugify függvényt
+        minutesRead: calculateReadingTime(post.body), // Számold ki a bejegyzés olvasási idejét
+    }));
+    return paginate(postsWithSlugsAndReadingTime, { pageSize: 3 }); // Lapozd a postokat a slugokkal együtt
 }
 
 type Props = {
     post: CollectionEntry<'blog'>;
+    page: any; // Add the 'page' property to the Props interface
 };
 
 const { page } = Astro.props;
@@ -19,7 +27,7 @@ const pageTitle = `Blog`;
 
 <BaseLayout title={pageTitle}>
     <ul>
-        {page.data.map((post) => <PostCard frontmatter={post.frontmatter} url={post.url} />)}
+        {page.data.map((post) => <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />)}
     </ul>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </BaseLayout>

@@ -1,16 +1,17 @@
 ---
-const { frontmatter, url } = Astro.props;
-const { title, date, description, author, minutesRead } = frontmatter;
+const { frontmatter, slug, minutesRead } = Astro.props;
+const { title, date, description, author } = frontmatter;
 
-const allPosts = await Astro.glob('../../content/blog/*.md');
+console.log('slug', frontmatter);
 ---
 
 <div>
-    <a href={url}>
+    <a href={`/blog/${slug}`}>
         <p>{title}</p>
         <p>{date}</p>
         <p>{description}</p>
         <p>{author}</p>
-        <p>{minutesRead}</p>
+        <p>{minutesRead} perc olvasás</p>
+        <!-- Helyesen megjelenített olvasási idő -->
     </a>
 </div>

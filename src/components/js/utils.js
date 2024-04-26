@@ -14,3 +14,10 @@ export function formatDate(date) {
     timeZone: 'UTC',
   });
 }
+
+export function calculateReadingTime(text) {
+  const wordsPerMinute = 200;
+  const words = text.split(/\s+/).length; // Számold meg a szavakat a szövegben
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return minutes;
+}
