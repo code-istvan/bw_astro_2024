@@ -1,13 +1,20 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogPost from '../../../components/Blog/BlogPost.astro';
+import { getCollection } from 'astro:content';
+import { slugify } from '../../../components/js/utils.js';
 
 export async function getStaticPaths() {
-    const allPosts = await Astro.glob('../../../content/blog/*.md');
-    const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+    const allPosts = await getCollection('blog');
+    const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
     return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+        const filteredPosts = allPosts
+            .filter((post) => post.data.tags?.includes(tag ?? '') ?? false)
+            .map((post) => ({
+                ...post,
+                slug: `/blog/${slugify(post.data.title)}`, // Alkalmazd a slugify függvényt a címekre
+            }));
         return {
             params: { tag },
             props: { posts: filteredPosts },
@@ -17,13 +24,12 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-
-console.log(posts);
+const pageTitle = `Blog`;
 ---
 
-<BaseLayout title={tag}>
+<BaseLayout title={pageTitle}>
     <p>Blogbejegyzések ezzel a cimkével: {tag}</p>
     <ul>
-        {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        {posts.map((post) => <BlogPost url={post.slug} title={post.data.title} slug={post.slug} />)}
     </ul>
 </BaseLayout>
