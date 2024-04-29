@@ -1,15 +1,15 @@
 ---
 const { frontmatter, slug, minutesRead } = Astro.props;
-const { title, date, description, author } = frontmatter;
+const { title, date, description, author, tags } = frontmatter;
 ---
 
 <div>
     <a href={`/blog/${slug}`}>
-        <p>{title}</p>
+        <h3>{title}</h3>
         <p>{date}</p>
+        <p>{tags}</p>
         <p>{description}</p>
         <p>{author}</p>
         <p>{minutesRead} perc olvasás</p>
-        <!-- Helyesen megjelenített olvasási idő -->
     </a>
 </div>

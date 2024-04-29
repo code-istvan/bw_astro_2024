@@ -2,6 +2,7 @@
 import Pagination from '../../components/Blog/Pagination.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blog/PostCard.astro';
+import TagList from '../../components/Blog/TagList.astro';
 import { type CollectionEntry } from 'astro:content';
 import { slugify, calculateReadingTime } from '../../components/js/utils.js';
 import { getCollection } from 'astro:content';
@@ -26,8 +27,17 @@ const pageTitle = `Blog`;
 ---
 
 <BaseLayout title={pageTitle}>
+    <TagList />
+    <br />
     <ul>
-        {page.data.map((post) => <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />)}
+        {
+            page.data.map((post) => (
+                <>
+                    <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
+                    <br />
+                </>
+            ))
+        }
     </ul>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </BaseLayout>
