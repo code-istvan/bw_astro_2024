@@ -6,6 +6,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <div class="tag-container">
+    <h3>Tag list:</h3>
     {
         tags.map((tag) => (
             <p>

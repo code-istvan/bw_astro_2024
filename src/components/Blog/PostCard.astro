@@ -6,10 +6,18 @@ const { title, date, description, author, tags } = frontmatter;
 <div>
     <a href={`/blog/${slug}`}>
         <h3>{title}</h3>
-        <p>{date}</p>
-        <p>{tags}</p>
-        <p>{description}</p>
-        <p>{author}</p>
-        <p>{minutesRead} perc olvasás</p>
     </a>
+    <p>{date}</p>
+    <p>
+        {
+            tags.map((tag) => (
+                <a href={`/blog/tags/${tag}`} class="tag-link">
+                    {tag}
+                </a>
+            ))
+        }
+    </p>
+    <p>{description}</p>
+    <p>{author}</p>
+    <p>{minutesRead} perc olvasás</p>
 </div>
