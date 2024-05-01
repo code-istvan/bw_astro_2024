@@ -2,17 +2,21 @@
 import { getCollection } from 'astro:content';
 import { type CollectionEntry } from 'astro:content';
 import BlogPostLayout from '../../layouts/BaseLayout.astro';
+import { calculateReadingTime } from '../../components/js/utils.js';
 
 export const getStaticPaths = async () => {
     const posts = await getCollection('blog');
 
     const paths = posts.map((post) => {
+        const minutesRead = calculateReadingTime(post.body);
+
         return {
             params: {
                 slug: post.slug,
             },
             props: {
                 post,
+                minutesRead,
             },
         };
     });
@@ -21,13 +25,20 @@ export const getStaticPaths = async () => {
 
 type Props = {
     post: CollectionEntry<'blog'>;
+    minutesRead: number; // Típusdefiníció frissítése
 };
 
-const { post } = Astro.props;
+const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
+
+console.log(post.data.author);
 ---
 
 <BlogPostLayout title={post.data.title}>
     <h1>{post.data.title}</h1>
+    <p>{post.data.author}</p>
+    <p>{post.data.date}</p>
+    <p>{post.data.tags}</p>
+    <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
     <Content />
 </BlogPostLayout>

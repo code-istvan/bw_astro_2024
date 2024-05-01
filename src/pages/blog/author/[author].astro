@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogPost from '../../../components/Blog/BlogPost.astro';
+import { slugify } from '../../../components/js/utils.js';
+
+export async function getStaticPaths() {
+    const allPosts = await Astro.glob('../../../content/blog/*.md');
+    const uniqueAuthors = [...new Set(allPosts.map((post) => post.frontmatter.author))];
+
+    return uniqueAuthors.map((author) => {
+        const filteredPosts = allPosts
+            .filter((post) => post.frontmatter.author === author)
+            .map((post) => ({
+                ...post,
+                slug: `/blog/${slugify(post.frontmatter.title)}`,
+            }));
+        return {
+            params: { author: slugify(author) },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { author } = Astro.params;
+const { posts } = Astro.props;
+const pageTitle = `Bejegyzések ezen író szerint: ${author}`;
+---
+
+<BaseLayout title={pageTitle}>
+    <p>Blogbejegyzések ettől a szerzőtől: {author}</p>
+    <ul>
+        {posts.map((post) => <BlogPost url={post.slug} title={post.frontmatter.title} slug={post.slug} />)}
+    </ul>
+</BaseLayout>
