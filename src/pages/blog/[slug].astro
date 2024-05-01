@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import { type CollectionEntry } from 'astro:content';
 import BlogPostLayout from '../../layouts/BaseLayout.astro';
-import { calculateReadingTime, slugify } from '../../components/js/utils.js';
+import { calculateReadingTime, slugify, formatDate } from '../../components/js/utils.js';
 
 export const getStaticPaths = async () => {
     const posts = await getCollection('blog');
@@ -35,7 +35,7 @@ const { Content } = await post.render();
 <BlogPostLayout title={post.data.title}>
     <h1>{post.data.title}</h1>
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
-    <p>{post.data.date}</p>
+    <p>{formatDate(post.data.date)}</p>
     <p>{post.data.tags}</p>
     <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
     <Content />

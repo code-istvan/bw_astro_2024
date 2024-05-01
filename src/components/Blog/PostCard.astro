@@ -1,4 +1,5 @@
 ---
+import { formatDate } from '../../components/js/utils.js';
 const { frontmatter, slug, minutesRead } = Astro.props;
 const { title, date, description, author, tags } = frontmatter;
 ---
@@ -7,7 +8,7 @@ const { title, date, description, author, tags } = frontmatter;
     <a href={`/blog/${slug}`}>
         <h3>{title}</h3>
     </a>
-    <p>{date}</p>
+    <p>{formatDate(date)}</p>
     <p>
         {
             tags.map((tag) => (
