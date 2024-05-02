@@ -6,8 +6,8 @@ author: István
 tags:
   - tesztelek
 date: 2024-04-22T20:45:00.000Z
-image: src/content/blog/images/desktop_img.jpg
-imageMobil: src/content/blog/images/mobil_img.jpg
+image: /src/images/uploads/desktop_img.jpg
+imageMobil: /src/images/uploads/mobil_img.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
