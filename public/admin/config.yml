@@ -3,8 +3,8 @@ backend:
   repo: code-istvan/bw
   branch: main
   site_domain: 'https://voluble-crumble-cbe048.netlify.app'
-media_folder: src/content/blog/images
-public_folder: src/content/blog/images
+media_folder: src/images/uploads
+public_folder: src/images/uploads
 slug:
   encoding: ascii
   clean_accents: true
@@ -55,7 +55,7 @@ collections:
         widget: markdown
   - name: authors
     label: Authors
-    folder: src/content/authors/
+    folder: src/images/uploads/authors/
     media_folder: ''
     public_folder: ''
     extension: .md
