@@ -41,19 +41,20 @@ const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
 
-console.log(currentAuthor);
+// console.log(currentAuthor);
+console.log(images);
 ---
 
 <BlogPostLayout title={post.data.title}>
     <h1>{post.data.title}</h1>
     {
         post.data.image && (
-            <section class="article__featured__image__wrapper">
-                <Image src={images[post.data.image]()} alt={post.data.title} class="article__featured__image" />
+            <section class="">
+                <Image src={images[post.data.image]()} alt={post.data.title} class="" />
             </section>
         )
     }
-    <Image src={images[currentAuthor?.data.authorimage]()} alt={currentAuthor?.data.name} class="" />
+    <!-- <Image src={images[currentAuthor?.data.authorimage]()} alt={currentAuthor?.data.name} class="" /> -->
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
     <p>{formatDate(post.data.date)}</p>
     <p>{post.data.tags}</p>
