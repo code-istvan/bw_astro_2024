@@ -42,18 +42,19 @@ const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
 
 // console.log(currentAuthor);
-console.log(images);
+// console.log(images);
+console.log('pdi', post.data.image);
 ---
 
 <BlogPostLayout title={post.data.title}>
     <h1>{post.data.title}</h1>
-    <!-- {
+    {
         post.data.image && (
             <section class="">
                 <Image src={images[post.data.image]()} alt={post.data.title} class="" />
             </section>
         )
-    } -->
+    }
     <Image src={images[currentAuthor?.data.authorimage]()} alt={currentAuthor?.data.name} class="" />
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
     <p>{formatDate(post.data.date)}</p>
