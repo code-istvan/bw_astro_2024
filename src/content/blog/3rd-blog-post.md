@@ -6,8 +6,8 @@ author: István
 tags:
   - Bendi
 date: 2024-04-22T21:06:00.000Z
-image: src/images/uploads/desktop_img.jpg
-imageMobil: src/images/uploads/mobil_img.jpg
+image: /src/images/uploads/desktop_img.jpg
+imageMobil: /src/images/uploads/mobil_img.jpg
 ---
 
 dweLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna

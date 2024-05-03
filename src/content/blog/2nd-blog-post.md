@@ -6,8 +6,8 @@ author: István
 tags:
   - Jaki
 date: 2024-04-22T20:49:00.000Z
-image: src/images/uploads/desktop_img.jpg
-imageMobil: src/images/uploads/mobil_img.jpg
+image: /src/images/uploads/desktop_img.jpg
+imageMobil: /src/images/uploads/mobil_img.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
