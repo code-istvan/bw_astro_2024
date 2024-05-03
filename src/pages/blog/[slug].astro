@@ -27,8 +27,8 @@ export const getStaticPaths = async () => {
 
 const authors = await getCollection('authors');
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
-const authorImages = import.meta.glob<{ default: ImageMetadata }>(
+const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+const authorImages = await import.meta.glob<{ default: ImageMetadata }>(
     '/src/images/uploads/authors/**/*.{jpeg,jpg,png,gif}'
 );
 
@@ -53,9 +53,7 @@ console.log(currentAuthor);
             </section>
         )
     }
-
     <Image src={images[currentAuthor?.data.authorimage]()} alt={currentAuthor?.data.name} class="" />
-
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
     <p>{formatDate(post.data.date)}</p>
     <p>{post.data.tags}</p>
