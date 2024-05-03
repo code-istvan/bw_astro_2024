@@ -1,8 +1,11 @@
 import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './remark-reading-time.mjs';
 import react from '@astrojs/react';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
+  output: 'server',
+  adapter: netlify(),
   i18n: {
     defaultLocale: 'hu',
     locales: ['hu', 'en'],
