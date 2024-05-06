@@ -28,6 +28,8 @@ export const getStaticPaths = async () => {
 const authors = await getCollection('authors');
 
 const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+const imagesMobil = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+
 // const authorImages = await import.meta.glob<{ default: ImageMetadata }>(
 //     '/src/images/uploads/authors/**/*.{jpeg,jpg,png,gif}'
 // );
@@ -41,24 +43,65 @@ const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
 
-// console.log(currentAuthor);
-// console.log(images);
-console.log('pdi', post.data.image);
+console.log('mobil', post.data.imageMobil);
 ---
 
 <BlogPostLayout title={post.data.title}>
-    <h1>{post.data.title}</h1>
     {
         post.data.image && (
-            <section class="">
+            <section class="desktop_image">
                 <Image src={images[post.data.image]()} alt={post.data.title} class="" />
             </section>
         )
     }
-    <Image src={images[currentAuthor?.data.authorimage]()} alt={currentAuthor?.data.name} class="" />
+    {
+        post.data.imageMobil && (
+            <section class="mobile_image">
+                <Image src={imagesMobil[post.data.imageMobil]()} alt={post.data.title} class="" />
+            </section>
+        )
+    }
+    <h1>{post.data.title}</h1>
+    <Image
+        src={images[currentAuthor?.data.authorimage]()}
+        alt={currentAuthor?.data.name}
+        class="author__avatar author__avatar--small"
+    />
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
     <p>{formatDate(post.data.date)}</p>
     <p>{post.data.tags}</p>
     <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
     <Content />
 </BlogPostLayout>
+
+<style>
+    .author__avatar {
+        border-radius: 50%;
+    }
+    .author__avatar--small {
+        border: 2px solid #333;
+        height: 56px;
+        width: 56px;
+    }
+
+    .mobile_image,
+    .desktop_image {
+        img {
+            max-width: 100vw;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .desktop_image {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .mobile_image {
+            display: none;
+        }
+    }
+</style>
