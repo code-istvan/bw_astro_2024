@@ -26,7 +26,15 @@ const schedulCollection = defineCollection({
   }),
 });
 
+const customDatesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    customDate: z.string(),
+  }),
+});
+
 export const collections = {
   blog: postsCollection,
   schedule: schedulCollection,
+  customDates: customDatesCollection,
 };
