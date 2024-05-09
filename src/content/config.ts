@@ -16,6 +16,17 @@ const postsCollection = defineCollection({
   }),
 });
 
+const schedulCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    classId: z.string(),
+    class: z.string(),
+    shortDescription: z.string().optional(),
+    signup: z.string().optional(),
+  }),
+});
+
 export const collections = {
   blog: postsCollection,
+  schedule: schedulCollection,
 };
