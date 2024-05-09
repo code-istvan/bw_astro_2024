@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  output: 'hybrid',
+  output: 'server',
   adapter: netlify(),
   i18n: {
     defaultLocale: 'hu',
