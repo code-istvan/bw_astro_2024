@@ -115,5 +115,25 @@ collections:
         widget: relation
         collection: 'classes'
         value_field: 'class'
-        display_fields: ['class']
+        display_fields: ['classId']
         search_fields: ['class']
+  - name: classes
+    label: Classes
+    folder: src/content/classes/
+    extension: .md
+    format: frontmatter
+    create: true
+    slug: '{{classId}}'
+    fields:
+      - { label: Classid, name: classId, widget: string }
+      - { label: Class, name: class, widget: string }
+      - { label: Shortescription, name: shortDescription, widget: 'markdown', required: false }
+      - { label: Signup, name: signup, widget: string, required: false }
+  - name: customDates
+    label: Custom dates
+    folder: src/content/customDates/
+    format: frontmatter
+    create: true
+    slug: '{{customDate}}'
+    fields:
+      - { label: Custom date, name: customDate, widget: string }
