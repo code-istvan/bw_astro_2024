@@ -82,8 +82,8 @@ collections:
     folder: src/content/schedule/
     create: true
     slug: '{{slug}}'
-    extension: .md
-    format: frontmatter
+    extension: json
+    format: json
     fields:
       - label: Published
         name: published
@@ -120,8 +120,8 @@ collections:
   - name: classes
     label: Classes
     folder: src/content/classes/
-    extension: .md
-    format: frontmatter
+    extension: json
+    format: json
     create: true
     slug: '{{classId}}'
     fields:
