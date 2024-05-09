@@ -77,3 +77,43 @@ collections:
         name: authorimage
         widget: image
         required: false
+  - name: schedule
+    label: Schedule
+    folder: src/content/schedule/
+    create: true
+    slug: '{{slug}}'
+    extension: .md
+    format: frontmatter
+    fields:
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+      - label: Date
+        name: date
+        widget: datetime
+        date_format: 'YYYY.MM.DD'
+        format: 'LL'
+        picker_utc: false
+      - label: Fullmoon
+        name: fullmoon
+        widget: boolean
+        default: false
+        required: false
+      - label: Newmoon
+        name: newmoon
+        widget: boolean
+        default: false
+        required: false
+      - label: Ekadashi
+        name: ekadashi
+        widget: boolean
+        default: false
+        required: false
+      - label: Class1
+        name: class1
+        widget: relation
+        collection: 'classes'
+        value_field: 'class'
+        display_fields: ['class']
+        search_fields: ['class']
