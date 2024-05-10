@@ -12,7 +12,7 @@ slug:
 collections:
   - name: blog
     label: Blog Posts
-    label_singular: 'Blog'
+    label_singular: Blog
     folder: src/content/blog/
     create: true
     slug: '{{slug}}'
@@ -56,7 +56,7 @@ collections:
         widget: markdown
   - name: authors
     label: Authors
-    label_singular: 'Blog'
+    label_singular: Blog
     folder: src/images/uploads/authors/
     media_folder: ''
     public_folder: ''
@@ -81,7 +81,7 @@ collections:
         required: false
   - name: schedule
     label: Schedule
-    label_singular: 'Schedule'
+    label_singular: Schedule
     folder: src/content/schedule/
     extension: json
     format: json
@@ -116,13 +116,13 @@ collections:
       - label: Class1
         name: class1
         widget: relation
-        collection: 'classes'
-        value_field: 'class'
+        collection: classes
+        value_field: class
         display_fields: ['class']
         search_fields: ['class']
   - name: classes
     label: Classes
-    label_singular: 'Schedule'
+    label_singular: Schedule
     folder: src/content/classes/
     extension: json
     format: json
@@ -135,7 +135,7 @@ collections:
       - { label: Signup, name: signup, widget: string, required: false }
   - name: customDates
     label: Custom dates
-    label_singular: 'Schedule'
+    label_singular: Schedule
     folder: src/content/customDates/
     extension: json
     format: json
