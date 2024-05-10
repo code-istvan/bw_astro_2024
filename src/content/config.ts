@@ -17,7 +17,7 @@ const postsCollection = defineCollection({
 });
 
 const schedulCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({
     classId: z.string(),
     class: z.string(),
