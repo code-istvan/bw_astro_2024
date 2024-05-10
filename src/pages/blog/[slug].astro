@@ -58,11 +58,11 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         alt={currentAuthor?.data.name}
         class="author__avatar author__avatar--small"
     /> -->
-    <Image
+    <!-- <Image
         src={images[currentAuthor?.data.authorimage]()}
         alt={currentAuthor?.data.name}
         class="author__avatar author__avatar--small"
-    />
+    /> -->
     <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
     <p>{formatDate(post.data.date)}</p>
     <p>{post.data.tags}</p>
