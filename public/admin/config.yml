@@ -81,7 +81,7 @@ collections:
     label: Schedule
     folder: src/content/schedule/
     create: true
-    slug: '{{slug}}'
+    slug: '{{date}}'
     extension: json
     format: json
     fields:
