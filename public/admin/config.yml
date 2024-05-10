@@ -80,10 +80,10 @@ collections:
   - name: schedule
     label: Schedule
     folder: src/content/schedule/
-    create: true
-    slug: '{{date}}'
     extension: json
     format: json
+    create: true
+    slug: '{{date}}'
     fields:
       - label: Published
         name: published
