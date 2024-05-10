@@ -60,8 +60,8 @@ collections:
     folder: src/images/uploads/authors/
     media_folder: ''
     public_folder: ''
-    extension: .md
-    format: frontmatter
+    extension: json
+    format: json
     create: true
     slug: '{{name}}'
     fields:
@@ -113,8 +113,8 @@ collections:
         widget: boolean
         default: false
         required: false
-      - label: Class
-        name: class
+      - label: ClassTest
+        name: classTest
         widget: relation
         collection: classes
         value_field: class
