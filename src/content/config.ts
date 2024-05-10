@@ -16,25 +16,25 @@ const postsCollection = defineCollection({
   }),
 });
 
-const classesCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    classId: z.string(),
-    class: z.string(),
-    shortDescription: z.string().optional(),
-    signup: z.string().optional(),
-  }),
-});
+// const classesCollection = defineCollection({
+//   type: 'data',
+//   schema: z.object({
+//     classId: z.string(),
+//     class: z.string(),
+//     shortDescription: z.string().optional(),
+//     signup: z.string().optional(),
+//   }),
+// });
 
-const customDatesCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    customDate: z.string(),
-  }),
-});
+// const customDatesCollection = defineCollection({
+//   type: 'data',
+//   schema: z.object({
+//     customDate: z.string(),
+//   }),
+// });
 
 export const collections = {
   blog: postsCollection,
-  schedule: classesCollection,
-  customDates: customDatesCollection,
+  // schedule: classesCollection,
+  // customDates: customDatesCollection,
 };
