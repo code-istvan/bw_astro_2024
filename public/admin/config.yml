@@ -113,8 +113,8 @@ collections:
         widget: boolean
         default: false
         required: false
-      - label: Class1
-        name: class1
+      - label: Class
+        name: class
         widget: relation
         collection: classes
         value_field: class
