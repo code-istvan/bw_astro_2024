@@ -114,7 +114,7 @@ collections:
         name: class1
         widget: relation
         collection: 'classes'
-        value_field: 'class'
+        value_field: 'classId'
         display_fields: ['classId']
         search_fields: ['class']
   - name: classes
