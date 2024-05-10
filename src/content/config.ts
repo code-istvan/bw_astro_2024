@@ -27,7 +27,7 @@ const schedulCollection = defineCollection({
 });
 
 const customDatesCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({
     customDate: z.string(),
   }),
