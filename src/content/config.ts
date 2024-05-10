@@ -16,7 +16,7 @@ const postsCollection = defineCollection({
   }),
 });
 
-const schedulCollection = defineCollection({
+const classesCollection = defineCollection({
   type: 'data',
   schema: z.object({
     classId: z.string(),
@@ -35,6 +35,6 @@ const customDatesCollection = defineCollection({
 
 export const collections = {
   blog: postsCollection,
-  schedule: schedulCollection,
+  schedule: classesCollection,
   customDates: customDatesCollection,
 };
