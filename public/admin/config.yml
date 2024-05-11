@@ -121,6 +121,13 @@ collections:
         value_field: classId
         display_fields: ['class', ('classId')]
         search_fields: ['class', 'classId']
+      - label: Class Time
+        name: classTime
+        widget: relation
+        collection: customDates
+        value_field: customDate
+        display_fields: ['customDate']
+        search_fields: ['customDate']
   - name: classes
     label: Classes
     label_singular: Schedule
