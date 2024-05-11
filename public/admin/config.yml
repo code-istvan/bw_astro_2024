@@ -119,7 +119,7 @@ collections:
         widget: relation
         collection: classes
         value_field: classId
-        display_fields: ['class', 'classId']
+        display_fields: ['class', ('classId')]
         search_fields: ['class', 'classId']
   - name: classes
     label: Classes
