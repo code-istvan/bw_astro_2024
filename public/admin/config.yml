@@ -162,7 +162,7 @@ collections:
     folder: src/content/teachers/
     format: 'json'
     create: true
-    slug: '{{name}}'
+    slug: '{{teacherId}}'
     fields:
       - { label: TeacherId, name: teacherId, widget: string }
       - { label: Teacher, name: teacher, widget: string }
