@@ -114,8 +114,8 @@ collections:
         widget: boolean
         default: false
         required: false
-      - label: ClassTest
-        name: classTest
+      - label: Class
+        name: class
         widget: relation
         collection: classes
         value_field: classId
@@ -124,10 +124,10 @@ collections:
       - label: Class Time
         name: classTime
         widget: relation
-        collection: customDates
-        value_field: customDate
-        display_fields: ['customDate']
-        search_fields: ['customDate']
+        collection: customTime
+        value_field: customTime
+        display_fields: ['customTime']
+        search_fields: ['customTime']
   - name: classes
     label: Classes
     label_singular: Schedule
@@ -141,8 +141,8 @@ collections:
       - { label: Class, name: class, widget: string }
       - { label: Shortescription, name: shortDescription, widget: 'markdown', required: false }
       - { label: Signup, name: signup, widget: string, required: false }
-  - name: customDates
-    label: Custom dates
+  - name: customTime
+    label: Custom time
     label_singular: Schedule
     folder: src/content/customDates/
     extension: json
@@ -150,4 +150,4 @@ collections:
     create: true
     slug: '{{customDate}}'
     fields:
-      - { label: Custom date, name: customDate, widget: string }
+      - { label: Custom time, name: customTime, widget: string }
