@@ -139,8 +139,6 @@ collections:
     fields:
       - { label: Classid, name: classId, widget: string }
       - { label: Class, name: class, widget: string }
-      - { label: Shortescription, name: shortDescription, widget: 'markdown', required: false }
-      - { label: Signup, name: signup, widget: string, required: false }
   - name: customTime
     label: Custom time
     label_singular: Schedule
@@ -151,3 +149,14 @@ collections:
     slug: '{{customTime}}'
     fields:
       - { label: Custom time, name: customTime, widget: string }
+  - name: teachers
+    label: Teachers
+    folder: src/content/teachers/
+    media_folder: ''
+    public_folder: ''
+    format: 'json'
+    create: true
+    slug: '{{name}}'
+    fields:
+      - { label: NameId, name: nameId, widget: string }
+      - { label: Name, name: name, widget: string }
