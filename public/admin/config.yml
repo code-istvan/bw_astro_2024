@@ -118,9 +118,9 @@ collections:
         name: classTest
         widget: relation
         collection: classes
-        value_field: class
-        display_fields: ['class']
-        search_fields: ['class']
+        value_field: classId
+        display_fields: ['class', 'classId']
+        search_fields: ['class', 'classId']
   - name: classes
     label: Classes
     label_singular: Schedule
