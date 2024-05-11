@@ -121,13 +121,6 @@ collections:
         value_field: classId
         display_fields: ['class', ('classId')]
         search_fields: ['class', 'classId']
-      - label: Class Time
-        name: classTime
-        widget: relation
-        collection: customTime
-        value_field: customTime
-        display_fields: ['customTime']
-        search_fields: ['customTime']
       - label: Teacher
         name: teacher
         widget: relation
@@ -135,6 +128,14 @@ collections:
         value_field: teacherId
         display_fields: ['teacher', ('teacherId')]
         search_fields: ['teacher', 'teacherId']
+      - label: Class Time
+        name: classTime
+        widget: relation
+        collection: customTime
+        value_field: customTime
+        display_fields: ['customTime']
+        search_fields: ['customTime']
+
   - name: classes
     label: Classes
     label_singular: Schedule
@@ -159,11 +160,9 @@ collections:
   - name: teachers
     label: Teachers
     folder: src/content/teachers/
-    media_folder: ''
-    public_folder: ''
     format: 'json'
     create: true
     slug: '{{name}}'
     fields:
-      - { label: NameId, name: nameId, widget: string }
-      - { label: Name, name: name, widget: string }
+      - { label: TeacherId, name: teacherId, widget: string }
+      - { label: Teacher, name: teacher, widget: string }
