@@ -6,6 +6,9 @@ import TagList from '../../components/Blog/TagList.astro';
 import { type CollectionEntry } from 'astro:content';
 import { slugify, calculateReadingTime } from '../../components/js/utils.js';
 import { getCollection } from 'astro:content';
+import CustomImage from '../../components/CustomImage.astro';
+import mobileImage from '../../images/blog_mobil.jpg';
+import desktopImage from '../../images/blog_desktop.jpg';
 
 export async function getStaticPaths({ paginate }) {
     const allPosts = await getCollection('blog');
@@ -27,6 +30,10 @@ const pageTitle = `Blog`;
 ---
 
 <BaseLayout title={pageTitle}>
+    <div class="hero-image">
+        <CustomImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt="user profile picture" />
+    </div>
+
     <TagList />
     <br />
     <ul>
@@ -41,3 +48,12 @@ const pageTitle = `Blog`;
     </ul>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </BaseLayout>
+
+<style>
+    .hero-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>

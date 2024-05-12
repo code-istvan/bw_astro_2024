@@ -3,38 +3,30 @@ import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
 
 interface Props {
-    imgUrl?: string | ImageMetadata;
-    mobileImgUrl?: string | ImageMetadata;
-    desktopImgUrl?: string | ImageMetadata;
+    mobileImgUrl: string | ImageMetadata;
+    desktopImgUrl: string | ImageMetadata;
     alt: string;
-    class?: string;
 }
 
-const defaultMobileImgUrl = '/src/images/default-mobile.jpg';
-const defaultDesktopImgUrl = '/src/images/default-desktop.jpg';
-
-const { imgUrl, mobileImgUrl, desktopImgUrl, alt, class: className } = Astro.props;
-
-const effectiveMobileImgUrl = mobileImgUrl || imgUrl || defaultMobileImgUrl;
-const effectiveDesktopImgUrl = desktopImgUrl || imgUrl || defaultDesktopImgUrl;
+const { mobileImgUrl, desktopImgUrl, alt } = Astro.props;
 
 const mobileImg = await getImage({
-    src: effectiveMobileImgUrl,
+    src: mobileImgUrl,
     format: 'webp',
-    width: 200,
-    height: 200,
+    width: 1080,
+    height: 1080,
 });
 
 const desktopImg = await getImage({
-    src: effectiveDesktopImgUrl,
+    src: desktopImgUrl,
     format: 'webp',
-    width: 800,
-    height: 200,
+    width: 1800,
+    height: 550,
 });
 ---
 
 <picture>
     <source media="(max-width: 799px)" srcset={mobileImg.src} />
     <source media="(min-width: 800px)" srcset={desktopImg.src} />
-    <img src={desktopImg.src} alt={alt} class={className} />
+    <img src={desktopImg.src} alt={alt} />
 </picture>
