@@ -25,8 +25,19 @@ const desktopImg = await getImage({
 });
 ---
 
-<picture>
-    <source media="(max-width: 799px)" srcset={mobileImg.src} />
-    <source media="(min-width: 800px)" srcset={desktopImg.src} />
-    <img src={desktopImg.src} alt={alt} />
-</picture>
+<div class="hero-image">
+    <picture>
+        <source media="(max-width: 799px)" srcset={mobileImg.src} />
+        <source media="(min-width: 800px)" srcset={desktopImg.src} />
+        <img src={desktopImg.src} alt={alt} />
+    </picture>
+</div>
+
+<style>
+    .hero-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
