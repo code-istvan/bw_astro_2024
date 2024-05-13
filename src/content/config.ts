@@ -30,25 +30,24 @@ const scheduleCollection = defineCollection({
   }),
 });
 
-// const classesCollection = defineCollection({
-//   type: 'data',
-//   schema: z.object({
-//     classId: z.string(),
-//     class: z.string(),
-//     shortDescription: z.string().optional(),
-//     signup: z.string().optional(),
-//   }),
-// });
+const classesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    classId: z.string(),
+    class: z.string(),
+  }),
+});
 
-// const customDatesCollection = defineCollection({
-//   type: 'data',
-//   schema: z.object({
-//     customTime: z.string(),
-//   }),
-// });
+const customTimesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    customTime: z.string(),
+  }),
+});
 
 export const collections = {
   blog: postsCollection,
   schedule: scheduleCollection,
-  // customDates: customDatesCollection,
+  customTimes: customTimesCollection,
+  classes: classesCollection,
 };
