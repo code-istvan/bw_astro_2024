@@ -150,7 +150,7 @@ collections:
   - name: customTime
     label: Custom time
     label_singular: Schedule
-    folder: src/content/customDates/
+    folder: src/content/customTimes/
     extension: json
     format: json
     create: true

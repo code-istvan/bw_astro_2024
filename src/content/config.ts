@@ -16,6 +16,20 @@ const postsCollection = defineCollection({
   }),
 });
 
+const scheduleCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    published: z.boolean(),
+    fullmoon: z.boolean(),
+    newmoon: z.boolean(),
+    ekadashi: z.boolean(),
+    date: z.coerce.date(),
+    class: z.string(),
+    teacher: z.string(),
+    classTime: z.string(),
+  }),
+});
+
 // const classesCollection = defineCollection({
 //   type: 'data',
 //   schema: z.object({
@@ -29,12 +43,12 @@ const postsCollection = defineCollection({
 // const customDatesCollection = defineCollection({
 //   type: 'data',
 //   schema: z.object({
-//     customDate: z.string(),
+//     customTime: z.string(),
 //   }),
 // });
 
 export const collections = {
   blog: postsCollection,
-  // schedule: classesCollection,
+  schedule: scheduleCollection,
   // customDates: customDatesCollection,
 };

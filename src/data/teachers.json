@@ -1,0 +1,19 @@
+{
+  "teachers": [
+    {
+      "teacherId": "istvanJi",
+      "teacherName": "István",
+      "teacherLink": "/szalai-istvan/"
+    },
+    {
+      "teacherId": "noemiJi",
+      "teacherName": "Noémi",
+      "teacherLink": "/gal-noemi-andrea/"
+    },
+    {
+      "teacherId": "kisannaJi",
+      "teacherName": "Kisanna",
+      "teacherLink": "/barna-kisanna/"
+    }
+  ]
+}
