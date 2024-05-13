@@ -8,15 +8,37 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // const teachers = await getCollection('teachers');
-// const schedule = await getCollection('schedule');
+const schedule = await getCollection('schedule');
 // const customTimes = await getCollection('customTimes');
 // const classes = await getCollection('classes');
+
+console.log(schedule);
 ---
 
 <BaseLayout title={pageTitle}>
     <div class="container">
         <div class="row"><h1>{t('orarend')}</h1></div>
+        <div class="schedule-list">
+            <div class="schedule-list">
+                {
+                    schedule.map((item) => (
+                        <div data-key={item.id} class="schedule-item">
+                            <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
+                            <p>Óra: {item.data.class}</p>
+                            <p>Oktató: {item.data.teacher}</p>
+                            <p>Osztály idő: {item.data.classTime}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    .schedule-item {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+</style>
