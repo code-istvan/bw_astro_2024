@@ -5,6 +5,8 @@ const pageTitle = 'Órarend';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const authors = await getCollection('authors');
 ---
 
 <BaseLayout title={pageTitle}>

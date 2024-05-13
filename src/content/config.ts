@@ -38,6 +38,14 @@ const classesCollection = defineCollection({
   }),
 });
 
+const teachersCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    teacherId: z.string(),
+    teacher: z.string(),
+  }),
+});
+
 const customTimesCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -50,4 +58,5 @@ export const collections = {
   schedule: scheduleCollection,
   customTimes: customTimesCollection,
   classes: classesCollection,
+  teachers: teachersCollection,
 };
