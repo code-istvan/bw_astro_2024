@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-const pageTitle = 'Órarend';
 
+const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const authors = await getCollection('authors');
+// const teachers = await getCollection('teachers');
+// const schedule = await getCollection('schedule');
+// const customTimes = await getCollection('customTimes');
+// const classes = await getCollection('classes');
 ---
 
 <BaseLayout title={pageTitle}>
