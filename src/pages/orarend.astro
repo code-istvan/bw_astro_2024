@@ -3,8 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import HeroImage from '../components/HeroImage.astro';
+import { Image } from 'astro:assets';
 import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
+import teachersData from '../data/teachers.json';
 
 const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
@@ -14,6 +16,10 @@ const t = useTranslations(lang);
 const schedule = await getCollection('schedule');
 // const customTimes = await getCollection('customTimes');
 // const classes = await getCollection('classes');
+
+function getTeacherDetails(teacherId) {
+    return teachersData.teachers.find((teacher) => teacher.teacherId === teacherId);
+}
 
 console.log(schedule);
 ---
@@ -25,14 +31,32 @@ console.log(schedule);
         <div class="schedule-list">
             <div class="schedule-list">
                 {
-                    schedule.map((item) => (
-                        <div data-key={item.id} class="schedule-item">
-                            <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
-                            <p>Óra: {item.data.class}</p>
-                            <p>Oktató: {item.data.teacher}</p>
-                            <p>Osztály idő: {item.data.classTime}</p>
-                        </div>
-                    ))
+                    schedule.map((item) => {
+                        const teacherDetails = getTeacherDetails(item.data.teacher);
+                        return (
+                            <div data-key={item.id} class="schedule-item">
+                                <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
+                                <p>Óra: {item.data.class}</p>
+                                {teacherDetails && (
+                                    <p>
+                                        <a href={teacherDetails.teacherLink}>
+                                            {teacherDetails.teacherImage && (
+                                                <Image
+                                                    src={teacherDetails.teacherImage}
+                                                    alt={teacherDetails.teacherName}
+                                                    width="50"
+                                                    height="50"
+                                                    class="teacher-image"
+                                                />
+                                            )}
+                                            {teacherDetails.teacherName}
+                                        </a>
+                                    </p>
+                                )}
+                                <p>Időpont: {item.data.classTime}</p>
+                            </div>
+                        );
+                    })
                 }
             </div>
         </div>
@@ -44,5 +68,14 @@ console.log(schedule);
         margin-bottom: 20px;
         padding: 10px;
         border: 1px solid #ccc;
+    }
+    .teacher-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 2px solid lightgray;
     }
 </style>

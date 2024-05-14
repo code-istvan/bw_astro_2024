@@ -3,17 +3,20 @@
     {
       "teacherId": "istvanJi",
       "teacherName": "István",
-      "teacherLink": "/szalai-istvan/"
+      "teacherLink": "/szalai-istvan/",
+      "teacherImage": "/src/images/uploads/authors/istvan.png"
     },
     {
       "teacherId": "noemiJi",
       "teacherName": "Noémi",
-      "teacherLink": "/gal-noemi-andrea/"
+      "teacherLink": "/gal-noemi-andrea/",
+      "teacherImage": ""
     },
     {
       "teacherId": "kisannaJi",
       "teacherName": "Kisanna",
-      "teacherLink": "/barna-kisanna/"
+      "teacherLink": "/barna-kisanna/",
+      "teacherImage": "/src/images/kisanna.png"
     }
   ]
 }
