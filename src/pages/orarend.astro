@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
 import teachersData from '../data/teachers.json';
+import classesData from '../data/classes.json';
 
 const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
@@ -21,6 +22,10 @@ function getTeacherDetails(teacherId) {
     return teachersData.teachers.find((teacher) => teacher.teacherId === teacherId);
 }
 
+function getClassDetails(classId) {
+    return classesData.classess.find((cls) => cls.classId === classId);
+}
+
 console.log(schedule);
 ---
 
@@ -33,10 +38,20 @@ console.log(schedule);
                 {
                     schedule.map((item) => {
                         const teacherDetails = getTeacherDetails(item.data.teacher);
+                        const classDetails = getClassDetails(item.data.class);
+
                         return (
                             <div data-key={item.id} class="schedule-item">
                                 <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
-                                <p>Óra: {item.data.class}</p>
+                                <p>{item.data.classTime}</p>
+                                {classDetails && (
+                                    <>
+                                        <h3>{classDetails.classNameHu}</h3>
+                                        <p>Details: {classDetails.classDetailHu}</p>
+                                        <p>Signup: {classDetails.classSignUp}</p>
+                                    </>
+                                )}
+
                                 {teacherDetails && (
                                     <p>
                                         <a href={teacherDetails.teacherLink}>
@@ -53,7 +68,6 @@ console.log(schedule);
                                         </a>
                                     </p>
                                 )}
-                                <p>Időpont: {item.data.classTime}</p>
                             </div>
                         );
                     })
