@@ -4,19 +4,31 @@ import { getCollection } from 'astro:content';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import HeroImage from '../components/HeroImage.astro';
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
 import teachersData from '../data/teachers.json';
 import classesData from '../data/classes.json';
 
+interface Props {
+    imagePath: string;
+    altText: string;
+}
+
+const { imagePath, altText } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
+
+console.log('Available images:', Object.keys(images));
+console.log('Requested image path:', imagePath);
+
+// if (!images[`/src/images/${imagePath}`])
+//     throw new Error(`"${imagePath}" does not exist in glob: "/src/images/*.{jpeg,jpg,png,gif}"`);
+
 const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// const teachers = await getCollection('teachers');
 const schedule = await getCollection('schedule');
-// const customTimes = await getCollection('customTimes');
-// const classes = await getCollection('classes');
 
 function getTeacherDetails(teacherId) {
     return teachersData.teachers.find((teacher) => teacher.teacherId === teacherId);
@@ -25,8 +37,6 @@ function getTeacherDetails(teacherId) {
 function getClassDetails(classId) {
     return classesData.classess.find((cls) => cls.classId === classId);
 }
-
-console.log(schedule);
 ---
 
 <BaseLayout title={pageTitle}>
@@ -57,12 +67,19 @@ console.log(schedule);
                                         <a href={teacherDetails.teacherLink}>
                                             {teacherDetails.teacherImage && (
                                                 <Image
-                                                    src={teacherDetails.teacherImage}
+                                                    src={images[`/src/images/${teacherDetails.teacherImage}`]()}
                                                     alt={teacherDetails.teacherName}
                                                     width="50"
                                                     height="50"
                                                     class="teacher-image"
                                                 />
+                                                // <Image
+                                                //     src={teacherDetails.teacherImage}
+                                                //     alt={teacherDetails.teacherName}
+                                                //     width="50"
+                                                //     height="50"
+                                                //     class="teacher-image"
+                                                // />
                                             )}
                                             {teacherDetails.teacherName}
                                         </a>

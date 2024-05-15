@@ -4,7 +4,7 @@
       "teacherId": "istvanJi",
       "teacherName": "István",
       "teacherLink": "/szalai-istvan/",
-      "teacherImage": "/src/images/uploads/authors/istvan.png"
+      "teacherImage": "istvan.png"
     },
     {
       "teacherId": "noemiJi",
@@ -16,7 +16,7 @@
       "teacherId": "kisannaJi",
       "teacherName": "Kisanna",
       "teacherLink": "/barna-kisanna/",
-      "teacherImage": "/src/images/kisanna.png"
+      "teacherImage": "kisanna.png"
     }
   ]
 }
