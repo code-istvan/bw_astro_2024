@@ -1,120 +1,121 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: transparent;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  z-index: 9999;
 }
 
 header.scrolling {
-    background-color: $color-shades-darkGray;
-    transition: background-color 0.5s;
+  background-color: $color-shades-darkGray;
+  transition: background-color 0.5s;
 }
 
 nav {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 9999;
-    div:nth-child(2) {
-        margin-right: 8px;
-        margin-left: 16px;
-    }
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  div:nth-child(2) {
+    margin-right: 8px;
+    margin-left: 16px;
+  }
 }
 
 .brand-logo-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 16px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 16px;
+  cursor: pointer;
 
-    .brand-logo {
-        margin-right: 8px;
-        z-index: 9999;
-    }
+  .brand-logo {
+    margin-right: 8px;
+    z-index: 9999;
+  }
 
-    .brand-logo-text {
-        z-index: 9999;
-    }
+  .brand-logo-text {
+    z-index: 9999;
+  }
 }
 
 #brand-logo-circle {
-    fill: $color-shades-lightGray;
-    -webkit-transition: -webkit-transform 1s;
-    transform-origin: center;
-    position: fixed;
+  fill: $color-shades-lightGray;
+  -webkit-transition: -webkit-transform 1s;
+  transform-origin: center;
+  position: fixed;
 }
 
 .brand-logo-wrapper:hover {
-    #brand-logo-circle {
-        -webkit-transform: rotate(360deg) translateZ(0);
-        position: relative;
-        z-index: 9999;
-    }
+  #brand-logo-circle {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    position: relative;
+    z-index: 9999;
+  }
 }
 
 .hamburger-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    z-index: 9999;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    display: block;
-    margin: 4px auto;
-    transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 4px auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger-open .line:nth-child(2) {
-    width: 0;
+  width: 0;
 }
 
 .hamburger-open .line:nth-child(1) {
-    transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
 }
 
 .hamburger-open .line:nth-child(3) {
-    transform: translateY(-6px) rotate(45deg);
+  transform: translateY(-6px) rotate(45deg);
 }
 
 #mobileMenu {
-    display: none;
+  display: none;
 }
 
 #mobileMenu.open {
-    display: block;
-    height: calc(100vh - 60px);
-    position: absolute;
-    top: 0;
-    padding-top: 60px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: scroll;
-    background-color: $offcanvas-menu-color;
-    transition: all 500ms ease-out;
+  display: block;
+  height: calc(100vh - 60px);
+  position: absolute;
+  top: 0;
+  padding-top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  background-color: $offcanvas-menu-color;
+  transition: all 500ms ease-out;
 }
 
 .mobile-menu-wrapper {
-    display: none;
+  display: none;
 }
 
 .desktop-menu-wrapper {
-    display: block;
+  display: block;
 }
 
 @media (max-width: 991px) {
-    .mobile-menu-wrapper {
-        display: block;
-    }
+  .mobile-menu-wrapper {
+    display: block;
+  }
 
-    .desktop-menu-wrapper {
-        display: none;
-    }
+  .desktop-menu-wrapper {
+    display: none;
+  }
 }

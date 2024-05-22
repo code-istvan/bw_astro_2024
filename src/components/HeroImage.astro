@@ -6,9 +6,10 @@ interface Props {
     mobileImgUrl: string | ImageMetadata;
     desktopImgUrl: string | ImageMetadata;
     alt: string;
+    pageName: string;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt } = Astro.props;
+const { mobileImgUrl, desktopImgUrl, alt, pageName } = Astro.props;
 
 const mobileImg = await getImage({
     src: mobileImgUrl,
@@ -31,13 +32,24 @@ const desktopImg = await getImage({
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
         <img src={desktopImg.src} alt={alt} />
     </picture>
+    <div class="page-name"><h1>{pageName}</h1></div>
 </div>
 
 <style>
     .hero-image {
+        position: relative;
         img {
             width: 100%;
             height: auto;
+        }
+        .page-name {
+            position: absolute;
+            bottom: 21px;
+            left: 21px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px; /* vagy ahogy szükséges */
         }
     }
 </style>
