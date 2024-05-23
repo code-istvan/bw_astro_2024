@@ -143,6 +143,7 @@ collections:
         display_fields: ['class', ('classId')]
         search_fields: ['class', 'classId']
         default: 'null'
+        required: false
       - label: Teacher2
         name: teacher2
         widget: relation
@@ -151,6 +152,7 @@ collections:
         display_fields: ['teacher', ('teacherId')]
         search_fields: ['teacher', 'teacherId']
         default: 'null'
+        required: false
       - label: Class Time2
         name: classTime2
         widget: relation
@@ -159,6 +161,7 @@ collections:
         display_fields: ['customTime']
         search_fields: ['customTime']
         default: 'null'
+        required: false
 
   - name: classes
     label: Classes
