@@ -135,6 +135,30 @@ collections:
         value_field: customTime
         display_fields: ['customTime']
         search_fields: ['customTime']
+      - label: Class2
+        name: class2
+        widget: relation
+        collection: classes
+        value_field: classId
+        display_fields: ['class', ('classId')]
+        search_fields: ['class', 'classId']
+        default: 'null'
+      - label: Teacher2
+        name: teacher2
+        widget: relation
+        collection: teachers
+        value_field: teacherId
+        display_fields: ['teacher', ('teacherId')]
+        search_fields: ['teacher', 'teacherId']
+        default: 'null'
+      - label: Class Time2
+        name: classTime2
+        widget: relation
+        collection: customTime
+        value_field: customTime
+        display_fields: ['customTime']
+        search_fields: ['customTime']
+        default: 'null'
 
   - name: classes
     label: Classes
