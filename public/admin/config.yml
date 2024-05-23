@@ -142,7 +142,7 @@ collections:
         value_field: classId
         display_fields: ['class', ('classId')]
         search_fields: ['class', 'classId']
-        default: 'null'
+        default: null
         required: false
       - label: Teacher2
         name: teacher2
@@ -151,7 +151,7 @@ collections:
         value_field: teacherId
         display_fields: ['teacher', ('teacherId')]
         search_fields: ['teacher', 'teacherId']
-        default: 'null'
+        default: null
         required: false
       - label: Class Time2
         name: classTime2
@@ -160,7 +160,7 @@ collections:
         value_field: customTime
         display_fields: ['customTime']
         search_fields: ['customTime']
-        default: 'null'
+        default: null
         required: false
 
   - name: classes
