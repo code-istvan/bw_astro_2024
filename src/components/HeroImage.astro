@@ -32,7 +32,7 @@ const desktopImg = await getImage({
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
         <img src={desktopImg.src} alt={alt} />
     </picture>
-    <div class="page-name"><h1>{pageName}</h1></div>
+    <div class="container"><div class="page-name"><h1>{pageName}</h1></div></div>
 </div>
 
 <style>
@@ -44,12 +44,11 @@ const desktopImg = await getImage({
         }
         .page-name {
             position: absolute;
-            bottom: 21px;
-            left: 21px;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 16px; /* vagy ahogy szükséges */
+            bottom: 20px;
+            /* left: 21px; */
+            /* color: white; */
+            /* padding: 5px 10px;
+            border-radius: 5px; */
         }
     }
 </style>
