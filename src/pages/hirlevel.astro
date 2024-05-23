@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SubscriptionForm from '../components/SubscriptionForm.jsx';
+const pageTitle = 'Hirlevel';
+---
+
+<BaseLayout title={pageTitle}>
+    <div class="container">
+        <div class="row"><h1>Hirlevel</h1></div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Iratkozz fel hírlevelünkre, hogy elsőként értesülj a legfrissebb híreinkről!</p>
+                <SubscriptionForm client:only="react" />
+            </div>
+        </div>
+    </div>
+
+    <style></style>
+</BaseLayout>
