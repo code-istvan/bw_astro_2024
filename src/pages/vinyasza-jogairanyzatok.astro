@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage.astro';
+import mobileImage from '../images/jogairanyzatok_mobil.jpg';
+import desktopImage from '../images/jogairanyzatok_desktop.jpg';
+
 const pageTitle = 'Jógairányzatok';
 ---
 
 <BaseLayout title={pageTitle}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Jógairányzatok</h1></div>
+        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
     </div>
 </BaseLayout>
 
