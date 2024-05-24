@@ -18,17 +18,27 @@ interface Props {
 const { imagePath, altText } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 
-console.log('Available images:', Object.keys(images));
-console.log('Requested image path:', imagePath);
-
-// if (!images[`/src/images/${imagePath}`])
-//     throw new Error(`"${imagePath}" does not exist in glob: "/src/images/*.{jpeg,jpg,png,gif}"`);
-
 const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const schedule = await getCollection('schedule');
+
+// Aktuális dátum lekérése
+const today = new Date();
+today.setHours(0, 0, 0, 0); // A mai nap elejének beállítása
+
+// Szűrés dátum szerint, hogy csak a mai vagy későbbi dátumokat tartalmazza
+const filteredSchedule = schedule.filter((item) => {
+    const itemDate = new Date(item.data.date);
+    itemDate.setHours(0, 0, 0, 0); // Az elem dátumának nap elejének beállítása
+    return itemDate >= today;
+});
+
+// Rendezés dátum szerint
+const sortedSchedule = filteredSchedule.sort(
+    (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
+);
 
 function getTeacherDetails(teacherId) {
     return teachersData.teachers.find((teacher) => teacher.teacherId === teacherId);
@@ -45,7 +55,7 @@ function getClassDetails(classId) {
         <div class="schedule-list">
             <div class="schedule-list">
                 {
-                    schedule.map((item) => {
+                    sortedSchedule.map((item) => {
                         const teacherDetails = getTeacherDetails(item.data.teacher);
                         const classDetails = getClassDetails(item.data.class);
 
@@ -72,13 +82,6 @@ function getClassDetails(classId) {
                                                     height="50"
                                                     class="teacher-image"
                                                 />
-                                                // <Image
-                                                //     src={teacherDetails.teacherImage}
-                                                //     alt={teacherDetails.teacherName}
-                                                //     width="50"
-                                                //     height="50"
-                                                //     class="teacher-image"
-                                                // />
                                             )}
                                             {teacherDetails.teacherName}
                                         </a>
