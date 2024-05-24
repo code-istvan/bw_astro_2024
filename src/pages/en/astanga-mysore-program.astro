@@ -1,11 +1,21 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import HeroImage from '../../components/HeroImage.astro';
+import mobileImage from '../../images/mysore_mobil.jpg';
+import desktopImage from '../../images/mysore_desktop.jpg';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const pageTitle = t('mysoreprogram');
 ---
 
-<Layout title="Ashtanga Mysore program">
+<BaseLayout title={pageTitle}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Ashtanga Mysore program</h1></div>
+        <div class="row"><h1>Content will come here</h1></div>
     </div>
-</Layout>
+</BaseLayout>
 
 <style></style>
