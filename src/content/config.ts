@@ -27,6 +27,15 @@ const scheduleCollection = defineCollection({
     class: z.string(),
     teacher: z.string(),
     classTime: z.string(),
+    class2: z.string().optional(),
+    teacher2: z.string().optional(),
+    classTime2: z.string().optional(),
+    class3: z.string().optional(),
+    teacher3: z.string().optional(),
+    classTime3: z.string().optional(),
+    class4: z.string().optional(),
+    teacher4: z.string().optional(),
+    classTime4: z.string().optional(),
   }),
 });
 
