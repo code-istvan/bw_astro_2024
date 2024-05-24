@@ -162,6 +162,60 @@ collections:
         search_fields: ['customTime']
         default: null
         required: false
+      - label: Class3
+        name: class3
+        widget: relation
+        collection: classes
+        value_field: classId
+        display_fields: ['class', ('classId')]
+        search_fields: ['class', 'classId']
+        default: null
+        required: false
+      - label: Teacher3
+        name: teacher3
+        widget: relation
+        collection: teachers
+        value_field: teacherId
+        display_fields: ['teacher', ('teacherId')]
+        search_fields: ['teacher', 'teacherId']
+        default: null
+        required: false
+      - label: Class Time3
+        name: classTime3
+        widget: relation
+        collection: customTime
+        value_field: customTime
+        display_fields: ['customTime']
+        search_fields: ['customTime']
+        default: null
+        required: false
+      - label: Class4
+        name: class4
+        widget: relation
+        collection: classes
+        value_field: classId
+        display_fields: ['class', ('classId')]
+        search_fields: ['class', 'classId']
+        default: null
+        required: false
+      - label: Teacher4
+        name: teacher4
+        widget: relation
+        collection: teachers
+        value_field: teacherId
+        display_fields: ['teacher', ('teacherId')]
+        search_fields: ['teacher', 'teacherId']
+        default: null
+        required: false
+      - label: Class Time4
+        name: classTime4
+        widget: relation
+        collection: customTime
+        value_field: customTime
+        display_fields: ['customTime']
+        search_fields: ['customTime']
+        default: null
+        required: false
 
   - name: classes
     label: Classes
