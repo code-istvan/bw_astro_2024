@@ -48,52 +48,68 @@ function getClassDetails(classId) {
     return classesData.classess.find((cls) => cls.classId === classId);
 }
 
-console.log(schedule);
+function renderClassDetails(item, index) {
+    const classKey = index === 0 ? 'class' : `class${index}`;
+    const teacherKey = index === 0 ? 'teacher' : `teacher${index}`;
+    const classTimeKey = index === 0 ? 'classTime' : `classTime${index}`;
+
+    const classId = item.data[classKey];
+    const teacherId = item.data[teacherKey];
+    const classTime = item.data[classTimeKey];
+
+    const classDetails = getClassDetails(classId);
+    const teacherDetails = getTeacherDetails(teacherId);
+
+    return classDetails && teacherDetails
+        ? {
+              classDetails,
+              teacherDetails,
+              classTime,
+          }
+        : null;
+}
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
         <div class="schedule-list">
-            <div class="schedule-list">
-                {
-                    sortedSchedule.map((item) => {
-                        const teacherDetails = getTeacherDetails(item.data.teacher);
-                        const classDetails = getClassDetails(item.data.class);
-
-                        return (
-                            <div data-key={item.id} class="schedule-item">
-                                <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
-                                <p>{item.data.classTime}</p>
-                                {classDetails && (
-                                    <div>
-                                        <h3>{classDetails.classNameEn}</h3>
-                                        <p>Details: {classDetails.classDetailEn}</p>
-                                        <p>Signup: {classDetails.classSignUp}</p>
+            {
+                sortedSchedule.map((item) => (
+                    <div data-key={item.id} class="schedule-item">
+                        <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
+                        {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
+                            (details) =>
+                                details && (
+                                    <div class="class-details">
+                                        <p>{details.classTime}</p>
+                                        <div>
+                                            <h3>{details.classDetails.classNameEn}</h3>
+                                            <p>Details: {details.classDetails.classDetailEn}</p>
+                                            <p>Signup: {details.classDetails.classSignUp}</p>
+                                        </div>
+                                        <p>
+                                            <a href={details.teacherDetails.teacherLink}>
+                                                {details.teacherDetails.teacherImage && (
+                                                    <Image
+                                                        src={images[
+                                                            `/src/images/${details.teacherDetails.teacherImage}`
+                                                        ]()}
+                                                        alt={details.teacherDetails.teacherName}
+                                                        width="50"
+                                                        height="50"
+                                                        class="teacher-image"
+                                                    />
+                                                )}
+                                                {details.teacherDetails.teacherName}
+                                            </a>
+                                        </p>
                                     </div>
-                                )}
-
-                                {teacherDetails && (
-                                    <p>
-                                        <a href={teacherDetails.teacherLink}>
-                                            {teacherDetails.teacherImage && (
-                                                <Image
-                                                    src={images[`/src/images/${teacherDetails.teacherImage}`]()}
-                                                    alt={teacherDetails.teacherName}
-                                                    width="50"
-                                                    height="50"
-                                                    class="teacher-image"
-                                                />
-                                            )}
-                                            {teacherDetails.teacherName}
-                                        </a>
-                                    </p>
-                                )}
-                            </div>
-                        );
-                    })
-                }
-            </div>
+                                )
+                        )}
+                    </div>
+                ))
+            }
         </div>
     </div>
 </BaseLayout>
@@ -112,5 +128,8 @@ console.log(schedule);
         vertical-align: middle;
         border-radius: 50%;
         border: 2px solid lightgray;
+    }
+    .class-details {
+        margin-bottom: 15px;
     }
 </style>
