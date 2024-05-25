@@ -66,11 +66,11 @@ console.log(schedule);
                                 <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
                                 <p>{item.data.classTime}</p>
                                 {classDetails && (
-                                    <>
+                                    <div>
                                         <h3>{classDetails.classNameEn}</h3>
                                         <p>Details: {classDetails.classDetailEn}</p>
                                         <p>Signup: {classDetails.classSignUp}</p>
-                                    </>
+                                    </div>
                                 )}
 
                                 {teacherDetails && (
