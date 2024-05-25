@@ -1,11 +1,21 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import HeroImage from '../../components/HeroImage.astro';
+import mobileImage from '../../images/csapatunk_mobil.jpg';
+import desktopImage from '../../images/csapatunk_desktop.jpg';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const pageTitle = t('csapatunk');
 ---
 
-<Layout title="Our Team">
+<BaseLayout title={pageTitle}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Our Team</h1></div>
+        <div class="row"><h1>Content will come here</h1></div>
     </div>
-</Layout>
+</BaseLayout>
 
 <style></style>
