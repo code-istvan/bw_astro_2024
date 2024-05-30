@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import { actions } from 'astro:actions';
 
 mailchimp.setConfig({
   apiKey: import.meta.env.PUBLIC_MAILCHIMP_API_KEY,
@@ -10,16 +11,23 @@ const SubscriptionForm = () => {
   const [subscriptionData, setSubscriptionData] = useState({ email: '', name: '' });
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     console.log('dwdwe');
 
-    e.preventDefault();
-    const response = await mailchimp.lists.addListMember(import.meta.env.PUBLIC_MAILCHIMP_LIST_ID, {
-      email_address: subscriptionData.email,
-      status: 'subscribed',
-      merge_fields: {
-        FNAME: subscriptionData.name,
-      },
-    });
+    const contactData = new FormData();
+    contactData.append('name', subscriptionData.name);
+    contactData.append('email', subscriptionData.email);
+    const response = await actions.mailchimp(contactData);
+    const test = await mailchimp.ping.get();
+    console.log(test);
+
+    // const response = await mailchimp.lists.addListMember(import.meta.env.PUBLIC_MAILCHIMP_LIST_ID, {
+    //   email_address: subscriptionData.email,
+    //   status: 'subscribed',
+    //   merge_fields: {
+    //     FNAME: subscriptionData.name,
+    //   },
+    // });
     console.log(response);
 
     console.log('Form submitted');
