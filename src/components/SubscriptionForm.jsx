@@ -1,20 +1,32 @@
 import { useState } from 'react';
+import mailchimp from '@mailchimp/mailchimp_marketing';
+
+mailchimp.setConfig({
+  apiKey: import.meta.env.PUBLIC_MAILCHIMP_API_KEY,
+  server: import.meta.env.PUBLIC_MAILCHIMP_SERVER_PREFIX,
+});
 
 const SubscriptionForm = () => {
   const [subscriptionData, setSubscriptionData] = useState({ email: '', name: '' });
 
   const handleSubmit = async (e) => {
+    console.log('dwdwe');
+
     e.preventDefault();
-    // const response = await client.lists.addListMember('list_id', {
-    //   email_address: 'Ebony_Brekke@gmail.com',
-    //   status: 'pending',
-    // });
-    // console.log(response);
+    const response = await mailchimp.lists.addListMember(import.meta.env.PUBLIC_MAILCHIMP_LIST_ID, {
+      email_address: subscriptionData.email,
+      status: 'subscribed',
+      merge_fields: {
+        FNAME: subscriptionData.name,
+      },
+    });
+    console.log(response);
 
     console.log('Form submitted');
   };
 
   console.log(subscriptionData);
+  console.log(import.meta.env.PUBLIC_MAILCHIMP_API_KEY);
 
   return (
     <div>
@@ -29,7 +41,13 @@ const SubscriptionForm = () => {
           onChange={(e) => setSubscriptionData((prev) => ({ ...prev, name: e.target.value }))}
         />
         <label htmlFor="email">Email:</label>
-        <input type="email" value={subscriptionData.email} id="email" name="Email" />
+        <input
+          type="email"
+          value={subscriptionData.email}
+          id="email"
+          name="Email"
+          onChange={(e) => setSubscriptionData((prev) => ({ ...prev, email: e.target.value }))}
+        />
         <button type="submit">Subscribe</button>
       </form>
     </div>
