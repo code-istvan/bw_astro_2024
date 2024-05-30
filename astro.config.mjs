@@ -4,10 +4,10 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  experimental: {
-    actions: true,
-  },
-  output: 'server',
+  // experimental: {
+  //   actions: true,
+  // },
+  // output: 'server',
   // adapter: netlify(),
   i18n: {
     defaultLocale: 'hu',

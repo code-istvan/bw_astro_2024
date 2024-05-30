@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import mailchimp from '@mailchimp/mailchimp_marketing';
-import { actions } from 'astro:actions';
 
 mailchimp.setConfig({
   apiKey: import.meta.env.PUBLIC_MAILCHIMP_API_KEY,
@@ -17,7 +16,13 @@ const SubscriptionForm = () => {
     const contactData = new FormData();
     contactData.append('name', subscriptionData.name);
     contactData.append('email', subscriptionData.email);
-    const response = await actions.mailchimp(contactData);
+    const response = await fetch('/api/mailchimp', {
+      method: 'POST',
+      // headers: {
+      //   'Content-Type': 'application/json',
+      // },
+      body: contactData,
+    });
     const test = await mailchimp.ping.get();
     console.log(test);
 
@@ -39,7 +44,7 @@ const SubscriptionForm = () => {
   return (
     <div>
       <h2>Subscribe to our newsletter</h2>
-      <form onSubmit={handleSubmit}>
+      <form action="/api/mailchimp" method="post">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
