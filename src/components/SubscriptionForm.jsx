@@ -34,7 +34,7 @@ const SubscriptionForm = () => {
         .join('&');
     };
 
-    const response = await fetch(`/api/contact-form`, {
+    const response = await fetch(`/api/mailchimp`, {
       method: `POST`,
       headers: { 'Content-Type': `application/x-www-form-urlencoded` },
       body: encode({ ...subscriptionData }),
