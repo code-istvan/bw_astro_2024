@@ -16,13 +16,6 @@ const SubscriptionForm = () => {
     const contactData = new FormData();
     contactData.append('name', subscriptionData.name);
     contactData.append('email', subscriptionData.email);
-    const response = await fetch('/api/mailchimp', {
-      method: 'POST',
-      // headers: {
-      //   'Content-Type': 'application/json',
-      // },
-      body: contactData,
-    });
     const test = await mailchimp.ping.get();
     console.log(test);
 
@@ -35,16 +28,23 @@ const SubscriptionForm = () => {
     // });
     console.log(response);
 
-    console.log('Form submitted');
-  };
+    const encode = (data) => {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key].toString())}`)
+        .join('&');
+    };
 
-  console.log(subscriptionData);
-  console.log(import.meta.env.PUBLIC_MAILCHIMP_API_KEY);
+    const response = await fetch(`/api/contact-form`, {
+      method: `POST`,
+      headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+      body: encode({ ...subscriptionData }),
+    });
+  };
 
   return (
     <div>
       <h2>Subscribe to our newsletter</h2>
-      <form action="/api/mailchimp" method="post">
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"
