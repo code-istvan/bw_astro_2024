@@ -26,7 +26,10 @@ const schedule = await getCollection('schedule');
 
 // Aktuális dátum lekérése
 const today = new Date();
-today.setHours(0, 0, 0, 0); // A mai nap elejének beállítása
+// today.setHours(0, 0, 0, 0); // A mai nap elejének beállítása
+today.toISOString(); // A mai nap elejének beállítása
+
+console.log("Today's date ezaz:", today.toISOString());
 
 // Szűrés dátum szerint, hogy csak a mai vagy későbbi dátumokat tartalmazza
 const filteredSchedule = schedule.filter((item) => {
@@ -39,6 +42,8 @@ const filteredSchedule = schedule.filter((item) => {
 const sortedSchedule = filteredSchedule.sort(
     (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
 );
+
+console.log(sortedSchedule);
 
 function getTeacherDetails(teacherId) {
     return teachersData.teachers.find((teacher) => teacher.teacherId === teacherId);
