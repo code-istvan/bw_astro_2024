@@ -10,12 +10,12 @@ import type { ImageMetadata } from 'astro';
 import teachersData from '../data/teachers.json';
 import classesData from '../data/classes.json';
 
-interface Props {
-    imagePath: string;
-    altText: string;
-}
+// interface Props {
+//     imagePath: string;
+//     altText: string;
+// }
 
-const { imagePath, altText } = Astro.props;
+// const { imagePath, altText } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 
 const pageTitle = 'Órarend';
@@ -26,10 +26,7 @@ const schedule = await getCollection('schedule');
 
 // Aktuális dátum lekérése
 const today = new Date();
-// today.setHours(0, 0, 0, 0); // A mai nap elejének beállítása
 today.toISOString(); // A mai nap elejének beállítása
-
-console.log("Today's date ezaz:", today.toISOString());
 
 // Szűrés dátum szerint, hogy csak a mai vagy későbbi dátumokat tartalmazza
 const filteredSchedule = schedule.filter((item) => {
@@ -50,7 +47,7 @@ function getTeacherDetails(teacherId) {
 }
 
 function getClassDetails(classId) {
-    return classesData.classess.find((cls) => cls.classId === classId);
+    return classesData.classes.find((cls) => cls.classId === classId);
 }
 
 function renderClassDetails(item, index) {
@@ -89,8 +86,8 @@ function renderClassDetails(item, index) {
                                     <div class="class-details">
                                         <p>{details.classTime}</p>
                                         <div>
-                                            <h3>{details.classDetails.classNameEn}</h3>
-                                            <p>Details: {details.classDetails.classDetailEn}</p>
+                                            <h3>{details.classDetails.classNameHu}</h3>
+                                            <p>Details: {details.classDetails.classDetailHu}</p>
                                             <p>Signup: {details.classDetails.classSignUp}</p>
                                         </div>
                                         <p>
