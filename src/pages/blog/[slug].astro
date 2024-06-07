@@ -40,7 +40,6 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
-
 ---
 
 <BlogPostLayout title={post.data.title}>
@@ -88,13 +87,12 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
 
     .mobile_image,
     .desktop_image {
-     {
         img {
             max-width: 100vw;
             width: 100%;
             height: auto;
         }
-    } }
+    }
 
     @media (max-width: 768px) {
         .desktop_image {
@@ -107,5 +105,4 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
             display: none;
         }
     }
-
 </style>
