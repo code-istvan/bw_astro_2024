@@ -7,8 +7,8 @@ export default defineConfig({
   // experimental: {
   //   actions: true,
   // },
-  // output: 'server',
-  // adapter: netlify(),
+  output: 'server',
+  adapter: netlify(),
   i18n: {
     defaultLocale: 'hu',
     locales: ['hu', 'en'],
