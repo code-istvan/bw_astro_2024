@@ -275,6 +275,6 @@ collections:
           widget: relation,
           collection: teachers,
           value_field: teacher,
-          display_fields: ['teacher'],
-          search_fields: ['teacher', 'link'],
+          display_fields: ['teacher', ('teacherId')],
+          search_fields: ['teacher', 'teacherId'],
         }
