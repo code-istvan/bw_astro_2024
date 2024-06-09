@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import mailchimp from '@mailchimp/mailchimp_marketing';
+// import mailchimp from '@mailchimp/mailchimp_marketing';
 
-mailchimp.setConfig({
-  apiKey: import.meta.env.PUBLIC_MAILCHIMP_API_KEY,
-  server: import.meta.env.PUBLIC_MAILCHIMP_SERVER_PREFIX,
-});
+// mailchimp.setConfig({
+//   apiKey: import.meta.env.PUBLIC_MAILCHIMP_API_KEY,
+//   server: import.meta.env.PUBLIC_MAILCHIMP_SERVER_PREFIX,
+// });
 
 const SubscriptionForm = () => {
   const [subscriptionData, setSubscriptionData] = useState({ email: '', name: '' });
