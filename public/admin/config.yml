@@ -274,7 +274,7 @@ collections:
           name: teacher,
           widget: relation,
           collection: teachers,
-          value_field: teacher,
+          value_field: teacherId,
           display_fields: ['teacher', ('teacherId')],
           search_fields: ['teacher', 'teacherId'],
         }
