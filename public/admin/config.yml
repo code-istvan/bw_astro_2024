@@ -247,3 +247,34 @@ collections:
     fields:
       - { label: TeacherId, name: teacherId, widget: string }
       - { label: Teacher, name: teacher, widget: string }
+
+  - name: events
+    label: Events
+    folder: src/content/events/
+    format: 'json'
+    create: true
+    slug: '{{eventid}}'
+    fields:
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Featured, name: featured, widget: boolean, default: true }
+      - {
+          label: Esemény típusa,
+          name: esemenytipusa,
+          widget: select,
+          options: [Tanfolyam, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
+        }
+      - { label: Eventid, name: eventid, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Shortdescription, name: Shortdescription, widget: text }
+      - { label: Eventlink, name: eventlink, widget: string, required: false }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Day, name: day, widget: string, required: false }
+      - {
+          label: Teacher,
+          name: teacher,
+          widget: relation,
+          collection: teachers,
+          value_field: name,
+          display_fields: ['name'],
+          search_fields: ['name', 'link'],
+        }
