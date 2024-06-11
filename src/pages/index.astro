@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage.astro';
+import mobileImage from '../images/hero_mobil.jpeg';
+import desktopImage from '../images/hero_desktop.jpg';
 const pageTitle = 'Welcome to Bandha Works';
 
 // const isHomePage = true;
 ---
 
 <BaseLayout title={pageTitle}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexHu={true} />
     <!-- <Layout title="Welcome to Bandha Works" isHomePage={isHomePage}> -->
     <div class="container">
         <div class="row"><h1>Üdvözlet a honlapunkon</h1></div>

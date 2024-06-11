@@ -6,10 +6,12 @@ interface Props {
     mobileImgUrl: string | ImageMetadata;
     desktopImgUrl: string | ImageMetadata;
     alt: string;
-    pageName: string;
+    pageName?: string;
+    indexHu?: boolean;
+    indexEn?: boolean;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt, pageName } = Astro.props;
+const { mobileImgUrl, desktopImgUrl, alt, pageName, indexHu = false, indexEn = false } = Astro.props;
 
 const mobileImg = await getImage({
     src: mobileImgUrl,
@@ -32,7 +34,27 @@ const desktopImg = await getImage({
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
         <img src={desktopImg.src} alt={alt} />
     </picture>
-    <div class="container"><div class="page-name"><h1>{pageName}</h1></div></div>
+    <div class="container">
+        {
+            indexHu ? (
+                <div class="index-text-hu">
+                    <h1>Az egyetlen kiút befelé vezet</h1>
+                    <br />
+                    <p>Tradicionális astanga jógaiskola a Paramaguru áldásával</p>
+                </div>
+            ) : indexEn ? (
+                <div class="index-text-en">
+                    <h1>The only way OUT is IN</h1>
+                    <br />
+                    <p>Traditional astanga yoga shala with the blessing of Paramaguru</p>
+                </div>
+            ) : (
+                <div class="page-name">
+                    <h1>{pageName}</h1>
+                </div>
+            )
+        }
+    </div>
 </div>
 
 <style>
@@ -49,6 +71,20 @@ const desktopImg = await getImage({
             /* color: white; */
             /* padding: 5px 10px;
             border-radius: 5px; */
+        }
+        .index-text-hu {
+            position: absolute;
+            top: 80px;
+            h1 {
+                font-size: 4rem;
+            }
+        }
+        .index-text-en {
+            position: absolute;
+            top: 80px;
+            h1 {
+                font-size: 4rem;
+            }
         }
     }
 </style>
