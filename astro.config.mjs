@@ -7,8 +7,8 @@ export default defineConfig({
   // experimental: {
   //   actions: true,
   // },
-  // output: 'server', //hibajavítás miatt kikommentelve
-  // adapter: netlify(), //hibajavítás miatt kikommentelve
+  output: 'server', //hibajavítás miatt kikommentelve
+  adapter: netlify(), //hibajavítás miatt kikommentelve
   i18n: {
     defaultLocale: 'hu',
     locales: ['hu', 'en'],
