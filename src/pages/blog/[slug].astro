@@ -40,6 +40,7 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
+// console.log('dada', images);
 ---
 
 <BlogPostLayout title={post.data.title}>
