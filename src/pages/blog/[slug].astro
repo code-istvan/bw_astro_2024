@@ -40,21 +40,21 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
-// console.log('dada', images);
+console.log('dada', `/${post.data.image}`);
 ---
 
 <BlogPostLayout title={post.data.title}>
     {
         post.data.image && (
             <section class="desktop_image">
-                <Image src={images[post.data.image]()} alt={post.data.title} />
+                <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
             </section>
         )
     }
     {
         post.data.imageMobil && (
             <section class="mobile_image">
-                <Image src={imagesMobil[post.data.imageMobil]()} alt={post.data.title} />
+                <Image src={imagesMobil[`/${post.data.imageMobil}`]()} alt={post.data.title} />
             </section>
         )
     }
