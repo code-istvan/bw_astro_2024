@@ -12,16 +12,54 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
     <div class="container">
         <div class="row"><h1>Ide jön majd a tartalom</h1></div>
         <div>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="mysore bandhaworks" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="mysore bandhaworks" />
+                <input type="hidden" name="Tapasztalat" value="" />
+
+                <div hidden>
+                    <input name="bot-field" />
+                </div>
+
                 <p>
-                    <label>Your Name: <input type="text" name="name" /></label>
+                    <input
+                        type="text"
+                        name="familyname"
+                        placeholder="Családi név"
+                        pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
+                        required="required"
+                    />
                 </p>
                 <p>
-                    <label>Your Email: <input type="email" name="email" /></label>
+                    <input
+                        type="text"
+                        name="surnamename"
+                        placeholder="Utónév"
+                        pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
+                        required="required"
+                    />
                 </p>
-                <p></p>
                 <p>
-                    <label>Message: <textarea name="message"></textarea></label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+                        required="required"
+                        value="email"
+                    />
+                </p>
+                <p>
+                    <textarea
+                        class=""
+                        name="comments"
+                        rows="6"
+                        placeholder="Ha már van tapasztalatod astanga jógában, kérlek írd le, mióta
+                    és milyen rendszeresen gyakorolsz. Kitől tanultál eddig,
+                    mennyi időt? Van-e tapasztalatod Mysore-gyakorlás terén?
+                    Tudsz-e külső segítség nélkül egyedül gyakorolni?"
+                    >
+                    </textarea>
                 </p>
                 <p>
                     <button type="submit">Send</button>
@@ -31,4 +69,24 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    button {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+        background-color: #4caf50;
+    }
+</style>
