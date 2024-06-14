@@ -20,7 +20,7 @@ export default function Button({
     type,
     onClick,
     buttonStyle,
-    className = "",
+    class = "",
 }) {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
@@ -28,7 +28,7 @@ export default function Button({
 
     return (
         <button
-            className={`btn ${checkButtonStyle} ${className}`}
+            class={`btn ${checkButtonStyle} ${class}`}
             onClick={onClick}
             type={type}
         >

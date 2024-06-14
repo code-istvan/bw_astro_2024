@@ -9,9 +9,18 @@ interface Props {
     pageName?: string;
     indexHu?: boolean;
     indexEn?: boolean;
+    containerClass?: string;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt, pageName, indexHu = false, indexEn = false } = Astro.props;
+const {
+    mobileImgUrl,
+    desktopImgUrl,
+    alt,
+    pageName,
+    indexHu = false,
+    indexEn = false,
+    containerClass = '',
+} = Astro.props;
 
 const mobileImg = await getImage({
     src: mobileImgUrl,
@@ -34,7 +43,7 @@ const desktopImg = await getImage({
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
         <img src={desktopImg.src} alt={alt} />
     </picture>
-    <div class="container">
+    <div class={`container ${containerClass}`}>
         {
             indexHu ? (
                 <div class="index-text-hu">

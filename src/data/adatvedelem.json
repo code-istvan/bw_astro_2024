@@ -1,0 +1,24 @@
+{
+  "adatkezelo": {
+    "nev": "Omworks Tech Kft.",
+    "szekhely": "1133 Budapest, Bessenyei u. 8-10.",
+    "telephely": "1027 Budapest, Frankel Leó út 18.",
+    "nyilvantartasiSzam": "01 09 879437",
+    "levelezes": "1133 Budapest, Bessenyei u. 8-10.",
+    "email": "bandha.works@gmail.com"
+  },
+  "tarhelyszolgaltato": {
+    "nev": "DOTROLL Kft.",
+    "levelezes": "1148 Budapest, Fogarasi út 3-5.",
+    "email": "support@dotroll.com",
+    "telefon": "+36-1-432-3232"
+  },
+  "futar": {
+    "nev": "Delivery Solutions Zrt.",
+    "szekhely": "1033 Budapest, Szentendrei út 89-95. X. ép",
+    "telefon": "+36-1-374-3890",
+    "email": "info@sameday.hu",
+    "weboldal": "https://sameday.hu"
+  },
+  "datumModositas": "2023. augusztus 1."
+}
