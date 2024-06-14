@@ -11,6 +11,23 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
         <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+        <div>
+            <form name="contact" method="POST" data-netlify="true">
+                <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p></p>
+                <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </div>
     </div>
 </BaseLayout>
 
