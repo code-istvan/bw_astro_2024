@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
+import InputField from '../components/InputField.astro';
 
 const pageTitle = 'Astanga-Mysore program jelentkezési lap';
 ---
@@ -10,7 +11,6 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
         <div>
             <form name="mysore bandhaworks" method="post" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="mysore bandhaworks" />
@@ -21,7 +21,7 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
                 </div>
 
                 <p>
-                    <input
+                    <InputField
                         type="text"
                         name="familyname"
                         placeholder="Családi név"
@@ -30,7 +30,7 @@ const pageTitle = 'Astanga-Mysore program jelentkezési lap';
                     />
                 </p>
                 <p>
-                    <input
+                    <InputField
                         type="text"
                         name="surnamename"
                         placeholder="Utónév"
