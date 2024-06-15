@@ -1,15 +1,18 @@
 // variables & functions
-@import "/src/sass/base/_variable";
+@import '/src/sass/base/_variable';
 
 // mixins
-@import "/src/sass/base/_mixins";
+@import '/src/sass/base/_mixins';
 
 // base
-@import "/src/sass/base/_base";
-@import "/src/sass/base/_reset";
-@import "/src/sass/base/_fonts";
-@import "/src/sass/base/_breakpoints";
-@import "/src/sass/base/_grid";
+@import '/src/sass/base/_base';
+@import '/src/sass/base/_reset';
+@import '/src/sass/base/_fonts';
+@import '/src/sass/base/_breakpoints';
+@import '/src/sass/base/_grid';
 
 // colors
-@import "/src/sass/base/_colors";
+@import '/src/sass/base/_colors';
+
+// utilities
+@import '/src/sass/base/_utilities';

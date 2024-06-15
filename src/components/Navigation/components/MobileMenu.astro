@@ -4,21 +4,23 @@ import './_mobilMenu.scss';
 ---
 
 <div id="mobileMenu">
-    <div>
-        <div class="dropdown-menu" id="toggle-jogaorak">
-            <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
-            <Fragment set:html={plus_sign} />
+    <div class="menu-wrapi">
+        <div>
+            <div class="dropdown-menu" id="toggle-jogaorak">
+                <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
+                <Fragment set:html={plus_sign} />
+            </div>
+            <div id="jogaorak" class="dropdown-menu__content list--no-style"></div>
         </div>
-        <div id="jogaorak" class="dropdown-menu__content"></div>
-    </div>
-    <div>
-        <div class="dropdown-menu" id="toggle-tudnivalok">
-            <h3 id="tudnivalok-label">TUDNIVALÓK</h3>
-            <Fragment set:html={plus_sign} />
+        <div>
+            <div class="dropdown-menu" id="toggle-tudnivalok">
+                <h3 id="tudnivalok-label">TUDNIVALÓK</h3>
+                <Fragment set:html={plus_sign} />
+            </div>
+            <div id="tudnivalok" class="dropdown-menu__content list--no-style"></div>
         </div>
-        <div id="tudnivalok" class="dropdown-menu__content"></div>
+        <div id="fomenuItems" class="list--no-style"></div>
     </div>
-    <div id="fomenuItems"></div>
 </div>
 
 <script>
@@ -53,4 +55,10 @@ import './_mobilMenu.scss';
     initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
 </script>
 
-<style></style>
+<style>
+    .menu-wrapi {
+        margin-top: 24px;
+        margin-left: 16px;
+        margin-right: 4px;
+    }
+</style>
