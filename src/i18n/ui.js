@@ -21,7 +21,7 @@ export const ui = {
     mantra: 'Mantrák',
     holdnapok: 'Holdnapok',
     osztondij: 'Ösztöndij',
-    olvasmanyok: 'Ajánlott olvasmányok',
+    olvasmanyok: 'Olvasmányok',
     jogaorak: 'JÓGAÓRÁK',
     tudnivalok: 'TUDNIVALÓK',
     kapcsolat: 'KAPCSOLAT',
