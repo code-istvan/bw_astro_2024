@@ -14,8 +14,10 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  overflow: scroll;
   overflow-x: hidden;
+
+  overflow: scroll;
+
   overflow-y: hidden;
   background-color: $offcanvas-menu-color;
   -webkit-transition: all 500ms ease-out;
@@ -41,8 +43,8 @@
 
   .dropdown-menu__content.show {
     display: block;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    // margin-left: calc(-50vw + 50%);
+    // margin-right: calc(-50vw + 50%);
     a {
       text-transform: uppercase;
       margin-left: 26px;
