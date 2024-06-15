@@ -10,6 +10,7 @@ html {
 body {
   background-color: $primary-background-color;
   color: $color-shades-white;
+  overflow-x: hidden;
 }
 
 strong {
