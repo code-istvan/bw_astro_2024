@@ -3,18 +3,18 @@ import plus_sign from '../../../images/svg/plus_sign.svg?raw';
 import './_mobilMenu.scss';
 ---
 
-<div id="mobileMenu">
-    <div class="menu-wrapi">
+<div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu__wrapper">
         <div>
-            <div class="dropdown-menu" id="toggle-jogaorak">
-                <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
+            <div class="mobile-menu__dropdown" id="toggle-jogaorak">
+                <h3 id="jogaoraLabel" class="mobile-menu__label">JÓGAÓRÁK</h3>
                 <Fragment set:html={plus_sign} />
             </div>
             <div id="jogaorak" class="dropdown-menu__content list--no-style"></div>
         </div>
         <div>
-            <div class="dropdown-menu" id="toggle-tudnivalok">
-                <h3 id="tudnivalok-label">TUDNIVALÓK</h3>
+            <div class="mobile-menu__dropdown" id="toggle-tudnivalok">
+                <h3 id="tudnivalokLabel">TUDNIVALÓK</h3>
                 <Fragment set:html={plus_sign} />
             </div>
             <div id="tudnivalok" class="dropdown-menu__content list--no-style"></div>
@@ -36,13 +36,13 @@ import './_mobilMenu.scss';
         {
             toggleId: 'toggle-jogaorak',
             contentId: 'jogaorak',
-            labelId: 'jogaorak-label',
+            labelId: 'jogaoraLabel',
             labelTextKey: 'jogaorak',
         },
         {
             toggleId: 'toggle-tudnivalok',
             contentId: 'tudnivalok',
-            labelId: 'tudnivalok-label',
+            labelId: 'tudnivalokLabel',
             labelTextKey: 'tudnivalok',
         },
     ]);
@@ -56,7 +56,7 @@ import './_mobilMenu.scss';
 </script>
 
 <style>
-    .menu-wrapi {
+    .mobile-menu__wrapper {
         margin-top: 24px;
         margin-left: 16px;
         margin-right: 4px;
