@@ -1,9 +1,9 @@
 ---
-import plus_sign from "../../../images/svg/plus_sign.svg?raw";
-import "./_mobilMenu.scss";
+import plus_sign from '../../../images/svg/plus_sign.svg?raw';
+import './_mobilMenu.scss';
 ---
 
-<div class="container-fluid" id="mobileMenu">
+<div id="mobileMenu">
     <div>
         <div class="dropdown-menu" id="toggle-jogaorak">
             <h3 id="jogaorak-label">JÓGAÓRÁK</h3>
@@ -22,40 +22,35 @@ import "./_mobilMenu.scss";
 </div>
 
 <script>
-    import { useTranslations, useTranslatedPath } from "../../../i18n/utils.js";
-    import { initMenu, initMenuComponents } from "./menuLogic.js";
+    import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+    import { initMenu, initMenuComponents } from './menuLogic.js';
 
-    const language = window.location.href.includes("en") ? "en" : "hu";
+    const language = window.location.href.includes('en') ? 'en' : 'hu';
     const t = useTranslations(language);
     const translatePath = useTranslatedPath(language);
 
     // Komponensek inicializálása
     initMenuComponents(language, t, [
         {
-            toggleId: "toggle-jogaorak",
-            contentId: "jogaorak",
-            labelId: "jogaorak-label",
-            labelTextKey: "jogaorak",
+            toggleId: 'toggle-jogaorak',
+            contentId: 'jogaorak',
+            labelId: 'jogaorak-label',
+            labelTextKey: 'jogaorak',
         },
         {
-            toggleId: "toggle-tudnivalok",
-            contentId: "tudnivalok",
-            labelId: "tudnivalok-label",
-            labelTextKey: "tudnivalok",
+            toggleId: 'toggle-tudnivalok',
+            contentId: 'tudnivalok',
+            labelId: 'tudnivalok-label',
+            labelTextKey: 'tudnivalok',
         },
     ]);
 
-    const jogorakList = document.getElementById("jogaorak");
-    const tudnivalokList = document.getElementById("tudnivalok");
-    const fomenuItems = document.getElementById("fomenuItems");
+    const jogorakList = document.getElementById('jogaorak');
+    const tudnivalokList = document.getElementById('tudnivalok');
+    const fomenuItems = document.getElementById('fomenuItems');
 
     // Menüelemek dinamikus hozzáadása
-    initMenu(
-        language,
-        translatePath,
-        t,
-        jogorakList,
-        tudnivalokList,
-        fomenuItems
-    );
+    initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
 </script>
+
+<style></style>

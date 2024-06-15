@@ -1,8 +1,8 @@
 ---
-import "./_desktopMenu.scss";
+import './_desktopMenu.scss';
 ---
 
-<div class="container-fluid" id="desktopMenu">
+<div id="desktopMenu">
     <div class="off-canvas-menu">
         <div class="menu-item" id="menu1">
             <div><h3 id="jogaorak-label-desktop">JÓGAÓRÁK</h3></div>
@@ -22,40 +22,33 @@ import "./_desktopMenu.scss";
 </div>
 
 <script>
-    import { useTranslations, useTranslatedPath } from "../../../i18n/utils.js";
-    import { initMenu, initMenuComponents } from "./menuLogic.js";
+    import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+    import { initMenu, initMenuComponents } from './menuLogic.js';
 
-    const language = window.location.href.includes("en") ? "en" : "hu";
+    const language = window.location.href.includes('en') ? 'en' : 'hu';
     const t = useTranslations(language);
     const translatePath = useTranslatedPath(language);
 
     // Initialize components with menu logic
     initMenuComponents(language, t, [
         {
-            toggleId: "menu1",
-            contentId: "jogaorak-desktop",
-            labelId: "jogaorak-label-desktop",
-            labelTextKey: "jogaorak",
+            toggleId: 'menu1',
+            contentId: 'jogaorak-desktop',
+            labelId: 'jogaorak-label-desktop',
+            labelTextKey: 'jogaorak',
         },
         {
-            toggleId: "menu2",
-            contentId: "tudnivalok-desktop",
-            labelId: "tudnivalok-label-desktop",
-            labelTextKey: "tudnivalok",
+            toggleId: 'menu2',
+            contentId: 'tudnivalok-desktop',
+            labelId: 'tudnivalok-label-desktop',
+            labelTextKey: 'tudnivalok',
         },
     ]);
 
-    const jogorakList = document.getElementById("jogaorak-desktop");
-    const tudnivalokList = document.getElementById("tudnivalok-desktop");
-    const fomenuItems = document.getElementById("fomenuItems-desktop");
+    const jogorakList = document.getElementById('jogaorak-desktop');
+    const tudnivalokList = document.getElementById('tudnivalok-desktop');
+    const fomenuItems = document.getElementById('fomenuItems-desktop');
 
     // Populate menu items dynamically
-    initMenu(
-        language,
-        translatePath,
-        t,
-        jogorakList,
-        tudnivalokList,
-        fomenuItems
-    );
+    initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
 </script>
