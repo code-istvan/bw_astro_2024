@@ -29,6 +29,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 8px 0;
+
+    svg {
+      margin-right: 8px;
+    }
   }
 
   .dropdown-menu__content {
@@ -43,8 +47,6 @@
 
   .dropdown-menu__content.show {
     display: block;
-    // margin-left: calc(-50vw + 50%);
-    // margin-right: calc(-50vw + 50%);
     margin-left: -8px;
     margin-right: -4px;
     a {
