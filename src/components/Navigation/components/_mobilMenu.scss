@@ -15,9 +15,7 @@
   bottom: 0;
   z-index: 1;
   overflow-x: hidden;
-
   overflow: scroll;
-
   overflow-y: hidden;
   background-color: $offcanvas-menu-color;
   -webkit-transition: all 500ms ease-out;
@@ -32,6 +30,7 @@
 
     svg {
       margin-right: 8px;
+      //   transform: rotate(45deg);
     }
   }
 
@@ -60,4 +59,10 @@
     padding: 12px 0;
     padding-left: 12px;
   }
+}
+
+.mobile-menu__wrapper {
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-right: 4px;
 }
