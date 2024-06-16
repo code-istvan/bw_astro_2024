@@ -53,4 +53,14 @@ import './_mobilMenu.scss';
 
     // Menüelemek dinamikus hozzáadása
     initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
+
+    // Plus sign forgatása
+    document.querySelectorAll('.mobile-menu__dropdown').forEach((dropdown) => {
+        dropdown.addEventListener('click', () => {
+            const svg = dropdown.querySelector('svg');
+            if (svg) {
+                svg.classList.toggle('rotate');
+            }
+        });
+    });
 </script>

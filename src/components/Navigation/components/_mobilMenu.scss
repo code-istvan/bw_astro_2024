@@ -30,8 +30,13 @@
 
     svg {
       margin-right: 8px;
-      //   transform: rotate(45deg);
+      transition: transform 500ms ease-out;
     }
+  }
+
+  .mobile-menu__dropdown svg.rotate {
+    transform: rotate(45deg);
+    transition: transform 500ms ease-out;
   }
 
   .dropdown-menu__content {
