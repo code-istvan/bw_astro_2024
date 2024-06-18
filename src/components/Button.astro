@@ -3,24 +3,13 @@ import '../sass/components/_button.scss';
 
 export interface Props {
     id?: string;
-    buttonStyle:
-        | 'btn--primary--solid'
-        | 'btn--primary--solid--full'
-        | 'btn--plain--naked'
-        | 'btn--secondary--solid'
-        | 'btn--secondary--solid--full'
-        | 'btn--secondary--outline'
-        | 'btn--third--solid'
-        | 'btn--third--outline'
-        | 'btn--third--naked-orange'
-        | 'btn--primary--outline'
-        | 'btn--primary--outline-full'
-        | 'btn--small--outline';
+    buttonStyle: string;
     className?: string;
     type?: 'button' | 'submit';
+    url?: string;
 }
 
-const { id, type = 'button', buttonStyle, className = '' } = Astro.props;
+const { id = 'btn1', type = 'button', buttonStyle, className = '', url = '' } = Astro.props;
 
 const STYLES = [
     'btn--primary--solid',
@@ -40,4 +29,8 @@ const STYLES = [
 const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 ---
 
-<button id={id} class={`btn ${checkButtonStyle} ${className}`}><slot /></button>
+<button id={id} type={type} class={`btn ${checkButtonStyle} ${className}`} data-url={url}>
+    <slot />
+</button>
+
+<script type="module" src="/scripts/buttonClick.js"></script>
