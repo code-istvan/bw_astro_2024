@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
+import Button from '../components/Button.astro';
 
 const pageTitle = 'Astanga-Mysore program';
 ---
@@ -13,22 +14,14 @@ const pageTitle = 'Astanga-Mysore program';
         <div class="row"><h1>Ide jön majd a tartalom</h1></div>
     </div>
     <div class="row">
-        <a href="/astanga-mysore-program-jelentkezes/" class="button">Jelentkezés az Astanga-Mysore programra</a>
+        <Button id="btn1" buttonStyle="btn--secondary--outline" client:load>Mysore</Button>
     </div>
 </BaseLayout>
 
-<style>
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 20px;
-        background-color: #007bff;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    .button:hover {
-        background-color: #0056b3;
-    }
-</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#btn1')?.addEventListener('click', () => {
+            window.location.href = '/holdnapok';
+        });
+    });
+</script>
