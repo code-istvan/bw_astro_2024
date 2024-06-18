@@ -1,12 +1,14 @@
 ---
 import plus_sign from '../../../images/svg/plus_sign.svg?raw';
+import MobileMenuHeader from './MobileMenuHeader.astro';
 import './_mobilMenu.scss';
 ---
 
 <div id="mobileMenu" class="mobile-menu">
     <div class="mobile-menu__wrapper">
         <div>
-            <div class="mobile-menu__dropdown" id="toggle-jogaorak">
+            <MobileMenuHeader />
+            <div class="mobile-menu__dropdown mt-20px" id="toggle-jogaorak">
                 <h3 id="jogaoraLabel" class="mobile-menu__label">JÓGAÓRÁK</h3>
                 <Fragment set:html={plus_sign} />
             </div>

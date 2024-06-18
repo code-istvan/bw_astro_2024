@@ -9,7 +9,7 @@ export interface Props {
     url?: string;
 }
 
-const { id = 'btn1', type = 'button', buttonStyle, className = '', url = '' } = Astro.props;
+const { type = 'button', buttonStyle, className = '', url = '' } = Astro.props;
 
 const STYLES = [
     'btn--primary--solid',
@@ -29,8 +29,6 @@ const STYLES = [
 const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 ---
 
-<button id={id} type={type} class={`btn ${checkButtonStyle} ${className}`} data-url={url}>
+<button type={type} class={`btn ${checkButtonStyle} ${className}`} data-url={url}>
     <slot />
 </button>
-
-<script type="module" src="/scripts/buttonClick.js"></script>

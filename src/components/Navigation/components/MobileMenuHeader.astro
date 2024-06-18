@@ -1,0 +1,34 @@
+---
+import Button from '../../Button.astro';
+---
+
+<div class="mobile-menu-header">
+    <Button buttonStyle="btn--secondary--outline" url="/orarend">ÓRAREND</Button>
+    <Button buttonStyle="btn--secondary--outline" url="/astanga-mysore-program">MYSORE-PROGRAM</Button>
+</div>
+
+<style>
+    .mobile-menu-header {
+        border-bottom: 1px solid #333;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 28px;
+        position: relative;
+        z-index: 2;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-url]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        });
+    });
+</script>

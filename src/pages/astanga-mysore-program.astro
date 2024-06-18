@@ -20,8 +20,14 @@ const pageTitle = 'Astanga-Mysore program';
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('#btn1')?.addEventListener('click', () => {
-            window.location.href = '/holdnapok';
-        });
+        const button = document.querySelector('#btn1');
+        if (button) {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        }
     });
 </script>
