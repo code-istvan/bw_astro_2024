@@ -1,23 +1,23 @@
-import '../../sass/components/_buttonicon.scss';
+// import '../../sass/components/_buttonicon.scss';
 
-const ButtonIcon = (props) => {
-  const buttonType = props.buttonType;
+// const ButtonIcon = (props) => {
+//   const buttonType = props.buttonType;
 
-  return (
-    <button type={props.type} class={`btn-icon ${props.class}`} style={props.style} onClick={props.onClick}>
-      {buttonType === 'icon-text' ? (
-        <>
-          <i>{props.icon}</i>
-          <p>{props.text}</p>
-        </>
-      ) : (
-        <>
-          <p>{props.text}</p>
-          <i>{props.icon}</i>
-        </>
-      )}
-    </button>
-  );
-};
+//   return (
+//     <button type={props.type} class={`btn-icon ${props.class}`} style={props.style} onClick={props.onClick}>
+//       {buttonType === 'icon-text' ? (
+//         <>
+//           <i>{props.icon}</i>
+//           <p>{props.text}</p>
+//         </>
+//       ) : (
+//         <>
+//           <p>{props.text}</p>
+//           <i>{props.icon}</i>
+//         </>
+//       )}
+//     </button>
+//   );
+// };
 
-export default ButtonIcon;
+// export default ButtonIcon;
