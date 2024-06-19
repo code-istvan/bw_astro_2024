@@ -44,7 +44,7 @@ const hrefValue = isEnglish ? '/en/' : '/';
     window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         if (header) {
-            header.classList.toggle('scrolling', window.scrollY > 60);
+            header.classList.toggle('scrolling', window.scrollY > 30);
         }
     });
 
