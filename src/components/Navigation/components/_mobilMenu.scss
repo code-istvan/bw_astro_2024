@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 12px 0;
 
     svg {
       margin-right: 8px;
@@ -45,8 +45,9 @@
 
   .mobile-menu__fomenu-items {
     li {
-      padding: 8px 0;
+      padding: 12px 0;
     }
+    padding-bottom: 8px;
   }
 
   .dropdown-menu__content.show {
