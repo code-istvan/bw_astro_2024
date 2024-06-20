@@ -53,6 +53,7 @@ const hrefValue = isEnglish ? '/en/' : '/';
     const mobileMenu = document.getElementById('mobileMenu');
     const desktopMenu = document.getElementById('desktopMenu');
     const languagePicker = document.getElementById('language-picker');
+    const navElement = document.querySelector('nav');
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener('click', function () {
@@ -63,6 +64,13 @@ const hrefValue = isEnglish ? '/en/' : '/';
             }
             mobileMenu?.classList.toggle('open');
             desktopMenu?.classList.toggle('open');
+            if (navElement) {
+                if (hamburgerMenu.classList.contains('hamburger-open')) {
+                    navElement.style.backgroundColor = 'black';
+                } else {
+                    navElement.style.backgroundColor = ''; // visszaállítja az alapértelmezett színt
+                }
+            }
         });
     }
 </script>

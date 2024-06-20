@@ -1,15 +1,28 @@
 @import '/src/sass/global';
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   background-color: transparent;
+  transition:
+    background-color 0.2s ease,
+    transform 0.8s ease;
   z-index: 9999;
 }
 
 header.scrolling {
   background-color: $color-shades-darkGray;
-  transition: background-color 0.5s;
+  .brand-logo {
+    height: 36px;
+    width: 36px;
+  }
+  // .brand-logo-text {
+  //   height: 38px;
+  //   margin-left: 12px;
+  // }
+  // transition: background-color 0.5s;
 }
 
 nav {
@@ -93,7 +106,7 @@ nav {
   height: calc(100vh - 60px);
   position: absolute;
   top: 0;
-  padding-top: 60px;
+  // padding-top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
