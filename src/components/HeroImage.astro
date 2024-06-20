@@ -44,6 +44,7 @@ console.log(desktopImg.rawOptions.height);
 ---
 
 <div class="hero-image">
+    <div class="overlay" />
     <picture>
         <source media="(max-width: 799px)" srcset={mobileImg.src} />
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
@@ -73,6 +74,16 @@ console.log(desktopImg.rawOptions.height);
 </div>
 
 <style define:vars={{ height }}>
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        z-index: -1;
+    }
     .hero-image {
         min-height: var(--height);
         position: relative;
