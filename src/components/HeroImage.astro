@@ -36,15 +36,15 @@ const desktopImg = await getImage({
     height: 550,
 });
 
-const height = desktopImg.rawOptions.height ? `${desktopImg.rawOptions.height}px` : '550px';
+// const height = desktopImg.rawOptions.height ? `${desktopImg.rawOptions.height}px` : '550px';
 
 // const height = desktopImg.height ? `${desktopImg.height}px` : '550px';
 
-console.log(desktopImg.rawOptions.height);
+// console.log(desktopImg.rawOptions.height);
 ---
 
 <div class="hero-image">
-    <div class="overlay" />
+    <!-- <div class="overlay" /> -->
     <picture>
         <source media="(max-width: 799px)" srcset={mobileImg.src} />
         <source media="(min-width: 800px)" srcset={desktopImg.src} />
@@ -73,9 +73,9 @@ console.log(desktopImg.rawOptions.height);
     </div>
 </div>
 
-<style define:vars={{ height }}>
-
-    .overlay {
+<!-- <style define:vars={{ height }}> -->
+<style>
+    /* .overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -83,14 +83,15 @@ console.log(desktopImg.rawOptions.height);
         height: 100%;
         background-color: orange;
         z-index: -1;
-    }
+    } */
     .hero-image {
-        min-height: var(--height);
+        background-color: orange;
+        /* min-height: var(--height); */
         position: relative;
 
-        @media only screen and (max-width: 600px) {
+        /* @media only screen and (max-width: 600px) {
 --height= 1080px
-}
+} */
         img {
             width: 100%;
             height: auto;

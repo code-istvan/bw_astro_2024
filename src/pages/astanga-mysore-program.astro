@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
 import Button from '../components/Button.astro';
+import Counter from '../components/Counter';
 
 const pageTitle = 'Astanga-Mysore program';
 ---
@@ -15,6 +16,7 @@ const pageTitle = 'Astanga-Mysore program';
     </div>
     <div class="row">
         <Button buttonStyle="btn--secondary--outline" url="/holdnapok">Mysore</Button>
+        <Counter client:only="react" language={Astro.currentLocale} />
         <!-- <a href="/holdnapok" class="btn btn--secondary--outline">Mysore</a> -->
     </div>
 </BaseLayout>
