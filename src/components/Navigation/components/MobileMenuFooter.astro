@@ -1,35 +1,8 @@
 ---
-import Button from '../../Button.astro';
+import './_mobilMenu.scss';
 ---
 
-<div class="mobile-menu-footer">
-    <Button buttonStyle="btn--secondary--outline" url="/tanfolyam">TANFOLYAMOK</Button>
-    <Button buttonStyle="btn--secondary--outline" url="/osztondij">ÖSZTÖNDÍJ</Button>
+<div class="mobile-menu mobile-menu--footer">
+    <a href="/tanfolyam" class="btn btn--secondary--outline">TANFOLYAMOK</a>
+    <a href="/osztondij" class="btn btn--secondary--outline">ÖSZTÖNDÍJ</a>
 </div>
-
-<style>
-    .mobile-menu-footer {
-        border-top: 1px solid #333;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding-top: 28px;
-        position: relative;
-        z-index: 2;
-        margin-bottom: 48px;
-    }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('[data-url]').forEach((button) => {
-            button.addEventListener('click', () => {
-                const url = button.getAttribute('data-url');
-                if (url) {
-                    window.location.href = url;
-                }
-            });
-        });
-    });
-</script>

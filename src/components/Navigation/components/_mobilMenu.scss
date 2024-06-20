@@ -72,3 +72,23 @@
   margin-left: 16px;
   margin-right: 4px;
 }
+
+.mobile-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-menu--header {
+  border-bottom: 1px solid #333;
+  padding-bottom: 28px;
+}
+
+.mobile-menu--footer {
+  border-top: 1px solid #333;
+  padding-top: 28px;
+  margin-bottom: 48px;
+}
