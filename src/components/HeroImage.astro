@@ -35,6 +35,12 @@ const desktopImg = await getImage({
     width: 1800,
     height: 550,
 });
+
+const height = desktopImg.rawOptions.height ? `${desktopImg.rawOptions.height}px` : '550px';
+
+// const height = desktopImg.height ? `${desktopImg.height}px` : '550px';
+
+console.log(desktopImg.rawOptions.height);
 ---
 
 <div class="hero-image">
@@ -66,13 +72,19 @@ const desktopImg = await getImage({
     </div>
 </div>
 
-<style>
+<style define:vars={{ height }}>
     .hero-image {
+        min-height: var(--height);
         position: relative;
+
+        @media only screen and (max-width: 600px) {
+--height= 1080px
+}
         img {
             width: 100%;
             height: auto;
         }
+
         .page-name {
             position: absolute;
             bottom: 20px;
