@@ -1,7 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
-import brandLogoUrl from '../images/svg/brand-logo.svg';
 
 interface Props {
     mobileImgUrl: string | ImageMetadata;
@@ -70,11 +69,7 @@ const desktopImg = await getImage({
 <style>
     .hero-image {
         position: relative;
-        /* background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%); */
-        background:
-            urlurl('../images/svg/brand-logo.svg') center center / cover no-repeat,
-            orange;
-        width: 100%;
+        background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
     }
     @media (max-width: 799px) {
         .hero-image {
