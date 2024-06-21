@@ -40,3 +40,19 @@ export const getMenuItemsFomenu = (translatePath, t) => [
   },
   { link: translatePath(`/kapcsolat/`), label: t('kapcsolat') },
 ];
+
+export const getMobileMenuHeader = (translatePath, t) => [
+  { link: translatePath(`/orarend/`), label: t('orarend') },
+  {
+    link: translatePath(`/astanga-mysore-program/`),
+    label: t('mysoreprogram'),
+  },
+];
+
+export const getMobileMenuFooter = (translatePath, t) => [
+  { link: translatePath(`/tanfolyam/`), label: t('tanfolyamok') },
+  {
+    link: translatePath(`/osztondij/`),
+    label: t('osztondij'),
+  },
+];

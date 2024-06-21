@@ -1,8 +1,27 @@
 ---
-import './_mobilMenu.scss';
+import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+import { getMobileMenuFooter, getMobileMenuHeader } from '../data/menuData.js';
+
+const language = Astro.request.url.includes('en') ? 'en' : 'hu';
+const t = useTranslations(language);
+const translatePath = useTranslatedPath(language);
+const mobileMenuHeaderItems = getMobileMenuFooter(translatePath, t);
 ---
 
 <div class="mobile-menu mobile-menu--footer">
-    <a href="/tanfolyam" class="btn btn--secondary--outline">TANFOLYAMOK</a>
-    <a href="/osztondij" class="btn btn--secondary--outline">ÖSZTÖNDÍJ</a>
+    {
+        mobileMenuHeaderItems.map((item) => (
+            <a href={item.link} class="mobile-menu-header__link btn btn--secondary--outline">
+                {item.label}
+            </a>
+        ))
+    }
 </div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+        const language = window.location.href.includes('en') ? 'en' : 'hu';
+        const t = useTranslations(language);
+        const translatePath = useTranslatedPath(language);
+    });
+</script>
