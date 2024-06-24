@@ -1,6 +1,8 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
+import '@fontsource/abril-fatface'; 
+import '@fontsource/abril-fatface/400.css';
 
 interface Props {
     mobileImgUrl: string | ImageMetadata;
@@ -36,40 +38,82 @@ const desktopImg = await getImage({
     height: 550,
 });
 ---
-
-<div class="hero-image" style="--mobile-height: 1080px; --desktop-height: 550px;">
-    <picture>
-        <source media="(max-width: 799px)" srcset={mobileImg.src} />
-        <source media="(min-width: 800px)" srcset={desktopImg.src} />
-        <img src={desktopImg.src} alt={alt} />
-    </picture>
-    <div class={`container ${containerClass}`}>
+<div class="hero-container">
+    <div class="hero-image" style="--mobile-height: 1080px; --desktop-height: 550px;">
+        <picture>
+            <source media="(max-width: 799px)" srcset={mobileImg.src} />
+            <source media="(min-width: 800px)" srcset={desktopImg.src} />
+            <img src={desktopImg.src} alt={alt} />
+        </picture>
+    </div>
+    <div class={` ${containerClass}`}>
         {
+               
             indexHu ? (
+               <div class="container hero-container-text--wrapper">
                 <div class="index-text-hu">
-                    <h1>Az egyetlen kiút befelé vezet</h1>
+                    <h1 class="special-h1">Az egyetlen kiút <br />befelé vezet</h1>
                     <br />
-                    <p>Tradicionális astanga jógaiskola a Paramaguru áldásával</p>
+                    <p class="special-p">Tradicionális astanga jógaiskola <br />a Paramaguru áldásával</p>
+                    <a href="/astanga-mysore-program" class="btn btn--primary--outline mt-20px">Astanga Mysore-program</a>
                 </div>
+            </div>
+        
+
             ) : indexEn ? (
                 <div class="index-text-en">
-                    <h1>The only way OUT is IN</h1>
+                    <h1 class="special-h1">The only way OUT is IN</h1>
                     <br />
-                    <p>Traditional astanga yoga shala with the blessing of Paramaguru</p>
+                    <p class="special-p">Traditional astanga yoga shala with the blessing of Paramaguru</p>
                 </div>
             ) : (
-                <div class="page-name">
+                <div class="container page-name">
                     <h1>{pageName}</h1>
                 </div>
             )
         }
     </div>
+
 </div>
 
+
 <style>
+.hero-container-text--wrapper {
+      position: absolute;
+        top: 80px;
+
+}
+
+.hero-container {
+    position: relative;
+    padding: 0;
+
+}
+
+
+.special-h1 {
+  font-family: $font-family-primary;
+  font-size: 3.4rem; // Change this to the desired font size
+  font-weight: 400; // Change this to the desired font weight
+
+  @include xs {
+    font-size: 3rem;
+  }
+  @include md {
+    font-size: 4rem;
+  }
+  @include xl {
+    font-size: 5rem;
+  }
+}
+.special-p {
+    font-size: 1.8rem;
+}
+
     .hero-image {
         position: relative;
         background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
+;
     }
     @media (max-width: 799px) {
         .hero-image {
@@ -91,13 +135,16 @@ const desktopImg = await getImage({
         position: absolute;
         bottom: 20px;
     }
-    .index-text-hu,
-    .index-text-en {
-        position: absolute;
-        top: 80px;
-    }
-    .index-text-hu h1,
-    .index-text-en h1 {
-        font-size: 4rem;
+    
+
+    @media (max-width: 769px) {  
+            
+            .index-text-hu a,
+            .index-text-en a {
+            /* display: inline-block;
+            width: 100%; */
+            }
+
+      
     }
 </style>
