@@ -1,15 +1,15 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
 .section--parampara {
   .container-fluid {
     background-color: $color-shades-darkGray;
   }
 
-  @media only screen and (min-width: 1px) and (max-width: 576px) {
-    .btn {
-      width: 100%;
-    }
-  }
+  // @media only screen and (min-width: 1px) and (max-width: 576px) {
+  //   .btn {
+  //     width: 100%;
+  //   }
+  // }
 }
 
 .section--parampara--wapper {
@@ -25,12 +25,17 @@
 
   @include xs {
     order: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   @include md {
     order: 1;
     .gatsby-image-wrapper img {
-      width: 220px;
+      width: 330px;
+      height: auto;
       margin-left: 16px;
     }
   }
