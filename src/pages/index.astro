@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/hero_mobil.jpeg';
 import desktopImage from '../images/hero_desktop.jpg';
+import Parampara from '../components/Sections/SectionParampara.astro';
 const pageTitle = 'Welcome to Bandha Works';
 
 // const isHomePage = true;
@@ -10,6 +11,7 @@ const pageTitle = 'Welcome to Bandha Works';
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexHu={true} />
+    <Parampara />
     <div class="container">
         <div class="row"><h1>Üdvözlet a honlapunkon</h1></div>
         <div class="row"><p>A honlap fejlesztés alatt van</p></div>

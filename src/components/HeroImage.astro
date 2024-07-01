@@ -38,6 +38,9 @@ const desktopImg = await getImage({
     height: 550,
 });
 ---
+
+
+
 <div class="hero-container">
     <div class="hero-image" style="--mobile-height: 1080px; --desktop-height: 550px;">
         <picture>
@@ -46,7 +49,7 @@ const desktopImg = await getImage({
             <img src={desktopImg.src} alt={alt} />
         </picture>
     </div>
-    <div class={` ${containerClass}`}>
+    <div class={`container ${containerClass}`}>
         {
                
             indexHu ? (
@@ -55,7 +58,7 @@ const desktopImg = await getImage({
                     <h1 class="special-h1">Az egyetlen kiút <br />befelé vezet</h1>
                     <br />
                     <p class="special-p">Tradicionális astanga jógaiskola <br />a Paramaguru áldásával</p>
-                    <a href="/astanga-mysore-program" class="btn btn--primary--outline mt-20px">Astanga Mysore-program</a>
+                    <a href="/astanga-mysore-program" class="btn btn--full-width-mobile btn--primary--outline mt-20px">Astanga Mysore-program</a>
                 </div>
             </div>
         
@@ -107,7 +110,7 @@ const desktopImg = await getImage({
   }
 }
 .special-p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
     .hero-image {

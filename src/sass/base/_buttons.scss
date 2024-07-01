@@ -11,21 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: fit-content;
-  // width: 100%;
+  width: fit-content;
 }
 
-// @media only screen and (min-width: 1px) and (max-width: 768px) {
-//   .btn {
-//     width: 100%;
-//   }
-// }
-
-// .btn:hover {
-//   transform: translateY(0px);
-//   background-color: $color-brand-orange;
-//   color: $color-shades-black;
-// }
+.btn--full-width-mobile {
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
 
 .btn--plain--naked {
   background-color: transparent;
