@@ -11,7 +11,7 @@ interface Props {
     pageName?: string;
     indexHu?: boolean;
     indexEn?: boolean;
-
+    containerClass?: string;
 }
 
 const {
@@ -21,6 +21,7 @@ const {
     pageName,
     indexHu = false,
     indexEn = false,
+    containerClass = '',
 } = Astro.props;
 
 const mobileImg = await getImage({
@@ -38,7 +39,7 @@ const desktopImg = await getImage({
 });
 ---
 
-<div class="container hero-container">
+<div class={`container hero-container ${containerClass}`}>
     <h1 class="page-name">{pageName}</h1>
     <div class="hero-image container-fluid" style="--mobile-height: 1080px; --desktop-height: 550px;">
         <picture>
