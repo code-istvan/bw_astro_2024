@@ -107,7 +107,7 @@ const desktopImg = await getImage({
 
     .hero-image {
         position: relative;
-        background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
+        /* background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%); */
 ;
     }
     @media (max-width: 799px) {
@@ -117,7 +117,8 @@ const desktopImg = await getImage({
     }
     @media (min-width: 800px) {
         .hero-image {
-            height: var(--desktop-height);
+            height: auto;
+            aspect-ratio: 1800 / 550; 
         }
     }
     picture,
