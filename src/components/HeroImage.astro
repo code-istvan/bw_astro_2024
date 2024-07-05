@@ -11,7 +11,7 @@ interface Props {
     pageName?: string;
     indexHu?: boolean;
     indexEn?: boolean;
-    containerClass?: string;
+
 }
 
 const {
@@ -21,7 +21,6 @@ const {
     pageName,
     indexHu = false,
     indexEn = false,
-    containerClass = '',
 } = Astro.props;
 
 const mobileImg = await getImage({
@@ -39,17 +38,15 @@ const desktopImg = await getImage({
 });
 ---
 
-
-
-<div class="hero-container">
-    <div class="hero-image" style="--mobile-height: 1080px; --desktop-height: 550px;">
+<div class="container hero-container">
+    <h1 class="page-name">{pageName}</h1>
+    <div class="hero-image container-fluid" style="--mobile-height: 1080px; --desktop-height: 550px;">
         <picture>
             <source media="(max-width: 799px)" srcset={mobileImg.src} />
             <source media="(min-width: 800px)" srcset={desktopImg.src} />
             <img src={desktopImg.src} alt={alt} />
         </picture>
     </div>
-    <div class={`container ${containerClass}`}>
         {
                
             indexHu ? (
@@ -69,13 +66,9 @@ const desktopImg = await getImage({
                     <br />
                     <p class="special-p">Traditional astanga yoga shala with the blessing of Paramaguru</p>
                 </div>
-            ) : (
-                <div class="container page-name">
-                    <h1>{pageName}</h1>
-                </div>
-            )
+            ) : null
         }
-    </div>
+
 
 </div>
 
@@ -89,8 +82,6 @@ const desktopImg = await getImage({
 
 .hero-container {
     position: relative;
-    padding: 0;
-
 }
 
 
@@ -134,20 +125,10 @@ const desktopImg = await getImage({
         height: 100%;
         object-fit: cover;
     }
+    
     .page-name {
         position: absolute;
         bottom: 20px;
-    }
-    
-
-    @media (max-width: 769px) {  
-            
-            .index-text-hu a,
-            .index-text-en a {
-            /* display: inline-block;
-            width: 100%; */
-            }
-
-      
+        z-index: 1;
     }
 </style>
