@@ -1,11 +1,5 @@
 @import '/src/sass/global';
 
-// .section--parampara {
-//   .container-fluid {
-//     background-color: $color-shades-darkGray;
-//   }
-// }
-
 .section--parampara--wapper {
   @include xl {
     padding-block: 56px;
@@ -19,25 +13,28 @@
 
   @include xs {
     order: 0;
-    // img {
-    //   width: 100%;
-    //   height: auto;
-    // }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   @include md {
     order: 1;
-    // .gatsby-image-wrapper img {
-    //   width: 330px;
-    //   height: auto;
-    //   margin-left: 16px;
-    // }
+
+    img {
+      width: 220px;
+      height: 220px;
+    }
   }
 
   @include xl {
-    // .gatsby-image-wrapper img {
-    //   width: 380px;
-    // }
+    img {
+      width: 380px;
+      height: 380px;
+    }
   }
 }
 
@@ -52,7 +49,7 @@
   }
 
   @include md {
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }

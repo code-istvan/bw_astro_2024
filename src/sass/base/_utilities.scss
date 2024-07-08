@@ -8,6 +8,15 @@
   display: none;
 }
 
+.full-width-mobile {
+  @media (max-width: 768px) {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
 .unordered-list-style {
   ul {
     list-style: none;
