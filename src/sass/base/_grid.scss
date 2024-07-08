@@ -58,19 +58,19 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   margin-right: -50vw;
 }
 
-.container--tight-desktop {
-  @media only screen and (min-width: 992px) {
-    width: 670px;
-    margin: 0 auto;
-  }
-}
-
 .container-fluid-right {
   width: 100vw;
   position: relative;
   left: 0;
   right: 50%;
   margin-right: -50vw;
+}
+
+.container--tight-desktop {
+  @media only screen and (min-width: 992px) {
+    width: 670px;
+    margin: 0 auto;
+  }
 }
 
 .row {
