@@ -7,10 +7,17 @@ html {
   }
 }
 
+html,
 body {
   background-color: $primary-background-color;
   color: $color-shades-white;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari és Opera */
+  }
 }
 
 strong {

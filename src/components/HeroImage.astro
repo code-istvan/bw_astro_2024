@@ -53,16 +53,20 @@ const desktopImg = await getImage({
         {
                
             indexHu ? (
-               <div class="container hero-container-text--wrapper">
+               <div class="hero-container-text--wrapper">
+                <div class="container">
+
+              
                 <div class="index-text-hu">
                     <h1 class="special-h1">Az egyetlen kiút <br />befelé vezet</h1>
                     <br />
                     <p class="special-p">Tradicionális astanga jógaiskola <br />a Paramaguru áldásával</p>
                     <a href="/astanga-mysore-program" class="btn btn--full-width-mobile btn--primary--outline mt-20px">Astanga Mysore-program</a>
                 </div>
+              </div>
             </div>
         
-
+       
             ) : indexEn ? (
                 <div class="index-text-en">
                     <h1 class="special-h1">The only way OUT is IN</h1>
@@ -80,7 +84,8 @@ const desktopImg = await getImage({
 .hero-container-text--wrapper {
       position: absolute;
         top: 80px;
-
+        left: 0;
+        right: 0;
 }
 
 .hero-container {

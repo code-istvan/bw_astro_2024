@@ -32,7 +32,7 @@ nav {
   justify-content: space-between;
   z-index: 9999;
   div:nth-child(2) {
-    margin-right: 8px;
+    margin-right: 10px;
     margin-left: 16px;
   }
 }
@@ -41,7 +41,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 16px;
+  margin-left: 20px;
   cursor: pointer;
 
   .brand-logo {
