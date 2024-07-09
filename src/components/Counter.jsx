@@ -61,12 +61,20 @@ export default function Counter({ language = 'eng' }) {
   };
 
   return (
-    // <Tag className={`counter--wrapper ${className}`}>
     <>
-      <span className="counter--no-wrap heading heading--3">{renderText(years, 'years')}</span>
-      {months !== 0 && <span className="counter--no-wrap heading heading--3">, {renderText(months, 'months')}</span>}
-      {days !== 0 && <span className="counter--no-wrap heading heading--3">, {renderText(days, 'days')}</span>}
+      <span className="counter--no-wrap heading heading--3 font-weight-400 clr-brand-orange">
+        {renderText(years, 'years')}
+      </span>
+      {months !== 0 && (
+        <span className="counter--no-wrap heading heading--3 font-weight-400 clr-brand-orange">
+          , {renderText(months, 'months')}
+        </span>
+      )}
+      {days !== 0 && (
+        <span className="counter--no-wrap heading heading--3 font-weight-400 clr-brand-orange">
+          , {renderText(days, 'days')}
+        </span>
+      )}
     </>
-    // </Tag>
   );
 }

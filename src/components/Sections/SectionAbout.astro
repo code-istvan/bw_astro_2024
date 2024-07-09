@@ -1,5 +1,6 @@
 ---
 import Icons from '../Icons.astro';
+import Counter from '../../components/Counter';
 ---
 
 <section class="section--about">
@@ -17,22 +18,56 @@ import Icons from '../Icons.astro';
                 <a href="/rolunk" class="btn btn--full-width-mobile btn--primary--outline mt-20px">
                     Tudj meg többet rólunk
                 </a>
+                <div class="section--rolunk--tradicio island-section--gray-border island-section--gray-border mt-20px">
+                    <div class="section--rolunk--wrapper">
+                        <h3 class="mb-20px font-family-primary">TRADÍCIÓ</h3>
+                        <div class="mb-20px"><Counter client:only="react" language={Astro.currentLocale} /></div>
+                        <p class="mb-20px">
+                            Magyarország legrégebbi <br />astanga Mysore-programja<br />
+                            <strong>Paramaguru Sharath Jois</strong> áldásával
+                        </p>
+                        <Icons name="SharatJiHandWriting" class="max-width-150" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<style>
+<style lang="scss">
+    @import '/src/sass/global';
     .section--about-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         p {
             max-width: 600px;
         }
 
         svg {
-            max-width: 300px;
+            width: 300px;
+        }
+    }
+    .section--rolunk--wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+
+        h3 {
+            font-family: $font-family-primary;
+        }
+        p {
+            width: fit-content;
+            text-align: center;
+        }
+
+        @include xs {
+            p {
+                margin-left: 12px;
+                margin-right: 12px;
+            }
         }
     }
 </style>
