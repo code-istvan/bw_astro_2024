@@ -1,0 +1,36 @@
+@import '/src/sass/global';
+
+.section--about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    max-width: 600px;
+  }
+
+  svg {
+    width: 300px;
+  }
+}
+.section--rolunk--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+
+  h3 {
+    font-family: $font-family-primary;
+  }
+  p {
+    width: fit-content;
+    text-align: center;
+  }
+
+  @include xs {
+    p {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}
