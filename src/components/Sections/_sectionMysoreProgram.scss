@@ -1,0 +1,55 @@
+@import '/src/sass/global';
+
+.section--mysore-program--wapper {
+  @include xl {
+    padding-block: 56px;
+  }
+}
+
+.section--mysore-program--image {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+
+  @include xs {
+    // order: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @include md {
+    // order: 1;
+
+    img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  @include xl {
+    img {
+      width: 380px;
+      height: 380px;
+    }
+  }
+}
+
+.section--mysore-program-text {
+  max-width: 732px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include xs {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  @include md {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
