@@ -66,9 +66,18 @@
   text-align: center;
 }
 
+// Island section starts
 .island-section--gray-border {
-  border: solid 2px $color-shades-lightBlack;
+  background-color: $color-shades-darkGray;
 }
+
+@media screen and (min-width: 360px) {
+  .island-section--gray-border {
+    background-color: initial;
+    border: solid 2px $color-shades-lightBlack;
+  }
+}
+// Island section ends
 
 .max-width-150 {
   max-width: 150px;
