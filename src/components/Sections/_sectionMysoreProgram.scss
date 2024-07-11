@@ -12,8 +12,6 @@
   z-index: 2;
 
   @include xs {
-    // order: 0;
-
     img {
       width: 100%;
       height: auto;
@@ -22,18 +20,30 @@
   }
 
   @include md {
-    // order: 1;
-
     img {
-      width: 220px;
-      height: 220px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @include lg {
+    img {
+      width: 260px;
+      height: 260px;
     }
   }
 
   @include xl {
     img {
-      width: 380px;
-      height: 380px;
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  @include xxl {
+    img {
+      width: 360px;
+      height: 360px;
     }
   }
 }

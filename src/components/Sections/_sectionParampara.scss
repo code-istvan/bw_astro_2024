@@ -25,15 +25,37 @@
     order: 1;
 
     img {
-      width: 220px;
-      height: 220px;
+      width: 200px;
+      height: 200px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+  }
+
+  @include lg {
+    img {
+      width: 260px;
+      height: 260px;
+      margin-top: 36px;
+      margin-bottom: 36px;
     }
   }
 
   @include xl {
     img {
-      width: 380px;
-      height: 380px;
+      width: 320px;
+      height: 320px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include xxl {
+    img {
+      width: 360px;
+      height: 360px;
+      margin-top: 44px;
+      margin-bottom: 44px;
     }
   }
 }
