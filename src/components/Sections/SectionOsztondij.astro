@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import Osztondij from '../../images/osztondij_background.jpg';
+import './_sectionOsztondij.scss';
+---
+
+<section class="section--osztondij mt-40px">
+    <div class="section--osztondij--background">
+        <Image src={Osztondij} alt="Bandha Works Jógaiskola Ösztöndíj" />
+    </div>
+    <div class="container section--osztondij--wrapper text-center">
+        <h2 class="mb-20px section--osztondij--header heading heading--1">Jóga ösztöndíj</h2>
+        <div class="mt-20px section--osztondij--text">
+            <p>
+                A jóga mindenki életében gyökeres változásokat hozhat, gyakorlását bármely élethelyzetben érdemes
+                elkezdeni. Előfordulhat azonban, hogy anyagi körülményeink nem teszik lehetővé hogy tapasztalt és
+                hiteles jógatanároktól tanulhassunk. A Bandha Works Ösztöndíj éppen az ilyen helyzetekben nyújthat
+                segítséget, jógaiskolánk a nyertesnek három hónapra korlátlan Mysore-jógabérletet biztosít.
+            </p>
+        </div>
+        <div class="btn-wrapper btn--full-width-mobile mt-20px">
+            <a href="/osztondij" class="btn btn--full-width-mobile btn--primary--outline">Jóga ösztöndíj</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section--osztondij {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        @include xs {
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+    }
+
+    .section--osztondij--background {
+        position: absolute;
+        /* top: 0;
+        left: 0; */
+        width: 670px;
+        height: 100%;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section--osztondij--text {
+        max-width: 600px;
+    }
+
+    .section--osztondij--wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+
+        @include xs {
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
