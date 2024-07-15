@@ -3,13 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage.astro';
 import mobileImage from '../../images/hero_mobil.jpeg';
 import desktopImage from '../../images/hero_desktop.jpg';
+import Parampara from '../../components/Sections/SectionParampara.astro';
 const pageTitle = 'Welcome to Bandha Works';
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexEn={true} />
+    <Parampara />
     <div class="container">
         <div class="row"><h1>Welcome to Bandha Land</h1></div>
+
         <div class="row"><p>The site is under development.</p></div>
         <div class="row"><p>Here you can find our UI library.</p></div>
         <div class="row mb-40px">

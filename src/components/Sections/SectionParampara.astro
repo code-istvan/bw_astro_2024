@@ -1,7 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import sharathJi from '../../images/sharath_ji_bw.jpg';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import './_sectionParampara.scss';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="section--parampara bg-shades-darkGray mt-40px">
@@ -13,13 +17,10 @@ import './_sectionParampara.scss';
             <div class="col-12-xs col-8-md section--parampara-text">
                 <h2 class="mb-20px heading heading--1 text-align-left">Bandha Works Parampara</h2>
                 <p>
-                    A parampara a tudás, amelyet a tanár a tanítványára hagyományoz. A parampara szanszkrit szó
-                    jelentése a tudás átadásának legértékesebb formáját, a közvetlen és tapasztalati tudás átadását
-                    fejezi ki. A jógatanításnak a paramparaból kell származnia ahhoz, hogy hatékony, igaz és teljes
-                    legyen.
+                    {t('paramparaText')}
                 </p>
                 <a href="/parampara" class="btn btn--full-width-mobile btn--primary--outline mt-20px">
-                    Tanítói láncolatunk
+                    {t('paramparaButton')}
                 </a>
             </div>
         </div>
