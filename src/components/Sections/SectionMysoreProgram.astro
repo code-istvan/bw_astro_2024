@@ -1,7 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import mysoreProgram from '../../images/mysore_program_bw.jpg';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import './_sectionMysoreProgram.scss';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="section--mysore-program mt-40px">
@@ -11,14 +15,12 @@ import './_sectionMysoreProgram.scss';
                 <Image src={mysoreProgram} alt="Ashtanga Mysore Program" />
             </div>
             <div class="col-12-xs col-8-md section--mysore-program-text">
-                <h2 class="mb-20px heading heading--1 text-align-left">Astanga Mysore-program</h2>
+                <h2 class="mb-20px heading heading--1 text-align-left">{t('sectionMysoreProgramTitle')}</h2>
                 <p>
-                    A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt,
-                    rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány
-                    kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.
+                    {t('sectionMysoreProgramText')}
                 </p>
                 <a href="/parampara" class="btn btn--full-width-mobile btn--primary--outline mt-20px">
-                    Mysore-programról bővebben
+                    {t('sectionMysoreProgramButton')}
                 </a>
             </div>
         </div>
