@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
 .guest-teachers-mobil {
   width: 100%;
@@ -33,13 +33,13 @@
 }
 
 @media screen and (min-width: 870px) {
-  .guest-teachers-mobil {
+  .guest-teachers-container-mobil {
     display: none;
   }
 }
 
 @media screen and (max-width: 871px) {
-  .guest-teachers-desktop {
+  .guest-teachers-container-desktop {
     display: none;
   }
 }

@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/rolunk_mobil.jpeg';
 import desktopImage from '../images/rolunk_desktop.jpeg';
+import fireCeremony from '../images/fire_ceremony.jpeg';
 import NameCard from '../components/NameCard.astro';
 import '../sass/pages/_rolunk.scss';
 
@@ -100,28 +102,85 @@ const guestTeachers = [
                 tanárt láthattunk vendégül az évek során:
             </p>
         </div>
-        <div class="guest-teachers-container-mobil">
-            <div class="guest-teachers-mobil">
-                {guestTeachers[0].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+        <div class="row container--tight-desktop">
+            <div class="guest-teachers-container-mobil">
+                <div class="guest-teachers-mobil">
+                    {guestTeachers[0].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+                </div>
+                <div class="guest-teachers-mobil">
+                    {guestTeachers[1].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+                </div>
+                <div class="guest-teachers-mobil">
+                    {guestTeachers[2].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+                </div>
             </div>
-            <div class="guest-teachers-mobil">
-                {guestTeachers[1].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+            <div class="guest-teachers-container-desktop">
+                <div class="guest-teachers-desktop">
+                    {
+                        guestTeachers
+                            .flat()
+                            .map((person, index) => <NameCard name={person.name} country={person.country} />)
+                    }
+                </div>
             </div>
-            <div class="guest-teachers-mobil">
-                {guestTeachers[2].map((person, index) => <NameCard name={person.name} country={person.country} />)}
-            </div>
+        </div>
+        <div class="separator-horizontal mt-40px"></div>
+        <div class="row container--tight-desktop">
+            <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">2018. április 18.</h3>
+            <p class="mb-20px">
+                Az új jógaiskolánk felszentelésénél abban a különleges áldásban részesültünk, hogy az ünnepségen a <strong
+                >
+                    Jois
+                </strong> család is tiszteletét tette,
+                <strong class="clr-brand-orange">R. Saraswathi Jois</strong>
+                személyében.
+            </p>
+            <Image src={fireCeremony} alt="Fire Ceremony in Bandha Works" class="container" height="150" />
+
+            <!-- <StaticImage
+              className="container"
+              src="../images/fire_ceremony.jpeg"
+              layout="fullWidth"
+              loading="lazy"
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Astanga jóga Mysore"
+              placeholder="blurred"
+            /> -->
+            <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Kiadványaink</h3>
+            <p class="mb-20px">
+                2019-ben, majd 2020-ban az a hatalmas megtiszteltetés ért minket, hogy <strong>
+                    Paramaguru R. Sharath Jois
+                </strong>{' '}
+                <!-- <CustomLink
+                link="https://shop.bandha.works/collections/konyvek"
+                title="két művét"
+                classNames="link-decoration-remove"
+              />{" "} -->
+                is kiadhattuk magyar nyelven, alapítványunk, a{' '}
+                <!-- <CustomLink
+                link="https://nyolcag.hu/"
+                title="Nyolcágú Jóga
+              Alapítvány"
+                classNames="link-decoration-remove"
+              />{" "} -->
+                gondozásában. Ezen túl még Eddie Stern bestseller{' '}
+                <!-- <CustomLink
+                link="https://shop.bandha.works/products/eddie-stern-egy-egyszeru-modszer"
+                title="astanga
+                könyvének"
+                classNames="link-decoration-remove"
+              />{" "} -->
+                - 2022. áprilisában megjelent - magyar nyelvű kiadása is alapítványunkhoz fűződik. <br />
+                <br /> Legújabb kiadványunk Szvámi Prabhavananda és Christopher Isherwood:{' '}
+                <!-- <CustomLink
+                link="https://shop.bandha.works/products/isten-megismerese-patandzsali-jogaaforizmai"
+                title="Isten megismerése –
+                Patandzsali jógaaforizmái"
+                classNames="link-decoration-remove"
+              />{" "} -->
+                című művének magyar nyelvű fordítása (2023. december).
+            </p>
         </div>
     </div>
 </BaseLayout>
-
-<style lang="scss">
-    @import '../sass/global.scss';
-    .guest-teachers-container-mobil {
-        background-color: $color-brand-orange;
-        overflow-x: auto;
-        div:nth-child(1),
-        div:nth-child(2) {
-            margin-bottom: 8px;
-        }
-    }
-</style>
