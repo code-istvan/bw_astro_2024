@@ -178,3 +178,8 @@
   background-color: $color-shades-lightGray;
   color: $color-shades-black;
 }
+
+.center-button {
+  display: flex;
+  justify-content: center;
+}

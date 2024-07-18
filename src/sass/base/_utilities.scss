@@ -79,10 +79,51 @@
 }
 // Island section ends
 
+.island-section {
+  background-color: $color-shades-darkGray;
+  padding: 32px 20px;
+  margin: 20px 0;
+}
+
 .max-width-150 {
   max-width: 150px;
 }
 
 .font-weight-400 {
   font-weight: 400;
+}
+
+// Text link design START
+.link-enhanced {
+  color: $color-brand-orange;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-enhanced:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+.link-enhanced:hover::after {
+  font-size: 0.8em;
+}
+// Text link design END
+
+.separator-horizontal-full {
+  padding: 0;
+  border: none;
+
+  &::before {
+    // full-width divider
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    max-width: 100%;
+    width: 100%;
+    border-top: 1px solid $color-shades-lightBlack;
+  }
 }

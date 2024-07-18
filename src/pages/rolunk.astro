@@ -3,15 +3,125 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/rolunk_mobil.jpeg';
 import desktopImage from '../images/rolunk_desktop.jpeg';
+import NameCard from '../components/NameCard.astro';
+import '../sass/pages/_rolunk.scss';
 
 const pageTitle = 'Rólunk';
+
+const guestTeachers = [
+    [
+        { name: 'Harmony Slater', country: 'CDN' },
+        { name: 'Lucia Andrade', country: 'BRA' },
+        { name: 'David Robson', country: 'CDN' },
+        { name: 'Russel Case', country: 'USA' },
+    ],
+    [
+        { name: 'Lakshmisha Bhat', country: 'IND' },
+        { name: 'Laruga Glaser', country: 'USA' },
+        { name: 'Santina Giardina-Chard', country: 'AUS' },
+        { name: 'Govinda Kai', country: 'USA' },
+    ],
+    [
+        { name: 'R. Saraswathi Jois', country: 'IND' },
+        { name: 'Andréa Drottholm', country: 'S' },
+        { name: 'Sharmila Mahesh', country: 'IND' },
+        { name: 'Dr. Norman Sjoman', country: 'CDN' },
+    ],
+];
 ---
 
 <BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+        <div class="row container--tight-desktop mt-40px">
+            <h3 class="font-family-primary clr-brand-orange">
+                A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy a
+                tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon.
+            </h3>
+            <p class="mt-20px mb-20px">
+                Több mint tíz év elteltével a helyzet mit sem változott, oktatóink elkötelezett gyakorlói az
+                irányzatnak, és rendszeresen, az astanga jóga fővárosába, a dél-indiai Mysore-ba utaznak, hogy a{' '}
+                <strong>paramparából</strong>
+                (tanítói láncolatból) merítve, tovább mélyítsék tudásuk, megértésük.
+            </p>
+
+            <div class="island-section text-center rolunk-parampara">
+                <h3 class="mb-20px clr-brand-orange font-family-primary">
+                    <strong>PARAMPARA</strong>
+                </h3>
+                <p>
+                    A parampara a tudás, amelyet a tanár a tanítványára hagyományoz. A parampara szanszkrit szó
+                    jelentése a tudás átadásának legértékesebb formáját, a közvetlen és tapasztalati tudás átadását
+                    fejezi ki. Ez minden tanítói láncolat alapja: az évezredes tanítás megőrzésének láncolatában a tanár
+                    és tanítványa a láncszemek.
+                </p>
+                <div>
+                    <div class="center-button">
+                        <a href="/parampara" class="btn btn--full-width-mobile btn--third--naked-orange mt-20px">
+                            Paramparáról bővebben
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Tradicionális astanga jóga</h3>
+            <p class="mb-20px">
+                A jógaiskolában tradicionális <a href="/vinyasza-jogairanyzatok" class="link-enhanced">
+                    astanga vinyásza jógát
+                </a> és <a href="/vinyasza-jogairanyzatok" class="link-enhanced">vinyásza krama</a> jógát oktatunk. A Bandha
+                Works specialitása a Magyarországon egyedülálló múltú reggeli{' '}
+                <a href="/astanga-mysore-program" class="link-enhanced">astanga Mysore-program,</a>
+                {''} az astanga jóga tanításának eredeti és leghatékonyabb formája. Programunkban, rendszeresen látunk vendégül
+                nemzetközileg is elismert külföldi astanga jóga tanárokat, akik tovább növelik intézményünkben az oktatás
+                színvonalát.
+            </p>
+            <p class="mb-20px">
+                Azok számára pedig, akik még csak most kezdenek ismerkedni ezzel az irányzattal, rendszeresen indítunk
+                <a href="/astanga-kezdo-tanfolyam" class="link-enhanced">astanga kezdő tanfolyamot</a>, illetőleg
+                <a href="/astanga-mysore-kurzus" class="link-enhanced">Mysore-gyakorlásra</a> felkészítő kurzust.
+            </p>
+            <p class="mb-20px">
+                Az ászanák oktatásán túl nagy hangsúlyt fektetünk a jógafilozófia és a jógikus életmód megismertetésére.
+                A havonta megrendezésre kerülő ingyenes astanga konferenciákon kötetlen beszélgetés formájában
+                foglalkozunk a jóga elméletével és a tudatos életmóddal. Itt mindenki felteheti a felmerülő kérdéseit,
+                és jó alkalom arra is, hogy a gyakorlótársak jobban megismerjék egymást.
+            </p>
+        </div>
+        <div class="separator-horizontal-full mt-20px mb-20px"></div>
+        <div class="row container--tight-desktop">
+            <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Első évtizedünk</h3>
+            <p class="mb-20px">
+                Abban a nagy megtiszteltetésben volt részünk, hogy rengeteg nemzetközileg is elismert astanga jóga
+                tanárt láthattunk vendégül az évek során:
+            </p>
+        </div>
+        <div class="guest-teachers-container-mobil">
+            <div class="guest-teachers-mobil">
+                {guestTeachers[0].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+            </div>
+            <div class="guest-teachers-mobil">
+                {guestTeachers[1].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+            </div>
+            <div class="guest-teachers-mobil">
+                {guestTeachers[2].map((person, index) => <NameCard name={person.name} country={person.country} />)}
+            </div>
+        </div>
     </div>
 </BaseLayout>
 
-<style></style>
+<style lang="scss">
+    @import '../sass/global.scss';
+    .guest-teachers-container-mobil {
+        background-color: $color-brand-orange;
+        overflow-x: auto;
+        div:nth-child(1),
+        div:nth-child(2) {
+            margin-bottom: 8px;
+        }
+    }
+</style>
