@@ -1,6 +1,6 @@
 ---
-import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
 import { getMobileMenuHeader } from '../data/menuData.js';
+import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
 
 const language = Astro.request.url.includes('en') ? 'en' : 'hu';
 const t = useTranslations(language);
@@ -18,8 +18,8 @@ const mobileMenuHeaderItems = getMobileMenuHeader(translatePath, t);
     }
 </div>
 
-<script is:inline>
-    import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+<script type="module" is:inline>
+    import { useTranslations, useTranslatedPath } from '/src/i18n/utils.js';
 
     document.addEventListener('DOMContentLoaded', () => {
         const language = window.location.href.includes('en') ? 'en' : 'hu';
