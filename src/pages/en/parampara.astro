@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage.astro';
+import mobileImage from '../../images/parampara_mobil.jpg';
+import desktopImage from '../../images/parampara_desktop.jpg';
+
+const pageTitle = 'Parampara';
+---
+
+<BaseLayout title={pageTitle}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row">
+            <h2 class="mt-40px heading heading--1 text-align-left mb-0px">
+                <span class="clr-brand-orange heading heading--1">Our lineage:</span>{' '}
+                R. Sharath Jois – K. Pattabhi Jois – T. Krishnamacharya – Ramamohana Brahmachari… ...Patanjali
+            </h2>
+        </div>
+        <p class="mt-20px">
+            Parampara is the knowledge that the teacher passes on to the student. The Sanskrit word parampara expresses
+            the most valuable form of knowledge transmission, the transmission of direct and experiential knowledge. It
+            is the basis of all teaching chains: in the chain of preservation of thousands of years of teaching, the
+            teacher and his student are the links. Yogic teaching must come from the parampara to be effective, true and
+            complete. The parampara ensures that the teaching of yoga is effective, true and complete.
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mt-20px">The path of the student</h3>
+        <p class="mt-20px">
+            Knowledge can only be transmitted after the student has spent years with an experienced guru, a teacher to
+            whom the student has fully surrendered his body, mind, speech and inner being. Only then does the student
+            become capable of receiving the knowledge. The transfer of knowledge between teacher and student in this way
+            is parampara.
+        </p>
+        <p class="mt-20px">
+            The student's dharma, or duty, is devotional practice and to strive to understand the guru's teachings. The
+            perfection of knowledge - and of yoga - is more than simply learning to practice; knowledge comes from the
+            mutual love and respect between student and teacher, and the cultivation of this relationship inevitably
+            takes time.
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mt-20px">The relationship between student and teacher</h3>
+        <p class="mt-20px">
+            It is the duty of the teacher to teach yoga exactly as taught by the guru, with a good heart and noble
+            intention, for a good purpose. There should not be even a spark of ill intention in the teaching. The
+            teacher should not mislead his student in any way and should not deviate from what he himself has been
+            taught.
+        </p>
+        <p class="mt-20px">
+            The bond between teacher and student, which is the basis of a rich spiritual heritage, has a
+            thousand-year-old tradition in India. A teacher can strengthen his students - make them strong when they
+            falter. A teacher is like a father or a mother who is present and attentive to every spiritual step of his
+            student.
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mt-20px">The tradition and importance of parampara</h3>
+        <p class="mt-20px">
+            The teaching of yoga is preserved in many ancient teaching traditions, however, today some are trying to
+            create new chains of teachers and prefer new ways of teaching, condemning or changing the Guru's parampara.
+            Conversely, to surrender to the parampara is to merge into a stream of teachings that goes back thousands of
+            years, a stream of knowledge that has been maintained by ancient masters and has gathered into an ocean of
+            knowledge. But not all rivers reach the ocean, so we must be careful that the tradition we follow is true
+            and selfless.
+        </p>
+        <p class="mt-20px">
+            Many people want to reach the summit of the Himalayas, but not everyone succeeds. However, through courage
+            and self-surrender, and by the grace of the Guru, who is the possessor of knowledge and who works tirelessly
+            for his disciples, we can reach the peaks of knowledge.
+        </p>
+    </div>
+</BaseLayout>
+
+<style></style>
