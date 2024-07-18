@@ -127,6 +127,23 @@ const desktopImg = await getImage({
     width: 100%;
   }
 
+  .hero-image {
+        position: relative;
+        background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
+;
+    }
+    @media (max-width: 799px) {
+        .hero-image {
+            height: 100vw;
+        }
+    }
+    @media (min-width: 800px) {
+        .hero-image {
+            height: auto;
+            aspect-ratio: 1800 / 550; 
+        }}
+
+
 
 
  @media (max-width: 799px) {
