@@ -1,25 +1,18 @@
 ---
 import './_carousel.scss';
+
+export interface CarouselProps {
+    name?: string;
+    text?: string;
+}
+
+const { name, text }: CarouselProps = Astro.props;
 ---
 
 <section class="embla">
     <div class="embla__viewport">
         <div class="embla__container">
-            <div class="embla__slide">
-                <div class="embla__slide__number">1</div>
-            </div>
-            <div class="embla__slide">
-                <div class="embla__slide__number">2</div>
-            </div>
-            <div class="embla__slide">
-                <div class="embla__slide__number">3</div>
-            </div>
-            <div class="embla__slide">
-                <div class="embla__slide__number">4</div>
-            </div>
-            <div class="embla__slide">
-                <div class="embla__slide__number">5</div>
-            </div>
+            <slot />
         </div>
     </div>
 
@@ -27,18 +20,6 @@ import './_carousel.scss';
         <div class="embla__dots"></div>
     </div>
 </section>
-
-<!-- <client:only>
-    <script type="module">
-        import('./Carousel.ts')
-            .then((module) => {
-                module.initCarousel();
-            })
-            .catch((err) => {
-                console.error('Failed to load Carousel module:', err);
-            });
-    </script>
-</client:only> -->
 
 <client:only>
     <script type="module">
