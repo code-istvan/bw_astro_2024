@@ -1,0 +1,15 @@
+---
+export interface CarouselProps {
+    name?: string;
+    text?: string;
+}
+
+const { name, text }: CarouselProps = Astro.props;
+---
+
+<div class="social-proof-card">
+    <div class="social-proof-card__content">
+        <h2>{name}</h2>
+        <p>{text}</p>
+    </div>
+</div>

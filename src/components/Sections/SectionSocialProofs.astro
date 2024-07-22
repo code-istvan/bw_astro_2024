@@ -1,5 +1,6 @@
 ---
 import Carousel from '../Carousel/Carousel.astro';
+import SocialProofCard from '../Carousel/SocialProofCard.astro';
 import SocialProofs from '../../data/socialProofs.json';
 
 const hungarianProofs = SocialProofs.hungarian;
@@ -11,8 +12,7 @@ const hungarianProofs = SocialProofs.hungarian;
         {
             hungarianProofs.map((proof) => (
                 <div class="embla__slide mt-20px">
-                    <h2>{proof.name}</h2>
-                    <p>{proof.text}</p>
+                    <SocialProofCard name={proof.name} text={proof.text} />
                 </div>
             ))
         }
