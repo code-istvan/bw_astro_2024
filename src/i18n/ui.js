@@ -32,6 +32,7 @@ export const ui = {
     sectionMysoreProgramText:
       'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
     sectionMysoreProgramButton: 'Mysore-programról bővebben',
+    sectionSocialProofsTitle: 'Rólunk mondták',
   },
 
   en: {
@@ -58,5 +59,6 @@ export const ui = {
     sectionMysoreProgramText:
       'The Mysore-style Astanga yoga practice is an effective and personalized method that brings physical strength, flexibility and inner calm. The continuous development it offers and the teacher-student relationship provide an opportunity for deeper understanding and personal development.',
     sectionMysoreProgramButton: 'Ashtanga Mysore program',
+    sectionSocialProofsTitle: 'Testimonials',
   },
 };

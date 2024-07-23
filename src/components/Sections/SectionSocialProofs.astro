@@ -1,13 +1,17 @@
 ---
 import Carousel from '../Carousel/Carousel.astro';
 import SocialProofCard from '../Carousel/SocialProofCard.astro';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import SocialProofs from '../../data/socialProofs.json';
 
 const hungarianProofs = SocialProofs.hungarian;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="container mb-40px">
-    <div><h2 class="heading heading--1 text-center mb-20px">Rólunk mondták</h2></div>
+    <div><h2 class="heading heading--1 text-center mb-20px">{t('sectionSocialProofsTitle')}</h2></div>
     <Carousel>
         {
             hungarianProofs.map((proof) => (
