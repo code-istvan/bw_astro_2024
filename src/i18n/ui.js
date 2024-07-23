@@ -32,6 +32,12 @@ export const ui = {
     sectionMysoreProgramText:
       'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
     sectionMysoreProgramButton: 'Mysore-programról bővebben',
+    sectionScholarshipTitle: 'Jóga ösztöndíj',
+    sectionScholarshipButton: 'Jóga ösztöndíj',
+    sectionScholarshipText: `A jóga mindenki életében gyökeres változásokat hozhat, gyakorlását bármely élethelyzetben érdemes
+                elkezdeni. Előfordulhat azonban, hogy anyagi körülményeink nem teszik lehetővé hogy tapasztalt és
+                hiteles jógatanároktól tanulhassunk. A Bandha Works Ösztöndíj éppen az ilyen helyzetekben nyújthat
+                segítséget, jógaiskolánk a nyertesnek három hónapra korlátlan Mysore-jógabérletet biztosít.`,
     sectionSocialProofsTitle: 'Rólunk mondták',
   },
 
@@ -59,6 +65,9 @@ export const ui = {
     sectionMysoreProgramText:
       'The Mysore-style Astanga yoga practice is an effective and personalized method that brings physical strength, flexibility and inner calm. The continuous development it offers and the teacher-student relationship provide an opportunity for deeper understanding and personal development.',
     sectionMysoreProgramButton: 'Ashtanga Mysore program',
+    sectionScholarshipTitle: 'Scholarship',
+    sectionScholarshipButton: 'Scholarship details',
+    sectionScholarshipText: `Yoga can bring radical changes in everyone's life, and it is worth starting to practice it in any life situation. However, it may happen that our financial circumstances do not allow us to learn from experienced and credible yoga teachers. The Bandha Works Scholarship can help in such situations, our yoga school provides the winner with an unlimited Mysore yoga pass for three months.`,
     sectionSocialProofsTitle: 'Testimonials',
   },
 };

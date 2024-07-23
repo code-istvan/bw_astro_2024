@@ -5,6 +5,9 @@ import mobileImage from '../../images/hero_mobil.jpeg';
 import desktopImage from '../../images/hero_desktop.jpg';
 import Parampara from '../../components/Sections/SectionParampara.astro';
 import MysoreProgram from '../../components/Sections/SectionMysoreProgram.astro';
+import Osztondij from '../../components/Sections/SectionOsztondij.astro';
+import SocialProofs from '../../components/Sections/SectionSocialProofs.astro';
+
 const pageTitle = 'Welcome to Bandha Works';
 ---
 
@@ -12,13 +15,18 @@ const pageTitle = 'Welcome to Bandha Works';
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexEn={true} />
     <Parampara />
     <MysoreProgram />
+    <Osztondij />
+    <SocialProofs />
     <div class="container">
-        <div class="row"><h1>Welcome to Bandha Land</h1></div>
-
-        <div class="row"><p>The site is under development.</p></div>
-        <div class="row"><p>Here you can find our UI library.</p></div>
         <div class="row mb-40px">
-            <a href="/ui-library">Here you can find our UI library.</a>
+            <p>
+                Aka arracacha arrowhead artichoke beet bitterleaf broccoli burdock catsear celeriac celery chicory choy
+                common eggplant ensete garbanzo garlic gourd groundnut guar hamburg horse indian. Aka artichoke bean
+                beet black-eyed bok carrot cassava chard earthnut ginger gobo good greater greens hen horse. American
+                artichoke avocado beetroot bell bitterleaf brinjal burdock catsear celery corn courgette cress earthnut
+                epazote fava florence fluted garlic gherkin greater hamburg henry jerusalem. Artichoke bean beet
+                beetroot broccoli.
+            </p>
         </div>
     </div>
 </BaseLayout>
