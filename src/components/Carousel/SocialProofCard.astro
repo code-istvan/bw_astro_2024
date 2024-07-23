@@ -1,4 +1,6 @@
 ---
+import Icons from '../Icons.astro';
+import './_SocialProofCard.scss';
 export interface CarouselProps {
     name?: string;
     text?: string;
@@ -8,8 +10,13 @@ const { name, text }: CarouselProps = Astro.props;
 ---
 
 <div class="social-proof-card">
-    <div class="social-proof-card__content">
-        <h2>{name}</h2>
-        <p>{text}</p>
+    <div class="social-proof-card__wrapper">
+        <div class="social-proof-card__wrapper-header">
+            <Icons name="QuoteDouble" color="orange" />
+            <h3 class="clr-shades-white">{name}</h3>
+        </div>
+        <div class="social-proof-card__wrapper-body mt-20px">
+            <p class="body clr-shades-gray">{text}</p>
+        </div>
     </div>
 </div>

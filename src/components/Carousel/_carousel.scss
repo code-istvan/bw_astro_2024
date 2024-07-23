@@ -7,12 +7,12 @@
 .embla__container {
   display: flex;
 }
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  height: var(--slide-height);
-  overflow-y: auto;
-}
+// .embla__slide {
+//   flex: 0 0 100%;
+//   min-width: 0;
+//   // height: var(--slide-height);
+//   overflow-y: auto;
+// }
 
 .embla {
   max-width: 48rem;
@@ -49,7 +49,7 @@
 .embla__controls {
   display: flex;
   justify-content: center;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 .embla__dots {
   display: flex;
