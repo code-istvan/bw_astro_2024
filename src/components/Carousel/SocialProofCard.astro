@@ -1,19 +1,24 @@
 ---
 import Icons from '../Icons.astro';
 import './_SocialProofCard.scss';
+
 export interface CarouselProps {
     name?: string;
     text?: string;
+    country?: string;
 }
 
-const { name, text }: CarouselProps = Astro.props;
+const { name, text, country }: CarouselProps = Astro.props;
 ---
 
 <div class="social-proof-card">
     <div class="social-proof-card__wrapper">
         <div class="social-proof-card__wrapper-header">
             <Icons name="QuoteDouble" color="orange" />
-            <h3 class="clr-shades-white">{name}</h3>
+            <div class="name-country-wrapper">
+                <h3 class="clr-shades-white">{name}</h3>
+                {country && <h3 class="country clr-brand-orange">{country}</h3>}
+            </div>
         </div>
         <div class="social-proof-card__wrapper-body mt-20px">
             <p class="body clr-shades-gray">{text}</p>
