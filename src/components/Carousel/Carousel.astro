@@ -20,7 +20,15 @@ const { name, text }: CarouselProps = Astro.props;
     </div>
 </section>
 
-<script>
+<script type="module" is:inline>
+    import { initCarousel } from '/src/components/Carousel/carousel.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initCarousel();
+    });
+</script>
+
+<!-- <script>
     import EmblaCarousel from 'embla-carousel';
 
     const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
@@ -74,4 +82,4 @@ const { name, text }: CarouselProps = Astro.props;
         emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
     }
     initCarousel();
-</script>
+</script> -->
