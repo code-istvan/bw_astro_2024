@@ -1,5 +1,5 @@
 import EmblaCarousel from 'embla-carousel';
-import { addDotBtnsAndClickHandlers } from './carouselDotBtn';
+import { addDotBtnsAndClickHandlers } from './carousel-dot-btn';
 
 export function initCarousel() {
   const OPTIONS = { loop: true };
