@@ -20,9 +20,7 @@ const { name, text }: CarouselProps = Astro.props;
     </div>
 </section>
 
-<client:only>
-    <script type="module">
-        import { initCarousel } from '/src/components/Carousel/Carousel.ts';
-        initCarousel();
-    </script>
-</client:only>
+<script type="module" is:inline>
+    import { initCarousel } from '/src/components/Carousel/Carousel.ts';
+    initCarousel();
+</script>
