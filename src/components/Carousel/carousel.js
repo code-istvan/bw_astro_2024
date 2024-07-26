@@ -51,5 +51,3 @@ function initCarousel() {
   emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
 }
 initCarousel();
-
-console.log('test.js is running');
