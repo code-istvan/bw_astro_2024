@@ -38,7 +38,7 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   };
 };
 
-export function initCarousel() {
+function initCarousel() {
   const OPTIONS = { loop: true };
 
   const emblaNode = document.querySelector('.embla');
@@ -50,3 +50,6 @@ export function initCarousel() {
 
   emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
 }
+initCarousel();
+
+console.log('test.js is running');
