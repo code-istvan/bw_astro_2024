@@ -4,11 +4,11 @@ import Counter from '../../components/Counter';
 import './_sectionAbout.scss';
 ---
 
-<section class="section--about">
-    <div class="container">
-        <div class="section--about-content">
+<section class="section-about">
+    <div class="section-about__container container">
+        <div class="section-about__content">
             <Icons name="Namaste" />
-            <div class="section--about-content text-center mt-40px">
+            <div class="section-about__text text-center mt-40px">
                 <p>
                     A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy
                     a tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon. Több mint tíz év
@@ -19,8 +19,8 @@ import './_sectionAbout.scss';
                 <a href="/rolunk" class="btn btn--full-width-mobile btn--primary--outline mt-20px">
                     Tudj meg többet rólunk
                 </a>
-                <div class="section--rolunk--tradicio island-section--gray-border mt-20px">
-                    <div class="section--rolunk--wrapper">
+                <div class="section-about__tradition section-about__tradition--gray-border mt-20px">
+                    <div class="section-about__wrapper">
                         <h3 class="mb-20px font-family-primary">TRADÍCIÓ</h3>
                         <div class="mb-20px"><Counter client:only="react" language={Astro.currentLocale} /></div>
                         <p class="mb-20px">
