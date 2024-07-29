@@ -3,7 +3,6 @@ import Carousel from '../Carousel/Carousel.astro';
 import SocialProofCard from '../Carousel/SocialProofCard.astro';
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import SocialProofs from '../../data/socialProofs.json';
-import './_sectionSocialProofs.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
