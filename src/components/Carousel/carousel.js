@@ -6,7 +6,7 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   const addDotBtnsWithClickHandlers = () => {
     dotsNode.innerHTML = emblaApi
       .scrollSnapList()
-      .map(() => '<button class="embla__dot" type="button"></button>')
+      .map((_, index) => `<button class="embla__dot" type="button" aria-label="Go to slide ${index + 1}"></button>`)
       .join('');
 
     const scrollTo = (index) => {
@@ -50,4 +50,5 @@ function initCarousel() {
 
   emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
 }
+
 initCarousel();
