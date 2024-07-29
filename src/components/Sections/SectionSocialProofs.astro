@@ -3,6 +3,7 @@ import Carousel from '../Carousel/Carousel.astro';
 import SocialProofCard from '../Carousel/SocialProofCard.astro';
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import SocialProofs from '../../data/socialProofs.json';
+import './_sectionSocialProofs.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -11,12 +12,16 @@ const isEnglish = lang === 'en';
 const proofs = isEnglish ? SocialProofs.english : SocialProofs.hungarian;
 ---
 
-<div class="container mb-40px">
-    <div><h2 class="heading heading--1 text-center mb-20px">{t('sectionSocialProofsTitle')}</h2></div>
+<div class="section-social-proof container mb-40px">
+    <div>
+        <h2 class="section-social-proof__title heading heading--1 text-center mb-20px">
+            {t('sectionSocialProofsTitle')}
+        </h2>
+    </div>
     <Carousel>
         {
             proofs.map((proof) => (
-                <div class="embla__slide mt-20px">
+                <div class="section-social-proof__slide embla__slide mt-20px">
                     {isEnglish ? (
                         <SocialProofCard name={proof.name} text={proof.text} country={proof.country} />
                     ) : (
