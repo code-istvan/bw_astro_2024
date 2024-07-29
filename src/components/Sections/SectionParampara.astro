@@ -8,18 +8,22 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="section--parampara bg-shades-darkGray mt-40px">
-    <div class="container section--parampara--wapper">
+<section class="section-parampara bg-shades-darkGray mt-40px">
+    <div class="container section-parampara__wrapper">
         <div class="row">
-            <div class="col-12-xs col-4-md section--parampara--image full-width-mobile">
+            <div class="col-12-xs col-4-md section-parampara__image full-width-mobile">
                 <Image src={sharathJi} alt="Paramaguru Sharath Jois" />
             </div>
-            <div class="col-12-xs col-8-md section--parampara-text">
+            <div class="col-12-xs col-8-md section-parampara__text">
                 <h2 class="mb-20px heading heading--1 text-align-left">Bandha Works Parampara</h2>
                 <p>
                     {t('sectionParamparaText')}
                 </p>
-                <a href="/parampara" class="btn btn--full-width-mobile btn--primary--outline mt-20px">
+                <a
+                    href="/parampara"
+                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    aria-label="{t('sectionParamparaButton')}"
+                >
                     {t('sectionParamparaButton')}
                 </a>
             </div>

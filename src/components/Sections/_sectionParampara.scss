@@ -1,77 +1,79 @@
 @import '/src/sass/global';
 
-.section--parampara--wapper {
-  @include xl {
-    padding-block: 56px;
-  }
-}
-
-.section--parampara--image {
-  display: flex;
-  align-items: center;
-  z-index: 2;
-
-  @include xs {
-    order: 0;
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+.section-parampara {
+  &__wrapper {
+    @include xl {
+      padding-block: 56px;
     }
   }
 
-  @include md {
-    order: 1;
+  &__image {
+    display: flex;
+    align-items: center;
+    z-index: 2;
 
-    img {
-      width: 200px;
-      height: 200px;
-      margin-top: 28px;
-      margin-bottom: 28px;
+    @include xs {
+      order: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    @include md {
+      order: 1;
+
+      img {
+        width: 200px;
+        height: 200px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+      }
+    }
+
+    @include lg {
+      img {
+        width: 260px;
+        height: 260px;
+        margin-top: 36px;
+        margin-bottom: 36px;
+      }
+    }
+
+    @include xl {
+      img {
+        width: 320px;
+        height: 320px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @include xxl {
+      img {
+        width: 360px;
+        height: 360px;
+        margin-top: 44px;
+        margin-bottom: 44px;
+      }
     }
   }
 
-  @include lg {
-    img {
-      width: 260px;
-      height: 260px;
-      margin-top: 36px;
-      margin-bottom: 36px;
+  &__text {
+    max-width: 732px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include xs {
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
-  }
 
-  @include xl {
-    img {
-      width: 320px;
-      height: 320px;
-      margin-top: 40px;
-      margin-bottom: 40px;
+    @include md {
+      margin-top: auto;
+      margin-bottom: auto;
     }
-  }
-
-  @include xxl {
-    img {
-      width: 360px;
-      height: 360px;
-      margin-top: 44px;
-      margin-bottom: 44px;
-    }
-  }
-}
-
-.section--parampara-text {
-  max-width: 732px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  @include xs {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  @include md {
-    margin-top: auto;
-    margin-bottom: auto;
   }
 }
