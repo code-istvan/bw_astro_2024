@@ -2,27 +2,27 @@
 import { Image } from 'astro:assets';
 import Osztondij from '../../images/osztondij_background.jpg';
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
-import './_sectionOsztondij.scss';
+import './_sectionScholarship.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="section--osztondij mt-40px">
-    <div class="section--osztondij--background">
-        <Image src={Osztondij} alt="Bandha Works Jógaiskola Ösztöndíj" />
+<section class="section-scholarship mt-40px">
+    <div class="section-scholarship__background">
+        <Image src={Osztondij} alt="Bandha Works Jógaiskola Scholarship" />
     </div>
-    <div class="container section--osztondij--wrapper mt-40px text-center">
-        <h2 class="mb-20px section--osztondij--header heading heading--1">
+    <div class="container section-scholarship__wrapper mt-40px text-center">
+        <h2 class="mb-20px section-scholarship__header heading heading--1">
             {t('sectionScholarshipTitle')}
         </h2>
-        <div class="mt-20px section--osztondij--text">
+        <div class="mt-20px section-scholarship__text">
             <p>
                 {t('sectionScholarshipText')}
             </p>
         </div>
         <div class="btn-wrapper btn--full-width-mobile mt-20px mb-40px">
-            <a href="/osztondij" class="btn btn--full-width-mobile btn--primary--outline">
+            <a href="/scholarship" class="btn btn--full-width-mobile btn--primary--outline">
                 {t('sectionScholarshipButton')}
             </a>
         </div>
