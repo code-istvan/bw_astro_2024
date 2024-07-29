@@ -1,65 +1,67 @@
 @import '/src/sass/global';
 
-.section--mysore-program--wapper {
-  @include xl {
-    padding-block: 56px;
-  }
-}
-
-.section--mysore-program--image {
-  display: flex;
-  align-items: center;
-  z-index: 2;
-
-  @include xs {
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+.section-mysore-program {
+  &__wrapper {
+    @include xl {
+      padding-block: 56px;
     }
   }
 
-  @include md {
-    img {
-      width: 200px;
-      height: 200px;
+  &__image {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+    @include xs {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    @include md {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @include lg {
+      img {
+        width: 260px;
+        height: 260px;
+      }
+    }
+
+    @include xl {
+      img {
+        width: 320px;
+        height: 320px;
+      }
+    }
+
+    @include xxl {
+      img {
+        width: 360px;
+        height: 360px;
+      }
     }
   }
 
-  @include lg {
-    img {
-      width: 260px;
-      height: 260px;
+  &__text {
+    max-width: 732px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include xs {
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
-  }
 
-  @include xl {
-    img {
-      width: 320px;
-      height: 320px;
+    @include md {
+      margin-top: auto;
+      margin-bottom: auto;
     }
-  }
-
-  @include xxl {
-    img {
-      width: 360px;
-      height: 360px;
-    }
-  }
-}
-
-.section--mysore-program-text {
-  max-width: 732px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  @include xs {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  @include md {
-    margin-top: auto;
-    margin-bottom: auto;
   }
 }
