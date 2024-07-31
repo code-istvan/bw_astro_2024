@@ -17,6 +17,12 @@
       "teacherName": "Kisanna",
       "teacherLink": "/barna-kisanna/",
       "teacherImage": "kisanna.png"
+    },
+    {
+      "teacherId": "temuJi",
+      "teacherName": "Temu",
+      "teacherLink": "/temu/",
+      "teacherImage": ""
     }
   ]
 }
