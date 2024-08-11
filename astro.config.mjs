@@ -25,7 +25,7 @@ export default defineConfig({
   vite: {
     server: {
       headers: {
-        'Content-Security-Policy-Report-Only': "default-src 'self'; script-src 'self'; style-src 'self'",
+        'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'",
       },
     },
   },
