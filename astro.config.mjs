@@ -21,4 +21,12 @@ export default defineConfig({
   },
   integrations: [react()],
   site: 'https://voluble-crumble-cbe048.netlify.app',
+
+  vite: {
+    server: {
+      headers: {
+        'Content-Security-Policy-Report-Only': "default-src 'self'; script-src 'self'; style-src 'self'",
+      },
+    },
+  },
 });
