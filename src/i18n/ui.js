@@ -67,7 +67,7 @@ export const ui = {
     sectionMysoreProgramButton: 'Ashtanga Mysore program',
     sectionScholarshipTitle: 'Scholarship',
     sectionScholarshipButton: 'Scholarship details',
-    sectionScholarshipText: `Yoga can bring radical changes in everyone's life, and it is worth starting to practice it in any life situation. However, it may happen that our financial circumstances do not allow us to learn from experienced and credible yoga teachers. The Bandha Works Scholarship can help in such situations, our yoga school provides the winner with an unlimited Mysore yoga pass for three months.`,
+    sectionScholarshipText: `Yoga can bring radical changes in everyone's life, and it is worth starting at any stage of life. However, sometimes our financial circumstances do not allow us to buy a yoga pass, and we may not yet have the routine to start practising at home. The Bandha Works Scholarship can help in exactly such situations, with our yoga school providing the winner with unlimited yoga pass for three months.`,
     sectionSocialProofsTitle: 'Testimonials',
   },
 };
