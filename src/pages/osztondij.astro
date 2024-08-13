@@ -8,9 +8,44 @@ const pageTitle = 'Ösztöndíj';
 ---
 
 <BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-20px">
+            <p>
+                A jóga mindenki életében gyökeres változásokat hozhat, gyakorlását bármely élethelyzetben érdemes
+                elkezdeni. Előfordulhat azonban, hogy anyagi körülményeink nem teszik lehetővé jógabérlet vásárlását,
+                ráadásul még nem rendelkezünk annyi rutinnal, hogy otthoni gyakorlásba kezdjünk. A Bandha Works
+                Ösztöndíj éppen az ilyen helyzetekben nyújthat segítséget, jógaiskolánk a nyertesnek három hónapra
+                korlátlan jógabérletet biztosít.
+            </p>
+            <blockquote>
+                A tudat stabilitásának szilárd alapja a hosszú időn keresztül, megszakítás nélkül végzett gondos
+                gyakorlás. - Patandzsali Jóga Szútrák I.14
+            </blockquote>
+            <p>
+                Jógagyakorlásod minél hatékonyabbá tételében – a reggeli
+                <a href="/astanga-mysore-program" class="link-enhanced">Mysore-program</a>, látogatása mellett –
+                intenzív, személyes segítséget nyújtanak oktatóink. A jelentkezők vállalják, hogy minimum heti háromszor
+                részt vesznek a Mysore-program óráin – az előre közösen meghatározott időpontokban –, és havi
+                rendszerességgel elkészítenek egy beadandó esszét egy meghatározott témában. Amennyiben kezdő astanga
+                gyakorló vagy, az első hónapban az <a href="/astanga-kezdo-tanfolyam" class="link-enhanced">
+                    astanga kezdő tanfolyamon
+                </a> biztosítunk helyet számodra. A második hónapban az <a
+                    href="/astanga-mysore-kurzus"
+                    class="link-enhanced"
+                >
+                    astanga Mysore-kurzussal
+                </a>
+                készítünk fel az astanga jóga egyéni gyakorlására. A harmadik hónapban pedig már a reggeli Mysore-órákon
+                tudsz résztvenni.
+            </p>
+        </div>
     </div>
 </BaseLayout>
 
