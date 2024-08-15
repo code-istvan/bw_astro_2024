@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
+import { Image } from 'astro:assets';
+import osztondijContentDesktop from '../images/oszt_content_img.jpg';
+import osztondijContentMobil from '../images/oszt_content_img_mobil.jpg';
 import mobileImage from '../images/osztondij_mobil.jpg';
 import desktopImage from '../images/osztondij_desktop.jpg';
 
@@ -46,6 +49,16 @@ const pageTitle = 'Ösztöndíj';
                 tudsz résztvenni.
             </p>
         </div>
+        <Image
+            src={osztondijContentDesktop}
+            class="container-fluid-right image--visible-desktop mt-20px"
+            alt="Astanga jóga ösztöndíj Budapesten - Csoportos jógaóra felfelé néző kutya pózban, vezetett óra"
+        />
+        <Image
+            src={osztondijContentMobil}
+            class="container-fluid-right image--visible-mobil full-width-mobile mt-20px"
+            alt="Astanga jóga ösztöndíj Budapesten - Fejenállást gyakorló a jógaórán"
+        />
     </div>
 </BaseLayout>
 

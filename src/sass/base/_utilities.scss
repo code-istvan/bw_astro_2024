@@ -17,6 +17,26 @@
   }
 }
 
+.image--visible-desktop {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .image--visible-desktop {
+    display: block;
+  }
+}
+
+.image--visible-mobil {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .image--visible-mobil {
+    display: none;
+  }
+}
+
 .unordered-list-style {
   ul {
     list-style: none;
