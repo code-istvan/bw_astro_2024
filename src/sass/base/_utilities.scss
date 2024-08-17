@@ -150,6 +150,13 @@
   }
 }
 
+.separator-horizontal {
+  border-top: solid 1px $color-shades-lightBlack;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .display-flex {
   display: flex;
 }
