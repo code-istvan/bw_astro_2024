@@ -6,9 +6,13 @@ import osztondijContentDesktop from '../images/oszt_content_img.jpg';
 import osztondijContentMobil from '../images/oszt_content_img_mobil.jpg';
 import mobileImage from '../images/osztondij_mobil.jpg';
 import desktopImage from '../images/osztondij_desktop.jpg';
+import Carousel from '../components/Carousel/Carousel.astro';
+import SocialProofCard from '../components/Carousel/SocialProofCard.astro';
+import SocialProofs from '../data/socialProofs.json';
 import '../sass/pages/_osztondij.scss';
 
 const pageTitle = 'Ösztöndíj';
+const proofs = SocialProofs.scholarship;
 ---
 
 <BaseLayout title={pageTitle}>
@@ -121,6 +125,19 @@ const pageTitle = 'Ösztöndíj';
                     <p class="mb-20px">Várjuk jelentkezésedet!</p>
                 </p>
             </div>
+        </div>
+        <div class="separator-horizontal-full mt-40px"></div>
+        <div class="row mt-20px mb-40px">
+            <h2 class="clr-brand-orange font-family-primar mt-40px mb-20px">Ösztöndíjasaink írták</h2>
+            <Carousel>
+                {
+                    proofs.map((proof) => (
+                        <div class="section-social-proof__slide embla__slide mt-20px">
+                            <SocialProofCard name={proof.name} text={proof.intro} />
+                        </div>
+                    ))
+                }
+            </Carousel>
         </div>
     </div>
 </BaseLayout>
