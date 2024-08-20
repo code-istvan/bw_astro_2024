@@ -62,10 +62,27 @@ const customTimesCollection = defineCollection({
   }),
 });
 
+const eventsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    published: z.boolean(),
+    featured: z.boolean(),
+    esemenytipusa: z.string(),
+    eventid: z.string(),
+    date: z.coerce.date(),
+    title: z.string(),
+    image: z.string().optional().optional(),
+    shortdescription: z.string().optional(),
+    eventlink: z.string().optional(),
+    teacher: z.string(),
+  }),
+});
+
 export const collections = {
   blog: postsCollection,
   schedule: scheduleCollection,
   customTimes: customTimesCollection,
   classes: classesCollection,
   teachers: teachersCollection,
+  events: eventsCollection,
 };
