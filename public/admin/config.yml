@@ -264,11 +264,11 @@ collections:
           options: [Tanfolyam, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
         }
       - { label: Eventid, name: eventid, widget: string }
-      - { label: Title, name: title, widget: string }
-      - { label: Shortdescription, name: Shortdescription, widget: text }
-      - { label: Eventlink, name: eventlink, widget: string, required: false }
       - { label: Date, name: date, widget: datetime }
-      - { label: Day, name: day, widget: string, required: false }
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: eventimage, widget: image, required: false }
+      - { label: Shortdescription, name: Shortdescription, widget: text, required: false }
+      - { label: Eventlink, name: eventlink, widget: string, required: false }
       - {
           label: Teacher,
           name: teacher,
