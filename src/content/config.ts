@@ -71,7 +71,7 @@ const eventsCollection = defineCollection({
     eventid: z.string(),
     date: z.coerce.date(),
     title: z.string(),
-    image: z.string().optional().optional(),
+    eventimage: z.string().optional().optional(),
     shortdescription: z.string().optional(),
     eventlink: z.string().optional(),
     teacher: z.string(),

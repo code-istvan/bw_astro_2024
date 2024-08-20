@@ -1,17 +1,50 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/tanfolyam_mobil.jpg';
 import desktopImage from '../images/tanfolyam_desktop.jpg';
 
 const pageTitle = 'Tanfolyamok';
+
+const events = await getCollection('events');
+
+// Dátum formázó függvény a magyar formátumhoz, pontok nélkül
+function formatDate(date: string | Date): string {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('hu-HU', options).format(new Date(date)).toUpperCase();
+    return formattedDate.replace(/\./g, ''); // Pontok eltávolítása
+}
+
+// Szűrés és rendezés
+const upcomingEvents = events
+    .filter((event) => new Date(event.data.date) >= new Date()) // Múltbéli események kiszűrése
+    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()); // Rendezés dátum szerint
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+        <div class="row">
+            {
+                upcomingEvents.map((event) => (
+                    <div class="col-12">
+                        <h2>{event.data.title}</h2>
+                        <p>{formatDate(event.data.date)}</p>
+                        <p>{event.data.teacher}</p>
+                        {event.data.eventimage && (
+                            <Image
+                                src={event.data.eventimage}
+                                alt={event.data.title}
+                                width={200}
+                                height={200}
+                                class="event-image"
+                            />
+                        )}
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
