@@ -4,18 +4,138 @@ import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage.astro';
 import mobileImage from '../../images/osztondij_mobil.jpg';
 import desktopImage from '../../images/osztondij_desktop.jpg';
+import { Image } from 'astro:assets';
+import osztondijContentDesktop from '../../images/oszt_content_img.jpg';
+import osztondijContentMobil from '../../images/oszt_content_img_mobil.jpg';
+import Carousel from '../../components/Carousel/Carousel.astro';
+import SocialProofCard from '../../components/Carousel/SocialProofCard.astro';
+import SocialProofs from '../../data/socialProofs.json';
+import '../../sass/pages/_osztondij.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const pageTitle = t('osztondij');
+const proofs = SocialProofs.scholarshipEnglish;
 ---
 
 <BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-20px">
+            <p>
+                Yoga can bring radical changes in everyone's life, and it is worth starting at any stage of life.
+                However, sometimes our financial circumstances do not allow us to buy a yoga pass, and we may not yet
+                have the routine to start practising at home. The Bandha Works Scholarship can help in exactly such
+                situations, with our yoga school providing the winner with unlimited yoga pass for three months.
+            </p>
+            <blockquote>
+                Practice that is done for a long time, without break and with sincere devotion becomes a firmly rooted,
+                stable, and solid foundation. – The Yoga Sutras of Patanjali I.14.
+            </blockquote>
+            <p>
+                To make your yoga practice as effective as possible, in addition to attending the morning
+                <a href="/en/astanga-mysore-program" class="link-enhanced">Mysore-program</a>, you will receive
+                intensive personal assistance from our teachers. Candidates agree to attend Mysore classes at least
+                three times a week, at times agreed in advance, and to prepare a monthly essay on a specific topic. If
+                you are a beginner ashtanga practitioner, you will be offered a place in the <a
+                    href="/en/astanga-kezdo-tanfolyam"
+                    class="link-enhanced"
+                >
+                    beginners' ashtanga course
+                </a>
+                for the first month. In the second month, the <a href="/en/astanga-mysore-kurzus" class="link-enhanced">
+                    ashtanga Mysore course
+                </a> will prepare you for the individual practice of ashtanga yoga. In the third month, you will be able
+                to participate in the morning Mysore classes.
+            </p>
+        </div>
+        <Image
+            src={osztondijContentDesktop}
+            class="container-fluid-right image--visible-desktop mt-20px"
+            alt="Astanga jóga ösztöndíj Budapesten - Csoportos jógaóra felfelé néző kutya pózban, vezetett óra"
+        />
+        <Image
+            src={osztondijContentMobil}
+            class="container-fluid-right image--visible-mobil full-width-mobile mt-20px"
+            alt="Astanga jóga ösztöndíj Budapesten - Fejenállást gyakorló a jógaórán"
+        />
+        <div class="row mt-20px">
+            <h2 class="clr-brand-orange font-family-primary mb-20px">How to apply for the scholarship</h2>
+            <p class="mb-20px">
+                To apply for the scholarship, the applicant must complete the online application form (Google form),
+                which requires
+                <u>
+                    <b>Google registration</b>
+                </u>, and attach a cover letter (A4 page, Times New Roman 12 font, 1.5 line spacing, minimum 1 page,
+                maximum 3) describing what this opportunity would offer, how it would help to deepen or start the yoga
+                practice and what circumstances make it difficult to purchase a pass. <u>
+                    <b>Don't forget to include your name on the cover letter!</b>
+                </u> Applicants who make it to the second round will be invited to a personal interview where we will select
+                a winner. The winning applicant will have unlimited access to Bandha Works Yoga Studio classes for three
+                months, according to the above schedule. You will also receive a one-to-one consultation session each month
+                to help you deepen your practice and overcome any obstacles that may arise.
+            </p>
+        </div>
+        <div class="osztondij-timings">
+            <div class="osztondij-timings--wrapper">
+                <p class="mb-20px">
+                    <strong>The scholarship period</strong>
+                    <br />
+                    1 October 2024 - 31 December 2024 (fourth quarter)
+                </p>
+                <div class="separator-horizontal"></div>
+                <p class="mb-20px">
+                    <strong>First round</strong>
+                    <br />
+                    You can apply for the first round online as described above. The application form will be available on
+                    this page from <strong>11 September 2024 at 18:00 until 15 September 2024 at 18:00</strong>.
+                    <br />
+                    <br />
+                    <strong>Second round</strong>
+                    <br />
+                    In the second round, the successful candidates from the first round will be invited to participate in
+                    a personal interview. This will take place on <strong>Sunday 29 September 2024, from 16:00</strong>.
+                    <br />
+                    <div class="separator-horizontal mt-20px"></div>
+                    <p>
+                        <strong>The members of the admission committee are</strong><br />
+                        Dr. Kővári Zsuzsa, Dr. Németh György, Dr. Bokk Ágota, <a
+                            href="/szalai-istvan"
+                            class="link-enhanced"
+                        >
+                            Szalai István
+                        </a>
+                    </p>
+                    <div class="separator-horizontal mt-20px"></div>
+                    <p>
+                        <strong>Location</strong>
+                        <br />
+                        <a href="/en/kapcsolat" class="link-enhanced">Bandha Works Yoga School</a>
+                    </p>
+                    <div class="separator-horizontal mt-20px"></div>
+                    <p class="mb-20px">We are looking forward to your application!</p>
+                </p>
+            </div>
+        </div>
+        <div class="separator-horizontal-full mt-40px"></div>
+        <div class="row mt-20px mb-40px">
+            <h2 class="clr-brand-orange font-family-primar mt-40px mb-20px">Written by our scholarship students</h2>
+            <Carousel>
+                {
+                    proofs.map((proof) => (
+                        <div class="section-social-proof__slide embla__slide mt-20px">
+                            <SocialProofCard name={proof.name} text={proof.intro} />
+                        </div>
+                    ))
+                }
+            </Carousel>
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
