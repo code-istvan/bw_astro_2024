@@ -261,7 +261,7 @@ collections:
           label: Esemény típusa,
           name: esemenytipusa,
           widget: select,
-          options: [Tanfolyam, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
+          options: [Tanfolyam, Workshop, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
         }
       - { label: Eventid, name: eventid, widget: string }
       - { label: Date, name: date, widget: datetime }
