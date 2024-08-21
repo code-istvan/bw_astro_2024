@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/tanfolyam_mobil.jpg';
 import desktopImage from '../images/tanfolyam_desktop.jpg';
+import teachersData from '../data/teachers.json';
 
 const pageTitle = 'Tanfolyamok';
 
@@ -21,30 +22,59 @@ function formatDate(date: string | Date): string {
 const upcomingEvents = events
     .filter((event) => new Date(event.data.date) >= new Date()) // Múltbéli események kiszűrése
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()); // Rendezés dátum szerint
+
+// Tanárok adatainak feltérképezése teacherId alapján
+type Teacher = {
+    teacherId: string;
+    teacherName: string;
+    teacherLink: string;
+    teacherImage?: string;
+};
+
+const teacherMap = new Map<string, Teacher>(
+    teachersData.teachers.map((teacher: Teacher) => [teacher.teacherId, teacher])
+);
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row">
+        <div class="row mt-40px">
             {
                 upcomingEvents.map((event) => (
-                    <div class="col-12">
-                        <h2>{event.data.title}</h2>
-                        <p>{formatDate(event.data.date)}</p>
-                        <p>{event.data.teacher}</p>
-                        {event.data.eventimage && (
-                            <Image
-                                src={event.data.eventimage}
-                                alt={event.data.title}
-                                width={200}
-                                height={200}
-                                class="event-image"
-                            />
-                        )}
+                    <div class="row gap-1">
+                        <div class="col-4-xs">
+                            {event.data.eventimage && (
+                                <Image
+                                    src={event.data.eventimage}
+                                    alt={event.data.title}
+                                    width={200}
+                                    height={200}
+                                    class="event-image"
+                                />
+                            )}
+                        </div>
+                        <div class="col-8-xs">
+                            <p>{formatDate(event.data.date)}</p> <h2 class="text-uppercase">{event.data.title}</h2>{' '}
+                            <p>
+                                {event.data.teacher && teacherMap.has(event.data.teacher) ? (
+                                    <a href={teacherMap.get(event.data.teacher)?.teacherLink}>
+                                        <p class="text-uppercase">{teacherMap.get(event.data.teacher)?.teacherName}</p>
+                                    </a>
+                                ) : (
+                                    <p />
+                                )}
+                            </p>
+                        </div>
                     </div>
                 ))
             }
         </div>
     </div>
 </BaseLayout>
+
+<style>
+    img {
+        width: 120px;
+    }
+</style>
