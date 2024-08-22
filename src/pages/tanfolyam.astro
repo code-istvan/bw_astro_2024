@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/tanfolyam_mobil.jpg';
@@ -10,6 +11,10 @@ import teachersData from '../data/teachers.json';
 const pageTitle = 'Tanfolyamok';
 
 const events = await getCollection('events');
+
+const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+
+console.log(images);
 
 // Dátum formázó függvény a magyar formátumhoz, pontok nélkül
 function formatDate(date: string | Date): string {
@@ -41,10 +46,26 @@ const teacherMap = new Map<string, Teacher>(
     <div class="container">
         <div class="row mt-40px">
             {
-                upcomingEvents.map((event) => (
-                    <div class="row gap-1">
-                        <div class="col-4-xs">
-                            {event.data.eventimage && (
+                upcomingEvents.map(
+                    (event: {
+                        id: string;
+                        collection: string;
+                        data: {
+                            published?: boolean;
+                            title?: string;
+                            date?: Date;
+                            teacher?: string;
+                            featured?: boolean;
+                            esemenytipusa?: string;
+                            eventid?: string;
+                            eventimage?: string;
+                            shortdescription?: string;
+                            eventlink?: string;
+                        };
+                    }) => (
+                        <div class="row gap-1">
+                            <div class="col-4-xs">
+                                {/* {event.data.eventimage && (
                                 <Image
                                     src={event.data.eventimage}
                                     alt={event.data.title}
@@ -52,22 +73,38 @@ const teacherMap = new Map<string, Teacher>(
                                     height={200}
                                     class="event-image"
                                 />
-                            )}
+                            )} */}
+                                <div>
+                                    {event.data.eventimage && (
+                                        <section class="desktop_image">
+                                            <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
+                                        </section>
+                                    )}
+                                    {/* {event.data.eventimage && (
+                                    <section class="desktop_image">
+                                        <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
+                                    </section>
+                                )} */}
+                                    {/* <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} /> */}
+                                </div>
+                            </div>
+                            <div class="col-8-xs">
+                                <p>{formatDate(event.data.date)}</p> <h2 class="text-uppercase">{event.data.title}</h2>{' '}
+                                <p>
+                                    {event.data.teacher && teacherMap.has(event.data.teacher) ? (
+                                        <a href={teacherMap.get(event.data.teacher)?.teacherLink}>
+                                            <p class="text-uppercase">
+                                                {teacherMap.get(event.data.teacher)?.teacherName}
+                                            </p>
+                                        </a>
+                                    ) : (
+                                        <p />
+                                    )}
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-8-xs">
-                            <p>{formatDate(event.data.date)}</p> <h2 class="text-uppercase">{event.data.title}</h2>{' '}
-                            <p>
-                                {event.data.teacher && teacherMap.has(event.data.teacher) ? (
-                                    <a href={teacherMap.get(event.data.teacher)?.teacherLink}>
-                                        <p class="text-uppercase">{teacherMap.get(event.data.teacher)?.teacherName}</p>
-                                    </a>
-                                ) : (
-                                    <p />
-                                )}
-                            </p>
-                        </div>
-                    </div>
-                ))
+                    )
+                )
             }
         </div>
     </div>
