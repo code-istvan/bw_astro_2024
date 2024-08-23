@@ -1,6 +1,6 @@
 {
   "eventimage": "src/images/uploads/back_bend.jpg",
-  "esemenytipusa": "Workshop",
+  "eventTypes": "Workshop",
   "teacher": "kisannaJi",
   "featured": true,
   "published": true,

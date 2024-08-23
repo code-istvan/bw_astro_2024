@@ -1,100 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
 import HeroImage from '../components/HeroImage.astro';
 import mobileImage from '../images/tanfolyam_mobil.jpg';
 import desktopImage from '../images/tanfolyam_desktop.jpg';
-import teachersData from '../data/teachers.json';
+import EventsList from '../components/Events/EventsList.astro';
 
 const pageTitle = 'Tanfolyamok';
-
-const events = await getCollection('events');
-
-const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
-
-console.log(images);
-
-// Dátum formázó függvény a magyar formátumhoz, pontok nélkül
-function formatDate(date: string | Date): string {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
-    const formattedDate = new Intl.DateTimeFormat('hu-HU', options).format(new Date(date)).toUpperCase();
-    return formattedDate.replace(/\./g, ''); // Pontok eltávolítása
-}
-
-// Szűrés és rendezés
-const upcomingEvents = events
-    .filter((event) => new Date(event.data.date) >= new Date()) // Múltbéli események kiszűrése
-    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()); // Rendezés dátum szerint
-
-// Tanárok adatainak feltérképezése teacherId alapján
-type Teacher = {
-    teacherId: string;
-    teacherName: string;
-    teacherLink: string;
-    teacherImage?: string;
-};
-
-const teacherMap = new Map<string, Teacher>(
-    teachersData.teachers.map((teacher: Teacher) => [teacher.teacherId, teacher])
-);
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="mt-40px">
-            {
-                upcomingEvents.map(
-                    (event: {
-                        id: string;
-                        collection: string;
-                        data: {
-                            published?: boolean;
-                            title?: string;
-                            date?: Date;
-                            teacher?: string;
-                            featured?: boolean;
-                            esemenytipusa?: string;
-                            eventid?: string;
-                            eventimage?: string;
-                            shortdescription?: string;
-                            eventlink?: string;
-                        };
-                    }) => (
-                        <div class="row gap-1">
-                            <div class="col-6-xs">
-                                <div>
-                                    {event.data.eventimage && (
-                                        <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
-                                    )}
-                                </div>
-                            </div>
-                            <div class="col-6-xs">
-                                <p>{formatDate(event.data.date)}</p> <h2 class="text-uppercase">{event.data.title}</h2>{' '}
-                                <p>
-                                    {event.data.teacher && teacherMap.has(event.data.teacher) ? (
-                                        <a href={teacherMap.get(event.data.teacher)?.teacherLink}>
-                                            <p class="text-uppercase">
-                                                {teacherMap.get(event.data.teacher)?.teacherName}
-                                            </p>
-                                        </a>
-                                    ) : (
-                                        <p />
-                                    )}
-                                </p>
-                            </div>
-                        </div>
-                    )
-                )
-            }
-        </div>
+        <EventsList />
     </div>
 </BaseLayout>
-
-<style>
-    img {
-        width: 120px;
-    }
-</style>
