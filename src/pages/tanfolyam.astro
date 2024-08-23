@@ -44,7 +44,7 @@ const teacherMap = new Map<string, Teacher>(
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row mt-40px">
+        <div class="mt-40px">
             {
                 upcomingEvents.map(
                     (event: {
@@ -64,31 +64,14 @@ const teacherMap = new Map<string, Teacher>(
                         };
                     }) => (
                         <div class="row gap-1">
-                            <div class="col-4-xs">
-                                {/* {event.data.eventimage && (
-                                <Image
-                                    src={event.data.eventimage}
-                                    alt={event.data.title}
-                                    width={200}
-                                    height={200}
-                                    class="event-image"
-                                />
-                            )} */}
+                            <div class="col-6-xs">
                                 <div>
                                     {event.data.eventimage && (
-                                        <section class="desktop_image">
-                                            <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
-                                        </section>
-                                    )}
-                                    {/* {event.data.eventimage && (
-                                    <section class="desktop_image">
                                         <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
-                                    </section>
-                                )} */}
-                                    {/* <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} /> */}
+                                    )}
                                 </div>
                             </div>
-                            <div class="col-8-xs">
+                            <div class="col-6-xs">
                                 <p>{formatDate(event.data.date)}</p> <h2 class="text-uppercase">{event.data.title}</h2>{' '}
                                 <p>
                                     {event.data.teacher && teacherMap.has(event.data.teacher) ? (
