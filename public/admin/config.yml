@@ -259,7 +259,7 @@ collections:
       - { label: Featured, name: featured, widget: boolean, default: true }
       - {
           label: Esemény típusa,
-          name: esemenytipusa,
+          name: eventType,
           widget: select,
           options: [Tanfolyam, Workshop, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
         }
