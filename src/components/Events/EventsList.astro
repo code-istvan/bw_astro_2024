@@ -4,6 +4,8 @@ import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 import teachersData from '../../data/teachers.json';
 
+const { eventTypes = [] } = Astro.props;
+
 const events = await getCollection('events');
 
 const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
@@ -15,9 +17,10 @@ function formatDate(date: string | Date): string {
     return formattedDate.replace(/\./g, ''); // Pontok eltávolítása
 }
 
-// Szűrés és rendezés
+// Szűrés és rendezés az eventTypes alapján
 const upcomingEvents = events
     .filter((event) => new Date(event.data.date) >= new Date()) // Múltbéli események kiszűrése
+    .filter((event) => eventTypes.length === 0 || eventTypes.includes(event.data.eventTypes)) // Szűrés az eventTypes alapján
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()); // Rendezés dátum szerint
 
 // Tanárok adatainak feltérképezése teacherId alapján
