@@ -11,6 +11,6 @@ const pageTitle = 'Tanfolyamok';
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <EventsList eventTypes={['Workshop']} />
+        <EventsList eventTypes={['Workshop']} maxEvents={3} />
     </div>
 </BaseLayout>
