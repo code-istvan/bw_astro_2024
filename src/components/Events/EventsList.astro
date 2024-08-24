@@ -46,6 +46,7 @@ const teacherMap = new Map<string, Teacher>(
                 data: {
                     published?: boolean;
                     title?: string;
+                    titleEnglish?: string;
                     date?: Date;
                     teacher?: string;
                     featured?: boolean;
@@ -53,7 +54,9 @@ const teacherMap = new Map<string, Teacher>(
                     eventid?: string;
                     eventimage?: string;
                     shortdescription?: string;
+                    shortdescriptionEnglish?: string;
                     eventlink?: string;
+                    eventlinkEnglish?: string;
                 };
             }) => (
                 <div class="row gap-1">

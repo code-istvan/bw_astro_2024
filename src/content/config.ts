@@ -67,13 +67,16 @@ const eventsCollection = defineCollection({
   schema: z.object({
     published: z.boolean(),
     featured: z.boolean(),
-    eventTypes: z.string(),
+    eventTypes: z.string().optional(),
     eventid: z.string(),
     date: z.coerce.date(),
     title: z.string(),
+    titleEnglish: z.string().optional(),
     eventimage: z.string().optional().optional(),
     shortdescription: z.string().optional(),
+    shortdescriptionEnglish: z.string().optional(),
     eventlink: z.string().optional(),
+    eventlinkEnglish: z.string().optional(),
     teacher: z.string(),
   }),
 });
