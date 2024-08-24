@@ -67,7 +67,7 @@ const eventsCollection = defineCollection({
   schema: z.object({
     published: z.boolean(),
     featured: z.boolean(),
-    eventTypes: z.string().optional(),
+    eventType: z.string().optional(),
     eventid: z.string(),
     date: z.coerce.date(),
     title: z.string(),
