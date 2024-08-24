@@ -19,6 +19,7 @@ function formatDate(date: string | Date): string {
 
 // Szűrés és rendezés az eventTypes és maxEvents alapján
 const upcomingEvents = events
+    .filter((event) => event.data.published) // Csak a publikált eseményeket jelenítjük meg
     .filter((event) => new Date(event.data.date) >= new Date()) // Múltbéli események kiszűrése
     .filter((event) => eventType.length === 0 || eventType.includes(event.data.eventType)) // Szűrés az eventTypes alapján
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()) // Rendezés dátum szerint
