@@ -7,12 +7,14 @@ import Parampara from '../../components/Sections/SectionParampara.astro';
 import MysoreProgram from '../../components/Sections/SectionMysoreProgram.astro';
 import Scholarship from '../../components/Sections/SectionScholarship.astro';
 import SocialProofs from '../../components/Sections/SectionSocialProofs.astro';
+import About from '../../components/Sections/SectionAbout.astro';
 
 const pageTitle = 'Welcome to Bandha Works';
 ---
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexEn={true} />
+    <About />
     <Parampara />
     <MysoreProgram />
     <Scholarship />

@@ -8,6 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const isEnglish = lang === 'en';
+const sectionAboutTraditionText = t('sectionAboutTraditionText')();
 ---
 
 <section class="section-about">
@@ -16,27 +17,20 @@ const isEnglish = lang === 'en';
             {isEnglish ? <Icons name="NamasteEnglish" /> : <Icons name="Namaste" />}
             <div class="section-about__text text-center mt-40px">
                 <p>
-                    A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy
-                    a tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon. Több mint tíz év
-                    elteltével a helyzet mit sem változott, oktatóink elkötelezett gyakorlói az irányzatnak, és
-                    rendszeresen, az astanga jóga fővárosába, a dél-indiai Mysore-ba utaznak, hogy tovább mélyítsék
-                    tudásuk, megértésük.
+                    {t('sectionAboutText')}
                 </p>
                 <a
-                    href="/rolunk"
+                    href={t('sectionAboutLink')}
                     class="btn btn--full-width-mobile btn--primary--outline mt-20px"
                     aria-label="Tudj meg többet rólunk gomb"
                 >
-                    Tudj meg többet rólunk
+                    {t('sectionAboutButton')}
                 </a>
                 <div class="section-about__tradition section-about__tradition--gray-border mt-20px">
                     <div class="section-about__wrapper">
-                        <h1 class="mb-20px font-family-primary">TRADÍCIÓ</h1>
+                        <h1 class="mb-20px font-family-primary">{t('sectionAboutTradition')}</h1>
                         <div class="mb-20px"><Counter client:only="react" language={Astro.currentLocale} /></div>
-                        <p class="mb-20px">
-                            Magyarország legrégebbi <br />astanga Mysore-programja<br />
-                            <strong>Paramaguru Sharath Jois</strong> áldásával
-                        </p>
+                        <p class="mb-20px" set:html={sectionAboutTraditionText} />
                         <Icons name="SharatJiHandWriting" class="max-width-150" />
                     </div>
                 </div>

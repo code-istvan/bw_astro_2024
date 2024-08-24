@@ -25,6 +25,14 @@ export const ui = {
     jogaorak: 'JÓGAÓRÁK',
     tudnivalok: 'TUDNIVALÓK',
     kapcsolat: 'KAPCSOLAT',
+    sectionAboutText:
+      'A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy a tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon. Több mint tíz év elteltével a helyzet mit sem változott, oktatóink elkötelezett gyakorlói az irányzatnak, és rendszeresen, az astanga jóga fővárosába, a dél-indiai Mysore-ba utaznak, hogy tovább mélyítsék tudásuk, megértésük.',
+    sectionAboutButton: 'Tudj meg többet rólunk',
+    sectionAboutLink: '/rolunk',
+    sectionAboutTradition: 'Tradíció',
+    sectionAboutTraditionText: () => `
+      Magyarország legrégebbi <br/>astanga Mysore-programja<br/>
+      <strong>Paramaguru Sharath Jois</strong> áldásával`,
     sectionParamparaText:
       'A parampara a tudás, amelyet a tanár a tanítványára hagyományoz. A parampara szanszkrit szó jelentése a tudás átadásának legértékesebb formáját, a közvetlen és tapasztalati tudás átadását fejezi ki. A jógatanításnak a paramparaból kell származnia ahhoz, hogy hatékony, igaz és teljes legyen. ',
     sectionParamparaButton: 'Tanítói láncolatunk',
@@ -62,6 +70,14 @@ export const ui = {
     jogaorak: 'YOGA CLASSES',
     tudnivalok: 'INFORMATION',
     kapcsolat: 'CONTACT',
+    sectionAboutText:
+      'The Bandha Works Yoga School was founded in 2013 by three engineers who were united by their desire to promote and teach traditional ashtanga vinyasa yoga in Hungary. After more than ten years, the situation has not changed, our teachers are dedicated practitioners of the tradition and regularly travel to the capital of ashtanga yoga, Mysore, South India, to further deepen their knowledge and understanding by drawing from the lineage. ',
+    sectionAboutButton: 'Find out more about us',
+    sectionAboutLink: '/en/rolunk',
+    sectionAboutTradition: 'Tradition',
+    sectionAboutTraditionText: () => `
+    Hungary's oldest <br/>Ashtanga Mysore program<br/>
+    with the blessing of <strong>Paramaguru Sharath Jois</strong>`,
     sectionParamparaText: `Parampara is the knowledge that the teacher passes on to the student. The word parampara in Sanskrit expresses the most valuable form of knowledge transfer, the direct and experiential transfer of knowledge. Yoga teaching must come from the parampara to be effective, true and complete.`,
     sectionParamparaButton: 'Our lineage',
     sectionParamparaLink: '/en/parampara',
