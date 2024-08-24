@@ -1,13 +1,19 @@
 ---
 import Icons from '../Icons.astro';
 import Counter from '../../components/Counter';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import './_sectionAbout.scss';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const isEnglish = lang === 'en';
 ---
 
 <section class="section-about">
     <div class="section-about__container container">
         <div class="section-about__content">
-            <Icons name="Namaste" />
+            {isEnglish ? <Icons name="NamasteEnglish" /> : <Icons name="Namaste" />}
             <div class="section-about__text text-center mt-40px">
                 <p>
                     A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy
