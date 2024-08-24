@@ -29,7 +29,9 @@ const sectionAboutTraditionText = t('sectionAboutTraditionText')();
                 <div class="section-about__tradition section-about__tradition--gray-border mt-20px">
                     <div class="section-about__wrapper">
                         <h1 class="mb-20px font-family-primary">{t('sectionAboutTradition')}</h1>
-                        <div class="mb-20px"><Counter client:only="react" language={Astro.currentLocale} /></div>
+                        <div class="mb-20px">
+                            <Counter client:only="react" language={lang === 'en' ? 'eng' : 'hu'} />
+                        </div>
                         <p class="mb-20px" set:html={sectionAboutTraditionText} />
                         <Icons name="SharatJiHandWriting" class="max-width-150" />
                     </div>
