@@ -62,17 +62,17 @@ const teacherMap = new Map<string, Teacher>(
             }) => (
                 <>
                     <div class="row gap-1">
-                        <div class="col-6-xs">
+                        <div class="col-5-xs">
                             <div>
                                 {event.data.eventimage && (
                                     <Image src={images[`/${event.data.eventimage}`]()} alt={event.data.title} />
                                 )}
                             </div>
                         </div>
-                        <div class="col-6-xs">
+                        <div class="col-7-xs">
                             <p>{formatDate(event.data.date)}</p>
                             <h3 class="text-uppercase">{event.data.title}</h3>
-                            <p>
+                            {/* <p>
                                 {event.data.teacher && teacherMap.has(event.data.teacher) ? (
                                     <a href={teacherMap.get(event.data.teacher)?.teacherLink}>
                                         <p class="text-uppercase">{teacherMap.get(event.data.teacher)?.teacherName}</p>
@@ -80,10 +80,10 @@ const teacherMap = new Map<string, Teacher>(
                                 ) : (
                                     <p />
                                 )}
-                            </p>
+                            </p> */}
                             <a
                                 href={event.data.eventlink}
-                                class="clr-brand-orange mt-20px"
+                                class="clr-brand-orange mt-40px"
                                 aria-label="Tudj meg többet rólunk gomb"
                             >
                                 <p>
@@ -95,7 +95,7 @@ const teacherMap = new Map<string, Teacher>(
                     <div class="row mb-40px">
                         <a
                             href={event.data.eventlink}
-                            class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                            class="btn btn--full-width-mobile btn--secondary--solid mt-20px"
                             aria-label="Tudj meg többet rólunk gomb"
                         >
                             Jelentkezés
