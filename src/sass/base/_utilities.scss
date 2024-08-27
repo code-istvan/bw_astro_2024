@@ -37,6 +37,18 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .u-hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .u-hidden-desktop {
+    display: none !important;
+  }
+}
+
 .unordered-list-style {
   ul {
     list-style: none;
