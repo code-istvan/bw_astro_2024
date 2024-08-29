@@ -16,6 +16,16 @@
 
 .event-card__image {
   grid-area: A;
+  @include xs {
+    width: 200px;
+    height: auto;
+  }
+  @include md {
+    width: 250px;
+  }
+  @include xl {
+    width: 300px;
+  }
 }
 
 .event-card__details {

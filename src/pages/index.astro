@@ -16,11 +16,13 @@ const pageTitle = 'Welcome to Bandha Works';
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexHu={true} />
+    <!-- <div class="content-wrapper"> -->
     <About />
     <Parampara />
     <MysoreProgram />
     <Scholarship />
     <SocialProofs />
+    <!-- </div> -->
     <div class="container">
         <div class="row mb-40px">
             <p>
@@ -35,4 +37,10 @@ const pageTitle = 'Welcome to Bandha Works';
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    /* .content-wrapper {
+        position: relative;
+        z-index: 1;
+        background-color: hsl(0, 0%, 15%);
+    } */
+</style>
