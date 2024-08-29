@@ -18,8 +18,8 @@ const mobileMenuHeaderItems = getMobileMenuFooter(translatePath, t);
     }
 </div>
 
-<script type="module" is:inline>
-    import { useTranslations, useTranslatedPath } from '/src/i18n/utils.js';
+<script>
+    import { useTranslatedPath, useTranslations } from '../../../i18n/utils';
 
     document.addEventListener('DOMContentLoaded', () => {
         const language = window.location.href.includes('en') ? 'en' : 'hu';
