@@ -1,0 +1,79 @@
+@import '/src/sass/global';
+
+.event-card {
+  margin: 0;
+  display: grid;
+  height: auto;
+  max-width: 100%;
+  grid-template-areas:
+    'A B'
+    'A C'
+    'D D';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.event-card__image {
+  grid-area: A;
+}
+
+.event-card__details {
+  grid-area: B;
+  text-align: left;
+  align-self: start;
+}
+
+.event-card__description {
+  grid-area: C;
+  text-align: left;
+  height: max-content;
+}
+
+.event-card__actions {
+  grid-area: D;
+}
+
+.event-card__date-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.event-card__section--hidden-desktop {
+  display: block;
+}
+
+.event-card__section--hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 1081px) {
+  .event-card {
+    grid-template-areas: 'B A C D';
+    grid-template-columns: auto auto minmax(450px, 1fr) 1fr;
+    grid-template-rows: auto;
+    align-items: start;
+  }
+
+  .event-card__section--hidden-desktop {
+    display: none;
+  }
+
+  .event-card__section--hidden-mobile {
+    display: block;
+  }
+
+  .event-card__image {
+    text-align: left;
+  }
+
+  .event-card__details .event-card__date-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-card__actions {
+    text-align: right;
+  }
+}
