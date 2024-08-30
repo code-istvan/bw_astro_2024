@@ -5,7 +5,7 @@ import './_EventCardCarousel.scss';
 
 interface EventCardProps {
     title: string;
-    date: Date;
+    date: string | Date;
     eventImage?: string;
     eventLink: string;
     images: Record<string, () => ImageMetadata>;
@@ -13,7 +13,8 @@ interface EventCardProps {
 
 const { title, date, eventImage, eventLink, images } = Astro.props;
 
-const formattedDate = `${new Date(date).getFullYear()} ${new Date(date).toLocaleString('hu-HU', { month: 'short' }).replace('.', '').toUpperCase()} ${new Date(date).getDate()}`;
+const eventDate = new Date(date);
+const formattedDate = `${eventDate.getFullYear()} ${eventDate.toLocaleString('hu-HU', { month: 'short' }).replace('.', '').toUpperCase()} ${eventDate.getDate()}`;
 ---
 
 <div class="event-card">

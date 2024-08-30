@@ -14,13 +14,6 @@ const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/u
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Dátum formázó függvény a magyar formátumhoz, pontok nélkül
-function formatDate(date: string | Date): string {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
-    const formattedDate = new Intl.DateTimeFormat('hu-HU', options).format(new Date(date)).toUpperCase();
-    return formattedDate.replace(/\./g, ''); // Pontok eltávolítása
-}
-
 const upcomingEvents = events
     .filter((event) => event.data.published)
     .filter((event) => {
@@ -45,7 +38,7 @@ console.log(upcomingEvents.length);
                 <div class="section-events__slide embla__slide mt-20px">
                     <EventCardCarousel
                         title={event.data.title}
-                        date={formatDate(event.data.date)}
+                        date={event.data.date}
                         eventImage={event.data.eventimage}
                         eventLink={event.data.eventlink}
                         images={images}
