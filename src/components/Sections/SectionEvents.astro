@@ -24,8 +24,6 @@ const upcomingEvents = events
     .filter((event) => eventType.length === 0 || eventType.includes(event.data.eventType))
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
 // .slice(0, maxEvents);
-
-console.log(upcomingEvents.length);
 ---
 
 <div class="section-events container mb-40px">

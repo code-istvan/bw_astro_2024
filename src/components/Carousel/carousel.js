@@ -51,25 +51,27 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode, isMobile) => {
 
 function initCarousel() {
   const OPTIONS = { loop: true };
+  const emblaNodes = document.querySelectorAll('.embla');
 
-  const emblaNode = document.querySelector('.embla');
-  const viewportNode = emblaNode.querySelector('.embla__viewport');
-  const dotsNode = emblaNode.querySelector('.embla__dots');
+  emblaNodes.forEach((emblaNode) => {
+    const viewportNode = emblaNode.querySelector('.embla__viewport');
+    const dotsNode = emblaNode.querySelector('.embla__dots');
 
-  let isMobile = window.innerWidth <= 768;
-  const emblaApi = EmblaCarousel(viewportNode, OPTIONS);
-  const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode, isMobile);
+    let isMobile = window.innerWidth <= 768;
+    const emblaApi = EmblaCarousel(viewportNode, OPTIONS);
+    const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode, isMobile);
 
-  emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
+    emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
 
-  // Listen for window resize events to update isMobile
-  window.addEventListener('resize', () => {
-    const newIsMobile = window.innerWidth <= 768;
-    if (newIsMobile !== isMobile) {
-      isMobile = newIsMobile;
-      removeDotBtnsAndClickHandlers();
-      addDotBtnsAndClickHandlers(emblaApi, dotsNode, isMobile);
-    }
+    // Listen for window resize events to update isMobile
+    window.addEventListener('resize', () => {
+      const newIsMobile = window.innerWidth <= 768;
+      if (newIsMobile !== isMobile) {
+        isMobile = newIsMobile;
+        removeDotBtnsAndClickHandlers();
+        addDotBtnsAndClickHandlers(emblaApi, dotsNode, isMobile);
+      }
+    });
   });
 }
 
