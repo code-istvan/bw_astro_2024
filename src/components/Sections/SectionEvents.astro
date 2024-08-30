@@ -1,0 +1,66 @@
+---
+import Carousel from '../Carousel/Carousel.astro';
+import EventCardCarousel from '../Events/EventCardCarousel.astro';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+
+const { eventType = [], maxEvents = Infinity } = Astro.props;
+
+const events = await getCollection('events');
+
+const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Dátum formázó függvény a magyar formátumhoz, pontok nélkül
+function formatDate(date: string | Date): string {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('hu-HU', options).format(new Date(date)).toUpperCase();
+    return formattedDate.replace(/\./g, ''); // Pontok eltávolítása
+}
+
+const upcomingEvents = events
+    .filter((event) => event.data.published)
+    .filter((event) => {
+        const eventDate = new Date(event.data.date);
+        const today = new Date();
+        return eventDate.setHours(0, 0, 0, 0) >= today.setHours(0, 0, 0, 0);
+    })
+    .filter((event) => eventType.length === 0 || eventType.includes(event.data.eventType))
+    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+// .slice(0, maxEvents);
+
+console.log(upcomingEvents.length);
+---
+
+<div class="section-events container mb-40px">
+    <div>
+        <h2 class="section-events__title heading heading--1 mb-20px">Események</h2>
+    </div>
+    <Carousel>
+        {
+            upcomingEvents.map((event) => (
+                <div class="section-events__slide embla__slide mt-20px">
+                    <EventCardCarousel
+                        title={event.data.title}
+                        date={formatDate(event.data.date)}
+                        eventImage={event.data.eventimage}
+                        eventLink={event.data.eventlink}
+                        images={images}
+                    />
+                </div>
+            ))
+        }
+    </Carousel>
+    <div>
+        <a
+            href={t('sectionEventsLink')}
+            class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+            aria-label="{t('sectionEventsButton')}"
+        >
+            {t('sectionEventsButton')}
+        </a>
+    </div>
+</div>
