@@ -4,6 +4,7 @@ import EventCardCarousel from '../Events/EventCardCarousel.astro';
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import { getCollection } from 'astro:content';
 import type { ImageMetadata } from 'astro';
+import './_sectionEvents.scss';
 
 const { eventType = [], maxEvents = Infinity } = Astro.props;
 
@@ -28,12 +29,32 @@ const upcomingEvents = events
 
 <div class="section-events container mb-40px">
     <div>
-        <h2 class="section-events__title heading heading--1 mb-20px">Események</h2>
+        <h2 class="section-events__title heading heading--1 text-center mb-20px">Események</h2>
     </div>
-    <Carousel>
+    <!-- Carousel 1080px alatt -->
+    <div class="carousel-wrapper">
+        <Carousel>
+            {
+                upcomingEvents.map((event) => (
+                    <div class="section-events__slide embla__slide mt-20px">
+                        <EventCardCarousel
+                            title={event.data.title}
+                            date={event.data.date}
+                            eventImage={event.data.eventimage}
+                            eventLink={event.data.eventlink}
+                            images={images}
+                        />
+                    </div>
+                ))
+            }
+        </Carousel>
+    </div>
+
+    <!-- Flexbox elrendezés 1080px felett -->
+    <div class="flex-wrapper">
         {
             upcomingEvents.map((event) => (
-                <div class="section-events__slide embla__slide mt-20px">
+                <div class="flex-item mt-20px">
                     <EventCardCarousel
                         title={event.data.title}
                         date={event.data.date}
@@ -44,8 +65,9 @@ const upcomingEvents = events
                 </div>
             ))
         }
-    </Carousel>
-    <div>
+    </div>
+
+    <div class="centered-block">
         <a
             href={t('sectionEventsLink')}
             class="btn btn--full-width-mobile btn--primary--outline mt-20px"

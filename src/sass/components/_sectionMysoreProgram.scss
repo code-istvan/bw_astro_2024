@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
 .section--mysore-program {
   .container-fluid {
@@ -45,11 +45,11 @@
 .section--mysore-program-text {
   max-width: 732px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 
   @include xs {
     padding-top: 20px;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
   }
 
   @include md {

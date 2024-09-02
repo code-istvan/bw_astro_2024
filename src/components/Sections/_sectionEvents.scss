@@ -1,0 +1,27 @@
+@import '/src/sass/global';
+
+.carousel-wrapper {
+  display: block;
+}
+
+/* Flexbox elrendezés rejtése alapértelmezés szerint */
+.flex-wrapper {
+  display: none;
+}
+
+/* 1080px felett: Flexbox megjelenítése és Carousel elrejtése */
+@media (min-width: 1080px) {
+  .carousel-wrapper {
+    display: none;
+  }
+  .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Térköz az elemek között */
+    justify-content: space-between;
+  }
+  .flex-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+}
