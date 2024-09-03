@@ -1,0 +1,108 @@
+---
+import Icons from '../Icons.astro';
+---
+
+<footer>
+    <div class="container-fluid footer bg-shades-darkGray mt-3">
+        <div class="row footer-first-row">
+            <div class="col-12-xs col-6-md">
+                <div class="footer__brand">
+                    <div>
+                        <a href="/" class="btn" aria-label="vissza a nyitó oldalra">
+                            <Icons name="BwSymbol" color="white" />
+                        </a>
+                    </div>
+                    <div class="footer__icon__text">
+                        <p>
+                            Astanga Jógaiskola <br />
+                            Paramaguru Sharath Jois <br />
+                            áldásával
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__navigation">
+                    <div class="footer__navigation__box">
+                        <!-- <FooterDesktopMenu /> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12-xs col-6-md footer__newsletter">
+                <div class="footer__newsletter__box">
+                    <h3 class="mb-1 mt-0">IRATKOZZ FEL HÍRLEVELÜNKRE</h3>
+                    <p class="mb-2 mt-0">Értesülj a legfrissebb eseményeinkről és egyéb jógás hírekről elsőkézből</p>
+                    <!-- <Button
+              type="button"
+              buttonStyle="btn--small--outline"
+              onClick={() => {
+                navigate("/hirlevel")
+              }}
+            >
+              Feliratkozás
+            </Button> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer__social">
+            <div class="pt-2 pb-2">
+                <!-- <SocialIcons position="socialIcons-center" /> -->
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom__box mt-2 mb-2">
+                <div>
+                    <p class="small">
+                        Designed and code by <br class="footer-br" />
+                        <!-- <CustomLink
+                link="https://omworks.hu"
+                title=" OmWorks Yoga Creatives"
+                classNames="link-color-orange"
+              /> -->
+                    </p>
+                </div>
+                <div class="separator"></div>
+                <div>
+                    <p class="small">
+                        Copyright© 2013-{new Date().getFullYear()} BandhaWorks
+                    </p>
+                </div>
+                <div class="separator"></div>
+                <div>
+                    <!-- <CustomLink
+              link="/adatvedelmi-tajekoztato"
+              title="Adatvédelmi tájékoztató"
+              classNames="small custom-link-style-white "
+            /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        a:link {
+            text-decoration: none;
+            color: $color-shades-lightGray;
+        }
+
+        @media only screen and (min-width: 1px) and (max-width: 320px) {
+            .btn {
+                width: 100%;
+            }
+        }
+        @media only screen and (min-width: 321px) {
+            .btn {
+                width: fit-content;
+            }
+        }
+        padding-bottom: 10px;
+    }
+
+    .footer-first-row {
+        display: flex;
+        flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+    }
+</style>

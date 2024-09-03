@@ -2,6 +2,7 @@
 import faviconSrc from '../images/favicon.png';
 import faviconSvgSrc from '../images/favicon.svg';
 import Header from '../components/Navigation/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
 import '../sass/global.scss';
 import '../sass/layouts/_layout.scss';
 
@@ -48,5 +49,6 @@ const { title, isHomePage } = Astro.props as Props;
                 });
             }
         </script>
+        <Footer />
     </body>
 </html>
