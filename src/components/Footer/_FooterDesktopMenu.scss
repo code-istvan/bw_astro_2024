@@ -1,6 +1,6 @@
 @import '/src/sass/global';
 
-.footer-desktop-menu-lists {
+.footer-desktop-menu {
   display: flex;
   flex-direction: row;
 
@@ -25,15 +25,9 @@
   }
 }
 
-.footer-desktop-menu-lists a:hover {
+.footer-desktop-menu a:hover {
   color: $color-brand-orange;
   text-decoration: none;
-}
-
-.fake-button {
-  background-color: transparent;
-  cursor: pointer !important;
-  padding: 0 !important;
 }
 
 .menu-flash {

@@ -1,45 +1,40 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
-.footer-desktop-menu-lists {
+.footer-desktop-menu {
   display: flex;
   flex-direction: row;
 
-  ul {
+  &__list {
     list-style-type: none;
   }
 
-  li {
+  &__item {
     color: $color-shades-lightGray;
+
+    &--highlighted {
+      color: $color-brand-orange;
+      text-decoration: none;
+    }
   }
 
-  p {
+  &__header {
     margin-bottom: 4px;
+    background-color: transparent;
+    cursor: pointer !important;
+    padding: 0 !important;
   }
 
-  .separator {
-    border-bottom: solid 1px $color-shades-lightBlack;
+  &__submenu {
+    &:hover {
+      color: $color-brand-orange;
+      text-decoration: none;
+    }
   }
 
-  .footer__english {
-    margin-top: 2rem;
+  &__link:hover {
+    color: $color-brand-orange;
+    text-decoration: none;
   }
-}
-
-.footer-submenu,
-.footer-menuitem {
-  &:hover {
-    color: $color-brand-orange !important;
-    // text-decoration-line: underline;
-    // text-decoration-color: $color-brand-orange;
-    // text-decoration-thickness: 3px;
-    // color: $color-shades-white !important;
-  }
-}
-
-.fake-button {
-  background-color: transparent;
-  cursor: pointer !important;
-  padding: 0 !important;
 }
 
 .menu-flash {
