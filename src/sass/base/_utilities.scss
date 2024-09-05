@@ -135,10 +135,14 @@
 
 // Text link design START
 .link-enhanced {
-  color: $color-brand-orange;
+  color: inherit;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.link-orange {
+  color: $color-brand-orange;
 }
 
 .link-enhanced:hover {
