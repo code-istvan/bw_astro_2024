@@ -1,0 +1,69 @@
+---
+const menuItemsJogaorak = [
+    { link: '/orarend', label: 'Órarend' },
+    { link: '/arak', label: 'Árak' },
+    { link: '/astanga-mysore-program', label: 'Mysore-program' },
+    { link: '/tanfolyam', label: 'Tanfolyamok' },
+    { link: '/csapatunk', label: 'Csapatunk' },
+    { link: '/vinyasza-jogairanyzatok', label: 'Jógairányzatok' },
+    { link: '/letoltesek', label: 'Letöltések' },
+];
+
+const menuItemsTudnivalok = [
+    { link: '/rolunk', label: 'Rólunk' },
+    { link: '/elso-alkalom', label: 'Első alkalom' },
+    { link: '/hazirend', label: 'Házirend' },
+    { link: '/mantra', label: 'Mantrák' },
+    { link: '/holdnapok', label: 'Holdnapok' },
+    { link: '/osztondij', label: 'Ösztöndíj' },
+    { link: '/ajanlottolvasmanyok', label: 'Olvasmányok' },
+];
+---
+
+<div class="row footer-desktop-menu-lists">
+    <div class="col-4-md">
+        <ul>
+            <li>
+                <a class="fake-button clr-shades-lightGray heading heading--4 mb-20px">Jógaórák</a>
+            </li>
+            {
+                menuItemsJogaorak.map(({ link, label }) => (
+                    <li>
+                        <a href={link}>
+                            <p class="clr-shades-lightGray footer-submenu">{label}</p>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <div class="col-4-md">
+        <ul>
+            <li>
+                <a class="fake-button clr-shades-lightGray heading heading--4 mb-20px">Tudnivalók</a>
+            </li>
+            {
+                menuItemsTudnivalok.map(({ link, label }) => (
+                    <li>
+                        <a href={link}>
+                            <p class="clr-shades-lightGray footer-submenu">{label}</p>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <div class="col-4-md">
+        <ul>
+            <li class="mb-20px">
+                <a href="/blog" class="fake-button clr-shades-lightGray heading heading--4">Blog</a>
+            </li>
+            <li class="mb-20px">
+                <a href="https://shop.bandha.works" class="fake-button clr-shades-lightGray heading heading--4">Shop</a>
+            </li>
+            <li>
+                <a href="/kapcsolat" class="fake-button clr-shades-lightGray heading heading--4">Kapcsolat</a>
+            </li>
+        </ul>
+    </div>
+</div>
