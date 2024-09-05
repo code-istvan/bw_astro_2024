@@ -1,4 +1,6 @@
 ---
+import './_FooterDesktopMenu.scss';
+
 const menuItemsJogaorak = [
     { link: '/orarend', label: 'Órarend' },
     { link: '/arak', label: 'Árak' },
@@ -56,13 +58,20 @@ const menuItemsTudnivalok = [
     <div class="col-4-md">
         <ul>
             <li class="mb-20px">
-                <a href="/blog" class="fake-button clr-shades-lightGray heading heading--4">Blog</a>
+                <a href="/blog" class="fake-button clr-shades-lightGray heading heading--4 no-underline">Blog</a>
             </li>
             <li class="mb-20px">
-                <a href="https://shop.bandha.works" class="fake-button clr-shades-lightGray heading heading--4">Shop</a>
+                <a
+                    href="https://shop.bandha.works"
+                    class="fake-button clr-shades-lightGray heading heading--4 no-underline"
+                >
+                    Shop
+                </a>
             </li>
             <li>
-                <a href="/kapcsolat" class="fake-button clr-shades-lightGray heading heading--4">Kapcsolat</a>
+                <a href="/kapcsolat" class="fake-button clr-shades-lightGray heading heading--4 no-underline">
+                    Kapcsolat
+                </a>
             </li>
         </ul>
     </div>

@@ -15,13 +15,19 @@
   p {
     margin-bottom: 4px;
   }
+
+  .footer-submenu,
+  .footer-menuitem {
+    &:hover {
+      color: $color-brand-orange;
+      text-decoration: none;
+    }
+  }
 }
 
-.footer-submenu,
-.footer-menuitem {
-  &:hover {
-    color: $color-brand-orange !important;
-  }
+.footer-desktop-menu-lists a:hover {
+  color: $color-brand-orange;
+  text-decoration: none;
 }
 
 .fake-button {

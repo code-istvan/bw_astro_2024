@@ -1,0 +1,12 @@
+@import '/src/sass/global';
+
+.social-icons__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+
+  svg:hover {
+    fill: $color-brand-orange;
+  }
+}
