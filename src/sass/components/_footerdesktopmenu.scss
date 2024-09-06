@@ -7,6 +7,11 @@
   &__list {
     list-style-type: none;
   }
+  &__link {
+    a {
+      text-decoration: none;
+    }
+  }
 
   &__item {
     color: $color-shades-lightGray;
