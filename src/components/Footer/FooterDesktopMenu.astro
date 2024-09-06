@@ -1,24 +1,28 @@
 ---
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import './_FooterDesktopMenu.scss';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const menuItemsJogaorak = [
-    { link: '/orarend', label: 'Órarend' },
-    { link: '/arak', label: 'Árak' },
-    { link: '/astanga-mysore-program', label: 'Mysore-program' },
-    { link: '/tanfolyam', label: 'Tanfolyamok' },
-    { link: '/csapatunk', label: 'Csapatunk' },
-    { link: '/vinyasza-jogairanyzatok', label: 'Jógairányzatok' },
-    { link: '/letoltesek', label: 'Letöltések' },
+    { link: t('orarendLink'), label: t('orarend') },
+    { link: t('arakLink'), label: t('arak') },
+    { link: t('mysoreprogramLink'), label: t('mysoreprogram') },
+    { link: t('tanfolyamokLink'), label: t('tanfolyamok') },
+    { link: t('csapatunkLink'), label: t('csapatunk') },
+    { link: t('jogairanyzatokLink'), label: t('jogairanyzatok') },
+    { link: t('letoltesek'), label: t('letoltesek') },
 ];
 
 const menuItemsTudnivalok = [
-    { link: '/rolunk', label: 'Rólunk' },
-    { link: '/elso-alkalom', label: 'Első alkalom' },
-    { link: '/hazirend', label: 'Házirend' },
-    { link: '/mantra', label: 'Mantrák' },
-    { link: '/holdnapok', label: 'Holdnapok' },
-    { link: '/osztondij', label: 'Ösztöndíj' },
-    { link: '/ajanlottolvasmanyok', label: 'Olvasmányok' },
+    { link: t('rolunkLink'), label: t('rolunk') },
+    { link: t('elsoalkalomLink'), label: t('elsoalkalom') },
+    { link: t('hazirendLink'), label: t('hazirend') },
+    { link: t('mantraLink'), label: t('mantra') },
+    { link: t('holdnapokLink'), label: t('holdnapok') },
+    { link: t('osztondijLink'), label: t('osztondij') },
+    { link: t('olvasmanyokLink'), label: t('olvasmanyok') },
 ];
 ---
 
@@ -26,7 +30,9 @@ const menuItemsTudnivalok = [
     <div class="col-4-md ooter-desktop-menu__column">
         <ul class="footer-desktop-menu__list">
             <li>
-                <p class="footer-desktop-menu__header clr-shades-lightGray heading heading--4 mb-20px">Jógaórák</p>
+                <p class="footer-desktop-menu__header clr-shades-lightGray heading heading--4 mb-20px">
+                    {t('jogaorak')}
+                </p>
             </li>
             {
                 menuItemsJogaorak.map(({ link, label }) => (
@@ -42,7 +48,9 @@ const menuItemsTudnivalok = [
     <div class="footer-desktop-menu__column col-4-md">
         <ul class="footer-desktop-menu__list">
             <li>
-                <p class="footer-desktop-menu__header clr-shades-lightGray heading heading--4 mb-20px">Tudnivalók</p>
+                <p class="footer-desktop-menu__header clr-shades-lightGray heading heading--4 mb-20px">
+                    {t('tudnivalok')}
+                </p>
             </li>
             {
                 menuItemsTudnivalok.map(({ link, label }) => (
@@ -72,10 +80,10 @@ const menuItemsTudnivalok = [
             </li>
             <li class="footer-desktop-menu__item footer-desktop-menu__item--highlighted">
                 <a
-                    href="/kapcsolat"
+                    href={t('kapcsolatLink')}
                     class="footer-desktop-menu__link clr-shades-lightGray heading heading--4 no-underline"
                 >
-                    Kapcsolat
+                    {t('kapcsolat')}
                 </a>
             </li>
         </ul>
