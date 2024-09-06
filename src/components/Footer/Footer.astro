@@ -2,7 +2,13 @@
 import Icons from '../Icons/Icons.astro';
 import SocialIcons from '../Icons/SocialIcons.astro';
 import FooterDesktopMenu from './FooterDesktopMenu.astro';
+import { useTranslations, getLangFromUrl } from '../../i18n/utils';
 import './_footer.scss';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const isEnglish = lang === 'en';
 ---
 
 <footer>
@@ -17,9 +23,11 @@ import './_footer.scss';
                     </div>
                     <div class="footer__icon-text">
                         <p>
-                            Astanga Jógaiskola <br />
-                            Paramaguru Sharath Jois <br />
-                            áldásával
+                            {t('footerBrandTextLine1')}
+                            <br />
+                            {t('footerBrandTextLine2')}
+                            <br />
+                            {t('footerBrandTextLine3')}
                         </p>
                     </div>
                 </div>
@@ -31,15 +39,15 @@ import './_footer.scss';
             </div>
             <div class="col-12-xs col-6-md footer__newsletter">
                 <div class="footer__newsletter-box text-center">
-                    <h3 class="mb-1 mt-0">IRATKOZZ FEL HÍRLEVELÜNKRE</h3>
-                    <p class="mb-2 mt-0">Értesülj a legfrissebb eseményeinkről és egyéb jógás hírekről elsőkézből.</p>
+                    <h3 class="mb-1 mt-0">{t('footerNewsletterTitle')}</h3>
+                    <p class="mb-2 mt-0">{t('footerNewsletterText')}</p>
                     <div class="centered-block">
                         <a
-                            href="/hirlevel"
+                            href={t('footerNewsletterLink')}
                             class="btn btn--secondary--outline mt-20px mb-20px"
                             aria-label="Feliratkozás hírlevélre"
                         >
-                            Feliratkozás
+                            {t('footerNewsletterButton')}
                         </a>
                     </div>
                 </div>
@@ -71,11 +79,11 @@ import './_footer.scss';
                 <div class="separator"></div>
                 <div>
                     <a
-                        href="/adatvedelmi-tajekoztato"
+                        href="{t('footerPrivacyLink')}"
                         class="link-enhanced"
-                        aria-label="Tovább az OmWorks Yoga Creatives oldalra"
+                        aria-label="Tovább az Adatvédelmi tájékoztató oldalra"
                     >
-                        <p class="small">Adatvédelmi tájékoztató</p>
+                        <p class="small">{t('footerPrivacyText')}</p>
                     </a>
                 </div>
             </div>

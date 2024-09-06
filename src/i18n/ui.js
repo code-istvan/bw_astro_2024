@@ -8,6 +8,7 @@ export const showDefaultLang = false;
 
 export const ui = {
   hu: {
+    // Menu
     orarend: 'Órarend',
     arak: 'Árak',
     mysoreprogram: 'Mysore-program',
@@ -25,6 +26,19 @@ export const ui = {
     jogaorak: 'JÓGAÓRÁK',
     tudnivalok: 'TUDNIVALÓK',
     kapcsolat: 'KAPCSOLAT',
+
+    // Footer
+    footerBrandTextLine1: 'Astanga Jógaiskola',
+    footerBrandTextLine2: 'Paramaguru Sharath Jois',
+    footerBrandTextLine3: 'áldásával',
+    footerNewsletterTitle: 'IRATKOZZ FEL HÍRLEVELÜNKRE',
+    footerNewsletterText: 'Értesülj a legfrissebb eseményeinkről és egyéb jógás hírekről elsőkézből.',
+    footerNewsletterButton: 'Feliratkozás',
+    footerNewsletterLink: '/hirlevel',
+    footerPrivacyText: 'Adatvédelmi tájékoztató',
+    footerPrivacyLink: '/adatvedelmi-tajekoztato',
+
+    // Sections
     sectionAboutText:
       'A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy a tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon. Több mint tíz év elteltével a helyzet mit sem változott, oktatóink elkötelezett gyakorlói az irányzatnak, és rendszeresen, az astanga jóga fővárosába, a dél-indiai Mysore-ba utaznak, hogy tovább mélyítsék tudásuk, megértésük.',
     sectionAboutButton: 'Tudj meg többet rólunk',
@@ -55,6 +69,7 @@ export const ui = {
   },
 
   en: {
+    // Menu
     orarend: 'Schedule',
     arak: 'Prices',
     mysoreprogram: 'Mysore-program',
@@ -72,6 +87,19 @@ export const ui = {
     jogaorak: 'YOGA CLASSES',
     tudnivalok: 'INFORMATION',
     kapcsolat: 'CONTACT',
+
+    // Footer
+    footerBrandTextLine1: 'Ashtanga Yoga Shala',
+    footerBrandTextLine2: 'With the Blessings of',
+    footerBrandTextLine3: 'Paramaguru Sharath Jois',
+    footerNewsletterTitle: 'SUBSCRIBE TO OUR NEWSLETTER',
+    footerNewsletterText: 'Stay up to date with our latest news and events',
+    footerNewsletterButton: 'Subscribe',
+    footerNewsletterLink: '/en/hirlevel',
+    footerPrivacyText: 'Privacy policy',
+    footerPrivacyLink: '/en/adatvedelmi-tajekoztato',
+
+    // Sections
     sectionAboutText:
       'The Bandha Works Yoga School was founded in 2013 by three engineers who were united by their desire to promote and teach traditional ashtanga vinyasa yoga in Hungary. After more than ten years, the situation has not changed, our teachers are dedicated practitioners of the tradition and regularly travel to the capital of ashtanga yoga, Mysore, South India, to further deepen their knowledge and understanding by drawing from the lineage. ',
     sectionAboutButton: 'Find out more about us',
