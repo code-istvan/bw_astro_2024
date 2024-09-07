@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage.astro';
+import mobileImage from '../images/hirlevel_mobil.jpeg';
+import desktopImage from '../images/hirlevel_desktop.jpeg';
 import SubscriptionForm from '../components/SubscriptionForm.jsx';
-const pageTitle = 'Hirlevel';
+
+const pageTitle = 'Hírlevel';
 ---
 
 <BaseLayout title={pageTitle}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Hirlevel</h1></div>
         <div class="row">
             <div class="col-md-6">
                 <p>Iratkozz fel hírlevelünkre, hogy elsőként értesülj a legfrissebb híreinkről!</p>
