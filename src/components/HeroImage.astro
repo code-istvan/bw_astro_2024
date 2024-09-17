@@ -1,8 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
-// import '@fontsource/abril-fatface';
-// import '@fontsource/abril-fatface/400.css';
 import './HeroImage/_heroImage.scss';
 
 interface Props {
@@ -32,15 +30,12 @@ const mobileImg = await getImage({
     height: 1080,
 });
 
-// Feltételes logika a szélesség és magasság beállítására
-const desktopWidth = indexHu || indexEn ? 3840 : 1800;
-const desktopHeight = indexHu || indexEn ? 1333 : undefined; // Automatikusan kiszámítja, ha undefined marad
-
+// A felesleges feltételes logika eltávolítása
 const desktopImg = await getImage({
     src: desktopImgUrl,
     format: 'webp',
-    width: desktopWidth,
-    height: desktopHeight, // Csak akkor adja meg, ha szükséges
+    width: 1800, // Mindig 1800 szélességet használunk
+    // A magasság automatikusan kiszámításra kerül, ha undefined marad
 });
 
 const heroContainerClass = `container hero-container ${containerClass} ${indexHu ? 'indexHu' : ''} ${indexEn ? 'indexEn' : ''}`;
