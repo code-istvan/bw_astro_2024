@@ -2,17 +2,11 @@
 
 #desktopMenu {
   display: none;
-}
-
-#desktopMenu.open {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  display: block;
-  //   height: calc(100vh - 60px);
   height: 100vh;
   top: 0;
-  // transform: translateY(60px);
   padding-top: 120px;
   left: 0;
   right: 0;
@@ -22,9 +16,13 @@
   overflow-y: hidden;
   overflow-x: hidden;
   background-color: $offcanvas-menu-color;
-  -webkit-transition: all 500ms ease-out;
-  -o-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
+}
+
+#desktopMenu.open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .off-canvas-menu {
@@ -32,23 +30,46 @@
   grid-template-columns:
     1fr minmax(auto, 230px) minmax(auto, 230px) minmax(auto, 230px)
     1fr;
-  // gap: 50px;
-  width: 100%; /* A teljes képernyő szélességét használja */
+  width: 100%;
 }
 
 .menu-item {
-  padding: 10px; /* Kis térköz a szöveg körül */
+  padding: 10px;
 }
 
-/* Az első és utolsó oszlop üres, de az 1fr miatt helyet foglalnak */
 #menu1 {
-  grid-column: 2; /* A második oszlopban helyezkedik el */
+  grid-column: 2;
 }
 
 #menu2 {
-  grid-column: 3; /* A harmadik oszlopban helyezkedik el */
+  grid-column: 3;
 }
 
 #menu3 {
-  grid-column: 4; /* A negyedik oszlopban helyezkedik el */
+  grid-column: 4;
+}
+
+#desktopMenu .dropdown-menu__content {
+  display: block;
+}
+
+#desktopMenu .dropdown-menu__content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#desktopMenu .dropdown-menu__content li {
+  margin-bottom: 10px;
+}
+
+#desktopMenu .dropdown-menu__content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  #desktopMenu {
+    display: none !important;
+  }
 }

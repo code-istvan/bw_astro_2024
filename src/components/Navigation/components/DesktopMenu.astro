@@ -1,54 +1,76 @@
 ---
 import './_desktopMenu.scss';
+import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
+import { getMenuItemsJogaorak, getMenuItemsTudnivalok, getMenuItemsFomenu } from '../data/menuData';
+
+const language = Astro.url.pathname.includes('/en/') ? 'en' : 'hu';
+const t = useTranslations(language);
+const translatePath = useTranslatedPath(language);
+
+const jogaorakItems = getMenuItemsJogaorak(translatePath, t);
+const tudnivalokItems = getMenuItemsTudnivalok(translatePath, t);
+const fomenuItems = getMenuItemsFomenu(translatePath, t);
 ---
 
 <div id="desktopMenu">
     <div class="off-canvas-menu">
         <div class="menu-item" id="menu1">
-            <div><h3 id="jogaorak-label-desktop">JÓGAÓRÁK</h3></div>
-            <div id="jogaorak-desktop" class="dropdown-menu__content"></div>
+            <div><h3 id="jogaorak-label-desktop">{t('jogaorak')}</h3></div>
+            <div id="jogaorak-desktop" class="dropdown-menu__content">
+                <ul>
+                    {
+                        jogaorakItems.map((item) => (
+                            <li>
+                                <h3>
+                                    <a href={item.link}>{item.label}</a>
+                                </h3>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
         <div class="menu-item" id="menu2">
-            <div><h3 id="tudnivalok-label-desktop">TUDNIVALÓK</h3></div><div
-                id="tudnivalok-desktop"
-                class="dropdown-menu__content"
-            >
+            <div><h3 id="tudnivalok-label-desktop">{t('tudnivalok')}</h3></div>
+            <div id="tudnivalok-desktop" class="dropdown-menu__content">
+                <ul>
+                    {
+                        tudnivalokItems.map((item) => (
+                            <li>
+                                <h3>
+                                    <a href={item.link}>{item.label}</a>
+                                </h3>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </div>
         <div class="menu-item" id="menu3">
-            <div id="fomenuItems-desktop"></div>
+            <div id="fomenuItems-desktop">
+                <ul>
+                    {
+                        fomenuItems.map((item) => (
+                            <li>
+                                <h3>
+                                    <a href={item.link}>{item.label}</a>
+                                </h3>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
-    import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
-    import { initMenu, initMenuComponents } from './menuLogic.js';
+    const desktopMenu = document.getElementById('desktopMenu');
+    const hamburgerButton = document.getElementById('hamburgerButton');
 
-    const language = window.location.href.includes('en') ? 'en' : 'hu';
-    const t = useTranslations(language);
-    const translatePath = useTranslatedPath(language);
-
-    // Initialize components with menu logic
-    initMenuComponents(language, t, [
-        {
-            toggleId: 'menu1',
-            contentId: 'jogaorak-desktop',
-            labelId: 'jogaorak-label-desktop',
-            labelTextKey: 'jogaorak',
-        },
-        {
-            toggleId: 'menu2',
-            contentId: 'tudnivalok-desktop',
-            labelId: 'tudnivalok-label-desktop',
-            labelTextKey: 'tudnivalok',
-        },
-    ]);
-
-    const jogorakList = document.getElementById('jogaorak-desktop');
-    const tudnivalokList = document.getElementById('tudnivalok-desktop');
-    const fomenuItems = document.getElementById('fomenuItems-desktop');
-
-    // Populate menu items dynamically
-    initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
+    if (hamburgerButton && desktopMenu) {
+        hamburgerButton.addEventListener('click', () => {
+            desktopMenu.classList.toggle('open');
+        });
+    }
 </script>
