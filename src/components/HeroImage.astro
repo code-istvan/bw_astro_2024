@@ -32,14 +32,21 @@ const mobileImg = await getImage({
     height: 1080,
 });
 
+// Feltételes logika a szélesség és magasság beállítására
+const desktopWidth = indexHu || indexEn ? 3840 : 1800;
+const desktopHeight = indexHu || indexEn ? 1333 : undefined; // Automatikusan kiszámítja, ha undefined marad
+
 const desktopImg = await getImage({
     src: desktopImgUrl,
     format: 'webp',
-    width: 1800,
+    width: desktopWidth,
+    height: desktopHeight, // Csak akkor adja meg, ha szükséges
 });
+
+const heroContainerClass = `container hero-container ${containerClass} ${indexHu ? 'indexHu' : ''} ${indexEn ? 'indexEn' : ''}`;
 ---
 
-<div class={`container hero-container ${containerClass}`}>
+<div class={heroContainerClass}>
     <h1 class="page-name">{pageName}</h1>
     <div class="hero-image-wrapper">
         <div class="hero-image">

@@ -59,6 +59,13 @@
   .hero-image {
     height: auto;
     aspect-ratio: 1800 / 550;
+    max-height: 100vh;
+  }
+
+  /* Ha a nagyobb képarányt használod */
+  .hero-container.indexHu .hero-image,
+  .hero-container.indexEn .hero-image {
+    aspect-ratio: 3840 / 1333; /* Dinamikus arány */
   }
 }
 
