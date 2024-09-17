@@ -1,6 +1,6 @@
 @import '/src/sass/global';
 
-#desktopMenu {
+.desktop-menu {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -17,59 +17,92 @@
   overflow-x: hidden;
   background-color: $offcanvas-menu-color;
   transition: all 500ms ease-out;
-}
 
-#desktopMenu.open {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
+  &.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
 
-.off-canvas-menu {
-  display: grid;
-  grid-template-columns:
-    1fr minmax(auto, 230px) minmax(auto, 230px) minmax(auto, 230px)
-    1fr;
-  width: 100%;
-}
+  &__off-canvas-menu {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, minmax(auto, 230px)) 1fr;
+    width: 100%;
+    gap: 90px;
+  }
 
-.menu-item {
-  padding: 10px;
-}
+  &__item {
+    padding: 10px;
 
-#menu1 {
-  grid-column: 2;
-}
+    &:nth-child(1) {
+      grid-column: 2;
+    }
 
-#menu2 {
-  grid-column: 3;
-}
+    &:nth-child(2) {
+      grid-column: 3;
+    }
 
-#menu3 {
-  grid-column: 4;
-}
+    &:nth-child(3) {
+      grid-column: 4;
+    }
+  }
 
-#desktopMenu .dropdown-menu__content {
-  display: block;
-}
+  &__dropdown-menu-content {
+    display: block;
+  }
 
-#desktopMenu .dropdown-menu__content ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+  &__dropdown-menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
-#desktopMenu .dropdown-menu__content li {
-  margin-bottom: 10px;
-}
+  // Almenü elemek közötti távolság állítása
+  .desktop-menu__dropdown-menu-item {
+    margin-bottom: 20px; // Ezzel növelheted a listán belüli elemek közötti távolságot
+    cursor: pointer;
+  }
+  #menu1 .desktop-menu__dropdown-menu-item,
+  #menu2 .desktop-menu__dropdown-menu-item {
+    color: $color-shades-gray;
+  }
 
-#desktopMenu .dropdown-menu__content a {
-  text-decoration: none;
-  color: inherit;
+  #menu1 .desktop-menu__dropdown-menu-content ul,
+  #menu2 .desktop-menu__dropdown-menu-content ul {
+    margin-top: 40px;
+  }
+
+  // Almenü elemek közötti elválasztó vonal
+  #menu1 .desktop-menu__dropdown-menu-item:not(:last-child),
+  #menu2 .desktop-menu__dropdown-menu-item:not(:last-child) {
+    border-bottom: 1px solid $color-shades-darkGray;
+    padding-bottom: 10px;
+  }
+
+  #menu3 .desktop-menu__dropdown-menu-item h3 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+  }
+
+  &__dropdown-menu-item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__label {
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+  }
 }
 
 @media (max-width: 768px) {
-  #desktopMenu {
+  .desktop-menu {
     display: none !important;
   }
 }
