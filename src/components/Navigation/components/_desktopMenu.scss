@@ -62,6 +62,11 @@
     margin-bottom: 20px; // Ezzel növelheted a listán belüli elemek közötti távolságot
     cursor: pointer;
   }
+
+  .desktop-menu__dropdown-menu-item:hover a {
+    color: $color-brand-orange;
+  }
+
   #menu1 .desktop-menu__dropdown-menu-item,
   #menu2 .desktop-menu__dropdown-menu-item {
     color: $color-shades-gray;
