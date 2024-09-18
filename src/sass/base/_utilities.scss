@@ -208,3 +208,31 @@ blockquote {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+ol {
+  list-style: none;
+  counter-reset: item;
+  font-family: $font-family-secondary;
+  font-size: 1.1428571429rem !important;
+  font-weight: $font-weight-regular;
+
+  li {
+    counter-increment: item;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  li:before {
+    margin-right: 20px;
+    content: counter(item);
+    position: absolute;
+    left: -40px;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: $color-brand-orange;
+    color: $color-shades-black;
+    font-family: $font-family-secondary;
+    font-weight: 800;
+    text-align: center;
+    display: inline-block;
+  }
+}
