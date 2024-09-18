@@ -1,0 +1,80 @@
+{
+  "hu": {
+    "needed": [
+      {
+        "needed": "kényelmes sportruházat, rövidnadrág (hogy lássuk a térded), rövidujjú póló"
+      },
+      {
+        "needed": "egy nagyobb törülköző (matracra teríteni) és egy kisebb törülköző (az igazításokhoz)"
+      },
+      {
+        "needed": "matracot tudunk biztosítani de ha van sajátod hozd bátran"
+      }
+    ],
+    "moreInfos": [
+      {
+        "moreInfo": "a jógaórák előtt 3-4 órával már ne egyél és fél órával ne igyál"
+      },
+      {
+        "moreInfo": "a cipődet hagyd a bejárat mellett a kijelölt helyen, ha szeretnél, hozz magaddal papucsot"
+      },
+      {
+        "moreInfo": "értékeidet zárd be az öltözőszekrénybe, a törölközőkön kívül mást ne hozz be a terembe"
+      },
+      {
+        "moreInfo": "mindig jelezd óra előtt, ha bármilyen sérülésed vagy betegséged van"
+      },
+      {
+        "moreInfo": "kérünk, vizet és egyéb folyadékot ne hozz be a gyakorlóterembe"
+      },
+      {
+        "moreInfo": "kérjük, ne beszélgess a teremben, és a terem előtt is csendben készülődj, ha bent óra van"
+      },
+      {
+        "moreInfo": "óra előtt és/vagy után lehetőség van zuhanyozni"
+      },
+      {
+        "moreInfo": "ászanagyakorlás után mindenképpen hagyj magadnak fél vagy egy órát, mielőtt étkeznél"
+      }
+    ]
+  },
+  "en": {
+    "needed": [
+      {
+        "needed": "comfortable sportswear, shorts (so we can see your knees), short-sleeved shirt"
+      },
+      {
+        "needed": "a large towel (to cover the mat) and a small towel (for adjustments)"
+      },
+      {
+        "needed": "we can provide a mat, but feel free to bring your own"
+      }
+    ],
+    "moreInfos": [
+      {
+        "moreInfo": "do not eat for 3-4 hours before yoga class and do not drink for half an hour before"
+      },
+      {
+        "moreInfo": "leave your shoes at the designated place near the entrance; bring slippers if you like"
+      },
+      {
+        "moreInfo": "lock your valuables in the locker room; do not bring anything but towels into the studio"
+      },
+      {
+        "moreInfo": "always inform your instructor before class if you have any injuries or health issues"
+      },
+      {
+        "moreInfo": "please do not bring water or other liquids into the practice room"
+      },
+      {
+        "moreInfo": "please refrain from talking in the studio and prepare quietly outside if a class is in progress"
+      },
+      {
+        "moreInfo": "you can take a shower before and/or after class"
+      },
+      {
+        "moreInfo": "allow at least half an hour or an hour after practicing before eating"
+      }
+    ]
+  }
+}

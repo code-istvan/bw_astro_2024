@@ -3,14 +3,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../images/elsoalkalom_desktop.jpg';
+import firstTimeData from '../data/firstTime.json';
 
 const pageTitle = 'Első alkalom';
+const language = 'hu';
+const needed = firstTimeData[language].needed;
+const moreInfos = firstTimeData[language].moreInfos;
 ---
 
 <BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="elsoalkalom-wrapper tight--desktop--container">
+            <div class="row mt-40px mb-20px">
+                <p>
+                    Ha először jársz nálunk, érkezz legalább 15 perccel órakezdés előtt, hogy legyen elég idő a
+                    regisztrációra (tanfolyami részvétel esetén nincs szükség regisztrációra). A regisztrációs űrlap
+                    kitöltése után rövid elbeszélgetés következik az oktatóval (egyelőre csak a Mysore-programosokkal) a
+                    hatékony együttműködés érdekében. Ekkor mindenképp jelezd, ha bármilyen különös odafigyelést igénylő
+                    állapotban vagy (például: sérülés, betegség, terhesség).
+                </p>
+            </div>
+            <div class="row mb-20px">
+                <p>Amire szükséged lesz:</p>
+            </div>
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        needed &&
+                            needed.map(({ needed }) => (
+                                <li>
+                                    <p>{needed}</p>
+                                </li>
+                            ))
+                    }
+                </ul>
+            </div>
+            <div class="row mb-20px">
+                <p>Egyéb tudnivalók:</p>
+            </div>
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        moreInfos &&
+                            moreInfos.map(({ moreInfo }) => (
+                                <li>
+                                    <p>{moreInfo}</p>
+                                </li>
+                            ))
+                    }
+                </ul>
+            </div>
+            <div class="row mb-40px">
+                <p>Várunk szeretettel!</p>
+            </div>
+        </div>
     </div>
 </BaseLayout>
 
