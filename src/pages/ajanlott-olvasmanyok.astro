@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
+import Accordion from '../components/Accordion.astro';
 import mobileImage from '../images/olvasmanyok_mobil.jpeg';
 import desktopImage from '../images/olvasmanyok_desktop.jpeg';
 import recommendedReadings from '../data/recommendedReadings.json';
@@ -31,9 +32,10 @@ const enBooks = recommendedReadings.EN;
             </p>
         </div>
         <div class="row mt-40px mb-20px">
-            <h3>Astanga vinyásza jóga</h3>
+            <Accordion className="accordion-title" title="Astanga vinyásza jóga" books={huBooks.olvasmanyokAstanga} />
         </div>
-        <div class="row unordered-list-style mb-40px">
+
+        <!-- <div class="row unordered-list-style mb-40px">
             <ul>
                 {
                     huBooks.olvasmanyokAstanga.map((book) => (
@@ -51,7 +53,7 @@ const enBooks = recommendedReadings.EN;
                 }
             </ul>
             <br />
-        </div>
+        </div> -->
         <div class="row mb-20px">
             <h3>Vinyásza krama jóga</h3>
         </div>
