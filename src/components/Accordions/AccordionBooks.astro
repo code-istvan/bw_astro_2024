@@ -1,0 +1,67 @@
+---
+import './_accordionBooks.scss';
+const { title, className, books, id } = Astro.props;
+---
+
+<div class="accordion__section">
+    <button class="accordion" data-accordion-toggle={id}>
+        <div class="accordion-chevron">
+            <div class="accordion__title-container"><h3 class={className}>{title}</h3></div>
+            <div class="accordion__svg-container">
+                <svg
+                    class="accordion__icon"
+                    data-accordion-icon={id}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="hsl(0, 0%, 100%)"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M10.5 10V2H13.5V10H22V13H13.5V22H10.5V13H2V10H10.5Z" fill="orange"></path>
+                </svg>
+            </div>
+        </div>
+    </button>
+    <div data-accordion-content={id} class="accordion__content">
+        <div class="accordion__text">
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        books.map((book) => (
+                            <li>
+                                {book.link ? (
+                                    <a href={book.link} target="_blank" class="link-enhanced link-orange">
+                                        <strong>{book.title}</strong>
+                                    </a>
+                                ) : (
+                                    <strong>{book.title}</strong>
+                                )}
+                                - {book.author} <br />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.accordion').forEach((accordionButton) => {
+        const id = accordionButton.getAttribute('data-accordion-toggle');
+        const accordionContent = document.querySelector(`[data-accordion-content="${id}"]`) as HTMLElement; // Típus meghatározása
+        const accordionIcon = document.querySelector(`[data-accordion-icon="${id}"]`) as HTMLElement; // Típus meghatározása
+
+        accordionButton.addEventListener('click', () => {
+            const contentHeight = accordionContent.scrollHeight;
+
+            if (accordionContent.style.maxHeight === '0px' || !accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = contentHeight + 'px';
+                accordionIcon.classList.add('rotate__90deg');
+            } else {
+                accordionContent.style.maxHeight = '0px';
+                accordionIcon.classList.remove('rotate__90deg');
+            }
+        });
+    });
+</script>
