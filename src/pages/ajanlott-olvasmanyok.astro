@@ -8,11 +8,16 @@ import recommendedReadings from '../data/recommendedReadings.json';
 
 const pageTitle = 'Ajánlott olvasmányok';
 
+const metadata = {
+    title: pageTitle,
+    description: 'A jóga gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.',
+};
+
 const huBooks = recommendedReadings.HU;
 const enBooks = recommendedReadings.EN;
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout {...metadata}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
