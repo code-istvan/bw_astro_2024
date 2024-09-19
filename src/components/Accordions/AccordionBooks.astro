@@ -24,7 +24,7 @@ const { title, className, books, id } = Astro.props;
     </button>
     <div data-accordion-content={id} class="accordion__content">
         <div class="accordion__text">
-            <div class="row unordered-list-style mb-40px">
+            <div class="row unordered-list-style mb-20px">
                 <ul>
                     {
                         books.map((book) => (
@@ -57,10 +57,10 @@ const { title, className, books, id } = Astro.props;
 
             if (accordionContent.style.maxHeight === '0px' || !accordionContent.style.maxHeight) {
                 accordionContent.style.maxHeight = contentHeight + 'px';
-                accordionIcon.classList.add('rotate__90deg');
+                accordionIcon.classList.add('rotate__45deg');
             } else {
                 accordionContent.style.maxHeight = '0px';
-                accordionIcon.classList.remove('rotate__90deg');
+                accordionIcon.classList.remove('rotate__45deg');
             }
         });
     });
