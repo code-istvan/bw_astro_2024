@@ -3,7 +3,8 @@ import faviconSrc from '../images/favicon.png';
 import faviconSvgSrc from '../images/favicon.svg';
 import Header from '../components/Navigation/Header.astro';
 import Footer from '../components/Footer/Footer.astro';
-import '@fontsource/abril-fatface';
+import { AstroFont } from 'astro-font';
+// import '@fontsource/abril-fatface';
 import '@fontsource/nunito-sans';
 import '../sass/global.scss';
 import '../sass/layouts/_layout.scss';
@@ -31,6 +32,19 @@ const { title, isHomePage } = Astro.props as Props;
         <link rel="apple-touch-icon" href={faviconSrc.src} />
         <link rel="manifest" href="/manifest.json" />
         <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <AstroFont
+            config={[
+                {
+                    src: [],
+                    name: 'Abril Fatface',
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
+                    preload: true,
+                    display: 'swap',
+                    selector: 'body',
+                    fallback: 'serif',
+                },
+            ]}
+        />
     </head>
     <body>
         <Header />
