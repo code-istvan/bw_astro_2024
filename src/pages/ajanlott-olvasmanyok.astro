@@ -3,14 +3,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/olvasmanyok_mobil.jpeg';
 import desktopImage from '../images/olvasmanyok_desktop.jpeg';
+import recommendedReadings from '../data/recommendedReadings.json';
 
 const pageTitle = 'Ajánlott olvasmányok';
+
+const huBooks = recommendedReadings.HU;
+const enBooks = recommendedReadings.EN;
 ---
 
 <BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row">
+            <blockquote class="mt-40px">A jóga 99%-ban gyakorlat és 1%-ban elmélet</blockquote>
+            <p class="mt-40px">
+                K. Pattabhi Jois elhíresült mondása rámutat arra, hogy pusztán könyvek olvasásával nem lehetséges
+                megérteni az astanga jóga esszenciáját. A jóga ezen ága egy tapasztalati út, amelyet a gyakorlás során
+                kell megismerni. Ezt az utat támogathatja (1 %-ban) a szentírások – Patandzsali: Jóga Szútrák, illetőleg
+                elismert régi jógagyakorlók személyes tapasztalatából született művek tanulmányozása. A jóga
+                gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.
+            </p>
+        </div>
+        <div class="row mt-40px mb-20px">
+            <h3>Astanga vinyásza jóga</h3>
+        </div>
+        <div class="row unordered-list-style mb-40px">
+            <ul>
+                {
+                    huBooks.olvasmanyokAstanga.map((book) => (
+                        <li>
+                            {book.link ? (
+                                <a href={book.link} target="_blank" class="link-enhanced link-orange">
+                                    <strong>{book.title}</strong>
+                                </a>
+                            ) : (
+                                <strong>{book.title}</strong>
+                            )}
+                            - {book.author} <br />
+                        </li>
+                    ))
+                }
+            </ul>
+            <br />
+        </div>
+        <div class="row mb-20px">
+            <h3>Vinyásza krama jóga</h3>
+        </div>
+        <div class="row unordered-list-style mb-40px">
+            <ul>
+                {
+                    huBooks.olvasmanyokKrama.map((book) => (
+                        <li>
+                            {book.link ? (
+                                <a href={book.link} target="_blank" class="link-enhanced link-orange">
+                                    <strong>{book.title}</strong>
+                                </a>
+                            ) : (
+                                <strong>{book.title}</strong>
+                            )}
+                            - {book.author} <br />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="row mb-20px">
+            <h3>Egyéb spirituális könyvek, amiket előszeretettel forgatunk</h3>
+        </div>
+        <div class="row unordered-list-style mb-40px">
+            <ul>
+                {
+                    huBooks.olvasmanyokSpiri.map((book) => (
+                        <li>
+                            {book.link ? (
+                                <a href={book.link} target="_blank" class="link-enhanced link-orange">
+                                    <strong>{book.title}</strong>
+                                </a>
+                            ) : (
+                                <strong>{book.title}</strong>
+                            )}
+                            - {book.author} <br />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="row mb-20px">
+            <h3>Táplálkozással, életvitellel kapcsolatos könyvek</h3>
+        </div>
+        <div class="row unordered-list-style mb-40px">
+            <ul>
+                {
+                    huBooks.olvasmanyokFood.map((book) => (
+                        <li>
+                            {book.link ? (
+                                <a href={book.link} target="_blank" class="link-enhanced link-orange">
+                                    <strong>{book.title}</strong>
+                                </a>
+                            ) : (
+                                <strong>{book.title}</strong>
+                            )}
+                            - {book.author} <br />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </div>
 </BaseLayout>
 
