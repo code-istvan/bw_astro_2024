@@ -6,10 +6,8 @@ import mobileImage from '../images/olvasmanyok_mobil.jpeg';
 import desktopImage from '../images/olvasmanyok_desktop.jpeg';
 import recommendedReadings from '../data/recommendedReadings.json';
 
-const pageTitle = 'Ajánlott olvasmányok';
-
 const metadata = {
-    title: pageTitle,
+    title: 'Ajánlott olvasmányok',
     description: 'A jóga gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.',
 };
 
@@ -21,8 +19,8 @@ const enBooks = recommendedReadings.EN;
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
@@ -67,5 +65,3 @@ const enBooks = recommendedReadings.EN;
         </div>
     </div>
 </BaseLayout>
-
-<style></style>
