@@ -1,0 +1,150 @@
+{
+  "HU": {
+    "astangaMysore": [
+      {
+        "name": "Egy alkalom (drop in)",
+        "price": "4.500.- Ft",
+        "link": "https://shop.bandha.works/products/drop-in-egy-alkalom-astanga-mysore-gyakorlas",
+        "buttonText": "VÁSÁRLÁS"
+      },
+      {
+        "name": "Heti bérlet",
+        "price": "20.000.- Ft",
+        "link": "https://shop.bandha.works/products/heti-berlet-astanga-mysore-program",
+        "buttonText": "VÁSÁRLÁS"
+      },
+      {
+        "name": "Havi bérlet",
+        "price": "34.000.- Ft",
+        "link": "https://shop.bandha.works/products/havi-berlet-astanga-mysore-program",
+        "buttonText": "VÁSÁRLÁS"
+      },
+      {
+        "name": "Éves bérlet",
+        "price": "320.000.- Ft",
+        "link": "https://shop.bandha.works/products/eves-berlet-astanga-mysore-program",
+        "buttonText": "VÁSÁRLÁS"
+      }
+    ],
+    "vinyasaKrama": [
+      {
+        "name": "Egy alkalom (drop in)",
+        "price": "3.800.- Ft",
+        "link": "https://shop.bandha.works/products/egy-alkalom-vinyasza-krama-joga",
+        "buttonText": "VÁSÁRLÁS"
+      },
+      {
+        "name": "Tíz alkalmas bérlet",
+        "price": "32.000.- Ft",
+        "link": "https://shop.bandha.works/products/10-alkalmas-berlet-vinyasza-krama-joga",
+        "buttonText": "VÁSÁRLÁS"
+      }
+    ],
+    "courses": [
+      {
+        "name": "Kezdő astanga jóga tanfolyam",
+        "price": "35.000.- Ft",
+        "link": "https://shop.bandha.works/products/astanga-kezdo-tanfolyam-1",
+        "buttonText": "JELENTKEZÉS"
+      },
+      {
+        "name": "Astanga Mysore-kurzus",
+        "price": "35.000.- Ft",
+        "link": "https://shop.bandha.works/products/astanga-mysore-kurzus-1",
+        "buttonText": "JELENTKEZÉS"
+      }
+    ],
+    "privateLessons": [
+      {
+        "name": "Ászanás gyakorlás",
+        "price": "15.000.- Ft / 60 perc",
+        "buttonText": "HAMAROSAN"
+      },
+      {
+        "name": "Jógikus életmód tanácsadás",
+        "price": "15.000.- Ft / 60 perc",
+        "buttonText": "HAMAROSAN"
+      },
+      {
+        "name": "Kezdő astanga, négy alkalmas",
+        "price": "80.000.- Ft",
+        "link": "https://shop.bandha.works/products/kezdo-astanga-tanfolyam-magan-4-alkalmas",
+        "buttonText": "JELENTKEZÉS"
+      }
+    ]
+  },
+  "EN": {
+    "astangaMysore": [
+      {
+        "name": "One class (drop in)",
+        "price": "4.500.- HUF",
+        "link": "https://shop.bandha.works/products/drop-in-egy-alkalom-astanga-mysore-gyakorlas",
+        "buttonText": "BUY"
+      },
+      {
+        "name": "Weekly pass",
+        "price": "20.000.- HUF",
+        "link": "https://shop.bandha.works/products/heti-berlet-astanga-mysore-program",
+        "buttonText": "BUY"
+      },
+      {
+        "name": "Monthly pass",
+        "price": "34.000.- HUF",
+        "link": "https://shop.bandha.works/products/havi-berlet-astanga-mysore-program",
+        "buttonText": "BUY"
+      },
+      {
+        "name": "Yearly pass",
+        "price": "320.000.- HUF",
+        "link": "https://shop.bandha.works/products/eves-berlet-astanga-mysore-program",
+        "buttonText": "BUY"
+      }
+    ],
+    "vinyasaKrama": [
+      {
+        "name": "One class (drop in)",
+        "price": "3.800.- HUF",
+        "link": "https://shop.bandha.works/products/egy-alkalom-vinyasza-krama-joga",
+        "buttonText": "BUY"
+      },
+      {
+        "name": "10-class pass",
+        "price": "32.000.- HUF",
+        "link": "https://shop.bandha.works/products/10-alkalmas-berlet-vinyasza-krama-joga",
+        "buttonText": "BUY"
+      }
+    ],
+    "courses": [
+      {
+        "name": "Beginner Astanga Yoga Course",
+        "price": "35.000.- HUF",
+        "link": "https://shop.bandha.works/products/astanga-kezdo-tanfolyam-1",
+        "buttonText": "APPLY"
+      },
+      {
+        "name": "Astanga Mysore Course",
+        "price": "35.000.- HUF",
+        "link": "https://shop.bandha.works/products/astanga-mysore-kurzus-1",
+        "buttonText": "APPLY"
+      }
+    ],
+    "privateLessons": [
+      {
+        "name": "Asana practice",
+        "price": "15.000.- HUF / 60 minutes",
+        "buttonText": "COMING SOON"
+      },
+      {
+        "name": "Yogic lifestyle consultation",
+        "price": "15.000.- HUF / 60 minutes",
+        "buttonText": "COMING SOON"
+      },
+      {
+        "name": "Beginner Astanga, four sessions",
+        "price": "80.000.- HUF",
+        "link": "https://shop.bandha.works/products/kezdo-astanga-tanfolyam-magan-4-alkalmas",
+        "buttonText": "APPLY"
+      }
+    ]
+  }
+}

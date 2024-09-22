@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/arak_mobil.jpg';
 import desktopImage from '../images/arak_desktop.jpg';
+import pricingData from '../data/prices.json';
 import '../sass/pages/_arak.scss';
 
 const metadata = {
@@ -10,80 +11,8 @@ const metadata = {
     description: 'Ezen az oldalon találod a Bandha Works Astanga Jógaiskola szolgáltatásainak árait.',
 };
 
-const pricingData = {
-    astangaMysore: [
-        {
-            name: 'Egy alkalom (drop in)',
-            price: '4.500.- Ft',
-            link: 'https://shop.bandha.works/products/drop-in-egy-alkalom-astanga-mysore-gyakorlas',
-            buttonText: 'VÁSÁRLÁS',
-        },
-        {
-            name: 'Heti bérlet',
-            price: '20.000.- Ft',
-            link: 'https://shop.bandha.works/products/heti-berlet-astanga-mysore-program',
-            buttonText: 'VÁSÁRLÁS',
-        },
-        {
-            name: 'Havi bérlet',
-            price: '34.000.- Ft',
-            link: 'https://shop.bandha.works/products/havi-berlet-astanga-mysore-program',
-            buttonText: 'VÁSÁRLÁS',
-        },
-        {
-            name: 'Éves bérlet',
-            price: '320.000.- Ft',
-            link: 'https://shop.bandha.works/products/eves-berlet-astanga-mysore-program',
-            buttonText: 'VÁSÁRLÁS',
-        },
-    ],
-    vinyasaKrama: [
-        {
-            name: 'Egy alkalom (drop in)',
-            price: '3.800.- Ft',
-            link: 'https://shop.bandha.works/products/egy-alkalom-vinyasza-krama-joga',
-            buttonText: 'VÁSÁRLÁS',
-        },
-        {
-            name: 'Tíz alkalmas bérlet',
-            price: '32.000.- Ft',
-            link: 'https://shop.bandha.works/products/10-alkalmas-berlet-vinyasza-krama-joga',
-            buttonText: 'VÁSÁRLÁS',
-        },
-    ],
-    courses: [
-        {
-            name: 'Kezdő astanga jóga tanfolyam',
-            price: '35.000.- Ft',
-            link: 'https://shop.bandha.works/products/astanga-kezdo-tanfolyam-1',
-            buttonText: 'JELENTKEZÉS',
-        },
-        {
-            name: 'Astanga Mysore-kurzus',
-            price: '35.000.- Ft',
-            link: 'https://shop.bandha.works/products/astanga-mysore-kurzus-1',
-            buttonText: 'JELENTKEZÉS',
-        },
-    ],
-    privateLessons: [
-        {
-            name: 'Ászanás gyakorlás',
-            price: '15.000.- Ft / 60 perc',
-            buttonText: 'HAMAROSAN',
-        },
-        {
-            name: 'Jógikus életmód tanácsadás',
-            price: '15.000.- Ft / 60 perc',
-            buttonText: 'HAMAROSAN',
-        },
-        {
-            name: 'Kezdő astanga, négy alkalmas',
-            price: '80.000.- Ft',
-            link: 'https://shop.bandha.works/products/kezdo-astanga-tanfolyam-magan-4-alkalmas',
-            buttonText: 'JELENTKEZÉS',
-        },
-    ],
-};
+const huPrices = pricingData.HU;
+const enPrices = pricingData.EN;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -107,7 +36,7 @@ const pricingData = {
                 </thead>
                 <tbody>
                     {
-                        pricingData.astangaMysore.map((item) => (
+                        huPrices.astangaMysore.map((item) => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>{item.price}</td>
@@ -148,7 +77,7 @@ const pricingData = {
                 </thead>
                 <tbody>
                     {
-                        pricingData.vinyasaKrama.map((item) => (
+                        huPrices.vinyasaKrama.map((item) => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>{item.price}</td>
@@ -184,7 +113,7 @@ const pricingData = {
                 </thead>
                 <tbody>
                     {
-                        pricingData.courses.map((item) => (
+                        huPrices.courses.map((item) => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>{item.price}</td>
@@ -220,7 +149,7 @@ const pricingData = {
                 </thead>
                 <tbody>
                     {
-                        pricingData.privateLessons.map((item) => (
+                        huPrices.privateLessons.map((item) => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>{item.price}</td>
