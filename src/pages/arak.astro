@@ -3,15 +3,221 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/arak_mobil.jpg';
 import desktopImage from '../images/arak_desktop.jpg';
+import '../sass/pages/_arak.scss';
 
-const pageTitle = 'Árak';
+const metadata = {
+    title: 'Árak',
+    description: 'Ezen az oldalon találod a Bandha Works Astanga Jógaiskola szolgáltatásainak árait.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+<BaseLayout title={metadata.title}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px">
+            <h3 class="mb-20px">Astanga Mysore-Program</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Árak</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Egy alkalom (drop in)</td>
+                        <td>4.500.- Ft</td>
+                        <td>
+                            <a
+                                href="https://shop.bandha.works/products/drop-in-egy-alkalom-astanga-mysore-gyakorlas"
+                                class="link-enhanced link-orange"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VÁSÁRLÁS
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Heti bérlet</td>
+                        <td>20.000.- Ft</td>
+                        <td>
+                            <a
+                                href="https://shop.bandha.works/products/heti-berlet-astanga-mysore-program"
+                                class="link-enhanced link-orange"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VÁSÁRLÁS
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Havi bérlet</td>
+                        <td>34.000.- Ft</td>
+                        <td>
+                            <a
+                                href="https://shop.bandha.works/products/havi-berlet-astanga-mysore-program"
+                                class="link-enhanced link-orange"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VÁSÁRLÁS
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Éves bérlet</td>
+                        <td>320.000.- Ft</td>
+                        <td>
+                            <a
+                                href="https://shop.bandha.works/products/eves-berlet-astanga-mysore-program"
+                                class="link-enhanced link-orange"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VÁSÁRLÁS
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="arak-table-footer mt-20px">
+                Az astanga Mysore-programban való részvételhez előzetes regisztráció szükséges! Részletes leírást a{' '}
+                <a href="/astanga-mysore-program" class="link-enhanced link-orange">Mysore-program</a>
+                oldalán találsz.
+            </p>
+        </div>
+        <div class="row mt-40px mb-40px">
+            <h3 class="mb-20px">Vinyásza Krama Jóga</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Árak</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Egy alkalom (drop in)</td>
+                    <td>3.800.- Ft</td>
+                    <td>
+                        <a
+                            href="https://shop.bandha.works/products/egy-alkalom-vinyasza-krama-joga"
+                            class="link-enhanced link-orange"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            VÁSÁRLÁS
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tíz alkalmas bérlet</td>
+                    <td>32.000.- Ft</td>
+                    <td>
+                        <a
+                            href="https://shop.bandha.works/products/10-alkalmas-berlet-vinyasza-krama-joga"
+                            class="link-enhanced link-orange"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            VÁSÁRLÁS
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <h3 class="mb-20px">Tanfolyamok</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Árak</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Kezdő astanga jóga tanfolyam</td>
+                    <td>35.000.- Ft</td>
+                    <td>
+                        <a
+                            href="https://shop.bandha.works/products/astanga-kezdo-tanfolyam-1"
+                            class="link-enhanced link-orange"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            JELENTKEZÉS
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Astanga Mysore-kurzus</td>
+                    <td>35.000.- Ft</td>
+                    <td>
+                        <a
+                            href="https://shop.bandha.works/products/astanga-mysore-kurzus-1"
+                            class="link-enhanced link-orange"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            JELENTKEZÉS
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <h3 class="mb-20px">Magánórák</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Árak</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Ászanás gyakorlás</td>
+                    <td>15.000.- Ft / 60 perc</td>
+                    <td>HAMAROSAN</td>
+                </tr>
+                <tr>
+                    <td>Jógikus életmód tanácsadás</td>
+                    <td>15.000.- Ft / 60 perc</td>
+                    <td>HAMAROSAN</td>
+                </tr>
+                <tr>
+                    <td>Kezdő astanga, négy alkalmas</td>
+                    <td>80.000.- Ft</td>
+                    <td>
+                        <a
+                            href="https://shop.bandha.works/products/kezdo-astanga-tanfolyam-magan-4-alkalmas"
+                            class="link-enhanced link-orange"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            JELENTKEZÉS
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <p>
+                A bérletek, tanfolyamok és az egy alkalmas jegyek árai nem visszatéríthetőek. A bérletek az érvényességi
+                időn túl nem hosszabbíthatók meg; a bérletek felhasználása, illetőleg a tanfolyamok nem
+                szüneteltethetők. A megvásárolt egy alkalmas (egy alkalomra szóló) jegyek időpontjának utólagos
+                módosítására nincsen lehetőség.
+            </p>
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
