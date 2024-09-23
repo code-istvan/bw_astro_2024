@@ -5,18 +5,21 @@ import mobileImage from '../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../images/elsoalkalom_desktop.jpg';
 import firstTimeData from '../data/firstTime.json';
 
-const pageTitle = 'Első alkalom';
-const language = 'hu';
-const needed = firstTimeData[language].needed;
-const moreInfos = firstTimeData[language].moreInfos;
+const metadata = {
+    title: 'Első alkalom',
+    description:
+        'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
+};
+
+const huFirstTimeData = firstTimeData.HU;
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={metadata.title}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
@@ -36,8 +39,8 @@ const moreInfos = firstTimeData[language].moreInfos;
             <div class="row unordered-list-style mb-40px">
                 <ul>
                     {
-                        needed &&
-                            needed.map(({ needed }) => (
+                        huFirstTimeData.needed &&
+                            huFirstTimeData.needed.map(({ needed }) => (
                                 <li>
                                     <p>{needed}</p>
                                 </li>
@@ -51,8 +54,8 @@ const moreInfos = firstTimeData[language].moreInfos;
             <div class="row unordered-list-style mb-40px">
                 <ul>
                     {
-                        moreInfos &&
-                            moreInfos.map(({ moreInfo }) => (
+                        huFirstTimeData.moreInfos &&
+                            huFirstTimeData.moreInfos.map(({ moreInfo }) => (
                                 <li>
                                     <p>{moreInfo}</p>
                                 </li>
@@ -66,5 +69,3 @@ const moreInfos = firstTimeData[language].moreInfos;
         </div>
     </div>
 </BaseLayout>
-
-<style></style>

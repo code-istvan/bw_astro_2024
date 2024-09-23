@@ -1,21 +1,70 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../../images/elsoalkalom_desktop.jpg';
+import firstTimeData from '../../data/firstTime.json';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'First time',
+    description: 'On this page you will find information that will help you during your first visit.',
+};
 
-const pageTitle = t('elsoalkalom');
+const enFirstTimeData = firstTimeData.EN;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout title={metadata.title}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="elsoalkalom-wrapper tight--desktop--container">
+            <div class="row mt-40px mb-20px">
+                <p>
+                    If you are a first-time visitor, please arrive at least 15 minutes before class to allow enough time
+                    to register (no registration is required for course participation). After filling in the
+                    registration form, you will have a short talk with the instructor (only with Mysore program
+                    participants for now) to ensure effective cooperation. At this time, please be sure to indicate if
+                    you have any special condition (e.g. injury, illness, pregnancy).
+                </p>
+            </div>
+            <div class="row mb-20px">
+                <p>What you'll need:</p>
+            </div>
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        enFirstTimeData.needed &&
+                            enFirstTimeData.needed.map(({ needed }) => (
+                                <li>
+                                    <p>{needed}</p>
+                                </li>
+                            ))
+                    }
+                </ul>
+            </div>
+            <div class="row mb-20px">
+                <p>Other information:</p>
+            </div>
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        enFirstTimeData.moreInfos &&
+                            enFirstTimeData.moreInfos.map(({ moreInfo }) => (
+                                <li>
+                                    <p>{moreInfo}</p>
+                                </li>
+                            ))
+                    }
+                </ul>
+            </div>
+            <div class="row mb-40px">
+                <p>See you on the mat!</p>
+            </div>
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
