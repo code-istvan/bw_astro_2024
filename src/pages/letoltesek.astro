@@ -3,68 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/letoltesek_mobil.jpg';
 import desktopImage from '../images/letoltesek_desktop.jpg';
+import downloadsData from '../data/downloads.json';
 
 const metadata = {
     title: 'Letöltések',
     description: 'A jóga gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.',
 };
 
-const sequences = [
-    {
-        style: 'Astanga vinyásza jóga',
-        name: 'Jóga csikitsza (első sorozat)',
-        link: 'https://bandha.works/downloads/pdf/astanga_joga_csikitsza_elso_sorozat.pdf',
-        new: false,
-    },
-    {
-        style: 'Astanga vinyásza jóga',
-        name: 'Nádi sódhana (második sorozat)',
-        link: 'https://bandha.works/downloads/pdf/astanga_yoga_intermediate_series.pdf',
-        new: false,
-    },
-    {
-        style: 'Astanga vinyásza jóga',
-        name: '45 perces rutin',
-        link: 'https://bandha.works/downloads/pdf/astanga_joga_45min.pdf',
-        new: false,
-    },
-    {
-        style: 'Prána vashja jóga',
-        name: 'Első sorozat',
-        link: 'https://bandha.works/downloads/pdf/prana_vashya_primary_series.pdf',
-        new: false,
-    },
-    {
-        style: 'Prána vashja jóga',
-        name: 'Második sorozat',
-        link: 'https://bandha.works/downloads/pdf/prana_vashya_second_series_asana_chart.pdf',
-        new: false,
-    },
-];
-
-const posters = [
-    {
-        type: 'Táplálkozás',
-        name: 'Növényi fehérje források',
-        link: 'https://bandha.works/downloads/pdf/novenyi_feherje_plakat_a0.pdf',
-        new: false,
-    },
-    {
-        type: 'Holdnapok',
-        name: '2024-es holdnapok',
-        link: 'https://bandha.works/downloads/pdf/holdnapok_bandhaworks_2024.pdf',
-        new: true,
-    },
-];
-
-const sounds = [
-    {
-        type: 'Gurudzsi Sri. K. Pattabhi Jois',
-        name: 'Vezetett első sorozat (1993)',
-        link: 'https://mula.bandha.works/downloads/GURUJI_LED_PRIMARY_1993.mp3',
-        new: false,
-    },
-];
+const huDownloads = downloadsData.HU;
+const enDownloads = downloadsData.EN;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -83,7 +30,7 @@ const sounds = [
         <div class="unordered-list-style">
             <ul class="sequences-list">
                 {
-                    sequences.map((sequence) => (
+                    huDownloads.sequences.map((sequence) => (
                         <li class="sequences-list__item flex-row">
                             <p>
                                 <strong>{sequence.style}:&nbsp;</strong>
@@ -110,7 +57,7 @@ const sounds = [
         <div class="unordered-list-style">
             <ul class="posters-list">
                 {
-                    posters.map((poster) => (
+                    huDownloads.posters.map((poster) => (
                         <li class="posters-list__item flex-row">
                             <p>
                                 <strong>{poster.type}:&nbsp;</strong>
@@ -137,7 +84,7 @@ const sounds = [
         <div class="unordered-list-style mb-40px">
             <ul class="posters-list">
                 {
-                    sounds.map((sound) => (
+                    huDownloads.sounds.map((sound) => (
                         <li class="posters-list__item flex-row">
                             <p>
                                 <strong>{sound.type}:&nbsp;</strong>

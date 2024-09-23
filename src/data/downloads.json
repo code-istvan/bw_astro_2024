@@ -1,0 +1,114 @@
+{
+  "HU": {
+    "sequences": [
+      {
+        "style": "Astanga vinyásza jóga",
+        "name": "Jóga csikitsza (első sorozat)",
+        "link": "https://bandha.works/downloads/pdf/astanga_joga_csikitsza_elso_sorozat.pdf",
+        "new": false
+      },
+      {
+        "style": "Astanga vinyásza jóga",
+        "name": "Nádi sódhana (második sorozat)",
+        "link": "https://bandha.works/downloads/pdf/astanga_yoga_intermediate_series.pdf",
+        "new": false
+      },
+      {
+        "style": "Astanga vinyásza jóga",
+        "name": "45 perces rutin",
+        "link": "https://bandha.works/downloads/pdf/astanga_joga_45min.pdf",
+        "new": false
+      },
+      {
+        "style": "Prána vashja jóga",
+        "name": "Első sorozat",
+        "link": "https://bandha.works/downloads/pdf/prana_vashya_primary_series.pdf",
+        "new": false
+      },
+      {
+        "style": "Prána vashja jóga",
+        "name": "Második sorozat",
+        "link": "https://bandha.works/downloads/pdf/prana_vashya_second_series_asana_chart.pdf",
+        "new": false
+      }
+    ],
+    "posters": [
+      {
+        "type": "Táplálkozás",
+        "name": "Növényi fehérje források",
+        "link": "https://bandha.works/downloads/pdf/novenyi_feherje_plakat_a0.pdf",
+        "new": false
+      },
+      {
+        "type": "Holdnapok",
+        "name": "2024-es holdnapok",
+        "link": "https://bandha.works/downloads/pdf/holdnapok_bandhaworks_2024.pdf",
+        "new": true
+      }
+    ],
+    "sounds": [
+      {
+        "type": "Gurudzsi Sri. K. Pattabhi Jois",
+        "name": "Vezetett első sorozat (1993)",
+        "link": "https://mula.bandha.works/downloads/GURUJI_LED_PRIMARY_1993.mp3",
+        "new": false
+      }
+    ]
+  },
+  "EN": {
+    "sequences": [
+      {
+        "style": "Ashtanga Vinyasa Yoga",
+        "name": "Yoga Chikitsa (Primary Series)",
+        "link": "https://bandha.works/downloads/pdf/astanga_joga_csikitsza_elso_sorozat.pdf",
+        "new": false
+      },
+      {
+        "style": "Ashtanga Vinyasa Yoga",
+        "name": "Nadi Shodhana (Intermediate Series)",
+        "link": "https://bandha.works/downloads/pdf/astanga_yoga_intermediate_series.pdf",
+        "new": false
+      },
+      {
+        "style": "Ashtanga Vinyasa Yoga",
+        "name": "45-minute Routine",
+        "link": "https://bandha.works/downloads/pdf/astanga_joga_45min.pdf",
+        "new": false
+      },
+      {
+        "style": "Prana Vashya Yoga",
+        "name": "Primary Series",
+        "link": "https://bandha.works/downloads/pdf/prana_vashya_primary_series.pdf",
+        "new": false
+      },
+      {
+        "style": "Prana Vashya Yoga",
+        "name": "Second Series",
+        "link": "https://bandha.works/downloads/pdf/prana_vashya_second_series_asana_chart.pdf",
+        "new": false
+      }
+    ],
+    "posters": [
+      {
+        "type": "Nutrition",
+        "name": "Plant-based Protein Sources",
+        "link": "https://bandha.works/downloads/pdf/novenyi_feherje_plakat_a0.pdf",
+        "new": false
+      },
+      {
+        "type": "Moon Days",
+        "name": "Moon Days 2024",
+        "link": "https://bandha.works/downloads/pdf/holdnapok_bandhaworks_2024.pdf",
+        "new": true
+      }
+    ],
+    "sounds": [
+      {
+        "type": "Guruji Sri. K. Pattabhi Jois",
+        "name": "Led Primary Series (1993)",
+        "link": "https://mula.bandha.works/downloads/GURUJI_LED_PRIMARY_1993.mp3",
+        "new": false
+      }
+    ]
+  }
+}
