@@ -8,11 +8,17 @@ import desktopImage from '../../images/mysore_desktop.jpg';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+const metadata = {
+    title: 'Ashtanga Mysore-Program',
+    description:
+        'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
+};
+
 const pageTitle = t('mysoreprogram');
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
         <div class="row"><h1>Content will come here</h1></div>
     </div>

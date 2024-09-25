@@ -3,29 +3,178 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
+import { Image } from 'astro:assets';
+import MysoreImage1 from '../images/mysore_program_1.jpg';
+import MysoreImage2 from '../images/mysore_program_2.jpg';
+import MysoreImage3 from '../images/mysore_program_3.jpeg';
+import mysoreSpecialitiesData from '../data/mysoreSpecialities.json';
 import Counter from '../components/Counter';
 
-const pageTitle = 'Astanga-Mysore program';
+const metadata = {
+    title: 'Atanga Mysore-Program',
+    description:
+        'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
+};
+
+const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
+const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
+
+const mysoreSpecialities = [
+    {
+        title: 'Személyes figyelem',
+        description:
+            'Mivel mindenki a saját tempójában gyakorol, az oktatónak van ideje minden egyes gyakorlóval egyénileg foglalkozni. Ez lehetővé teszi, hogy a gyakorlók specifikus, személyre szabott útmutatást kapjanak.',
+    },
+    {
+        title: 'Egyéni fejlődés',
+        description:
+            'A gyakorlás során a gyakorlók az oktató aktív részvételével, a befektetett energia, lelkesedés és a "hozott csomagok" függvényében fejlődnek. Fokozatosan építik fel a gyakorlásukat. Lesznek olyan időszakok, amikor gyorsabban fejlődnek és lehet, hogy lesz olyan, amikor lassabban.',
+    },
+    {
+        title: 'Önállóság',
+        description:
+            'A Mysore-stílus lehetővé teszi a gyakorlóknak, hogy megtanulják önállóan gyakorolni a sorozatot. Ez fontos készség, amely segíthet a gyakorlóknak abban, hogy hosszú távon fenntartsák a jóga gyakorlását (ha pl. nincs a közelükben a tanáruk).',
+    },
+    {
+        title: 'Meditáció',
+        description:
+            'Az önálló gyakorlás, a légzés és a mozdulatok pontos összehangolása komoly koncentrációt igényel a gyakorlóktól. A hosszan fenntartott, megszakítás nélküli koncentráció meditatív állapothoz vezethet.',
+    },
+];
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
-        <Counter client:only="react" language={Astro.currentLocale} />
-    </div>
-</BaseLayout>
+<BaseLayout title={metadata.title}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+    <div class="container page-content">
+        <div class="page-content__section page-content__section--intro mt-40px mb-40px">
+            <h3>
+                <strong>
+                    A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt,
+                    rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány
+                    kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.
+                </strong>
+            </h3>
+        </div>
+        <div class="mb-20px">
+            <h3 class="clr-brand-orange font-family-primary">Ászanák: Az astanga jóga alapjai</h3>
+        </div>
+        <div class="row">
+            <p>
+                Az <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">astanga jóga</a>
+                egy nyolcágú jógarendszer, amelynek célja a test, az elme és a lélek egységének elérése. Az út hosszú és
+                rögös lehet, amit az ászanák gyakorlásával kell kezdeni. Ezen speciális testhelyzetek gyakorlásával elérhetjük,
+                hogy testünk erős és rugalmas legyen, ami alapul szolgál majd az astanga jógarendszerében történő továbblépésre.
+                Maga az ászanagyakorlás igen kicsi része a teljes rendszernek, viszont nagyon fontos, kihagyhatatlan a „modern”
+                nyugati ember számára, aki az életmódjából fakadóan igencsak elhanyagolja a fizikai testét.
+            </p>
+        </div>
+        <br />
+        <div class="row">
+            <p>
+                Az astanga vinyásza jóga sajátossága, hogy az ászanagyakorlás által, nemcsak a fizikai test gyógyításán
+                dolgozunk, hanem számos magasabb szintű ágat is előkészítünk, mint például a pránajáma, koncentráció
+                vagy a meditációs tudatállapotot.
+            </p>
+        </div>
+        <div class="image-track-3 mt-20px">
+            <Image src={MysoreImage1} alt="Astanga jóga Mysore stílusú gyakorlás Utthitha igazítás" />
+            <Image src={MysoreImage2} alt="Astanga jóga Mysore stílusú gyakorlás bokafogás" />
+            <Image src={MysoreImage3} alt="Astanga jóga Mysore stílusú gyakorlás levezető ászanák" />
+        </div>
+        <div class="row">
+            <h3 class="mb-20px clr-brand-orange font-family-primary">Mysore-stílus</h3>
+            <p>
+                Az astanga vinyásza jógában az ászanákat tradicionálisan Mysore- (ejtsd: májszor) stílusban oktatják. A
+                módszer ötvözi a csoportos vezetett órák és az egyéni gyakorlás előnyeit. Lényege, hogy a teremben az
+                összes gyakorló a saját légzésének ritmusára önállóan végzi a sorozatot, ezáltal az oktató mindenkinek
+                egyénre szabott igazításokat, utasításokat tud adni, anélkül hogy ez megzavarná az óra dinamikáját. Így
+                az sem probléma, ha valaki rövidebben gyakorol (pl. kezdő gyakorlók), vagy ha valaki hosszabb időt tölt
+                a teremben (pl. haladó gyakorlók) ugyanazon az órán.
+            </p>
+        </div>
+        <div class="island-section text-align-center">
+            <h3 class="mb-20px clr-brand-orange font-family-primary">
+                <strong>TUDTAD?</strong>
+            </h3>
+            <p>
+                <strong>
+                    A Mysore-stílusú astanga gyakorlás a dél-indiai Mysore városáról kapta a nevét. <a
+                        href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/"
+                        class="link-enhanced link-orange"
+                    >
+                        Pattabhi Jois
+                    </a> itt fejlesztette ki a modernkori astanga jóga rendszerét az 1948-ban alapított Ashtanga Yoga Research
+                    Institute-ban (Astanga Jóga Kutató Intézet).
+                </strong>
+            </p>
+        </div>
+        <div class="row">
+            <h3 class="clr-brand-orange font-family-primary mb-20px">Az ászanagyakorlás ideális időpontja</h3>
+            <p class="mb-20px">
+                A gyakorlás időpontja is meghatározott, a Mysore-órákat tradicionálisan reggel tartják. Ennek az az oka,
+                hogy a jógagyakorláshoz az úgynevezett <i>Brahma muhurta</i> napszak a legmegfelelőbb, azaz a napfelkelte
+                előtti másfél óra, vagy ehhez minél közelebbi időpont. Ekkor a levegő friss, a környezet csendes, frissen,
+                kipihenten ébredve még nem nyomasztanak bennünket a benyomások, amelyek a nehéz munkanap során értek minket.
+                Az elme könnyebben tud fókuszálni és kevésbé kalandozik el. A test tiszta, a gyomor üres, tehát a körülmények
+                ideálisak a gyakorláshoz. Kezdetben a test kevésbé hajlékonynak tűnhet a reggeli órákban, de gyorsan alkalmazkodik
+                az új rutinhoz.
+            </p>
+            <h3 class="clr-brand-orange font-family-primary mb-20px">A rendszeres gyakorlás elve</h3>
+            <p class="mb-40px">
+                Ehhez a hagyományos mysore-i oktatási módszerhez az is hozzátartozik, hogy mindenki rendszeresen
+                gyakorol, a cél a heti hatszori gyakorlás; de a legtöbb gyakorló ezt csak fokozatosan éri el, vagy
+                kevesebbszer gyakorol. A szombatok, illetve a teli- és az újhold, azaz a{' '}
+                <a href="/holdnapok" class="link-enhanced link-orange">holdnapok</a>
+                pihenőnapok, valamint a hölgyeknél a menstruáció első három-öt napja. Ez elsőre igen nagy kihívásnak tűnik,
+                de természetesen a jógában is a fokozatosság fontos eleme a zavartalan fejlődésnek. A tanár figyeli a gyakorlók
+                előrehaladását, és ha a tanítvány készen áll, akkor újabb ászanákat kap, amelyeket hozzá kell fűznie a többihez.
+            </p>
+        </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const button = document.querySelector('#btn1');
-        if (button) {
-            button.addEventListener('click', () => {
-                const url = button.getAttribute('data-url');
-                if (url) {
-                    window.location.href = url;
-                }
-            });
+        <div class="text-align-center mb-40px">
+            <h3 class="clr-brand-orange font-family-primary">A Mysore-gyakorlás jellegzetességei</h3>
+        </div>
+        <div class="row gap-1">
+            {
+                huMysoreSpecialitiesData.map((program) => (
+                    <div class="col-12-xs col-6-md col-6-xl">
+                        <div class="card__mysore-program">
+                            <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
+                            <p>{program.description}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- <Counter client:only="react" language={Astro.currentLocale} /> -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('#btn1');
+            if (button) {
+                button.addEventListener('click', () => {
+                    const url = button.getAttribute('data-url');
+                    if (url) {
+                        window.location.href = url;
+                    }
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .kppp {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            img {
+                width: 100%; /* A képek megfelelő méretezéséhez */
+                max-width: calc(33.33%); /* Három képet akarunk elhelyezni egy sorban */
+                height: auto;
+            }
         }
-    });
-</script>
+    </style>
+</BaseLayout>

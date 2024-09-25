@@ -1,0 +1,38 @@
+{
+  "HU": [
+    {
+      "title": "Személyes figyelem",
+      "description": "Mivel mindenki a saját tempójában gyakorol, az oktatónak van ideje minden egyes gyakorlóval egyénileg foglalkozni. Ez lehetővé teszi, hogy a gyakorlók specifikus, személyre szabott útmutatást kapjanak."
+    },
+    {
+      "title": "Egyéni fejlődés",
+      "description": "A gyakorlás során a gyakorlók az oktató aktív részvételével, a befektetett energia, lelkesedés és a \"hozott csomagok\" függvényében fejlődnek. Fokozatosan építik fel a gyakorlásukat. Lesznek olyan időszakok, amikor gyorsabban fejlődnek és lehet, hogy lesz olyan, amikor lassabban."
+    },
+    {
+      "title": "Önállóság",
+      "description": "A Mysore-stílus lehetővé teszi a gyakorlóknak, hogy megtanulják önállóan gyakorolni a sorozatot. Ez fontos készség, amely segíthet a gyakorlóknak abban, hogy hosszú távon fenntartsák a jóga gyakorlását (ha pl. nincs a közelükben a tanáruk)."
+    },
+    {
+      "title": "Meditáció",
+      "description": "Az önálló gyakorlás, a légzés és a mozdulatok pontos összehangolása komoly koncentrációt igényel a gyakorlóktól. A hosszan fenntartott, megszakítás nélküli koncentráció meditatív állapothoz vezethet."
+    }
+  ],
+  "EN": [
+    {
+      "title": "Personal attention",
+      "description": "Since everyone practices at their own pace, the teacher has time to give individual attention to each student."
+    },
+    {
+      "title": "Individual growth",
+      "description": "Students progress at their own pace with the guidance of the teacher, based on the effort and energy invested."
+    },
+    {
+      "title": "Independence",
+      "description": "Mysore-style allows practitioners to learn the series and practice independently."
+    },
+    {
+      "title": "Meditation",
+      "description": "The synchronization of breath and movement requires deep concentration, leading to a meditative state."
+    }
+  ]
+}
