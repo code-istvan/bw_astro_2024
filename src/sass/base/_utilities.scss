@@ -111,6 +111,15 @@
   background-color: $color-shades-darkGray;
 }
 
+.island-section--orange-border {
+  border: solid 2px $color-brand-orange;
+}
+
+.island-section--orange-border__width {
+  width: max-content;
+  padding: 40px;
+}
+
 @media screen and (min-width: 360px) {
   .island-section--gray-border {
     background-color: initial;
@@ -123,6 +132,36 @@
   background-color: $color-shades-darkGray;
   padding: 32px 20px;
   margin: 20px 0;
+}
+
+.framed-section-orange__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @include xs {
+    width: 100%;
+  }
+
+  @include xl {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.framed-section-orange__card {
+  background-color: $color-shades-darkGray;
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+  margin: 20px;
+
+  svg {
+    margin-top: 20px;
+  }
 }
 
 .max-width-150 {
@@ -185,6 +224,14 @@
 
 .display-flex {
   display: flex;
+}
+
+.display-flex--justify-center {
+  justify-content: center;
+}
+
+.display-flex--direction-column {
+  flex-direction: column;
 }
 
 blockquote {

@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
 import { Image } from 'astro:assets';
+import Icons from '../components/Icons/Icons.astro';
 import MysoreImage1 from '../images/mysore_program_1.jpg';
 import MysoreImage2 from '../images/mysore_program_2.jpg';
 import MysoreImage3 from '../images/mysore_program_3.jpeg';
@@ -19,26 +20,31 @@ const metadata = {
 const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
 const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
 
-const mysoreSpecialities = [
+const mysoreElements = [
     {
-        title: 'Személyes figyelem',
-        description:
-            'Mivel mindenki a saját tempójában gyakorol, az oktatónak van ideje minden egyes gyakorlóval egyénileg foglalkozni. Ez lehetővé teszi, hogy a gyakorlók specifikus, személyre szabott útmutatást kapjanak.',
+        iconName: 'Mysore',
+        title: 'MYSORE GYAKORLÁS',
+        description: 'heti 5x',
     },
     {
-        title: 'Egyéni fejlődés',
-        description:
-            'A gyakorlás során a gyakorlók az oktató aktív részvételével, a befektetett energia, lelkesedés és a "hozott csomagok" függvényében fejlődnek. Fokozatosan építik fel a gyakorlásukat. Lesznek olyan időszakok, amikor gyorsabban fejlődnek és lehet, hogy lesz olyan, amikor lassabban.',
+        iconName: 'LedClass',
+        title: 'VEZETETT ÓRA',
+        description: 'heti 1x',
     },
     {
-        title: 'Önállóság',
-        description:
-            'A Mysore-stílus lehetővé teszi a gyakorlóknak, hogy megtanulják önállóan gyakorolni a sorozatot. Ez fontos készség, amely segíthet a gyakorlóknak abban, hogy hosszú távon fenntartsák a jóga gyakorlását (ha pl. nincs a közelükben a tanáruk).',
+        iconName: 'Restday',
+        title: 'KONFERENCIA',
+        description: 'havi 1x',
     },
     {
-        title: 'Meditáció',
-        description:
-            'Az önálló gyakorlás, a légzés és a mozdulatok pontos összehangolása komoly koncentrációt igényel a gyakorlóktól. A hosszan fenntartott, megszakítás nélküli koncentráció meditatív állapothoz vezethet.',
+        iconName: 'MoonDays',
+        title: 'PIHENŐNAP',
+        description: 'szombat és a holdnapok',
+    },
+    {
+        iconName: 'Conference',
+        title: 'ASTANGÁS KÖZÖSSÉG',
+        description: '24/7',
     },
 ];
 ---
@@ -146,8 +152,39 @@ const mysoreSpecialities = [
                 ))
             }
         </div>
-
-        <!-- <Counter client:only="react" language={Astro.currentLocale} /> -->
+        <div class="page-content__section display-flex display-flex--justify-center">
+            <div
+                class="counter text-align-center island-section island-section--orange-border island-section--orange-border__width"
+            >
+                <h3 class="mb-20px font-family-primary clr-brand-orange">TRADÍCIÓ</h3>
+                <div class="col-12-xs mb-20px">
+                    <Counter client:only="react" language={Astro.currentLocale} />
+                </div>
+                <p>Magyarország legrégebbi astanga Mysore-programja</p>
+                <p>
+                    <strong>Paramaguru Sharath Jois</strong> áldásával
+                </p>
+                <div class="mt-20px">
+                    <Icons name="SharatJiHandWriting" class="max-width-150" />
+                </div>
+            </div>
+        </div>
+        <div class="text-align-center mt-40px mb-20px">
+            <h3 class="clr-brand-orange font-family-primary">A Mysore-program felépítése, elemei</h3>
+            <div class="framed-section-orange__body">
+                {
+                    mysoreElements.map((element) => (
+                        <div class="framed-section-orange__card">
+                            <Icons name={element.iconName} />
+                            <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
+                                {element.title}
+                            </h4>
+                            <p>{element.description}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
 
     <script>
@@ -163,18 +200,4 @@ const mysoreSpecialities = [
             }
         });
     </script>
-
-    <style>
-        .kppp {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-
-            img {
-                width: 100%; /* A képek megfelelő méretezéséhez */
-                max-width: calc(33.33%); /* Három képet akarunk elhelyezni egy sorban */
-                height: auto;
-            }
-        }
-    </style>
 </BaseLayout>
