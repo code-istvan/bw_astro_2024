@@ -106,6 +106,12 @@
 
 // Island section starts
 
+.island-section {
+  background-color: $color-shades-darkGray;
+  padding: 32px 20px;
+  margin: 20px 0;
+}
+
 //Gray border
 .island-section--gray-border {
   background-color: $color-shades-darkGray;
@@ -127,12 +133,6 @@
   }
 }
 // Island section ends
-
-.island-section {
-  background-color: $color-shades-darkGray;
-  padding: 32px 20px;
-  margin: 20px 0;
-}
 
 .framed-section-orange__body {
   display: flex;

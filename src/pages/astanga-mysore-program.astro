@@ -9,6 +9,7 @@ import MysoreImage1 from '../images/mysore_program_1.jpg';
 import MysoreImage2 from '../images/mysore_program_2.jpg';
 import MysoreImage3 from '../images/mysore_program_3.jpeg';
 import mysoreSpecialitiesData from '../data/mysoreSpecialities.json';
+import mysoreElementsData from '../data/mysoreElements.json';
 import Counter from '../components/Counter';
 
 const metadata = {
@@ -20,33 +21,8 @@ const metadata = {
 const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
 const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
 
-const mysoreElements = [
-    {
-        iconName: 'Mysore',
-        title: 'MYSORE GYAKORLÁS',
-        description: 'heti 5x',
-    },
-    {
-        iconName: 'LedClass',
-        title: 'VEZETETT ÓRA',
-        description: 'heti 1x',
-    },
-    {
-        iconName: 'Restday',
-        title: 'KONFERENCIA',
-        description: 'havi 1x',
-    },
-    {
-        iconName: 'MoonDays',
-        title: 'PIHENŐNAP',
-        description: 'szombat és a holdnapok',
-    },
-    {
-        iconName: 'Conference',
-        title: 'ASTANGÁS KÖZÖSSÉG',
-        description: '24/7',
-    },
-];
+const huMysoreElements = mysoreElementsData.HU;
+const enMysoreElements = mysoreElementsData.EN;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -173,7 +149,7 @@ const mysoreElements = [
             <h3 class="clr-brand-orange font-family-primary">A Mysore-program felépítése, elemei</h3>
             <div class="framed-section-orange__body">
                 {
-                    mysoreElements.map((element) => (
+                    huMysoreElements.map((element) => (
                         <div class="framed-section-orange__card">
                             <Icons name={element.iconName} />
                             <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
@@ -185,8 +161,21 @@ const mysoreElements = [
                 }
             </div>
         </div>
+        <div class="row mt-40px mb-20px">
+            <h3 class="clr-brand-orange font-family-primary mb-20px">Fegyelem és áldás: Az astanga jóga útja</h3>
+            <p>
+                Látszik, hogy nagy elkötelezettséget és komoly fegyelmet kíván ez az irányzat. Azonban az astanga
+                vinyásza jóga ezen keretek között képes kifejteni teljesen az áldásos hatását. Amellett, hogy a
+                gyakorlás fenntartásához automatikusan egészségesebb életmódra váltanak a gyakorlók (könnyű étkezések,
+                korai fekvés és kelés, rendszeres életritmus), az elme is fokozatosan átalakul. A Mysore-gyakorlás
+                szinte rákényszerít minket, hogy őszinték legyünk önmagunkkal, szembesít a hibáinkkal, amelyek akadályt
+                képeznek a spirituális úton, és eszközként szolgál a leküzdésükhöz.
+            </p>
+        </div>
     </div>
-
+    <div class="island-section container-fluid">
+        <h3 class="mb-20px font-family-primary clr-brand-orange text-align-center">A Mysore-program vezetője</h3>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const button = document.querySelector('#btn1');

@@ -54,8 +54,8 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
 }
 
 .container-fluid-right {

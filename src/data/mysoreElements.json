@@ -1,0 +1,56 @@
+{
+  "HU": [
+    {
+      "iconName": "Mysore",
+      "title": "MYSORE GYAKORLÁS",
+      "description": "heti 5x"
+    },
+    {
+      "iconName": "LedClass",
+      "title": "VEZETETT ÓRA",
+      "description": "heti 1x"
+    },
+    {
+      "iconName": "Restday",
+      "title": "KONFERENCIA",
+      "description": "havi 1x"
+    },
+    {
+      "iconName": "MoonDays",
+      "title": "PIHENŐNAP",
+      "description": "szombat és a holdnapok"
+    },
+    {
+      "iconName": "Conference",
+      "title": "ASTANGÁS KÖZÖSSÉG",
+      "description": "24/7"
+    }
+  ],
+  "EN": [
+    {
+      "iconName": "Mysore",
+      "title": "MYSORE PRACTICE",
+      "description": "5 times a week"
+    },
+    {
+      "iconName": "LedClass",
+      "title": "LED CLASS",
+      "description": "Once a week"
+    },
+    {
+      "iconName": "Restday",
+      "title": "CONFERENCE",
+      "description": "Once a month"
+    },
+    {
+      "iconName": "MoonDays",
+      "title": "REST DAYS",
+      "description": "Saturdays and Moon days"
+    },
+    {
+      "iconName": "Conference",
+      "title": "ASTANGA COMMUNITY",
+      "description": "24/7"
+    }
+  ]
+}
