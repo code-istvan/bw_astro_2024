@@ -6,42 +6,24 @@ import mobileImage from '../../images/rolunk_mobil.jpeg';
 import desktopImage from '../../images/rolunk_desktop.jpeg';
 import fireCeremony from '../../images/fire_ceremony.jpeg';
 import NameCard from '../../components/NameCard.astro';
+import data from '../../data/guestTeachers.json';
 import '../../sass/pages/_rolunk.scss';
 
-const pageTitle = 'About';
+const metadata = {
+    title: 'About',
+    description:
+        'The Bandha Works Yoga School was founded in 2013 by three engineers who were united by their desire to promote and teach traditional ashtanga vinyasa yoga in Hungary.',
+};
 
-const guestTeachers = [
-    [
-        { name: 'Harmony Slater', country: 'CDN' },
-        { name: 'Lucia Andrade', country: 'BRA' },
-        { name: 'David Robson', country: 'CDN' },
-        { name: 'Russel Case', country: 'USA' },
-    ],
-    [
-        { name: 'Lakshmisha Bhat', country: 'IND' },
-        { name: 'Laruga Glaser', country: 'USA' },
-        { name: 'Santina Giardina-Chard', country: 'AUS' },
-        { name: 'Govinda Kai', country: 'USA' },
-    ],
-    [
-        { name: 'R. Saraswathi Jois', country: 'IND' },
-        { name: 'Andréa Drottholm', country: 'S' },
-        { name: 'Sharmila Mahesh', country: 'IND' },
-        { name: 'Dr. Norman Sjoman', country: 'CDN' },
-    ],
-    [
-        { name: 'Charles Secallus', country: 'USA' },
-        { name: 'Dr. Vairagya Ranko', country: 'SRB' },
-    ],
-];
+const guestTeachers = data.guestTeachers;
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={metadata.title}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container">

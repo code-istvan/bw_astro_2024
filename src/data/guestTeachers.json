@@ -1,0 +1,26 @@
+{
+  "guestTeachers": [
+    [
+      { "name": "Harmony Slater", "country": "CDN" },
+      { "name": "Lucia Andrade", "country": "BRA" },
+      { "name": "David Robson", "country": "CDN" },
+      { "name": "Russel Case", "country": "USA" }
+    ],
+    [
+      { "name": "Lakshmisha Bhat", "country": "IND" },
+      { "name": "Laruga Glaser", "country": "USA" },
+      { "name": "Santina Giardina-Chard", "country": "AUS" },
+      { "name": "Govinda Kai", "country": "USA" }
+    ],
+    [
+      { "name": "R. Saraswathi Jois", "country": "IND" },
+      { "name": "Andréa Drottholm", "country": "S" },
+      { "name": "Sharmila Mahesh", "country": "IND" },
+      { "name": "Dr. Norman Sjoman", "country": "CDN" }
+    ],
+    [
+      { "name": "Charles Secallus", "country": "USA" },
+      { "name": "Dr. Vairagya Ranko", "country": "SRB" }
+    ]
+  ]
+}
