@@ -29,7 +29,10 @@ const guestTeachers = [
         { name: 'Sharmila Mahesh', country: 'IND' },
         { name: 'Dr. Norman Sjoman', country: 'CDN' },
     ],
-    [{ name: 'Dr. Vairagya Ranko', country: 'SRB' }],
+    [
+        { name: 'Charles Secallus', country: 'USA' },
+        { name: 'Dr. Vairagya Ranko', country: 'SRB' },
+    ],
 ];
 ---
 
@@ -128,11 +131,7 @@ const guestTeachers = [
             </div>
             <div class="guest-teachers-container-desktop">
                 <div class="guest-teachers-desktop">
-                    {
-                        guestTeachers
-                            .flat()
-                            .map((person, index) => <NameCard name={person.name} country={person.country} />)
-                    }
+                    {guestTeachers.flat().map((person) => <NameCard name={person.name} country={person.country} />)}
                 </div>
             </div>
         </div>
