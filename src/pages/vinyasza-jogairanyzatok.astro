@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/jogairanyzatok_mobil.jpg';
 import desktopImage from '../images/jogairanyzatok_desktop.jpg';
-import Tab from '../components/Tab.astro';
+import TabYogaStyles from '../components/Tabs/TabYogaStyles.astro';
 
 const pageTitle = 'Jógairányzatok';
 
@@ -13,9 +13,7 @@ const tab = Astro.url.searchParams.get('tab') || '';
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
-        <Tab tab="tab1" />
-
+        <TabYogaStyles tab="tab1" />
         <a href="/vinyasza-jogairanyzatok?tab=tab2">Click here for tab2e</a>
     </div>
 </BaseLayout>
