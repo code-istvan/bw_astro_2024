@@ -1,0 +1,36 @@
+{
+  "HU": [
+    {
+      "link": "/blog/5-dolog-amit-az-uj-gyakorloknak-erdemes-megtanulnia/",
+      "title": "5 dolog amit az új gyakorlóknak érdemes megtanulnia",
+      "classNames": "body link-enhanced link-orange"
+    },
+    {
+      "link": "/blog/sharath-jois-arrol-hogy-miben-nyujt-tobbet-egy-helyi-shala-mint-egy-hagyomanyos-edzes/",
+      "title": "Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy hagyományos edzés",
+      "classNames": "body link-enhanced link-orange"
+    },
+    {
+      "link": "/blog/jollet-a-hatarainkon-avagy-mit-tanulhatunk-a-mysore-stilusu-astanga-joga-napi-szintu-gyakorlasaval-andy-davis-tollabol/",
+      "title": "Mit tanulhatunk a Mysore-stílusú astanga jóga napi szintű gyakorlásával?",
+      "classNames": "body link-enhanced link-orange"
+    }
+  ],
+  "EN": [
+    {
+      "link": "/blog/5-things-new-practitioners-should-learn/",
+      "title": "5 things new practitioners should learn",
+      "classNames": "body link-enhanced link-orange"
+    },
+    {
+      "link": "/blog/sharath-jois-on-how-a-local-shala-offers-more-than-traditional-training/",
+      "title": "Sharath Jois on how a local Shala offers more than traditional training",
+      "classNames": "body link-enhanced link-orange"
+    },
+    {
+      "link": "/blog/what-we-can-learn-from-daily-mysore-style-ashtanga-yoga-practice/",
+      "title": "What we can learn from daily Mysore-style Ashtanga yoga practice",
+      "classNames": "body link-enhanced link-orange"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import MysoreImage3 from '../images/mysore_program_3.jpeg';
 import Istvan from '../images/istvan.png';
 import mysoreSpecialitiesData from '../data/mysoreSpecialities.json';
 import mysoreElementsData from '../data/mysoreElements.json';
+import mysoreReadingsData from '../data/mysoreReadings.json';
 import Counter from '../components/Counter';
 
 const metadata = {
@@ -24,6 +25,9 @@ const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
 
 const huMysoreElements = mysoreElementsData.HU;
 const enMysoreElements = mysoreElementsData.EN;
+
+const huMysoreReadings = mysoreReadingsData.HU;
+const enMysoreReadings = mysoreReadingsData.EN;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -221,6 +225,20 @@ const enMysoreElements = mysoreElementsData.EN;
                 >
                     Mysore-program árak
                 </a>
+            </div>
+        </div>
+        <div class="page-content__section page-content__section--readings mb-20px">
+            <h3>Hasznos olvasmányok a Mysore-gyakorlásról:</h3>
+            <div class="row unordered-list-style mb-40px">
+                <ul>
+                    {
+                        huMysoreReadings.map((item) => (
+                            <li class={item.classNames}>
+                                <a href={item.link}>{item.title}</a>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </div>
     </div>
