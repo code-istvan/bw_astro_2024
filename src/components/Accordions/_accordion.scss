@@ -74,8 +74,13 @@
   /* gap: 4px; */
   /* height: 40px; */
 }
-.accordion__title-container h3 {
+.accordion__title-container {
   color: white;
+}
+
+.accordion__title-container p {
+  font-weight: 800;
+  padding-right: 8px;
 }
 
 .accordion__svg-container svg {

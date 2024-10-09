@@ -1,0 +1,58 @@
+---
+import './_accordion.scss';
+const { faqs = [], id } = Astro.props;
+---
+
+{
+    faqs.map((faq, index) => (
+        <div class="accordion__section">
+            <button class="accordion" data-accordion-toggle={`${id}-${index}`}>
+                <div class="accordion-chevron">
+                    <div class="accordion__title-container">
+                        <p>{faq.question}</p>
+                    </div>
+                    <div class="accordion__svg-container">
+                        <svg
+                            class="accordion__icon"
+                            data-accordion-icon={`${id}-${index}`}
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="hsl(0, 0%, 100%)"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M10.5 10V2H13.5V10H22V13H13.5V22H10.5V13H2V10H10.5Z" fill="orange" />
+                        </svg>
+                    </div>
+                </div>
+            </button>
+            <div data-accordion-content={`${id}-${index}`} class="accordion__content">
+                <div class="accordion__text">
+                    <p>{faq.answer}</p>
+                </div>
+            </div>
+        </div>
+    ))
+}
+
+<script>
+    document.querySelectorAll('.accordion').forEach((accordionButton) => {
+        const id = accordionButton.getAttribute('data-accordion-toggle');
+        const accordionContent = document.querySelector(`[data-accordion-content="${id}"]`) as HTMLElement;
+        const accordionIcon = document.querySelector(`[data-accordion-icon="${id}"]`) as HTMLElement;
+
+        accordionButton.addEventListener('click', () => {
+            if (accordionContent) {
+                const contentHeight = accordionContent.scrollHeight;
+
+                if (accordionContent.style.maxHeight === '0px' || !accordionContent.style.maxHeight) {
+                    accordionContent.style.maxHeight = contentHeight + 'px';
+                    accordionIcon.classList.add('rotate__45deg');
+                } else {
+                    accordionContent.style.maxHeight = '0px';
+                    accordionIcon.classList.remove('rotate__45deg');
+                }
+            }
+        });
+    });
+</script>

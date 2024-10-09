@@ -5,6 +5,7 @@ import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
 import { Image } from 'astro:assets';
 import Icons from '../components/Icons/Icons.astro';
+import AccordionMysoreFaq from '../components/Accordions/AccordionMysoreFaq.astro';
 import MysoreImage1 from '../images/mysore_program_1.jpg';
 import MysoreImage2 from '../images/mysore_program_2.jpg';
 import MysoreImage3 from '../images/mysore_program_3.jpeg';
@@ -12,6 +13,7 @@ import Istvan from '../images/istvan.png';
 import mysoreSpecialitiesData from '../data/mysoreSpecialities.json';
 import mysoreElementsData from '../data/mysoreElements.json';
 import mysoreReadingsData from '../data/mysoreReadings.json';
+import mysoreFaqsData from '../data/mysoreFaq.json';
 import Counter from '../components/Counter';
 
 const metadata = {
@@ -28,6 +30,9 @@ const enMysoreElements = mysoreElementsData.EN;
 
 const huMysoreReadings = mysoreReadingsData.HU;
 const enMysoreReadings = mysoreReadingsData.EN;
+
+const huMysoreFaqs = mysoreFaqsData.HU;
+const enMysoreFaqs = mysoreFaqsData.EN;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -225,6 +230,32 @@ const enMysoreReadings = mysoreReadingsData.EN;
                 >
                     Mysore-program árak
                 </a>
+            </div>
+        </div>
+        <div class="page-content__section page-content__section--faq mb-40px mt-40px">
+            <div class="page-content__section page-content__section--faq mb-20px">
+                {
+                    huMysoreFaqs.length > 0 ? (
+                        huMysoreFaqs.map((faq) => (
+                            <AccordionMysoreFaq
+                                key={faq.id}
+                                id={`accordion-${faq.id}`}
+                                Egyedi
+                                ID
+                                minden
+                                accordion
+                                elemhez
+                                className="accordion-title"
+                                faqs={[faq]}
+                                Egyedi
+                                kérdés-válasz
+                                átadása
+                            />
+                        ))
+                    ) : (
+                        <div>Nincs elérhető információ.</div>
+                    )
+                }
             </div>
         </div>
         <div class="page-content__section page-content__section--readings mb-20px">
