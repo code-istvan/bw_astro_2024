@@ -1,0 +1,20 @@
+@import '/src/sass/global';
+
+.mysore-structure-card {
+  background-color: $color-shades-darkGray;
+
+  &__content {
+    background-color: $color-shades-darkGray;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+}

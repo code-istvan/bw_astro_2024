@@ -15,6 +15,8 @@ import mysoreElementsData from '../data/mysoreElements.json';
 import mysoreReadingsData from '../data/mysoreReadings.json';
 import mysoreFaqsData from '../data/mysoreFaq.json';
 import Counter from '../components/Counter';
+import Carousel from '../components/Carousel/Carousel.astro';
+import MysoreStructureCard from '../components/Carousel/MysoreStructureCard.astro';
 
 const metadata = {
     title: 'Atanga Mysore-Program',
@@ -155,9 +157,12 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                 </div>
             </div>
         </div>
-        <div class="text-align-center mt-40px mb-20px">
-            <h3 class="clr-brand-orange font-family-primary">A Mysore-program felépítése, elemei</h3>
-            <div class="framed-section-orange__body">
+
+        <div class="page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px">
+            <h3 class="mysore-structure__title clr-brand-orange font-family-primary">
+                A Mysore-program felépítése, elemei
+            </h3>
+            <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
                 {
                     huMysoreElements.map((element) => (
                         <div class="framed-section-orange__card">
@@ -165,12 +170,28 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                             <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
                                 {element.title}
                             </h4>
-                            <p>{element.description}</p>
+                            <p class="body clr-shades-gray">{element.description}</p>
                         </div>
                     ))
                 }
             </div>
+            <div class="mysore-structure__body mysore-structure__cards--mobile">
+                <Carousel>
+                    {
+                        huMysoreElements.map((element) => (
+                            <div class="section-social-proof__slide embla__slide">
+                                <MysoreStructureCard
+                                    title={element.title}
+                                    description={element.description}
+                                    icon={element.iconName}
+                                />
+                            </div>
+                        ))
+                    }
+                </Carousel>
+            </div>
         </div>
+
         <div class="row mt-40px mb-20px">
             <h3 class="clr-brand-orange font-family-primary mb-20px">Fegyelem és áldás: Az astanga jóga útja</h3>
             <p>
@@ -289,6 +310,25 @@ const enMysoreFaqs = mysoreFaqsData.EN;
 </script>
 
 <style>
+    @media (min-width: 1024px) {
+        .mysore-structure__cards--mobile {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .mysore-structure__cards--desktop {
+            display: none;
+        }
+    }
+
+    .mysore_test {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     .lead-teacher__body img {
         margin-right: 12px;
     }

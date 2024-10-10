@@ -1,0 +1,20 @@
+---
+import Icons from '../Icons/Icons.astro';
+import './_MysoreStructureCard.scss';
+
+export interface CarouselProps {
+    title?: string;
+    description?: string;
+    icon?: string;
+}
+
+const { title, description, icon }: CarouselProps = Astro.props;
+---
+
+<div class="mysore-structure-card mt-20px">
+    <div class="mysore-structure-card__content">
+        <Icons name={icon} color="orange" />
+        <h3 class="mysore-structure-card__title clr-shades-white">{title}</h3>
+        <p class="mysore-structure-card__description body clr-shades-gray">{description}</p>
+    </div>
+</div>
