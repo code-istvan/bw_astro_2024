@@ -324,6 +324,12 @@ ol {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .text-left-mobile-center-desktop {
+    text-align: center;
+  }
+}
+
 .avatar__image {
   border-radius: 50%;
 }
