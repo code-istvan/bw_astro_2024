@@ -236,25 +236,29 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                 <a href="/elso-alkalom" class="link-enhanced link-orange">első alkalom</a>
                 valamint <a href="/hazirend" class="link-enhanced link-orange">házirend</a>.
             </p>
-            <div class="application__buttons display-flex display-flex--justify-center gap-1">
-                <a
-                    href="/mysore-program-jelentkezes"
-                    class="btn btn--full-width-mobile btn--primary--solid mt-20px"
-                    aria-label="Jelentkezés a Mysore-programba"
-                >
-                    Jelentkezés a Mysore-programba
-                </a>
-                <a
-                    href="/arak"
-                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
-                    aria-label="Jelentkezés a Mysore-programba"
-                >
-                    Mysore-program árak
-                </a>
+            <div class="row gap-1 mt-20px">
+                <div class="application__buttons col-12-xs col-6-md col-6-xl">
+                    <a
+                        href="/mysore-program-jelentkezes"
+                        class="btn btn--full-width-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
+                        aria-label="Jelentkezés a Mysore-programba"
+                    >
+                        Jelentkezés a Mysore-programba
+                    </a>
+                </div>
+                <div class="col-12-xs col-6-md col-6-xl application__buttons">
+                    <a
+                        href="/arak"
+                        class="btn btn--full-width-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
+                        aria-label="Jelentkezés a Mysore-programba"
+                    >
+                        Mysore-program árak
+                    </a>
+                </div>
             </div>
         </div>
         <div class="page-content__section page-content__section--faq mb-40px mt-40px">
-            <div class="page-content__section page-content__section--faq mb-20px">
+            <div class="page-content__section page-content__section--faq mb-40px">
                 {
                     huMysoreFaqs.length > 0 ? (
                         huMysoreFaqs.map((faq) => (
@@ -281,7 +285,7 @@ const enMysoreFaqs = mysoreFaqsData.EN;
         </div>
         <div class="page-content__section page-content__section--readings mb-20px">
             <h3>Hasznos olvasmányok a Mysore-gyakorlásról:</h3>
-            <div class="row unordered-list-style mb-40px">
+            <div class="row unordered-list-style mt-20px mb-40px">
                 <ul>
                     {
                         huMysoreReadings.map((item) => (
@@ -334,6 +338,9 @@ const enMysoreFaqs = mysoreFaqsData.EN;
     }
 
     .application__buttons {
-        gap: 1rem;
+        a {
+            width: 100%;
+            gap: 1rem;
+        }
     }
 </style>
