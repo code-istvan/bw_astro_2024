@@ -5,13 +5,17 @@ import mobileImage from '../images/jogairanyzatok_mobil.jpg';
 import desktopImage from '../images/jogairanyzatok_desktop.jpg';
 import TabYogaStyles from '../components/Tabs/TabYogaStyles.astro';
 
-const pageTitle = 'Jógairányzatok';
+const metadata = {
+    title: 'VINYÁSZA JÓGAIRÁNYZATOK',
+    description:
+        'Ezen az oldalon olvashatod a vinyásza jóga irányzatokról szóló információkat. Astanga vinyásza jóga, vinyásza krama jóga.',
+};
 
 const tab = Astro.url.searchParams.get('tab') || '';
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
         <TabYogaStyles tab="tab1" />
         <a href="/vinyasza-jogairanyzatok?tab=tab2">Click here for tab2e</a>
