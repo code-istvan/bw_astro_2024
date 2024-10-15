@@ -1,0 +1,79 @@
+---
+const { tab = 'tab1' } = Astro.props;
+import './_tab.scss';
+---
+
+<section class="tabs mt-40px">
+    <div class="">
+        <ul class="tab-list mb-20px">
+            <li class="tab-item" data-target="tab1"><h3>Holdnapok</h3></li>
+            <li class="tab-item" data-target="tab2"><h3>Ékádasi</h3></li>
+        </ul>
+    </div>
+    <div id="tab1" class="tab-content --is-active">
+        <p>Ide jön az Holdnapok tartalma</p>
+    </div>
+    <div id="tab2" class="tab-content">
+        <p>Ide jön az Ékádasi tartalma</p>
+    </div>
+</section>
+
+<script>
+    // Alapvető változók
+    const SELECTORS = {
+        TAB: '.tab-item',
+        CONTENT: '.tab-content',
+    };
+
+    // URL-ből olvassuk ki a `tab` paramétert
+    const getTabFromURL = () => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('tab') || 'tab1'; // Alapértelmezett a 'tab1', ha nincs megadva paraméter
+    };
+
+    // A tab váltás logikája
+    const changeTab = (tabId) => {
+        // Kiválasztjuk az összes tab elemet
+        const tabs = document.querySelectorAll<HTMLElement>(SELECTORS.TAB);
+        const contents = document.querySelectorAll<HTMLElement>(SELECTORS.CONTENT);
+
+        // Minden tab esetén beállítjuk az aktív állapotot
+        tabs.forEach((tab) => {
+            const isActive = tab.dataset.target === tabId;
+            tab.classList.toggle('--is-active', isActive); // Csak az aktív tab kapja meg az osztályt
+        });
+
+        // Minden tartalom esetén beállítjuk az aktív állapotot
+        contents.forEach((content) => {
+            const isActive = content.id === tabId;
+            content.classList.toggle('--is-active', isActive); // Csak az aktív tartalom jelenik meg
+        });
+
+        // Frissítjük az URL-t, hogy a megfelelő tabot mutassa
+        const url = new URL(window.location.href); // window.location helyett window.location.href
+        url.searchParams.set('tab', tabId);
+        window.history.replaceState({}, '', url);
+    };
+
+    // Inicializálás funkció, amikor az oldal betöltődik
+    const initTabs = () => {
+        const initialTabId = getTabFromURL(); // URL alapján betöltjük az elsődleges tabot
+        const tabs = document.querySelectorAll<HTMLElement>(SELECTORS.TAB);
+
+        // Kattintás esemény kezelése minden tab elemre
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.target; // Lekérdezzük a cél tab id-jét
+                changeTab(tabId); // Tab váltás végrehajtása
+            });
+        });
+
+        // Az elsődleges tab beállítása a betöltéskor
+        changeTab(initialTabId);
+    };
+
+    // Az oldal betöltődésekor futtatjuk az inicializáló funkciót
+    document.addEventListener('DOMContentLoaded', () => {
+        initTabs();
+    });
+</script>

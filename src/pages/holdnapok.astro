@@ -3,14 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/holdnapok_mobil.jpeg';
 import desktopImage from '../images/holdnapok_desktop.jpeg';
+import TabMoonDays from '../components/Tabs/TabMoonDays.astro';
 
-const pageTitle = 'Holdnapok';
+const metadata = {
+    title: 'HOLDNAPOK',
+    description: 'Ezen az oldalon olvashatsz az astangás holdnapokról. Holdnaptár, pihenőnapok, ékádasi.',
+};
+
+const tab = Astro.url.searchParams.get('tab') || '';
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+        <TabMoonDays tab="tab1" />
     </div>
 </BaseLayout>
 
