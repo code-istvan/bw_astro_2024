@@ -27,7 +27,7 @@ collections:
         name: 'language'
         widget: 'select'
         options: ['Hungarian', 'English']
-        default: ['Hungarian']
+        default: 'Hungarian'
       - label: Title
         name: title
         widget: string
