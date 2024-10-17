@@ -25,8 +25,11 @@ type Props = {
     page: any; // Add the 'page' property to the Props interface
 };
 
+const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
+
 const { page } = Astro.props;
 const pageTitle = `Blog`;
+console.log('page', page.data[0]);
 ---
 
 <BaseLayout title={pageTitle}>

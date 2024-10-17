@@ -1,9 +1,11 @@
 import { defineCollection, z } from 'astro:content';
+import { languages } from '../i18n/ui';
 
 const postsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     published: z.boolean(),
+    language: z.string(),
     title: z.string(),
     description: z.string(),
     author: z.string(),
