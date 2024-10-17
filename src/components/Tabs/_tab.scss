@@ -32,3 +32,15 @@
     font-weight: 400;
   }
 }
+
+.limb-list {
+  &__item {
+    margin-bottom: 10px; /* Kicsi margó az elemek között */
+  }
+
+  &__limb,
+  &__description {
+    display: inline; /* A limb és a description egy sorban marad */
+    margin-right: 5px; /* Kicsi távolság a két elem között */
+  }
+}

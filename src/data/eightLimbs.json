@@ -1,0 +1,70 @@
+{
+  "HU": [
+    {
+      "limb": "Jama",
+      "description": "erkölcsi előírások"
+    },
+    {
+      "limb": "Nijama",
+      "description": "önfegyelem gyakorlása"
+    },
+    {
+      "limb": "Ászana",
+      "description": "jógatesthelyzetek gyakorlása"
+    },
+    {
+      "limb": "Pránájáma",
+      "description": "légzés szabályozásának gyakorlása"
+    },
+    {
+      "limb": "Pratjáhára",
+      "description": "érzékek és a világ dolgai közötti kapcsolat kiiktatása"
+    },
+    {
+      "limb": "Dháraná",
+      "description": "tartós koncentráció"
+    },
+    {
+      "limb": "Dhjána",
+      "description": "megszakítás nélküli meditáció"
+    },
+    {
+      "limb": "Szamádhi",
+      "description": "megvilágosodás"
+    }
+  ],
+  "EN": [
+    {
+      "limb": "Yama",
+      "description": "ethical guidelines"
+    },
+    {
+      "limb": "Niyama",
+      "description": "practicing self-discipline"
+    },
+    {
+      "limb": "Asana",
+      "description": "practicing yoga postures"
+    },
+    {
+      "limb": "Pranayama",
+      "description": "practicing breath control"
+    },
+    {
+      "limb": "Pratyahara",
+      "description": "withdrawing from the senses"
+    },
+    {
+      "limb": "Dharana",
+      "description": "sustained concentration"
+    },
+    {
+      "limb": "Dhyana",
+      "description": "uninterrupted meditation"
+    },
+    {
+      "limb": "Samadhi",
+      "description": "experiencing unity with the object of meditation"
+    }
+  ]
+}

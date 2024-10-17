@@ -1,0 +1,30 @@
+{
+  "HU": [
+    {
+      "title": "Jóga Csikitszá",
+      "description": "a fizikai test rendbetételére szolgál"
+    },
+    {
+      "title": "Nádi Sódhana",
+      "description": "az idegrendszer tisztítását végzi"
+    },
+    {
+      "title": "Szthira Bhága A, B, C, D",
+      "description": "az előző sorozatok hatásainak elmélyítését szolgálja"
+    }
+  ],
+  "EN": [
+    {
+      "title": "Yoga Chikitsa",
+      "description": "used for restoring the physical body"
+    },
+    {
+      "title": "Nadi Shodhana",
+      "description": "purifies the nervous system"
+    },
+    {
+      "title": "Sthira Bhaga A, B, C, D",
+      "description": "deepens the effects of previous series"
+    }
+  ]
+}

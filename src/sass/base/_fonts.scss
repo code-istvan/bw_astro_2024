@@ -265,3 +265,7 @@ h5 {
 p {
   @extend .body;
 }
+
+.font-family-primary {
+  font-family: $font-family-primary;
+}

@@ -5,6 +5,7 @@ import mobileImage from '../images/jogairanyzatok_mobil.jpg';
 import desktopImage from '../images/jogairanyzatok_desktop.jpg';
 import TabYogaStyles from '../components/Tabs/TabYogaStyles.astro';
 
+
 const metadata = {
     title: 'VINYÁSZA JÓGAIRÁNYZATOK',
     description:
@@ -15,8 +16,14 @@ const tab = Astro.url.searchParams.get('tab') || '';
 ---
 
 <BaseLayout title={metadata.title}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container">
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
         <TabYogaStyles tab="tab1" />
         <!-- <a href="/vinyasza-jogairanyzatok?tab=tab2">Click here for tab2e</a> -->
     </div>
