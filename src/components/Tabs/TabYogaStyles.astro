@@ -3,6 +3,8 @@ const { tab = 'tab1' } = Astro.props;
 import { Image } from 'astro:assets';
 import oldShala from '../../images/old_shala.jpg';
 import gurujiSharathji from '../../images/guruji_sharathji.jpeg';
+import sriK from '../../images/krishnamacharya.jpg';
+import sriKTeaching from '../../images/krishnamacharya_teaching.jpg';
 import limbsData from '../../data/eightLimbs.json';
 import seriesData from '../../data/ashtangaSeries.json';
 import './_tab.scss';
@@ -149,6 +151,8 @@ const huSeriesData = seriesData.HU;
     </div>
     <div id="tab2" class="tab-content">
         <p>VK</p>
+        <Image src={sriK} class="mt-20px" alt="Prof. T. Krishnamacharya, a modern jóga atyja" />
+        <Image src={sriKTeaching} class="mt-20px" alt="Prof. T. Krishnamacharya pránájámát oktat Mysore-ban" />
     </div>
 </section>
 
