@@ -1,6 +1,9 @@
 ---
 const { tab = 'tab1' } = Astro.props;
+import moonDaysReadingData from '../../data/moonDaysReading.json';
 import './_tab.scss';
+
+const huMoonDaysReadingData = moonDaysReadingData.HU;
 ---
 
 <section class="tabs mt-40px">
@@ -11,10 +14,53 @@ import './_tab.scss';
         </ul>
     </div>
     <div id="tab1" class="tab-content --is-active">
-        <p>Ide jön az Holdnapok tartalma</p>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">
+            Az astanga jóga tradíció része, hogy a Telihold és az Újhold napjai pihenőnapok, amikor nincs
+            ászanagyakorlás.
+        </h3>
+        <p class="mb-20px mt-20px">
+            Ez a szokás azzal is magyarázható, miszerint a holdfázisok ránk (az emberi testre és elmére) is hatással
+            bírnak, hiszen az emberi szervezet több mint 70%-a víz. Teliholdkor energikusnak érezzük magunkat, de
+            érzelmileg nyugtalanok vagyunk. Újholdkor nyugodtnak, kiegyensúlyozottnak érezzük magunkat, viszont nem esik
+            jól a fizikai megterhelés. Azaz Holdnapokon a különböző energiák erőteljes hatást gyakorolnak ránk, és
+            emiatt sérülékenyebbek lehetünk.
+        </p>
+        <p class="mb-20px mt-20px">
+            A jógikus hagyományok szerint ezért Holdnapokon az ászanagyakorlás helyett a spirituális gyakorlatok végzése
+            került előtérbe (pl. önmagunk megfigyelése, szent iratok, könyvek tanulmányozása, imák gyakorlása,
+            mantrázás). A Holdnapok saját magunk általi megtapasztalása az egyik legjobb módja annak, hogy felismerjük
+            és tiszteletben tartsuk a természet ritmusait, és ezáltal nagyobb harmóniában élhessünk vele.
+        </p>
+        <p class="mb-20px mt-20px">
+            Ezenkívül, aki napi rendszerességgel gyakorol (a heti hat nap ajánlott), hamar észre fogja venni, hogy a
+            Holdnapokon tartott pihenőnap mennyire kedvező hatással van, amikor is a teste megpihenhet (elvégre az
+            astanga gyakorlás fizikailag megterhelő lehet), a több szabadidő pedig a mentális feltöltődést teszi még
+            teljesebbé.
+        </p>
+        <h3 class="font-family-primary mt-20px mb-20px">További olvasmány a témában:</h3>
+        <ul>
+            {
+                huMoonDaysReadingData.map((reading) => (
+                    <li class="">
+                        <a href={reading.link} class="link-enhanced link-orange">
+                            <p class="clr-brand-orange">
+                                <strong>{reading.title}</strong>
+                            </p>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
     </div>
     <div id="tab2" class="tab-content">
-        <p>Ide jön az Ékádasi tartalma</p>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Az ékádasi a hindu kultúra böjtnapja</h3>
+        <p class="mb-20px mt-20px">
+            A szó maga szanszkrit nyelven “tizenegyedik”-et jelent, és a holdtöltét, valamint újholdat követő
+            tizenegyedik napra vonatkozik. A védikus hagyományok szerint - a Hold aktuális állásának köszönhetően -,
+            testünk és elménk ezeken a napokon a legalkalmasabb a megtisztulásra. A böjt segítségével fizikai testünk
+            megpihen. Üres, könnyű és tiszta gyomorral tudatunk energetikusabb és éberebb működésre képes. Ezeket a
+            napokat érdemes befelé fordulással, spirituális gyakorlással tölteni (mantrázás, meditálás).
+        </p>
     </div>
 </section>
 

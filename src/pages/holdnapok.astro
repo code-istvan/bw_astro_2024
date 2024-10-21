@@ -14,8 +14,14 @@ const tab = Astro.url.searchParams.get('tab') || '';
 ---
 
 <BaseLayout title={metadata.title}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container">
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
         <TabMoonDays tab="tab1" />
     </div>
 </BaseLayout>
