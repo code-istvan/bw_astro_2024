@@ -11,18 +11,35 @@ const metadata = {
 };
 
 const tab = Astro.url.searchParams.get('tab') || '';
+
+const moonDayInfo = `A holdnaptárban *-gal jelölt dátumok speciális astangás holdnapok. 
+A hivatalos – Budapestre számított – teli- és újhold nem erre a napra esik, viszont az aktuális holdnap 
+órára és percre számított pontos időpontja (pl. 23:30) közelebb esik a következő napi gyakorlás időpontjához, 
+ezért tolódík a pihenőnap erre a dátumra.`;
 ---
 
 <BaseLayout title={metadata.title}>
-    <HeroImage
-        mobileImgUrl={mobileImage}
-        desktopImgUrl={desktopImage}
-        alt={metadata.title}
-        pageName={metadata.title}
-        containerClass="container--tight-desktop"
-    />
-    <div class="container container--tight-desktop">
-        <TabMoonDays tab="tab1" />
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+    <div class="container">
+        <div class="row gap-2">
+            <div class="col-12-xs col-8-lg">
+                <TabMoonDays tab="tab1" />
+                <div class="u-hidden-desktop">
+                    <p>
+                        {moonDayInfo}
+                    </p>
+                </div>
+            </div>
+            <div class="col-12-xs col-4-lg mt-40px u-hidden-mobile">
+                <h3>Holdnaptár</h3>
+                <div></div>
+                <div>
+                    <p>
+                        {moonDayInfo}
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </BaseLayout>
 
