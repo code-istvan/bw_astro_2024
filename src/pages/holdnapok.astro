@@ -4,18 +4,18 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/holdnapok_mobil.jpeg';
 import desktopImage from '../images/holdnapok_desktop.jpeg';
 import TabMoonDays from '../components/Tabs/TabMoonDays.astro';
+import moonDays from '../data/moonDays.json';
+import MoonDaysNavigator from '../components/MoonDays/MoonDaysNavigator.jsx';
 
 const metadata = {
     title: 'HOLDNAPOK',
     description: 'Ezen az oldalon olvashatsz az astangás holdnapokról. Holdnaptár, pihenőnapok, ékádasi.',
 };
 
-const tab = Astro.url.searchParams.get('tab') || '';
-
 const moonDayInfo = `A holdnaptárban *-gal jelölt dátumok speciális astangás holdnapok. 
 A hivatalos – Budapestre számított – teli- és újhold nem erre a napra esik, viszont az aktuális holdnap 
 órára és percre számított pontos időpontja (pl. 23:30) közelebb esik a következő napi gyakorlás időpontjához, 
-ezért tolódík a pihenőnap erre a dátumra.`;
+ezért tolódik a pihenőnap erre a dátumra.`;
 ---
 
 <BaseLayout title={metadata.title}>
@@ -31,16 +31,22 @@ ezért tolódík a pihenőnap erre a dátumra.`;
                 </div>
             </div>
             <div class="col-12-xs col-4-lg mt-40px u-hidden-mobile">
-                <h3>Holdnaptár</h3>
-                <div></div>
-                <div>
-                    <p>
-                        {moonDayInfo}
-                    </p>
-                </div>
+                <h3 class="mb-20px">Holdnaptár</h3>
+                <MoonDaysNavigator moonDays={moonDays} client:load />
+                <p class="mt-20px">
+                    {moonDayInfo}
+                </p>
             </div>
         </div>
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    .moondays-card {
+        margin-bottom: 20px;
+    }
+
+    .holdnapok--moondayCard--buttons button {
+        cursor: pointer;
+    }
+</style>
