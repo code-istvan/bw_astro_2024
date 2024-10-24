@@ -1,5 +1,5 @@
-// src/components/MoonDaysNavigator.jsx
 import React, { useState } from 'react';
+import MoonDayCard from './MoonDayCard';
 
 const MoonDaysNavigator = ({ moonDays }) => {
   const [currentMonthId, setCurrentMonthId] = useState(new Date().getMonth() + 1);
@@ -14,30 +14,16 @@ const MoonDaysNavigator = ({ moonDays }) => {
 
   const currentData = moonDays.find((item) => item.monthValue === currentMonthId);
 
-  if (!currentData) {
-    return <p>Nincs elérhető adat a megadott hónaphoz.</p>;
-  }
-
   return (
     <div>
-      <div className="moondays-card">
-        <h4>{currentData.month.HU}</h4>
-        <p>
-          <strong>Telihold:</strong> {currentData.fullMoon.HU}
-        </p>
-        <p>
-          <strong>Újhold:</strong> {currentData.newMoon.HU}
-        </p>
-        <p>
-          <strong>Ékádasi Telihold:</strong> {currentData.ekadashiFullMoon.HU}
-        </p>
-        <p>
-          <strong>Ékádasi Újhold:</strong> {currentData.ekadashiNewMoon.HU}
-        </p>
-      </div>
-      <div className="holdnapok--moondayCard--buttons">
-        <button onClick={handlePreviousMonth}>Előző hónap</button>
-        <button onClick={handleNextMonth}>Következő hónap</button>
+      <MoonDayCard data={currentData} />
+      <div className="holdnapok--moondayCard--buttons display-flex justify-content-space-between mt-8px">
+        <button onClick={handlePreviousMonth}>
+          <p className="clr-brand-orange">Előző hónap</p>
+        </button>
+        <button onClick={handleNextMonth}>
+          <p className="clr-brand-orange">Következő hónap</p>
+        </button>
       </div>
     </div>
   );

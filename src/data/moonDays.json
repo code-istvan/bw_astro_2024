@@ -1,6 +1,7 @@
 [
   {
     "monthValue": 1,
+    "year": 2024,
     "month": {
       "HU": "Január",
       "EN": "January"
@@ -27,6 +28,7 @@
   },
   {
     "monthValue": 2,
+    "year": 2024,
     "month": {
       "HU": "Február",
       "EN": "February"
@@ -56,6 +58,7 @@
   },
   {
     "monthValue": 3,
+    "year": 2024,
     "month": {
       "HU": "Március",
       "EN": "March"
@@ -85,6 +88,7 @@
   },
   {
     "monthValue": 4,
+    "year": 2024,
     "month": {
       "HU": "Április",
       "EN": "April"
@@ -114,6 +118,7 @@
   },
   {
     "monthValue": 5,
+    "year": 2024,
     "month": {
       "HU": "Május",
       "EN": "May"
@@ -143,6 +148,7 @@
   },
   {
     "monthValue": 6,
+    "year": 2024,
     "month": {
       "HU": "Június",
       "EN": "June"
@@ -169,6 +175,7 @@
   },
   {
     "monthValue": 7,
+    "year": 2024,
     "month": {
       "HU": "Július",
       "EN": "July"
@@ -195,6 +202,7 @@
   },
   {
     "monthValue": 8,
+    "year": 2024,
     "month": {
       "HU": "augusztus",
       "EN": "August"
@@ -224,6 +232,7 @@
   },
   {
     "monthValue": 9,
+    "year": 2024,
     "month": {
       "HU": "szeptember",
       "EN": "September"
@@ -250,6 +259,7 @@
   },
   {
     "monthValue": 10,
+    "year": 2024,
     "month": {
       "HU": "október",
       "EN": "October"
@@ -276,6 +286,7 @@
   },
   {
     "monthValue": 11,
+    "year": 2024,
     "month": {
       "HU": "november",
       "EN": "November"
@@ -302,6 +313,7 @@
   },
   {
     "monthValue": 12,
+    "year": 2024,
     "month": {
       "HU": "december",
       "EN": "December"

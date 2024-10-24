@@ -1,0 +1,21 @@
+@import '/src/sass/global';
+
+.moondays-card {
+  border: 2px solid $color-shades-lightBlack;
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  &__month {
+    font-weight: bold;
+  }
+
+  &__year {
+    font-weight: bold;
+  }
+}
