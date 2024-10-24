@@ -29,7 +29,9 @@ const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
 
 const { page } = Astro.props;
 const pageTitle = `Blog`;
-console.log('page', page.data[0]);
+const pageData = page.data.filter((post) => post.data.language === currentLanguage);
+// console.log(page.url);
+// console.log('pageData', pageData);
 ---
 
 <BaseLayout title={pageTitle}>
@@ -39,7 +41,7 @@ console.log('page', page.data[0]);
     <br />
     <ul>
         {
-            page.data.map((post) => (
+            pageData.map((post) => (
                 <>
                     <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
                     <br />
