@@ -22,8 +22,6 @@ Igen, alkalmanként néhány hetes szünetekkel, például a cross training idej
 \### Mikor kezdtél el Mysore-ba járni, és hogy tetszett?\
 Mysore-ba 2013/14 körül kezdtem járni. Az első utam csodálatos volt. Csak két hónapig tudtam maradni és azt hittem, soha többé nem jövök vissza. Hazatérésemet követően tovább gyakoroltam, miközben művészetet tanítottam az állami iskolában. Azóta 7 alkalommal tértem vissza, ez a december lesz a 8. utam. Izgalmam minden egyes látogatással nő.
 
-
-
 \### Tudomásom szerint téged Saraswathi Jois hatalmazott fel a tanításra. Mi a különbség aközött, hogy tőle vagy Sharath Jois-tól (a fiától) kapod-e meg az engedélyt? 
 
 Igen, engem Saraswathiji avatott tanárrá a harmadik és a negyedik utam után. Az ászanák tanítása nagyjából ugyanúgy zajlik. A tanítványnak elég jónak kell lennie az első és a második sorozatban, valamint fontos a gyakorlás iránti elköteleződés is. Saraswathiji elvárja tőled, hogy alap szinten tudj mantrákat énekelni és mielőtt megadná a felhatalmazást, egy ideig figyeli ahogyan tanítasz. Ő a jógapózokban való jártasságon túlmutató tulajdonságokat is keres.
@@ -31,12 +29,8 @@ Igen, engem Saraswathiji avatott tanárrá a harmadik és a negyedik utam után.
 \### Jelenleg főállású utazó jógaoktató vagy?\
 Nem! Az elmúlt 23 évben állami iskolai tanár voltam és hétvégenként jóga workshopokat tartottam. Szabad nyaraimon egyre többet tanítottam: szerte az USA-ban, Brazíliában, Spanyolországban, Olaszországban, Horvátországban, Törökországban, Vietnamban, Kazahsztánban, Indiában, Angliában... Nagyszerű volt!
 
-
-
 \### Mit tanítasz általában a workshopjaidon?\
 A legnagyobb slágereket tanítom: Mysore-stílusú gyakorlást, mantra éneklést, pránájámát, filozófiát, de számomra az a legfontosabb, hogy megtartsam annak a tudásnak az integritását, amit elsajátítottam. Én csak azért vagyok ott, hogy segítsek az új tanítványoknak. Most már csodálom őket. Az astangával most ismerkedőknek számos lehetősége nyílik a tanulásra: YouTube, Instagram, Zoom. Ez elképesztő. De mindez mégsem ér fel azzal, hogy egy shalában gyakoroljunk, ahol egy tanár figyel. Az még mindig a legjobb.
-
- 
 
 \### Úgy tűnik, hogy a jógaászanák gyakorlása mellett számos más fizikai tevékenység is érdekel, például a dzsúdó vagy a sziklamászás. Szerinted lehetséges ezeket egyszerre űzni, vagy az egyik elkerülhetetlenül akadályozza a másikat az idő múlásával?\
 Többféle fizikai tevékenység, például a jóga, a dzsúdó és a sziklamászás egyidejű folytatása természetesen lehetséges, sőt, mi több, akár előnyös is lehet. A jóga különösen a rugalmasságra, az egyensúlyra és a testtudatra való összpontosítása miatt kiegészítheti és fokozhatja a többi fizikai testgyakorlást. 
@@ -61,13 +55,3 @@ Az intenzív jógagyakorlás olyan módon alakította át az életemet, amire ne
  A jóga eszköz az élet sokoldalúságához, vele könnyebben és éleslátóbban létezem, folyamatosan új perspektívákat és lehetőségeket fedezek fel személyes utamon.
 
  \*\*Alig várom, hogy két hétre Budapestre látogassak, és egy rövid hétvégénél hosszabb időt tölthessek a tanítványokkal. A november egy nagyszerű időszak lesz! Budapest egy gyönyörű történelmi város. Az őszi időjárás tökéletesnek tűnik a felfedezéséhez - nem túl meleg, de még mindig elég kellemes ahhoz, hogy élvezzük a szabadtéri tevékenységeket. Úgy hallottam, hogy a termálfürdőket kötelező meglátogatni, különösen a Széchenyi Gyógyfürdőt. Ez kellemes kikapcsolódásnak ígérkezik a jógaórák után. Ross Stambaugh\*\*
-
-\### Ross budapesti programja
-
-\- \[Astanga Mysore-gyakorlás Ross Stambaughval](https://www.facebook.com/events/881176087316889/) -  \*\*\*November 19 - december 1.\*\*\*
-
-\- \[Kartámaszok és fordított testhelyzetek](https://www.facebook.com/events/852350243699682/) -  \*\*\*November 23.\*\*\*
-
-\- \[Hátrahajlítások jobban](https://www.facebook.com/events/519719364340041/) - \*\*\*November 30.\*\*\*
-
-\- \[Pránajáma - A jóga lélegzete](https://www.facebook.com/events/1072961727770778) - \*\*\*December 1.\*\*\*
