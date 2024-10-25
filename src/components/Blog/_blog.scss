@@ -1,0 +1,59 @@
+@import '/src/sass/global';
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-container p {
+  margin: 0;
+}
+
+.blog__tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: $color-shades-darkGray;
+  cursor: pointer;
+  text-decoration: none;
+
+  p {
+    color: $color-shades-white;
+    margin: 0;
+  }
+}
+
+.blog__tag:hover {
+  p {
+    color: $color-brand-orange;
+  }
+}
+
+// .tag-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 10px;
+// }
+
+// .tag-container p {
+//   margin: 0;
+// }
+
+// .blog__tag {
+//   p {
+//     margin-right: 1rem;
+//     padding: 4px 12px;
+//     background-color: $color-shades-darkGray;
+//     cursor: pointer;
+//   }
+//   a {
+//     color: $color-shades-white;
+//     text-decoration: none;
+//   }
+// }
+
+// .blog__tag:hover {
+//   a {
+//     color: $color-brand-orange;
+//   }
+// }

@@ -1,29 +1,37 @@
 ---
 import { getCollection } from 'astro:content';
+import './_blog.scss';
 
 const allPosts = await getCollection('blog');
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <div class="tag-container">
-    <h3>Tag list:</h3>
     {
         tags.map((tag) => (
-            <p>
-                <a href={`/blog/tags/${tag}`}>{tag}</a>
-            </p>
+            <a href={`/blog/tags/${tag}`} class="blog__tag">
+                <p>{tag}</p>
+            </a>
         ))
     }
 </div>
 
-<style>
-    .tag-container {
-        display: flex;
-        flex-wrap: wrap; /* Ez lehetővé teszi, hogy a címkék tördeljenek a következő sorba, ha nincs elég hely */
-        gap: 10px; /* Ez ad némi térközt a címkék közé */
-    }
+<!-- ---
+import { getCollection } from 'astro:content';
+import './_blog.scss';
 
-    .tag-container p {
-        margin: 0; /* Ez eltávolítja az alapértelmezett margót a <p> elemekről */
+const allPosts = await getCollection('blog');
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<div class="tag-container">
+    {
+        tags.map((tag) => (
+            <div class="blog__tag">
+                <p>
+                    <a href={`/blog/tags/${tag}`}>{tag}</a>
+                </p>
+            </div>
+        ))
     }
-</style>
+</div> -->
