@@ -42,18 +42,17 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
             <TagList />
             <div class="separator-horizontal-full mt-40px"></div>
         </div>
+        <br />
+        <ul>
+            {
+                pageData.map((post) => (
+                    <>
+                        <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
+                        <br />
+                    </>
+                ))
+            }
+        </ul>
+        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     </div>
-
-    <br />
-    <ul>
-        {
-            pageData.map((post) => (
-                <>
-                    <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
-                    <br />
-                </>
-            ))
-        }
-    </ul>
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </BaseLayout>
