@@ -1,15 +1,14 @@
 ---
 published: true
 language: Hungarian
-title: "David Garrigues: Gyenge testben erőtlen lélek"
+title: 'David Garrigues: Gyenge testben erőtlen lélek'
 description: Sri K. Pattabhi Jois szerint az Önvaló nem ismerhető meg a gyengék által
 author: István
 tags:
   - jógaelmélet
-date: 2014-09-30T13:22:14.675Z
-src/images/uploads/dristhi_desktop.jpeg
-image: src/images/uploads/david_garrigues.jpeg
-imageMobil: src/images/uploads/david_garrigues.jpeg
+date: 2014-09-30T15:37:42.306Z
+image: src/images/uploads/david_garrigues.jpg
+imageMobil: src/images/uploads/david_garrigues.jpg
 ---
 
 ### Sri K. Pattabhi Jois gyakran emlegette mára híressé vált mondását, miszerint “gyenge test, gyenge elme”, ugyanakkor szeretett idézni a jóga szentírásból is, amelyben az áll, hogy az “Önvaló nem ismerhető meg a gyengék által”.
