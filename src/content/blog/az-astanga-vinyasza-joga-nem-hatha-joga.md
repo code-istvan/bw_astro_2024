@@ -7,8 +7,8 @@ author: István
 tags:
   - jógafilozófia
 date: 2013-11-06T19:24:00.104Z
-image: src/images/uploads/gurujis.jpg
-imageMobil: src/images/uploads/gurujis.jpg
+image: src/images/uploads/gurujis_desktop.jpeg
+imageMobil: src/images/uploads/gurujis_mobil.jpeg
 ---
 
 Gyakran kerül érdeklődés középpontjába Pattabhi Jois ászana rendszere: honnan ered és hogyan fejlődött az évek során,
