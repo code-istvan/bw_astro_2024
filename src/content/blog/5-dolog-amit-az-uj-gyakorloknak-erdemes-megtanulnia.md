@@ -2,14 +2,14 @@
 published: true
 language: Hungarian
 title: 5 dolog amit az új gyakorlóknak érdemes megtanulnia
-description:
-  A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és teljes gyakorlás, amelyhez mindig visszatérhetsz
+description: A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és
+  teljes gyakorlás, amelyhez mindig visszatérhetsz
 author: István
 tags:
   - astangaelmélet
 date: 2019-11-19T11:59:44.928Z
-image: src/images/uploads/5things.jpg
-imageMobil: src/images/uploads/5things.jpg
+image: src/images/uploads/5things_desktop.jpeg
+imageMobil: src/images/uploads/5things_mobil.jpeg
 ---
 
 A jóga gyakorlás a kezdetekben elég lehangoló is tud lenni. Rengeteg cikket lehet olvasni arról, hogy mit is várhat az
