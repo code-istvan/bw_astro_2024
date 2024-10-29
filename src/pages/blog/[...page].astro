@@ -3,6 +3,7 @@ import Pagination from '../../components/Blog/Pagination.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blog/PostCard.astro';
 import TagList from '../../components/Blog/TagList.astro';
+import PopularPosts from '../../components/Blog/PopularPosts.astro';
 import { type CollectionEntry } from 'astro:content';
 import { slugify, calculateReadingTime } from '../../components/js/utils.js';
 import { getCollection } from 'astro:content';
@@ -34,23 +35,64 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
 
 <BaseLayout title={pageTitle}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="mt-40px hidden-desktop">
+    <div class="container mt-40px">
+        <div class="mb-40px hidden-desktop">
             <h4 class="mb-20px">CIMKÉK</h4>
             <TagList />
             <div class="separator-horizontal-full mt-40px"></div>
         </div>
-        <br />
-        <ul>
-            {
-                pageData.map((post) => (
-                    <>
-                        <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
-                        <br />
-                    </>
-                ))
-            }
-        </ul>
-        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+        <div class="blog-content">
+            <div class="blog-main">
+                <ul>
+                    {
+                        pageData.map((post) => (
+                            <>
+                                <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
+                                <br />
+                            </>
+                        ))
+                    }
+                </ul>
+                <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+            </div>
+
+            <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
+            <div class="blog-sidebar hidden-mobile">
+                <h4 class="mb-20px">CIMKÉK</h4>
+                <TagList />
+                <div class="sidebar-widget mt-40px">
+                    <h4>LEGKEDVELTEBB BEJEGZÉSEK</h4>
+                    <PopularPosts />
+                </div>
+            </div>
+        </div>
     </div>
 </BaseLayout>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-main {
+        flex: 1;
+    }
+
+    .blog-sidebar {
+        flex: 0 0 250px; /* Oldalsáv szélessége */
+        margin-left: 20px;
+    }
+
+    /* Csak desktop nézetben rendezze el sorba */
+    @media (min-width: 768px) {
+        .blog-content {
+            flex-direction: row;
+        }
+    }
+</style>

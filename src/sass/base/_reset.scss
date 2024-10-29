@@ -33,7 +33,9 @@ input[type='search'] {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;
+  color: $color-brand-orange;
 }

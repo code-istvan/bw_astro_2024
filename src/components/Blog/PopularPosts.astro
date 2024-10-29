@@ -1,0 +1,26 @@
+---
+import popularPostsData from '../../data/popularPosts.json';
+
+const huPopularPosts = popularPostsData.HU;
+const enPopularPosts = popularPostsData.EN;
+---
+
+<div class="popular-posts unordered-list-style">
+    <ul>
+        {
+            huPopularPosts.map((post) => (
+                <li>
+                    <a href={post.link}>
+                        <p class="">{post.title}</p>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+<style>
+    .popular-posts p {
+        margin: 0;
+    }
+</style>
