@@ -1,19 +1,19 @@
 $colors: (
-    brand: (
-        "orange": hsl(37.3, 90.4%, 51.2%),
-    ),
-    shades: (
-        "black": hsl(0, 0%, 15%),
-        "lightBlack": hsl(240, 10%, 30%),
-        "darkGray": hsl(0, 0%, 20%),
-        "darkerGray": hsl(0, 0%, 15%),
-        "gray": hsl(0, 0%, 77%),
-        "lightGray": hsl(0, 0%, 90%),
-        "white": hsl(0, 0%, 100%),
-    ),
-    flag: (
-        "notify": hsl(0, 79%, 63%),
-    ),
+  brand: (
+    'orange': hsl(37.3, 90.4%, 51.2%),
+  ),
+  shades: (
+    'black': hsl(0, 0%, 15%),
+    'lightBlack': hsl(240, 10%, 30%),
+    'darkGray': hsl(0, 0%, 20%),
+    'darkerGray': hsl(0, 0%, 15%),
+    'gray': hsl(0, 0%, 77%),
+    'lightGray': hsl(0, 0%, 90%),
+    'white': hsl(0, 0%, 100%),
+  ),
+  flag: (
+    'notify': hsl(0, 79%, 63%),
+  ),
 );
 
 $color-brand-orange: hsl(37.3, 90.4%, 51.2%);
@@ -32,22 +32,22 @@ $navbar-scrolled-background-color: $color-shades-black;
 $primary-background-color: $color-shades-black;
 
 @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-        //text color classes
-        .clr-#{$color}-#{$shade} {
-            color: $value;
-        }
-        //background color classes
-        .bg-#{$color}-#{$shade} {
-            background-color: $value;
-        }
+  @each $shade, $value in $shades {
+    //text color classes
+    .clr-#{$color}-#{$shade} {
+      color: $value;
     }
+    //background color classes
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
+  }
 }
 
 :root {
-    @each $color, $shades in $colors {
-        @each $shade, $value in $shades {
-            #{$color}-#{$shade}: #{$value};
-        }
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      #{$color}-#{$shade}: #{$value};
     }
+  }
 }

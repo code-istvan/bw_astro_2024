@@ -39,3 +39,7 @@ a:hover {
   text-decoration: none;
   color: $color-brand-orange;
 }
+
+a:hover p {
+  color: $color-brand-orange;
+}
