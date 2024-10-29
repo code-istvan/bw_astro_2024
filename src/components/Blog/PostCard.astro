@@ -5,20 +5,25 @@ const { title, date, description, author, tags } = frontmatter;
 ---
 
 <div>
-    <a href={`/blog/${slug}`}>
+    <!-- <a href={`/blog/${slug}`}>
         <h3>{title}</h3>
-    </a>
-    <p>{formatDate(date)}</p>
+    </a> -->
+    <div class="header"><p>{author}</p> <p>{formatDate(date)}</p></div>
+    <div class="title"><h3>{title}</h3></div>
+    <p class="clr-shades-gray">{description}</p>
+
     <p>
         {
             tags.map((tag) => (
-                <a href={`/blog/tags/${tag}`} class="tag-link">
+                <a href={`/blog/tags/${tag}`} class="tag-link blog__tag">
                     {tag}
                 </a>
             ))
         }
     </p>
-    <p>{description}</p>
-    <p>{author}</p>
     <p>{minutesRead} perc olvasás</p>
+
+    <a href={`/blog/${slug}`}>
+        <p class="clr-brand-orange">Olvasd tovább</p>
+    </a>
 </div>
