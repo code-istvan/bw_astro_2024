@@ -21,17 +21,17 @@ ezért tolódik a pihenőnap erre a dátumra.`;
 <BaseLayout title={metadata.title}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="u-hidden-desktop"><MoonDaysNavigator moonDays={moonDays} client:load /></div>
+        <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} client:load /></div>
         <div class="row gap-2">
             <div class="col-12-xs col-8-lg">
                 <TabMoonDays tab="tab1" />
-                <div class="u-hidden-desktop">
+                <div class="hidden-desktop">
                     <p>
                         {moonDayInfo}
                     </p>
                 </div>
             </div>
-            <div class="col-12-xs col-4-lg mt-40px u-hidden-mobile">
+            <div class="col-12-xs col-4-lg mt-40px hidden-mobile">
                 <h3>Holdnaptár</h3>
                 <MoonDaysNavigator moonDays={moonDays} client:load />
                 <p class="mt-20px">

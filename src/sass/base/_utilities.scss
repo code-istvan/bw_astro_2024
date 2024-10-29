@@ -38,13 +38,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .u-hidden-mobile {
+  .hidden-mobile {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .u-hidden-desktop {
+  .hidden-desktop {
     display: none !important;
   }
 }
