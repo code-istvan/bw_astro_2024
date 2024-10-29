@@ -1,16 +1,17 @@
 ---
 published: true
 language: Hungarian
-title: Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy hagyományos edzés
-description:
-  Nagyon fontos, hogy legyen egy jóga shala amihez kötődünk. Egyrészt mert a shala motivál. Az ember lát másokat
-  gyakorolni és ettől maga is kedvet kap hozzá.
+title: Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy
+  hagyományos edzés
+description: Nagyon fontos, hogy legyen egy jóga shala amihez kötődünk. Egyrészt
+  mert a shala motivál. Az ember lát másokat gyakorolni és ettől maga is kedvet
+  kap hozzá.
 author: István
 tags:
   - jógaelmélet
 date: 2019-04-17T11:00:45.193Z
-image: src/images/uploads/sharathji_shala.jpg
-imageMobil: src/images/uploads/sharathji_shala.jpg
+image: src/images/uploads/sharathji_shala_desktop.jpeg
+imageMobil: src/images/uploads/sharathji_shala_mobil.jpeg
 ---
 
 ### A jóga shala ahova járunk nem csupán egy hely ahol ászanákat gyakorlunk. Egy adott jóga stúdióhoz tartozással az alábbiak szerint emelkedhet életünk minden szinten magasabbra.
