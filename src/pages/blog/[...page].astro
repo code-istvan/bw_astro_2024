@@ -18,7 +18,7 @@ export async function getStaticPaths({ paginate }) {
         slug: slugify(post.data.title), // Alkalmazd a slugify függvényt
         minutesRead: calculateReadingTime(post.body), // Számold ki a bejegyzés olvasási idejét
     }));
-    return paginate(postsWithSlugsAndReadingTime, { pageSize: 3 }); // Lapozd a postokat a slugokkal együtt
+    return paginate(postsWithSlugsAndReadingTime, { pageSize: 5 }); // Lapozd a postokat a slugokkal együtt
 }
 
 type Props = {
@@ -46,10 +46,9 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
                 <ul>
                     {
                         pageData.map((post) => (
-                            <>
+                            <div class="post-wrapper">
                                 <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
-                                <br />
-                            </>
+                            </div>
                         ))
                     }
                 </ul>
@@ -69,7 +68,8 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
     </div>
 </BaseLayout>
 
-<style>
+<style lang="scss">
+    @import '/src/sass/global';
     .container {
         display: flex;
         flex-direction: column;
@@ -94,5 +94,11 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
         .blog-content {
             flex-direction: row;
         }
+    }
+
+    .post-wrapper:not(:last-child) {
+        border-bottom: 1px solid $color-shades-lightBlack; /* Alsó fehér vonal */
+        padding-bottom: 10px; /* Távolság a szövegtől */
+        margin-bottom: 10px; /* Távolság a következő elemtől */
     }
 </style>
