@@ -10,33 +10,43 @@ const { title, date, description, author, tags } = frontmatter;
 const currentAuthor = authors.find(({ data: { name: authorName } }) => authorName === author);
 ---
 
-<div>
-    <div class="row gap-1 align-items-center">
-        <div>
+<div class="blog-post mb-20px">
+    <div class="blog-post__header row align-items-center">
+        <div class="blog-post__author-avatar">
             <Image
                 src={images[currentAuthor?.data.authorimage]()}
                 alt={currentAuthor?.data.name}
-                class="vaki author__avatar author__avatar--small"
+                class="avatar__image avatar__image--small"
             />
         </div>
-        <p>{author}</p>
-        <p>{formatDate(date)}</p>
+        <p class="blog-post__author-name">{author}</p>
+        <div class="vertical-separator"></div>
+        <p class="blog-post__date">{formatDate(date)}</p>
     </div>
-    <div class="title"><h3>{title}</h3></div>
-    <p class="clr-shades-gray">{description}</p>
-    <div class="row gap-1 align-items-center">
+    <div class="blog-post__title"><h3 class="blog-post__title-text">{title}</h3></div>
+    <p class="blog-post__description clr-shades-gray">{description}</p>
+    <div class="blog-post__tags-row row gap-1 align-items-center">
         <p class="">
             {
                 tags.map((tag) => (
-                    <a href={`/blog/tags/${tag}`} class="tag-link blog__tag">
+                    <a href={`/blog/tags/${tag}`} class="blog-post__tag-link blog__tag">
                         {tag}
                     </a>
                 ))
             }
         </p>
-        <p>{minutesRead} perc olvasás</p>
+        <p class="blog-post__reading-time">{minutesRead} perc olvasás</p>
     </div>
-    <a href={`/blog/${slugify(slug)}`}>
-        <p class="clr-brand-orange body body--bold mt-20px">Olvasd tovább</p>
+    <a href={`/blog/${slugify(slug)}`} class="blog-post__read-more-link">
+        <p class="blog-post__read-more-text clr-brand-orange body body--bold mt-20px">Olvasd tovább</p>
     </a>
 </div>
+
+<style>
+    .blog-post__author-avatar {
+        padding-right: 12px;
+    }
+    .blog-post__header {
+        padding-bottom: 12px;
+    }
+</style>
