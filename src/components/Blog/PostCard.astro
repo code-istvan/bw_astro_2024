@@ -1,5 +1,5 @@
 ---
-import { formatDate } from '../../components/js/utils.js';
+import { formatDate, slugify } from '../../components/js/utils.js';
 const { frontmatter, slug, minutesRead } = Astro.props;
 const { title, date, description, author, tags } = frontmatter;
 ---
@@ -20,7 +20,7 @@ const { title, date, description, author, tags } = frontmatter;
         </p>
         <p>{minutesRead} perc olvasás</p>
     </div>
-    <a href={`/blog/${slug}`}>
+    <a href={`/blog/${slugify(slug)}`}>
         <p class="clr-brand-orange body body--bold mt-20px">Olvasd tovább</p>
     </a>
 </div>
