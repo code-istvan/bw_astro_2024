@@ -10,11 +10,13 @@ import '../sass/layouts/_layout.scss';
 
 interface Props {
     title: string;
+    description?: string;
+    image?: string;
     isHomePage?: boolean;
 }
 
 const url = Astro.url;
-const { title, isHomePage } = Astro.props as Props;
+const { title, isHomePage, description } = Astro.props as Props;
 ---
 
 <!doctype html>

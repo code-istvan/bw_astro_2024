@@ -10,13 +10,17 @@ import Events from '../components/Sections/SectionEvents.astro';
 import Scholarship from '../components/Sections/SectionScholarship.astro';
 import SocialProofs from '../components/Sections/SectionSocialProofs.astro';
 
-const pageTitle = 'Welcome to Bandha Works';
+const metadata = {
+    title: 'Bandha Works Astanga Jógaiskola',
+    description:
+        'Fedezzd fel az Astanga Jógát a Bandha Works Jógaiskolában! Astanga Mysore-stílusú gyakorlás, astanga kezdő tanfolyamok, vinyásza krama jógaórák.',
+};
 
 // const isHomePage = true;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexHu={true} />
+<BaseLayout title={metadata.title} description={metadata.description}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} indexHu={true} />
     <!-- <div class="content-wrapper"> -->
     <About />
     <Parampara />

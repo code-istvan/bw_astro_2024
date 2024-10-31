@@ -400,3 +400,12 @@ ol {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+.author__avatar {
+  border-radius: 50%;
+}
+.author__avatar--small {
+  border: 2px solid #333;
+  height: 56px;
+  width: 56px;
+}
