@@ -1,90 +1,90 @@
-@import "/src/sass/global";
+// @import "/src/sass/global";
 
-/* Style the accordion section */
-.accordion-mantra__wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-left: 4px solid $color-brand-orange;
-  background-color: $color-shades-darkGray;
-  margin-bottom: 20px;
-}
+// /* Style the accordion section */
+// .accordion-mantra__wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   border-left: 4px solid $color-brand-orange;
+//   background-color: $color-shades-darkGray;
+//   margin-bottom: 20px;
+// }
 
-.accordion-mantra__box {
-  padding: 20px 0;
-  button {
-    width: 100%;
-  }
-}
+// .accordion-mantra__box {
+//   padding: 20px 0;
+//   button {
+//     width: 100%;
+//   }
+// }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion-mantra {
-  background-color: transparent;
-  color: #444;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  border: none;
-  outline: none;
-  transition: background-color 0.6s ease;
-  padding: 0;
-}
+// /* Style the buttons that are used to open and close the accordion panel */
+// .accordion-mantra {
+//   background-color: transparent;
+//   color: #444;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   border: none;
+//   outline: none;
+//   transition: background-color 0.6s ease;
+//   padding: 0;
+// }
 
-/* Style the accordion content title */
-.accordion__title {
-  font-family: $font-family-secondary;
-  font-weight: $font-weight-semi-bold;
-  font-size: $body-font-size-mobile;
-  text-align: left;
-  @include md {
-    font-size: $body-font-size-desktop;
-  }
-}
+// /* Style the accordion content title */
+// .accordion__title {
+//   font-family: $font-family-secondary;
+//   font-weight: $font-weight-semi-bold;
+//   font-size: $body-font-size-mobile;
+//   text-align: left;
+//   @include md {
+//     font-size: $body-font-size-desktop;
+//   }
+// }
 
-/* Style the accordion chevron icon */
-.accordion-mantra__icon {
-  margin-right: 16px;
-  transition: transform 0.6s ease;
-  flex-shrink: 0;
-}
+// /* Style the accordion chevron icon */
+// .accordion-mantra__icon {
+//   margin-right: 16px;
+//   transition: transform 0.6s ease;
+//   flex-shrink: 0;
+// }
 
-/* Style to rotate icon when state is active */
-.rotate__45deg {
-  transform: rotate(45deg);
-}
-/* Style the accordion content panel. Note: hidden by default */
-.accordion-mantra__content {
-  overflow: auto;
-  transition: max-height 0.6s ease;
-  overflow: hidden;
-  background-color: $color-shades-darkGray;
-}
+// /* Style to rotate icon when state is active */
+// .rotate__45deg {
+//   transform: rotate(45deg);
+// }
+// /* Style the accordion content panel. Note: hidden by default */
+// .accordion-mantra__content {
+//   overflow: auto;
+//   transition: max-height 0.6s ease;
+//   overflow: hidden;
+//   background-color: $color-shades-darkGray;
+// }
 
-/* Style the accordion content text */
-.accordion-mantra__text {
-  padding: 16px 36px 0 24px;
-}
+// /* Style the accordion content text */
+// .accordion-mantra__text {
+//   padding: 16px 36px 0 24px;
+// }
 
-.accordion-mantra__plus {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 24px;
-  gap: 16px;
-  height: 40px;
+// .accordion-mantra__plus {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding-left: 24px;
+//   gap: 16px;
+//   height: 40px;
 
-  svg {
-    float: right !important;
-    margin-right: 16px;
-  }
-}
+//   svg {
+//     float: right !important;
+//     margin-right: 16px;
+//   }
+// }
 
-.accordion-matra__title {
-  font-weight: 900;
-}
+// .accordion-matra__title {
+//   font-weight: 900;
+// }
 
-.accordion-mantra__audio {
-  margin: 0 24px;
-}
+// .accordion-mantra__audio {
+//   margin: 0 24px;
+// }
