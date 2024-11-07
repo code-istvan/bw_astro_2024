@@ -33,7 +33,7 @@ const pageTitle = `BLOG`;
 const pageData = page.data.filter((post) => post.data.language === currentLanguage);
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={pageTitle} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container mt-40px">
         <div class="mb-40px hidden-desktop">
@@ -84,8 +84,21 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
         flex: 1;
     }
     .blog-sidebar {
+        position: sticky;
+        top: 80px;
+        height: fit-content;
+        display: block;
+        overflow: hidden auto;
         flex: 0 0 250px; /* Oldalsáv szélessége */
         margin-left: 20px;
+    }
+
+    .blog-sidebar {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+    .blog-sidebar::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
     }
 
     /* Csak desktop nézetben rendezze el sorba */

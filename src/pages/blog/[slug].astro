@@ -48,6 +48,7 @@ console.log('dada', `/${post.data.image}`);
         post.data.image && (
             <section class="desktop_image">
                 <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
+                {/* <h1 class="image_title">{post.data.title}</h1> */}
             </section>
         )
     }
@@ -58,22 +59,29 @@ console.log('dada', `/${post.data.image}`);
             </section>
         )
     }
-    <h1>{post.data.title}</h1>
-    <!-- <CustomImage
-        imgUrl={images[currentAuthor?.data.authorimage]()}
-        alt={currentAuthor?.data.name}
-        class="author__avatar author__avatar--small"
-    /> -->
-    <Image
-        src={images[currentAuthor?.data.authorimage]()}
-        alt={currentAuthor?.data.name}
-        class="author__avatar author__avatar--small"
-    />
-    <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
-    <p>{formatDate(post.data.date)}</p>
-    <p>{post.data.tags}</p>
-    <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
-    <Content />
+    <div class="container">
+        <h1>{post.data.title}</h1>
+        <!-- <CustomImage
+            imgUrl={images[currentAuthor?.data.authorimage]()}
+            alt={currentAuthor?.data.name}
+            class="author__avatar author__avatar--small"
+        /> -->
+        <div class="display-flex align-items-center gap-1">
+            <div class="ava">
+                <Image
+                    src={images[currentAuthor?.data.authorimage]()}
+                    alt={currentAuthor?.data.name}
+                    class="author__avatar author__avatar--small"
+                />
+            </div>
+            <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
+            <p>{formatDate(post.data.date)}</p>
+            <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
+            <p>{post.data.tags}</p>
+        </div>
+
+        <Content />
+    </div>
 </BlogPostLayout>
 
 <style>
