@@ -8,7 +8,7 @@ import EventsList from '../components/Events/EventsList.astro';
 const pageTitle = 'Tanfolyamok';
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={pageTitle} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
     <div class="container">
         <EventsList eventType={['Workshop']} maxEvents={3} />

@@ -15,7 +15,7 @@ const huBooks = recommendedReadings.HU;
 const enBooks = recommendedReadings.EN;
 ---
 
-<BaseLayout {...metadata}>
+<BaseLayout {...metadata} description={metadata.description} image={desktopImage}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}

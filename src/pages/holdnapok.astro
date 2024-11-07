@@ -18,7 +18,7 @@ A hivatalos – Budapestre számított – teli- és újhold nem erre a napra es
 ezért tolódik a pihenőnap erre a dátumra.`;
 ---
 
-<BaseLayout title={metadata.title}>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
         <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} client:load /></div>
