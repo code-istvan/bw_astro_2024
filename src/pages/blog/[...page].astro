@@ -1,4 +1,5 @@
 ---
+// Astro komponens importálása
 import Pagination from '../../components/Blog/Pagination.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blog/PostCard.astro';
@@ -12,23 +13,23 @@ import mobileImage from '../../images/blog_mobil.jpg';
 import desktopImage from '../../images/blog_desktop.jpg';
 import './_blogPages.scss';
 
+// Statikus oldalak generálása paginálva
 export async function getStaticPaths({ paginate }) {
     const allPosts = await getCollection('blog');
     const postsWithSlugsAndReadingTime = allPosts.map((post) => ({
         ...post,
-        slug: slugify(post.data.title), // Alkalmazd a slugify függvényt
-        minutesRead: calculateReadingTime(post.body), // Számold ki a bejegyzés olvasási idejét
+        slug: slugify(post.data.title),
+        minutesRead: calculateReadingTime(post.body),
     }));
-    return paginate(postsWithSlugsAndReadingTime, { pageSize: 5 }); // Lapozd a postokat a slugokkal együtt
+    return paginate(postsWithSlugsAndReadingTime, { pageSize: 5 });
 }
 
 type Props = {
     post: CollectionEntry<'blog'>;
-    page: any; // Add the 'page' property to the Props interface
+    page: any; // A page típusát pontosítani érdemes a jövőben
 };
 
 const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
-
 const { page } = Astro.props;
 const pageTitle = `BLOG`;
 const pageData = page.data.filter((post) => post.data.language === currentLanguage);
@@ -36,32 +37,31 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
 
 <BaseLayout title={pageTitle} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container mt-40px">
-        <div class="mb-40px hidden-desktop">
-            <h4 class="mb-20px">CIMKÉK</h4>
+    <div class="container blog__container mt-40px">
+        <div class="blog__tags--mobile hidden-desktop">
+            <h4 class="blog__tags-title">CIMKÉK</h4>
             <TagList />
-            <div class="separator-horizontal-full mt-40px"></div>
+            <div class="blog__separator-horizontal"></div>
         </div>
-        <div class="blog-content">
-            <div class="blog-main">
-                <ul>
+        <div class="blog__content">
+            <div class="blog__main">
+                <ul class="blog__post-list">
                     {
                         pageData.map((post) => (
-                            <div class="post-wrapper">
+                            <li class="blog__post-wrapper">
                                 <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
-                            </div>
+                            </li>
                         ))
                     }
                 </ul>
                 <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
             </div>
 
-            <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
-            <div class="blog-sidebar hidden-mobile">
-                <h4 class="mb-20px">CIMKÉK</h4>
+            <div class="blog__sidebar hidden-mobile">
+                <h4 class="blog__tags-title">CIMKÉK</h4>
                 <TagList />
-                <div class="sidebar-widget mt-40px">
-                    <h4 class="mb-20px">LEGKEDVELTEBB BEJEGZÉSEK</h4>
+                <div class="blog__popular-posts">
+                    <h4 class="blog__popular-title">LEGKEDVELTEBB BEJEGZÉSEK</h4>
                     <PopularPosts />
                 </div>
             </div>
