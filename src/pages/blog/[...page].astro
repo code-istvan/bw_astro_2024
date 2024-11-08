@@ -10,6 +10,7 @@ import { getCollection } from 'astro:content';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/blog_mobil.jpg';
 import desktopImage from '../../images/blog_desktop.jpg';
+import './_blogPages.scss';
 
 export async function getStaticPaths({ paginate }) {
     const allPosts = await getCollection('blog');
@@ -67,50 +68,3 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
         </div>
     </div>
 </BaseLayout>
-
-<style lang="scss">
-    @import '/src/sass/global';
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-main {
-        flex: 1;
-    }
-    .blog-sidebar {
-        position: sticky;
-        top: 80px;
-        height: fit-content;
-        display: block;
-        overflow: hidden auto;
-        flex: 0 0 250px; /* Oldalsáv szélessége */
-        margin-left: 20px;
-    }
-
-    .blog-sidebar {
-        -ms-overflow-style: none; /* Internet Explorer 10+ */
-        scrollbar-width: none; /* Firefox */
-    }
-    .blog-sidebar::-webkit-scrollbar {
-        display: none; /* Safari and Chrome */
-    }
-
-    /* Csak desktop nézetben rendezze el sorba */
-    @media (min-width: 768px) {
-        .blog-content {
-            flex-direction: row;
-        }
-    }
-
-    .post-wrapper:not(:last-child) {
-        border-bottom: 1px solid $color-shades-lightBlack; /* Alsó fehér vonal */
-        padding-bottom: 10px; /* Távolság a szövegtől */
-        margin-bottom: 24px; /* Távolság a következő elemtől */
-    }
-</style>

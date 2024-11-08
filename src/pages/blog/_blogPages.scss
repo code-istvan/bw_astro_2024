@@ -1,0 +1,45 @@
+@import '/src/sass/base/_colors';
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-main {
+  flex: 1;
+}
+.blog-sidebar {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  display: block;
+  overflow: hidden auto;
+  flex: 0 0 250px; /* Oldalsáv szélessége */
+  margin-left: 20px;
+}
+
+.blog-sidebar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.blog-sidebar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Csak desktop nézetben rendezze el sorba */
+@media (min-width: 768px) {
+  .blog-content {
+    flex-direction: row;
+  }
+}
+
+.post-wrapper:not(:last-child) {
+  border-bottom: 1px solid $color-shades-lightBlack;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
