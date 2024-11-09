@@ -61,7 +61,7 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         )
     }
     <div class="container blog-content__container mt-40px">
-        <div class="blog-content">
+        <div class="blog-content__main">
             <div class="blog-main">
                 <h1>{post.data.title}</h1>
                 <div class="sor mt-20px mb-20px">
@@ -102,7 +102,7 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         flex-direction: column;
     }
 
-    .blog-content {
+    .blog-content__main {
         display: flex;
         flex-direction: row;
     }
