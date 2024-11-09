@@ -60,22 +60,24 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
             </section>
         )
     }
-
-    <div class="container mt-40px">
+    <div class="container blog-content__container mt-40px">
         <div class="blog-content">
             <div class="blog-main">
                 <h1>{post.data.title}</h1>
-                <div class="ava">
-                    <Image
-                        src={images[currentAuthor?.data.authorimage]()}
-                        alt={currentAuthor?.data.name}
-                        class="author__avatar author__avatar--small"
-                    />
+                <div class="sor mt-20px mb-20px">
+                    <div class="oszlop oszlop1 row align-items-center">
+                        <Image
+                            src={images[currentAuthor?.data.authorimage]()}
+                            alt={currentAuthor?.data.name}
+                            class="author__avatar author__avatar--small"
+                        />
+
+                        <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
+                    </div>
+                    <div class="oszlop oszlop2"><p>{formatDate(post.data.date)}</p></div>
+                    <div class="oszlop oszlop3"><p>Olvasási idő: {Astro.props.minutesRead} perc</p></div>
+                    <div class="oszlop oszlop4"><p>{post.data.tags}</p></div>
                 </div>
-                <p><a href={`/blog/author/${slugify(post.data.author)}`}>{post.data.author}</a></p>
-                <p>{formatDate(post.data.date)}</p>
-                <p>Olvasási idő: {Astro.props.minutesRead} perc</p>
-                <p>{post.data.tags}</p>
                 <Content />
             </div>
             <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
@@ -95,7 +97,7 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     @import '/src/sass/base/_colors';
 
     //
-    .container {
+    .blog-content__container {
         display: flex;
         flex-direction: column;
     }
@@ -155,6 +157,43 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     @media (min-width: 768px) {
         .mobile_image {
             display: none;
+        }
+    }
+
+    /* Alapértelmezett desktop nézet */
+    .sor {
+        display: grid;
+        grid-template-columns: auto auto auto auto; /* Tartalomhoz igazodó oszlopszélesség */
+        gap: 10px; /* Opcionális hézag a cellák között */
+        justify-content: start; /* A teljes sor igazítása balra */
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        /* Mobil nézet */
+        .sor {
+            grid-template-columns: repeat(2, 1fr); /* 2 oszlop több sorral */
+        }
+
+        .oszlop1 {
+            order: 1;
+            justify-self: start; /* Balra igazítás */
+        }
+
+        .oszlop4 {
+            order: 2;
+            justify-self: end; /* Jobbra igazítás */
+            align-self: center;
+        }
+
+        .oszlop2 {
+            order: 3;
+            justify-self: start; /* Balra igazítás */
+        }
+
+        .oszlop3 {
+            order: 4;
+            justify-self: end; /* Jobbra igazítás */
         }
     }
 </style>
