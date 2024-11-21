@@ -1,4 +1,5 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_colors';
+@import '/src/sass/base/_mixins';
 
 .footer {
   padding-bottom: 10px;
@@ -101,15 +102,16 @@
 // website carbon color overwrites
 
 .sc-fqkvVR {
-  background-color: orange !important;
-  color: white !important;
-  border-color: orange !important;
+  background-color: $color-brand-orange !important;
+  color: $color-shades-darkerGray !important;
+  border-color: $color-brand-orange !important;
 }
 
 .sc-dcJsrY {
-  color: orange !important;
+  color: $color-brand-orange !important;
 }
 
 .sc-gEvEer {
-  border-color: orange !important;
+  border-color: $color-brand-orange !important;
+  color: $color-shades-darkerGray !important;
 }
