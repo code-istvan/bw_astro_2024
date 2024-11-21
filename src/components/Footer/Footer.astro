@@ -76,13 +76,7 @@ const t = useTranslations(lang);
                     </p>
                 </div>
                 <div class="separator"></div>
-                <!-- <div>
-                    <div id="wcb" class="carbonbadge wcb-d"></div>
-                    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-                </div> -->
-                <div>
-                    <WebsiteCarbonBadge url={String(Astro.url)} co2="0.08" percentage="93" client:only="react" />
-                </div>
+
                 <div>
                     <a
                         href="{t('footerPrivacyLink')}"
@@ -92,6 +86,9 @@ const t = useTranslations(lang);
                         <p class="small">{t('footerPrivacyText')}</p>
                     </a>
                 </div>
+            </div>
+            <div class="mt-20px mb-40px">
+                <WebsiteCarbonBadge url={String(Astro.url)} co2="0.08" percentage="93" client:only="react" />
             </div>
         </div>
     </div>
