@@ -3,6 +3,7 @@ import Icons from '../Icons/Icons.astro';
 import SocialIcons from '../Icons/SocialIcons.astro';
 import FooterDesktopMenu from './FooterDesktopMenu.astro';
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
+import Carbonbadge from 'react-carbonbadge';
 import './_footer.scss';
 
 const lang = getLangFromUrl(Astro.url);
@@ -79,6 +80,9 @@ const t = useTranslations(lang);
                     <div id="wcb" class="carbonbadge wcb-d"></div>
                     <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
                 </div> -->
+                <div>
+                    <Carbonbadge client:only="react" />
+                </div>
                 <div>
                     <a
                         href="{t('footerPrivacyLink')}"
