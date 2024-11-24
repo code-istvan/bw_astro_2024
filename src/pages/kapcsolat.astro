@@ -7,11 +7,13 @@ const pageTitle = 'Kapcsolat';
 ---
 
 <BaseLayout title={pageTitle}>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row"><h1>{pageTitle}</h1></div>
-    </div>
+    </div> -->
     <GoogleMap client:only="react" />
-    <Input client:only="react" type="text" placeholder="Hello" id="name" />
+    <div class="container">
+        <div class="row mt-40px mb-40px"><Input client:only="react" type="text" placeholder="Hello" id="name" /></div>
+    </div>
 </BaseLayout>
 
 <style></style>

@@ -1,0 +1,63 @@
+/* Alap input stílus */
+.input {
+  padding: 10px;
+  border: 8px solid red($color: #000000) !important;
+  border-radius: 4px;
+  font-size: 16px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* :hover - Egérrel való lebegés */
+.input:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* :focus - Fókusz állapot */
+.input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.75);
+}
+
+/* :invalid - Érvénytelen bemenet (HTML5-validáció) */
+.input:invalid {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* :valid - Érvényes bemenet (HTML5-validáció) */
+.input:valid {
+  border-color: #28a745;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* :disabled - Letiltott input mező */
+.input:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  border-color: #ced4da;
+  cursor: not-allowed;
+}
+
+/* :placeholder-shown - Amikor a placeholder látszik */
+.input:placeholder-shown {
+  font-style: italic;
+  color: red !important;
+}
+
+/* ::placeholder - Placeholder stílus */
+.input::placeholder {
+  color: red !important;
+  font-style: italic;
+}
+
+/* ::before vagy ::after - Ha egy input mező köré speciális elemet szeretnél */
+.input-wrapper::before {
+  content: '🌟';
+  margin-right: 5px;
+}
