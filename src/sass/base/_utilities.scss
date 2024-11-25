@@ -346,6 +346,13 @@ ol {
   flex-direction: row;
 }
 
+.inline-flex-text {
+  display: flex; /* Flexbox elrendezés */
+  align-items: center; /* Függőleges középre igazítás */
+  gap: 0.5rem; /* Kisebb távolság az elemek között */
+  flex-wrap: nowrap; /* Az elemek ne törjenek új sorba */
+}
+
 .image-track-3 {
   display: flex;
   flex-direction: row;

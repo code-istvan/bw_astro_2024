@@ -1,63 +1,71 @@
-/* Alap input stílus */
+@import '/src/sass/base/_colors';
+@import '/src/sass/base/_fonts';
+
 .input {
-  padding: 10px;
-  border: 8px solid red($color: #000000) !important;
-  border-radius: 4px;
-  font-size: 16px;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  width: 100%;
+  background: transparent;
+  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
+  height: 44px;
+  padding-left: 16px;
+  font-family: $font-family-secondary;
+  font-weight: 600;
+  color: $color-shades-lightGray;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $color-brand-orange inset;
+    color: $color-brand-orange;
+  }
 }
 
-/* :hover - Egérrel való lebegés */
-.input:hover {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
+// /* :hover - Egérrel való lebegés */
+// .input:hover {
+//   border-color: #007bff;
+//   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+// }
 
-/* :focus - Fókusz állapot */
-.input:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.75);
-}
+// /* :focus - Fókusz állapot */
+// .input:focus {
+//   border-color: #007bff;
+//   outline: none;
+//   box-shadow: 0 0 8px rgba(0, 123, 255, 0.75);
+// }
 
-/* :invalid - Érvénytelen bemenet (HTML5-validáció) */
-.input:invalid {
-  border-color: #dc3545;
-  background-color: #f8d7da;
-  color: #721c24;
-}
+// /* :invalid - Érvénytelen bemenet (HTML5-validáció) */
+// .input:invalid {
+//   border-color: #dc3545;
+//   background-color: #f8d7da;
+//   color: #721c24;
+// }
 
-/* :valid - Érvényes bemenet (HTML5-validáció) */
-.input:valid {
-  border-color: #28a745;
-  background-color: #d4edda;
-  color: #155724;
-}
+// /* :valid - Érvényes bemenet (HTML5-validáció) */
+// .input:valid {
+//   border-color: #28a745;
+//   background-color: #d4edda;
+//   color: #155724;
+// }
 
-/* :disabled - Letiltott input mező */
-.input:disabled {
-  background-color: #e9ecef;
-  color: #6c757d;
-  border-color: #ced4da;
-  cursor: not-allowed;
-}
+// /* :disabled - Letiltott input mező */
+// .input:disabled {
+//   background-color: #e9ecef;
+//   color: #6c757d;
+//   border-color: #ced4da;
+//   cursor: not-allowed;
+// }
 
-/* :placeholder-shown - Amikor a placeholder látszik */
-.input:placeholder-shown {
-  font-style: italic;
-  color: red !important;
-}
+// /* :placeholder-shown - Amikor a placeholder látszik */
+// .input:placeholder-shown {
+//   font-style: italic;
+//   color: red !important;
+// }
 
-/* ::placeholder - Placeholder stílus */
-.input::placeholder {
-  color: red !important;
-  font-style: italic;
-}
+// /* ::placeholder - Placeholder stílus */
+// .input::placeholder {
+//   color: red !important;
+//   font-style: italic;
+// }
 
-/* ::before vagy ::after - Ha egy input mező köré speciális elemet szeretnél */
-.input-wrapper::before {
-  content: '🌟';
-  margin-right: 5px;
-}
+// /* ::before vagy ::after - Ha egy input mező köré speciális elemet szeretnél */
+// .input-wrapper::before {
+//   content: '🌟';
+//   margin-right: 5px;
+// }

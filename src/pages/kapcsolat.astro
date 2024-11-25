@@ -1,19 +1,187 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleMap from '../components/GoogleMap/GoogleMap';
+import contactMapImage from '../images/contact_map.jpg';
 import { Input } from '../components/Input/Input';
 
 const pageTitle = 'Kapcsolat';
+
+const metadata = {
+    title: 'KAPCSOLAT',
+    description: 'Ezen az oldalon találod a kapcsolatfelvételhez szükséges elérhetőségeinket.',
+};
+
+const googleMapsUrl = 'https://www.google.com/maps?q=47.51416,19.03734';
+const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout title={metadata.title} description={metadata.description} image={contactMapImage}>
     <!-- <div class="container">
         <div class="row"><h1>{pageTitle}</h1></div>
     </div> -->
     <GoogleMap client:only="react" />
     <div class="container">
-        <div class="row mt-40px mb-40px"><Input client:only="react" type="text" placeholder="Hello" id="name" /></div>
+        <div class="row gap-1 hidden-desktop">
+            <div class="col-6-xs">
+                <a
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    aria-label="Nyisd meg Google Maps-ben"
+                >
+                    Google Maps
+                </a>
+            </div>
+            <div class="col-6-xs">
+                <a
+                    href={wazeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    aria-label="Nyisd meg a Waze-ben"
+                >
+                    Waze
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="kapcsolat-title mb-20px">Kapcsolat</h1>
+            </div>
+        </div>
+
+        <div class="row gap-1">
+            <div class="col-12-xs col-6-md">
+                <address>
+                    <h3 class="mb-0">Bandha Works Jógaiskola</h3>
+                    <div class="inline-flex-text">
+                        <p>Cím:</p>
+                        <a
+                            href={googleMapsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="clr-brand-orange"
+                            aria-label="Nyisd meg Google Maps-ben"
+                        >
+                            <p>1027 Budapest, Frankel Leó út 18.</p>
+                        </a>
+                    </div>
+                </address>
+                <p class="clr-shades-lightGray mt-20px">
+                    <strong>
+                        A bejárat az utcafrontról nyílik, a társasházi főbejárattól balra található barna ajtón tudsz
+                        bejönni hozzánk.
+                    </strong>
+                </p>
+                <p class="clr-shades-lightGray mt-20px">
+                    Parkolási zónakód az utcában: <strong>0201</strong>. Hétfőtől péntekig 8:30-22:00-ig kell fizetni a
+                    parkolásért.
+                </p>
+
+                <div class="kapcsolat-modal-box">
+                    <div id="kapcsolat-modal-overlay" class="kapcsolat-modal-overlay"></div>
+                    <dialog id="kapcsolat-modal" class="kapcsolat-modal-open">
+                        <div>
+                            <h3 class="mb-20px">Hol az email címünk?</h3>
+                            <p>
+                                A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében,
+                                hogy elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket,
+                                döntöttünk úgy, hogy nem tesszük közzé az email címünket.
+                            </p>
+                            <br />
+                            <p>
+                                Üzenj nekünk az oldalon található üzenetküldő űrlapon keresztül. Ha rendben megkaptuk
+                                üzeneted, akkor erről egy automata visszaigazoló emailt fogsz kapni.
+                            </p>
+                        </div>
+                        <div class="display-flex justify-content-center align-items-center mt-20px">
+                            <button
+                                onclick="document.getElementById('kapcsolat-modal').close()"
+                                class="link-enhanced link-orange btn btn--plain--naked"
+                            >
+                                Bezárás
+                            </button>
+                        </div>
+                    </dialog>
+                    <a
+                        onclick="document.getElementById('kapcsolat-modal').showModal()"
+                        class="link-enhanced link-orange btn btn--plain--naked"
+                    >
+                        Hol az email címünk?
+                    </a>
+                </div>
+            </div>
+            <div class="col-12-xs col-6-md">
+                <h1>Form</h1>
+            </div>
+        </div>
+
+        <div class="row mt-40px mb-40px"><Input client:only="react" type="text" placeholder="Név" id="name" /></div>
     </div>
+
+    <script>
+        function openModal() {
+            const dialog = document.getElementById('kapcsolat-modal') as HTMLDialogElement;
+            if (dialog) {
+                dialog.showModal();
+            }
+
+            const overlay = document.getElementById('kapcsolat-modal-overlay');
+            if (overlay) {
+                overlay.style.display = 'block'; // Győződj meg arról, hogy látható
+            }
+        }
+
+        function closeModal() {
+            const dialog = document.getElementById('kapcsolat-modal') as HTMLDialogElement;
+            if (dialog) {
+                dialog.close();
+            }
+
+            const overlay = document.getElementById('kapcsolat-modal-overlay');
+            if (overlay) {
+                overlay.style.display = 'none'; // Rejtsd el a háttér overlayt
+            }
+        }
+    </script>
 </BaseLayout>
 
-<style></style>
+<style>
+    .kapcsolat-modal-box {
+        text-align: center;
+    }
+
+    /* Modal stílus */
+    .kapcsolat-modal-open {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #f5f5f5; /* Szürke háttér */
+        color: #000; /* Fekete szöveg */
+        position: fixed; /* Rögzített helyzet a képernyőn */
+        top: 50%; /* Függőleges középre igazítás */
+        left: 50%; /* Vízszintes középre igazítás */
+        transform: translate(-50%, -50%); /* Pontosan a közepére helyezés */
+        z-index: 1000; /* Más elemek fölé helyezi */
+    }
+
+    /* A modal háttér */
+    .kapcsolat-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); /* Átlátszó fekete */
+        z-index: 999; /* A modal alatt helyezkedik el */
+        display: none; /* Alapértelmezetten rejtett */
+        transition: opacity 0.3s ease; /* Fade animáció */
+    }
+    .kapcsolat-modal-overlay.show {
+        display: block; /* Megjelenítés, ha a modal nyitva van */
+    }
+</style>
