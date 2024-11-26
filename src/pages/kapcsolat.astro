@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleMap from '../components/GoogleMap/GoogleMap';
+import Modal from '../components/Modal/Modal.astro';
 import contactMapImage from '../images/contact_map.jpg';
 import { Input } from '../components/Input/Input';
+import SocialIcons from '../components/Icons/SocialIcons.astro';
 
 const pageTitle = 'Kapcsolat';
 
@@ -21,7 +23,7 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
     </div> -->
     <GoogleMap client:only="react" />
     <div class="container">
-        <div class="row gap-1 hidden-desktop">
+        <div class="row gap-2 hidden-desktop">
             <div class="col-6-xs">
                 <a
                     href={googleMapsUrl}
@@ -45,9 +47,9 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
                 </a>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-40px mb-40px">
             <div class="col">
-                <h1 class="kapcsolat-title mb-20px">Kapcsolat</h1>
+                <h1 class="kapcsolat-title">Kapcsolat</h1>
             </div>
         </div>
 
@@ -75,156 +77,138 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
                     </strong>
                 </p>
                 <p class="clr-shades-lightGray mt-20px">
-                    Parkolási zónakód az utcában: <strong>0201</strong>. Hétfőtől péntekig 8:30-22:00-ig kell fizetni a
-                    parkolásért.
+                    Parkolási zónakód az utcában: <strong>0201</strong>. Hétfőtől péntekig <strong>
+                        8:30-22:00-ig
+                    </strong> kell fizetni a parkolásért.
                 </p>
-
-                <div class="kapcsolat-modal-box">
-                    <!-- Modal aktiválása egy rejtett checkbox-al -->
-                    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
-
-                    <!-- Sötétített háttér overlay -->
-                    <div class="kapcsolat-background-overlay"></div>
-
-                    <!-- Overlay -->
-                    <div class="kapcsolat-modal-overlay"></div>
-
-                    <!-- Modal doboz -->
-                    <div class="kapcsolat-modal">
-                        <div class="modal-content">
-                            <h3 class="mb-20px">Hol az email címünk?</h3>
-                            <p class="mb-20px">
-                                A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében,
-                                hogy elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket,
-                                döntöttünk úgy, hogy nem tesszük közzé az email címünket.
-                            </p>
-                            <p>
-                                Üzenj nekünk az oldalon található üzenetküldő űrlapon keresztül. Ha rendben megkaptuk
-                                üzeneted, akkor erről egy automata visszaigazoló emailt fogsz kapni.
-                            </p>
-                            <!-- Modal bezárása -->
-                            <label for="modal-toggle" class="close-btn">Bezárás</label>
-                        </div>
-                    </div>
-                    <!-- Modal megnyitása -->
-                    <label for="modal-toggle" class="link-enhanced link-orange btn btn--plain--naked">
-                        Hol az email címünk?
-                    </label>
+                <Modal title="Hol az email címünk?" class="mt-20px">
+                    <p class="mt-20px">
+                        A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében, hogy
+                        elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket, döntöttünk úgy, hogy
+                        nem tesszük közzé az email címünket.
+                    </p>
+                    <p class="mt-20px">
+                        Üzenj nekünk az oldalon található üzenetküldő űrlapon keresztül. Ha rendben megkaptuk üzeneted,
+                        akkor erről egy automata visszaigazoló emailt fogsz kapni.
+                    </p>
+                </Modal>
+                <div class="separator-horizontal mt-20px"></div>
+                <div class="hidden-mobile">
+                    <h3 class="mb-20px">Kövess minket</h3>
+                    <SocialIcons align="left" class="mb-40px" />
                 </div>
             </div>
             <div class="col-12-xs col-6-md">
-                <h1>Form</h1>
-                <div class="row mt-40px mb-40px">
+                <h3 class="mb-20px">Üzenj nekünk</h3>
+                <div class="row mt-40px mb-40px vaki">
                     <Input client:only="react" type="text" placeholder="Név" id="name" />
                 </div>
             </div>
         </div>
     </div>
+
+    <style>
+        .modal-toggle {
+            display: none;
+        }
+
+        /* Overlay alapértelmezetten rejtett */
+        .kapcsolat-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Átlátszó fekete */
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+            z-index: 999;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 2px; /* Távolság a modal felső szélétől */
+            right: 10px; /* Távolság a modal jobb szélétől */
+            font-size: 56px; /* Gomb mérete */
+            font-weight: bold;
+            color: black; /* Szín */
+            cursor: pointer; /* Mutatóváltás kattinthatóság jelzésére */
+            background: none; /* Nincs háttér */
+            border: none; /* Nincs keret */
+            padding: 0; /* Nincs extra hely */
+            line-height: 1; /* Szöveg igazítása */
+            z-index: 1001; /* A modal tartalom fölött */
+            transition: color 0.3s ease; /* Hover animáció */
+        }
+
+        /* Sötétített háttér overlay */
+        .kapcsolat-background-overlay {
+            opacity: 0;
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7); /* Sötétebb fekete overlay */
+            z-index: 998; /* Az overlay a tartalom fölé, de a modal alá kerül */
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        /* Overlay megjelenése modal nyitásakor */
+        .modal-toggle:checked ~ .kapcsolat-background-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Modal alapértelmezetten rejtett */
+        .kapcsolat-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f5f5f5;
+            color: #000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        /* Checkbox bekapcsolása esetén az overlay megjelenik */
+        .modal-toggle:checked ~ .kapcsolat-modal-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Checkbox bekapcsolása esetén a modal megjelenik */
+        .modal-toggle:checked ~ .kapcsolat-modal {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Checkbox bekapcsolása esetén a fő tartalom halványodik */
+        .modal-toggle:checked ~ .main-content {
+            filter: brightness(1%); /* Halványítás */
+            pointer-events: none; /* Nem kattintható */
+        }
+
+        /* Modal tartalom stílusok */
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
 </BaseLayout>
-
-<style>
-    .modal-toggle {
-        display: none;
-    }
-
-    /* Overlay alapértelmezetten rejtett */
-    .kapcsolat-modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5); /* Átlátszó fekete */
-        opacity: 0;
-        visibility: hidden;
-        transition:
-            opacity 0.3s ease,
-            visibility 0.3s ease;
-        z-index: 999;
-    }
-
-    /* Sötétített háttér overlay */
-    .kapcsolat-background-overlay {
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7); /* Sötétebb fekete overlay */
-        z-index: 998; /* Az overlay a tartalom fölé, de a modal alá kerül */
-        transition:
-            opacity 0.3s ease,
-            visibility 0.3s ease;
-    }
-
-    /* Overlay megjelenése modal nyitásakor */
-    .modal-toggle:checked ~ .kapcsolat-background-overlay {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Modal alapértelmezetten rejtett */
-    .kapcsolat-modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f5f5f5;
-        color: #000;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 90%;
-        max-width: 500px;
-        padding: 20px;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition:
-            opacity 0.3s ease,
-            visibility 0.3s ease;
-    }
-
-    /* Checkbox bekapcsolása esetén az overlay megjelenik */
-    .modal-toggle:checked ~ .kapcsolat-modal-overlay {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Checkbox bekapcsolása esetén a modal megjelenik */
-    .modal-toggle:checked ~ .kapcsolat-modal {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Checkbox bekapcsolása esetén a fő tartalom halványodik */
-    .modal-toggle:checked ~ .main-content {
-        filter: brightness(1%); /* Halványítás */
-        pointer-events: none; /* Nem kattintható */
-    }
-
-    /* Modal tartalom stílusok */
-    .modal-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Bezáró gomb */
-    .close-btn {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #ff6600;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .close-btn:hover {
-        background-color: #cc5200;
-    }
-</style>

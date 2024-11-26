@@ -1,12 +1,22 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_colors';
 
 .social-icons__section {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+  gap: 8px;
 
   svg:hover {
     fill: $color-brand-orange;
+  }
+}
+
+.align-center {
+  justify-content: center; /* Középre igazítás */
+}
+
+.align-left {
+  justify-content: flex-start; /* Balra igazítás */
+  .btn:first-child {
+    padding-left: 0;
   }
 }

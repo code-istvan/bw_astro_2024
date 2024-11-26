@@ -1,9 +1,11 @@
 ---
 import Icons from './Icons.astro';
 import './_SocialIcons.scss';
+
+const { align = 'center', class: additionalClass = '' } = Astro.props;
 ---
 
-<div class="social-icons__section">
+<div class={`social-icons__section ${align === 'left' ? 'align-left' : 'align-center'} ${additionalClass}`}>
     <a
         href="https://www.facebook.com/bandhaworks"
         target="_blank"

@@ -1,0 +1,68 @@
+@import '/src/sass/base/_colors';
+
+/* A modal és a háttér overlay CSS maradhat ugyanaz */
+.modal-toggle {
+  display: none;
+}
+
+.kapcsolat-modal-overlay,
+.kapcsolat-background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Sötétebb fekete overlay */
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.modal-toggle:checked ~ .kapcsolat-modal-overlay,
+.modal-toggle:checked ~ .kapcsolat-background-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kapcsolat-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-shades-gray;
+  color: $color-shades-black;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.modal-toggle:checked ~ .kapcsolat-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.close-icon {
+  position: absolute;
+  top: 22px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.modal-trigger {
+  display: inline-block;
+}

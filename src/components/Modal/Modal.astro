@@ -1,0 +1,26 @@
+---
+import plus_sign from '../../images/svg/x_sign.svg?raw';
+import './_modal.scss';
+
+const { title, slot, class: modalClass } = Astro.props; // Props fogadása
+---
+
+<div class={`modal-box ${modalClass || ''}`}>
+    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+    <div class="kapcsolat-background-overlay"></div>
+    <div class="kapcsolat-modal-overlay"></div>
+    <div class="kapcsolat-modal">
+        <div class="modal-content">
+            <label for="modal-toggle" class="close-icon" aria-label="Bezárás">
+                <Fragment set:html={plus_sign} />
+            </label>
+            <h3 class="modal-title">{title}</h3>
+            <div class="modal-body">
+                <slot />
+            </div>
+        </div>
+    </div>
+    <label for="modal-toggle" class="modal-trigger">
+        <p class="link-orange link-enhanced">{title}</p>
+    </label>
+</div>
