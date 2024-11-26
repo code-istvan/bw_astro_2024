@@ -80,96 +80,54 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
                 </p>
 
                 <div class="kapcsolat-modal-box">
-                    <div id="kapcsolat-modal-overlay" class="kapcsolat-modal-overlay"></div>
-                    <dialog id="kapcsolat-modal" class="kapcsolat-modal-open">
-                        <div>
+                    <!-- Modal aktiválása egy rejtett checkbox-al -->
+                    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+
+                    <!-- Sötétített háttér overlay -->
+                    <div class="kapcsolat-background-overlay"></div>
+
+                    <!-- Overlay -->
+                    <div class="kapcsolat-modal-overlay"></div>
+
+                    <!-- Modal doboz -->
+                    <div class="kapcsolat-modal">
+                        <div class="modal-content">
                             <h3 class="mb-20px">Hol az email címünk?</h3>
-                            <p>
+                            <p class="mb-20px">
                                 A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében,
                                 hogy elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket,
                                 döntöttünk úgy, hogy nem tesszük közzé az email címünket.
                             </p>
-                            <br />
                             <p>
                                 Üzenj nekünk az oldalon található üzenetküldő űrlapon keresztül. Ha rendben megkaptuk
                                 üzeneted, akkor erről egy automata visszaigazoló emailt fogsz kapni.
                             </p>
+                            <!-- Modal bezárása -->
+                            <label for="modal-toggle" class="close-btn">Bezárás</label>
                         </div>
-                        <div class="display-flex justify-content-center align-items-center mt-20px">
-                            <button
-                                onclick="document.getElementById('kapcsolat-modal').close()"
-                                class="link-enhanced link-orange btn btn--plain--naked"
-                            >
-                                Bezárás
-                            </button>
-                        </div>
-                    </dialog>
-                    <a
-                        onclick="document.getElementById('kapcsolat-modal').showModal()"
-                        class="link-enhanced link-orange btn btn--plain--naked"
-                    >
+                    </div>
+                    <!-- Modal megnyitása -->
+                    <label for="modal-toggle" class="link-enhanced link-orange btn btn--plain--naked">
                         Hol az email címünk?
-                    </a>
+                    </label>
                 </div>
             </div>
             <div class="col-12-xs col-6-md">
                 <h1>Form</h1>
+                <div class="row mt-40px mb-40px">
+                    <Input client:only="react" type="text" placeholder="Név" id="name" />
+                </div>
             </div>
         </div>
-
-        <div class="row mt-40px mb-40px"><Input client:only="react" type="text" placeholder="Név" id="name" /></div>
     </div>
-
-    <script>
-        function openModal() {
-            const dialog = document.getElementById('kapcsolat-modal') as HTMLDialogElement;
-            if (dialog) {
-                dialog.showModal();
-            }
-
-            const overlay = document.getElementById('kapcsolat-modal-overlay');
-            if (overlay) {
-                overlay.style.display = 'block'; // Győződj meg arról, hogy látható
-            }
-        }
-
-        function closeModal() {
-            const dialog = document.getElementById('kapcsolat-modal') as HTMLDialogElement;
-            if (dialog) {
-                dialog.close();
-            }
-
-            const overlay = document.getElementById('kapcsolat-modal-overlay');
-            if (overlay) {
-                overlay.style.display = 'none'; // Rejtsd el a háttér overlayt
-            }
-        }
-    </script>
 </BaseLayout>
 
 <style>
-    .kapcsolat-modal-box {
-        text-align: center;
+    .modal-toggle {
+        display: none;
     }
 
-    /* Modal stílus */
-    .kapcsolat-modal-open {
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 90%;
-        max-width: 500px;
-        padding: 20px;
-        background-color: #f5f5f5; /* Szürke háttér */
-        color: #000; /* Fekete szöveg */
-        position: fixed; /* Rögzített helyzet a képernyőn */
-        top: 50%; /* Függőleges középre igazítás */
-        left: 50%; /* Vízszintes középre igazítás */
-        transform: translate(-50%, -50%); /* Pontosan a közepére helyezés */
-        z-index: 1000; /* Más elemek fölé helyezi */
-    }
-
-    /* A modal háttér */
+    /* Overlay alapértelmezetten rejtett */
     .kapcsolat-modal-overlay {
         position: fixed;
         top: 0;
@@ -177,11 +135,96 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.5); /* Átlátszó fekete */
-        z-index: 999; /* A modal alatt helyezkedik el */
-        display: none; /* Alapértelmezetten rejtett */
-        transition: opacity 0.3s ease; /* Fade animáció */
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+        z-index: 999;
     }
-    .kapcsolat-modal-overlay.show {
-        display: block; /* Megjelenítés, ha a modal nyitva van */
+
+    /* Sötétített háttér overlay */
+    .kapcsolat-background-overlay {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7); /* Sötétebb fekete overlay */
+        z-index: 998; /* Az overlay a tartalom fölé, de a modal alá kerül */
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    /* Overlay megjelenése modal nyitásakor */
+    .modal-toggle:checked ~ .kapcsolat-background-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Modal alapértelmezetten rejtett */
+    .kapcsolat-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f5f5f5;
+        color: #000;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    /* Checkbox bekapcsolása esetén az overlay megjelenik */
+    .modal-toggle:checked ~ .kapcsolat-modal-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Checkbox bekapcsolása esetén a modal megjelenik */
+    .modal-toggle:checked ~ .kapcsolat-modal {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Checkbox bekapcsolása esetén a fő tartalom halványodik */
+    .modal-toggle:checked ~ .main-content {
+        filter: brightness(1%); /* Halványítás */
+        pointer-events: none; /* Nem kattintható */
+    }
+
+    /* Modal tartalom stílusok */
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Bezáró gomb */
+    .close-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .close-btn:hover {
+        background-color: #cc5200;
     }
 </style>
