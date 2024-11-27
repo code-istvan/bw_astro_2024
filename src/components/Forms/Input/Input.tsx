@@ -15,7 +15,7 @@ export const Input = ({ type, name, placeholder, id, className, required, patter
         <input
           type={type}
           name={name}
-          id={id || name}
+          id={id}
           placeholder={placeholder}
           className={`input ${className || ''}`.trim()}
           required={!!required}
