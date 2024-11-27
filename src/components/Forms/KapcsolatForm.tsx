@@ -8,13 +8,13 @@ export const KapcsolatForm = () => {
 
   return (
     <form
-      name="contact bandhaworks"
+      name="contact bandhaworks 2025"
       action="/message-sent"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact bandhaworks" />
+      <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
       <div hidden>
         <input name="bot-field" />
       </div>
