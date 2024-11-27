@@ -20,14 +20,7 @@ export const KapcsolatForm = () => {
       </div>
       <div className="row gap-1 mt-20px mb-20px">
         <div className="col-12-xs col-6-md">
-          <Input
-            type="text"
-            name="name"
-            placeholder="Név"
-            id="name"
-            pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
-            required
-          />
+          <Input type="text" name="name" placeholder="Név" pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$" required />
         </div>
         <div className="col-12-xs col-6-md">
           <Input
