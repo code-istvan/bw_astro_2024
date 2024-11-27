@@ -34,7 +34,7 @@ export const KapcsolatForm = () => {
         </div>
       </div>
       <div className="row">
-        <TextArea id="message" name="comments" placeholder="Üzenet" rows={5} required />
+        <TextArea name="comments" placeholder="Üzenet" rows={5} required />
       </div>
       <div className="row mt-20px">
         <Checkbox
