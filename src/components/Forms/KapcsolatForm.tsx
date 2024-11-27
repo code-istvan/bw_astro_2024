@@ -24,10 +24,10 @@ export const KapcsolatForm = () => {
         </div>
         <div className="col-12-xs col-6-md">
           <Input
+            id="email"
             type="email"
             name="email"
             placeholder="Email"
-            id="email"
             pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
             required
           />
