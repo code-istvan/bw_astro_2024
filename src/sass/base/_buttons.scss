@@ -96,11 +96,11 @@
   background-color: $color-shades-gray;
   color: $color-shades-black;
 
-  // @include xl {
-  //   font-size: 20px;
-  //   font-weight: 600;
-  //   padding: 16px 32px;
-  // }
+  @include xl {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 32px;
+  }
 }
 
 .btn--secondary--solid--full {

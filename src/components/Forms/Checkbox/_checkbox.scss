@@ -1,0 +1,66 @@
+@import '/src/sass/base/_colors';
+
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start; /* Igazítás a szöveg tetejéhez */
+  gap: 10px; /* Hely a checkbox és a szöveg között */
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    width: 1.25em; /* Checkbox szélessége */
+    height: 1.25em; /* Checkbox magassága */
+    border: 2px solid currentColor; /* Keret színe */
+    display: inline-grid;
+    place-content: center;
+    transform: translateY(0.15em); /* Finom igazítás a szöveg tetejéhez */
+
+    &::before {
+      content: '';
+      width: 1.2em;
+      height: 1.2em;
+      transform: scale(0);
+      transition: 100ms transform ease-in-out;
+      transform-origin: center;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    &:checked::before {
+      transform: scale(1); /* Kipipálás megjelenítése */
+    }
+  }
+
+  &.orange {
+    input[type='checkbox'] {
+      color: $color-brand-orange;
+
+      &::before {
+        background-color: $color-brand-orange; /* Kipipálás színe narancs */
+      }
+    }
+  }
+
+  &.gray {
+    input[type='checkbox'] {
+      color: $color-shades-lightGray;
+
+      &::before {
+        background-color: $color-shades-lightGray; /* Kipipálás színe szürke */
+      }
+    }
+  }
+
+  label {
+    font-size: 16px; /* Szöveg mérete */
+    cursor: pointer; /* Kattinthatóság */
+  }
+
+  label p {
+    margin: 0; /* Alapértelmezett margó eltávolítása */
+    line-height: 1.5; /* Szöveg sortávolsága */
+    color: $color-shades-lightGray; /* Szöveg színe */
+  }
+}

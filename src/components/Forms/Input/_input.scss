@@ -1,15 +1,26 @@
 @import '/src/sass/base/_colors';
 @import '/src/sass/base/_fonts';
 
+.input-wrapper {
+  display: flex; /* Flexbox használata */
+  flex-direction: column; /* Függőleges elrendezés */
+  width: 100%; /* Kitölti a szülő helyét */
+}
+
+.input-label {
+  width: 100%; /* A címke kitölti a szülő teret */
+}
+
 .input {
-  width: 100%;
-  background: transparent;
-  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
-  height: 44px;
+  width: 100%; /* Input kitölti a szülőt */
+  box-sizing: border-box; /* Padding és border ne tolja túl */
+  height: 44px; /* Megtartja a fix magasságot */
   padding-left: 16px;
   font-family: $font-family-secondary;
   font-weight: 600;
+  background: transparent;
   color: $color-shades-lightGray;
+  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
 
   &:focus {
     box-shadow: 0px 0px 0px 2px $color-brand-orange inset;

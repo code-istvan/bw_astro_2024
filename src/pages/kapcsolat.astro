@@ -3,7 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleMap from '../components/GoogleMap/GoogleMap';
 import Modal from '../components/Modal/Modal.astro';
 import contactMapImage from '../images/contact_map.jpg';
-import { Input } from '../components/Input/Input';
+import { KapcsolatForm } from '../components/Forms/KapcsolatForm';
+// import { Input } from '../components/Forms/Input/Input.tsx';
+// import { TextArea } from '../components/Forms/TextArea/TextArea.tsx';
+// import { Checkbox } from '../components/Forms/Checkbox/CheckBox.tsx';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
 
 const pageTitle = 'Kapcsolat';
@@ -100,9 +103,32 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
             </div>
             <div class="col-12-xs col-6-md">
                 <h3 class="mb-20px">Üzenj nekünk</h3>
-                <div class="row mt-40px mb-40px vaki">
-                    <Input client:only="react" type="text" placeholder="Név" id="name" />
-                </div>
+                <!-- <div class="row gap-1 mt-40px mb-20px">
+                    <div class="col-12-xs col-6-md">
+                        <Input
+                            client:only="react"
+                            type="text"
+                            name="name"
+                            placeholder="Név"
+                            id="name"
+                            pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
+                            required={true}
+                        />
+                    </div>
+                    <div class="col-12-xs col-6-md">
+                        <Input
+                            client:only="react"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            id="email"
+                            pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+                            required={true}
+                        />
+                    </div>
+                </div> -->
+                <!-- <div class="row"><TextArea id="message" placeholder="Üzenet" rows={5} /></div> -->
+                <KapcsolatForm client:load />
             </div>
         </div>
     </div>

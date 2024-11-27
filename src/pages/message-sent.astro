@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// import HeroImage from '../components/HeroImage/HeroImage.astro';
+// import mobileImage from '../images/message_sent_mobile.jpg';
+// import desktopImage from '../images/message_sent_desktop.jpg';
+
+const pageTitle = 'Üzenet elküldve';
+---
+
+<BaseLayout title={pageTitle}>
+    <!-- <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} /> -->
+    <div class="container">
+        <div class="row mt-40px">
+            <h1>Köszönjük az üzenetet!</h1>
+            <p>Az üzeneted sikeresen elküldtük. Kollégáink hamarosan felveszik veled a kapcsolatot.</p>
+            <div class="mt-20px">
+                <a href="/" class="btn btn--primary">Vissza a főoldalra</a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1rem;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+</style>
