@@ -2,15 +2,24 @@ import React, { useState } from 'react';
 import { TextArea } from './TextArea/TextArea';
 import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
+import { actions } from 'astro:actions';
 
 export const KapcsolatForm = () => {
   const [isChecked, setIsChecked] = useState(false);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log('submit');
+    const response = await actions.contact({ name: 'Ferran', email: 'fbuireu@gmail.com', comments: 'Hello' });
+    console.log(response);
+  };
+
   return (
     <form
       name="contact bandhaworks 2025"
-      action="/message-sent"
-      method="post"
+      // action="/message-sent"
+      onSubmit={(event) => handleSubmit(event)}
+      // method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
@@ -18,7 +27,7 @@ export const KapcsolatForm = () => {
       <div hidden>
         <input name="bot-field" />
       </div>
-      <div className="row gap-1 mt-20px mb-20px">
+      <div className="row gap-1 mt-20px mb-16px">
         <div className="col-12-xs col-6-md">
           <Input
             id="name"
