@@ -3,6 +3,7 @@ import { TextArea } from './TextArea/TextArea';
 import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { actions } from 'astro:actions';
+import './_kapcsolatForm.scss';
 
 type ContactFormData = {
   name: string;
@@ -43,7 +44,7 @@ export const KapcsolatForm = () => {
       <div hidden>
         <input name="bot-field" />
       </div>
-      <div className="row gap-1 mt-20px mb-16px">
+      <div className="row gap-1 mb-12px">
         <div className="col-12-xs col-6-md">
           <Input
             id="name"
@@ -91,7 +92,7 @@ export const KapcsolatForm = () => {
           className="orange"
         />
       </div>
-      <div className="row mt-20px">
+      <div className="row mt-20px mb-40px">
         <button type="submit" disabled={!isChecked} className="btn btn--full-width-mobile btn--secondary--solid">
           Küldés
         </button>

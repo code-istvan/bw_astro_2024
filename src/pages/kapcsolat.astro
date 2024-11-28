@@ -4,11 +4,11 @@ import GoogleMap from '../components/GoogleMap/GoogleMap';
 import Modal from '../components/Modal/Modal.astro';
 import contactMapImage from '../images/contact_map.jpg';
 import { KapcsolatForm } from '../components/Forms/KapcsolatForm';
-// import { Input } from '../components/Forms/Input/Input.tsx';
-// import { TextArea } from '../components/Forms/TextArea/TextArea.tsx';
-// import { Checkbox } from '../components/Forms/Checkbox/CheckBox.tsx';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
+import '../sass/pages/_kapcsolat.scss';
+
 export const prerender = false;
+
 const pageTitle = 'Kapcsolat';
 
 const metadata = {
@@ -21,18 +21,15 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={contactMapImage}>
-    <!-- <div class="container">
-        <div class="row"><h1>{pageTitle}</h1></div>
-    </div> -->
     <GoogleMap client:only="react" />
     <div class="container">
-        <div class="row gap-2 hidden-desktop">
+        <div class="map-links row gap-2 hidden-desktop">
             <div class="col-6-xs">
                 <a
                     href={googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    class="map-links__item btn btn--full-width-mobile btn--primary--outline mt-20px"
                     aria-label="Nyisd meg Google Maps-ben"
                 >
                     Google Maps
@@ -43,19 +40,18 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
                     href={wazeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    class="map-links__item btn btn--full-width-mobile btn--primary--outline mt-20px"
                     aria-label="Nyisd meg a Waze-ben"
                 >
                     Waze
                 </a>
             </div>
         </div>
-        <div class="row mt-40px mb-40px">
+        <div class="contact-header row mb-40px">
             <div class="col">
                 <h1 class="kapcsolat-title">Kapcsolat</h1>
             </div>
         </div>
-
         <div class="row gap-1">
             <div class="col-12-xs col-6-md">
                 <address>
@@ -97,39 +93,19 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
                 </Modal>
                 <div class="separator-horizontal mt-20px"></div>
                 <div class="hidden-mobile">
-                    <h3 class="mb-20px">Kövess minket</h3>
+                    <h3>Kövess minket</h3>
                     <SocialIcons align="left" class="mb-40px" />
                 </div>
             </div>
             <div class="col-12-xs col-6-md">
                 <h3 class="mb-20px">Üzenj nekünk</h3>
-                <!-- <div class="row gap-1 mt-40px mb-20px">
-                    <div class="col-12-xs col-6-md">
-                        <Input
-                            client:only="react"
-                            type="text"
-                            name="name"
-                            placeholder="Név"
-                            id="name"
-                            pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
-                            required={true}
-                        />
-                    </div>
-                    <div class="col-12-xs col-6-md">
-                        <Input
-                            client:only="react"
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            id="email"
-                            pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
-                            required={true}
-                        />
-                    </div>
-                </div> -->
-                <!-- <div class="row"><TextArea id="message" placeholder="Üzenet" rows={5} /></div> -->
                 <KapcsolatForm client:load />
             </div>
+        </div>
+        <div class="hidden-desktop display-flex display-flex--direction-column align-items-center">
+            <div class="separator-horizontal-full mb-40px"></div>
+            <h3 class="mb-20px">Kövess minket</h3>
+            <SocialIcons align="center" class="mb-40px" />
         </div>
     </div>
 

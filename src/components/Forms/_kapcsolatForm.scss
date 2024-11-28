@@ -1,0 +1,11 @@
+div[hidden] input[name='bot-field'] {
+  position: absolute; /* Elmozdítja az elemet az áramlásból */
+  opacity: 0; /* Láthatatlanná teszi */
+  pointer-events: none; /* Megakadályozza az interakciót az egérrel vagy billentyűzettel */
+  width: 0; /* Nulla szélesség */
+  height: 0; /* Nulla magasság */
+  overflow: hidden; /* Rejtett tartalom */
+  border: none; /* Nem jelenik meg keret */
+  padding: 0; /* Nincs belső térköz */
+  margin: 0; /* Nincs külső térköz */
+}
