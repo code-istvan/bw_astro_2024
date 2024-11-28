@@ -20,7 +20,14 @@ export const KapcsolatForm = () => {
       </div>
       <div className="row gap-1 mt-20px mb-20px">
         <div className="col-12-xs col-6-md">
-          <Input type="text" name="name" placeholder="Név" pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$" required />
+          <Input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Név"
+            pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
+            required
+          />
         </div>
         <div className="col-12-xs col-6-md">
           <Input
@@ -28,7 +35,7 @@ export const KapcsolatForm = () => {
             type="email"
             name="email"
             placeholder="Email"
-            pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             required
           />
         </div>
@@ -39,6 +46,7 @@ export const KapcsolatForm = () => {
       <div className="row mt-20px">
         <Checkbox
           id="terms"
+          name="terms"
           label={
             <>
               Megismertem és elfogadom az{' '}
