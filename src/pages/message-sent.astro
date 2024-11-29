@@ -1,53 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-// import HeroImage from '../components/HeroImage/HeroImage.astro';
-// import mobileImage from '../images/message_sent_mobile.jpg';
-// import desktopImage from '../images/message_sent_desktop.jpg';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/message-sent_mobil.jpeg';
+import desktopImage from '../images/message-sent_desktop.jpeg';
 
-const pageTitle = 'Üzenet elküldve';
+const metadata = {
+    title: 'ÜZENET ELKÜLDVE',
+    description: 'Ezen az oldalon megtalálod az üzenet elküldésének megerősítését.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <!-- <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} /> -->
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row mt-40px">
-            <h1>Köszönjük az üzenetet!</h1>
-            <p>Az üzeneted sikeresen elküldtük. Kollégáink hamarosan felveszik veled a kapcsolatot.</p>
-            <div class="mt-20px">
-                <a href="/" class="btn btn--primary">Vissza a főoldalra</a>
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px">Köszönjük, hogy felvetted velünk a kapcsolatot!</h3>
+                    <p>Az általad elküldött üzenet megérkezett szerverünkre!</p>
+                    <p class="mt-20px">
+                        Csapatunk az elkövetkező munkanapokon - <strong>általában 24-48 órán belül</strong> - feldolgozza
+                        az üzeneted hamarosan válaszolunk.
+                    </p>
+                    <p class="mt-20px">
+                        Ha munkanapokon 48 órán belül nem kapsz választ, akkor lehet, hogy{' '}
+                        <strong>
+                            <u>rosszul adtad meg</u>
+                        </strong>{' '}
+                        az email címed vagy a{' '}
+                        <strong>
+                            <u>SPAM fiókodban</u>
+                        </strong>{' '}
+                        landolt a válaszunk!
+                    </p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Hol az email címünk?</h3>
+                <p class="mt-20px">
+                    A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében, hogy
+                    elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket, döntöttünk úgy, hogy nem
+                    tesszük közzé az email címünket.
+                </p>
+                <p class="mt-20px">
+                    Ez a gyakorlat a mai digitális világban iparági sztenderdnek számít, melynek célja, hogy a lehető
+                    legbiztonságosabb környezetet teremtse meg felhasználóink számára.
+                </p>
+                <p class="mt-20px">
+                    Ha továbbra is problémába ütközne a kapcsolatfelvétel irányunkban a honlapon keresztül, akkor kérünk
+                    írjál facebook üzenetet részünkre (lásd. lábléc), vagy gyere el személyesen hozzánk! Ez a
+                    tradicionális útja a kapcsolatfelvételnek a jóga világában. Köszönjük!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Főoldal">
+                    Vissza a főoldalra
+                </a>
             </div>
         </div>
     </div>
 </BaseLayout>
-
-<style>
-    .container {
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 16px;
-    }
-
-    p {
-        font-size: 1.2rem;
-        color: #666;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 12px 24px;
-        font-size: 1rem;
-        color: white;
-        background-color: #007bff;
-        border: none;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: #0056b3;
-        }
-    }
-</style>
