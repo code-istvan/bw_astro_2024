@@ -3,18 +3,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/hirlevel_mobil.jpeg';
 import desktopImage from '../images/hirlevel_desktop.jpeg';
-import SubscriptionForm from '../components/SubscriptionForm.jsx';
+import { NewsletterForm } from '../components/Forms/NewsletterForm.tsx';
+// import SubscriptionForm from '../components/SubscriptionForm.jsx';
 
 const pageTitle = 'Hírlevel';
+
+const metadata = {
+    title: 'FELÍRATKOZÁS HÍRLEVÉLRE',
+    description: 'Ezen az oldalon íratkozhatsz fel hírlevelünkre.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>Iratkozz fel hírlevelünkre, hogy elsőként értesülj a legfrissebb híreinkről!</p>
-                <SubscriptionForm client:only="react" />
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px mb-40px">
+            <div class="col">
+                <p>
+                    Iratkozz fel hírlevelünkre, hogy elsőként értesülj jógaiskolánkat érintő történésekről. Havonta max.
+                    egy hírlevelet küldünk. Harmadik fél számára nem adjuk ki a feliratkozók nevét és email címét.
+                </p>
+
+                <NewsletterForm client:load />
+                <!-- <SubscriptionForm client:only="react" /> -->
             </div>
         </div>
     </div>
