@@ -11,8 +11,14 @@ const metadata = {
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container">
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
         <div class="mt-40px">
             <div class="row">
                 <div class="col">

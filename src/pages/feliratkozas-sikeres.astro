@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/message-sent_mobil.jpeg';
+import desktopImage from '../images/message-sent_desktop.jpeg';
+
+const metadata = {
+    title: 'SIKERES FELIRATKOZÁS',
+    description: 'Ezen az oldalon megtalálod a hírlevélre történő feliratkozás megerősítését.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px">Örülünk, hogy csatlakoztál közösségünkhöz!</h3>
+                    <p>
+                        Mostantól elsőként értesülhetsz legfrissebb híreinkről, programjainkról és új
+                        blogbejegyzéseinkről.
+                    </p>
+                    <p class="mt-20px">Adataidat bizalmasan kezeljük, nem adjuk ki harmadik fél számára!</p>
+                    <p class="mt-20px"><strong>Szép napot és jó gyakorlást kívánunk!</strong></p>
+                    <p>A Bandha Works Csapata</p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Nem jönnek a hírlevelek?</h3>
+                <p class="mt-20px">
+                    Néha érdemes ellenőrizni a "Promóciók" vagy a "Spam" mappát is, hogy biztosan ne maradj le semmiről.
+                    Havonta általában egy hírlevelet küldünk, hogy tájékoztassunk legfrissebb híreinkről és
+                    programjainkról. Ha bármi kérdésed van, írj bátran nekünk!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Főoldal">
+                    Vissza a főoldalra
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

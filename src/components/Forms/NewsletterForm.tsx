@@ -9,7 +9,7 @@ export const NewsletterForm = () => {
   return (
     <form
       name="newsletter bandhaworks 2025"
-      action="/message-sent"
+      action="/feliratkozas-sikeres/"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
@@ -58,6 +58,7 @@ export const NewsletterForm = () => {
               , hozzájárulok nevem és email címem kezeléséhez.
             </>
           }
+          required
           checked={isChecked}
           onChange={(e) => setIsChecked(e.target.checked)}
           className="orange"

@@ -87,6 +87,7 @@ export const KapcsolatForm = () => {
               , hozzájárulok nevem és email címem kezeléséhez.
             </>
           }
+          required
           checked={isChecked}
           onChange={(e) => setIsChecked(e.target.checked)}
           className="orange"
