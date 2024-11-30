@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { TextArea } from './TextArea/TextArea';
 import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 
@@ -65,7 +64,10 @@ export const NewsletterForm = () => {
         />
       </div>
       <div className="row mt-20px">
-        <button type="submit" disabled={!isChecked} className="btn btn--full-width-mobile btn--secondary--solid">
+        {/* <button type="submit" disabled={!isChecked} className="btn btn--full-width-mobile btn--secondary--solid">
+          Feliratkozás
+        </button> */}
+        <button type="submit" className="btn btn--full-width-mobile btn--secondary--solid">
           Feliratkozás
         </button>
       </div>

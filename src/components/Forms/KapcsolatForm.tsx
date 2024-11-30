@@ -34,7 +34,7 @@ export const KapcsolatForm = () => {
   return (
     <form
       name="contact bandhaworks 2025"
-      // action="/message-sent"
+      // action="/uzenet-elkuldve/"
       onSubmit={(event) => handleSubmit(event)}
       // method="post"
       data-netlify="true"
