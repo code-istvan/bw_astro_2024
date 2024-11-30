@@ -7,13 +7,13 @@ export const NewsletterForm = () => {
 
   return (
     <form
-      name="newsletter bandhaworks 2025"
+      name="feliratkozas hirlevelre"
       action="/feliratkozas-sikeres/"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="newsletter bandhaworks 2025" />
+      <input type="hidden" name="form-name" value="feliratkozas hirlevelre" />
       <div hidden>
         <input name="bot-field" />
       </div>
