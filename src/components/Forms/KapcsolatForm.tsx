@@ -3,38 +3,28 @@ import { TextArea } from './TextArea/TextArea';
 import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { actions } from 'astro:actions';
-import './_kapcsolatForm.scss';
-
-type ContactFormData = {
-  name: string;
-  email: string;
-  comments: string;
-};
 
 export const KapcsolatForm = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log('submit');
-
-    // Ideiglenesen erőltetett típus a hibák elkerülése érdekében
-    const formData: ContactFormData = {
-      name: 'Ferran',
-      email: 'fbuireu@gmail.com',
-      comments: 'Hello',
-    };
-
-    // Típus kikapcsolása, hogy átmenetileg működjön
-    const response = await actions.contact(formData as any);
-
+    const formData = new FormData();
+    formData.append('name', 'Ferran');
+    formData.append('email', 'bandha.works@gmail.com');
+    formData.append('comment', 'Hello');
+    const response = await actions.contact(formData);
     console.log(response);
+    if (response.data.ok) {
+      window.location.href = '/uzenet-elkuldve/';
+    }
   };
 
   return (
     <form
       name="contact bandhaworks 2025"
-      // action="/uzenet-elkuldve/"
+      action="/message-sent"
       onSubmit={(event) => handleSubmit(event)}
       // method="post"
       data-netlify="true"
@@ -44,7 +34,7 @@ export const KapcsolatForm = () => {
       <div hidden>
         <input name="bot-field" />
       </div>
-      <div className="row gap-1 mb-12px">
+      <div className="row gap-1 mt-20px mb-16px">
         <div className="col-12-xs col-6-md">
           <Input
             id="name"
@@ -87,13 +77,12 @@ export const KapcsolatForm = () => {
               , hozzájárulok nevem és email címem kezeléséhez.
             </>
           }
-          required
           checked={isChecked}
           onChange={(e) => setIsChecked(e.target.checked)}
           className="orange"
         />
       </div>
-      <div className="row mt-20px mb-40px">
+      <div className="row mt-20px">
         <button type="submit" disabled={!isChecked} className="btn btn--full-width-mobile btn--secondary--solid">
           Küldés
         </button>
@@ -107,21 +96,38 @@ export const KapcsolatForm = () => {
 // import { Checkbox } from './Checkbox/CheckBox';
 // import { Input } from './Input/Input';
 // import { actions } from 'astro:actions';
+// import './_kapcsolatForm.scss';
+
+// type ContactFormData = {
+//   name: string;
+//   email: string;
+//   comments: string;
+// };
 
 // export const KapcsolatForm = () => {
 //   const [isChecked, setIsChecked] = useState(false);
 
-//   const handleSubmit = async (event) => {
+//   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 //     event.preventDefault();
 //     console.log('submit');
-//     const response = await actions.contact({ name: 'Ferran', email: 'fbuireu@gmail.com', comments: 'Hello' });
+
+//     // Ideiglenesen erőltetett típus a hibák elkerülése érdekében
+//     const formData: ContactFormData = {
+//       name: 'Ferran',
+//       email: 'fbuireu@gmail.com',
+//       comments: 'Hello',
+//     };
+
+//     // Típus kikapcsolása, hogy átmenetileg működjön
+//     const response = await actions.contact(formData as any);
+
 //     console.log(response);
 //   };
 
 //   return (
 //     <form
 //       name="contact bandhaworks 2025"
-//       // action="/message-sent"
+//       // action="/uzenet-elkuldve/"
 //       onSubmit={(event) => handleSubmit(event)}
 //       // method="post"
 //       data-netlify="true"
@@ -131,7 +137,7 @@ export const KapcsolatForm = () => {
 //       <div hidden>
 //         <input name="bot-field" />
 //       </div>
-//       <div className="row gap-1 mt-20px mb-16px">
+//       <div className="row gap-1 mb-12px">
 //         <div className="col-12-xs col-6-md">
 //           <Input
 //             id="name"
@@ -174,12 +180,13 @@ export const KapcsolatForm = () => {
 //               , hozzájárulok nevem és email címem kezeléséhez.
 //             </>
 //           }
+//           required
 //           checked={isChecked}
 //           onChange={(e) => setIsChecked(e.target.checked)}
 //           className="orange"
 //         />
 //       </div>
-//       <div className="row mt-20px">
+//       <div className="row mt-20px mb-40px">
 //         <button type="submit" disabled={!isChecked} className="btn btn--full-width-mobile btn--secondary--solid">
 //           Küldés
 //         </button>
