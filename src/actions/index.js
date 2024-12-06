@@ -17,7 +17,7 @@ export const server = {
         const { data, error } = await resend.emails.send({
           from: 'Bandha Works Shala <shala@bandha.works>',
           to: email,
-          subject: `New message from from)`,
+          subject: `Üzeneted megérkezett hozzánk`,
           html: `Hello, <br> <br> You have a new message`,
         });
         console.log(email, name, comment);
