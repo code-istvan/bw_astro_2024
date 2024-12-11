@@ -4,7 +4,7 @@ import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { actions } from 'astro:actions';
 
-export const KapcsolatForm = () => {
+export const KapcsolatForm = ({ language = 'hu' }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [loading, setLoading] = useState(false);
   const [checkboxClass, setCheckboxClass] = useState('orange'); // Alapértelmezett osztály
@@ -32,21 +32,16 @@ export const KapcsolatForm = () => {
     }
 
     try {
-      await fetch('/', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const response = await actions.contact({ name, email, comment });
+      const response = await actions.contact({ name, email, comment, language });
 
       if (response.data?.data?.ok) {
-        window.location.href = '/uzenet-elkuldve/';
+        window.location.href = language === 'hu' ? '/uzenet-elkuldve/' : '/message-sent/';
       } else {
-        window.location.href = '/uzenetkuldes-sikertelen/';
+        window.location.href = language === 'hu' ? '/uzenetkuldes-sikertelen/' : '/message-failed/';
       }
     } catch (error) {
       console.error('Hiba történt:', error);
-      window.location.href = '/uzenetkuldes-sikertelen/';
+      window.location.href = language === 'hu' ? '/uzenetkuldes-sikertelen/' : '/message-failed/';
     } finally {
       setLoading(false);
     }
@@ -60,13 +55,13 @@ export const KapcsolatForm = () => {
 
   return (
     <form
-      name="contact bandhaworks 2025"
+      name={`contact-form-${language}`}
       onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
     >
-      <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
+      <input type="hidden" name="form-name" value={`contact-form-${language}`} />
       <div hidden>
         <input name="bot-field" />
       </div>
@@ -78,7 +73,7 @@ export const KapcsolatForm = () => {
             id="name"
             type="text"
             name="name"
-            placeholder="Név"
+            placeholder={language === 'hu' ? 'Név' : 'Name'}
             pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
             required
           />
@@ -88,14 +83,14 @@ export const KapcsolatForm = () => {
             id="email"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={language === 'hu' ? 'Email' : 'Email'}
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             required
           />
         </div>
       </div>
       <div className="row">
-        <TextArea name="comments" placeholder="Üzenet" rows={5} required />
+        <TextArea name="comments" placeholder={language === 'hu' ? 'Üzenet' : 'Message'} rows={5} required />
       </div>
 
       {/* Checkbox */}
@@ -103,18 +98,33 @@ export const KapcsolatForm = () => {
         id="terms"
         name="terms"
         label={
-          <>
-            Megismertem és elfogadom az{' '}
-            <a
-              href="/adatvedelmi-tajekoztato/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-enhanced link-orange"
-            >
-              adatvédelmi tájékoztatót
-            </a>
-            , hozzájárulok nevem és email címem kezeléséhez.
-          </>
+          language === 'hu' ? (
+            <>
+              Megismertem és elfogadom az{' '}
+              <a
+                href="/adatvedelmi-tajekoztato/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-enhanced link-orange"
+              >
+                adatvédelmi tájékoztatót
+              </a>
+              , hozzájárulok nevem és email címem kezeléséhez.
+            </>
+          ) : (
+            <>
+              I have read and agree to the{' '}
+              <a
+                href="/privacy-policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-enhanced link-orange"
+              >
+                privacy policy
+              </a>
+              , and consent to the processing of my name and email address.
+            </>
+          )
         }
         checked={isChecked}
         className={checkboxClass} // Dinamikus osztály
@@ -123,7 +133,7 @@ export const KapcsolatForm = () => {
 
       <div className="row mt-20px mb-40px">
         <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
-          {loading ? 'Küldés...' : 'Küldés'}
+          {loading ? (language === 'hu' ? 'Küldés...' : 'Sending...') : language === 'hu' ? 'Küldés' : 'Send'}
         </button>
       </div>
     </form>
