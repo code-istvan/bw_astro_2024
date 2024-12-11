@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/message-sent_mobil.jpeg';
+import desktopImage from '../../images/message-sent_desktop.jpeg';
+
+const metadata = {
+    title: 'MESSAGE SENDING FAILED',
+    description: 'This page provides information about the failure of message delivery.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px">An error occurred while sending the message!</h3>
+                    <p class="mt-20px">Please try again!</p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Where is our email address?</h3>
+                <p class="mt-20px">
+                    On our website, security and data protection are top priorities. To avoid unwanted spam messages and
+                    phishing attempts, we have decided not to publish our email address.
+                </p>
+                <p class="mt-20px">
+                    This practice is considered an industry standard in today’s digital world, aiming to create the
+                    safest possible environment for our users.
+                </p>
+                <p class="mt-20px">
+                    If you still encounter difficulties contacting us through the website, please send us a message on
+                    Facebook (see footer) or visit us in person! This is the traditional way of making contact in the
+                    world of yoga. Thank you!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Homepage">
+                    Back to the Homepage
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

@@ -40,13 +40,13 @@ export const ContactForm = () => {
       const response = await actions.contact({ name, email, comment });
 
       if (response.data?.data?.ok) {
-        window.location.href = '/uzenet-elkuldve/';
+        window.location.href = '/en/uzenet-elkuldve/';
       } else {
-        window.location.href = '/uzenetkuldes-sikertelen/';
+        window.location.href = '/en/uzenetkuldes-sikertelen/';
       }
     } catch (error) {
       console.error('Hiba történt:', error);
-      window.location.href = '/uzenetkuldes-sikertelen/';
+      window.location.href = '/en/uzenetkuldes-sikertelen/';
     } finally {
       setLoading(false);
     }
