@@ -42,6 +42,12 @@ export const ui = {
     kapcsolat: 'KAPCSOLAT',
     kapcsolatLink: '/kapcsolat',
 
+    // KapcsolatForm
+    kapcsolatFormName: 'Név',
+    kapcsolatFormEmail: 'Email',
+    kapcsolatFormMessage: 'Üzenet',
+    kapcsolatFormButton: 'Küldés',
+
     // Footer
     footerBrandTextLine1: 'Astanga Jógaiskola',
     footerBrandTextLine2: 'Paramaguru Sharath Jois',
@@ -117,6 +123,12 @@ export const ui = {
     tudnivalok: 'INFORMATION',
     kapcsolat: 'CONTACT',
     kapcsolatLink: '/en/kapcsolat',
+
+    // KapcsolatForm
+    kapcsolatFormName: 'Name',
+    kapcsolatFormEmail: 'Email',
+    kapcsolatFormMessage: 'Message',
+    kapcsolatFormButton: 'Send',
 
     // Footer
     footerBrandTextLine1: 'Ashtanga Yoga Shala',

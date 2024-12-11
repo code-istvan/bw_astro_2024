@@ -4,7 +4,7 @@ import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { actions } from 'astro:actions';
 
-export const KapcsolatForm = () => {
+export const ContactForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [loading, setLoading] = useState(false);
   const [checkboxClass, setCheckboxClass] = useState('orange'); // Alapértelmezett osztály
@@ -78,7 +78,7 @@ export const KapcsolatForm = () => {
             id="name"
             type="text"
             name="name"
-            placeholder="Név"
+            placeholder="Name"
             pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
             required
           />
@@ -95,7 +95,7 @@ export const KapcsolatForm = () => {
         </div>
       </div>
       <div className="row">
-        <TextArea name="comments" placeholder="Üzenet" rows={5} required />
+        <TextArea name="comments" placeholder="Message" rows={5} required />
       </div>
 
       {/* Checkbox */}
@@ -104,16 +104,16 @@ export const KapcsolatForm = () => {
         name="terms"
         label={
           <>
-            Megismertem és elfogadom az{' '}
+            I have read and accept the{' '}
             <a
-              href="/adatvedelmi-tajekoztato/"
+              href="/en/adatvedelmi-tajekoztato/"
               target="_blank"
               rel="noopener noreferrer"
               className="link-enhanced link-orange"
             >
-              adatvédelmi tájékoztatót
+              privacy policy
             </a>
-            , hozzájárulok nevem és email címem kezeléséhez.
+            , and consent to the processing of my name and email address.
           </>
         }
         checked={isChecked}
@@ -123,7 +123,7 @@ export const KapcsolatForm = () => {
 
       <div className="row mt-20px mb-40px">
         <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
-          {loading ? 'Küldés...' : 'Küldés'}
+          {loading ? 'Send...' : 'Send'}
         </button>
       </div>
     </form>

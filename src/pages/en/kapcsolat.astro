@@ -1,11 +1,108 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
+import Modal from '../../components/Modal/Modal.astro';
+import contactMapImage from '../../images/contact_map.jpg';
+import { ContactForm } from '../../components/Forms/ContactForm.tsx';
+import SocialIcons from '../../components/Icons/SocialIcons.astro';
+import '../../sass/pages/_kapcsolat.scss';
+
+export const prerender = false;
+
+const metadata = {
+    title: 'CONTACT',
+    description: 'On this page, you will find our contact information necessary for getting in touch.',
+};
+
+const googleMapsUrl = 'https://www.google.com/maps?q=47.51416,19.03734';
+const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
 ---
 
-<Layout title="Contact">
+<BaseLayout title={metadata.title} description={metadata.description} image={contactMapImage}>
+    <GoogleMap client:only="react" />
     <div class="container">
-        <div class="row"><h1>Contact</h1></div>
-    </div>
-</Layout>
+        <div class="map-links row gap-2 hidden-desktop">
+            <div class="col-6-xs">
+                <a
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="map-links__item btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    aria-label="Nyisd meg Google Maps-ben"
+                >
+                    Google Maps
+                </a>
+            </div>
+            <div class="col-6-xs">
+                <a
+                    href={wazeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="map-links__item btn btn--full-width-mobile btn--primary--outline mt-20px"
+                    aria-label="Nyisd meg a Waze-ben"
+                >
+                    Waze
+                </a>
+            </div>
+        </div>
+        <div class="contact-header row mb-40px">
+            <div class="col">
+                <h1 class="kapcsolat-title">{metadata.title}</h1>
+            </div>
+        </div>
+        <div class="row gap-1">
+            <div class="col-12-xs col-6-md">
+                <address>
+                    <h3 class="mb-0">Bandha Works Yoga Shala</h3>
+                    <div class="inline-flex-text">
+                        <p>Address:</p>
+                        <a
+                            href={googleMapsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="clr-brand-orange"
+                            aria-label="Nyisd meg Google Maps-ben"
+                        >
+                            <p>1027 Budapest, Frankel Leó út 18.</p>
+                        </a>
+                    </div>
+                </address>
+                <p class="clr-shades-lightGray mt-20px">
+                    <strong>
+                        The entrance is from the street front; you can come in through the brown door located to the
+                        left of the main entrance of the apartment building.
+                    </strong>
+                </p>
+                <p class="clr-shades-lightGray mt-20px">
+                    Parking zone code on the street: <strong>0201</strong>. The parking fee is: <strong>600 Ft</strong> per
+                    hour. Parking fees apply from <strong>8:30 AM to 10:00 PM</strong>, Monday to Friday.
+                </p>
 
-<style></style>
+                <Modal title="Where is our email address?" class="mt-20px">
+                    <p class="mt-20px">
+                        Security and data privacy are top priorities on our website. To avoid unwanted spam messages and
+                        phishing attempts, we have decided not to publish our email address.
+                    </p>
+                    <p class="mt-20px">
+                        Send us a message through the contact form available on the website. If we successfully receive
+                        your message, you will get an automated confirmation email.
+                    </p>
+                </Modal>
+                <div class="separator-horizontal mt-20px"></div>
+                <div class="hidden-mobile">
+                    <h3>Follow Us</h3>
+                    <SocialIcons align="left" class="mb-40px" />
+                </div>
+            </div>
+            <div class="col-12-xs col-6-md">
+                <h3>Send Us a Message</h3>
+                <ContactForm client:load />
+            </div>
+        </div>
+        <div class="hidden-desktop display-flex display-flex--direction-column align-items-center">
+            <div class="separator-horizontal-full mb-40px"></div>
+            <h3 class="mb-20px">Send Us a Message</h3>
+            <SocialIcons align="center" class="mb-40px" />
+        </div>
+    </div>
+</BaseLayout>

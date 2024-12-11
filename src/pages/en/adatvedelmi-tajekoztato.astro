@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/adatkezeles_mobil.jpeg';
+import desktopImage from '../../images/adatkezeles_desktop.jpeg';
+import adatvedelem from '../../data/adatvedelem.json';
+
+const pageTitle = 'PRIVACY POLICY';
+const adatkezelo = adatvedelem.adatkezelo;
+const tarhelyszolgaltato = adatvedelem.tarhelyszolgaltato;
+const futar = adatvedelem.futar;
+const datumModositas = adatvedelem.datumModositas;
+---
+
+<BaseLayout title={pageTitle}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px">
+            <p>
+                This <strong>(“Privacy Policy”)</strong> aims to define the data protection and data management principles
+                applied by the owner of the https://bandha.works website (“Website”) - as Data Controller - and to provide
+                information to the data subjects about the processing of their personal data.
+            </p>
+            <p class="mt-20px">
+                The provisions and content of this Policy are based on the General Data Protection Regulation of the
+                European Parliament and of the Council (EU) 2016/679 <strong>(“GDPR”)</strong>, as well as on Act CXII
+                of 2011 on the Right of Informational Self-Determination and Freedom of Information <strong>
+                    (“Info Act”)
+                </strong>.
+            </p>
+            <div>
+                <p class="mt-20px">
+                    <strong>
+                        <span>
+                            <u>Data Controller</u>
+                        </span>
+                    </strong>
+                </p>
+                <p class="mt-20px">
+                    <span>Name: {adatkezelo.nev}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Headquarters: {adatkezelo.szekhely}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Premises: {adatkezelo.telephely}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Company registration number: {adatkezelo.nyilvantartasiSzam}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Mailing address, complaint management: {adatkezelo.levelezes}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Email: {adatkezelo.email}</span>
+                </p>
+                <p class="mt-20px">
+                    <strong>
+                        <span>
+                            <u>Hosting Provider</u>
+                        </span>
+                    </strong>
+                </p>
+                <p class="mt-20px">
+                    <span>Name: {tarhelyszolgaltato.nev}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Mailing address: {tarhelyszolgaltato.levelezes}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Email: {tarhelyszolgaltato.email}</span>
+                </p>
+                <p class="mt-20px">
+                    <span>Phone: {tarhelyszolgaltato.telefon}</span>
+                </p>
+                <h1 class="mt-20px">I. Data Processing on the Website</h1>
+                <h3 class="mt-20px">1. Information on the Use of Cookies</h3>
+                <p class="mt-20px">
+                    <span>What is a cookie?</span>
+                </p>
+                <p class="mt-20px">
+                    The Data Controller uses so-called cookies when visiting the Website. A cookie is a package of
+                    information consisting of letters and numbers that our Website sends to your browser to save certain
+                    settings, facilitate the use of our Website, and help collect relevant statistical information about
+                    our visitors.
+                </p>
+                <p class="mt-20px">
+                    Some cookies do not contain personal information and are not suitable for identifying the individual
+                    user, while others may include such individual identifiers - a secret, randomly generated numeric
+                    sequence - that your device stores, making your identification possible. The operation time of each
+                    cookie is specified in the relevant description of the cookies.
+                </p>
+                <p class="mt-20px">
+                    <span>The legal background and basis of cookies:</span>
+                </p>
+                <p class="mt-20px">
+                    Basically, three types of cookies are distinguished: essential cookies for the operation of the
+                    Website, statistical cookies, and marketing cookies. The legal basis for processing is your consent
+                    under Article 6(1)(a) of the GDPR for statistical and marketing cookies, and the legitimate interest
+                    under Article 6(1)(f) of the GDPR for cookies necessary for the operation of the Website.
+                </p>
+                <h3 class="mt-20px">2. Contact</h3>
+                <p class="mt-20px">
+                    If you contact us, for example, by email or through the contact form about yoga school or yoga
+                    classes, the Data Controller provides a messaging option under the “Contact” menu on the Website,
+                    where the data subject must provide the personal data necessary for contact (name, email address).
+                    The name and email address are recorded electronically by filling out the respective panel, and by
+                    ticking the checkbox, the user accepts the Privacy Policy and consents to the Data Controller
+                    processing their name and email address for contact and messaging purposes, then clicking the send
+                    button.
+                </p>
+                <p class="mt-20px">
+                    <strong>Processed data</strong>
+                    <br /> The data you provide during the contact process (name, email address).
+                </p>
+                <p class="mt-20px">
+                    <strong>Duration of data processing</strong>
+                    <br />
+                    Data is processed only until the conclusion of the contact.
+                </p>
+                <p class="mt-20px">
+                    <strong>Legal basis for data processing</strong>
+                    <br />
+                    Your voluntary consent provided during the contact process. [Processing under Article 6(1)(a) of the
+                    GDPR]
+                </p>
+                ...
+            </div>
+        </div>
+    </div>
+</BaseLayout>
