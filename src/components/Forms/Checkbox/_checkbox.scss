@@ -43,6 +43,12 @@
     }
   }
 
+  &.red {
+    input[type='checkbox'] {
+      color: red;
+    }
+  }
+
   &.gray {
     input[type='checkbox'] {
       color: $color-shades-lightGray;

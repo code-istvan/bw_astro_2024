@@ -16,12 +16,12 @@ export const Checkbox = ({
   name,
   label,
   checked = false,
-  className,
+  className = 'orange', // Alapértelmezett osztály: orange
   onChange,
   required = false,
 }: CheckboxProps) => {
   return (
-    <div className={`custom-checkbox ${className || ''}`.trim()}>
+    <div className={`custom-checkbox ${className}`.trim()}>
       <input type="checkbox" id={id} name={name} checked={checked} onChange={onChange} required={required} />
       <label htmlFor={id}>
         {label && <p>{label}</p>} {/* p tag-ben jelenik meg a label */}

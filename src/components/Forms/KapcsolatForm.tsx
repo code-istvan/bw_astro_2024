@@ -7,14 +7,20 @@ import { actions } from 'astro:actions';
 export const KapcsolatForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [checkboxClass, setCheckboxClass] = useState('orange'); // Alapértelmezett osztály
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
 
+    if (!isChecked) {
+      setCheckboxClass('red'); // Ha nincs bejelölve, váltson "red"-re
+      setLoading(false);
+      return;
+    }
+
     const formData = new FormData(event.target as HTMLFormElement);
 
-    // Form adatok beolvasása
     const name = formData.get('name') as string | null;
     const email = formData.get('email') as string | null;
     const comment = formData.get('comments') as string | null;
@@ -25,18 +31,12 @@ export const KapcsolatForm = () => {
       return;
     }
 
-    // 1. Küldés Netlify felé
     try {
       await fetch('/', {
         method: 'POST',
         body: formData,
       });
-    } catch (error) {
-      console.error('Netlify form beküldés hiba:', error);
-    }
 
-    // 2. Egyedi e-mail küldés
-    try {
       const response = await actions.contact({ name, email, comment });
 
       if (response.data?.data?.ok) {
@@ -45,11 +45,17 @@ export const KapcsolatForm = () => {
         window.location.href = '/uzenetkuldes-sikertelen/';
       }
     } catch (error) {
-      console.error('Email küldési hiba:', error);
+      console.error('Hiba történt:', error);
       window.location.href = '/uzenetkuldes-sikertelen/';
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    setIsChecked(isChecked);
+    setCheckboxClass(isChecked ? 'orange' : 'red'); // Állapot szerinti osztály
   };
 
   return (
@@ -60,7 +66,6 @@ export const KapcsolatForm = () => {
       data-netlify-honeypot="bot-field"
       method="POST"
     >
-      {/* Netlify rejtett mező */}
       <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
       <div hidden>
         <input name="bot-field" />
@@ -92,35 +97,32 @@ export const KapcsolatForm = () => {
       <div className="row">
         <TextArea name="comments" placeholder="Üzenet" rows={5} required />
       </div>
-      <div className="row mt-20px">
-        <Checkbox
-          id="terms"
-          name="terms"
-          label={
-            <>
-              Megismertem és elfogadom az{' '}
-              <a
-                href="/adatvedelmi-tajekoztato/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-enhanced link-orange"
-              >
-                adatvédelmi tájékoztatót
-              </a>
-              , hozzájárulok nevem és email címem kezeléséhez.
-            </>
-          }
-          checked={isChecked}
-          onChange={(e) => setIsChecked(e.target.checked)}
-          className="orange"
-        />
-      </div>
+
+      {/* Checkbox */}
+      <Checkbox
+        id="terms"
+        name="terms"
+        label={
+          <>
+            Megismertem és elfogadom az{' '}
+            <a
+              href="/adatvedelmi-tajekoztato/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-enhanced link-orange"
+            >
+              adatvédelmi tájékoztatót
+            </a>
+            , hozzájárulok nevem és email címem kezeléséhez.
+          </>
+        }
+        checked={isChecked}
+        className={checkboxClass} // Dinamikus osztály
+        onChange={handleCheckboxChange}
+      />
+
       <div className="row mt-20px mb-40px">
-        <button
-          type="submit"
-          disabled={!isChecked || loading}
-          className="btn btn--full-width-mobile btn--secondary--solid"
-        >
+        <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
           {loading ? 'Küldés...' : 'Küldés'}
         </button>
       </div>
