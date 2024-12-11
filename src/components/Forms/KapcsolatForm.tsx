@@ -31,6 +31,16 @@ export const KapcsolatForm = ({ language = 'hu' }) => {
       return;
     }
 
+    // 1. Küldés Netlify felé
+    try {
+      await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+    } catch (error) {
+      console.error('Netlify form beküldés hiba:', error);
+    }
+
     try {
       const response = await actions.contact({ name, email, comment, language });
 
