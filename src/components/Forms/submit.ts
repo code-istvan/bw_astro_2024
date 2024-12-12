@@ -22,15 +22,15 @@ export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading
     return;
   }
 
-  // 1. Küldés Netlify felé
-  //   try {
-  //     await fetch('/', {
-  //       method: 'POST',
-  //       body: formData,
-  //     });
-  //   } catch (error) {
-  //     console.error('Netlify form beküldés hiba:', error);
-  //   }
+  //   1. Küldés Netlify felé
+  try {
+    await fetch('/', {
+      method: 'POST',
+      body: formData,
+    });
+  } catch (error) {
+    console.error('Netlify form beküldés hiba:', error);
+  }
 
   // 2. Email küldés
   try {

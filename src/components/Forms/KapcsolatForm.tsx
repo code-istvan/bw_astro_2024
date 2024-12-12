@@ -29,7 +29,6 @@ export const KapcsolatForm = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
-      action="/"
     >
       <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
       <input type="hidden" name="language" value="hu" /> {/* Nyelv rögzítése */}
