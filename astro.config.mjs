@@ -4,9 +4,6 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  // experimental: {
-  //   actions: true,
-  // },
   output: 'hybrid', //hibajavítás miatt kikommentelve
   adapter: netlify(), //hibajavítás miatt kikommentelve
   i18n: {

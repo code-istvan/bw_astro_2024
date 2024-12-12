@@ -23,14 +23,14 @@ export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading
   }
 
   // 1. Küldés Netlify felé
-  try {
-    await fetch('/', {
-      method: 'POST',
-      body: formData,
-    });
-  } catch (error) {
-    console.error('Netlify form beküldés hiba:', error);
-  }
+  //   try {
+  //     await fetch('/', {
+  //       method: 'POST',
+  //       body: formData,
+  //     });
+  //   } catch (error) {
+  //     console.error('Netlify form beküldés hiba:', error);
+  //   }
 
   // 2. Email küldés
   try {
@@ -48,9 +48,3 @@ export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading
     setLoading(false);
   }
 };
-
-// const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//   const isChecked = e.target.checked;
-//   setIsChecked(isChecked);
-//   setCheckboxClass(isChecked ? 'orange' : 'red'); // Állapot szerinti osztály
-// };
