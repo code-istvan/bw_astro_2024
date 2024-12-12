@@ -14,7 +14,7 @@ const emailTemplates = {
       <p>Az üzeneted tartalma:</p>
       <blockquote>${comment}</blockquote>
       <p>Csapatunk az elkövetkező munkanapokon - általában 24-48 órán belül - feldolgozza az üzeneted, hamarosan válaszolunk.</p>
-      <p>Namasté,<br>Bandha Works Shala csapata</p>
+      <p>Namasté,<br>Bandha Works Shala</p>
     `,
   },
   en: {
@@ -26,7 +26,7 @@ const emailTemplates = {
       <p>Your message:</p>
       <blockquote>${comment}</blockquote>
       <p>Our team will process your message within 1-2 business days and get back to you soon.</p>
-      <p>Namasté,<br>The Bandha Works Shala Team</p>
+      <p>Namasté,<br>The Bandha Works Shala</p>
     `,
   },
 };
