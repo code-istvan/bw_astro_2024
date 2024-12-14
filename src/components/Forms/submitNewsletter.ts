@@ -1,6 +1,11 @@
 import { actions } from 'astro:actions';
 
-export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading, setCheckboxClass, isChecked) => {
+export const submitNewsletter = async (
+  event: React.FormEvent<HTMLFormElement>,
+  setLoading,
+  setCheckboxClass,
+  isChecked
+) => {
   event.preventDefault();
   setLoading(true);
 
@@ -13,10 +18,9 @@ export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading
   const formData = new FormData(event.target as HTMLFormElement);
   const name = formData.get('name') as string | null;
   const email = formData.get('email') as string | null;
-  const comment = formData.get('comments') as string | null;
   const language = formData.get('language') as string | null;
 
-  if (!name || !email || !comment || !language) {
+  if (!name || !email || !language) {
     console.error('Hiányzó kötelező mezők.');
     setLoading(false);
     return;
@@ -38,7 +42,7 @@ export const submit = async (event: React.FormEvent<HTMLFormElement>, setLoading
 
   // 2. Email küldés
   try {
-    const response = await actions.contact({ name, email, comment, language });
+    const response = await actions.newsletter({ name, email, language });
 
     if (response.data?.data?.ok) {
       window.location.href = successPath;

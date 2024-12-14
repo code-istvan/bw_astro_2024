@@ -3,10 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/hirlevel_mobil.jpeg';
 import desktopImage from '../images/hirlevel_desktop.jpeg';
-import { NewsletterForm } from '../components/Forms/NewsletterForm.tsx';
+import { HirlevelForm } from '../components/Forms/HirlevelForm.tsx';
+// import { NewsletterForm } from '../components/Forms/NewsletterForm.tsx';
 // import SubscriptionForm from '../components/SubscriptionForm.jsx';
 
-const pageTitle = 'Hírlevel';
+export const prerender = false;
 
 const metadata = {
     title: 'FELÍRATKOZÁS HÍRLEVÉLRE',
@@ -30,8 +31,8 @@ const metadata = {
                     maximum egy hírlevelet küldünk. Harmadik fél számára nem adjuk ki a feliratkozók nevét és email
                     címét.
                 </p>
-
-                <NewsletterForm client:load />
+                <HirlevelForm client:load />
+                <!-- <NewsletterForm client:load /> -->
                 <!-- <SubscriptionForm client:only="react" /> -->
             </div>
         </div>
