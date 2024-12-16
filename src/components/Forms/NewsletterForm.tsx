@@ -1,40 +1,50 @@
 import React, { useState } from 'react';
 import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
+import { submitNewsletter } from './submitNewsletter';
 import { Patterns } from './patterns';
 
 export const NewsletterForm = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [checkboxClass, setCheckboxClass] = useState('orange'); // Alapértelmezett osztály
   const [isNameValid, setIsNameValid] = useState(true); // Név validáció állapota
   const [isEmailValid, setIsEmailValid] = useState(true); // Email validáció állapota
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Ellenőrizzük, hogy minden mező valid-e
-    if (!isNameValid || !isEmailValid || !isChecked) {
-      alert('Kérjük, javítsd ki a hibás mezőket, és fogadd el a feltételeket!');
+    if (!isNameValid || !isEmailValid) {
+      alert('Kérjük, javítsd ki a hibás mezőket!');
       return;
     }
 
-    // Valid form submission (Netlify kezeli a beküldést)
-    alert('Successfully subscribed to the newsletter!');
+    setLoading(true);
+    await submitNewsletter(event, setLoading, setCheckboxClass, isChecked);
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    setIsChecked(isChecked);
+    setCheckboxClass(isChecked ? 'orange' : 'red'); // Állapot szerinti osztály
   };
 
   return (
     <form
-      name="feliratkozas hirlevelre"
-      action="/feliratkozas-sikeres/"
-      method="post"
+      name="newsletter bandhaworks 2025"
+      onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
+      method="POST"
     >
-      <input type="hidden" name="form-name" value="feliratkozas hirlevelre" />
+      <input type="hidden" name="form-name" value="newsletter bandhaworks 2025" />
+      <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
       </div>
-      <div className="row gap-1 mt-20px mb-20px">
+
+      <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
           <Input
             id="name"
@@ -44,7 +54,6 @@ export const NewsletterForm = () => {
             pattern={Patterns.name} // Közös minta a patterns.ts-ből
             onValidate={(isValid) => setIsNameValid(isValid)} // Validációs callback
           />
-          {!isNameValid && <p className="error-text">Please enter a valid name!</p>}
         </div>
         <div className="col-12-xs col-6-md">
           <Input
@@ -55,40 +64,33 @@ export const NewsletterForm = () => {
             pattern={Patterns.email} // Közös minta a patterns.ts-ből
             onValidate={(isValid) => setIsEmailValid(isValid)} // Validációs callback
           />
-          {!isEmailValid && <p className="error-text">Please enter a valid email address!</p>}
         </div>
       </div>
-      <div className="row mt-20px">
-        <Checkbox
-          id="terms"
-          name="terms"
-          label={
-            <>
-              I have read and accept{' '}
-              <a
-                href="/en/adatvedelmi-tajekoztato/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-enhanced link-orange"
-              >
-                the privacy policy
-              </a>
-              , I consent to the processing of my name and email address.
-            </>
-          }
-          required
-          checked={isChecked}
-          onChange={(e) => setIsChecked(e.target.checked)}
-          className={isChecked ? 'orange' : 'red'} // Checkbox állapot szerinti szín
-        />
-      </div>
-      <div className="row mt-20px">
-        <button
-          type="submit"
-          disabled={!isNameValid || !isEmailValid || !isChecked} // Beküldés csak valid mezők esetén
-          className="btn btn--full-width-mobile btn--secondary--solid"
-        >
-          Subscribe
+
+      <Checkbox
+        id="terms"
+        name="terms"
+        label={
+          <>
+            I have read and accept the{' '}
+            <a
+              href="/en/adatvedelmi-tajekoztato/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-enhanced link-orange"
+            >
+              privacy policy
+            </a>
+            , and consent to the processing of my name and email address.
+          </>
+        }
+        checked={isChecked}
+        className={checkboxClass}
+        onChange={handleCheckboxChange}
+      />
+      <div className="row mt-20px mb-40px">
+        <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
+          {loading ? 'Küldés...' : 'Küldés'}
         </button>
       </div>
     </form>
