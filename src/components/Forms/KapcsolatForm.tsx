@@ -9,8 +9,8 @@ export const KapcsolatForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [loading, setLoading] = useState(false);
   const [checkboxClass, setCheckboxClass] = useState('orange');
-  const [isNameValid, setIsNameValid] = useState(true); // Név validáció állapota
-  const [isEmailValid, setIsEmailValid] = useState(true); // Email validáció állapota
+  const [isNameValid, setIsNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
