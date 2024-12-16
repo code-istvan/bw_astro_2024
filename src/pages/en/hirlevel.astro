@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/hirlevel_mobil.jpeg';
+import desktopImage from '../../images/hirlevel_desktop.jpeg';
+// import { HirlevelForm } from '../../components/Forms/HirlevelForm.tsx';
+import { NewsletterForm } from '../../components/Forms/NewsletterForm.tsx';
+// import SubscriptionForm from '../components/SubscriptionForm.jsx';
+
+export const prerender = false;
+
+const metadata = {
+    title: 'NEWSLETTER SUBSCRIPTION',
+    description: 'On this page, you can subscribe to our newsletter.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px mb-40px">
+            <div class="col">
+                <p>
+                    Subscribe to our newsletter to be the first to hear about updates regarding our yoga school. We send
+                    a maximum of one newsletter per month. We do not share the names and email addresses of our
+                    subscribers with third parties.
+                </p>
+                <!-- <HirlevelForm client:load /> -->
+                <NewsletterForm client:load />
+                <!-- <SubscriptionForm client:only="react" /> -->
+            </div>
+        </div>
+    </div>
+
+    <style></style>
+</BaseLayout>
