@@ -20,7 +20,7 @@
   font-weight: 600;
   background: transparent;
   color: $color-shades-lightGray;
-  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
+  // box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
 
   &:focus {
     box-shadow: 0px 0px 0px 2px $color-brand-orange inset;
@@ -29,6 +29,14 @@
   // &:invalid {
   //   box-shadow: 0px 0px 0px 2px red inset;
   // }
+}
+
+.custom-input.normal {
+  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
+}
+
+.custom-input.red {
+  box-shadow: 0px 0px 0px 2px red inset;
 }
 
 // /* :hover - Egérrel való lebegés */

@@ -1,25 +1,33 @@
 import React, { useState } from 'react';
+import { Input } from './Input/Input';
 import { TextArea } from './TextArea/TextArea';
 import { Checkbox } from './Checkbox/CheckBox';
-import { Input } from './Input/Input';
 import { submit } from './submit';
 
 export const KapcsolatForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [checkboxClass, setCheckboxClass] = useState('orange'); // Alapértelmezett osztály
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setLoading(true);
-
-    await submit(event, setLoading, setCheckboxClass, isChecked);
-  };
+  const [checkboxClass, setCheckboxClass] = useState('orange');
+  const [isNameValid, setIsNameValid] = useState(true); // Név validáció állapota
+  const [isEmailValid, setIsEmailValid] = useState(true); // Email validáció állapota
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
     setIsChecked(isChecked);
-    setCheckboxClass(isChecked ? 'orange' : 'red'); // Állapot szerinti osztály
+    setCheckboxClass(isChecked ? 'orange' : 'red');
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Ellenőrizzük, hogy minden mező valid-e
+    if (!isNameValid || !isEmailValid) {
+      alert('Kérjük, javítsd ki a hibás mezőket!');
+      return;
+    }
+
+    setLoading(true);
+    await submit(event, setLoading, setCheckboxClass, isChecked);
   };
 
   return (
@@ -31,11 +39,11 @@ export const KapcsolatForm = () => {
       method="POST"
     >
       <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
-      <input type="hidden" name="language" value="hu" /> {/* Nyelv rögzítése */}
+      <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
       </div>
-      {/* Mezők */}
+
       <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
           <Input
@@ -44,7 +52,7 @@ export const KapcsolatForm = () => {
             name="name"
             placeholder="Név"
             pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
-            required
+            onValidate={(isValid) => setIsNameValid(isValid)} // Validációs callback
           />
         </div>
         <div className="col-12-xs col-6-md">
@@ -53,15 +61,16 @@ export const KapcsolatForm = () => {
             type="email"
             name="email"
             placeholder="Email"
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" // Email regex minta
+            onValidate={(isValid) => setIsEmailValid(isValid)} // Validációs callback
           />
         </div>
       </div>
+
       <div className="row">
         <TextArea name="comments" placeholder="Üzenet" rows={5} required />
       </div>
-      {/* Checkbox */}
+
       <Checkbox
         id="terms"
         name="terms"
@@ -91,3 +100,98 @@ export const KapcsolatForm = () => {
     </form>
   );
 };
+
+// import React, { useState } from 'react';
+// import { Input } from './Input/Input';
+// import { TextArea } from './TextArea/TextArea';
+// import { Checkbox } from './Checkbox/CheckBox';
+// import { submit } from './submit';
+
+// export const KapcsolatForm = () => {
+//   const [isChecked, setIsChecked] = useState(false);
+//   const [loading, setLoading] = useState(false);
+//   const [checkboxClass, setCheckboxClass] = useState('orange');
+//   const [isNameValid, setIsNameValid] = useState(true); // Név validáció állapota
+
+//   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     const isChecked = e.target.checked;
+//     setIsChecked(isChecked);
+//     setCheckboxClass(isChecked ? 'orange' : 'red');
+//   };
+
+//   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+//     event.preventDefault();
+
+//     // Ellenőrizzük, hogy minden mező valid-e
+//     if (!isNameValid) {
+//       alert('A név mező érvénytelen!');
+//       return;
+//     }
+
+//     setLoading(true);
+//     await submit(event, setLoading, setCheckboxClass, isChecked);
+//   };
+
+//   return (
+//     <form
+//       name="contact bandhaworks 2025"
+//       onSubmit={handleSubmit}
+//       data-netlify="true"
+//       data-netlify-honeypot="bot-field"
+//       method="POST"
+//     >
+//       <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
+//       <input type="hidden" name="language" value="hu" />
+//       <div hidden>
+//         <input name="bot-field" />
+//       </div>
+
+//       <div className="row gap-1 mb-10px">
+//         <div className="col-12-xs col-6-md">
+//           <Input
+//             id="name"
+//             type="text"
+//             name="name"
+//             placeholder="Név"
+//             pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+$"
+//             onValidate={(isValid) => setIsNameValid(isValid)} // Validációs callback
+//           />
+//         </div>
+//         <div className="col-12-xs col-6-md">
+//           <Input id="email" type="email" name="email" placeholder="Email" required />
+//         </div>
+//       </div>
+
+//       <div className="row">
+//         <TextArea name="comments" placeholder="Üzenet" rows={5} required />
+//       </div>
+
+//       <Checkbox
+//         id="terms"
+//         name="terms"
+//         label={
+//           <>
+//             Megismertem és elfogadom az{' '}
+//             <a
+//               href="/adatvedelmi-tajekoztato/"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="link-enhanced link-orange"
+//             >
+//               adatvédelmi tájékoztatót
+//             </a>
+//             , hozzájárulok nevem és email címem kezeléséhez.
+//           </>
+//         }
+//         checked={isChecked}
+//         className={checkboxClass}
+//         onChange={handleCheckboxChange}
+//       />
+//       <div className="row mt-20px mb-40px">
+//         <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
+//           {loading ? 'Küldés...' : 'Küldés'}
+//         </button>
+//       </div>
+//     </form>
+//   );
+// };
