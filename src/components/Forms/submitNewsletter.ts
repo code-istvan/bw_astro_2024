@@ -27,7 +27,7 @@ export const submitNewsletter = async (
   }
 
   // Meghatározza az átirányítási útvonalakat a `language` alapján
-  const successPath = language === 'en' ? '/en/uzenet-elkuldve/' : '/uzenet-elkuldve/';
+  const successPath = language === 'en' ? '/en/feliratkozas-sikeres/' : '/feliratkozas-sikeres/';
   const errorPath = language === 'en' ? '/en/uzenetkuldes-sikertelen/' : '/uzenetkuldes-sikertelen/';
 
   // 1. Küldés Netlify felé

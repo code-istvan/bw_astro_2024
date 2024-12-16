@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/message-sent_mobil.jpeg';
+import desktopImage from '../../images/message-sent_desktop.jpeg';
+
+const metadata = {
+    title: 'SUCCESSFUL SUBSCRIPTION',
+    description: 'On this page, you will find the confirmation of your newsletter subscription.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px">We are glad you joined our community!</h3>
+                    <p>
+                        From now on, you will be the first to receive updates about our latest news, programs, and new
+                        blog posts.
+                    </p>
+                    <p class="mt-20px">We handle your data confidentially and will not share it with third parties!</p>
+                    <p class="mt-20px"><strong>Have a great day!</strong></p>
+                    <p class="mt-20px">The Bandha Works Team</p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Not receiving the newsletters?</h3>
+                <p class="mt-20px">
+                    Sometimes it's worth checking the "Promotions" or "Spam" folder to make sure you don't miss
+                    anything. We usually send one newsletter per month to keep you updated on our latest news and
+                    programs. If you have any questions, feel free to contact us!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Homepage">
+                    Back to homepage
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
