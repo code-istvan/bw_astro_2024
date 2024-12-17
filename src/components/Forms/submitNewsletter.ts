@@ -27,8 +27,8 @@ export const submitNewsletter = async (
   }
 
   // Meghatározza az átirányítási útvonalakat a `language` alapján
-  const successPath = language === 'en' ? '/feliratkozas-sikeres/' : '/en/feliratkozas-sikeres/';
-  const errorPath = language === 'en' ? '/feliratkozas-sikertelen/' : '/en/feliratkozas-sikertelen/';
+  const successPath = language === 'en' ? '/en/feliratkozas-sikeres/' : '/feliratkozas-sikeres/';
+  const errorPath = language === 'en' ? '/en/feliratkozas-sikertelen/' : '/feliratkozas-sikertelen/';
 
   // 1. Küldés Netlify felé
   try {
