@@ -39,7 +39,7 @@ export const NewsletterForm = () => {
       method="POST"
     >
       <input type="hidden" name="form-name" value="newsletter bandhaworks 2025" />
-      <input type="hidden" name="language" value="hu" />
+      <input type="hidden" name="language" value="en" />
       <div hidden>
         <input name="bot-field" />
       </div>
