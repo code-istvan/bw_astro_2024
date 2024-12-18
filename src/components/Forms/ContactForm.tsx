@@ -23,7 +23,7 @@ export const ContactForm = () => {
 
     // Check if all fields are valid
     if (!isNameValid || !isEmailValid) {
-      alert('Please correct the errors in the form.');
+      alert('Please correct the invalid field!');
       return;
     }
 

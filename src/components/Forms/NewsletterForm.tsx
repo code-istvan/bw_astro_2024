@@ -16,7 +16,7 @@ export const NewsletterForm = () => {
 
     // Ellenőrizzük, hogy minden mező valid-e
     if (!isNameValid || !isEmailValid) {
-      alert('Kérjük, javítsd ki a hibás mezőket!');
+      alert('Please correct the invalid field!');
       return;
     }
 
@@ -90,7 +90,7 @@ export const NewsletterForm = () => {
       />
       <div className="row mt-20px mb-40px">
         <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
-          {loading ? 'Küldés...' : 'Küldés'}
+          {loading ? 'Send...' : 'Send'}
         </button>
       </div>
     </form>
