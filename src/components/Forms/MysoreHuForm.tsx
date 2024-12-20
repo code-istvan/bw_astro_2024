@@ -4,7 +4,7 @@ import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { submitMysore } from './submitMysore';
 import { Patterns } from './patterns.ts';
-// import { MysoreHuCustomSelect } from './MysoreHuCustomSelect.tsx';
+import { MysoreHuCustomSelect } from './MysoreHuCustomSelect.tsx';
 
 export const MysoreHuForm = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -112,13 +112,13 @@ export const MysoreHuForm = () => {
           />
         </div>
       </div>
-      {/* <div className="row mb-20px">
+      <div className="row mb-20px">
         <MysoreHuCustomSelect
           options={['Teljesen kezdő vagyok', 'Astangáztam már', 'Van Mysore-gyakorlás tapasztalatom']}
           onChange={handleSelectChange}
           placeholder="Válassz tapasztalati szintet"
         />
-      </div> */}
+      </div>
       <div className="row">
         <TextArea
           name="comments"
