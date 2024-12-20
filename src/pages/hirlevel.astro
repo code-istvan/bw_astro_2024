@@ -4,8 +4,6 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/hirlevel_mobil.jpeg';
 import desktopImage from '../images/hirlevel_desktop.jpeg';
 import { HirlevelForm } from '../components/Forms/HirlevelForm.tsx';
-// import { NewsletterForm } from '../components/Forms/NewsletterForm.tsx';
-// import SubscriptionForm from '../components/SubscriptionForm.jsx';
 
 export const prerender = false;
 
@@ -32,8 +30,6 @@ const metadata = {
                     címét.
                 </p>
                 <HirlevelForm client:load />
-                <!-- <NewsletterForm client:load /> -->
-                <!-- <SubscriptionForm client:only="react" /> -->
             </div>
         </div>
     </div>

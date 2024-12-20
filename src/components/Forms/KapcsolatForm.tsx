@@ -23,7 +23,7 @@ export const KapcsolatForm = () => {
 
     // Ellenőrizzük, hogy minden mező valid-e
     if (!isNameValid || !isEmailValid) {
-      alert('Kérjük, javítsd ki a hibás mezőket!');
+      alert('Kérjük, javítsd ki a hibás mezőke!');
       return;
     }
 

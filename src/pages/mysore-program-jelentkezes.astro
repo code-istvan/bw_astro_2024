@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/mysore_mobil.jpg';
+import desktopImage from '../images/mysore_desktop.jpg';
+import { MysoreHuForm } from '../components/Forms/MysoreHuForm';
+
+export const prerender = false;
+
+const metadata = {
+    title: 'MYSORE-PROGRAM JELENTKEZÉS',
+    description:
+        'Itt tudsz jelentkezni az astanga mysore programra. A mysore program egyéni gyakorlás, amelyet a tanár egyénileg segít, támogat és fejleszt. A mysore program a legjobb módja annak, hogy megtanuld az astanga jóga gyakorlását.',
+};
+---
+
+<BaseLayout title={metadata.title} image={desktopImage} description={metadata.description}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+    <div class="container page-content">
+        <div class="row mt-40px mb-20px"><h3>JELENTKEZÉSI LAP</h3></div>
+        <MysoreHuForm client:load />
+    </div>
+</BaseLayout>

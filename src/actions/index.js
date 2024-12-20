@@ -5,6 +5,8 @@ import { kapcsolatEmailTemplate } from './templates/kapcsolatEmailTemplate';
 import { contactEmailTemplate } from './templates/contactEmailTemplate';
 import { hirlevelEmailTemplate } from './templates/hirlevelEmailTemplate';
 import { newsletterEmailTemplate } from './templates/newsletterEmailTemplate';
+import { mysoreHuEmailTemplate } from './templates/mysoreHuEmailTemplate';
+import { mysoreEnEmailTemplate } from './templates/mysoreEnEmailTemplate';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
@@ -16,6 +18,11 @@ const emailTemplates = {
 const newsEmailTemplates = {
   hu: hirlevelEmailTemplate,
   en: newsletterEmailTemplate,
+};
+
+const mysoreEmailTemplates = {
+  hu: mysoreHuEmailTemplate,
+  en: mysoreEnEmailTemplate,
 };
 
 export const server = {
@@ -36,6 +43,43 @@ export const server = {
           to: email,
           subject: emailTemplate.subject,
           html: emailTemplate.content(name, comment),
+        });
+
+        if (error) {
+          throw new Error(error.message);
+        }
+
+        return { data: { ok: true } };
+      } catch (error) {
+        console.error('Email küldési hiba:', error);
+        return { data: { ok: false } };
+      }
+    },
+  }),
+
+  //MysoreForm
+  mysoreform: defineAction({
+    input: z.object({
+      familyName: z.string(),
+      surName: z.string(),
+      email: z.string().email(),
+      comment: z.string(),
+      experienceLevel: z.string(),
+      language: z.string().default('hu').optional(),
+    }),
+    accept: 'json',
+    handler: async ({ familyName, surName, email, comment, experienceLevel, language = 'hu' }) => {
+      try {
+        const mysoreEmailTemplate = mysoreEmailTemplates[language] || mysoreEmailTemplates.hu;
+
+        // Kombinált név a teljes névhez
+        const fullName = `${familyName} ${surName}`;
+
+        const { data, error } = await resend.emails.send({
+          from: 'Bandha Works Shala <shala@bandha.works>',
+          to: email,
+          subject: mysoreEmailTemplate.subject,
+          html: mysoreEmailTemplate.content(fullName, comment, experienceLevel),
         });
 
         if (error) {
