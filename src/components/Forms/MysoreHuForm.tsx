@@ -4,7 +4,7 @@ import { Checkbox } from './Checkbox/CheckBox';
 import { Input } from './Input/Input';
 import { submitMysore } from './submitMysore';
 import { Patterns } from './patterns.ts';
-import { MysoreHuCustomSelect } from './MysoreHuCustomSelect.tsx';
+// import { MysoreHuCustomSelect } from './MysoreHuCustomSelect.tsx';
 
 export const MysoreHuForm = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -69,9 +69,9 @@ export const MysoreHuForm = () => {
       <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
           <Input
-            id="familyname"
+            id="family"
             type="text"
-            name="familyname"
+            name="family"
             placeholder="Családi név"
             pattern={Patterns.name}
             onValidate={(isValid) => setIsFamilyNameValid(isValid)}
@@ -79,9 +79,9 @@ export const MysoreHuForm = () => {
         </div>
         <div className="col-12-xs col-6-md">
           <Input
-            id="surnamename"
+            id="sur"
             type="text"
-            name="surnamename"
+            name="sur"
             placeholder="Utónév"
             pattern={Patterns.name}
             onValidate={(isValid) => setIsSurNameValid(isValid)}
@@ -112,13 +112,13 @@ export const MysoreHuForm = () => {
           />
         </div>
       </div>
-      <div className="row mb-20px">
+      {/* <div className="row mb-20px">
         <MysoreHuCustomSelect
           options={['Teljesen kezdő vagyok', 'Astangáztam már', 'Van Mysore-gyakorlás tapasztalatom']}
           onChange={handleSelectChange}
           placeholder="Válassz tapasztalati szintet"
         />
-      </div>
+      </div> */}
       <div className="row">
         <TextArea
           name="comments"

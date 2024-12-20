@@ -7,7 +7,7 @@ export const submitMysore = async (
   isChecked: boolean,
   experienceLevel: string
 ) => {
-  // event.preventDefault();
+  event.preventDefault();
   setLoading(true);
 
   // Ellenőrizd, hogy a checkbox be van-e jelölve
@@ -25,8 +25,13 @@ export const submitMysore = async (
   }
 
   const formData = new FormData(event.target as HTMLFormElement);
-  const familyName = formData.get('familyname') as string | null;
-  const surName = formData.get('surnamename') as string | null;
+
+  for (let [key, value] of formData.entries()) {
+    console.log(`${key}: ${value}`);
+  }
+
+  const familyName = formData.get('name') as string | null;
+  const surName = formData.get('name') as string | null;
   const email = formData.get('email') as string | null;
   const email2 = formData.get('email2') as string | null;
   const comment = formData.get('comments') as string | null;
@@ -52,14 +57,14 @@ export const submitMysore = async (
   const errorPath = language === 'en' ? '/en/uzenetkuldes-sikertelen/' : '/uzenetkuldes-sikertelen/';
 
   // 1. Küldés Netlify felé
-  // try {
-  //   await fetch('/', {
-  //     method: 'POST',
-  //     body: formData,
-  //   });
-  // } catch (error) {
-  //   console.error('Netlify form beküldés hiba:', error);
-  // }
+  try {
+    await fetch('/', {
+      method: 'POST',
+      body: formData,
+    });
+  } catch (error) {
+    console.error('Netlify form beküldés hiba:', error);
+  }
 
   // 2. Email küldés
   try {
