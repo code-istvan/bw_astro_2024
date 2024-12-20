@@ -30,8 +30,8 @@ export const submitMysore = async (
     console.log(`${key}: ${value}`);
   }
 
-  const familyName = formData.get('name') as string | null;
-  const surName = formData.get('name') as string | null;
+  const familyName = formData.get('family') as string | null;
+  const surName = formData.get('sur') as string | null;
   const email = formData.get('email') as string | null;
   const email2 = formData.get('email2') as string | null;
   const comment = formData.get('comments') as string | null;
