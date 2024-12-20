@@ -3,7 +3,7 @@ import './_input.scss';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   type: string;
-  name?: string;
+  name: string;
   placeholder: string;
   id?: string;
   className?: string;
