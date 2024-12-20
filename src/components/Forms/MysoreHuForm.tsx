@@ -54,8 +54,14 @@ export const MysoreHuForm = () => {
   };
 
   return (
-    <form name="mysore2025" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
-      <input type="hidden" name="form-name" value="mysore2025" />
+    <form
+      name="mysore bandhaworks"
+      onSubmit={handleSubmit}
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      method="POST"
+    >
+      <input type="hidden" name="form-name" value="mysore bandhaworks" />
       <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
