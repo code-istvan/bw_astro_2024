@@ -7,7 +7,7 @@ export const submitMysore = async (
   isChecked: boolean,
   experienceLevel: string
 ) => {
-  event.preventDefault();
+  // event.preventDefault();
   setLoading(true);
 
   // Ellenőrizd, hogy a checkbox be van-e jelölve
@@ -52,14 +52,14 @@ export const submitMysore = async (
   const errorPath = language === 'en' ? '/en/uzenetkuldes-sikertelen/' : '/uzenetkuldes-sikertelen/';
 
   // 1. Küldés Netlify felé
-  try {
-    await fetch('/', {
-      method: 'POST',
-      body: formData,
-    });
-  } catch (error) {
-    console.error('Netlify form beküldés hiba:', error);
-  }
+  // try {
+  //   await fetch('/', {
+  //     method: 'POST',
+  //     body: formData,
+  //   });
+  // } catch (error) {
+  //   console.error('Netlify form beküldés hiba:', error);
+  // }
 
   // 2. Email küldés
   try {
