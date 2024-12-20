@@ -55,13 +55,13 @@ export const MysoreHuForm = () => {
 
   return (
     <form
-      name="mysore program 2025"
+      name="mysore bandhaworks"
       onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
     >
-      <input type="hidden" name="form-name" value="mysore program 2025" />
+      <input type="hidden" name="form-name" value="mysore bandhaworks" />
       <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
@@ -134,7 +134,7 @@ export const MysoreHuForm = () => {
           <>
             Megismertem és elfogadom az{' '}
             <a
-              href="/en/privacy-policy/"
+              href="/adatvedelmi-tajekoztato/"
               target="_blank"
               rel="noopener noreferrer"
               className="link-enhanced link-orange"
