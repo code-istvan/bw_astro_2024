@@ -62,7 +62,7 @@ export const MysoreHuForm = () => {
       method="POST"
     >
       <input type="hidden" name="form-name" value="mysore program jelenetkezes" />
-      <input type="hidden" name="language" value="h" />
+      <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
       </div>
