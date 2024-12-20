@@ -77,9 +77,9 @@ export const submitMysore = async (
     });
 
     if (response.data?.data?.ok) {
-      window.location.href = successPath;
+      // window.location.href = successPath;
     } else {
-      window.location.href = errorPath;
+      // window.location.href = errorPath;
     }
   } catch (error) {
     console.error('Hiba történt:', error);
