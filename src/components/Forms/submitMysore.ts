@@ -26,32 +26,6 @@ export const submitMysore = async (
 
   const formData = new FormData(event.target as HTMLFormElement);
 
-  for (let [key, value] of formData.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-
-  // Debug logging
-  console.log('Form data before Netlify submission:');
-  for (let [key, value] of formData.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-
-  // Explicit form data creation for Netlify
-  const netlifyFormData = new FormData();
-  netlifyFormData.append('form-name', 'mysore-bandhaworks');
-  netlifyFormData.append('family', formData.get('family') as string);
-  netlifyFormData.append('sur', formData.get('sur') as string);
-  netlifyFormData.append('email', formData.get('email') as string);
-  netlifyFormData.append('email2', formData.get('email2') as string);
-  netlifyFormData.append('experience', formData.get('experience') as string);
-  netlifyFormData.append('language', formData.get('language') as string);
-  netlifyFormData.append('experienceLevel', experienceLevel);
-
-  console.log('Netlify form data prepared:');
-  for (let [key, value] of netlifyFormData.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-
   const familyName = formData.get('family') as string | null;
   const surName = formData.get('sur') as string | null;
   const email = formData.get('email') as string | null;
