@@ -25,6 +25,9 @@ export const submitMysore = async (
   }
 
   const formData = new FormData(event.target as HTMLFormElement);
+  for (const [key, value] of formData.entries()) {
+    console.log(`${key}: ${value}`);
+  }
 
   const familyName = formData.get('family') as string | null;
   const surName = formData.get('sur') as string | null;

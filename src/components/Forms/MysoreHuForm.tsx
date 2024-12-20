@@ -67,10 +67,7 @@ export const MysoreHuForm = () => {
         <input name="bot-field" />
       </div>
       <div className="row gap-1 mb-10px">
-        <input type="text" name="family" placeholder="Családi név" />
-        <input type="text" name="sur" placeholder="Utónév" />
-
-        {/* <div className="col-12-xs col-6-md">
+        <div className="col-12-xs col-6-md">
           <Input
             id="family"
             type="text"
@@ -89,7 +86,7 @@ export const MysoreHuForm = () => {
             pattern={Patterns.name}
             onValidate={(isValid) => setIsSurNameValid(isValid)}
           />
-        </div> */}
+        </div>
       </div>
       <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
