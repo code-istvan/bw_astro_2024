@@ -121,7 +121,7 @@ export const MysoreHuForm = () => {
       </div>
       <div className="row">
         <TextArea
-          name="comments"
+          name="experience"
           placeholder="Ha már van tapasztalatod az astanga jógában, kérlek írd meg, mióta és milyen rendszerességgel gyakorolsz. Kik voltak eddigi tanáraid, és mennyi ideig tanultál tőlük? Rendelkezel-e tapasztalattal Mysore-stílusú gyakorlásban? Képes vagy-e önállóan, külső segítség nélkül gyakorolni?"
           rows={5}
           required

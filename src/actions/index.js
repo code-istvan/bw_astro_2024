@@ -63,12 +63,12 @@ export const server = {
       familyName: z.string(),
       surName: z.string(),
       email: z.string().email(),
-      comment: z.string(),
+      experience: z.string(),
       experienceLevel: z.string(),
       language: z.string().default('hu').optional(),
     }),
     accept: 'json',
-    handler: async ({ familyName, surName, email, comment, experienceLevel, language = 'hu' }) => {
+    handler: async ({ familyName, surName, email, experience, experienceLevel, language = 'hu' }) => {
       try {
         const mysoreEmailTemplate = mysoreEmailTemplates[language] || mysoreEmailTemplates.hu;
 
@@ -79,7 +79,7 @@ export const server = {
           from: 'Bandha Works Shala <shala@bandha.works>',
           to: email,
           subject: mysoreEmailTemplate.subject,
-          html: mysoreEmailTemplate.content(fullName, comment, experienceLevel),
+          html: mysoreEmailTemplate.content(fullName, experience, experienceLevel),
         });
 
         if (error) {

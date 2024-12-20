@@ -34,10 +34,10 @@ export const submitMysore = async (
   const surName = formData.get('sur') as string | null;
   const email = formData.get('email') as string | null;
   const email2 = formData.get('email2') as string | null;
-  const comment = formData.get('comments') as string | null;
+  const experience = formData.get('experience') as string | null;
   const language = formData.get('language') as string | null;
 
-  if (!familyName || !surName || !email || !email2 || !comment || !language) {
+  if (!familyName || !surName || !email || !email2 || !experience || !language) {
     console.error('Hiányzó kötelező mezők.');
     setLoading(false);
     return;
@@ -72,8 +72,8 @@ export const submitMysore = async (
       familyName,
       surName,
       email,
-      comment,
       experienceLevel,
+      experience,
       language,
     });
 
