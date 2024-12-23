@@ -1,0 +1,36 @@
+---
+/* Alap statikus kapcsolat form Netlify form detectionhöz */
+---
+
+<form name="test-kapcsolat-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+    <input type="hidden" name="form-name" value="test-kapcsolat-form" />
+    <input type="hidden" name="language" value="hu" />
+
+    <!-- Bot mező Netlify spam védelemhez -->
+    <div hidden>
+        <input name="bot-field" />
+    </div>
+
+    <!-- Név mező -->
+    <div class="row gap-1 mb-10px">
+        <label for="name">Név:</label>
+        <input id="name" type="text" name="name" placeholder="Név" required />
+    </div>
+
+    <!-- Email mező -->
+    <div class="row gap-1 mb-10px">
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Email" required />
+    </div>
+
+    <!-- Üzenet mező -->
+    <div class="row gap-1 mb-10px">
+        <label for="comments">Üzenet:</label>
+        <textarea id="comments" name="comments" placeholder="Üzenet" rows={5} required></textarea>
+    </div>
+
+    <!-- Beküldés gomb -->
+    <div class="row mt-20px mb-40px">
+        <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
+    </div>
+</form>

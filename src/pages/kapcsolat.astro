@@ -4,7 +4,7 @@ import GoogleMap from '../components/GoogleMap/GoogleMap';
 import Modal from '../components/Modal/Modal.astro';
 import contactMapImage from '../images/contact_map.jpg';
 // import { KapcsolatForm } from '../components/Forms/KapcsolatForm';
-import { TestKapcsolatForm } from '../components/Forms/TestKapcsolatForm';
+import KapcsolatForm from '../components/Forms/KapcsolatForm.astro';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
 import '../sass/pages/_kapcsolat.scss';
 
@@ -98,7 +98,7 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
             </div>
             <div class="col-12-xs col-6-md">
                 <h3>Üzenj nekünk</h3>
-                <TestKapcsolatForm client:load />
+                <KapcsolatForm />
                 <!-- <KapcsolatForm client:load /> -->
             </div>
         </div>
