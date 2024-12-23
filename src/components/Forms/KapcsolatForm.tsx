@@ -33,13 +33,13 @@ export const KapcsolatForm = () => {
 
   return (
     <form
-      name="contact bandhaworks 2025"
+      name="kapcsolat bandhaworks 2025"
       onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
     >
-      <input type="hidden" name="form-name" value="contact bandhaworks 2025" />
+      <input type="hidden" name="form-name" value="kapcsolat bandhaworks 2025" />
       <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
