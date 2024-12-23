@@ -34,7 +34,7 @@ export const KapcsolatForm = () => {
   return (
     <form
       name="kapcsoalt-form"
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
