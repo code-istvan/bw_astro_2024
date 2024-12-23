@@ -21,7 +21,7 @@ export const KapcsolatForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Ellenőrizzük, hogy minden mező valid-e
+    // Ellenőrizzük, hogy minden mező valid--e
     if (!isNameValid || !isEmailValid) {
       alert('Kérjük, javítsd ki a hibás mezőke!');
       return;
