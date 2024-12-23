@@ -61,10 +61,10 @@ export const submitMysore = async (
   try {
     console.log('📤 Netlify form beküldése...');
 
-    // await fetch('/', {
-    //   method: 'POST',
-    //   body: formData,
-    // });
+    await fetch('/', {
+      method: 'POST',
+      body: formData,
+    });
   } catch (error) {
     console.error('Netlify form beküldés hiba:', error);
   }
