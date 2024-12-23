@@ -29,29 +29,54 @@ export const MysoreHuForm = () => {
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    // event.preventDefault(); // Ezt kommenteld ki
+    setLoading(true);
 
-    // Ellenőrizzük, hogy minden mező valid-e
-    if (!isFamilyNameValid || !isSurNameValid || !isEmailValid || !isEmail2Valid) {
+    if (!isFamilyNameValid || !isEmailValid || !isEmail2Valid) {
       alert('Kérjük, javítsd ki a hibás mezőket!');
+      setLoading(false);
       return;
     }
 
-    // Ellenőrizzük, hogy a két email mező egyezik-e
     if (emailValue !== email2Value) {
       alert('A megadott két email cím nem egyezik!');
+      setLoading(false);
       return;
     }
 
-    // Ellenőrizzük, hogy a tapasztalati szint ki van-e választva
     if (!experienceLevel) {
       alert('Kérjük, válassz tapasztalati szintet!');
+      setLoading(false);
       return;
     }
 
-    setLoading(true);
-    await submitMysore(event, setLoading, setCheckboxClass, isChecked, experienceLevel);
+    // A formot hagyd natívan elküldeni
   };
+
+  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+
+  //   // Ellenőrizzük, hogy minden mező valid-e
+  //   if (!isFamilyNameValid || !isSurNameValid || !isEmailValid || !isEmail2Valid) {
+  //     alert('Kérjük, javítsd ki a hibás mezőket!');
+  //     return;
+  //   }
+
+  //   // Ellenőrizzük, hogy a két email mező egyezik-e
+  //   if (emailValue !== email2Value) {
+  //     alert('A megadott két email cím nem egyezik!');
+  //     return;
+  //   }
+
+  //   // Ellenőrizzük, hogy a tapasztalati szint ki van-e választva
+  //   if (!experienceLevel) {
+  //     alert('Kérjük, válassz tapasztalati szintet!');
+  //     return;
+  //   }
+
+  //   setLoading(true);
+  //   await submitMysore(event, setLoading, setCheckboxClass, isChecked, experienceLevel);
+  // };
 
   return (
     <form
