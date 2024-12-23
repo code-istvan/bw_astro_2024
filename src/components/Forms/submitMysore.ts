@@ -1,4 +1,4 @@
-// import { actions } from 'astro:actions';
+import { actions } from 'astro:actions';
 
 export const submitMysore = async (
   event: React.FormEvent<HTMLFormElement>,
@@ -89,4 +89,7 @@ export const submitMysore = async (
   // } finally {
   //   setLoading(false);
   // }
+
+  // Debug utan torolni
+  setLoading(false);
 };
