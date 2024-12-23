@@ -32,13 +32,13 @@ export const NewsletterForm = () => {
 
   return (
     <form
-      name="newsletter bandhaworks 2025"
+      name="newsletter-form"
       onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       method="POST"
     >
-      <input type="hidden" name="form-name" value="newsletter bandhaworks 2025" />
+      <input type="hidden" name="form-name" value="newsletter-form" />
       <input type="hidden" name="language" value="en" />
       <div hidden>
         <input name="bot-field" />
