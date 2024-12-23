@@ -4,6 +4,7 @@ import GoogleMap from '../components/GoogleMap/GoogleMap';
 import Modal from '../components/Modal/Modal.astro';
 import contactMapImage from '../images/contact_map.jpg';
 // import { KapcsolatForm } from '../components/Forms/KapcsolatForm';
+import { TestKapcsolatForm } from '../components/Forms/TestKapcsolatForm';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
 import '../sass/pages/_kapcsolat.scss';
 
@@ -97,13 +98,7 @@ const wazeUrl = 'https://waze.com/ul?ll=47.51416,19.51416&navigate=yes';
             </div>
             <div class="col-12-xs col-6-md">
                 <h3>Üzenj nekünk</h3>
-                <form name="kapcsolat-form" data-netlify="true" method="POST">
-                    <input type="hidden" name="form-name" value="kapcsolat-form" />
-                    <input type="text" name="name" placeholder="Név" />
-                    <input type="email" name="email" placeholder="Email" />
-                    <textarea name="comments"></textarea>
-                    <button type="submit">Küldés</button>
-                </form>
+                <TestKapcsolatForm client:load />
                 <!-- <KapcsolatForm client:load /> -->
             </div>
         </div>
