@@ -1,4 +1,4 @@
-import { actions } from 'astro:actions';
+// import { actions } from 'astro:actions';
 
 export const submitMysore = async (
   event: React.FormEvent<HTMLFormElement>,
@@ -29,14 +29,16 @@ export const submitMysore = async (
     console.log(`${key}: ${value}`);
   }
 
-  const familyName = formData.get('family') as string | null;
-  const surName = formData.get('sur') as string | null;
+  const name = formData.get('name') as string | null;
+  // const familyName = formData.get('family') as string | null;
+  // const surName = formData.get('sur') as string | null;
   const email = formData.get('email') as string | null;
   const email2 = formData.get('email2') as string | null;
   const experience = formData.get('experience') as string | null;
   const language = formData.get('language') as string | null;
 
-  if (!familyName || !surName || !email || !email2 || !experience || !language) {
+  if (!name || !email || !email2 || !experience || !language) {
+    // if (!familyName || !surName || !email || !email2 || !experience || !language) {
     console.error('Hiányzó kötelező mezők.');
     setLoading(false);
     return;
@@ -66,25 +68,25 @@ export const submitMysore = async (
   }
 
   // 2. Email küldés
-  try {
-    const response = await actions.mysoreform({
-      familyName,
-      surName,
-      email,
-      experienceLevel,
-      experience,
-      language,
-    });
+  // try {
+  //   const response = await actions.mysoreform({
+  //     familyName,
+  //     surName,
+  //     email,
+  //     experienceLevel,
+  //     experience,
+  //     language,
+  //   });
 
-    if (response.data?.data?.ok) {
-      // window.location.href = successPath;
-    } else {
-      // window.location.href = errorPath;
-    }
-  } catch (error) {
-    console.error('Hiba történt:', error);
-    window.location.href = errorPath;
-  } finally {
-    setLoading(false);
-  }
+  //   if (response.data?.data?.ok) {
+  //     // window.location.href = successPath;
+  //   } else {
+  //     // window.location.href = errorPath;
+  //   }
+  // } catch (error) {
+  //   console.error('Hiba történt:', error);
+  //   window.location.href = errorPath;
+  // } finally {
+  //   setLoading(false);
+  // }
 };

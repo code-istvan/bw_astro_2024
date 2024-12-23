@@ -54,8 +54,8 @@ export const MysoreHuForm = () => {
   };
 
   return (
-    <form name="abcd" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
-      <input type="hidden" name="form-name" value="abcd" />
+    <form name="mysore2025" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+      <input type="hidden" name="form-name" value="mysore2025" />
       <input type="hidden" name="language" value="hu" />
       <div hidden>
         <input name="bot-field" />
@@ -63,15 +63,15 @@ export const MysoreHuForm = () => {
       <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
           <Input
-            id="family"
+            id="name"
             type="text"
-            name="family"
+            name="name"
             placeholder="Családi név"
             pattern={Patterns.name}
             onValidate={(isValid) => setIsFamilyNameValid(isValid)}
           />
         </div>
-        <div className="col-12-xs col-6-md">
+        {/* <div className="col-12-xs col-6-md">
           <Input
             id="sur"
             type="text"
@@ -80,7 +80,7 @@ export const MysoreHuForm = () => {
             pattern={Patterns.name}
             onValidate={(isValid) => setIsSurNameValid(isValid)}
           />
-        </div>
+        </div> */}
       </div>
       <div className="row gap-1 mb-10px">
         <div className="col-12-xs col-6-md">
