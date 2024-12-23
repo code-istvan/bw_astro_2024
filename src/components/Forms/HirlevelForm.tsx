@@ -32,7 +32,7 @@ export const HirlevelForm = () => {
 
   return (
     <form
-      name="newsletter bandhaworks 2025"
+      name="hirlevel bandhaworks 2025"
       onSubmit={handleSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
