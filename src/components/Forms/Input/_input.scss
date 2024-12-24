@@ -2,35 +2,29 @@
 @import '/src/sass/base/_fonts';
 
 .input-wrapper {
-  display: flex; /* Flexbox használata */
-  flex-direction: column; /* Függőleges elrendezés */
-  width: 100%; /* Kitölti a szülő helyét */
-}
-
-.input-label {
-  width: 100%; /* A címke kitölti a szülő teret */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative; /* A fókusz keret pontos elhelyezéséhez */
 }
 
 .input {
-  width: 100%; /* Input kitölti a szülőt */
-  box-sizing: border-box; /* Padding és border ne tolja túl */
-  height: 44px; /* Megtartja a fix magasságot */
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
   padding-left: 16px;
   font-family: $font-family-secondary;
   font-weight: 600;
   background: transparent;
   color: $color-shades-lightGray;
+  border: 2px solid $color-shades-lightGray; /* Alap keret */
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px $color-brand-orange inset;
+    border: 2px solid $color-brand-orange; /* A border színe változik */
     color: $color-brand-orange;
+    outline: none; /* Böngésző alap outline eltávolítása */
   }
-}
-
-.custom-input.normal {
-  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
-}
-
-.custom-input.red {
-  box-shadow: 0px 0px 0px 2px red inset;
 }

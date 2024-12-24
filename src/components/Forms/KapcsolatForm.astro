@@ -1,9 +1,9 @@
 ---
-/* Alap statikus kapcsolat form Netlify form detectionhöz */
+import Input from './Input/Input.astro';
 ---
 
-<form name="test-kapcsolat-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
-    <input type="hidden" name="form-name" value="test-kapcsolat-form" />
+<form name="test2-kapcsolat-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+    <input type="hidden" name="form-name" value="test2-kapcsolat-form" />
     <input type="hidden" name="language" value="hu" />
 
     <!-- Bot mező Netlify spam védelemhez -->
@@ -11,16 +11,15 @@
         <input name="bot-field" />
     </div>
 
-    <!-- Név mező -->
     <div class="row gap-1 mb-10px">
-        <label for="name">Név:</label>
-        <input id="name" type="text" name="name" placeholder="Név" required />
-    </div>
-
-    <!-- Email mező -->
-    <div class="row gap-1 mb-10px">
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email" placeholder="Email" required />
+        <div class="col-12-xs col-6-md">
+            <!-- Név mező -->
+            <Input id="name" name="name" type="text" placeholder="Név" pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\\s]+$" />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <!-- Email mező -->
+            <Input id="email" name="email" type="email" placeholder="Email" />
+        </div>
     </div>
 
     <!-- Üzenet mező -->

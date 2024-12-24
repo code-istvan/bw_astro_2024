@@ -1,0 +1,26 @@
+---
+import './_input.scss';
+
+interface Props {
+    id: string;
+    name: string;
+    type: 'text' | 'email' | 'checkbox';
+    placeholder: string;
+    className?: string;
+    pattern?: string;
+}
+
+const { id, name, type, placeholder, className = '', pattern } = Astro.props;
+
+const Patterns = {
+    name: '^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\\s]+$',
+    email: '^[w-.]+@([w-]+.)+[w-]{2,4}$',
+};
+
+// Dinamikus minta kiválasztás a prop alapján
+const dynamicPattern = pattern || (type === 'email' ? Patterns.email : type === 'text' ? Patterns.name : undefined);
+---
+
+<div class={`input-wrapper ${className}`.trim()} id={`${id}-wrapper`}>
+    <input id={id} name={name} type={type} placeholder={placeholder} pattern={dynamicPattern} required class="input" />
+</div>
