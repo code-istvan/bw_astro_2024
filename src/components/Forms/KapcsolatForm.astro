@@ -3,7 +3,13 @@ import Input from './Input/Input.astro';
 import TextArea from './TextArea/TextArea.astro';
 ---
 
-<form name="test2-kapcsolat-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+<form
+    name="test2-kapcsolat-form"
+    action="/uzenet-elkuldve/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="POST"
+>
     <input type="hidden" name="form-name" value="test2-kapcsolat-form" />
     <input type="hidden" name="language" value="hu" />
 
