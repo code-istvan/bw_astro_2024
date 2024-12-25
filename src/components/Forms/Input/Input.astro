@@ -8,9 +8,10 @@ interface Props {
     placeholder: string;
     className?: string;
     pattern?: string;
+    title?: string;
 }
 
-const { id, name, type, placeholder, className = '', pattern } = Astro.props;
+const { id, name, type, placeholder, className = '', pattern, title } = Astro.props;
 
 const Patterns = {
     name: '^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\\s]+$',
@@ -22,5 +23,14 @@ const dynamicPattern = pattern || (type === 'email' ? Patterns.email : type === 
 ---
 
 <div class={`input-wrapper ${className}`.trim()} id={`${id}-wrapper`}>
-    <input id={id} name={name} type={type} placeholder={placeholder} pattern={dynamicPattern} required class="input" />
+    <input
+        id={id}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        pattern={dynamicPattern}
+        title={title}
+        required
+        class="input"
+    />
 </div>

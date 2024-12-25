@@ -1,0 +1,21 @@
+---
+import './_textArea.scss';
+
+// Props típusdefiníciók Astro-ban
+interface TextAreaProps {
+    id?: string;
+    placeholder?: string;
+    className?: string;
+    name?: string;
+    rows?: number;
+    required?: boolean;
+    [key: string]: any; // További props (pl. onChange, defaultValue)
+}
+
+const { placeholder, id, className, name, rows, required, ...props } = Astro.props;
+---
+
+<div class={`textarea-wrapper ${className || ''}`.trim()}>
+    {id && <label for={id} class="textarea-label" />}
+    <textarea id={id} name={name} rows={rows} placeholder={placeholder} class="textarea" required {...props}></textarea>
+</div>

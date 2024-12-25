@@ -1,5 +1,6 @@
 ---
 import Input from './Input/Input.astro';
+import TextArea from './TextArea/TextArea.astro';
 ---
 
 <form name="test2-kapcsolat-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
@@ -14,7 +15,13 @@ import Input from './Input/Input.astro';
     <div class="row gap-1 mb-10px">
         <div class="col-12-xs col-6-md">
             <!-- Név mező -->
-            <Input id="name" name="name" type="text" placeholder="Név" pattern="^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ\\s]+$" />
+            <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Név"
+                title="Csak betüketet tudsz megadni ebben a mezőben!"
+            />
         </div>
         <div class="col-12-xs col-6-md">
             <!-- Email mező -->
@@ -23,13 +30,12 @@ import Input from './Input/Input.astro';
     </div>
 
     <!-- Üzenet mező -->
-    <div class="row gap-1 mb-10px">
-        <label for="comments">Üzenet:</label>
-        <textarea id="comments" name="comments" placeholder="Üzenet" rows={5} required></textarea>
+    <div class="row">
+        <TextArea id="comments" name="comments" placeholder="Üzenet" rows={5} required />
     </div>
 
     <!-- Beküldés gomb -->
-    <div class="row mt-20px mb-40px">
+    <div class="row mb-40px">
         <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
     </div>
 </form>
