@@ -1,0 +1,47 @@
+---
+import Input from './Input/Input.astro';
+import Checkbox from './Checkbox/Checkbox.astro';
+---
+
+<form
+    name="test1-newsletter-form"
+    action="/en/uzenet-elkuldve/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="POST"
+>
+    <input type="hidden" name="form-name" value="test1-newsletter-form" />
+    <input type="hidden" name="language" value="en" />
+
+    <!-- Bot mező Netlify spam védelemhez -->
+    <div hidden>
+        <input name="bot-field" />
+    </div>
+
+    <div class="row gap-1 mb-10px">
+        <div class="col-12-xs col-6-md">
+            <!-- Név mező -->
+            <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Name"
+                title="Csak betüketet tudsz megadni ebben a mezőben!"
+            />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <!-- Email mező -->
+            <Input id="email" name="email" type="email" placeholder="Email" />
+        </div>
+    </div>
+
+    <!-- Checkbox mező -->
+    <div class="row mb-20px">
+        <Checkbox id="terms" name="terms" lang="en" />
+    </div>
+
+    <!-- Beküldés gomb -->
+    <div class="row mb-40px">
+        <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Send</button>
+    </div>
+</form>

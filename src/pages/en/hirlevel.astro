@@ -3,9 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/hirlevel_mobil.jpeg';
 import desktopImage from '../../images/hirlevel_desktop.jpeg';
-// import { NewsletterForm } from '../../components/Forms/NewsletterForm.tsx';
-
-export const prerender = false;
+import NewsletterForm from '../../components/Forms/NewsletterForm.astro';
 
 const metadata = {
     title: 'NEWSLETTER SUBSCRIPTION',
@@ -29,7 +27,7 @@ const metadata = {
                     a maximum of one newsletter per month. We do not share the names and email addresses of our
                     subscribers with third parties.
                 </p>
-                <!-- <NewsletterForm client:load /> -->
+                <NewsletterForm />
             </div>
         </div>
     </div>
