@@ -1,22 +1,31 @@
 ---
 import './_checkbox.scss';
-const { id, name } = Astro.props;
+
+// Props: id, name, lang
+const { id, name, lang = 'hu' } = Astro.props;
+
+// Nyelvi szövegek és linkek
+const text = lang === 'en' ? 'I have read and accept the' : 'Megismertem és elfogadom az';
+
+const linkHref = lang === 'en' ? '/en/adatvedelmi-tajekoztato/' : '/adatvedelmi-tajekoztato/';
+
+const linkText = lang === 'en' ? 'privacy policy,' : 'adatvédelmi tájékoztatót,';
+
+const consentText =
+    lang === 'en'
+        ? 'and I consent to the processing of my name and email address.'
+        : 'hozzájárulok nevem és email címem kezeléséhez.';
 ---
 
 <div class="custom-checkbox">
     <input type="checkbox" id={id} name={name} required />
     <label for={id}>
         <p>
-            Megismertem és elfogadom az{' '}
-            <a
-                href="/adatvedelmi-tajekoztato/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link-enhanced link-orange"
-            >
-                adatvédelmi tájékoztatót,
+            {text}{' '}
+            <a href={linkHref} target="_blank" rel="noopener noreferrer" class="link-enhanced link-orange">
+                {linkText}
             </a>
-            hozzájárulok nevem és email címem kezeléséhez.
+            {consentText}
         </p>
     </label>
 </div>
