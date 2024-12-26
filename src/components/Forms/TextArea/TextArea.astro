@@ -8,11 +8,10 @@ interface TextAreaProps {
     className?: string;
     name?: string;
     rows?: number;
-    required?: boolean;
     [key: string]: any; // További props (pl. onChange, defaultValue)
 }
 
-const { placeholder, id, className, name, rows, required, ...props } = Astro.props;
+const { placeholder, id, className, name, rows, ...props } = Astro.props;
 ---
 
 <div class={`textarea-wrapper ${className || ''}`.trim()}>
