@@ -3,9 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/hirlevel_mobil.jpeg';
 import desktopImage from '../images/hirlevel_desktop.jpeg';
-// import { HirlevelForm } from '../components/Forms/HirlevelForm.tsx';
-
-export const prerender = false;
+import HirlevelForm from '../components/Forms/HirlevelForm.astro';
 
 const metadata = {
     title: 'FELÍRATKOZÁS HÍRLEVÉLRE',
@@ -29,7 +27,7 @@ const metadata = {
                     maximum egy hírlevelet küldünk. Harmadik fél számára nem adjuk ki a feliratkozók nevét és email
                     címét.
                 </p>
-                <!-- <HirlevelForm client:load /> -->
+                <HirlevelForm />
             </div>
         </div>
     </div>
