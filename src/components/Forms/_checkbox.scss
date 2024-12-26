@@ -1,6 +1,9 @@
 @import '/src/sass/base/_colors';
 
 .custom-checkbox {
+  display: flex;
+  gap: 0.5em; // Kisebb térköz a checkbox és a szöveg között
+
   input[type='checkbox'] {
     -webkit-appearance: none;
     appearance: none;
