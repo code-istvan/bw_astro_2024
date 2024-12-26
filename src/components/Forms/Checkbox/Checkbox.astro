@@ -1,0 +1,22 @@
+---
+import './_checkbox.scss';
+const { id, name } = Astro.props;
+---
+
+<div class="custom-checkbox">
+    <input type="checkbox" id={id} name={name} required />
+    <label for={id}>
+        <p>
+            Megismertem és elfogadom az{' '}
+            <a
+                href="/adatvedelmi-tajekoztato/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-enhanced link-orange"
+            >
+                adatvédelmi tájékoztatót,
+            </a>
+            hozzájárulok nevem és email címem kezeléséhez.
+        </p>
+    </label>
+</div>

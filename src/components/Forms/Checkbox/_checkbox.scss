@@ -2,8 +2,7 @@
 
 .custom-checkbox {
   display: flex;
-  align-items: flex-start; /* Igazítás a szöveg tetejéhez */
-  gap: 10px; /* Hely a checkbox és a szöveg között */
+  gap: 0.5em; // Kisebb térköz a checkbox és a szöveg között
 
   input[type='checkbox'] {
     -webkit-appearance: none;
@@ -11,62 +10,102 @@
     background-color: transparent;
     margin: 0;
     font: inherit;
-    width: 1.25em; /* Checkbox szélessége */
-    height: 1.25em; /* Checkbox magassága */
-    border: 2px solid currentColor; /* Keret színe */
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid currentColor;
     display: inline-grid;
     place-content: center;
-    transform: translateY(0.15em); /* Finom igazítás a szöveg tetejéhez */
+    margin-right: 10px;
+    cursor: pointer;
+    transition:
+      background-color 100ms ease-in-out,
+      border-color 100ms ease-in-out;
 
-    &::before {
-      content: '';
-      width: 1.2em;
-      height: 1.2em;
-      transform: scale(0);
-      transition: 100ms transform ease-in-out;
-      transform-origin: center;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-
-    &:checked::before {
-      transform: scale(1); /* Kipipálás megjelenítése */
+    &:checked {
+      background-color: $color-brand-orange;
+      border-color: $color-brand-orange;
     }
   }
 
-  &.orange {
-    input[type='checkbox'] {
-      color: $color-brand-orange;
-
-      &::before {
-        background-color: $color-brand-orange; /* Kipipálás színe narancs */
-      }
-    }
+  input[type='checkbox']::before {
+    content: '';
+    width: 1.2em;
+    height: 1.2em;
+    transform: scale(0);
+    transition: transform 100ms ease-in-out;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  &.red {
-    input[type='checkbox'] {
-      color: red;
-    }
+  input[type='checkbox']:checked::before {
+    transform: scale(1);
   }
 
-  &.gray {
-    input[type='checkbox'] {
-      color: $color-shades-lightGray;
-
-      &::before {
-        background-color: $color-shades-lightGray; /* Kipipálás színe szürke */
-      }
-    }
+  &.orange input[type='checkbox'] {
+    color: $color-brand-orange;
   }
 
-  label {
-    font-size: 16px; /* Szöveg mérete */
-    cursor: pointer; /* Kattinthatóság */
-  }
-
-  label p {
-    margin: 0; /* Alapértelmezett margó eltávolítása */
-    line-height: 1.5; /* Szöveg sortávolsága */
-    color: $color-shades-lightGray; /* Szöveg színe */
+  &.gray input[type='checkbox'] {
+    color: $color-shades-lightGray;
   }
 }
+
+// @import '/src/sass/base/_colors';
+
+// .custom-checkbox {
+//   input[type='checkbox'] {
+//     /* Add if not using autoprefixer */
+//     -webkit-appearance: none;
+//     appearance: none;
+//     /* For iOS < 15 to remove gradient background */
+//     background-color: transparent;
+//     /* Not removed via appearance */
+//     margin: 0;
+//     font: inherit;
+//     width: 1.25em;
+//     height: 1.25em;
+//     border-radius: none !important;
+//     border: 2px solid currentColor;
+//     transform: translateY(-0.075em);
+//     display: inline-grid;
+//     place-content: center;
+//     margin-right: 10px;
+//     cursor: pointer;
+
+//     &:checked {
+//       background-color: $color-brand-orange;
+//       border-color: $color-brand-orange;
+//     }
+//   }
+
+//   input[type='checkbox']::before {
+//     content: '';
+//     width: 1.2em;
+//     height: 1.2em;
+//     transform: scale(0);
+//     transition: 100ms transform ease-in-out;
+//     transform-origin: center;
+//     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+//   }
+
+//   input[type='checkbox']:checked::before {
+//     transform: scale(1);
+//   }
+
+//   &.orange {
+//     input[type='checkbox'] {
+//       color: $color-brand-orange;
+//       &:before {
+//         background-color: $color-brand-orange;
+//       }
+//     }
+//   }
+
+//   &.gray {
+//     input[type='checkbox'] {
+//       color: $color-shades-lightGray;
+//       &:before {
+//         background-color: $color-shades-lightGray;
+//       }
+//     }
+//   }
+// }

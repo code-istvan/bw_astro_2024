@@ -1,7 +1,7 @@
 ---
 import Input from './Input/Input.astro';
 import TextArea from './TextArea/TextArea.astro';
-import './_checkbox.scss';
+import Checkbox from './Checkbox/Checkbox.astro';
 ---
 
 <form
@@ -43,23 +43,7 @@ import './_checkbox.scss';
 
     <!-- Checkbox mező -->
     <div class="row mb-20px">
-        <div class="custom-checkbox">
-            <input type="checkbox" id="terms" name="terms" required />
-            <label for="terms">
-                <p>
-                    Megismertem és elfogadom az{' '}
-                    <a
-                        href="/adatvedelmi-tajekoztato/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="link-enhanced link-orange"
-                    >
-                        adatvédelmi tájékoztatót,
-                    </a>
-                    hozzájárulok nevem és email címem kezeléséhez.
-                </p>
-            </label>
-        </div>
+        <Checkbox id="terms" name="terms" />
     </div>
 
     <!-- Beküldés gomb -->
