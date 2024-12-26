@@ -1,6 +1,7 @@
 ---
 import Input from './Input/Input.astro';
 import TextArea from './TextArea/TextArea.astro';
+import './_checkbox.scss';
 ---
 
 <form
@@ -38,6 +39,27 @@ import TextArea from './TextArea/TextArea.astro';
     <!-- Üzenet mező -->
     <div class="row">
         <TextArea id="comments" name="comments" placeholder="Üzenet" rows={5} required />
+    </div>
+
+    <!-- Checkbox mező -->
+    <div class="row">
+        <div class="custom-checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+                <p>
+                    Megismertem és elfogadom az{' '}
+                    <a
+                        href="/adatvedelmi-tajekoztato/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-enhanced link-orange"
+                    >
+                        adatvédelmi tájékoztatót
+                    </a>
+                    , hozzájárulok nevem és email címem kezeléséhez.
+                </p>
+            </label>
+        </div>
     </div>
 
     <!-- Beküldés gomb -->
