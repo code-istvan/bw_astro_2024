@@ -3,9 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mysore_mobil.jpg';
 import desktopImage from '../images/mysore_desktop.jpg';
-// import { MysoreHuForm } from '../components/Forms/MysoreHuForm';
-
-export const prerender = false;
+import MysoreHuForm from '../components/Forms/MysoreHuForm.astro';
 
 const metadata = {
     title: 'MYSORE-PROGRAM JELENTKEZÉS',
@@ -18,6 +16,6 @@ const metadata = {
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container page-content">
         <div class="row mt-40px mb-20px"><h3>JELENTKEZÉSI LAP</h3></div>
-        <!-- <MysoreHuForm client:load /> -->
+        <MysoreHuForm />
     </div>
 </BaseLayout>

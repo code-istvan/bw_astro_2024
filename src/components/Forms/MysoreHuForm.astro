@@ -1,0 +1,81 @@
+---
+import Input from './Input/Input.astro';
+import TextArea from './TextArea/TextArea.astro';
+import Checkbox from './Checkbox/Checkbox.astro';
+---
+
+<form
+    name="test1-mysore-hu-form"
+    action="/uzenet-elkuldve/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="POST"
+>
+    <input type="hidden" name="form-name" value="test1-mysore-hu-form" />
+
+    <!-- Bot mező Netlify spam védelemhez -->
+    <div hidden>
+        <input name="bot-field" />
+    </div>
+
+    <div class="row gap-1 mb-10px">
+        <div class="col-12-xs col-6-md">
+            <!-- Családi Név mező -->
+            <Input
+                id="family-name"
+                name="family-name"
+                type="text"
+                placeholder="Családi Név"
+                title="Csak betűket tudsz megadni ebben a mezőben!"
+            />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <!-- Utónév mező -->
+            <Input
+                id="given-name"
+                name="given-name"
+                type="text"
+                placeholder="Utónév"
+                title="Csak betűket tudsz megadni ebben a mezőben!"
+            />
+        </div>
+    </div>
+
+    <div class="row gap-1 mb-10px">
+        <div class="col-12-xs col-6-md">
+            <!-- Email mező -->
+            <Input id="email" name="email" type="email" placeholder="Email" title="Add meg az email címed!" />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <!-- Email mégegyszer mező -->
+            <Input
+                id="email-confirm"
+                name="email-confirm"
+                type="email"
+                placeholder="Email mégegyszer"
+                title="Add meg újra az email címed!"
+            />
+        </div>
+    </div>
+
+    <!-- Üzenet mező -->
+    <div class="row">
+        <TextArea
+            id="experience"
+            name="experience"
+            placeholder="Ha már van tapasztalatod az astanga jógában, kérlek írd meg, mióta és milyen rendszerességgel gyakorolsz. Kik voltak eddigi tanáraid, és mennyi ideig tanultál tőlük? Rendelkezel-e tapasztalattal Mysore-stílusú gyakorlásban? Képes vagy-e önállóan, külső segítség nélkül gyakorolni?"
+            rows={5}
+            required
+        />
+    </div>
+
+    <!-- Checkbox mező -->
+    <div class="row mb-20px">
+        <Checkbox id="terms" name="terms" lang="hu" />
+    </div>
+
+    <!-- Beküldés gomb -->
+    <div class="row mb-40px">
+        <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
+    </div>
+</form>
