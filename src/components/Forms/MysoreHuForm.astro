@@ -2,6 +2,14 @@
 import Input from './Input/Input.astro';
 import TextArea from './TextArea/TextArea.astro';
 import Checkbox from './Checkbox/Checkbox.astro';
+import { MysoreHuCustomSelect } from './MysoreHuCustomSelect';
+
+// Define your options here or pass them as props
+const experienceLevel = [
+    'Teljesen kezdő vagyok',
+    'Astangáztam már, de nem tudok egyedűl gyakorolni',
+    'Van Mysore-tapasztalatom',
+];
 ---
 
 <form
@@ -16,7 +24,6 @@ import Checkbox from './Checkbox/Checkbox.astro';
     <div hidden>
         <input name="bot-field" />
     </div>
-
     <div class="row gap-1 mb-10px">
         <div class="col-12-xs col-6-md">
             <Input
@@ -37,7 +44,6 @@ import Checkbox from './Checkbox/Checkbox.astro';
             />
         </div>
     </div>
-
     <div class="row gap-1 mb-10px">
         <div class="col-12-xs col-6-md">
             <Input id="email" name="email" type="email" placeholder="Email" title="Add meg az email címed!" />
@@ -51,9 +57,11 @@ import Checkbox from './Checkbox/Checkbox.astro';
                 title="Add meg újra az email címed!"
             />
         </div>
-        <div id="email-error" class="col-12 clr-error">
-            <p>Az email címek nem egyeznek!</p>
-        </div>
+    </div>
+
+    <!-- Custom Select integration -->
+    <div class="row mb-20px">
+        <MysoreHuCustomSelect client:load options={experienceLevel} placeholder="Válassz tapasztalati szintet" />
     </div>
 
     <div class="row">
@@ -61,15 +69,16 @@ import Checkbox from './Checkbox/Checkbox.astro';
             id="experience"
             name="experience"
             placeholder="Ha már van tapasztalatod az astanga jógában, kérlek írd meg, mióta és milyen rendszerességgel gyakorolsz. Kik voltak eddigi tanáraid, és mennyi ideig tanultál tőlük? Rendelkezel-e tapasztalattal Mysore-stílusú gyakorlásban? Képes vagy-e önállóan, külső segítség nélkül gyakorolni?"
-            rows={5}
+            rows={6}
             required
         />
     </div>
-
     <div class="row mb-20px">
         <Checkbox id="terms" name="terms" lang="hu" />
     </div>
-
+    <div id="email-error" class="col-12 clr-error">
+        <p>Az email címek nem egyeznek!</p>
+    </div>
     <div class="row mb-40px">
         <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
     </div>
