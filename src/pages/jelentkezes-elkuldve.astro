@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/message-sent_mobil.jpeg';
+import desktopImage from '../images/message-sent_desktop.jpeg';
+
+const metadata = {
+    title: 'JELENTKEZÉS ELKÜLDVE',
+    description: 'Ezen az oldalon megtalálod az üzenet elküldésének megerősítését.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px clr-brand-orange">Köszönjük jelentkezésed astanga Mysore-programunkba!</h3>
+                    <p class="mt-20px">Jelentkezési lapod megérkezett szerverünkre!</p>
+                    <!-- <p class="mt-20px">
+                        Az üzeneted megérkezett hozzánk, és hamarosan küldünk egy automata visszaigazoló emailt. Ha nem
+                        találod az emailt a beérkezett üzeneteid között, nézd meg a spam mappát is! Ha ott sem találod,
+                        előfordulhat, hogy hibásan adtad meg az email címed. Kérjük, próbáld meg újra!
+                    </p> -->
+                    <p class="mt-20px">
+                        Csapatunk az elkövetkező munkanapokon - általában 24-48 órán belül - feldolgozza jelentkezésed,
+                        hamarosan válaszolunk.
+                    </p>
+                    <p class="mt-20px">
+                        Ha munkanapokon 48 órán belül nem kapsz választ, akkor lehet, hogy <strong>
+                            <u>rosszul adtad meg</u>
+                        </strong> az email címed vagy a <strong><u>SPAM fiókodban</u></strong> landolt a válaszunk!
+                    </p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Hol az email címünk?</h3>
+                <p class="mt-20px">
+                    A weboldalunkon a biztonság és adatvédelem kiemelt prioritást élvez. Ennek érdekében, hogy
+                    elkerüljük a nem kívánt spam üzeneteket és az adathalászati kísérleteket, döntöttünk úgy, hogy nem
+                    tesszük közzé az email címünket.
+                </p>
+                <p class="mt-20px">
+                    Ez a gyakorlat a mai digitális világban iparági sztenderdnek számít, melynek célja, hogy a lehető
+                    legbiztonságosabb környezetet teremtse meg felhasználóink számára.
+                </p>
+                <p class="mt-20px">
+                    Ha továbbra is problémába ütközne a kapcsolatfelvétel irányunkban a honlapon keresztül, akkor kérünk
+                    írjál facebook üzenetet részünkre (lásd. lábléc), vagy gyere el személyesen hozzánk! Ez a
+                    tradicionális útja a kapcsolatfelvételnek a jóga világában. Köszönjük!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Főoldal">
+                    Vissza a főoldalra
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
