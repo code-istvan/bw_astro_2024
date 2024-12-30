@@ -13,13 +13,13 @@ const experienceLevel = [
 ---
 
 <form
-    name="test1-mysore-hu-form"
+    name="mysore-hu-form"
     action="/uzenet-elkuldve/"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     method="POST"
 >
-    <input type="hidden" name="form-name" value="test1-mysore-hu-form" />
+    <input type="hidden" name="form-name" value="mysore-hu-form" />
 
     <div hidden>
         <input name="bot-field" />
@@ -91,7 +91,7 @@ const experienceLevel = [
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form[name="test1-mysore-hu-form"]') as HTMLFormElement;
+        const form = document.querySelector('form[name="mysore-hu-form"]') as HTMLFormElement;
         const emailInput = document.getElementById('email') as HTMLInputElement;
         const emailConfirmInput = document.getElementById('email-confirm') as HTMLInputElement;
         const errorDiv = document.getElementById('email-error') as HTMLElement;
