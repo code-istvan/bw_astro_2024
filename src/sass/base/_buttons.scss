@@ -39,6 +39,12 @@
   border: 2px solid $color-brand-orange;
 }
 
+.btn--primary--solid:hover {
+  background-color: darken($color-brand-orange, 10%);
+  border-color: darken($color-brand-orange, 10%);
+  color: $color-shades-black;
+}
+
 .btn--primary--solid--full {
   background-color: $color-brand-orange;
   color: $color-shades-black;
@@ -101,6 +107,11 @@
     font-weight: 600;
     padding: 16px 32px;
   }
+}
+
+.btn--secondary--solid:hover {
+  color: $color-shades-black;
+  opacity: 0.7;
 }
 
 .btn--secondary--solid--full {
