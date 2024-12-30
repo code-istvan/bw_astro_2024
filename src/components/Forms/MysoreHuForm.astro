@@ -8,7 +8,7 @@ import { MysoreHuCustomSelect } from './MysoreHuCustomSelect';
 const experienceLevel = [
     'Teljesen kezdő vagyok',
     'Astangáztam már, de nem tudok egyedűl gyakorolni',
-    'Van Mysore-tapasztalatom',
+    'Van Mysore-tapasztalatom, tudok egyedül gyakorolni',
 ];
 ---
 
@@ -61,7 +61,12 @@ const experienceLevel = [
 
     <!-- Custom Select integration -->
     <div class="row mb-20px">
-        <MysoreHuCustomSelect client:load options={experienceLevel} placeholder="Válassz tapasztalati szintet" />
+        <MysoreHuCustomSelect
+            client:load
+            options={experienceLevel}
+            name="selected_experience_level"
+            placeholder="Válassz tapasztalati szintet"
+        />
     </div>
 
     <div class="row">
