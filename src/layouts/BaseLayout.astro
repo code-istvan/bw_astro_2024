@@ -13,10 +13,11 @@ interface Props {
     description?: string;
     image?: string | ImageMetadata;
     isHomePage?: boolean;
+    noindex?: boolean;
 }
 
 const url = Astro.url;
-const { title, isHomePage, description } = Astro.props as Props;
+const { title, isHomePage, description, noindex } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -45,6 +46,7 @@ const { title, isHomePage, description } = Astro.props as Props;
                 },
             ]}
         />
+        {noindex && <meta name="robots" content="noindex, nofollow" />}
     </head>
     <body>
         <Header />

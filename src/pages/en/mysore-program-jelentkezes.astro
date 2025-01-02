@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/mysore_mobil.jpg';
+import desktopImage from '../../images/mysore_desktop.jpg';
+import MysoreHuForm from '../../components/Forms/MysoreHuForm.astro';
+
+const metadata = {
+    title: 'MYSORE PROGRAM REGISTRATION',
+    description:
+        'Register here for the ashtanga mysore program. The mysore program is individual practice, supported and developed by the teacher on a personal basis. The mysore program is the best way to learn ashtanga yoga practice.',
+};
+---
+
+<BaseLayout title={metadata.title} image={desktopImage} description={metadata.description} noindex={true}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+    <div class="container page-content">
+        <div class="row mt-40px"><h3>REGISTRATION FORM</h3></div>
+        <MysoreHuForm />
+    </div>
+</BaseLayout>
