@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/message-sent_mobil.jpeg';
+import desktopImage from '../../images/message-sent_desktop.jpeg';
+
+const metadata = {
+    title: 'REGISTRATION SENT',
+    description: 'On this page you will find confirmation of message submission.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage} noindex={true}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px">
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-20px clr-brand-orange">Thank you for registering for our Ashtanga Mysore program!</h3>
+                    <p class="mt-20px">Your registration form has been received by our server!</p>
+                    <!-- <p class="mt-20px">
+                        Az üzeneted megérkezett hozzánk, és hamarosan küldünk egy automata visszaigazoló emailt. Ha nem
+                        találod az emailt a beérkezett üzeneteid között, nézd meg a spam mappát is! Ha ott sem találod,
+                        előfordulhat, hogy hibásan adtad meg az email címed. Kérjük, próbáld meg újra!
+                    </p> -->
+                    <p class="mt-20px">
+                        Our team will process your registration in the coming business days - usually within 24-48 hours
+                        - and we'll respond soon.
+                    </p>
+                    <p class="mt-20px">
+                        If you don't receive a response within 48 business hours, you may have entered your email
+                        address <strong>
+                            <u>incorrectly</u>
+                        </strong> or our response may have landed in your <strong><u>SPAM folder!</u></strong>
+                    </p>
+                </div>
+            </div>
+            <div class="separator-horizontal mt-20px"></div>
+            <div class="col">
+                <h3 class="clr-brand-orange">Where is our email address?</h3>
+                <p class="mt-20px">
+                    Security and data protection are top priorities on our website. To avoid unwanted spam messages and
+                    phishing attempts, we have decided not to publish our email address.
+                </p>
+                <p class="mt-20px">
+                    This practice is considered an industry standard in today's digital world, aimed at creating the
+                    safest possible environment for our users.
+                </p>
+                <p class="mt-20px">
+                    If you still have trouble contacting us through the website, please send us a Facebook message (see
+                    footer) or come visit us in person! This is the traditional way of making contact in the yoga world.
+                    Thank you!
+                </p>
+            </div>
+            <div class="mt-20px mb-40px">
+                <a href="/en/" class="btn btn--full-width-mobile btn--primary--outline mt-20px" aria-label="Főoldal">
+                    Back to homepage
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
