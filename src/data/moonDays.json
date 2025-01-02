@@ -1,26 +1,26 @@
 [
   {
     "monthValue": 1,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Január",
       "EN": "January"
     },
     "fullMoon": {
-      "HU": "11. (csütörtök)",
-      "EN": "11th (Thursday)"
+      "HU": "13. (hétfő)",
+      "EN": "13th (Monday)"
     },
     "newMoon": {
-      "HU": "25. (csütörtök)",
-      "EN": "25th (Thursday)"
+      "HU": "30.* (csütörtök)",
+      "EN": "30th* (Thursday)"
     },
     "ekadashiNewMoon": {
-      "HU": "6. (szombat)",
-      "EN": "6th (Saturday)"
+      "HU": "11. (szombat)",
+      "EN": "11th (Saturday)"
     },
     "ekadashiFullMoon": {
-      "HU": "22. (hétfő)",
-      "EN": "22nd (Monday)"
+      "HU": "24. (péntek)",
+      "EN": "24th (Friday)"
     },
     "thirdMoon": [],
     "moonPhase": [],
@@ -28,26 +28,26 @@
   },
   {
     "monthValue": 2,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Február",
       "EN": "February"
     },
     "fullMoon": {
-      "HU": "9. (péntek)",
-      "EN": "9th (Friday)"
+      "HU": "12. (szerda)",
+      "EN": "12th (Wednesday)"
     },
     "newMoon": {
-      "HU": "24. (szombat)",
-      "EN": "24th (Saturday)"
+      "HU": "28. (péntek)",
+      "EN": "28th (Friday)"
     },
     "ekadashiNewMoon": {
-      "HU": "5. (hétfő)",
-      "EN": "5th (Monday)"
+      "HU": "10. (hétfő)",
+      "EN": "10th (Monday)"
     },
     "ekadashiFullMoon": {
-      "HU": "20. (kedd)",
-      "EN": "20th (Tuesday)"
+      "HU": "23. (vasárnap)",
+      "EN": "23th (Sunday)"
     },
     "thirdMoon": [],
     "moonPhase": {
@@ -58,26 +58,26 @@
   },
   {
     "monthValue": 3,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Március",
       "EN": "March"
     },
     "fullMoon": {
-      "HU": "10. (vasárnap)",
-      "EN": "10th (Sunday)"
+      "HU": "14. (péntek)",
+      "EN": "14th (Friday)"
     },
     "newMoon": {
-      "HU": "25. (hétfő)",
-      "EN": "25th (Monday)"
+      "HU": "29. (szombat)",
+      "EN": "29th (Saturday)"
     },
     "ekadashiNewMoon": {
-      "HU": "6. (szerda)",
-      "EN": "6th (Wednesday)"
+      "HU": "11. (kedd)",
+      "EN": "11th (Tuesday)"
     },
     "ekadashiFullMoon": {
-      "HU": "21. (csütörtök)",
-      "EN": "21st (Thursday)"
+      "HU": "25. (kedd)",
+      "EN": "25st (Tuesday)"
     },
     "thirdMoon": [],
     "moonPhase": {
