@@ -1,20 +1,41 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/mysore_mobil.jpg';
 import desktopImage from '../../images/mysore_desktop.jpg';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+import { Image } from 'astro:assets';
+import Icons from '../../components/Icons/Icons.astro';
+import AccordionMysoreFaq from '../../components/Accordions/AccordionMysoreFaq.astro';
+import MysoreImage1 from '../../images/mysore_program_1.jpg';
+import MysoreImage2 from '../../images/mysore_program_2.jpg';
+import MysoreImage3 from '../../images/mysore_program_3.jpeg';
+import Istvan from '../../images/istvan.png';
+import mysoreSpecialitiesData from '../../data/mysoreSpecialities.json';
+import mysoreElementsData from '../../data/mysoreElements.json';
+import mysoreReadingsData from '../../data/mysoreReadings.json';
+import mysoreFaqsData from '../../data/mysoreFaq.json';
+import Counter from '../../components/Counter';
+import Carousel from '../../components/Carousel/Carousel.astro';
+import MysoreStructureCard from '../../components/Carousel/MysoreStructureCard.astro';
+import '../../sass/pages/_astangaMysoreProgram.scss';
 
 const metadata = {
-    title: 'Ashtanga Mysore-Program',
+    title: 'ASHTANGA MYSORE PROGRAM',
     description:
-        'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
+        'Mysore style ashtanga yoga practice is an effective and personalized method that brings physical strength, flexibility, and inner peace. The continuous growth it offers and the teacher-student relationship provides an opportunity for deeper understanding and personal development.',
 };
 
-const pageTitle = t('mysoreprogram');
+const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
+const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
+
+const huMysoreElements = mysoreElementsData.HU;
+const enMysoreElements = mysoreElementsData.EN;
+
+const huMysoreReadings = mysoreReadingsData.HU;
+const enMysoreReadings = mysoreReadingsData.EN;
+
+const huMysoreFaqs = mysoreFaqsData.HU;
+const enMysoreFaqs = mysoreFaqsData.EN;
 ---
 
 <BaseLayout title={metadata.title}>

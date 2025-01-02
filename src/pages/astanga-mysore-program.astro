@@ -17,6 +17,7 @@ import mysoreFaqsData from '../data/mysoreFaq.json';
 import Counter from '../components/Counter';
 import Carousel from '../components/Carousel/Carousel.astro';
 import MysoreStructureCard from '../components/Carousel/MysoreStructureCard.astro';
+import '../sass/pages/_astangaMysoreProgram.scss';
 
 const metadata = {
     title: 'ASTANGA MYSORE-PROGRAM',
@@ -313,35 +314,3 @@ const enMysoreFaqs = mysoreFaqsData.EN;
         }
     });
 </script>
-
-<style>
-    @media (min-width: 1024px) {
-        .mysore-structure__cards--mobile {
-            display: none;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .mysore-structure__cards--desktop {
-            display: none;
-        }
-    }
-
-    .mysore_test {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .lead-teacher__body img {
-        margin-right: 12px;
-    }
-
-    .application__buttons {
-        a {
-            width: 100%;
-            gap: 1rem;
-        }
-    }
-</style>

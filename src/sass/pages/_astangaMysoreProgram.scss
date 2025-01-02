@@ -1,0 +1,26 @@
+.page-content__section--mysore-structure {
+  .mysore-structure__cards {
+    &--desktop {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      @media (min-width: 1025px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.lead-teacher__body img {
+  margin-right: 12px;
+}
+
+.application__buttons {
+  a {
+    width: 100%;
+    gap: 1rem;
+  }
+}
