@@ -2,7 +2,7 @@
 import Input from './Input/Input.astro';
 import TextArea from './TextArea/TextArea.astro';
 import Checkbox from './Checkbox/Checkbox.astro';
-import { MysoreHuCustomSelect } from './MysoreHuCustomSelect';
+import { MysoreCustomSelect } from './MysoreCustomSelect';
 
 // Define your options here or pass them as props
 const experienceLevel = [
@@ -61,7 +61,7 @@ const experienceLevel = [
 
     <!-- Custom Select integration -->
     <div class="row mb-20px">
-        <MysoreHuCustomSelect
+        <MysoreCustomSelect
             client:load
             options={experienceLevel}
             name="selected_experience_level"
