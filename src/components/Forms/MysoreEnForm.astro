@@ -1,0 +1,133 @@
+---
+import Input from './Input/Input.astro';
+import TextArea from './TextArea/TextArea.astro';
+import Checkbox from './Checkbox/Checkbox.astro';
+import { MysoreHuCustomSelect } from './MysoreHuCustomSelect';
+
+// Define your options here or pass them as props
+const experienceLevel = [
+    "I'm a complete beginner",
+    "I've practiced Ashtanga before but can't practice alone",
+    'I have Mysore experience, I can practice alone',
+];
+---
+
+<form
+    name="mysore-en-form"
+    action="/jelentkezes-elkuldve/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="POST"
+>
+    <input type="hidden" name="form-name" value="mysore-en-form" />
+
+    <div hidden>
+        <input name="bot-field" />
+    </div>
+    <div class="row gap-1 mb-10px">
+        <div class="col-12-xs col-6-md">
+            <Input
+                id="family-name"
+                name="family-name"
+                type="text"
+                placeholder="Family Name"
+                title="You can only enter letters in this field!"
+            />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <Input
+                id="given-name"
+                name="given-name"
+                type="text"
+                placeholder="Given Name"
+                title="You can only enter letters in this field!"
+            />
+        </div>
+    </div>
+    <div class="row gap-1 mb-10px">
+        <div class="col-12-xs col-6-md">
+            <Input id="email" name="email" type="email" placeholder="Email" title="Please enter your email address." />
+        </div>
+        <div class="col-12-xs col-6-md">
+            <Input
+                id="email-confirm"
+                name="email-confirm"
+                type="email"
+                placeholder="Confirm email"
+                title="Confirm email address!"
+            />
+        </div>
+    </div>
+
+    <!-- Custom Select integration -->
+    <div class="row mb-20px">
+        <MysoreHuCustomSelect
+            client:load
+            options={experienceLevel}
+            name="selected_experience_level"
+            placeholder="Select your experience level"
+        />
+    </div>
+
+    <div class="row">
+        <TextArea
+            id="experience"
+            name="experience"
+            placeholder="Tell us about your Ashtanga yoga experience: how long and how often do you practice? Who were your teachers? Do you have experience with Mysore-style, can you practice independently?"
+            rows={6}
+            required
+        />
+    </div>
+    <div class="row mb-20px">
+        <Checkbox id="terms" name="terms" lang="en" />
+    </div>
+    <div id="email-error" class="col-12 clr-error">
+        <p>Email addresses do not match!</p>
+    </div>
+    <div class="row mb-40px">
+        <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Send</button>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form[name="mysore-en-form"]') as HTMLFormElement;
+        const emailInput = document.getElementById('email') as HTMLInputElement;
+        const emailConfirmInput = document.getElementById('email-confirm') as HTMLInputElement;
+        const errorDiv = document.getElementById('email-error') as HTMLElement;
+
+        // Kezdeti állapot beállítása
+        errorDiv.style.display = 'none';
+
+        // Helper függvény a hibaállapot beállításához
+        const setErrorState = (hasError: boolean) => {
+            errorDiv.style.display = hasError ? 'block' : 'none';
+            const borderColor = hasError ? '#dc2626' : '';
+            emailInput.style.borderColor = borderColor;
+            emailConfirmInput.style.borderColor = borderColor;
+            emailConfirmInput.setCustomValidity(hasError ? 'Az email címek nem egyeznek!' : '');
+        };
+
+        // Input mezők változásának figyelése
+        const onInputChange = () => {
+            // Töröljük a hibaállapotot amikor a user módosítja valamelyik mezőt
+            setErrorState(false);
+        };
+
+        emailInput.addEventListener('input', onInputChange);
+        emailConfirmInput.addEventListener('input', onInputChange);
+
+        // Form beküldés kezelése
+        form.addEventListener('submit', (e) => {
+            const email1 = emailInput.value.trim();
+            const email2 = emailConfirmInput.value.trim();
+
+            if (email1 && email2 && email1 !== email2) {
+                e.preventDefault();
+                setErrorState(true);
+            } else {
+                setErrorState(false);
+            }
+        });
+    });
+</script>

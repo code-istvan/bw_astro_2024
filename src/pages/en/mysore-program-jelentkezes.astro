@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/mysore_mobil.jpg';
 import desktopImage from '../../images/mysore_desktop.jpg';
-import MysoreHuForm from '../../components/Forms/MysoreHuForm.astro';
+import MysoreEnForm from '../../components/Forms/MysoreEnForm.astro';
 
 const metadata = {
     title: 'MYSORE PROGRAM REGISTRATION',
@@ -16,6 +16,6 @@ const metadata = {
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container page-content">
         <div class="row mt-40px"><h3>REGISTRATION FORM</h3></div>
-        <MysoreHuForm />
+        <MysoreEnForm />
     </div>
 </BaseLayout>
