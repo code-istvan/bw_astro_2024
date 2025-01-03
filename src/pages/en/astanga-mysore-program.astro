@@ -25,16 +25,9 @@ const metadata = {
         'Mysore style ashtanga yoga practice is an effective and personalized method that brings physical strength, flexibility, and inner peace. The continuous growth it offers and the teacher-student relationship provides an opportunity for deeper understanding and personal development.',
 };
 
-const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
 const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
-
-const huMysoreElements = mysoreElementsData.HU;
 const enMysoreElements = mysoreElementsData.EN;
-
-const huMysoreReadings = mysoreReadingsData.HU;
 const enMysoreReadings = mysoreReadingsData.EN;
-
-const huMysoreFaqs = mysoreFaqsData.HU;
 const enMysoreFaqs = mysoreFaqsData.EN;
 ---
 
@@ -142,13 +135,13 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                     ))
                 }
             </div>
-            <div class="page-content__section display-flex display-flex--justify-center">
+            <div class="page-content__section width-100 display-flex display-flex--justify-center">
                 <div
                     class="counter text-align-center island-section island-section--orange-border island-section--orange-border__width"
                 >
                     <h3 class="mb-20px font-family-primary clr-brand-orange">TRADITION</h3>
                     <div class="col-12-xs mb-20px">
-                        <Counter client:only="react" language={Astro.currentLocale} />
+                        <Counter client:only="react" language="eng" />
                     </div>
                     <p>Hungary's oldest Ashtanga Mysore program</p>
                     <p>
@@ -182,7 +175,7 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                 <div class="mysore-structure__body mysore-structure__cards--mobile">
                     <Carousel>
                         {
-                            huMysoreElements.map((element) => (
+                            enMysoreElements.map((element) => (
                                 <div class="section-social-proof__slide embla__slide">
                                     <MysoreStructureCard
                                         title={element.title}
@@ -289,17 +282,17 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                                 />
                             ))
                         ) : (
-                            <div>Nincs elérhető információ.</div>
+                            <div>No information available.</div>
                         )
                     }
                 </div>
             </div>
             <div class="page-content__section page-content__section--readings mb-20px">
-                <h3>Hasznos olvasmányok a Mysore-gyakorlásról</h3>
+                <h3>Useful readings about Mysore practice</h3>
                 <div class="row unordered-list-style mt-20px mb-40px">
                     <ul>
                         {
-                            huMysoreReadings.map((item) => (
+                            enMysoreReadings.map((item) => (
                                 <li class={item.classNames}>
                                     <a href={item.link}>{item.title}</a>
                                 </li>
@@ -310,17 +303,18 @@ const enMysoreFaqs = mysoreFaqsData.EN;
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.querySelector('#btn1');
-            if (button) {
-                button.addEventListener('click', () => {
-                    const url = button.getAttribute('data-url');
-                    if (url) {
-                        window.location.href = url;
-                    }
-                });
-            }
-        });
-    </script>
 </BaseLayout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('#btn1');
+        if (button) {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        }
+    });
+</script>

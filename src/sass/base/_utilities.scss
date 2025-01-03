@@ -1,3 +1,6 @@
+@import '/src/sass/base/_fonts';
+@import '/src/sass/base/_colors';
+
 .list--no-style {
   list-style-type: none;
   padding: 0;
@@ -297,6 +300,10 @@
 
 .align-content-center {
   align-content: center;
+}
+
+.width-100 {
+  width: 100%;
 }
 
 blockquote {

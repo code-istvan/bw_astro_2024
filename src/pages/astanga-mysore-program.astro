@@ -26,16 +26,9 @@ const metadata = {
 };
 
 const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
-const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
-
 const huMysoreElements = mysoreElementsData.HU;
-const enMysoreElements = mysoreElementsData.EN;
-
 const huMysoreReadings = mysoreReadingsData.HU;
-const enMysoreReadings = mysoreReadingsData.EN;
-
 const huMysoreFaqs = mysoreFaqsData.HU;
-const enMysoreFaqs = mysoreFaqsData.EN;
 ---
 
 <BaseLayout title={metadata.title} image={desktopImage} description={metadata.description}>
@@ -147,7 +140,7 @@ const enMysoreFaqs = mysoreFaqsData.EN;
             >
                 <h3 class="mb-20px font-family-primary clr-brand-orange">TRADÍCIÓ</h3>
                 <div class="col-12-xs mb-20px">
-                    <Counter client:only="react" language={Astro.currentLocale} />
+                    <Counter client:only="react" language="hu" />
                 </div>
                 <p>Magyarország legrégebbi astanga Mysore-programja</p>
                 <p>
