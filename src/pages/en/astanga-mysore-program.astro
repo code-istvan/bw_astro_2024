@@ -128,11 +128,11 @@ const enMysoreFaqs = mysoreFaqsData.EN;
             </div>
 
             <div class="text-left-mobile-center-desktop mb-40px">
-                <h3 class="clr-brand-orange font-family-primary">A Mysore-gyakorlás jellegzetességei</h3>
+                <h3 class="clr-brand-orange font-family-primary">Characteristics of Mysore practice</h3>
             </div>
             <div class="row gap-1">
                 {
-                    huMysoreSpecialitiesData.map((program) => (
+                    enMysoreSpecialitiesData.map((program) => (
                         <div class="col-12-xs col-6-md col-6-xl">
                             <div class="card__mysore-program">
                                 <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
@@ -146,13 +146,13 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                 <div
                     class="counter text-align-center island-section island-section--orange-border island-section--orange-border__width"
                 >
-                    <h3 class="mb-20px font-family-primary clr-brand-orange">TRADÍCIÓ</h3>
+                    <h3 class="mb-20px font-family-primary clr-brand-orange">TRADITION</h3>
                     <div class="col-12-xs mb-20px">
                         <Counter client:only="react" language={Astro.currentLocale} />
                     </div>
-                    <p>Magyarország legrégebbi astanga Mysore-programja</p>
+                    <p>Hungary's oldest Ashtanga Mysore program</p>
                     <p>
-                        <strong>Paramaguru Sharath Jois</strong> áldásával
+                        With the blessing of <strong>Paramaguru Sharath Jois</strong>
                     </p>
                     <div class="mt-20px">
                         <Icons name="SharatJiHandWriting" class="max-width-150" />
@@ -164,11 +164,11 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                 class="page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px"
             >
                 <h3 class="mysore-structure__title clr-brand-orange font-family-primary">
-                    A Mysore-program felépítése, elemei
+                    The structure and elements of the Mysore program
                 </h3>
                 <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
                     {
-                        huMysoreElements.map((element) => (
+                        enMysoreElements.map((element) => (
                             <div class="framed-section-orange__card">
                                 <Icons name={element.iconName} />
                                 <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
@@ -197,14 +197,16 @@ const enMysoreFaqs = mysoreFaqsData.EN;
             </div>
 
             <div class="row mt-40px mb-40px">
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Fegyelem és áldás: Az astanga jóga útja</h3>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">
+                    Discipline and Blessing: The Path of Ashtanga Yoga
+                </h3>
                 <p>
-                    Látszik, hogy nagy elkötelezettséget és komoly fegyelmet kíván ez az irányzat. Azonban az astanga
-                    vinyásza jóga ezen keretek között képes kifejteni teljesen az áldásos hatását. Amellett, hogy a
-                    gyakorlás fenntartásához automatikusan egészségesebb életmódra váltanak a gyakorlók (könnyű
-                    étkezések, korai fekvés és kelés, rendszeres életritmus), az elme is fokozatosan átalakul. A
-                    Mysore-gyakorlás szinte rákényszerít minket, hogy őszinték legyünk önmagunkkal, szembesít a
-                    hibáinkkal, amelyek akadályt képeznek a spirituális úton, és eszközként szolgál a leküzdésükhöz.
+                    It is clear that this practice requires great commitment and serious discipline. However, within
+                    this framework, ashtanga vinyasa yoga is able to fully manifest its blessed effects. In addition to
+                    practitioners automatically switching to a healthier lifestyle (light meals, early bedtimes and
+                    rising, regular life rhythm) to maintain the practice, the mind also gradually transforms. Mysore
+                    practice almost forces us to be honest with ourselves, confronts us with our faults that pose
+                    obstacles on the spiritual path, and serves as a tool to overcome them.
                 </p>
             </div>
             <div
@@ -212,7 +214,7 @@ const enMysoreFaqs = mysoreFaqsData.EN;
             >
                 <div class="lead-teacher__header text-center">
                     <h3 class="lead-teacher__title mb-20px font-family-primary clr-brand-orange">
-                        A Mysore-program vezetője
+                        The leader of the Mysore program
                     </h3>
                 </div>
                 <div class="lead-teacher__body display-flex display-flex--justify-center align-items-center">
@@ -224,53 +226,53 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                     <div>
                         <p>
                             <a href="/szalai-istvan" class="link-enhanced link-orange">
-                                <strong>Szalai István</strong>
+                                <strong>István Szalai</strong>
                             </a>
                         </p>
                         <p class="body body--small">KPJAYI Authorized Level 1</p>
-                        <p class="body body--small">astanga jóga oktató</p>
+                        <p class="body body--small">ashtanga yoga teacher</p>
                     </div>
                 </div>
             </div>
             <div class="page-content__section page-content__section--application mb-20px mt-40px">
                 <p>
-                    Amennyiben szeretnél csatlakozni, ezt a
+                    If you would like to join, you can do so through the
 
-                    <a href="/mysore-program-jelentkezes" class="link-enhanced link-orange">
-                        jelentkezés a Mysore-programba
+                    <a href="/en/mysore-program-jelentkezes" class="link-enhanced link-orange">
+                        Application for the Mysore Program
                     </a>
-                    felületen keresztül teheted meg. Kérlek, mindenképp várd meg visszajelzésünket, mielőtt jössz az első
-                    Mysore-órára, amelyhez hasznos információkat találhatsz a következő menüpontok alatt:{' '}
-                    <a href="/elso-alkalom" class="link-enhanced link-orange">első alkalom</a>
-                    valamint <a href="/hazirend" class="link-enhanced link-orange">házirend</a>.
+                    page. Please wait for our response before coming to your first Mysore class. Useful information can be
+                    found under the{' '}
+                    <a href="/en/elso-alkalom" class="link-enhanced link-orange">first time</a>
+                    valamint <a href="/en/hazirend" class="link-enhanced link-orange">house rules</a> menu items.
                 </p>
                 <div class="row gap-1 mt-20px">
                     <div class="application__buttons col-12-xs col-6-md col-6-xl">
                         <a
-                            href="/mysore-program-jelentkezes"
+                            href="/en/mysore-program-jelentkezes"
                             class="btn btn--full-width-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
                             aria-label="Jelentkezés a Mysore-programba"
                         >
-                            Jelentkezés a Mysore-programba
+                            Application for the Mysore Program
                         </a>
                     </div>
                     <div class="col-12-xs col-6-md col-6-xl application__buttons">
                         <a
-                            href="/arak"
+                            href="/en/arak"
                             class="btn btn--full-width-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
                             aria-label="Jelentkezés a Mysore-programba"
                         >
-                            Mysore-program árak
+                            Mysore Program Prices
                         </a>
                     </div>
                 </div>
             </div>
             <div class="page-content__section page-content__section--faq mb-40px mt-40px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
+                <h3 class="font-family-primary clr-brand-orange mb-20px">Frequently Asked Questions</h3>
                 <div class="page-content__section page-content__section--faq mb-40px">
                     {
-                        huMysoreFaqs.length > 0 ? (
-                            huMysoreFaqs.map((faq) => (
+                        enMysoreFaqs.length > 0 ? (
+                            enMysoreFaqs.map((faq) => (
                                 <AccordionMysoreFaq
                                     key={faq.id}
                                     id={`accordion-${faq.id}`}
