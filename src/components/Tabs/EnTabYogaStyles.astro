@@ -1,5 +1,4 @@
 ---
-const { tab = 'tab1' } = Astro.props;
 import { Image } from 'astro:assets';
 import oldShala from '../../images/old_shala.jpg';
 import gurujiSharathji from '../../images/guruji_sharathji.jpeg';
@@ -9,12 +8,13 @@ import limbsData from '../../data/eightLimbs.json';
 import seriesData from '../../data/ashtangaSeries.json';
 import './_tab.scss';
 
+const { tab = 'tab1' } = Astro.props;
 const huLimbsData = limbsData.HU;
 const huSeriesData = seriesData.HU;
 ---
 
 <section class="tabs mt-40px">
-    <div class="">
+    <div>
         <ul class="tab-list mb-20px">
             <li class="tab-item" data-target="tab1"><h3>Astanga</h3></li>
             <li class="tab-item" data-target="tab2"><h3>Vinyásza Krama</h3></li>
@@ -156,9 +156,11 @@ const huSeriesData = seriesData.HU;
             örömét.
         </h3>
         <p class="mt-20px">
-            A szanszkrit vinyásza szó vi előtagja változatot jelent, a nyásza utótag pedig azt, hogy „előírt feltételek
-            között”, tehát a teljes vinyásza szóösszetétel a mozdulat és légzés összhangjára vonatkozik, a krama szó
-            jelentése pedig módszertan.
+            A szanszkrit vinyásza szó <span class="italic">"vi"</span> előtagja <span class="italic">"változatot"</span>
+            jelent, a <span class="italic">"nyásza"</span> utótag pedig azt, hogy <span class="italic">
+                „előírt feltételek között”
+            </span>, tehát a teljes vinyásza szóösszetétel a mozdulat és légzés összhangjára vonatkozik, a
+            <span class="italic">"krama"</span> szó jelentése pedig módszertan.
         </p>
         <p class="mt-20px">
             A stílus jellegzetessége, hogy minden egyes mozdulatot megfelelő vinyászával kell kivitelezni, tehát az

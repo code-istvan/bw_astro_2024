@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/jogairanyzatok_mobil.jpg';
 import desktopImage from '../images/jogairanyzatok_desktop.jpg';
-import TabYogaStyles from '../components/Tabs/TabYogaStyles.astro';
+import HuTabYogaStyles from '../components/Tabs/HuTabYogaStyles.astro';
 
 const metadata = {
     title: 'VINYÁSZA JÓGAIRÁNYZATOK',
@@ -23,9 +23,6 @@ const tab = Astro.url.searchParams.get('tab') || '';
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
-        <TabYogaStyles tab="tab1" />
-        <!-- <a href="/vinyasza-jogairanyzatok?tab=tab2">Click here for tab2e</a> -->
+        <HuTabYogaStyles tab="tab1" />
     </div>
 </BaseLayout>
-
-<style></style>
