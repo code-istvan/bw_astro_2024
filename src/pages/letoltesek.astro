@@ -7,11 +7,10 @@ import downloadsData from '../data/downloads.json';
 
 const metadata = {
     title: 'LETÖLTÉSEK',
-    description: 'A jóga gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.',
+    description: 'Itt találod a bandha works astanga jógaiskola letölthető anyagait.',
 };
 
 const huDownloads = downloadsData.HU;
-const enDownloads = downloadsData.EN;
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -94,7 +93,7 @@ const enDownloads = downloadsData.EN;
                                     {sound.name}
                                 </a>
                             </p>
-                            <p>&nbsp;(.pdf)</p>
+                            <p>&nbsp;(.mp3)</p>
                             {sound.new && (
                                 <p class="new-badge clr-brand-orange">
                                     <strong> &nbsp;ÚJ!</strong>

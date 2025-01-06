@@ -1,21 +1,114 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/letoltesek_mobil.jpg';
 import desktopImage from '../../images/letoltesek_desktop.jpg';
+import downloadsData from '../../data/downloads.json';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'DOWNLOADS',
+    description: 'Here you can find the downloadable materials of Bandha Works Ashtanga Yoga School.',
+};
 
-const pageTitle = t('letoltesek');
+const enDownloads = downloadsData.EN;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px mb-20px">
+            <h3 class="clr-brand-orange">Series Charts</h3>
+            <p>The series chart does not replace the guidance of a qualified teacher</p>
+        </div>
+        <div class="unordered-list-style">
+            <ul class="sequences-list">
+                {
+                    enDownloads.sequences.map((sequence) => (
+                        <li class="sequences-list__item flex-row">
+                            <p>
+                                <strong>{sequence.style}:&nbsp;</strong>
+                            </p>
+                            <p>
+                                <a href={sequence.link} target="_blank" class="link-enhanced link-orange">
+                                    {sequence.name}
+                                </a>
+                            </p>
+                            <p>&nbsp;(.pdf)</p>
+                            {sequence.new && (
+                                <p class="new-badge clr-brand-orange">
+                                    <strong> &nbsp;ÚJ!</strong>
+                                </p>
+                            )}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="mt-40px mb-20px">
+            <h3 class="clr-brand-orange">Posters</h3>
+        </div>
+        <div class="unordered-list-style">
+            <ul class="posters-list">
+                {
+                    enDownloads.posters.map((poster) => (
+                        <li class="posters-list__item flex-row">
+                            <p>
+                                <strong>{poster.type}:&nbsp;</strong>
+                            </p>
+                            <p>
+                                <a href={poster.link} target="_blank" class="link-enhanced link-orange">
+                                    {poster.name}
+                                </a>
+                            </p>
+                            <p>&nbsp;(.pdf)</p>
+                            {poster.new && (
+                                <p class="new-badge clr-brand-orange">
+                                    <strong> &nbsp;ÚJ!</strong>
+                                </p>
+                            )}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <div class="mt-40px mb-20px">
+            <h3 class="clr-brand-orange">Audio Files</h3>
+        </div>
+        <div class="unordered-list-style mb-40px">
+            <ul class="posters-list">
+                {
+                    enDownloads.sounds.map((sound) => (
+                        <li class="posters-list__item flex-row">
+                            <p>
+                                <strong>{sound.type}:&nbsp;</strong>
+                            </p>
+                            <p>
+                                <a href={sound.link} target="_blank" class="link-enhanced link-orange">
+                                    {sound.name}
+                                </a>
+                            </p>
+                            <p>&nbsp;(.mp3)</p>
+                            {sound.new && (
+                                <p class="new-badge clr-brand-orange">
+                                    <strong> &nbsp;ÚJ!</strong>
+                                </p>
+                            )}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    .unordered-list-style ul p {
+        margin-left: 0;
+    }
+</style>
