@@ -1,21 +1,186 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/arak_mobil.jpg';
 import desktopImage from '../../images/arak_desktop.jpg';
+import pricingData from '../../data/prices.json';
+import '../../sass/pages/_arak.scss';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'PRICES',
+    description: "On this page you'll find the prices for services offered by Bandha Works Ashtanga Yoga School.",
+};
 
-const pageTitle = t('arak');
+const enPrices = pricingData.EN;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px">
+            <h3 class="mb-20px clr-brand-orange">Ashtanga Mysore Program</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Árak</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        enPrices.astangaMysore.map((item) => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.price}</td>
+                                <td>
+                                    {item.link ? (
+                                        <a
+                                            href={item.link}
+                                            class="link-enhanced link-orange"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item.buttonText}
+                                        </a>
+                                    ) : (
+                                        <span>{item.buttonText}</span>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="arak-table-footer mt-20px">
+            Prior registration is required to participate in the Ashtanga Mysore program! You can find detailed
+            information on the <a href="/en/astanga-mysore-program" class="link-enhanced link-orange">Mysore program</a>
+            page.
+        </p>
+        <div class="row mt-40px mb-40px">
+            <h3 class="clr-brand-orange mb-20px">Vinyasa Krama Yoga</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Prices</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        enPrices.vinyasaKrama.map((item) => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.price}</td>
+                                <td>
+                                    {item.link ? (
+                                        <a
+                                            href={item.link}
+                                            class="link-enhanced link-orange"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item.buttonText}
+                                        </a>
+                                    ) : (
+                                        <span>{item.buttonText}</span>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <h3 class="clr-brand-orange mb-20px">Courses</h3>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Prices</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        enPrices.courses.map((item) => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.price}</td>
+                                <td>
+                                    {item.link ? (
+                                        <a
+                                            href={item.link}
+                                            class="link-enhanced link-orange"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item.buttonText}
+                                        </a>
+                                    ) : (
+                                        <span>{item.buttonText}</span>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <div class="mb-20px">
+                <h3 class="clr-brand-orange mb-20px">Private Classes</h3>
+                <p class="mt-neg-12">Available in Hungarian, English and Spanish.</p>
+            </div>
+            <table class="prices mt-10px">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Prices</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        enPrices.privateLessons.map((item) => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.price}</td>
+                                <td>
+                                    {item.link ? (
+                                        <a
+                                            href={item.link}
+                                            class="link-enhanced link-orange"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item.buttonText}
+                                        </a>
+                                    ) : (
+                                        <span>{item.buttonText}</span>
+                                    )}
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row mb-40px">
+            <p>
+                Passes, courses and single class tickets are non-refundable. Passes cannot be extended beyond their
+                expiration date; passes and courses cannot be suspended. The dates of purchased single class tickets
+                cannot be modified after purchase.
+            </p>
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>

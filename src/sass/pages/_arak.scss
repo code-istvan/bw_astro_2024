@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@import '/src/sass/global';
 
 table.prices {
   width: 100%;
@@ -48,4 +48,8 @@ table.prices {
   small {
     margin-top: 8px;
   }
+}
+
+.mt-neg-12 {
+  margin-top: -12px;
 }
