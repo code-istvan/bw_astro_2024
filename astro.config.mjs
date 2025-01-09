@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  output: 'hybrid', //hibajavítás miatt kikommentelve
+  output: 'static', //hibajavítás miatt kikommentelve
   adapter: netlify(), //hibajavítás miatt kikommentelve
   i18n: {
     defaultLocale: 'hu',

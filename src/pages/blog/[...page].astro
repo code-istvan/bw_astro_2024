@@ -31,6 +31,8 @@ type Props = {
 
 const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
 const { page } = Astro.props;
+console.log(page);
+
 const pageTitle = `BLOG`;
 const pageData = page.data.filter((post) => post.data.language === currentLanguage);
 ---

@@ -9,34 +9,34 @@ import seriesData from '../../data/ashtangaSeries.json';
 import './_tab.scss';
 
 const { tab = 'tab1' } = Astro.props;
-const huLimbsData = limbsData.HU;
-const huSeriesData = seriesData.HU;
+const enLimbsData = limbsData.EN;
+const enSeriesData = seriesData.EN;
 ---
 
 <section class="tabs mt-40px">
     <div>
         <ul class="tab-list mb-20px">
-            <li class="tab-item" data-target="tab1"><h3>Astanga</h3></li>
-            <li class="tab-item" data-target="tab2"><h3>Vinyásza Krama</h3></li>
+            <li class="tab-item" data-target="tab1"><h3>Ashtanga</h3></li>
+            <li class="tab-item" data-target="tab2"><h3>Vinyasa Krama</h3></li>
         </ul>
     </div>
     <div id="tab1" class="tab-content --is-active">
         <blockquote>
-            Viná vinyásza jógéna ászanádin na kárajét <br />
-            Óh, jógi, ne végezz ászanát vinyásza nélkül <br />
-            Jóga Korunta - Vámana Risi <br />
+            Vinā vinyāsa yogena āsanādīn na kārayet <br />
+            Do not do asana without vinyasa<br />
+            Yoga Korunta - Vámana Risi <br />
         </blockquote>
-        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">A nyolcágú jógarendszer</h3>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">The eight limbs of yoga</h3>
         <p>
-            Az <b>astanga</b> szanszkrit szó jelentése nyolc ág, Patandzsali nyolclépcsős jógarendszerére utal. Patandzsali
-            Maharishi feltehetőleg az i.e. 2. században élt nagy indiai bölcs volt, aki megírta a Jóga Szútrákat. A tömör
-            aforizmákban nyolc lépcsőből álló módszert javasol a jógagyakorlóknak, innen kapta nevét az astanga (nyolcágú)
-            jóga.
+            The Sanskrit word <b>ashtanga</b> means eight limbs, referring to Patanjali's eight-limbed yoga system. Patanjali
+            Maharishi was supposedly a great Indian sage who lived in the 2nd century BCE and wrote the Yoga Sutras. In these
+            concise aphorisms, he proposed an eight-step method for yoga practitioners, hence the name ashtanga (eight limbs)
+            yoga.
         </p>
         <br />
         <ul>
             {
-                huLimbsData.map((limb) => (
+                enLimbsData.map((limb) => (
                     <li class="limb-list__item">
                         <p class="limb-list__limb clr-brand-orange">
                             <strong>{limb.limb}</strong>
@@ -46,53 +46,50 @@ const huSeriesData = seriesData.HU;
                 ))
             }
         </ul>
-        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Ászanák: Az astanga jóga alapjai</h3>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Asanas: The foundations of Ashtanga yoga</h3>
         <p>
-            Ezek alapján az ászana csupán egy kis szelet az egészből, mégis rendkívül fontos szerepet játszik abban,
-            hogy jógagyakorlásunk kellően megalapozott legyen, és továbbléphessünk a következő szintek felé.
+            Based on this, asana is just a small slice of the whole, yet it plays an extremely important role in
+            establishing a solid foundation for our yoga practice and in helping us progress toward the next levels.
         </p>
         <p class="mt-20px">
-            Ekkor gyakorlatilag a test felkészítése zajlik az akár több óráig tartó stabil, kényelmes ülőhelyzet
-            (lótusz, sziddhászana) fenntartására, amelyre a légző- majd meditációs gyakorlatok során nagy szükségünk
-            lesz. A ma ismert astanga vinyásza sorozatokat{' '}
+            This is essentially preparing the body to maintain a stable, comfortable sitting position (lotus,
+            siddhasana) for up to several hours, which will be very necessary during breathing and meditation practices.
+            The ashtanga vinyasa series known today was made world-famous by{' '}
             <a href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/" class="link-enhanced link-orange">
-                Sri Krishna Pattabhi Jois
-            </a>
-            tette világhírűvé, aki a legendás{' '}
+                Sri Krishna Pattabhi Jois,
+            </a> who was a student of the legendary{' '}
             <a href="/blog/astanga-ikonok-t-krishnamacharya-1-resz/" class="link-enhanced link-orange">
-                Sri Krishnamacharya tanítványa
+                Sri Krishnamacharya.
             </a>
-            volt.
         </p>
-
         <Image
             src={oldShala}
             class="mt-20px"
             alt="Astanga jóga oktatás a hagyományos, Mysore módszer szerint Indiában, Mysore városában"
         />
-
-        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Az ászana gyakorlás technológiája</h3>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">The Technology of Asana Practice</h3>
         <p class="mt-20px">
-            A vinyásza rendszer a mozgás és a légzés szigorú összhangját jelenti. Lényege az, hogy minden egyes ki- és
-            belégzésre meghatározott mozdulatot végzünk, az ászanákat pedig öt vagy több légzésig tartjuk.
+            The vinyasa system means the strict harmony between movement and breath. Its essence is that we perform
+            specific movements with each inhalation and exhalation, and we hold the asanas for five or more breaths.
         </p>
         <p class="mt-20px">
-            A rendszer lelke az úgynevezett
-            <a href="/blog/astanga-triszthana/" class="link-enhanced link-orange">triszthána</a>
-            - figyelem három fókusza - , azaz az <b>ászana</b>, a <b>hangos légzés</b> és a
-            <b>dristi</b>. A légzés hangja olyan, mint a tenger hullámainak morajlása, és a rá irányuló koncentráció egy
-            pratjáhára technika, amely segít befelé fordítani figyelmünket. A <b>dristi,</b> a tekintet fókuszálása, megfelelő
-            végrehajtásával nyugodt és tiszta elmével végezhetjük a sorozatokat.
-        </p><p class="mt-20px">
-            Az ászanákat a <b>bandhák</b> teszik könnyeddé, stabillá és biztonságossá. A <b>bandhák</b> fizikai szinten izomzárakat
-            jelentenek, a finom testen belül pedig a <b>prána</b>
-            (életerő) szabályozását irányítják. Az astanga vinyásza rendszerben fix ászanasorozatokat gyakorlunk, szám szerint
-            hatot, mindenki a számára megfelelő(ke)t, amelyeket változatlan formában végzünk hetente hatszor.
+            The heart of the system is the so-called
+            <a href="/blog/astanga-triszthana/" class="link-enhanced link-orange">tristhana</a>
+            - the three points of focus - which are <b>asana</b>, <b>loud breathing</b>, and
+            <b>drishti</b>. The sound of breathing is like the roaring of ocean waves, and concentrating on it is a
+            pratyahara technique that helps turn our attention inward. The <b>drishti,</b> the focusing of the gaze, when
+            performed correctly, allows us to practice the sequences with a calm and clear mind.
         </p>
-        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Ászana sorozatok</h3>
+        <p class="mt-20px">
+            The asanas are made light, stable, and safe by the <b>bandhas</b>. The <b>bandhas</b> are muscle locks on the
+            physical level, while within the subtle body they control the regulation of <b>prana</b> (life force). In the
+            ashtanga vinyasa system, we practice fixed asana sequences, six in total, each person practicing the one(s) suitable
+            for them, which we perform unchanged six times a week.
+        </p>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Asana Series</h3>
         <ul class="mt-20px">
             {
-                huSeriesData.map((serie) => (
+                enSeriesData.map((serie) => (
                     <li class="limb-list__item">
                         <p class="limb-list__limb clr-brand-orange">
                             <strong>{serie.title}</strong>
@@ -109,24 +106,22 @@ const huSeriesData = seriesData.HU;
                 alt="Ashtanga jóga gyakorlása Guruji vezetésével, Sharath Jois demonstrálásával"
             />
         </div>
-        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">Astanga Mysore-program működése</h3>
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">How the Ashtanga Mysore Program Works</h3>
         <p class="mb-20px mt-20px">
-            A sorozatok ászanái egymásra épülnek, ezért a tradicionális gyakorlás szakképzett oktató segítségével addig
-            tart, amíg el nem jutunk ahhoz a testhelyzethez, amelyet már nem tudunk végrehajtani. Ezt szaknyelven az
-            'utolsó ászanánknak' nevezzük, amelyet többször is megismételhetünk, hogy fejlődjünk benne. Ezzel a
-            módszerrel bármilyen adottságokkal rendelkező gyakorló részesülhet a rendszer jótékony hatásaiból, és nem
-            utolsósorban elkerülhetőek a sérülések.
+            The asanas in the series build upon each other, therefore in traditional practice with a qualified teacher,
+            we continue until we reach a posture that we cannot execute. In technical terms, this is called our 'last
+            asana,' which we can repeat multiple times to improve in it. With this method, practitioners of any ability
+            can benefit from the system's positive effects, and last but not least, injuries can be avoided.
         </p>
         <p class="mb-20px">
-            Ezt az ún. Mysore-stílusú órákon lehetséges kivitelezni, ahol a vezetett órával ellentétben mindenki a saját
-            légzésritmusára gyakorol, a tanár pedig lehetőséget kap arra, hogy mindenkinek az egyéni állapota szerint
-            nyújtson segítséget.
+            This is possible to implement in so-called Mysore-style classes, where, unlike in led classes, everyone
+            practices according to their own breathing rhythm, and the teacher has the opportunity to provide assistance
+            based on each person's individual condition.
         </p>
-
         <p class="mb-20px">
-            A <b>szombat</b>, illetve a <b>teli- és újhold napjai</b> (
-            <a href="/holdnapok" class="link-enhanced link-orange">a holdnapok</a>
-            ), továbbá a hölgyeknél <b></b> a menstruáció első három napja - <b>hölgynapok</b> - hagyományosan pihenőnapok.
+            <b>Saturdays</b> and <b>full moon and new moon days</b> (
+            <a href="/en/holdnapok" class="link-enhanced link-orange">moon days</a>
+            ), as well as the first three days of menstruation for women - <b>ladies' days</b> - are traditionally rest days.
         </p>
         <p class="mb-20px">
             Hagyományosan reggel, ideális esetben még napfelkelte előtt, gyakoroljuk az ászanákat, így a gyakorlás

@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly
+      day: saturday
+    assignees: [code-istvan]
+    labels: [dependencies, dependabot]
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: weekly
+      day: saturday
+    assignees: [code-istvan]
+    labels: [dependencies, dependabot]

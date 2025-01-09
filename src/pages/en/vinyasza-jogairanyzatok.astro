@@ -1,21 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/jogairanyzatok_mobil.jpg';
 import desktopImage from '../../images/jogairanyzatok_desktop.jpg';
+import EnTabYogaStyles from '../../components/Tabs/EnTabYogaStyles.astro';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'VINYASA YOGA STYLES',
+    description:
+        'On this page you can read information about vinyasa yoga styles. Ashtanga vinyasa yoga, vinyasa krama yoga.',
+};
 
-const pageTitle = t('jogairanyzatok');
+const tab = Astro.url.searchParams.get('tab') || '';
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <EnTabYogaStyles tab="tab1" />
     </div>
 </BaseLayout>
-
-<style></style>
