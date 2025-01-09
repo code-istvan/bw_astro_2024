@@ -4,6 +4,7 @@ import Checkbox from './Checkbox/Checkbox.astro';
 ---
 
 <form
+    id="newsletter-form"
     name="newsletter-form"
     action="/en/feliratkozas-sikeres/"
     data-netlify="true"
@@ -44,3 +45,14 @@ import Checkbox from './Checkbox/Checkbox.astro';
         <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Subscribe</button>
     </div>
 </form>
+
+<script>
+    import { submitNewsletter } from './submitNewsletter';
+
+    const form = document.getElementById('newsletter-form');
+    const language = 'en';
+
+    form?.addEventListener('submit', (event) => {
+        submitNewsletter(event, language);
+    });
+</script>

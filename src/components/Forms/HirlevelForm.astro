@@ -4,6 +4,7 @@ import Checkbox from './Checkbox/Checkbox.astro';
 ---
 
 <form
+    id="hirlevel-form"
     name="hirlevel-form"
     action="/feliratkozas-sikeres/"
     data-netlify="true"
@@ -44,3 +45,14 @@ import Checkbox from './Checkbox/Checkbox.astro';
         <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
     </div>
 </form>
+
+<script>
+    import { submitNewsletter } from './submitNewsletter';
+
+    const form = document.getElementById('hirlevel-form');
+    const language = 'hu';
+
+    form?.addEventListener('submit', (event) => {
+        submitNewsletter(event, language);
+    });
+</script>
