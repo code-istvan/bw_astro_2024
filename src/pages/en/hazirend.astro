@@ -1,20 +1,50 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/hazirend_mobil.jpg';
 import desktopImage from '../../images/hazirend_desktop.jpg';
+import rulesData from '../../data/houseRules.json';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const language = 'en';
+const rules = rulesData.rules.map((rule) => rule[language]);
 
-const pageTitle = t('hazirend');
+const metadata = {
+    title: 'HOUSE RULES',
+    description: 'On this page you will find the house rules of Bandha Works yoga shala.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="hazirend tight--desktop--container">
+            <div class="hazirend__intro row mt-20px mb-20px">
+                <div class="hazirend__text col">
+                    <h3 class="clr-brand-orange">
+                        For the sake of undisturbed practice and inner focus, please read and follow the rules outlined
+                        in the house rules. Thank you!
+                    </h3>
+                </div>
+            </div>
+            <div class="hazirend__rules row">
+                <div class="col">
+                    <ol type="1" class="body">
+                        {rules.map((rule) => <li>{rule}</li>)}
+                    </ol>
+                </div>
+            </div>
+            <div class="hazirend__footer row mt-20px mb-40px">
+                <div class="col">
+                    <p>We welcome you with love!</p>
+                </div>
+            </div>
+        </div>
     </div>
 </BaseLayout>
 

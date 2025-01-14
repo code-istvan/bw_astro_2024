@@ -5,24 +5,28 @@ import mobileImage from '../images/hazirend_mobil.jpg';
 import desktopImage from '../images/hazirend_desktop.jpg';
 import rulesData from '../data/houseRules.json';
 
-const pageTitle = 'Házirend';
 const language = 'hu'; // vagy 'en'
 const rules = rulesData.rules.map((rule) => rule[language]);
+
+const metadata = {
+    title: 'HÁZIREND',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió házirendjét.',
+};
 ---
 
-<BaseLayout title={pageTitle} image={desktopImage}>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
         <div class="hazirend tight--desktop--container">
             <div class="hazirend__intro row mt-20px mb-20px">
                 <div class="hazirend__text col">
-                    <h3>
+                    <h3 class="clr-brand-orange">
                         A zavartalan gyakorlás és befelé figyelés érdekében kérünk, hogy olvasd el, és tartsd be a
                         házirendben foglaltakat. Köszönjük!
                     </h3>
