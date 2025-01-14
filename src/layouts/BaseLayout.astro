@@ -8,6 +8,105 @@ import Seo from '../components/Seo.astro';
 import '../sass/global.scss';
 import '../sass/layouts/_layout.scss';
 
+// Props interface
+interface Props {
+    title: string;
+    description?: string;
+    image?: string | ImageMetadata;
+    isHomePage?: boolean;
+    noindex?: boolean;
+}
+
+const url = Astro.url;
+const { title, isHomePage, description, noindex } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="hu">
+    <head>
+        <Seo {...Astro.props} />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- DNS prefetch és preconnect -->
+        <link rel="dns-prefetch" href="https://identity.netlify.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <!-- Favicon optimalizálva -->
+        <link rel="icon" type="image/svg+xml" href={faviconSvgSrc.src} />
+        <link rel="apple-touch-icon" href={faviconSrc.src} />
+        <link rel="manifest" href="/manifest.json" />
+
+        <!-- Font optimalizálva -->
+        <AstroFont
+            config={[
+                {
+                    src: [],
+                    name: 'Abril Fatface',
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
+                    preload: true,
+                    display: 'swap',
+                    selector: 'body',
+                    fallback: 'serif', // Eltávolítottuk a preloadFiles tulajdonságot
+                },
+            ]}
+        />
+
+        {noindex && <meta name="robots" content="noindex, nofollow" />}
+    </head>
+
+    <body>
+        <Header />
+        <div class="layout-content-wrapper">
+            <slot />
+        </div>
+
+        <script>
+            // Netlify Identity típusok
+            interface NetlifyIdentity {
+                on: (event: string, callback: (user?: any) => void) => void;
+            }
+
+            declare global {
+                interface Window {
+                    netlifyIdentity?: NetlifyIdentity;
+                }
+            }
+
+            // Csak az admin oldalon töltjük be a Netlify Identity-t
+            if (window.location.pathname.includes('/admin')) {
+                const script = document.createElement('script');
+                script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+                script.onload = () => {
+                    const netlifyIdentity = window.netlifyIdentity;
+                    if (netlifyIdentity) {
+                        netlifyIdentity.on('init', (user: any) => {
+                            if (!user) {
+                                netlifyIdentity.on('login', () => {
+                                    document.location.href = '/admin/';
+                                });
+                            }
+                        });
+                    }
+                };
+                document.body.appendChild(script);
+            }
+        </script>
+        <Footer />
+    </body><!-- Mentés --><!-- 
+---
+import faviconSrc from '../images/favicon.png';
+import faviconSvgSrc from '../images/favicon.svg';
+import Header from '../components/Navigation/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
+import { AstroFont } from 'astro-font';
+import Seo from '../components/Seo.astro';
+import '../sass/global.scss';
+import '../sass/layouts/_layout.scss';
+
 interface Props {
     title: string;
     description?: string;
@@ -69,4 +168,5 @@ const { title, isHomePage, description, noindex } = Astro.props as Props;
         </script>
         <Footer />
     </body>
+</html> -->
 </html>
