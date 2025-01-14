@@ -14,7 +14,7 @@ const metadata = {
 };
 ---
 
-<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}

@@ -245,9 +245,89 @@
       },
       {
         "author": "R. Sharath Jois",
-        "title": "The Spiritual Path of Ashtanga Yoga",
+        "title": "Aṣṭāṅga Yoga Anuṣṭhāna",
         "link": "",
         "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Eddie Stern",
+        "title": "One simple thing",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Matthew Sweeney",
+        "title": "Ashtanga Yoga As It Is",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "David Swenson",
+        "title": "Ashtanga Yoga – The Practice Manual",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Gregor Maehle",
+        "title": "Practice and Philosophy",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Gregor Maehle",
+        "title": "Ashtanga Yoga – The Intermediate Series",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Gregor Maehle",
+        "title": "Pranayama The Breath of Yoga",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Gregor Maehle",
+        "title": "Yoga Meditation: Through Mantra, Chakras and Kundalini to Spiritual Freedom",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Anthony “Prem” Carlisi",
+        "title": "The Only Way Out is In",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Sharmila Desai and Anna Wise",
+        "title": "Yoga sadhana for mothers",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Guy Donaheye and Eddie Stern",
+        "title": "Guruji",
+        "link": "",
+        "language": "angol",
         "new": false,
         "favourite": ""
       }
@@ -260,6 +340,22 @@
         "language": "English",
         "new": false,
         "favourite": ""
+      },
+      {
+        "author": "Srivatsa Ramaswami",
+        "title": "The Complete Book of Vinyasa Yoga",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Matthew Sweeney",
+        "title": "Vinyasa Krama",
+        "link": "",
+        "language": "angol",
+        "new": false,
+        "favourite": ""
       }
     ],
     "olvasmanyokFood": [
@@ -270,12 +366,92 @@
         "language": "English",
         "new": false,
         "favourite": ""
+      },
+      {
+        "author": "T. Colin Campbell",
+        "title": "The China Study",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "R. Sharath Jois",
+        "title": "Ageless: A Yogi's Secrets to a Long and Healthy Life",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
       }
     ],
     "olvasmanyokSpiri": [
       {
         "author": "Elisabeth Haich",
         "title": "Initiation",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Paramahansa Yogananda",
+        "title": "Autobiography of a Yogi",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Pal Pandian",
+        "title": "Siddhas, Masters of the Basics",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Swami Rama",
+        "title": "The Essence of Spiritual Life",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Swami Rama",
+        "title": "Living with the Himalayan Masters",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Paul Brunton",
+        "title": "A Search in Secret India",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Richard Freeman",
+        "title": "The Mirror of Yoga",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Sadhguru",
+        "title": "Inner Engineering: A Yogi's Guide to Joy",
+        "link": "",
+        "language": "English",
+        "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Sadhguru",
+        "title": "Karma: A Yogi's Guide to Crafting Your Destiny",
         "link": "",
         "language": "English",
         "new": false,

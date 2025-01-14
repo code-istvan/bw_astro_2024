@@ -1,21 +1,66 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/olvasmanyok_mobil.jpeg';
 import desktopImage from '../../images/olvasmanyok_desktop.jpeg';
+import recommendedReadings from '../../data/recommendedReadings.json';
+import AccordionBooks from '../../components/Accordions/AccordionBooks.astro';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'RECOMMENDED READINGS',
+    description: 'A jóga gyakorlásához szükséges elméleti tudás elsajátításához az alábbi olvasmányokat ajánljuk.',
+};
 
-const pageTitle = t('olvasmanyok');
+const enBooks = recommendedReadings.EN;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout {...metadata} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="row">
+            <blockquote class="mt-40px">Yoga is 99% practice and 1% theory</blockquote>
+            <p class="mt-40px">
+                K. Pattabhi Jois's famous saying points out that it's not possible to understand the essence of Ashtanga
+                yoga merely by reading books. This branch of yoga is an experiential path that must be discovered
+                through practice. This path can be supported (1%) by studying scriptures - Patanjali's Yoga Sutras, as
+                well as works born from the personal experiences of recognized ancient yoga practitioners. For acquiring
+                the theoretical knowledge necessary for practicing yoga, we recommend the following readings.
+            </p>
+        </div>
+        <div class="row mt-40px mb-20px">
+            <AccordionBooks
+                id="accordion1"
+                className="accordion-title"
+                title="Ashtanga Vinyasa Yoga"
+                books={enBooks.olvasmanyokAstanga}
+            />
+            <AccordionBooks
+                id="accordion2"
+                className="accordion-title"
+                title="Vinyasa Krama Yoga"
+                books={enBooks.olvasmanyokKrama}
+            />
+            <AccordionBooks
+                id="accordion3"
+                className="accordion-title"
+                title="Other spiritual"
+                books={enBooks.olvasmanyokSpiri}
+            />
+            <AccordionBooks
+                id="accordion4"
+                className="accordion-title"
+                title="Nutrition, lifestyle"
+                books={enBooks.olvasmanyokFood}
+            />
+        </div>
+        <div class="row">
+            <p class="mt-20px mb-40px">Books cannot replace the guidance of a qualified teacher.</p>
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
