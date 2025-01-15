@@ -6,11 +6,14 @@ import desktopImage from '../images/holdnapok_desktop.jpeg';
 import TabMoonDays from '../components/Tabs/TabMoonDays.astro';
 import moonDays from '../data/moonDays.json';
 import MoonDaysNavigator from '../components/MoonDays/MoonDaysNavigator.jsx';
+import { getLangFromUrl } from '../i18n/utils';
 
 const metadata = {
     title: 'HOLDNAPOK',
     description: 'Ezen az oldalon olvashatsz az astangás holdnapokról. Holdnaptár, pihenőnapok, ékádasi.',
 };
+
+const lang = getLangFromUrl(Astro.url);
 
 const moonDayInfo = `A holdnaptárban *-gal jelölt dátumok speciális astangás holdnapok. 
 A hivatalos – Budapestre számított – teli- és újhold nem erre a napra esik, viszont az aktuális holdnap 
@@ -21,7 +24,7 @@ ezért tolódik a pihenőnap erre a dátumra.`;
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} client:load /></div>
+        <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} lang={lang} client:load /></div>
         <div class="row gap-2">
             <div class="col-12-xs col-8-lg">
                 <TabMoonDays tab="tab1" />
@@ -33,7 +36,7 @@ ezért tolódik a pihenőnap erre a dátumra.`;
             </div>
             <div class="col-12-xs col-4-lg mt-40px hidden-mobile">
                 <h3>Holdnaptár</h3>
-                <MoonDaysNavigator moonDays={moonDays} client:load />
+                <MoonDaysNavigator moonDays={moonDays} lang={lang} client:load />
                 <p class="mt-20px">
                     {moonDayInfo}
                 </p>

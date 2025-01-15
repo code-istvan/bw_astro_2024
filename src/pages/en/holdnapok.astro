@@ -1,20 +1,46 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/holdnapok_mobil.jpeg';
 import desktopImage from '../../images/holdnapok_desktop.jpeg';
+import TabMoonDays from '../../components/Tabs/TabMoonDays.astro';
+import moonDays from '../../data/moonDays.json';
+import MoonDaysNavigator from '../../components/MoonDays/MoonDaysNavigator.jsx';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const metadata = {
+    title: 'MOON DAYS',
+    description: 'On this page you can read about Ashtanga moon days. Moon calendar, rest days, Ekadashi.',
+};
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
-const pageTitle = t('holdnapok');
+const moonDayInfo = `The dates marked with * in the moon calendar are special Ashtanga moon days.
+The official full moon and new moon calculated for Budapest does not fall on this day, however the exact time (hour and minute) of the current moon day (e.g. 23:30) is closer to the next day's practice time,
+therefore the rest day shifts to this date.`;
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+        <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} lang={lang} client:load /></div>
+        <div class="row gap-2">
+            <div class="col-12-xs col-8-lg">
+                <TabMoonDays tab="tab1" />
+                <div class="hidden-desktop">
+                    <p>
+                        {moonDayInfo}
+                    </p>
+                </div>
+            </div>
+            <div class="col-12-xs col-4-lg mt-40px hidden-mobile">
+                <h3>Holdnaptár</h3>
+                <MoonDaysNavigator moonDays={moonDays} lang={lang} client:load />
+                <p class="mt-20px">
+                    {moonDayInfo}
+                </p>
+            </div>
+        </div>
     </div>
 </BaseLayout>
 

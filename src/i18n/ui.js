@@ -87,6 +87,16 @@ export const ui = {
                 hiteles jógatanároktól tanulhassunk. A Bandha Works Ösztöndíj éppen az ilyen helyzetekben nyújthat
                 segítséget, jógaiskolánk a nyertesnek három hónapra korlátlan Mysore-jógabérletet biztosít.`,
     sectionSocialProofsTitle: 'Rólunk mondták',
+
+    // Button names
+    previousMonth: 'Előző hónap',
+    nextMonth: 'Következő hónap',
+
+    // MoonDays Card
+    noDataAvailable: 'Nincs elérhető adat.',
+    newMoon: 'ÚJ',
+    fullMoon: 'TELI',
+    ekadasi: 'ÉKÁDASI',
   },
 
   en: {
@@ -165,5 +175,15 @@ export const ui = {
     sectionScholarshipLink: '/en/osztondij',
     sectionScholarshipText: `Yoga can bring radical changes in everyone's life, and it is worth starting at any stage of life. However, sometimes our financial circumstances do not allow us to buy a yoga pass, and we may not yet have the routine to start practising at home. The Bandha Works Scholarship can help in exactly such situations, with our yoga school providing the winner with unlimited yoga pass for three months.`,
     sectionSocialProofsTitle: 'Testimonials',
+
+    // Button names
+    previousMonth: 'Previous Month',
+    nextMonth: 'Next Month',
+
+    // MoonDays Card
+    noDataAvailable: 'No data available.',
+    newMoon: 'NEW',
+    fullMoon: 'FULL',
+    ekadasi: 'EKADASI',
   },
 };
