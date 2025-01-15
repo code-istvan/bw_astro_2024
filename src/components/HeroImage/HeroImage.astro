@@ -23,20 +23,20 @@ const {
     containerClass = '',
 } = Astro.props;
 
-// const mobileImg = await getImage({
-//     src: mobileImgUrl,
-//     format: 'webp',
-//     width: 1080,
-//     height: 1080,
-// });
-
 const mobileImg = await getImage({
     src: mobileImgUrl,
     format: 'webp',
-    width: 640,
-    height: 640,
-    quality: 80,
+    width: 1080,
+    height: 1080,
 });
+
+// const mobileImg = await getImage({
+//     src: mobileImgUrl,
+//     format: 'webp',
+//     width: 640,
+//     height: 640,
+//     quality: 80,
+// });
 
 // A felesleges feltételes logika eltávolítása
 const desktopImg = await getImage({
