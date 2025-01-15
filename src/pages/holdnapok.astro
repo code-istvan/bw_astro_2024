@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/holdnapok_mobil.jpeg';
 import desktopImage from '../images/holdnapok_desktop.jpeg';
-import TabMoonDays from '../components/Tabs/TabMoonDays.astro';
+import HuTabMoonDays from '../components/Tabs/HuTabMoonDays.astro';
 import moonDays from '../data/moonDays.json';
 import MoonDaysNavigator from '../components/MoonDays/MoonDaysNavigator.jsx';
 import { getLangFromUrl } from '../i18n/utils';
@@ -27,7 +27,7 @@ ezért tolódik a pihenőnap erre a dátumra.`;
         <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} lang={lang} client:load /></div>
         <div class="row gap-2">
             <div class="col-12-xs col-8-lg">
-                <TabMoonDays tab="tab1" />
+                <HuTabMoonDays tab="tab1" />
                 <div class="hidden-desktop">
                     <p>
                         {moonDayInfo}

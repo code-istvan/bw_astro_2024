@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/holdnapok_mobil.jpeg';
 import desktopImage from '../../images/holdnapok_desktop.jpeg';
-import TabMoonDays from '../../components/Tabs/TabMoonDays.astro';
+import EnTabMoonDays from '../../components/Tabs/EnTabMoonDays.astro';
 import moonDays from '../../data/moonDays.json';
 import MoonDaysNavigator from '../../components/MoonDays/MoonDaysNavigator.jsx';
 import { getLangFromUrl } from '../../i18n/utils';
@@ -26,7 +26,7 @@ therefore the rest day shifts to this date.`;
         <div class="hidden-desktop"><MoonDaysNavigator moonDays={moonDays} lang={lang} client:load /></div>
         <div class="row gap-2">
             <div class="col-12-xs col-8-lg">
-                <TabMoonDays tab="tab1" />
+                <EnTabMoonDays tab="tab1" />
                 <div class="hidden-desktop">
                     <p>
                         {moonDayInfo}
@@ -34,7 +34,7 @@ therefore the rest day shifts to this date.`;
                 </div>
             </div>
             <div class="col-12-xs col-4-lg mt-40px hidden-mobile">
-                <h3>Holdnaptár</h3>
+                <h3>Moon Calendar</h3>
                 <MoonDaysNavigator moonDays={moonDays} lang={lang} client:load />
                 <p class="mt-20px">
                     {moonDayInfo}

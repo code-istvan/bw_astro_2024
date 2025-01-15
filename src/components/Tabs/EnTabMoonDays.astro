@@ -1,0 +1,110 @@
+---
+const { tab = 'tab1' } = Astro.props;
+import './_tab.scss';
+---
+
+<section class="tabs mt-40px">
+    <div class="">
+        <ul class="tab-list mb-20px">
+            <li class="tab-item" data-target="tab1"><h3>Moon Days</h3></li>
+            <li class="tab-item" data-target="tab2"><h3>Ekadashi</h3></li>
+        </ul>
+    </div>
+    <div id="tab1" class="tab-content --is-active">
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">
+            It is part of the Ashtanga yoga tradition that Full Moon and New Moon days are rest days, when there is no
+            asana practice.
+        </h3>
+        <p class="mb-20px mt-20px">
+            This tradition can also be explained by the fact that moon phases have an effect on us (the human body and
+            mind), since the human body is more than 70% water. During Full Moon, we feel energetic but emotionally
+            restless. During New Moon, we feel calm and balanced, but physical exertion doesn't feel good. In other
+            words, on Moon Days different energies have a strong impact on us, and because of this we may be more
+            vulnerable.
+        </p>
+        <p class="mb-20px mt-20px">
+            According to yogic traditions, this is why on Moon Days spiritual practices (e.g., self-observation,
+            studying sacred texts and books, practicing prayers, chanting mantras) are emphasized instead of asana
+            practice. Experiencing Moon Days for ourselves is one of the best ways to recognize and respect the rhythms
+            of nature, and thereby live in greater harmony with it.
+        </p>
+        <p class="mb-20px mt-20px">
+            Additionally, those who practice regularly (six days a week is recommended) will quickly notice how
+            beneficial the rest day on Moon Days can be, when their body can rest (after all, Ashtanga practice can be
+            physically demanding), and the extra free time makes mental rejuvenation even more complete.
+        </p>
+        <div class="separator-horizontal hidden-desktop mt-20px"></div>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h3 class="font-family-primary clr-brand-orange mt-20px mb-20px">
+            Ekadashi is the fasting day in Hindu culture
+        </h3>
+        <p class="mb-20px mt-20px">
+            The word itself means 'eleventh' in Sanskrit and refers to the eleventh day following the full moon and new
+            moon. According to Vedic traditions - thanks to the current position of the Moon - our body and mind are
+            most suitable for purification on these days. Through fasting, our physical body rests. With an empty, light
+            and clean stomach, our consciousness is capable of more energetic and alert functioning. It is beneficial to
+            spend these days in introspection and spiritual practice (chanting mantras, meditation).
+        </p>
+    </div>
+</section>
+
+<script>
+    // Alapvető változók
+    const SELECTORS = {
+        TAB: '.tab-item',
+        CONTENT: '.tab-content',
+    };
+
+    // URL-ből olvassuk ki a `tab` paramétert
+    const getTabFromURL = () => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('tab') || 'tab1'; // Alapértelmezett a 'tab1', ha nincs megadva paraméter
+    };
+
+    // A tab váltás logikája
+    const changeTab = (tabId) => {
+        // Kiválasztjuk az összes tab elemet
+        const tabs = document.querySelectorAll<HTMLElement>(SELECTORS.TAB);
+        const contents = document.querySelectorAll<HTMLElement>(SELECTORS.CONTENT);
+
+        // Minden tab esetén beállítjuk az aktív állapotot
+        tabs.forEach((tab) => {
+            const isActive = tab.dataset.target === tabId;
+            tab.classList.toggle('--is-active', isActive); // Csak az aktív tab kapja meg az osztályt
+        });
+
+        // Minden tartalom esetén beállítjuk az aktív állapotot
+        contents.forEach((content) => {
+            const isActive = content.id === tabId;
+            content.classList.toggle('--is-active', isActive); // Csak az aktív tartalom jelenik meg
+        });
+
+        // Frissítjük az URL-t, hogy a megfelelő tabot mutassa
+        const url = new URL(window.location.href); // window.location helyett window.location.href
+        url.searchParams.set('tab', tabId);
+        window.history.replaceState({}, '', url);
+    };
+
+    // Inicializálás funkció, amikor az oldal betöltődik
+    const initTabs = () => {
+        const initialTabId = getTabFromURL(); // URL alapján betöltjük az elsődleges tabot
+        const tabs = document.querySelectorAll<HTMLElement>(SELECTORS.TAB);
+
+        // Kattintás esemény kezelése minden tab elemre
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.target; // Lekérdezzük a cél tab id-jét
+                changeTab(tabId); // Tab váltás végrehajtása
+            });
+        });
+
+        // Az elsődleges tab beállítása a betöltéskor
+        changeTab(initialTabId);
+    };
+
+    // Az oldal betöltődésekor futtatjuk az inicializáló funkciót
+    document.addEventListener('DOMContentLoaded', () => {
+        initTabs();
+    });
+</script>
