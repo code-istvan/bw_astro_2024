@@ -1,18 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/mantra_mobil.jpg';
 import desktopImage from '../../images/mantra_desktop.jpg';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const pageTitle = t('mantra');
+const metadata = {
+    title: 'István',
+    description: 'Itt olvashatsz Szalai István jógaoktatóról, a Bandha Works alapítójáról.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
         <div class="row"><h1>Content will come here</h1></div>
     </div>
