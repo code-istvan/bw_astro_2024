@@ -1,4 +1,12 @@
 {
-  "teacherId": "kisannaJi",
-  "teacher": "Kisanna"
+  "teacher": "Kisanna",
+  "teacherOrder": "2",
+  "published": true,
+  "huTeacherFullName": "Barna Kisanna",
+  "enTeacherFullName": "Kisanna Barna",
+  "enTeacherStyle": "ashtanga yoga",
+  "teacherImage": "src/images/uploads/kisanna.png",
+  "huTeacherStyle": "astanga jóga",
+  "teacherLink": "https://bandha.works/barna-kisanna/",
+  "teacherId": "kisannaJi"
 }
