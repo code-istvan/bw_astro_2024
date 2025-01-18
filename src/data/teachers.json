@@ -1,24 +1,48 @@
 {
   "teachers": [
     {
+      "id": 1,
       "teacherId": "istvanJi",
       "teacherName": "István",
       "teacherLink": "/szalai-istvan/",
-      "teacherImage": "istvan.png"
+      "teacherImage": "istvan.png",
+      "hu": {
+        "fullName": "Szalai István",
+        "style": "astanga jóga",
+        "title": "a jógaiskola vezetője"
+      },
+      "en": {
+        "fullName": "István Szalai",
+        "style": "ashthanga yoga",
+        "title": "the head of the yoga school"
+      }
     },
     {
+      "id": 2,
+      "teacherId": "kisannaJi",
+      "teacherName": "Kisanna",
+      "teacherLink": "/barna-kisanna/",
+      "teacherImage": "kisanna.png",
+      "hu": {
+        "fullName": "Barna Kisanna",
+        "style": "astanga jóga",
+        "title": ""
+      },
+      "en": {
+        "fullName": "Kisanna Barna",
+        "style": "ashthanga yoga",
+        "title": "the head of the yoga school"
+      }
+    },
+    {
+      "id": 3,
       "teacherId": "noemiJi",
       "teacherName": "Noémi",
       "teacherLink": "/gal-noemi-andrea/",
       "teacherImage": ""
     },
     {
-      "teacherId": "kisannaJi",
-      "teacherName": "Kisanna",
-      "teacherLink": "/barna-kisanna/",
-      "teacherImage": "kisanna.png"
-    },
-    {
+      "id": 4,
       "teacherId": "temuJi",
       "teacherName": "Temu",
       "teacherLink": "/temu/",

@@ -3,15 +3,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/csapatunk_mobil.jpg';
 import desktopImage from '../images/csapatunk_desktop.jpg';
+import teachersData from '../data/teachers.json';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
-const pageTitle = 'Csapatunk';
+// Képek importálása
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
+
+const metadata = {
+    title: 'CSAPATUNK',
+    description: 'Itt találod a Bandha Works jógaoktatóit.',
+};
+
+const firstTwoTeachers = teachersData.teachers.slice(0, 2);
 ---
 
-<BaseLayout title={pageTitle} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row"><h1>Ide jön majd a tartalom</h1></div>
+        <div class="row">
+            {
+                firstTwoTeachers.map((teacher) => (
+                    <div class="col-md-6">
+                        <div class="teacher-card">
+                            {teacher.teacherImage && (
+                                <Image
+                                    src={images[`/src/images/${teacher.teacherImage}`]()}
+                                    alt={teacher.hu.fullName}
+                                    width="200"
+                                    height="200"
+                                    class="teacher-image"
+                                />
+                            )}
+                            <h2>{teacher.hu.fullName}</h2>
+                            <p>{teacher.hu.title}</p>
+                            <p>{teacher.hu.style}</p>
+                            <a href={teacher.teacherLink}>Részletek</a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    .teacher-card {
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .teacher-card img {
+        max-width: 200px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .teacher-card h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .teacher-card a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+    }
+</style>
