@@ -1,7 +1,7 @@
 {
   "teacher": "István",
   "huTeacherTitle": "a jógaiskola vezetője",
-  "teacherOrder": "1",
+  "teacherOrder": 1,
   "published": true,
   "huTeacherFullName": "Szalai István",
   "enTeacherFullName": "István Szalai",
