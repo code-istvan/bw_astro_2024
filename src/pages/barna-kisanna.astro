@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/kisanna_mobil.png';
+import desktopImage from '../images/kisanna_desktop.png';
+
+const metadata = {
+    title: 'Kisanna',
+    description: 'Itt olvashatsz Barna Kisanna jógaoktatóról, pszichológusról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">Barna Kisanna vagyok, pszichológus, astanga jóga gyakorló.</p>
+        <p class="mb-20px">
+            A jógával még egyetemista koromban találkoztam először. Sokféle irányzatot kipróbáltam már, mígnem egy
+            ismerősöm ajánlására felkerestem és lesétáltam életem első vinyásza kráma órájára a Bandha Works-be. Egyből
+            éreztem, hogy jó helyen járok: lenyűgözött a shala autentikussága, az a szakmai elhivatottság és odaadás,
+            amit az oktatókon láttam, valamint a jógaórák maguk, amiket egyre gyakrabban és rendszeresebben látogattam,
+            mert éreztem, hogy jobban vagyok utánuk, mint nélkülük.
+        </p>
+        <p class="mb-20px">
+            Kicsivel később – az első várandósságom második felében, keresve egy kiszámítható, testem (és lelkem)
+            aktuális állapotához módosítható, rendszeres gyakorlást biztosító sorozatot – kezdtem el astanga vinyásza
+            jógázni. Amit azóta is gyakorlok, immár a kisgyerekes családi lét lehetőségein belül. Ez a felállás
+            megerősít abban a meggyőződésemben, hogy a jóga mindenkinek való, és hogy messze túlmutat az ászanák
+            gyakorlásán.
+        </p>
+        <p class="mb-20px">
+            2019-ben lehetőségem adódott a jóga szülőhazájába, Indiába utazni, ahol Vijay Kumarnál astangáztam. Négy
+            évvel később, 2023-ban pedig felvételt nyertem a Sharath Yoga Centre-be, ahol Paramaguru Sharath Jois
+            felügyelete alatt gyakorolhattam.
+        </p>
+        <p class="mb-20px">
+            Számomra a jóga egy lehetőség, hogy kapcsolódhassunk önmagunkkal. A belső zűr-, és a külső hangzavar
+            lecsendesítése, amikor bepillantást nyerhetünk abba, éppen miben vagyunk, „mivel van dolgunk”. Engem
+            rendszeresen szembesít perfekcionizmusom korlátoltságával, és arra tanít, hogy elfogadóbb és megengedőbb
+            legyek önmagammal, „elengedőbb” a külső elvárásokkal.
+        </p>
+        <p>
+            Pszichológusként külön izgalmasnak tartom felfedezni a többezer éves keleti tanítások, a jóga filozófia,
+            illetve a modern nyugati pszichológiai és idegtudományi elméletek közötti párhuzamokat. Ebben a témában
+            indul hamarosan blogsorozatom a jógaiskola honlapján.
+        </p>
+    </div>
+</BaseLayout>
