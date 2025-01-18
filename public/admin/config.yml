@@ -250,6 +250,8 @@ collections:
     create: true
     slug: '{{teacherId}}'
     fields:
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Teacher-Order, name: teacherOrder, widget: string }
       - { label: TeacherId, name: teacherId, widget: string }
       - { label: Teacher, name: teacher, widget: string }
       - { label: TeacherLink, name: teacherLink, widget: string, required: false }
