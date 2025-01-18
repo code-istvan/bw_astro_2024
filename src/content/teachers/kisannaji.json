@@ -8,5 +8,7 @@
   "teacherImage": "src/images/uploads/kisanna.png",
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "https://bandha.works/barna-kisanna/",
-  "teacherId": "kisannaJi"
+  "teacherId": "kisannaJi",
+  "huTeacherTitle": "oktató",
+  "enTeacherTitle": "teacher"
 }
