@@ -1,11 +1,13 @@
 {
   "teacher": "Istvan",
   "huTeacherTitle": "főnök",
+  "teacherOrder": "1",
+  "published": true,
   "huTeacherFullName": "Szalai IstvánSzalai István",
   "enTeacherFullName": "István Szalai ",
   "enTeacherStyle": "ashtanga",
   "huTeacherStyle": "astanga",
   "teacherLink": "https://bandha.works/szalai-istvan/",
-  "teacherId": "istvan2Ji",
+  "teacherId": "istvan3Ji",
   "enTeacherTitle": "boss"
 }
