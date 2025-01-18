@@ -252,16 +252,16 @@ collections:
     fields:
       - { label: Published, name: published, widget: boolean, default: true }
       - { label: Teacher-Order, name: teacherOrder, widget: string }
-      - { label: TeacherId, name: teacherId, widget: string }
+      - { label: Teacher-Id, name: teacherId, widget: string }
       - { label: Teacher, name: teacher, widget: string }
-      - { label: TeacherLink, name: teacherLink, widget: string, required: false }
-      - { label: TeacherImage, name: teacherImage, widget: image, required: false }
-      - { label: HuTeacherFullName, name: huTeacherFullName, widget: string, required: false }
-      - { label: EnTeacherFullName, name: enTeacherFullName, widget: string, required: false }
-      - { label: HuTeacherStyle, name: huTeacherStyle, widget: string, required: false }
-      - { label: EnTeacherStyle, name: enTeacherStyle, widget: string, required: false }
-      - { label: HuTeacherTitle, name: huTeacherTitle, widget: string, required: false }
-      - { label: EnTeacherTitle, name: enTeacherTitle, widget: string, required: false }
+      - { label: Teacher-Link, name: teacherLink, widget: string, required: false }
+      - { label: Teacher-Image, name: teacherImage, widget: image, required: false }
+      - { label: Hu-Teacher-FullName, name: huTeacherFullName, widget: string, required: false }
+      - { label: En-Teacher-FullName, name: enTeacherFullName, widget: string, required: false }
+      - { label: Hu-Teacher-Style, name: huTeacherStyle, widget: string, required: false }
+      - { label: En-Teacher-Style, name: enTeacherStyle, widget: string, required: false }
+      - { label: Hu-Teacher-Title, name: huTeacherTitle, widget: string, required: false }
+      - { label: En-Teacher-Title, name: enTeacherTitle, widget: string, required: false }
 
   - name: events
     label: Events
