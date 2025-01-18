@@ -1,4 +1,14 @@
 {
+  "teacher": "István",
+  "huTeacherTitle": "a jógaiskola vezetője",
+  "teacherOrder": "1",
+  "published": true,
+  "huTeacherFullName": "Szalai István",
+  "enTeacherFullName": "István Szalai",
+  "enTeacherStyle": "ashtanga yoga",
+  "teacherImage": "src/images/uploads/istvan.png",
+  "huTeacherStyle": "astanga jóga",
+  "teacherLink": "https://bandha.works/szalai-istvan/",
   "teacherId": "istvanJi",
-  "teacher": "István"
+  "enTeacherTitle": "head of the yoga shala"
 }
