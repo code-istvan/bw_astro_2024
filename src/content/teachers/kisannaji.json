@@ -1,5 +1,6 @@
 {
   "teacher": "Kisanna",
+  "huTeacherTitle": "shala pszichológus",
   "teacherOrder": 2,
   "published": true,
   "huTeacherFullName": "Barna Kisanna",
@@ -9,6 +10,5 @@
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "https://bandha.works/barna-kisanna/",
   "teacherId": "kisannaJi",
-  "huTeacherTitle": "oktató",
-  "enTeacherTitle": "teacher"
+  "enTeacherTitle": "shala pszichológus"
 }
