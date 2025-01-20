@@ -1,21 +1,46 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import TeacherCard from '../../components/Cards/TeacherCard.astro';
 import mobileImage from '../../images/csapatunk_mobil.jpg';
 import desktopImage from '../../images/csapatunk_desktop.jpg';
+import { getCollection } from 'astro:content';
+import type { ImageMetadata } from 'astro';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'OUR TEAM',
+    description: 'Here you can find the yoga teachers of Bandha Works.',
+};
 
-const pageTitle = t('csapatunk');
+// Összes publikált tanár lekérése és rendezése teacherOrder szerint
+const teachers = await getCollection('teachers', ({ data }) => {
+    return data.published === true;
+}).then((teachers) => teachers.sort((a, b) => a.data.teacherOrder - b.data.teacherOrder));
+
+// Képek importálása
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/*.{jpeg,jpg,png,gif}');
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+        <div class="row mt-40px mb-40px gap-1">
+            {
+                teachers.map((teacher) => (
+                    <div class="col-12-xs col-6-lg">
+                        <TeacherCard
+                            teacherName={teacher.data.enTeacherFullName}
+                            teacherTitle={teacher.data.enTeacherTitle}
+                            teacherStyle={teacher.data.enTeacherStyle}
+                            teacherLink={teacher.data.teacherLink}
+                            teacherImage={teacher.data.teacherImage}
+                            teacherImageAlt={teacher.data.enTeacherFullName}
+                            images={images}
+                            lang="en"
+                        />
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
