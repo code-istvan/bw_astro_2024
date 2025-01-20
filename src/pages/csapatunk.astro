@@ -24,10 +24,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row">
+        <div class="row mt-40px mb-40px gap-1">
             {
                 teachers.map((teacher) => (
-                    <div class="col-md-6 mb-5">
+                    <div class="col-12-xs col-6-lg">
                         <TeacherCard
                             teacherName={teacher.data.huTeacherFullName}
                             teacherTitle={teacher.data.huTeacherTitle}

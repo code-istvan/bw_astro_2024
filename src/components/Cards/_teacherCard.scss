@@ -1,5 +1,8 @@
+@import '/src/sass/base/_colors';
+@import '/src/sass/base/_breakpoints';
+
 .teacher {
-  border: solid 2px #333;
+  border: solid 2px $color-shades-darkGray;
   border-radius: 2px;
   box-sizing: border-box;
   height: 100%;
@@ -9,31 +12,43 @@
   padding: 20px;
   display: flex;
 }
-.teacher__info {
-  color: white;
-}
+
 .teacher__name {
   padding-bottom: 10px;
 }
-.teacher__title,
-.teacher__style {
-  color: #666;
-}
-@media (max-width: 576px) {
-  .teacher__content {
+
+.teacher-card__card-body {
+  padding: 20px;
+  display: flex;
+  @include xs {
     flex-direction: column;
     align-items: center;
   }
-  .teacher__info {
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.teacher__content {
+  display: flex;
+
+  @include xs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.teacher__info {
+  @include xs {
     text-align: center;
     padding-top: 16px;
   }
-}
-@media (min-width: 768px) {
-  .teacher__content {
-    flex-direction: row;
-  }
-  .teacher__info {
+
+  @include md {
     text-align: left;
     padding-left: 20px;
     padding-top: 0;
