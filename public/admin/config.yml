@@ -233,6 +233,11 @@ collections:
     fields:
       - { label: Classid, name: classId, widget: string }
       - { label: Class, name: class, widget: string }
+      - { label: Class-Name-HU, name: classHu, widget: string }
+      - { label: Class-Name-EN, name: classEn, widget: string }
+      - { label: Class-Detail-HU, name: classDetailHu, widget: string, required: false }
+      - { label: Class-Detail-EN, name: classDetailEn, widget: string, required: false }
+      - { label: Class-Sign-Up-Url, name: classSignUpUrl, widget: string, required: false }
   - name: customTime
     label: Custom time
     label_singular: Schedule

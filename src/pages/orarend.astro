@@ -7,6 +7,165 @@ import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import classesData from '../data/classes.json';
+
+// Képek importálása
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/*.{jpeg,jpg,png,gif}');
+
+const pageTitle = 'Órarend';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Adatok lekérése
+const schedule = await getCollection('schedule');
+const teachers = await getCollection('teachers');
+
+// Dátumszűrés
+const today = new Date();
+today.toISOString();
+
+const filteredSchedule = schedule.filter((item) => {
+    const itemDate = new Date(item.data.date);
+    itemDate.setHours(0, 0, 0, 0);
+    return itemDate >= today;
+});
+
+const sortedSchedule = filteredSchedule.sort(
+    (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
+);
+
+// Előre betöltjük a képeket
+const loadedImages = await Promise.all(
+    teachers.map(async (teacher) => {
+        if (teacher.data.teacherImage) {
+            const imagePath = teacher.data.teacherImage.startsWith('/')
+                ? teacher.data.teacherImage
+                : `/${teacher.data.teacherImage}`;
+            if (imagePath in images) {
+                const imageModule = await images[imagePath]();
+                return [teacher.data.teacherId, imageModule.default];
+            }
+        }
+        return [teacher.data.teacherId, undefined];
+    })
+);
+
+const teacherImages = Object.fromEntries(loadedImages);
+
+// Segédfüggvények
+function getTeacherDetails(teacherId) {
+    const teacher = teachers.find((t) => t.data.teacherId === teacherId)?.data;
+    if (teacher) {
+        return {
+            ...teacher,
+            imageModule: teacherImages[teacher.teacherId],
+        };
+    }
+    return undefined;
+}
+
+function getClassDetails(classId) {
+    return classesData.classes.find((cls) => cls.classId === classId);
+}
+
+function renderClassDetails(item, index) {
+    const classKey = index === 0 ? 'class' : `class${index}`;
+    const teacherKey = index === 0 ? 'teacher' : `teacher${index}`;
+    const classTimeKey = index === 0 ? 'classTime' : `classTime${index}`;
+
+    const classId = item.data[classKey];
+    const teacherId = item.data[teacherKey];
+    const classTime = item.data[classTimeKey];
+
+    const classDetails = getClassDetails(classId);
+    const teacherDetails = getTeacherDetails(teacherId);
+
+    return classDetails && teacherDetails
+        ? {
+              classDetails,
+              teacherDetails,
+              classTime,
+          }
+        : null;
+}
+---
+
+<BaseLayout title={pageTitle} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+    <div class="container">
+        <div class="schedule-list">
+            {
+                sortedSchedule.map((item) => (
+                    <div data-key={item.id} class="schedule-item">
+                        <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
+                        {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
+                            (details) =>
+                                details && (
+                                    <div class="class-details">
+                                        <p>{details.classTime}</p>
+                                        <div>
+                                            <h3>{details.classDetails.classHu}</h3>
+                                            <p>Details: {details.classDetails.classDetailHu}</p>
+                                            <p>Signup: {details.classDetails.classSignUp}</p>
+                                        </div>
+                                        <p>
+                                            <a href={details.teacherDetails.teacherLink}>
+                                                {details.teacherDetails.teacherImage &&
+                                                    details.teacherDetails.imageModule && (
+                                                        <Image
+                                                            src={details.teacherDetails.imageModule}
+                                                            alt={
+                                                                details.teacherDetails.huTeacherFullName ||
+                                                                details.teacherDetails.teacher
+                                                            }
+                                                            width={50}
+                                                            height={50}
+                                                            class="teacher-image"
+                                                        />
+                                                    )}
+                                                {details.teacherDetails.huTeacherFullName ||
+                                                    details.teacherDetails.teacher}
+                                            </a>
+                                        </p>
+                                    </div>
+                                )
+                        )}
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .schedule-item {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    .teacher-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 2px solid lightgray;
+    }
+    .class-details {
+        margin-bottom: 15px;
+    }
+</style>
+
+<!-- ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/orarend_mobil.jpg';
+import desktopImage from '../images/orarend_desktop.jpg';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import teachersData from '../data/teachers.json';
 import classesData from '../data/classes.json';
 
@@ -126,4 +285,4 @@ function renderClassDetails(item, index) {
     .class-details {
         margin-bottom: 15px;
     }
-</style>
+</style> -->

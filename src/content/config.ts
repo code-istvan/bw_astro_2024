@@ -46,6 +46,11 @@ const classesCollection = defineCollection({
   schema: z.object({
     classId: z.string(),
     class: z.string(),
+    classHu: z.string(),
+    classEn: z.string(),
+    classDetailHu: z.string().optional(),
+    classDetailEn: z.string().optional(),
+    classSignUpUrl: z.string().optional(),
   }),
 });
 
