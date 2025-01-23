@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { languages } from '../i18n/ui';
+// import { languages } from '../i18n/ui';
 
 const postsCollection = defineCollection({
   type: 'content',
@@ -48,8 +48,12 @@ const classesCollection = defineCollection({
     class: z.string(),
     classHu: z.string(),
     classEn: z.string(),
-    classDetailHu: z.string().optional(),
-    classDetailEn: z.string().optional(),
+    classDetailHu: z.string().regex(/.*/, {
+      message: 'HTML content allowed',
+    }),
+    classDetailEn: z.string().regex(/.*/, {
+      message: 'HTML content allowed',
+    }),
     classSignUpUrl: z.string().optional(),
   }),
 });
