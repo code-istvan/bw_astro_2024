@@ -5,9 +5,14 @@ import { getLangFromUrl } from '../i18n/utils';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
+import '../sass/pages/_orarend.scss';
 
-const pageTitle = 'Órarend';
 const lang = getLangFromUrl(Astro.url);
+
+const metadata = {
+    title: 'ÓRAREND',
+    description: 'Ezen az oldalon megtalálod jógaiskolánk órarendjét. Jógatanárok, jógafajták, időpontok.',
+};
 
 const [schedule, teachers, classes] = await Promise.all([
     getCollection('schedule'),
@@ -41,8 +46,8 @@ const renderClassDetails = (item, index) => {
 };
 ---
 
-<BaseLayout title={pageTitle} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
         <div class="schedule-list">
             {
@@ -73,14 +78,3 @@ const renderClassDetails = (item, index) => {
         </div>
     </div>
 </BaseLayout>
-
-<style>
-    .schedule-item {
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-    }
-    .class-details {
-        margin-bottom: 15px;
-    }
-</style>
