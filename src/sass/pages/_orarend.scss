@@ -1,8 +1,12 @@
-.schedule-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
+.schedule__date-wrapper {
+  height: 3rem;
 }
-.class-details {
-  margin-bottom: 15px;
+
+.schedule__details {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.schedule__details-time {
+  margin-bottom: 0.5rem;
 }

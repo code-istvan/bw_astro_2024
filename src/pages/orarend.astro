@@ -27,6 +27,14 @@ const sortedSchedule = schedule
     .filter((item) => new Date(item.data.date) >= today)
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
 
+const formatDate = (date) => {
+    const dateObj = new Date(date);
+    return {
+        day: dateObj.toLocaleDateString(lang, { weekday: 'long' }).toUpperCase(),
+        fullDate: dateObj.toLocaleDateString(lang, { month: 'long', day: 'numeric' }).toUpperCase(),
+    };
+};
+
 const getTeacherDetails = (teacherId) => teachers.find((t) => t.data.teacherId === teacherId)?.data;
 
 const getClassDetails = (classId) => classes.find((cls) => cls.data.classId === classId)?.data;
@@ -46,29 +54,49 @@ const renderClassDetails = (item, index) => {
 };
 ---
 
-<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container">
-        <div class="schedule-list">
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="schedule container container--tight-desktop mt-40px">
+        <div class="schedule__list">
             {
                 sortedSchedule.map((item) => (
-                    <div class="schedule-item" data-key={item.id}>
-                        <p>Dátum: {new Date(item.data.date).toLocaleDateString(lang)}</p>
+                    <div class="schedule__item">
+                        <div class="schedule__date container-fluid bg-shades-darkGray">
+                            <div class="container container--tight-desktop">
+                                <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
+                                    <p class="schedule__date-day clr-shades-gray">{formatDate(item.data.date).day}</p>
+                                    <p class="schedule__date-full clr-shades-gray">
+                                        {formatDate(item.data.date).fullDate}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
                             (details) =>
                                 details && (
-                                    <div class="class-details">
-                                        <p>{details.classTime}</p>
-                                        <div>
-                                            <h3>{details.classDetails.classHu}</h3>
-                                            <p set:html={details.classDetails.classDetailHu} />
-                                            <p>Signup: {details.classDetails.classSignUpUrl}</p>
+                                    <div class="schedule__details">
+                                        <p class="schedule__details-time">{details.classTime}</p>
+                                        <div class="schedule__details-class display-flex justify-content-space-between align-items-center">
+                                            <h3 class="schedule__details-title">{details.classDetails.classHu}</h3>
+                                            <p class="schedule__details-signup link-enhanced link-orange">
+                                                <a href={details.classDetails.classSignUpUrl}>Részvétel</a>
+                                            </p>
                                         </div>
                                         <p>
-                                            <a href={details.teacherDetails.teacherLink}>
+                                            <a
+                                                class="clr-brand-orange body body--bold"
+                                                href={details.teacherDetails.teacherLink}
+                                            >
                                                 {details.teacherDetails.teacher}
                                             </a>
                                         </p>
+                                        <p set:html={details.classDetails.classDetailHu} />
                                     </div>
                                 )
                         )}
