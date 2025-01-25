@@ -1,12 +1,12 @@
 {
-  "newmoon": false,
+  "newmoon": true,
   "teacher": "istvanJi",
   "classTime": "5:30 - 9:00",
   "classTime2": "5:30 - 9:00",
   "published": true,
   "date": "April 2, 2025",
   "teacher2": "kisannaJi",
-  "fullmoon": true,
+  "fullmoon": false,
   "class": "ledClass",
   "class2": "mysorePractice",
   "ekadashi": false
