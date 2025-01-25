@@ -5,6 +5,7 @@ import { getLangFromUrl } from '../i18n/utils';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/orarend_mobil.jpg';
 import desktopImage from '../images/orarend_desktop.jpg';
+import Icons from '../components/Icons/Icons.astro';
 import '../sass/pages/_orarend.scss';
 
 const lang = getLangFromUrl(Astro.url);
@@ -70,7 +71,12 @@ const renderClassDetails = (item, index) => {
                         <div class="schedule__date container-fluid bg-shades-darkGray">
                             <div class="container container--tight-desktop">
                                 <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
-                                    <p class="schedule__date-day clr-shades-gray">{formatDate(item.data.date).day}</p>
+                                    <p class="schedule__date-day clr-shades-gray display-flex align-items-center">
+                                        {formatDate(item.data.date).day}
+                                        {item.data.fullmoon && <Icons name="Fullmoon" color="orange" />}
+                                        {item.data.newmoon && <Icons name="Newmoon" color="orange" />}
+                                        {item.data.ekadashi && <Icons name="Ekadasi" color="orange" />}
+                                    </p>
                                     <p class="schedule__date-full clr-shades-gray">
                                         {formatDate(item.data.date).fullDate}
                                     </p>
