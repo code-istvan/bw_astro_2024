@@ -1,5 +1,5 @@
 {
-  "newmoon": true,
+  "newmoon": false,
   "teacher": "istvanJi",
   "classTime": "10:00 - 12:00",
   "classTime2": "18:00 - 19:30",
@@ -8,7 +8,7 @@
   "date": "April 3, 2025",
   "classTime4": "10:00 - 12:00",
   "teacher2": "kisannaJi",
-  "fullmoon": true,
+  "fullmoon": false,
   "teacher3": "kisannaJi",
   "teacher4": "kisannaJi",
   "class": "ledClass",
