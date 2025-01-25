@@ -1,12 +1,30 @@
+@import '/src/sass/base/_colors';
+
 .schedule__date-wrapper {
   height: 3rem;
-}
-
-.schedule__details {
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .schedule__details-time {
   margin-bottom: 0.5rem;
+}
+
+/* Creates a horizontal separator line after each schedule item except the last one */
+
+.schedule__details {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.schedule__details:not(:last-child) {
+  padding-bottom: 1rem;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-shades-lightBlack;
+  }
 }
