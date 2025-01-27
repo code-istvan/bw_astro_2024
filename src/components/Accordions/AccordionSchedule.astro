@@ -1,0 +1,41 @@
+---
+const { content, lang, uniqueId } = Astro.props;
+const buttonText = lang === 'hu' ? 'Részletek' : 'Details';
+const accordionId = `schedule-${uniqueId}`;
+import './_accordion.scss';
+---
+
+<div class="schedule-accordion">
+    <button class="schedule-accordion__button accordion" data-accordion-toggle={accordionId}>
+        <div class="schedule-accordion__header display-flex">
+            <div class="display-flex align-items-center">
+                <svg
+                    class="schedule-accordion__icon"
+                    data-accordion-icon={accordionId}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M6 4.12132L8.12132 2L15.5459 9.42462L17.6673 11.5459L15.5459 13.6673L8.12132 21.0919L6 18.9706L13.4246 11.5459L6 4.12132Z"
+                        fill="white"
+                    >
+                    </path>
+                </svg>
+                <p class="schedule-accordion__text">{buttonText}</p>
+            </div>
+        </div>
+    </button>
+    <div data-accordion-content={accordionId} class="schedule-accordion__content accordion__content">
+        <div class="schedule-accordion__content-wrapper accordion__text">
+            <p class="clr-shades-gray" set:html={content} />
+        </div>
+    </div>
+</div>
+
+<script>
+    import { initAccordion } from '../js/accordionLogic.js';
+    initAccordion();
+</script>
