@@ -2,7 +2,10 @@
 published: true
 language: Hungarian
 title: "David Garrigues: Gyenge testben erőtlen lélek"
-description: Sri K. Pattabhi Jois szerint az Önvaló nem ismerhető meg a gyengék által
+description: Egy mélyreható elmélkedés arról, hogyan válik az ászana gyakorlás a
+  jóga alapkövévé, amely nem csak fizikai erőt ad, hanem utat nyit az
+  önmegismerés, a belső fejlődés és a valódi spirituális átalakulás felé -
+  Pattabhi Jois tanításain és személyes tapasztalatokon keresztül
 author: István
 tags:
   - jógaelmélet
