@@ -2,8 +2,8 @@
 published: true
 language: Hungarian
 title: 5 dolog amit az új gyakorlóknak érdemes megtanulnia
-description: A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és
-  teljes gyakorlás, amelyhez mindig visszatérhetsz
+description:
+  A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és teljes gyakorlás, amelyhez mindig visszatérhetsz
 author: István
 tags:
   - astangaelmélet
@@ -11,7 +11,15 @@ date: 2019-11-19T11:59:44.928Z
 image: src/images/uploads/5things_desktop.jpeg
 imageMobil: src/images/uploads/5things_mobil.jpeg
 ---
-A jóga gyakorlás a kezdetekben elég lehangoló is tud lenni. Rengeteg cikket lehet olvasni arról, hogy mit is várhat az ember a különféle jóga stílusoktól, hogy milyen ruhában érdemes gyakorolni, hogy mit vigyünk magunkkal, stb., de ezúttal egy kicsit arra szeretnék jobban rávilágítani, hogy mit érdemes az új, a Mysore-stílusú astanga világába érkező gyakorlók számára megtanítani. Azt remélem, hogy úgy tanítok, hogy azon diákjaimhoz akik eljöttek néhány órámra, az alábbi gondolatok egyszersmind, mint „kívülről” érkező dolgok jutnak el, mind pedig sikerül azt belülről is megélniük — tehát ezen írás segít abban, hogy saját gondolataimat rendezzem kissé, ugyanakkor abban is, hogy azokat megosszam másokkal is (ideértve a tanárokat, akik szeretnék, hogy tanulóik jó tapasztalatokkal gazdagodjanak és biztonságban legyenek, és azokat is akik habár nem „újak”, de hasznosak lehetnek számukra az alábbi sorok.)
+
+A jóga gyakorlás a kezdetekben elég lehangoló is tud lenni. Rengeteg cikket lehet olvasni arról, hogy mit is várhat az
+ember a különféle jóga stílusoktól, hogy milyen ruhában érdemes gyakorolni, hogy mit vigyünk magunkkal, stb., de ezúttal
+egy kicsit arra szeretnék jobban rávilágítani, hogy mit érdemes az új, a Mysore-stílusú astanga világába érkező
+gyakorlók számára megtanítani. Azt remélem, hogy úgy tanítok, hogy azon diákjaimhoz akik eljöttek néhány órámra, az
+alábbi gondolatok egyszersmind, mint „kívülről” érkező dolgok jutnak el, mind pedig sikerül azt belülről is megélniük —
+tehát ezen írás segít abban, hogy saját gondolataimat rendezzem kissé, ugyanakkor abban is, hogy azokat megosszam
+másokkal is (ideértve a tanárokat, akik szeretnék, hogy tanulóik jó tapasztalatokkal gazdagodjanak és biztonságban
+legyenek, és azokat is akik habár nem „újak”, de hasznosak lehetnek számukra az alábbi sorok.).
 
 ### 1. A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és teljes gyakorlás, amelyhez mindig visszatérhetsz
 
@@ -24,15 +32,15 @@ többet tanulunk. A gyakorlásunk horizontja tágul, egyre több pózt tanulunk 
 nagyszerű! Viszont gyakran az ismeretek bővülésével együtt jár a felejtés, és elfelejtjük, hogy eme első napon amikor
 „csak” napüdvözleteket csináltunk akkor is jóga gyakorlást végeztünk. Elkezdjük azt gondolni, hogy ha nem csináljuk
 végig A-tól Z-ig a pózokat akkor nem is éri meg semmit csinálni, vagy ha egy olyan korszakát éljük az életünknek, hogy
-valamiért lehetetlen a pózokat A-tól Z-ig kiviteleznünk akkor már nem is igazán jógázunk rendesen. Ha egy sérülés,
-kisgyermek nevelés, vagy egy munkahelyi pörgősebb időszak miatt csak A, B és C pózokat tudunk gyakorolni akkor az amit
-csinálunk már nem is igazán astanga. Ezzel a megközelítéssel én, csakúgy, mint nagyon sok (a legtöbb?, az összes?) más
-Mysore-t tanító kollégám kifejezetten nem értünk egyet. Nem az összes póz végigcsinálása miatt lesz a gyakorlásunk jóga,
-vagy éppen astanga jóga. A figyelmünk befelé irányítsa, a koncentráció gyakorlása, a test érzései felé irányuló
-figyelmünk minősége — ezek mind és egy sokkal mélyebb szinten járulnak hozzá ahhoz a kérdéshez, hogy „mi a jóga?”.
-Szóval még azután is, hogy többet tanultál, ha mégis úgy alakul, hogy egy nap, vagy egy héten, vagy akár egy éven, vagy
-egy évtizeden keresztül kevesebbet csinálsz ezekből, nos ettől még nem kell az önazonosságodat mint astangi feladni (már
-ha ez fontos számodra, de ez egy másik nap témája).
+valamiért lehetetlen a pózokat A-tól Z-ig kiviteleznünk akkor már nem is igazán jógázunk rendesen. Ha egy
+sérülés,kisgyermek nevelés, vagy egy munkahelyi pörgősebb időszak miatt csak A, B és C pózokat tudunk gyakorolni akkor
+az amit csinálunk már nem is igazán astanga. Ezzel a megközelítéssel én, csakúgy, mint nagyon sok (a legtöbb?, az
+összes?) más Mysore-t tanító kollégám kifejezetten nem értünk egyet. Nem az összes póz végigcsinálása miatt lesz a
+gyakorlásunk jóga, vagy éppen astanga jóga. A figyelmünk befelé irányítsa, a koncentráció gyakorlása, a test érzései
+felé irányuló figyelmünk minősége — ezek mind és egy sokkal mélyebb szinten járulnak hozzá ahhoz a kérdéshez, hogy „mi a
+jóga?”. Szóval még azután is, hogy többet tanultál, ha mégis úgy alakul, hogy egy nap, vagy egy héten, vagy akár egy
+éven, vagy egy évtizeden keresztül kevesebbet csinálsz ezekből, nos ettől még nem kell az önazonosságodat mint astangi
+feladni (már ha ez fontos számodra, de ez egy másik nap témája).
 
 ### 2. A tanárod is ember
 
@@ -119,4 +127,6 @@ Ha ezen gondolat esetleg egybecseng korábbi tapasztalatokkal, akkor már kezded
 gyakorlásod! Bízz magadban. Ápold a tanáraiddal való kapcsolatot. És tudd, hogy ha ezt a gyakorlást hosszútávon
 szeretnéd, akkor a döntés egyedül a Te kezedben van.
 
-**Forrás:** Ashtanga Yoga Minneapolis **Szerző:** Ellie Wannemacher **Fordította:** Szabó Gergő
+**Forrás:** Ashtanga Yoga Minneapolis  
+**Szerző:** Ellie Wannemacher  
+**Fordította:** Szabó Gergő
