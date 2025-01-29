@@ -21,7 +21,9 @@ tehát ezen írás segít abban, hogy saját gondolataimat rendezzem kissé, ugy
 másokkal is (ideértve a tanárokat, akik szeretnék, hogy tanulóik jó tapasztalatokkal gazdagodjanak és biztonságban
 legyenek, és azokat is akik habár nem „újak”, de hasznosak lehetnek számukra az alábbi sorok.).
 
-### 1. A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és teljes gyakorlás, amelyhez mindig visszatérhetsz
+<h3 class="clr-brand-orange">
+1. A gyakorlás, amelyet az első napon megtanulsz egy olyan egységes és teljes gyakorlás, amelyhez mindig visszatérhetsz
+</h3>
 
 Ha számodra az astanga új akkor a Mysore teremben az első napon valószínűleg a következőket fogod csinálni: jó pár
 napüdvözletet, vagy csak „A”-t vagy „A”-t és „B”-t is, majd néhány ülő, keresztezett lábú levezető pózt, majd 10 perc
@@ -42,7 +44,9 @@ jóga?”. Szóval még azután is, hogy többet tanultál, ha mégis úgy alaku
 éven, vagy egy évtizeden keresztül kevesebbet csinálsz ezekből, nos ettől még nem kell az önazonosságodat mint astangi
 feladni (már ha ez fontos számodra, de ez egy másik nap témája).
 
-### 2. A tanárod is ember
+<h3 class="clr-brand-orange">
+2. A tanárod is ember
+</h3>
 
 Van valami szakrális jellege a tanár-diák viszonynak. Tanárként törekszem ezt megbecsülni, diákként pedig mély hálával
 tölt el. A dolog szépséghibája ugyanakkor ott jelenhet meg, hogy amikor az ember igyekszik jó diák lenni, bízni a
@@ -56,7 +60,7 @@ kapcsolatban is maradj éber, kérdezz ha valamit tisztázni szeretnél, és mon
 felelni, hogy mert „ez a módszer”, akkor önvizsgálatot tartok és magamba nézek. És végső soron nem így jár jól mindenki?
 Te, én, és a többi diák is?
 
-### 3. A „figyelj a testedre” egy olyan nehéz és homályos utasítás, melyet nagyon nehéz követni. Helyette inkább ezt próbáld ki
+<h3 class="clr-brand-orange">3. A „figyelj a testedre” egy olyan nehéz és homályos utasítás, melyet nagyon nehéz követni. Helyette inkább ezt próbáld ki</h3>
 
 Ha fáj, ne csináld. Nyilván ez még mindig egy túlzott leegyszerűsítés, de mégis, első lépésnek nagyszerű. A jógának nem
 kell fájdalommal járnia. Segít abban, hogy a kényelmetlenségeket toleráljuk, ez igaz. Az viszont egy félreértés, hogy
@@ -70,7 +74,9 @@ zűrzavart (és itt a fizikai testről és az elméről egyaránt beszélünk, h
 kialakul. Gyere ki egy időre a pózból. Ha a tanárod megéri a pénzét akkor képes arra, hogy megmutassa számodra a
 megfelelő modifikációt vagy variációt.
 
-### 4. Ne tanulj akárkiktől az interneten jógát
+<h3 class="clr-brand-orange">
+4. Ne tanulj akárkiktől az interneten jógát
+</h3>
 
 Régebben létezett ez az astanga EZ-Board nevű felület. Mostmár lehet választani: reddit online beszélgetések, Astanga
 Home Practitioners Facebook csoport és a többi, és a többi. Viszont mindaddig amíg vannak véleményt formáló emberek
@@ -88,7 +94,9 @@ kérdezi meg közvetlenül. És ha már VAN olyan tanárod akikben megbízol, de
 előbb beszélgess vele, mint, hogy a facebookon keress egy olyan választ ami jobban tetszik. Az eredmény: alaposabb
 tanulás, kevesebb zavar.
 
-### 5. A folytonosságot keresd ne a tökéletességet
+<h3 class="clr-brand-orange">
+5. A folytonosságot keresd ne a tökéletességet
+</h3>
 
 Egy nagyon általános történet: egy diák beleszeret az astangába. „Ez az én jógatípusom” – mondja nagy lelkesen. „Minden
 nap gyakorolni fogok.” A gyakorlás „mézeshetei” nagyszerűek és a gyakorlók ekkor, abba őszintén és teljes átéléssel
