@@ -84,7 +84,9 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
                     <p>{post.data.tags}</p>
                 </div>
             </div>
-            <Content />
+            <article class="blog-content__article">
+                <Content />
+            </article>
         </div>
         <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
         <div class="blog-content__sidebar hidden-mobile">

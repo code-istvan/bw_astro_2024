@@ -1,32 +1,120 @@
 @import '/src/sass/base/_colors';
 @import '/src/sass/base/_breakpoints';
+@import '/src/sass/base/_fonts';
 
-.blog-content__container {
-  display: flex;
-  flex-direction: row;
-}
+// Layout
+.blog-content {
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
 
-.blog-content__main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+  &__main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-.blog-content__sidebar {
-  position: sticky;
-  top: 80px;
-  height: fit-content;
-  overflow: hidden auto;
-  flex: 0 0 250px;
-  margin-left: 20px;
+    @include xs {
+      margin-top: 80px;
+    }
 
-  -ms-overflow-style: none; /* IE 10+ */
-  scrollbar-width: none; /* Firefox */
+    @include md {
+      margin-top: 40px;
+    }
+  }
 
-  &::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+  &__sidebar {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    overflow: hidden auto;
+    flex: 0 0 250px;
+    margin-left: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Images
+  &__desktop-image,
+  &__mobile-image {
+    position: relative;
+
+    img {
+      max-width: 100vw;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__desktop-image {
+    @include xl {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile-image {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Info Row
+  &__info-row {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__info-item {
+    &--author {
+      @media (max-width: 768px) {
+        order: 1;
+        justify-self: start;
+      }
+    }
+
+    p {
+      margin-left: 8px;
+    }
+
+    &--tags {
+      @media (max-width: 768px) {
+        order: 2;
+        justify-self: end;
+        align-self: center;
+      }
+    }
+
+    &--date {
+      @media (max-width: 768px) {
+        order: 3;
+        justify-self: start;
+      }
+    }
+
+    &--read-time {
+      @media (max-width: 768px) {
+        order: 4;
+        justify-self: end;
+      }
+    }
   }
 }
+
 .image_title {
   position: absolute;
   bottom: 1rem;
@@ -34,77 +122,10 @@
   left: 0;
   right: 0;
 }
-.blog-content__desktop-image {
-  @include xl {
-    margin-bottom: 20px;
-  }
-}
-.blog-content__desktop-image,
-.blog-content__mobile-image {
-  position: relative;
 
-  img {
-    max-width: 100vw;
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 768px) {
-  .blog-content__desktop-image {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .blog-content__mobile-image {
-    display: none;
-  }
-}
-
-/* Alapértelmezett desktop nézet */
-.blog-content__info-row {
-  display: grid;
-  grid-template-columns: auto auto auto auto; /* Tartalomhoz igazodó oszlopszélesség */
-  gap: 10px; /* Opcionális hézag a cellák között */
-  justify-content: start; /* A teljes sor igazítása balra */
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .blog-content__info-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blog-content__info-item--author {
-    order: 1;
-    justify-self: start;
-  }
-
-  .blog-content__info-item--tags {
-    order: 2;
-    justify-self: end;
-    align-self: center;
-  }
-
-  .blog-content__info-item--date {
-    order: 3;
-    justify-self: start;
-  }
-
-  .blog-content__info-item--read-time {
-    order: 4;
-    justify-self: end;
-  }
-}
-
-.blog-content__main {
-  @include xs {
-    margin-top: 80px;
-  }
-  @include md {
-    margin-top: 40px;
-  }
-
+// Blog Post Content Styles
+article {
+  // Typography
   p,
   h1,
   h2,
@@ -112,7 +133,241 @@
   h4,
   h5,
   h6 {
-    // white-space: pre-line;
     margin-bottom: 1rem;
   }
+
+  h2 {
+    text-align: left;
+  }
+
+  strong {
+    font-weight: 900;
+  }
+
+  // Lists
+  ul {
+    list-style: none;
+    margin-left: 40px;
+    font-family: $font-family-secondary;
+    font-size: 1.1428571429rem !important;
+    font-weight: $font-weight-regular;
+    list-style-position: outside !important;
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: url(../../images/svg/chevron_right.svg);
+        color: $color-brand-orange;
+        font-size: 6px;
+        position: absolute;
+        top: 0;
+        left: -40px;
+      }
+    }
+  }
+
+  // Images
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  // Links
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $color-brand-orange;
+      text-decoration: none;
+    }
+  }
+
+  // Quotes
+  blockquote {
+    word-break: break-word;
+    border-left: 4px solid $color-brand-orange;
+    padding: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $color-shades-darkGray;
+    width: fit-content;
+
+    p {
+      margin-bottom: 0 !important;
+      font-weight: 900;
+      text-indent: 30px;
+      margin-top: -22px;
+    }
+
+    &::before {
+      content: url(../../images/svg/quote_double.svg);
+      color: $color-brand-orange;
+      margin-bottom: -20px;
+      margin-top: -10px;
+    }
+  }
+
+  // Special Sections
+  .blog-island-section {
+    background-color: $color-shades-darkGray;
+    padding: 32px 20px;
+    margin: 20px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    color: $color-brand-orange;
+    font-size: 1.1428571429rem !important;
+  }
+
+  .blog-special-list {
+    display: inline-block;
+    background-color: $color-brand-orange;
+    color: black;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    margin-right: 5px;
+    font-weight: 900;
+  }
+
+  // Footnotes
+  .footnotes {
+    h2 {
+      display: none;
+    }
+
+    ol {
+      padding-top: 8px;
+    }
+  }
+
+  // Share Buttons
+  .blogpost-share-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
 }
+
+// .blog-content__container {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .blog-content__main {
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+// }
+
+// .blog-content__sidebar {
+//   position: sticky;
+//   top: 80px;
+//   height: fit-content;
+//   overflow: hidden auto;
+//   flex: 0 0 250px;
+//   margin-left: 20px;
+
+//   -ms-overflow-style: none; /* IE 10+ */
+//   scrollbar-width: none; /* Firefox */
+
+//   &::-webkit-scrollbar {
+//     display: none; /* Safari and Chrome */
+//   }
+// }
+// .image_title {
+//   position: absolute;
+//   bottom: 1rem;
+//   margin: 0 auto;
+//   left: 0;
+//   right: 0;
+// }
+// .blog-content__desktop-image {
+//   @include xl {
+//     margin-bottom: 20px;
+//   }
+// }
+// .blog-content__desktop-image,
+// .blog-content__mobile-image {
+//   position: relative;
+
+//   img {
+//     max-width: 100vw;
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+// @media (max-width: 768px) {
+//   .blog-content__desktop-image {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .blog-content__mobile-image {
+//     display: none;
+//   }
+// }
+
+// /* Alapértelmezett desktop nézet */
+// .blog-content__info-row {
+//   display: grid;
+//   grid-template-columns: auto auto auto auto; /* Tartalomhoz igazodó oszlopszélesség */
+//   gap: 10px; /* Opcionális hézag a cellák között */
+//   justify-content: start; /* A teljes sor igazítása balra */
+//   align-items: center;
+// }
+
+// @media (max-width: 768px) {
+//   .blog-content__info-row {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+
+//   .blog-content__info-item--author {
+//     order: 1;
+//     justify-self: start;
+//   }
+
+//   .blog-content__info-item--tags {
+//     order: 2;
+//     justify-self: end;
+//     align-self: center;
+//   }
+
+//   .blog-content__info-item--date {
+//     order: 3;
+//     justify-self: start;
+//   }
+
+//   .blog-content__info-item--read-time {
+//     order: 4;
+//     justify-self: end;
+//   }
+// }
+
+// .blog-content__main {
+//   @include xs {
+//     margin-top: 80px;
+//   }
+//   @include md {
+//     margin-top: 40px;
+//   }
+
+// }
+
+// .blog-content__article {
+//     p,
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//       // white-space: pre-line;
+//       margin-bottom: 1rem;
+//     }
+// }

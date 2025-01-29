@@ -1,3 +1,18 @@
+const months = [
+  'január',
+  'február',
+  'március',
+  'április',
+  'május',
+  'június',
+  'július',
+  'augusztus',
+  'szeptember',
+  'október',
+  'november',
+  'december',
+];
+
 export function slugify(text) {
   return text
     .toString()
@@ -12,14 +27,17 @@ export function slugify(text) {
 }
 
 export function formatDate(date) {
-  return new Date(date).toLocaleDateString('hu-HU', {
-    timeZone: 'UTC',
-  });
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = months[d.getMonth()];
+  const day = d.getDate();
+
+  return `${year} ${month} ${day}.`;
 }
 
 export function calculateReadingTime(text) {
   const wordsPerMinute = 200;
-  const words = text.split(/\s+/).length; // Számold meg a szavakat a szövegben
+  const words = text.split(/\s+/).length;
   const minutes = Math.ceil(words / wordsPerMinute);
   return minutes;
 }
