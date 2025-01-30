@@ -1,5 +1,4 @@
 ---
-// Astro komponens importálása
 import Pagination from '../../components/Blog/Pagination.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/Blog/PostCard.astro';
@@ -13,11 +12,26 @@ import mobileImage from '../../images/blog_mobil.jpg';
 import desktopImage from '../../images/blog_desktop.jpg';
 import './_blogPages.scss';
 
+// Típus definíciók
+type Post = CollectionEntry<'blog'> & {
+    slug: string;
+    minutesRead: number;
+};
+
+type Props = {
+    page: {
+        data: Post[];
+        url: {
+            prev: string | undefined;
+            next: string | undefined;
+        };
+    };
+};
+
 // Statikus oldalak generálása paginálva
 export async function getStaticPaths({ paginate }) {
     const allPosts = await getCollection('blog');
 
-    // Bejegyzések rendezése dátum szerint (legújabb elöl)
     const sortedPosts = allPosts
         .map((post) => ({
             ...post,
@@ -25,7 +39,6 @@ export async function getStaticPaths({ paginate }) {
             minutesRead: calculateReadingTime(post.body),
         }))
         .sort((a, b) => {
-            // Dátumok összehasonlítása (újabb dátum kerül előre)
             return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
         });
 
@@ -34,8 +47,6 @@ export async function getStaticPaths({ paginate }) {
 
 const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
 const { page } = Astro.props;
-console.log(page);
-
 const pageTitle = `BLOG`;
 const pageData = page.data.filter((post) => post.data.language === currentLanguage);
 ---
@@ -61,7 +72,6 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
                 </ul>
                 <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
             </div>
-
             <div class="blog__sidebar hidden-mobile">
                 <h4 class="blog__tags-title">CIMKÉK</h4>
                 <TagList />
