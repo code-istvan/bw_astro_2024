@@ -16,18 +16,21 @@ import './_blogPages.scss';
 // Statikus oldalak generálása paginálva
 export async function getStaticPaths({ paginate }) {
     const allPosts = await getCollection('blog');
-    const postsWithSlugsAndReadingTime = allPosts.map((post) => ({
-        ...post,
-        slug: slugify(post.data.title),
-        minutesRead: calculateReadingTime(post.body),
-    }));
-    return paginate(postsWithSlugsAndReadingTime, { pageSize: 5 });
-}
 
-type Props = {
-    post: CollectionEntry<'blog'>;
-    page: any; // A page típusát pontosítani érdemes a jövőben
-};
+    // Bejegyzések rendezése dátum szerint (legújabb elöl)
+    const sortedPosts = allPosts
+        .map((post) => ({
+            ...post,
+            slug: slugify(post.data.title),
+            minutesRead: calculateReadingTime(post.body),
+        }))
+        .sort((a, b) => {
+            // Dátumok összehasonlítása (újabb dátum kerül előre)
+            return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+        });
+
+    return paginate(sortedPosts, { pageSize: 5 });
+}
 
 const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
 const { page } = Astro.props;

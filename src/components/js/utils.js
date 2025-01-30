@@ -1,17 +1,17 @@
-const months = [
-  'január',
-  'február',
-  'március',
-  'április',
-  'május',
-  'június',
-  'július',
-  'augusztus',
-  'szeptember',
-  'október',
-  'november',
-  'december',
-];
+// const months = [
+//   'január',
+//   'február',
+//   'március',
+//   'április',
+//   'május',
+//   'június',
+//   'július',
+//   'augusztus',
+//   'szeptember',
+//   'október',
+//   'november',
+//   'december',
+// ];
 
 export function slugify(text) {
   return text
@@ -26,13 +26,22 @@ export function slugify(text) {
     .replace(/-+$/, '');
 }
 
+// export function formatDate(date) {
+//   const d = new Date(date);
+//   const year = d.getFullYear();
+//   const month = months[d.getMonth()];
+//   const day = d.getDate();
+
+//   return `${year} ${month} ${day}.`;
+// }
+
 export function formatDate(date) {
   const d = new Date(date);
-  const year = d.getFullYear();
-  const month = months[d.getMonth()];
-  const day = d.getDate();
+  const year = d.getFullYear().toString(); // YYYY formátum
+  const month = (d.getMonth() + 1).toString().padStart(2, '0'); // MM formátum
+  const day = d.getDate().toString().padStart(2, '0'); // DD formátum
 
-  return `${year} ${month} ${day}.`;
+  return `${year}-${month}-${day}`;
 }
 
 export function calculateReadingTime(text) {

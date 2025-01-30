@@ -19,9 +19,9 @@ const currentAuthor = authors.find(({ data: { name: authorName } }) => authorNam
                 class="avatar__image avatar__image--small"
             />
         </div>
-        <p class="blog-post__author-name">{author}</p>
+        <p class="blog-post__author-name clr-shades-gray">{author}</p>
         <div class="vertical-separator"></div>
-        <p class="blog-post__date">{formatDate(date)}</p>
+        <p class="blog-post__date clr-shades-gray">{formatDate(date)}</p>
     </div>
     <div class="blog-post__title"><h3 class="blog-post__title-text">{title}</h3></div>
     <p class="blog-post__description clr-shades-gray">{description}</p>
@@ -29,13 +29,13 @@ const currentAuthor = authors.find(({ data: { name: authorName } }) => authorNam
         <p class="">
             {
                 tags.map((tag) => (
-                    <a href={`/blog/tags/${tag}`} class="blog-post__tag-link blog__tag">
+                    <a href={`/blog/tags/${tag}`} class="blog-post__tag-link blog__tag clr-shades-gray">
                         {tag}
                     </a>
                 ))
             }
         </p>
-        <p class="blog-post__reading-time">{minutesRead} perc olvasás</p>
+        <p class="blog-post__reading-time clr-shades-gray">{minutesRead} perc olvasás</p>
     </div>
     <a href={`/blog/${slugify(slug)}`} class="blog-post__read-more-link">
         <p class="blog-post__read-more-text clr-brand-orange body body--bold mt-20px">Olvasd tovább</p>
