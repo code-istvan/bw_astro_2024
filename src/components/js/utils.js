@@ -37,11 +37,17 @@ export function slugify(text) {
 
 export function formatDate(date) {
   const d = new Date(date);
-  const year = d.getFullYear().toString(); // YYYY formátum
-  const month = (d.getMonth() + 1).toString().padStart(2, '0'); // MM formátum
-  const day = d.getDate().toString().padStart(2, '0'); // DD formátum
 
-  return `${year}-${month}-${day}`;
+  // Az év utolsó két számjegye
+  const year = d.getFullYear().toString().slice(-2);
+
+  // Hónap két számjeggyel
+  const month = (d.getMonth() + 1).toString().padStart(2, '0');
+
+  // Nap két számjeggyel
+  const day = d.getDate().toString().padStart(2, '0');
+
+  return `${year}.${month}.${day}`;
 }
 
 export function calculateReadingTime(text) {

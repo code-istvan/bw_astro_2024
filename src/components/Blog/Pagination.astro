@@ -1,18 +1,48 @@
 ---
-const { prevUrl, nextUrl } = Astro.props
+import Icons from '../Icons/Icons.astro';
+const { prevUrl, nextUrl } = Astro.props;
 ---
 
-<nav aria-label="Blog pages">
-    {prevUrl && (
-      <a href={prevUrl} class="link-primary" style="border: visible;">
-        <span style="margin-right: 8px;">&#x2190;</span> <!-- Using an emoji for the left arrow icon -->
-        Előző
-      </a>
-    )}
-    {nextUrl && (
-      <a href={nextUrl} class="link-primary" style="border: visible;">
-        Következő
-        <span style="margin-left: 8px;">&#x2192;</span> <!-- Using an emoji for the right arrow icon -->
-      </a>
-    )}
-  </nav>
+<nav aria-label="Blog pages" class="pagination-nav">
+    <div class="pagination-button left">
+        {
+            prevUrl && (
+                <a href={prevUrl} class="link-primary" style="border: visible;">
+                    <Icons name="ChevronLeft" color="orange" />
+                </a>
+            )
+        }
+    </div>
+    <div class="pagination-button right">
+        {
+            nextUrl && (
+                <a href={nextUrl} class="link-primary" style="border: visible;">
+                    <Icons name="ChevronRight" color="orange" />
+                </a>
+            )
+        }
+    </div>
+</nav>
+
+<style>
+    .pagination-nav {
+        position: relative;
+        width: 100%;
+        height: 40px; /* vagy amennyi helyet szeretnél a nyilaknak */
+        margin: 2rem 0;
+    }
+
+    .pagination-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0;
+    }
+</style>
