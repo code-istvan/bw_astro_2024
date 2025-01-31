@@ -1,6 +1,14 @@
 ---
 import Icons from '../Icons/Icons.astro';
-const { prevUrl, nextUrl } = Astro.props;
+
+interface Props {
+    prevUrl: string | undefined;
+    nextUrl: string | undefined;
+    currentPage: number;
+    totalPages: number;
+}
+
+const { prevUrl, nextUrl, currentPage, totalPages } = Astro.props;
 ---
 
 <nav aria-label="Blog pages" class="pagination-nav">
@@ -12,6 +20,9 @@ const { prevUrl, nextUrl } = Astro.props;
                 </a>
             )
         }
+    </div>
+    <div class="pagination-info">
+        <p>{currentPage} / {totalPages}</p>
     </div>
     <div class="pagination-button right">
         {
@@ -28,7 +39,7 @@ const { prevUrl, nextUrl } = Astro.props;
     .pagination-nav {
         position: relative;
         width: 100%;
-        height: 40px; /* vagy amennyi helyet szeretnél a nyilaknak */
+        height: 40px;
         margin: 2rem 0;
     }
 
@@ -44,5 +55,13 @@ const { prevUrl, nextUrl } = Astro.props;
 
     .right {
         right: 0;
+    }
+
+    .pagination-info {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
     }
 </style>

@@ -24,6 +24,8 @@ type Props = {
             prev: string | undefined;
             next: string | undefined;
         };
+        currentPage: number;
+        lastPage: number;
     };
 };
 
@@ -69,7 +71,12 @@ const pageData = page.data.filter((post) => post.data.language === currentLangua
                         ))
                     }
                 </ul>
-                <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+                <Pagination
+                    prevUrl={page.url.prev}
+                    nextUrl={page.url.next}
+                    currentPage={page.currentPage}
+                    totalPages={page.lastPage}
+                />
             </div>
             <div class="blog__sidebar hidden-mobile">
                 <h4 class="blog__tags-title">CIMKÉK</h4>
