@@ -1,5 +1,6 @@
 ---
 import Icons from '../Icons/Icons.astro';
+import './_pagination.scss';
 
 interface Props {
     prevUrl: string | undefined;
@@ -9,59 +10,44 @@ interface Props {
 }
 
 const { prevUrl, nextUrl, currentPage, totalPages } = Astro.props;
+
+// Generate URLs for first and last page
+const firstPageUrl = prevUrl?.replace(/\/page\/\d+/, '/page/1') || '/page/1';
+const lastPageUrl = nextUrl?.replace(/\/page\/\d+/, `/page/${totalPages}`) || `/page/${totalPages}`;
 ---
 
 <nav aria-label="Blog pages" class="pagination-nav">
     <div class="pagination-button left">
         {
-            prevUrl && (
-                <a href={prevUrl} class="link-primary" style="border: visible;">
-                    <Icons name="ChevronLeft" color="orange" />
-                </a>
+            currentPage > 1 && (
+                <>
+                    <a href={firstPageUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronDoubleLeft" color="orange" />
+                    </a>
+                    <a href={prevUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronLeft" color="orange" />
+                    </a>
+                </>
             )
         }
     </div>
+
     <div class="pagination-info">
         <p>{currentPage} / {totalPages}</p>
     </div>
+
     <div class="pagination-button right">
         {
-            nextUrl && (
-                <a href={nextUrl} class="link-primary" style="border: visible;">
-                    <Icons name="ChevronRight" color="orange" />
-                </a>
+            currentPage < totalPages && (
+                <>
+                    <a href={nextUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronRight" color="orange" />
+                    </a>
+                    <a href={lastPageUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronDoubleRight" color="orange" />
+                    </a>
+                </>
             )
         }
     </div>
 </nav>
-
-<style>
-    .pagination-nav {
-        position: relative;
-        width: 100%;
-        height: 40px;
-        margin: 2rem 0;
-    }
-
-    .pagination-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .left {
-        left: 0;
-    }
-
-    .right {
-        right: 0;
-    }
-
-    .pagination-info {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-weight: bold;
-    }
-</style>

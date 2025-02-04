@@ -1,0 +1,30 @@
+.pagination-nav {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 2rem 0;
+}
+
+.pagination-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.pagination-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
