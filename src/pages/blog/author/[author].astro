@@ -2,6 +2,9 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogPost from '../../../components/Blog/BlogPost.astro';
 import { slugify } from '../../../components/js/utils.js';
+import HeroImage from '../../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../../images/blog_mobil.jpg';
+import desktopImage from '../../../images/blog_desktop.jpg';
 
 export async function getStaticPaths() {
     const allPosts = await Astro.glob('../../../content/blog/*.md');
@@ -16,19 +19,38 @@ export async function getStaticPaths() {
             }));
         return {
             params: { author: slugify(author) },
-            props: { posts: filteredPosts },
+            props: { posts: filteredPosts, author: author },
         };
     });
 }
 
-const { author } = Astro.params;
+// const { author } = Astro.params;
+const { author } = Astro.props;
 const { posts } = Astro.props;
-const pageTitle = `Bejegyzések ezen író szerint: ${author}`;
+
+const metadata = {
+    title: `BLOG SZERZŐK`,
+    description: 'Ezen az oldalon találod a Bandha Works Astanga Jógaiskola blogbejegyzéseit szerző szerint.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <p>Blogbejegyzések ettől a szerzőtől: {author}</p>
-    <ul>
-        {posts.map((post) => <BlogPost url={post.slug} title={post.frontmatter.title} slug={post.slug} />)}
-    </ul>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px mb-40px">
+            <h3 class="mb-20px clr-brand-orange">Bejegyzések ettől a szerzőtől: {author}</h3>
+            <div class="row unordered-list-style">
+                <ul>
+                    {posts.map((post) => <BlogPost url={post.slug} title={post.frontmatter.title} slug={post.slug} />)}
+                </ul>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
