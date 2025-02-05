@@ -48,12 +48,16 @@ export async function getStaticPaths({ paginate }) {
 
 const currentLanguage = Astro.currentLocale === 'en' ? 'English' : 'Hungarian';
 const { page } = Astro.props;
-const pageTitle = `BLOG`;
 const pageData = page.data.filter((post) => post.data.language === currentLanguage);
+
+const metadata = {
+    title: 'BLOG',
+    description: 'Ezen az oldalon találod a Bandha Works Astanga Jógaiskola blogbejegyzéseit.',
+};
 ---
 
-<BaseLayout title={pageTitle} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container blog__container mt-40px">
         <div class="blog__tags--mobile hidden-desktop">
             <h4 class="blog__tags-title">CIMKÉK</h4>

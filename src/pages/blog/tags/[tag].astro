@@ -3,6 +3,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogPost from '../../../components/Blog/BlogPost.astro';
 import { getCollection } from 'astro:content';
 import { slugify } from '../../../components/js/utils.js';
+import HeroImage from '../../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../../images/blog_mobil.jpg';
+import desktopImage from '../../../images/blog_desktop.jpg';
 
 export async function getStaticPaths() {
     const allPosts = await getCollection('blog');
@@ -24,12 +27,30 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const pageTitle = `Blog`;
+
+const metadata = {
+    title: 'BLOG CIMKÉK',
+    description: 'Ezen az oldalon találod a Bandha Works Astanga Jógaiskola blogbejegyzéseit cimkék szerint.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <p>Blogbejegyzések ezzel a cimkével: {tag}</p>
-    <ul>
-        {posts.map((post) => <BlogPost url={post.slug} title={post.data.title} slug={post.slug} />)}
-    </ul>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+
+    <div class="container container--tight-desktop">
+        <div class="row mt-40px mb-40px">
+            <h3 class="mb-20px clr-brand-orange">Blogbejegyzések ezzel a cimkével: {tag}</h3>
+            <div class="row unordered-list-style">
+                <ul>
+                    {posts.map((post) => <BlogPost url={post.slug} title={post.data.title} slug={post.slug} />)}
+                </ul>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
