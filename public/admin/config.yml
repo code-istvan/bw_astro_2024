@@ -31,6 +31,15 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Title Background
+        name: titleBackground
+        widget: boolean
+        default: false
+        required: false
+      - label: Canonical URL
+        name: canonical
+        widget: string
+        required: false
       - label: Description
         name: description
         widget: string
