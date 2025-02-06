@@ -12,7 +12,7 @@ const { title, description, image = desktopImage, canonical, language } = Astro.
 <meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="canonical" href={originalCanonical} />
-{canonical && <link rel="alternate" hreflang={language === 'Hungarian' ? 'hu' : 'en'} href={canonical} />}
+{canonical && <link rel="alternate" hreflang="en" href={canonical} />}
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="title" content={title} />
 <meta name="robots" content={'index, follow'} />
