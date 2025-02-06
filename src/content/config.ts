@@ -5,16 +5,16 @@ const postsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     published: z.boolean(),
-    language: z.string(),
+    language: z.enum(['Hungarian', 'English']),
     title: z.string(),
     description: z.string(),
     author: z.string(),
     tags: z.string().array().optional(),
     date: z.coerce.date(),
-    // date: z.coerce.date().optional(),
     image: z.string().optional(),
     imageMobil: z.string().optional(),
-    // content: z.string(),
+    canonical: z.string().optional(),
+    titleBackground: z.boolean().optional(),
   }),
 });
 

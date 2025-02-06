@@ -15,14 +15,16 @@ interface Props {
     image?: string | ImageMetadata;
     isHomePage?: boolean;
     noindex?: boolean;
+    language?: 'Hungarian' | 'English';
+    canonical: string;
 }
 
 const url = Astro.url;
-const { title, isHomePage, description, noindex } = Astro.props as Props;
+const { title, isHomePage, description, noindex, language } = Astro.props as Props;
 ---
 
 <!doctype html>
-<html lang="hu">
+<html lang={language === 'Hungarian' ? 'hu' : 'en'}>
     <head>
         <Seo {...Astro.props} />
         <meta charset="UTF-8" />

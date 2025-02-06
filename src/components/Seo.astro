@@ -1,8 +1,8 @@
 ---
 import desktopImage from '../images/mysore_desktop.jpg';
 
-const canonical = new URL(Astro.url.pathname, Astro.site);
-const { title, description, image = desktopImage } = Astro.props;
+const originalCanonical = new URL(Astro.url.pathname, Astro.site);
+const { title, description, image = desktopImage, canonical, language } = Astro.props;
 ---
 
 <title>{title} | Bandha Works Astanga Jógaiskola</title>
@@ -11,7 +11,8 @@ const { title, description, image = desktopImage } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="canonical" href={canonical} />
+<link rel="canonical" href={originalCanonical} />
+{canonical && <link rel="alternate" hreflang={language === 'Hungarian' ? 'hu' : 'en'} href={canonical} />}
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="title" content={title} />
 <meta name="robots" content={'index, follow'} />
