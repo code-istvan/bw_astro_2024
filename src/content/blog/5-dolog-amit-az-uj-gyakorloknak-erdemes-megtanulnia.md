@@ -8,7 +8,6 @@ author: István
 tags:
   - astangaelmélet
 date: 2019-11-19T11:59:44.928Z
-canonical: https://spaciousyoga.com/the-energetic-dynamics-of-ashtanga-advanced-a-iain-grysak/
 image: src/images/uploads/5things_desktop.jpeg
 imageMobil: src/images/uploads/5things_mobil.jpeg
 ---
