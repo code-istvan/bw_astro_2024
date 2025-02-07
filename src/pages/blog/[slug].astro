@@ -7,6 +7,7 @@ import PopularPosts from '../../components/Blog/PopularPosts.astro';
 import BlogPostLayout from '../../layouts/BaseLayout.astro';
 import { calculateReadingTime, slugify, formatDate } from '../../components/js/utils.js';
 import type { ImageMetadata } from 'astro';
+import IconButton from '../../components/Button/IconButton.astro';
 import './_blog-post-content.scss';
 
 export const prerender = true;
@@ -89,6 +90,16 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
             <article class="blog-content__article">
                 <Content />
             </article>
+            <IconButton
+                href="/blog/"
+                variant="third-naked-orange"
+                iconName="ArrowLeft"
+                iconClass="orange"
+                class="mt-20px link-orange"
+                ariaLabel="Vissza az összes bejegyzéshez gomb"
+            >
+                Vissza az összes bejegyzéshez
+            </IconButton>
         </div>
         <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
         <div class="blog-content__sidebar hidden-mobile">
