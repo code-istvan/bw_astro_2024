@@ -14,6 +14,7 @@ const postsCollection = defineCollection({
     image: z.string().optional(),
     imageMobil: z.string().optional(),
     canonical: z.string().optional(),
+    canonicalLanguage: z.enum(['Hungarian', 'English']).optional(),
     titleBackground: z.boolean().optional(),
   }),
 });
