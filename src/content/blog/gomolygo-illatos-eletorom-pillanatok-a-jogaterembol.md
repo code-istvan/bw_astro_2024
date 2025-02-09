@@ -12,7 +12,7 @@ description: 'Amikor egy egyszerű instrukció “Lépj közelebb!”  hirtelen
   jóga valódi természetéről, ahol nem az erő vagy hajlékonyság, hanem a
   ráismerés vezet el a következő szinthez. Inspiráló történet mindenkinek, aki
   valaha azt gondolta: "ezt úgysem tudom megcsinálni"...'
-author: Vera
+author: István
 tags:
   - jógaelmélet
 date: 2025-02-04T12:15:00.000Z
