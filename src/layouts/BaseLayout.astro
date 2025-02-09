@@ -17,6 +17,7 @@ interface Props {
     noindex?: boolean;
     language?: 'Hungarian' | 'English';
     canonical?: string;
+    canonicalLanguage?: 'Hungarian' | 'English';
 }
 
 const url = Astro.url;
@@ -98,77 +99,5 @@ const { title, isHomePage, description, noindex, language } = Astro.props as Pro
             }
         </script>
         <Footer />
-    </body><!-- Mentés --><!-- 
----
-import faviconSrc from '../images/favicon.png';
-import faviconSvgSrc from '../images/favicon.svg';
-import Header from '../components/Navigation/Header.astro';
-import Footer from '../components/Footer/Footer.astro';
-import { AstroFont } from 'astro-font';
-import Seo from '../components/Seo.astro';
-import '../sass/global.scss';
-import '../sass/layouts/_layout.scss';
-
-interface Props {
-    title: string;
-    description?: string;
-    image?: string | ImageMetadata;
-    isHomePage?: boolean;
-    noindex?: boolean;
-}
-
-const url = Astro.url;
-const { title, isHomePage, description, noindex } = Astro.props as Props;
----
-
-<!doctype html>
-<html lang="hu">
-    <head>
-        <Seo {...Astro.props} />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href={faviconSvgSrc.src} type="image/svg+xml" />
-        <link rel="apple-touch-icon" href={faviconSrc.src} />
-        <link rel="manifest" href="/manifest.json" />
-        <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <AstroFont
-            config={[
-                {
-                    src: [],
-                    name: 'Abril Fatface',
-                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
-                    preload: true,
-                    display: 'swap',
-                    selector: 'body',
-                    fallback: 'serif',
-                },
-            ]}
-        />
-        {noindex && <meta name="robots" content="noindex, nofollow" />}
-    </head>
-    <body>
-        <Header />
-        <div class="layout-content-wrapper"><slot /></div>
-        <script>
-            declare global {
-                interface Window {
-                    netlifyIdentity: any;
-                }
-            }
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on('init', (user: any) => {
-                    if (!user) {
-                        window.netlifyIdentity.on('login', () => {
-                            document.location.href = '/admin/';
-                        });
-                    }
-                });
-            }
-        </script>
-        <Footer />
     </body>
-</html> -->
 </html>
