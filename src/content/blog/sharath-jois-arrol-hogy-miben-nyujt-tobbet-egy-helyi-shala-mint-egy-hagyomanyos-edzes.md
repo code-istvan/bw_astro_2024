@@ -3,6 +3,8 @@ published: true
 language: Hungarian
 title: Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy
   hagyományos edzés
+canonical: https://www.sonima.com/yoga/yoga-articles/yoga-shala/
+canonicalLanguage: English
 description: Nagyon fontos, hogy legyen egy jóga shala amihez kötődünk. Egyrészt
   mert a shala motivál. Az ember lát másokat gyakorolni és ettől maga is kedvet
   kap hozzá.
