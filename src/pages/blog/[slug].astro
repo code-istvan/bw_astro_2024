@@ -46,7 +46,12 @@ const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
 ---
 
-<BlogPostLayout title={post.data.title} language={post.data.language} canonical={post.data.canonical}>
+<BlogPostLayout
+    title={post.data.title}
+    language={post.data.language}
+    canonical={post.data.canonical}
+    canonicalLanguage={post.data.canonicalLanguage}
+>
     {
         post.data.image && (
             <section class="blog-content__desktop-image">

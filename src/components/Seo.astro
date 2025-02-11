@@ -3,6 +3,7 @@ import desktopImage from '../images/mysore_desktop.jpg';
 
 const originalCanonical = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = desktopImage, canonical, language, canonicalLanguage } = Astro.props;
+console.log('Astro.props:', Astro.props);
 ---
 
 <title>{title} | Bandha Works Astanga Jógaiskola</title>
@@ -11,8 +12,25 @@ const { title, description, image = desktopImage, canonical, language, canonical
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="canonical" href={originalCanonical} />
-{canonical && <link rel="alternate" hreflang={canonicalLanguage === 'Hungarian' ? 'en' : 'hu'} href={canonical} />}
+<!-- Csak egyszer jelenjen meg a canonical link: vagy saját tartalom, vagy átvett -->
+{
+    canonical ? (
+        <link rel="canonical" href={canonical} lang={canonicalLanguage === 'Hungarian' ? 'hu' : 'en'} />
+    ) : (
+        <link rel="canonical" href={originalCanonical} />
+    )
+}
+
+<!-- Nyelvi alternatíva csak akkor, ha van canonical és különböző nyelvű -->
+{
+    canonical && language !== canonicalLanguage && (
+        <link
+            rel="alternate"
+            hreflang={language === 'Hungarian' ? 'hu' : 'en'}
+            href={Astro.site + Astro.url.pathname}
+        />
+    )
+}
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="title" content={title} />
 <meta name="robots" content={'index, follow'} />

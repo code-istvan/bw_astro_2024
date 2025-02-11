@@ -21,7 +21,10 @@ interface Props {
 }
 
 const url = Astro.url;
-const { title, isHomePage, description, noindex, language } = Astro.props as Props;
+const { title, isHomePage, description, noindex, language, canonicalLanguage } = Astro.props as Props;
+
+console.log('valami2', Astro.props.canonicalLanguage); // Lássuk mit kapunk
+console.log('valami3', canonicalLanguage);
 ---
 
 <!doctype html>
