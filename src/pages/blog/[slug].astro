@@ -51,12 +51,15 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     language={post.data.language}
     canonical={post.data.canonical}
     canonicalLanguage={post.data.canonicalLanguage}
+    titleBackground={post.data.titleBackground}
 >
     {
         post.data.image && (
             <section class="blog-content__desktop-image">
                 <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
-                <h1 class="container image_title">{post.data.title}</h1>
+                <h1 class={`container image_title ${post.data.titleBackground ? 'title-with-background' : ''}`}>
+                    {post.data.title}
+                </h1>
             </section>
         )
     }
@@ -64,7 +67,9 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         post.data.imageMobil && (
             <section class="blog-content__mobile-image">
                 <Image src={imagesMobil[`/${post.data.imageMobil}`]()} alt={post.data.title} />
-                <h1 class="container image_title">{post.data.title}</h1>
+                <h1 class={`container image_title ${post.data.titleBackground ? 'title-with-background' : ''}`}>
+                    {post.data.title}
+                </h1>
             </section>
         )
     }
@@ -130,3 +135,12 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         }
     });
 </script>
+
+<style>
+    .title-with-background {
+        background-color: rgba(255, 165, 0, 0.8); /* 80% átlátszó fekete */
+        color: black; /* Hogy a szöveg olvasható legyen a sötét háttéren */
+        padding: 1rem; /* Egy kis belső térköz */
+        border-radius: 4px; /* Opcionális: lekerekített sarkok */
+    }
+</style>

@@ -2,18 +2,15 @@
 import BaseLayout from './BaseLayout.astro';
 import { formatDate, slugify } from '../components/js/utils';
 
-const { frontmatter } = Astro.props;
-const { minutesRead, title, date, canonical, canonicalLanguage, language, description } = frontmatter;
-
-console.log('vakaka', frontmatter);
+const { title, date, canonical, canonicalLanguage, language, description, minutesRead } = Astro.props;
 ---
 
 <BaseLayout
     title={title}
     description={description}
-    image={frontmatter.image}
+    image={Astro.props.image}
     canonical={canonical}
-    canonicalLanguage={frontmatter.canonicalLanguage}
+    canonicalLanguage={canonicalLanguage}
     language={language}
 >
     <div class="container">
