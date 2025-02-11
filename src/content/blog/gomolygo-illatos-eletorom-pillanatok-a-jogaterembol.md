@@ -1,16 +1,17 @@
 ---
 published: true
 language: Hungarian
-title: 'Gomolygó, illatos életöröm: pillanatok a jógateremből'
+title: "Gomolygó, illatos életöröm: pillanatok a jógateremből"
 titleBackground: false
 canonical: https://medium.com/@vera.szeszler/gomolyg%C3%B3-illatos-%C3%A9let%C3%B6r%C3%B6m-pillanatok-a-j%C3%B3gateremb%C5%91l-d09207c7fcdb
 canonicalLanguage: Hungarian
-description:
-  'Amikor egy egyszerű instrukció “Lépj közelebb!”  hirtelen megnyitja az ajtót valami újhoz... Ez a személyes beszámoló
-  nem csupán egy jógapózról szól, hanem arról a varázslatos pillanatról, amikor a test és a lélek együtt fedezi fel a
-  lehetetlennek hitt határait. Egy őszinte vallomás a jóga valódi természetéről, ahol nem az erő vagy hajlékonyság,
-  hanem a ráismerés vezet el a következő szinthez. Inspiráló történet mindenkinek, aki valaha azt gondolta: "ezt úgysem
-  tudom megcsinálni"...'
+description: 'Amikor egy egyszerű instrukció “Lépj közelebb!”  hirtelen
+  megnyitja az ajtót valami újhoz... Ez a személyes beszámoló nem csupán egy
+  jógapózról szól, hanem arról a varázslatos pillanatról, amikor a test és a
+  lélek együtt fedezi fel a lehetetlennek hitt határait. Egy őszinte vallomás a
+  jóga valódi természetéről, ahol nem az erő vagy hajlékonyság, hanem a
+  ráismerés vezet el a következő szinthez. Inspiráló történet mindenkinek, aki
+  valaha azt gondolta: "ezt úgysem tudom megcsinálni"...'
 author: István
 tags:
   - jógaelmélet
@@ -21,22 +22,14 @@ imageMobil: src/images/uploads/mobil_img.jpg
 
 <h3 class="clr-brand-orange">– Lépj közelebb! — hangzik az instrukció, és az esélytelenek nyugalmával, lábujjhegyen tipegek még egy-két lépést. Persze, legyintek magamban gondolat nélkül, majd pont most lesz jó, majd pont most alakul másképp, mind eddig bármikor… Épp fejenállásba evickélnék fölfelé, ahol amúgy már jól vagyok, ott már viszonylagos kényelemben álldogálok aránylag hosszan. De a lábamat “ezer éve” egyenként emelem a függőlegesig, ezzel így elvoltam mostanáig, és akár eztán is maradhatna ez a megoldás.</h3>
 
-Az első instrukció tehát úgy szólt, hogy “párosan, nyújtva”, próbáljam meg így, menjek bele “szabályosan”, ahogy kell.
-Pedig ez lehetetlen. Bizonyítékom is van rá, próbáltam már. Nincs az az izomcsoport a testemen, ami ezt a mozdulatot
-létre tudja hozni. Megpróbálom, ahogy már az elmúlt “ezer évben” néha megpróbáltam, dehát nincs az az isten. Főleg nem
+Az első instrukció tehát úgy szólt, hogy “párosan, nyújtva”, próbáljam meg így, menjek bele “szabályosan”, ahogy kell. Pedig ez lehetetlen. Bizonyítékom is van rá, próbáltam már. Nincs az az izomcsoport a testemen, ami ezt a mozdulatot létre tudja hozni. Megpróbálom, ahogy már az elmúlt “ezer évben” néha megpróbáltam, dehát nincs az az isten. Főleg nem
 kimerülten, az óra legvégén, amikor ez az ászana sorra kerül.
 
-– Lépj közelebb! — most viszont megkaptam a kulcsot a zárhoz. Ahogy még egy kicsit közelebb húztam a földön nyugvó fejem
-búbjához a páros lábfejem, ráéreztem egy billenőpontra, ahol már nem erőből, hanem egy újfajta egyensúlyi helyzetből,
-szinte magától emelkedtek a lábaim az égnek. Úgy meglepődtem, hogy kis sikkantással ki is estem a pózból, de másodszorra
-összejött kábé, legközelebb pedig csont nélkül. És azután is, meg később is, óráról órára.
+– Lépj közelebb! — most viszont megkaptam a kulcsot a zárhoz. Ahogy még egy kicsit közelebb húztam a földön nyugvó fejem búbjához a páros lábfejem, ráéreztem egy billenőpontra, ahol már nem erőből, hanem egy újfajta egyensúlyi helyzetből, szinte magától emelkedtek a lábaim az égnek. Úgy meglepődtem, hogy kis sikkantással ki is estem a pózból, de másodszorra
+összejött *kábé*, legközelebb pedig csont nélkül. És azután is, meg később is, óráról órára.
 
-Imádom ezeket az élményeket. Nem gyakoriak, de emlékezetesek. \*\*Olyanok, mint a “trauma” ellentéte, amikor egy extrém
-pozitív helyzet vésődik be örökre, sejtszinten a szervezetbe.\*\* Óra után egy kis magyarázat is érkezik, amikor
-viccesen bekérdezem az oktatót: hát ezt meg miért nem mondta eddig. Mert ezt ő nem árulhatta volna el. Valóban, se most,
-se korábban nem árulta el, és nem is tehette volna. Csak rávezető infót adhatott, de ami történt, azt én raktam össze —
-talán épp abban az egyetlen pillanatban, amikor mégis nekimentem újra, az első sikkantós kudarc után. Egyébként meg nem
-is volt kudarc: rettentő izgalmas volt már “elrontani” is, meglepően örömteli.
+Imádom ezeket az élményeket. Nem gyakoriak, de emlékezetesek. **Olyanok, mint a “trauma” ellentéte, amikor egy extrém pozitív helyzet vésődik be örökre, sejtszinten a szervezetbe.** Óra után egy kis magyarázat is érkezik, amikor viccesen bekérdezem az oktatót: hát ezt meg miért nem mondta eddig. Mert ezt ő nem árulhatta volna el. Valóban, se most,
+se korábban nem árulta el, és nem is tehette volna. Csak rávezető infót adhatott, de ami történt, azt én raktam össze — talán épp abban az egyetlen pillanatban, amikor mégis nekimentem újra, az első sikkantós kudarc után. Egyébként meg nem is volt kudarc: rettentő izgalmas volt már “elrontani” is, meglepően örömteli.
 
 Megoldókulcs a test.
 
