@@ -96,14 +96,13 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
                 <Content />
             </article>
             <IconButton
-                href="/blog/"
                 variant="third-naked-orange"
                 iconName="ArrowLeft"
                 iconClass="orange"
-                class="mt-20px link-orange btn--no-padding mb-40px"
-                ariaLabel="Vissza az összes bejegyzéshez gomb"
+                class="mt-20px link-orange btn--no-padding mb-40px back-button"
+                ariaLabel="Vissza az előző oldalra gomb"
             >
-                Vissza az összes bejegyzéshez
+                Vissza az előző oldalra
             </IconButton>
         </div>
         <!-- Blog Sidebar - csak desktopon látható, a meglévő .hidden-mobile osztállyal rejtjük mobilon -->
@@ -117,3 +116,17 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         </div>
     </div>
 </BlogPostLayout>
+
+<script>
+    // A script automatikusan csak kliens oldalon fut
+    document.querySelector('.back-button')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Ha van előzmény, akkor visszalépünk
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            // Ha nincs előzmény (pl. közvetlen link), akkor a blog főoldalra irányítunk
+            window.location.href = '/blog/';
+        }
+    });
+</script>
