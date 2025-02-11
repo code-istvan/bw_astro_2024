@@ -17,7 +17,7 @@ tags:
   - jógaelmélet
 date: 2025-02-04T12:15:00.000Z
 image: src/images/uploads/desktop_img.jpg
-imageMobil: src/images/uploads/mobil_img.jpg
+imageMobil: src/images/uploads/vera_gomolygo-.png
 ---
 
 <h3 class="clr-brand-orange">– Lépj közelebb! — hangzik az instrukció, és az esélytelenek nyugalmával, lábujjhegyen tipegek még egy-két lépést. Persze, legyintek magamban gondolat nélkül, majd pont most lesz jó, majd pont most alakul másképp, mind eddig bármikor… Épp fejenállásba evickélnék fölfelé, ahol amúgy már jól vagyok, ott már viszonylagos kényelemben álldogálok aránylag hosszan. De a lábamat “ezer éve” egyenként emelem a függőlegesig, ezzel így elvoltam mostanáig, és akár eztán is maradhatna ez a megoldás.</h3>
