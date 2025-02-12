@@ -76,7 +76,7 @@ collections:
   - name: authors
     label: Authors
     label_singular: Blog
-    folder: src/images/uploads/authors/
+    folder: src/content/authors/
     media_folder: ''
     public_folder: ''
     extension: json
