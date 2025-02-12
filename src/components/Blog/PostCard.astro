@@ -9,6 +9,8 @@ const authors = await getCollection('authors');
 const { frontmatter, slug, minutesRead } = Astro.props;
 const { title, date, description, author, tags } = frontmatter;
 const currentAuthor = authors.find(({ data: { name: authorName } }) => authorName === author);
+
+console.log('currentAuthor', currentAuthor);
 ---
 
 <div class="blog-post mb-20px">
