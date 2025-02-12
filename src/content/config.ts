@@ -1,14 +1,14 @@
 import { defineCollection, z } from 'astro:content';
 
-const authorsCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    name: z.string(),
-    title: z.string(),
-    email: z.string().optional(),
-    authorimage: z.string().optional(),
-  }),
-});
+// const authorsCollection = defineCollection({
+//   type: 'data',
+//   schema: z.object({
+//     name: z.string(),
+//     title: z.string(),
+//     email: z.string().optional(),
+//     authorimage: z.string().optional(),
+//   }),
+// });
 
 const postsCollection = defineCollection({
   type: 'content',
@@ -114,7 +114,7 @@ const eventsCollection = defineCollection({
 
 export const collections = {
   blog: postsCollection,
-  authors: authorsCollection,
+  // authors: authorsCollection,
   schedule: scheduleCollection,
   customTimes: customTimesCollection,
   classes: classesCollection,
