@@ -1,5 +1,0 @@
----
-name: István
-title: techLead
-authorimage: /src/images/uploads/authors/istvan.png
----
