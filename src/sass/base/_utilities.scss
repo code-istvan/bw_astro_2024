@@ -70,7 +70,7 @@
       position: relative;
     }
     li::before {
-      content: url(../../images/chevron_right.svg);
+      content: url(../../images/svg/chevron_right.svg);
       //   content: '>';
       color: $color-brand-orange;
       font-size: 6px;
