@@ -6,7 +6,7 @@
   "huTeacherFullName": "Szalai István",
   "enTeacherFullName": "István Szalai",
   "enTeacherStyle": "ashtanga yoga",
-  "teacherImage": "src/images/teachers/istvan.png",
+  "teacherImage": "/src/images/teachers/istvan.png",
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "/szalai-istvan/",
   "teacherId": "istvanJi",
