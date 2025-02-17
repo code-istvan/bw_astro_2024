@@ -23,13 +23,6 @@ interface Props {
 
 const url = Astro.url;
 const { title, isHomePage, description, noindex, language, canonicalLanguage, titleBackground } = Astro.props as Props;
-
-console.log('BaseLayout props:', {
-    title,
-    language,
-    canonicalLanguage,
-    titleBackground,
-});
 ---
 
 <!doctype html>

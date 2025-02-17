@@ -271,3 +271,9 @@ article {
     margin-top: 10px;
   }
 }
+.title-with-background {
+  background-color: rgba(255, 165, 0, 0.8); /* 80% átlátszó fekete */
+  color: black; /* Hogy a szöveg olvasható legyen a sötét háttéren */
+  padding: 1rem; /* Egy kis belső térköz */
+  border-radius: 4px; /* Opcionális: lekerekített sarkok */
+}
