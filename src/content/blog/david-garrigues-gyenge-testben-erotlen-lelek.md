@@ -13,8 +13,7 @@ date: 2014-09-30T15:37:42.306Z
 image: src/images/uploads/david_garrigues_desktop.jpeg
 imageMobil: src/images/uploads/david_garrigues_mobil.jpeg
 ---
-
-### Sri K. Pattabhi Jois gyakran emlegette mára híressé vált mondását, miszerint “gyenge test, gyenge elme”, ugyanakkor szeretett idézni a jóga szentírásból is, amelyben az áll, hogy az “Önvaló nem ismerhető meg a gyengék által”.
+<h3 class="clr-brand-orange">Sri K. Pattabhi Jois gyakran emlegette mára híressé vált mondását, miszerint “gyenge test, gyenge elme”, ugyanakkor szeretett idézni a jóga szentírásból is, amelyben az áll, hogy az “Önvaló nem ismerhető meg a gyengék által”.</h3>
 
 Ezek és más hasonló kijelentések rávilágítanak arra, hogy mennyire fontosnak tartotta hangsúlyozni az astanga jóga
 harmadik ágának, az ászanák gyakorlásának értékét.
