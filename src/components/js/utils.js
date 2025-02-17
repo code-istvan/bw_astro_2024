@@ -38,8 +38,10 @@ export function slugify(text) {
 export function formatDate(date) {
   const d = new Date(date);
 
+  const year = d.getFullYear().toString();
+
   // Az év utolsó két számjegye
-  const year = d.getFullYear().toString().slice(-2);
+  // const year = d.getFullYear().toString().slice(-2);
 
   // Hónap két számjeggyel
   const month = (d.getMonth() + 1).toString().padStart(2, '0');

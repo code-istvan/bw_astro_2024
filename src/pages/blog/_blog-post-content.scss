@@ -134,6 +134,17 @@
   margin: 0 auto;
   left: 0;
   right: 0;
+  text-align: left;
+}
+
+.title-with-background {
+  background-color: $color-brand-orange;
+  // color: $color-shades-black;
+  color: white;
+  padding: 0.5rem 1rem;
+  line-height: 1.6; // Ez növeli a sorok közötti távolságot
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 // Blog Post Content Styles
@@ -270,10 +281,4 @@ article {
     gap: 10px;
     margin-top: 10px;
   }
-}
-.title-with-background {
-  background-color: rgba(255, 165, 0, 0.8); /* 80% átlátszó fekete */
-  color: black; /* Hogy a szöveg olvasható legyen a sötét háttéren */
-  padding: 1rem; /* Egy kis belső térköz */
-  border-radius: 4px; /* Opcionális: lekerekített sarkok */
 }
