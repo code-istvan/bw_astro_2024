@@ -58,4 +58,4 @@ légzés és _dristi_. Ez pontatlan, bár elsőre logikusnak tűnő változat. A
 ezek az elemek alkotják a _trisztánát_ (ászana, légzés és _dristi_), és miért nem részei az energetikai zárak, akkor Ö
 azt felelte, hogy azért, mivel egész nap fenn kellene tartani őket (alsó kettőt), nem csak gyakorlás alatt.
 
-**Felhasznált irodalom:** R. Sharath Jois – Az astanga jóga spirituális ösvénye (könyv)
+**Felhasznált irodalom:** R. Sharath Jois – Az astanga jóga spirituális ösvénye
