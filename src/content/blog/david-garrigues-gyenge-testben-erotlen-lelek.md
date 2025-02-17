@@ -82,4 +82,5 @@ szívemet és a koncentráció általi mentális erőmet. Tehát nem csak egysze
 érzékeimet, hogy belakjam a testemet, hogy élvezhessem a „Teljes képet”, amely a „Nagy alkotó” kifinomult látásmódjában
 él, amely megmutatja, milyen csodálatos a szellem.
 
-**Forrás:** Elephant Journal - Weak body, weak mind by David Garrigues **Fordította:** Fazekas Gyöngyi
+**Forrás:** Elephant Journal - Weak body, weak mind by David Garrigues  
+**Fordította:** Fazekas Gyöngyi
