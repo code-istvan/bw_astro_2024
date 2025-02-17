@@ -2,13 +2,14 @@
 published: true
 language: Hungarian
 title: A jóga egyszerűségének megőrzése – Ross Stambaugh
+titleBackground: true
 description: A jóga nemcsak belső önismeretre, hanem a külvilággal való
-    kapcsolódásra is tanít – mindkettőt 100%-osan megélve. A cél az, hogy
-    zökkenőmentesen tudjunk egyensúlyozni e kettő között, hogy életünket teljes
-    egészében áthathassa a jóga szelleme
+  kapcsolódásra is tanít – mindkettőt 100%-osan megélve. A cél az, hogy
+  zökkenőmentesen tudjunk egyensúlyozni e kettő között, hogy életünket teljes
+  egészében áthathassa a jóga szelleme
 author: Zsuzsi
 tags:
-    - astangaelmélet
+  - astangaelmélet
 date: 2024-11-05T13:52:13.017Z
 image: src/images/uploads/ross_simple_blog.jpeg
 imageMobil: src/images/uploads/ross_mobil.jpg
