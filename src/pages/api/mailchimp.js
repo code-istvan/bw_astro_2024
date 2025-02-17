@@ -8,12 +8,9 @@ mailchimp.setConfig({
 export const POST = async ({ request }) => {
   try {
     const formData = await request.formData();
-    console.log('formData', formData);
 
     const name = formData.get('name');
     const email = formData.get('email');
-
-    console.log(name, email);
 
     const response = await mailchimp.lists.addListMember(import.meta.env.PUBLIC_MAILCHIMP_LIST_ID, {
       email_address: email,
@@ -22,7 +19,6 @@ export const POST = async ({ request }) => {
         FNAME: name,
       },
     });
-    console.log(response.ok);
     return new Response(JSON.stringify({}), {
       status: 200,
     });

@@ -2,7 +2,6 @@ import { actions } from 'astro:actions';
 
 export const submitNewsletter = async (event: Event, language: 'hu' | 'en') => {
   event.preventDefault();
-  console.log('submitNewsletter');
 
   const formData = new FormData(event.target as HTMLFormElement);
   const name = formData.get('name') as string | null;

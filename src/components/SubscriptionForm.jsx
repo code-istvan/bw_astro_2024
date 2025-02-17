@@ -11,7 +11,6 @@ const SubscriptionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('dwdwe');
 
     const contactData = new FormData();
     contactData.append('name', subscriptionData.name);
