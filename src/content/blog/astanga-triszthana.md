@@ -8,7 +8,7 @@ author: István
 tags:
   - astangaelmélet
 date: 2021-04-28T15:37:42.306Z
-image: src/images/uploads/dristhi_desktop.jpeg
+image: src/images/uploads/dristhi_desktop.jpg
 imageMobil: src/images/uploads/dristhi_mobil.jpeg
 ---
 
