@@ -11,8 +11,8 @@ author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2024-11-05T13:52:13.017Z
-image: src/images/uploads/ross_simple_blog.jpeg
-imageMobil: src/images/uploads/ross_mobil.jpg
+image: src/images/uploads/ross_eka_pada-copy.jpeg
+imageMobil: src/images/uploads/ross_mobil.jpeg
 ---
 
 Az alábbiakban három rövid történetet osztok meg, amelyek segítettek abban, hogy több mint 20 éve fenntartsam a jógagyakorlásomat. Ahogy múlnak az évek a gyakorlásomban, az ászanák apró részletei egyre kisebb hangsúlyt kapnak, és a rutin gyökeret ereszt. A gyakorlás adja meg a nap tempóját, ez lesz a napom vetülete, számomra igazából ez teszi relevánssá a jógát. Így töltöm el a gyakorlás utáni további 22 órát, ami olyan erőteljes értelmet ad az életemnek.
