@@ -2,7 +2,9 @@
 published: true
 language: Hungarian
 title: A jóga egyszerűségének megőrzése – Ross Stambaugh
-titleBackground: true
+titleBackground: false
+canonical: https://www.keenonyoga.com/ross-stambaugh-keeping-yoga-simple/
+canonicalLanguage: English
 description: A jóga nemcsak belső önismeretre, hanem a külvilággal való
   kapcsolódásra is tanít – mindkettőt 100%-osan megélve. A cél az, hogy
   zökkenőmentesen tudjunk egyensúlyozni e kettő között, hogy életünket teljes
@@ -17,7 +19,7 @@ imageMobil: src/images/uploads/ross_mobil.jpeg
 
 Az alábbiakban három rövid történetet osztok meg, amelyek segítettek abban, hogy több mint 20 éve fenntartsam a jógagyakorlásomat. Ahogy múlnak az évek a gyakorlásomban, az ászanák apró részletei egyre kisebb hangsúlyt kapnak, és a rutin gyökeret ereszt. A gyakorlás adja meg a nap tempóját, ez lesz a napom vetülete, számomra igazából ez teszi relevánssá a jógát. Így töltöm el a gyakorlás utáni további 22 órát, ami olyan erőteljes értelmet ad az életemnek.
 
-### 1. A JÓGA 200%-BAN ÁTHATJA AZ ÉLETED!
+<h3 class="clr-brand-orange">1. A JÓGA 200%-BAN ÁTHATJA AZ ÉLETED!</h3>
 
 Gokulamban [Mysore-ban, Indiában] a shalától körülbelül 15 perces robogóútra van egy kis hely, egy sikátorban, egy kis Shiva-templom mellett, egy különös ismertetőjegy nélküli ház hátsó részén, ahol átsétálhatunk egy garázson keresztül Narashima professzor egyik irodájába.
 Kis ember, kopott fehér dhotiban, fehér pólóban, cipő nélkül, a mellkasán vékony fehér zsinórral. Szemüvege lecsúszva az orrán, miközben lassan gépel a billentyűzetén. A könyvek a padlótól a mennyezetig egymásra vannak pakolva. Belépünk és leülünk a járólapozott padlóra. Egy kis párnára is ülhetsz. Talán egy tucatnyi ember van ott. Néha többen is. Néha kevesebben. Mindig vár egy kicsit. A tempó indiai, azaz hétköznapi.
@@ -36,7 +38,7 @@ válaszolja.**
 
 **Ilyen egyszerű.**
 
-### 2. A JÓGA A CSELEKVÉSBEN VALÓ JÁRTASSÁG (BHAGAVAD-GITÁ)
+<h3 class="clr-brand-orange">2. A JÓGA A CSELEKVÉSBEN VALÓ JÁRTASSÁG (BHAGAVAD-GITÁ)</h3>
 
 Vettem egy VHS kazettát, amit Richard Freeman adott ki az 1990-es években. Az Ohio állambeli Cincinnatiben, egy hippis bolt kirakatában láttam meg. Áhítattal néztem, ahogy felemelkedik kézenállásba, miközben a lábai lótuszban voltak. Leesett az állam! Hazavittem, és még aznap elkezdtem jógát gyakorolni. Hat hónap után tönkrement a szalag.
 
@@ -46,7 +48,7 @@ Folytattam a napi gyakorlást, és azt láttam, hogy a képességeim fejlődés�
 
 **Ilyen egyszerű.**
 
-### 3. A JÓGA-SZÚTRÁK INKÁBB A FILOZÓFUSOK SZÁMÁRA VANNAK, NEM PEDIG AZ AKADÉMIKUSOK SZÁMÁRA
+<h3 class="clr-brand-orange">3. A JÓGA-SZÚTRÁK INKÁBB A FILOZÓFUSOK SZÁMÁRA VANNAK, NEM PEDIG AZ AKADÉMIKUSOK SZÁMÁRA</h3>
 
 <div class="blog-island-section">Patandzsali szútráit az alapoktól kezdve a legalapvetőbb szinten kell tanítani. A jóga tapasztalaton alapul, nem könyveken. Látod, nem tudod kigondolni, mi a jóga. Sok tudós fantáziadús szójátékkal és utalásokkal próbálja leírni, hogy mi a jóga, illetve, sokszor azt, hogy mi nem. Ez csak összezavarja a hallgatóságot, így folytatni kell a beszélgetést; és beszélgetni, beszélgetni és beszélgetni. Ez választja el a tudóst a társaitól.</div>
 
