@@ -63,10 +63,7 @@ Több mint 20 éves tapasztalattal rendelkezik az astanga tradícióban. A napi 
 
 Keresd őt az Instagramon az [@ashtanga.yoga.ross](https://www.instagram.com/ashtanga.yoga.ross/) címen!
 
-**Az írás szerzője:** [Ross Stambaugh](https://ashtangayogaross.com)
-
-**Az írás eredeti címe:** Trying to keep yoga simple – by Ross Stambaugh
-
-**Megjelent:** [Keen On Yoga Blog](https://www.keenonyoga.com/ross-stambaugh-keeping-yoga-simple/)
-
+**Az írás szerzője:** [Ross Stambaugh](https://ashtangayogaross.com) 
+**Az írás eredeti címe:** Trying to keep yoga simple – by Ross Stambaugh  
+**Megjelent:** [Keen On Yoga Blog](https://www.keenonyoga.com/ross-stambaugh-keeping-yoga-simple/)  
 **Fordította:** Dr. Kővári Zsuzsa
