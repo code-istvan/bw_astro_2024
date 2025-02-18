@@ -2,7 +2,7 @@
 published: true
 language: Hungarian
 title: "Gomolygó, illatos életöröm: pillanatok a jógateremből"
-titleBackground: true
+titleBackground: false
 canonical: https://medium.com/@vera.szeszler/gomolyg%C3%B3-illatos-%C3%A9let%C3%B6r%C3%B6m-pillanatok-a-j%C3%B3gateremb%C5%91l-d09207c7fcdb
 canonicalLanguage: Hungarian
 description: 'Amikor egy egyszerű instrukció “Lépj közelebb!”  hirtelen
