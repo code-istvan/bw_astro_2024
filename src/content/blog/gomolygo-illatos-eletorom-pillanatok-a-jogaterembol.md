@@ -60,4 +60,4 @@ szépség végtelen játéka.
 
 (PS: itt egy jól dokumentált [első astanga élmény](https://joga.blog.hu/2011/09/22/atma_center_buda_astanga_1_sorozat), a [továbbfejlődés](https://joga.blog.hu/2011/12/07/nagyonhosszu_astangas_poszt) bőbeszédű naplója és az [elköteleződés](https://joga.blog.hu/2012/10/11/jogalujza_szint_vall) története. Sok más kanyar utáni visszatalálások — a gyülekező élettapasztalat spiráljai.:)
 
-**Forrás:** [Szeszlér Vera @Medium.com](https://medium.com/@vera.szeszler)
+**Forrás:** [Szeszlér Vera @Medium.com](https://medium.com/@vera.szeszler)A szerző engedélyével! 
