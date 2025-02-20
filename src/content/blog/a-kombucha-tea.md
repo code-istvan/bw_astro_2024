@@ -74,5 +74,5 @@ A már idézett Weidinger atya a következőképpen számol be a Kombucha hatás
 
 Összességében elmondhatjuk, hogy a kombucha számos módon hozzájárul ahhoz, hogy a testi és lelki egészségünket támogassa. Fontos azonban hangsúlyozni, hogy a kombucha csak hozzájárul az egészséges életmódhoz, de nem helyettesíti azt. A fent felsorolt pozitív hatásokra a rendszeres testmozgás és az egészséges életmód mellett számíthatunk, astanga gyakorlás mellé például kifejezetten ajánlott.
 
-**Szerkesztette:** Dr. Kővári Zsuzsa
+**Szerkesztette:** Dr. Kővári Zsuzsa  
 **Források:** [Dietless - A kombucha hatásai és fogyasztása](https://dietless.hu/kombucha-teagomba/), [Kombucha a csodálatos gomba](https://docplayer.hu/1333124-Kombucha-a-csodalatos-gomba.html)
