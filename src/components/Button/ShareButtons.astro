@@ -2,44 +2,42 @@
 import Icons from '../Icons/Icons.astro';
 ---
 
-<p>Bejegyzés megosztása</p>
-<div class="share-buttons">
-    <button
-        class="share-button facebook"
-        aria-label="Megosztás Facebookon"
-        onclick="window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')"
-    >
-        <Icons name="Facebook" color="lightGray" />
-    </button>
-
-    <button
-        class="share-button twitter"
-        aria-label="Megosztás X-en"
-        onclick="window.open(`https://twitter.com/intent/tweet?url=${window.location.href}`, '_blank')"
-    >
-        <Icons name="X" color="lightGray" />
-    </button>
-
-    <button
-        class="share-button whatsapp"
-        aria-label="Megosztás WhatsAppon"
-        onclick="window.open(`https://api.whatsapp.com/send?text=${window.location.href}`, '_blank')"
-    >
-        <Icons name="WhatsApp" color="lightGray" />
-    </button>
-
-    <button
-        class="share-button email"
-        aria-label="Megosztás e-mailben"
-        onclick="window.location.href=`mailto:?subject=${document.title}&body=${window.location.href}`"
-    >
-        <Icons name="Mail" color="lightGray" />
-    </button>
-
-    <button class="share-button copy" aria-label="Link másolása" id="copyLink">
-        <Icons name="Link" color="lightGray" />
-        <span class="copy-tooltip">Link másolva!</span>
-    </button>
+<div class="share-container">
+    <p>BEJEGYZÉS MEGOSZTÁSA</p>
+    <div class="share-buttons">
+        <button
+            class="share-button facebook"
+            aria-label="Megosztás Facebookon"
+            onclick="window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')"
+        >
+            <Icons name="Facebook" color="lightGray" />
+        </button>
+        <button
+            class="share-button twitter"
+            aria-label="Megosztás X-en"
+            onclick="window.open(`https://twitter.com/intent/tweet?url=${window.location.href}`, '_blank')"
+        >
+            <Icons name="X" color="lightGray" />
+        </button>
+        <button
+            class="share-button whatsapp"
+            aria-label="Megosztás WhatsAppon"
+            onclick="window.open(`https://api.whatsapp.com/send?text=${window.location.href}`, '_blank')"
+        >
+            <Icons name="WhatsApp" color="lightGray" />
+        </button>
+        <button
+            class="share-button email"
+            aria-label="Megosztás e-mailben"
+            onclick="window.location.href=`mailto:?subject=${document.title}&body=${window.location.href}`"
+        >
+            <Icons name="Mail" color="lightGray" />
+        </button>
+        <button class="share-button copy" aria-label="Link másolása" id="copyLink">
+            <Icons name="Link" color="lightGray" />
+            <span class="copy-tooltip body">Link másolva!</span>
+        </button>
+    </div>
 </div>
 
 <style>
@@ -54,55 +52,15 @@ import Icons from '../Icons/Icons.astro';
         padding: 0.5rem;
         cursor: pointer;
         border-radius: 50%;
-        transition: all 0.2s ease;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
     }
 
-    .share-button:hover {
-        transform: translateY(-2px);
-    }
-
-    .facebook {
-        color: #1877f2;
-    }
-
-    .twitter {
-        color: #1da1f2;
-    }
-
-    .whatsapp {
-        color: #25d366;
-    }
-
-    .email {
-        color: #ea4335;
-    }
-
-    .copy {
-        color: #6b7280;
-    }
-
-    .share-button:hover.facebook {
-        background-color: rgba(24, 119, 242, 0.1);
-    }
-
-    .share-button:hover.twitter {
-        background-color: rgba(29, 161, 242, 0.1);
-    }
-
-    .share-button:hover.whatsapp {
-        background-color: rgba(37, 211, 102, 0.1);
-    }
-
-    .share-button:hover.email {
-        background-color: rgba(234, 67, 53, 0.1);
-    }
-
-    .share-button:hover.copy {
-        background-color: rgba(107, 114, 128, 0.1);
+    /* Minden gomb hover állapotában az ikon színe narancs lesz */
+    .share-button:hover :global(svg) {
+        fill: orange;
     }
 
     .copy-tooltip {
@@ -133,8 +91,6 @@ import Icons from '../Icons/Icons.astro';
             await navigator.clipboard.writeText(window.location.href);
             const tooltip = document.querySelector('.copy-tooltip');
             tooltip?.classList.add('show');
-
-            // Tooltip eltüntetése 2 másodperc után
             setTimeout(() => {
                 tooltip?.classList.remove('show');
             }, 2000);
