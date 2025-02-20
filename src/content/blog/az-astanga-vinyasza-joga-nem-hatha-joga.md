@@ -11,13 +11,11 @@ image: src/images/uploads/gurujis_desktop.jpeg
 imageMobil: src/images/uploads/gurujis_mobil.jpeg
 ---
 
-Gyakran kerül érdeklődés középpontjába Pattabhi Jois ászana rendszere: honnan ered és hogyan fejlődött az évek során,
-ugyanakkor a diskurzusok során kevesen helyezik bele Gurudzsi rendszerét az **astanga** (nyolcágú) **jóga** egészébe,
-ami egyike a hat orthodox indiai filozófiai irányzatnak _(darshana)_.
+### Gyakran kerül érdeklődés középpontjába Pattabhi Jois ászana rendszere: honnan ered és hogyan fejlődött az évek során, ugyanakkor a diskurzusok során kevesen helyezik bele Gurudzsi rendszerét az **astanga** (nyolcágú) **jóga** egészébe, ami egyike a hat orthodox indiai filozófiai irányzatnak _(darshana)_.
 
 Gurudzsi mindig azt mondta, hogy amit ő tanít, az az eredeti **Patandzsali jóga**.
 
-És hogy miből következik mindez?
+**És hogy miből következik mindez?**
 
 Napjaink tudósai úgy vélik, hogy az ászanagyakorlás elsőként a hatha jóga irodalmában – mint a Hatha Jóga Pradipika vagy
 a Gheranda Samhita – nagyjából 1000 évvel ezelőtt jelent meg, éppen ezért merül fel Patthabi Jois ászana rendszerével

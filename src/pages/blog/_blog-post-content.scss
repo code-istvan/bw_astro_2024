@@ -164,10 +164,8 @@ article {
     text-align: left;
   }
 
-  .orange-title {
-    h3 {
-      color: $color-brand-orange;
-    }
+  h3 {
+    color: $color-brand-orange;
   }
 
   strong {
@@ -178,6 +176,7 @@ article {
   ul {
     list-style: none;
     margin-left: 40px;
+    margin-bottom: 2rem;
     font-family: $font-family-secondary;
     font-size: 1.1428571429rem !important;
     font-weight: $font-weight-regular;

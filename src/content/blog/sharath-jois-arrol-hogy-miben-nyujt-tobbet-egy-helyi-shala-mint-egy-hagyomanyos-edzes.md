@@ -1,13 +1,12 @@
 ---
 published: true
 language: Hungarian
-title: Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy
-  hagyományos edzés
+title: Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy hagyományos edzés
 canonical: https://www.sonima.com/yoga/yoga-articles/yoga-shala/
 canonicalLanguage: English
-description: Nagyon fontos, hogy legyen egy jóga shala amihez kötődünk. Egyrészt
-  mert a shala motivál. Az ember lát másokat gyakorolni és ettől maga is kedvet
-  kap hozzá.
+description:
+  Nagyon fontos, hogy legyen egy jóga shala amihez kötődünk. Egyrészt mert a shala motivál. Az ember lát másokat
+  gyakorolni és ettől maga is kedvet kap hozzá.
 author: István
 tags:
   - jógaelmélet
@@ -87,4 +86,6 @@ pletykálnak, összevissza beszélnek, úgy ilyen légkör alakul ki és az áta
 tapasztalható meg. Ha a tanár lelkiekben gazdag környeztet teremt, spirituális beszélgetésekkel és gondolatokkal, úgy a
 tanuló elméje is sok tekintetben átalakuláson megy keresztül. Ami egyedül otthon ülve szintén nem történik meg.
 
-**Forrás:** Sonima.com **Szöveget fordította:** Szabó Gergő **Mantra ének:** Endrődy Zsófia
+**Forrás:** Sonima.com  
+**Szöveget fordította:** Szabó Gergő  
+**Mantra ének:** Endrődy Zsófia
