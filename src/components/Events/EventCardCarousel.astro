@@ -1,6 +1,7 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import { formatDate } from '../js/utils.js';
 import './_EventCardCarousel.scss';
 
 interface EventCardProps {
@@ -12,9 +13,7 @@ interface EventCardProps {
 }
 
 const { title, date, eventImage, eventLink, images } = Astro.props;
-
-const eventDate = new Date(date);
-const formattedDate = `${eventDate.getFullYear()} ${eventDate.toLocaleString('hu-HU', { month: 'short' }).replace('.', '').toUpperCase()} ${eventDate.getDate()}`;
+const formattedDate = formatDate(date);
 ---
 
 <div class="event-card">

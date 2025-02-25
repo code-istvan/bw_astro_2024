@@ -1,18 +1,3 @@
-// const months = [
-//   'január',
-//   'február',
-//   'március',
-//   'április',
-//   'május',
-//   'június',
-//   'július',
-//   'augusztus',
-//   'szeptember',
-//   'október',
-//   'november',
-//   'december',
-// ];
-
 export function slugify(text) {
   return text
     .toString()
@@ -25,15 +10,6 @@ export function slugify(text) {
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 }
-
-// export function formatDate(date) {
-//   const d = new Date(date);
-//   const year = d.getFullYear();
-//   const month = months[d.getMonth()];
-//   const day = d.getDate();
-
-//   return `${year} ${month} ${day}.`;
-// }
 
 export function formatDate(date) {
   const d = new Date(date);
