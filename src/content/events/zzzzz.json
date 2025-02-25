@@ -5,8 +5,9 @@
   "published": true,
   "date": "2025-04-08T14:45:00.000Z",
   "eventType": "Workshop",
-  "eventlink": "https://bandha.works/astanga-kezdo-tanfolyam/",
+  "eventlink": "/astanga-kezdo-tanfolyam/",
   "eventid": "zzzzz",
-  "titleEnglish": "Ashtanga",
-  "title": "Astanga kezdő tanfolyam"
+  "titleEnglish": "Ashtanga beginners course",
+  "title": "Astanga kezdő tanfolyam",
+  "eventlinkEnglish": "/en/astanga-kezdo-tanfolyam/"
 }
