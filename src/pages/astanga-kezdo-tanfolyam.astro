@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/astanga-kezdo-tanfolyam-mobil.jpg';
+import desktopImage from '../images/astanga-kezdo-tanfolyam-desktop.jpeg';
+
+const metadata = {
+    title: 'ASTANGA KEZDŐ TANFOLYAM',
+    description:
+        'Ezen az oldalon találod azokat az információkat, amelyek segítenek az astanga jógával való első találkozás során.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="elsoalkalom-wrapper tight--desktop--container"></div>
+    </div>
+</BaseLayout>
