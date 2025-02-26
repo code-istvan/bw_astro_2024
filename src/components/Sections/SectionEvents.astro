@@ -1,19 +1,33 @@
 ---
 import Carousel from '../Carousel/Carousel.astro';
 import EventCardCarousel from '../Events/EventCardCarousel.astro';
-import { useTranslations, getLangFromUrl } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
 import { getCollection } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import './_sectionEvents.scss';
 
-const { eventType = [], maxEvents = Infinity } = Astro.props;
-
+const { eventType = [], maxEvents = Infinity, lang: propLang } = Astro.props;
 const events = await getCollection('events');
-
 const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+// Használd a prop-ot, ha meg van adva, egyébként az URL-ből olvasd ki
+const lang = propLang || getLangFromUrl(Astro.url);
+
+// Belső fordítások
+const translations = {
+    hu: {
+        sectionEventsTitle: 'Események',
+        sectionEventsButton: 'Összes esemény',
+        sectionEventsLink: '/esemenyek',
+    },
+    en: {
+        sectionEventsTitle: 'Events',
+        sectionEventsButton: 'View all events',
+        sectionEventsLink: '/events',
+    },
+};
+
+const currentTranslation = translations[lang] || translations.hu;
 
 const upcomingEvents = events
     .filter((event) => event.data.published)
@@ -23,14 +37,17 @@ const upcomingEvents = events
         return eventDate.setHours(0, 0, 0, 0) >= today.setHours(0, 0, 0, 0);
     })
     .filter((event) => eventType.length === 0 || eventType.includes(event.data.eventType))
-    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
-// .slice(0, maxEvents);
+    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime())
+    .slice(0, maxEvents);
 ---
 
 <div class="section-events container mb-40px">
     <div>
-        <h2 class="section-events__title heading heading--1 text-center mb-20px">{t('sectionEventsTitle')}</h2>
+        <h2 class="section-events__title heading heading--1 text-center mb-20px">
+            {currentTranslation.sectionEventsTitle}
+        </h2>
     </div>
+
     <!-- Carousel 1080px alatt -->
     <div class="carousel-wrapper">
         <Carousel>
@@ -38,11 +55,16 @@ const upcomingEvents = events
                 upcomingEvents.map((event) => (
                     <div class="section-events__slide embla__slide mt-20px">
                         <EventCardCarousel
-                            title={event.data.title}
+                            title={lang === 'en' ? event.data.titleEnglish || event.data.title : event.data.title}
                             date={event.data.date}
                             eventImage={event.data.eventimage}
-                            eventLink={event.data.eventlink}
+                            eventLink={
+                                lang === 'en'
+                                    ? event.data.eventlinkEnglish || event.data.eventlink
+                                    : event.data.eventlink
+                            }
                             images={images}
+                            lang={lang}
                         />
                     </div>
                 ))
@@ -56,11 +78,14 @@ const upcomingEvents = events
             upcomingEvents.map((event) => (
                 <div class="flex-item mt-20px">
                     <EventCardCarousel
-                        title={event.data.title}
+                        title={lang === 'en' ? event.data.titleEnglish || event.data.title : event.data.title}
                         date={event.data.date}
                         eventImage={event.data.eventimage}
-                        eventLink={event.data.eventlink}
+                        eventLink={
+                            lang === 'en' ? event.data.eventlinkEnglish || event.data.eventlink : event.data.eventlink
+                        }
                         images={images}
+                        lang={lang}
                     />
                 </div>
             ))
@@ -69,11 +94,11 @@ const upcomingEvents = events
 
     <div class="centered-block">
         <a
-            href={t('sectionEventsLink')}
+            href={currentTranslation.sectionEventsLink}
             class="btn btn--full-width-mobile btn--primary--outline mt-20px"
-            aria-label="{t('sectionEventsButton')}"
+            aria-label={currentTranslation.sectionEventsButton}
         >
-            {t('sectionEventsButton')}
+            {currentTranslation.sectionEventsButton}
         </a>
     </div>
 </div>
