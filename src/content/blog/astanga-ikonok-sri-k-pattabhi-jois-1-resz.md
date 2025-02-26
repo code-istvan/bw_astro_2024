@@ -3,7 +3,10 @@ published: true
 language: Hungarian
 title: "Astanga ikonok: Sri K. Pattabhi Jois 1. rész"
 titleBackground: false
-description: Ide jön a leírás
+description: Pattabhi Jois, a világszerte elismert astanga jóga rendszer
+  megalapítója és tanítója, fiatal korától Krishnamacharya tanítványaként, majd
+  a mysore-i Maharádzsa támogatásával vált az évtizedek során a jóga egyik
+  legbefolyásosabb mesterévé
 author: István
 tags:
   - astangaikon
