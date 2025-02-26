@@ -9,8 +9,8 @@ author: István
 tags:
   - astangaikon
 date: 2016-07-16T12:20:00.000Z
-image: src/images/uploads/desktop_img.jpg
-imageMobil: src/images/uploads/mobil_img.jpg
+image: src/images/uploads/guruji-sharatji-rooftop_desktop.jpeg
+imageMobil: src/images/uploads/guruji-sharatji-rooftop_mobil.jpeg
 ---
 Legutóbbi bejegyzésünkben [(1. rész)](https://bandha.works/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/) Gurudzsi életét az 1960-as évek végéig követtük nyomon. Még nem sejtette akkor, hogy az általa olyan odaadóan tanított astanga jóga meghódítja majd a világot, és ő maga számtalan különböző országba fog ellátogatni, hogy diákok ezreit tanítsa, és vezesse a jóga útján. A változást az 1972-es év hozta, amikor Norman Allen megjelent Mysore-ban, Gurudzsi házánál. Gurudzsi ekkor 57 éves volt. Norman, Puducserri (Pondicherry) városban, David Williams-el és Nancy Gildoffal, Szvámi Gítananda Ananda Ashramjában látták meg először Gurudzsi legidősebb fiát, Mandzsut ászana bemutatót tartani. A két fiút magával ragadta az előadás, és azonnal kikérdezték Mandzsut, hogy hol tanulta ezeket a pózokat. Mandzsu pedig elmesélte, hogy az ő apja, Patthabi Jois, Mysore-ban oktat jógát. Norman az első vonattal Mysore-ba utazott, Davidnek és Nancynek azonban haza kellett menniük, mert lejárt a vízumuk, de a következő szezonban, már ők is Gurudzsi tanítványai lettek.
 
