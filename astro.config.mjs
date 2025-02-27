@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './remark-reading-time.mjs';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
-import path from 'path'; // Add this import
+import path from 'path';
 
 export default defineConfig({
   output: 'static',
@@ -22,8 +22,15 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '/src/images': path.resolve('./src/images'),
+        // Ez segít a képútvonalak feloldásában
+        '@images': path.resolve('./src/images'),
       },
+    },
+  },
+  // Explicit képkezelési konfiguráció
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
     },
   },
 });
