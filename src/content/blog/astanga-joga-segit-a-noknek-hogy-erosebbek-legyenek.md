@@ -32,6 +32,7 @@ jógaórára, hanem egy kínzókamrába érkeztem volna. Ritmikus, erős légzé
 fájdalom. A hangok a legijesztőbbek, szinte tapintható az erőfeszítés és a fizikai fájdalom a levegőben.
 
 ![Govinda Kai Ashtanga Yoga](/image/uploads/govinda_ashtanga.jpeg)
+![Govinda Kai Ashtanga Yoga](../../images/uploads/govinda_ashtanga.jpeg)
 
 Govinda Kai az egyik gyakorlótól a másikhoz lép. Ha valakit bele kell igazítani egy ászanába, vagy segítségre szorul,
 azonnal ott terem. Én oda sem merek nézni, mert félek, hogy ketté fog törni egy kb. 45 kilós lányt, aki már így is egy

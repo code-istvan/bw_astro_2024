@@ -22,15 +22,17 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        // Ez segít a képútvonalak feloldásában
-        '@images': path.resolve('./src/images'),
+        '/src/images': path.resolve('./src/images'),
       },
     },
   },
-  // Explicit képkezelési konfiguráció
+  // Hozzáadjuk az explicit képkezelési konfigurációt
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
+      config: {
+        // Sharp-specifikus konfiguráció, ha szükséges
+      },
     },
   },
 });
