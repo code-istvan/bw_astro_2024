@@ -45,6 +45,10 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
+
+console.log('Image path:', post.data.image);
+console.log('Converted path:', post.data.image.replace('../../', '/src/'));
+console.log('Available keys:', Object.keys(images));
 ---
 
 <BlogPostLayout
@@ -60,7 +64,18 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         post.data.image && (
             <section class="blog-content__desktop-image">
                 {/* <Image src={images[`/${post.data.image}`]()} alt={post.data.title} /> */}
-                <Image src={images[post.data.image.replace('../../', '/src/')]?.()} alt={post.data.title} />
+                <Image
+                    src={
+                        post.data.image.startsWith('../../')
+                            ? images[post.data.image.replace('../../', '/src/')]
+                                ? images[post.data.image.replace('../../', '/src/')]()
+                                : undefined
+                            : images[`/${post.data.image}`]
+                              ? images[`/${post.data.image}`]()
+                              : undefined
+                    }
+                    alt={post.data.title}
+                />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
@@ -70,7 +85,18 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     {
         post.data.imageMobil && (
             <section class="blog-content__mobile-image">
-                <Image src={imagesMobil[post.data.imageMobil.replace('../../', '/src/')]?.()} alt={post.data.title} />
+                <Image
+                    src={
+                        post.data.imageMobil.startsWith('../../')
+                            ? images[post.data.image.replace('../../', '/src/')]
+                                ? images[post.data.image.replace('../../', '/src/')]()
+                                : undefined
+                            : images[`/${post.data.image}`]
+                              ? images[`/${post.data.image}`]()
+                              : undefined
+                    }
+                    alt={post.data.title}
+                />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
