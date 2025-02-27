@@ -5,7 +5,9 @@ import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   output: 'static', //hibajavítás miatt kikommentelve
-  adapter: netlify(), //hibajavítás miatt kikommentelve
+  adapter: netlify({
+    imageCDN: false,
+  }), //hibajavítás miatt kikommentelve
   i18n: {
     defaultLocale: 'hu',
     locales: ['hu', 'en'],
