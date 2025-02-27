@@ -59,7 +59,8 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     {
         post.data.image && (
             <section class="blog-content__desktop-image">
-                <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
+                {/* <Image src={images[`/${post.data.image}`]()} alt={post.data.title} /> */}
+                <Image src={images[post.data.image.replace('../../', '/src/')]?.()} alt={post.data.title} />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
@@ -69,7 +70,7 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     {
         post.data.imageMobil && (
             <section class="blog-content__mobile-image">
-                <Image src={imagesMobil[`/${post.data.imageMobil}`]()} alt={post.data.title} />
+                <Image src={imagesMobil[post.data.imageMobil.replace('../../', '/src/')]?.()} alt={post.data.title} />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
