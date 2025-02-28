@@ -45,9 +45,6 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
-
-console.log('Image path:', post.data.image);
-console.log('Available image keys:', Object.keys(images).slice(0, 5));
 ---
 
 <BlogPostLayout

@@ -15,9 +15,9 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  markdown: {
-    remarkPlugins: [remarkReadingTime, fixImagePaths], // Hozzáadtuk a fixImagePaths plugint
-  },
+  // markdown: {
+  //   remarkPlugins: [remarkReadingTime, fixImagePaths], // Hozzáadtuk a fixImagePaths plugint
+  // },
   integrations: [react()],
   site: 'https://voluble-crumble-cbe048.netlify.app',
   vite: {
