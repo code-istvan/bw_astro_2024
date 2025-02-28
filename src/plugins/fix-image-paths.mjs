@@ -1,3 +1,5 @@
+import { visit } from 'unist-util-visit';
+
 export function fixImagePaths() {
   return (tree) => {
     visit(tree, 'image', (node) => {
