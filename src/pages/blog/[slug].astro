@@ -45,10 +45,6 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
-
-console.log('Image path:', post.data.image);
-console.log('Converted path:', post.data.image.replace('../../', '/src/'));
-console.log('Available keys:', Object.keys(images));
 ---
 
 <BlogPostLayout
@@ -63,8 +59,9 @@ console.log('Available keys:', Object.keys(images));
     {
         post.data.image && (
             <section class="blog-content__desktop-image">
-                {/* <Image src={images[`/${post.data.image}`]()} alt={post.data.title} /> */}
-                <Image
+                <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
+                {/* <Image src={images[post.data.image]()} alt={post.data.title} /> */}
+                {/* <Image
                     src={
                         post.data.image.startsWith('../../')
                             ? images[post.data.image.replace('../../', '/src/')]
@@ -75,7 +72,7 @@ console.log('Available keys:', Object.keys(images));
                               : undefined
                     }
                     alt={post.data.title}
-                />
+                /> */}
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
