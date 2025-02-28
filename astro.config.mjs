@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './remark-reading-time.mjs';
-import { fixImagePaths } from './src/plugins/fix-image-paths.mjs';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import path from 'path';
