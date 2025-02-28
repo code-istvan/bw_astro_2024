@@ -11,8 +11,8 @@ author: István
 tags:
   - jógaelmélet
 date: 2019-04-17T11:00:45.193Z
-image: src/images/uploads/sharathji_shala_desktop.jpeg
-imageMobil: src/images/uploads/sharathji_shala_mobil.jpeg
+image: /src/images/uploads/sharathji_shala_desktop.jpeg
+imageMobil: /src/images/uploads/sharathji_shala_mobil.jpeg
 ---
 
 ### A jóga shala ahova járunk nem csupán egy hely ahol ászanákat gyakorlunk. Egy adott jóga stúdióhoz tartozással az alábbiak szerint emelkedhet életünk minden szinten magasabbra.

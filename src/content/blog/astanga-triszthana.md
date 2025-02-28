@@ -2,14 +2,15 @@
 published: true
 language: Hungarian
 title: Astanga triszthána
-description: Az astanga jóga módszertanában az ászanát nem önmagában használjuk,
-  a rendszer lelke az úgynevezett triszthána azaz a figyelem három fókusza
+description:
+  Az astanga jóga módszertanában az ászanát nem önmagában használjuk, a rendszer lelke az úgynevezett triszthána azaz a
+  figyelem három fókusza
 author: István
 tags:
   - astangaelmélet
 date: 2021-04-28T15:37:42.306Z
-image: src/images/uploads/dristhi_desktop.jpg
-imageMobil: src/images/uploads/dristhi_mobil.jpeg
+image: /src/images/uploads/dristhi_desktop.jpg
+imageMobil: /src/images/uploads/dristhi_mobil.jpeg
 ---
 
 > yogāṅgānuṣṭhānādaśuddhikṣaye jñānadīptirāvivekakhyāteḥ Az astanga jóga gyakorlása elpusztítja a test és az elme

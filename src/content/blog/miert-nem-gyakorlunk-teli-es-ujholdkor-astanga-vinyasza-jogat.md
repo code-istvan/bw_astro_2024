@@ -9,8 +9,8 @@ author: István
 tags:
   - astangaelmélet
 date: 2020-07-29T16:21:00.000Z
-image: src/images/uploads/holdnapok_desktop.jpeg
-imageMobil: src/images/uploads/holdnapok_mobil.jpg
+image: /src/images/uploads/holdnapok_desktop.jpeg
+imageMobil: /src/images/uploads/holdnapok_mobil.jpg
 ---
 
 ### Sokféle ötlet szokott felmerülni azzal kapcsolatban, hogy Pattabhi Jois miért nem tartott órákat Teli- és Újholdkor (röviden Holdnapokon). Pedig a magyarázat egyszerű.

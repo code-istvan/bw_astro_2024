@@ -7,8 +7,8 @@ author: István
 tags:
   - jógafilozófia
 date: 2021-03-23T11:39:43.153Z
-image: src/images/uploads/sharath-guruji_desktop.jpeg
-imageMobil: src/images/uploads/sharath-guruji_mobil.jpeg
+image: /src/images/uploads/sharath-guruji_desktop.jpeg
+imageMobil: /src/images/uploads/sharath-guruji_mobil.jpeg
 ---
 
 ### Levél Sri.K. Pattahbi Joistól a Yoga Journal 1995-ös novemberi számában
