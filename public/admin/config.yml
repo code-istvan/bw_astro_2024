@@ -4,7 +4,7 @@ backend:
   branch: main
   site_domain: 'https://voluble-crumble-cbe048.netlify.app'
 media_folder: src/images/uploads
-public_folder: /src/images/uploads
+public_folder: ../../images/uploads
 slug:
   encoding: ascii
   clean_accents: true
