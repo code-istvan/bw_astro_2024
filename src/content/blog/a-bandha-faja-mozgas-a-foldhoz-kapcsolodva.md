@@ -117,7 +117,7 @@ tulajdonságunkban osztozunk, beleértve a bandha mozgását.
 
 **\## Az élőlények filogenetikai leszármazása**
 
-![Az élőlények filogenetikai leszármazása](/src/images/uploads/phylogenetic_tree_magyar.png)
+![Az élőlények filogenetikai leszármazása](../../images/uploads/phylogenetic_tree_magyar.png)
 
 Ahhoz, hogy lássuk az összes mozgásmintát, amelyben egy fa részt vesz, időközönként mélyebben kell szemlélődnünk, és azt
 is meg kell látnunk, hogy mi történik a föld alatt. Látnunk kell azokat a kémiai hatásokat, jeleket is, amelyek a fák

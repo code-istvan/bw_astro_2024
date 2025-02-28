@@ -24,7 +24,7 @@ részt venni és nagyon örültem, hogy Sharathji hozzájárult ahhoz, hogy a Sa
 órás előadásait. Sharathji tanácsokkal és ismeretekkel látott el arról, hogy milyen is astanga jógázni és mit jelent
 jóginak lenni. Az alábbiakban osztom meg néhány gondolatát.
 
-![Sharath yoga center Mysore](/src/images/uploads/mainshala_navasana.jpeg)
+![Sharath yoga center Mysore](../../images/uploads/mainshala_navasana.jpeg)
 
 ### A jóga India DNS-ében van.
 
@@ -42,7 +42,7 @@ Az _asudis_ azt jelenti szennyeződés. Amikor a _tapasz_ szerint élünk és od
 jñā́nát, ami az igaz spirituális tudást jelenti. Annak érdekében, hogy megtapasztaljuk a _jñā́nát_ egy magasabb szinten
 kell a jógát gyakorolnunk. Ehhez idő kell. Idő, amelyet nem lehet lerövidíteni.
 
-![Ashtanga led class in Mysore](/src/images/uploads/mainshala_up_dog.jpeg)
+![Ashtanga led class in Mysore](../../images/uploads/mainshala_up_dog.jpeg)
 
 A _jamák_ és a _nijamák_ évekig tartó gyakorlásával egy idő után az ember elkezd mindent egyenrangúan kezelni.
 Valamennyi érzésre, a boldogságra, a szomorúságra, a nyereségre, a veszteségre, a győzelemre és a legyőzöttségre
@@ -63,7 +63,7 @@ letisztultabb lesz és az elme ingadozásai megszűnnek. Viszont ahhoz, hogy ez 
 elutaznak Mysore-ba és minden alkalommal egy új guruhoz mennek el. Kipróbálnak egy új jóga stílust. Egyetlen gyakorlást
 sem végeznek igazi odaadással. Ezek a diákok 1000 guruhoz is elmennek majd anélkül, hogy megtalálnák a saját útjukat.
 
-![End of the ashtanga led class in Sharath Yoga Center](/src/images/uploads/mainshala_nadi.jpeg)
+![End of the ashtanga led class in Sharath Yoga Center](../../images/uploads/mainshala_nadi.jpeg)
 
 Ne légy elveszett. Egyetlen stílust gyakorolj, egy tanárral. Őszinte szeretetet kell táplálnod a gyakorlásod és a
 tanárod iránt függetlenül attól, hogy a tested mennyire hajlékony vagy nem hajlékony. Elmész egy tanárhoz azért, hogy
@@ -89,7 +89,7 @@ Mysore-ba, hogy az egyetlen célja, hogy jogosultságot szerezzen arra, hogy tan
 hogy tanításra való jogosultságot szerezzen. Kizárólag a tiszta sādhana céljából gyakorolj. Sok éves odaadó tanulás
 előzi meg azt, hogy az ember tanárrá váljon. Aki készen áll, annak ezt meg fogom mondani.
 
-![Supta kurmasana in ashtanga ](/src/images/uploads/mainshala_supta.jpeg)
+![Supta kurmasana in ashtanga ](../../images/uploads/mainshala_supta.jpeg)
 
 Csak azért mert már haladóbb ászanákat gyakorolsz nem leszel jó tanár. Más képességekkel is rendelkezni kell. Néha a
 diákok azt kérik tőlem, hogy adjak nekik jogosultságot arra, hogy taníthassanak, csupán azért mert megtudnak csinálni
@@ -110,7 +110,7 @@ angolul sem beszél. Mint tanár tudnod kell, hogyan tanítsd a többieket, még
 beszélitek. Ez az amiért fontos az a tapasztalat, amelyre a Mysore shalaban lehet szert tenni. Tapasztalat nélkül nem
 taníthat az ember.
 
-![Ashtanga Navasana](/src/images/uploads/mainshala_navasana_close.jpeg)
+![Ashtanga Navasana](../../images/uploads/mainshala_navasana_close.jpeg)
 
 ### Ne légy az ászanák megszállotja
 
@@ -128,7 +128,7 @@ Lélegezz az orrodon keresztül. Soha ne a szádon át. Az orr a lélegzésre va
 hogy mely mozdulatnál veszel levegőt és mely mozdulatnál ereszted ki azt. Figyelj a légzésedre. Idővel a test
 megtanulja, hogyan mozogjon belégzéskor és hogyan kilégzéskor. Figyelj a trisztánámra: póz, tekintet és légzés.
 
-![Ashtanga yoga chikitsa](/src/images/uploads/mainshala_mysore_navasana.jpeg)
+![Ashtanga yoga chikitsa](../../images/uploads/mainshala_mysore_navasana.jpeg)
 
 A légzés irányítja az elmét. Ha a légzésben zavar van, az az elmében is zavart okoz. Akkor tehetsz szert újabb pózokra,
 amikor megtanulsz helyesen lélegezni. A _vinyásza_ szabályozza a légzést. Surya namaskarival kezdjük a gyakorlást azért,

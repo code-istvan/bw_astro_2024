@@ -53,7 +53,7 @@ szokásokkal az a baj, hogy a legtöbb ember nem tudatos ezekkel kapcsolatban. A
 megszakítsuk a mintákat az elmében, és felszabadítsuk az elmét. Az extrém fizikai gyakorlás elvezet a minták
 megtöréséhez.
 
-![Govinda asana practice](/src/images/uploads/govinda_asana_pratice.jpeg)
+![Govinda asana practice](../../images/uploads/govinda_asana_pratice.jpeg)
 
 ### Hogyan lehet megküzdeni a fizikai fájdalommal?
 
@@ -76,7 +76,7 @@ egyébként a férfiak nőiesebbek, hajlékonyabbak, rugalmasabbak lesznek. Mert
 tudnak lágyak lenni, inkább agresszív, kemény pasik, sőt inkább fiúk, akik egy férfitestben élnek. Azok, akik elérik a
 lágy oldalukat is, sokkal erősebbek, mert nem érzik azt, hogy bármit is bizonyítaniuk kellene.
 
-![Bandhami astanga közösség](/src/images/uploads/bandhami.jpeg)
+![Bandhami astanga közösség](../../images/uploads/bandhami.jpeg)
 
 ### Addiktív az astanga?
 
@@ -100,7 +100,7 @@ A legfontosabb, amit megtanultam, hogy ők is normális emberek. Nem jobb az él
 híresek, bent vannak az újságokban, az emberek megőrülnek értük, de az életük ugyanolyan. Sőt, több problémájuk van. A
 túl sok pénz stresszessé és bonyolulttá teszi az életet.
 
-![Govinda like a swami](/src/images/uploads/govinda_kai.jpeg)
+![Govinda like a swami](../../images/uploads/govinda_kai.jpeg)
 
 ### Honnan tudod, hol vannak a gyakorlók fizikai határai? Olyan, mintha belelátnál az emberekbe.
 
