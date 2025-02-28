@@ -37,6 +37,12 @@ const authors = await getCollection('authors');
 const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
 const imagesMobil = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
 
+// Helper function to normalize image path
+function normalizePath(path) {
+    if (!path) return null;
+    return path.startsWith('../../') ? path.replace('../../', '/src/') : path.startsWith('/src/') ? path : `/${path}`;
+}
+
 type Props = {
     post: CollectionEntry<'blog'>;
     minutesRead: number;
@@ -45,6 +51,11 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
+
+// Normalize image paths
+const mainImagePath = normalizePath(post.data.image);
+const mobilImagePath = normalizePath(post.data.imageMobil);
+const authorImagePath = currentAuthor?.data.authorimage;
 ---
 
 <BlogPostLayout
@@ -57,22 +68,9 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
     description={post.data.description}
 >
     {
-        post.data.image && (
+        post.data.image && mainImagePath && (
             <section class="blog-content__desktop-image">
-                <Image src={images[`/${post.data.image}`]()} alt={post.data.title} />
-                {/* <Image src={images[post.data.image]()} alt={post.data.title} /> */}
-                {/* <Image
-                    src={
-                        post.data.image.startsWith('../../')
-                            ? images[post.data.image.replace('../../', '/src/')]
-                                ? images[post.data.image.replace('../../', '/src/')]()
-                                : undefined
-                            : images[`/${post.data.image}`]
-                              ? images[`/${post.data.image}`]()
-                              : undefined
-                    }
-                    alt={post.data.title}
-                /> */}
+                <Image src={images[mainImagePath]()} alt={post.data.title} />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
@@ -80,20 +78,9 @@ const currentAuthor = authors.find((author) => author.data.name === post.data.au
         )
     }
     {
-        post.data.imageMobil && (
+        post.data.imageMobil && mobilImagePath && (
             <section class="blog-content__mobile-image">
-                <Image
-                    src={
-                        post.data.imageMobil.startsWith('../../')
-                            ? images[post.data.image.replace('../../', '/src/')]
-                                ? images[post.data.image.replace('../../', '/src/')]()
-                                : undefined
-                            : images[`/${post.data.image}`]
-                              ? images[`/${post.data.image}`]()
-                              : undefined
-                    }
-                    alt={post.data.title}
-                />
+                <Image src={images[mobilImagePath]()} alt={post.data.title} />
                 <h1 class="container image_title">
                     <span class={post.data.titleBackground ? 'title-with-background' : ''}>{post.data.title}</span>
                 </h1>
