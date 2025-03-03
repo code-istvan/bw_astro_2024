@@ -1,20 +1,20 @@
 ---
 published: true
 language: Hungarian
-title: "A bandha „fája”: Mozgás a Földhöz kapcsolódva"
+title: 'A bandha „fája”: Mozgás a Földhöz kapcsolódva'
 titleBackground: false
 canonical: https://spaciousyoga.com/the-tree-of-bandha/
 canonicalLanguage: English
-description: A bandha alapvető mozgása két egymást kiegészítő vagy ellentétes
-  mozgásminta együttes összekapcsolása. A földbe gyökerezés, valamint a földből
-  felfelé emelkedés és a földből kifelé terjeszkedés egymást kiegészítő erőiről
+description:
+  A bandha alapvető mozgása két egymást kiegészítő vagy ellentétes mozgásminta együttes összekapcsolása. A földbe
+  gyökerezés, valamint a földből felfelé emelkedés és a földből kifelé terjeszkedés egymást kiegészítő erőiről
   beszélhetünk.
 author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2023-11-08T12:30:00.000Z
-image: ../../images/uploads/bandha_faja.jpeg
-imageMobil: ../../images/uploads/tree_roots_mobil.jpeg
+image: /src/images/uploads/bandha_faja.jpeg
+imageMobil: /src/images/uploads/tree_roots_mobil.jpeg
 ---
 
 Amikor az elmélyülés és a pránájáma című kurzusaimon bemutatom a légzés és a bandha témaköreit, a belső érzések és
