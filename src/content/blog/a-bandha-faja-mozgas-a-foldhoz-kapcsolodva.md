@@ -115,7 +115,7 @@ viszonylag közel van az élőlények filogenetikai (genetikai vizsgálatokra é
 alábbi ábrán látható. Bár a fák és az emberek nagyon eltérő módon kapcsolódtak a Föld gravitációjához, néhány alapvető
 tulajdonságunkban osztozunk, beleértve a bandha mozgását.
 
-**\## Az élőlények filogenetikai leszármazása**
+### Az élőlények filogenetikai leszármazása
 
 ![Az élőlények filogenetikai leszármazása](../../images/uploads/phylogenetic_tree_magyar.png)
 
@@ -401,6 +401,6 @@ különülünk el a környezetünktől (a környezettel szerves egységet alkotu
 elszigeteltségével, és inkább egy gazdag kapcsolati hálózattal átszőtt élő szervezet - azaz az élő és lélegző Földünk
 egészének - érzékelhető valóságát tapasztaljuk meg, annak részeként létezve.\
 
-**\*\*Az írás szerzője:\*\*** Iain Grysak, \[Spacious Yoga](https://spaciousyoga.com), Bali  
-**\*\*Az írás eredeti címe:\*\*** The Tree of Bandha: Moving in Embodied Relationship with the Earth – by Iain Grysak  
-**\*\*Fordította és szerkesztette:\*\*** Dr. Kővári Zsuzsa
+**Az írás szerzője:** Iain Grysak, \[Spacious Yoga](https://spaciousyoga.com), Bali  
+**Az írás eredeti címe:** The Tree of Bandha: Moving in Embodied Relationship with the Earth – by Iain Grysak  
+**Fordította és szerkesztette:** Dr. Kővári Zsuzsa
