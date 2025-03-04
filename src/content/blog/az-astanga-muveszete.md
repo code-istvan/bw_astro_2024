@@ -3,12 +3,13 @@ published: true
 language: Hungarian
 title: Az astanga művészete
 titleBackground: false
-description: A megfelelő guru megtalálásához először is törekedni kell arra,   hogy megfelelő tanítványokká váljunk
+description: A megfelelő guru megtalálásához először is törekedni kell
+  arra,   hogy megfelelő tanítványokká váljunk
 author: István
 tags:
   - astangaelmélet
 date: 2020-03-30T12:30:00.000Z
-image: /src/images/uploads/paramagurumysore.jpeg
+image: ../../images/uploads/paramagurumysore.jpeg
 imageMobil: /src/images/uploads/sharathji_mobil.jpeg
 ---
 
