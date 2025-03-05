@@ -3,12 +3,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/astanga-kezdo-tanfolyam-mobil.jpg';
 import desktopImage from '../images/astanga-kezdo-tanfolyam-desktop.jpeg';
+import { Image } from 'astro:assets';
+import AktMobilImage from '../images/pascsimottanaszana.jpg';
+import AktDesktopImage from '../images/akt_tri.jpg';
+import '../sass/pages/_astangaKezdoTanfolyam.scss';
 
 const metadata = {
     title: 'ASTANGA KEZDŐ TANFOLYAM',
     description:
         'Ezen az oldalon találod azokat az információkat, amelyek segítenek az astanga jógával való első találkozás során.',
 };
+
+const tematikaBal = [
+    {
+        text: 'Az astanga jóga eredetének és elméleti hátterének ismertetése',
+    },
+    {
+        textBefore: 'A helyes ',
+        link: {
+            url: '/blog/a-legzes-legtokeletesebb-modja-az-astanga-jogaban/',
+            text: 'légzéstechnika',
+        },
+        textAfter: ' elsajátítása, tisztító gyakorlatok',
+    },
+    {
+        text: 'A vinyásza rendszer elmélete és gyakorlata',
+    },
+    {
+        textBefore: 'A ',
+        link: {
+            url: '/blog/astanga-triszthana/',
+            text: 'triszthána,',
+        },
+        textAfter: ' a gyakorlás három fókusza',
+    },
+    {
+        text: 'A bandhák, avagy az ászanák mélyebb energetikai rétegei',
+    },
+];
+
+const tematikaJobb = [
+    {
+        text: 'Az astanga vinyásza jóga első sorozatának ászanái, púrvóttánászanáig, pontos vinyászaszámolással és a hozzájuk tartozó dristikkel. Ahol szükséges, az oktató egyénre szabott módosításokat javasol a hatásos és biztonságos gyakorlás érdekében.',
+    },
+    {
+        text: 'A hosszú távú gyakorlás felépítése: a vezetett és a Mysore-óratípus, illetve az otthoni gyakorlás',
+    },
+];
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -41,6 +82,12 @@ const metadata = {
                     elérhetjük, hogy testünk erős és rugalmas legyen, elménk nyugodt és kiegyensúlyozott, ami alapul szolgál
                     majd az astanga jógarendszerében történő továbblépésre.{' '}
                 </p>
+                <Image
+                    src={AktMobilImage}
+                    alt="Astanga kezdő tanfolyam Budapest"
+                    class="image--visible-mobil mb-20px"
+                />
+                <Image src={AktDesktopImage} alt="Kezdő astanga jóga Budán" class="image--visible-desktop mb-20px" />
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Bevezetés az astanga jógába</h3>
                 <p class="mb-20px">
                     Az astanga kezdő tanfolyamon a résztvevők megismerik a rendszer eredetét és elméleti hátterét.
@@ -52,6 +99,45 @@ const metadata = {
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     A nyolc alkalmas kezdő tanfolyam tematikája
                 </h3>
+                <!-- Itt kezdődik a kétoszlopos lista -->
+                <div class="tanfolyam-tematika-lista mb-20px">
+                    <div class="tanfolyam-tematika-oszlop unordered-list-style">
+                        <ul>
+                            {
+                                tematikaBal.map((item) => (
+                                    <li>
+                                        <p>
+                                            {item.text ? (
+                                                item.text
+                                            ) : (
+                                                <>
+                                                    {item.textBefore}
+                                                    <a href={item.link.url} class="link-enhanced link-orange">
+                                                        {item.link.text}
+                                                    </a>
+                                                    {item.textAfter}
+                                                </>
+                                            )}
+                                        </p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div class="tanfolyam-tematika-oszlop tematika__second-column unordered-list-style">
+                        <ul>
+                            {
+                                tematikaJobb.map((item) => (
+                                    <li>
+                                        <p>{item.text}</p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!-- Itt végződik a kétoszlopos lista -->
+
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     A gyakorlás elmélyítése és személyre szabása
                 </h3>

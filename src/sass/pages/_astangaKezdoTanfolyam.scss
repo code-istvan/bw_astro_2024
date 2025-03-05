@@ -1,60 +1,93 @@
-@import "/src/sass/global";
-
-@media screen and (max-width: 768px) {
-  .tematika__second-column {
-    margin-top: -12px;
-  }
+/* Kétoszlopos lista stílusai */
+.tanfolyam-tematika-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.jelentkezes-date {
-  display: flex;
-  @include xs {
-    flex-direction: column;
-    gap: 16px;
-  }
-  @include md {
+.tanfolyam-tematika-oszlop ul {
+  margin: 0;
+}
+
+.tanfolyam-tematika-oszlop li {
+  margin-bottom: 0.75rem;
+}
+
+.tanfolyam-tematika-oszlop li:last-child {
+  margin-bottom: 0;
+}
+
+.tanfolyam-tematika-oszlop p {
+  margin: 0;
+}
+
+/* Reszponzív stílusok */
+@media screen and (min-width: 769px) {
+  .tanfolyam-tematika-lista {
     flex-direction: row;
-    gap: 28px;
+    gap: 2rem;
   }
 
-  margin: 16px 0;
-}
-
-.jelentkezes-teacher {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.jelentkezes-teacher--avatar {
-  margin-right: 12px;
-}
-
-.jelentkezes-button {
-  button {
-    font-weight: bold;
+  .tanfolyam-tematika-oszlop {
+    flex: 1;
   }
 }
 
-.gigajs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
+// @media screen and (max-width: 768px) {
+//   .tematika__second-column {
+//     margin-top: -12px;
+//   }
+// }
 
-.jelentkezes-address {
-  display: flex;
-  @include xs {
-    flex-direction: column;
-  }
-  @include md {
-    flex-direction: row;
-    gap: 8px;
-  }
-}
+// .jelentkezes-date {
+//   display: flex;
+//   @include xs {
+//     flex-direction: column;
+//     gap: 16px;
+//   }
+//   @include md {
+//     flex-direction: row;
+//     gap: 28px;
+//   }
 
-@media screen and (max-width: 768px) {
-  .jelentkezes-address-line {
-    display: none;
-  }
-}
+//   margin: 16px 0;
+// }
+
+// .jelentkezes-teacher {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+// .jelentkezes-teacher--avatar {
+//   margin-right: 12px;
+// }
+
+// .jelentkezes-button {
+//   button {
+//     font-weight: bold;
+//   }
+// }
+
+// .gigajs {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .jelentkezes-address {
+//   display: flex;
+//   @include xs {
+//     flex-direction: column;
+//   }
+//   @include md {
+//     flex-direction: row;
+//     gap: 8px;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .jelentkezes-address-line {
+//     display: none;
+//   }
+// }
