@@ -5,7 +5,7 @@ import mobileImage from '../../images/mysore_mobil.jpg';
 import desktopImage from '../../images/mysore_desktop.jpg';
 import { Image } from 'astro:assets';
 import Icons from '../../components/Icons/Icons.astro';
-import AccordionMysoreFaq from '../../components/Accordions/AccordionMysoreFaq.astro';
+import AccordionFaq from '../../components/Accordions/AccordionFaq.astro';
 import MysoreImage1 from '../../images/mysore_program_1.jpg';
 import MysoreImage2 from '../../images/mysore_program_2.jpg';
 import MysoreImage3 from '../../images/mysore_program_3.jpeg';
@@ -266,7 +266,7 @@ const enMysoreFaqs = mysoreFaqsData.EN;
                     {
                         enMysoreFaqs.length > 0 ? (
                             enMysoreFaqs.map((faq) => (
-                                <AccordionMysoreFaq
+                                <AccordionFaq
                                     key={faq.id}
                                     id={`accordion-${faq.id}`}
                                     Egyedi
