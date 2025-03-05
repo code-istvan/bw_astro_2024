@@ -1,0 +1,56 @@
+{
+  "HU": [
+    {
+      "id": 1,
+      "question": "Nem vagyok hajlékony, nem jógáztam soha, jöhetek a tanfolyamra?",
+      "answer": "A tanfolyamnak nem előfeltétele a \"jógás múlt\". A tanfolyam alapul szolgál az astanga jóga rendszeres gyakorlásához, amely által fizikai erőre, hajlékonyságra tehetünk szert, egyúttal pedig belső nyugalmat, kiegyensúlyozottságot hoz életünkbe."
+    },
+    {
+      "id": 2,
+      "question": "Nem tudok eljönni minden alkalommal, jöhetek a tanfolyamra?",
+      "answer": "Az első három alkalom elég fontos, azon jó lenne, ha ott tudnál lenni, a többi alkalom pótolható tanfolyami jegyzetből."
+    },
+    {
+      "id": 3,
+      "question": "Több éve jógázom már, de nem astanga jógát, érdemes-e eljönnöm egy kezdő tanfolyamra?",
+      "answer": "Az astanga jóga az ászanák gyakorlása terén egy különleges megközelítést alkalmaz, amely igencsak eltér más jógairányzatok módszereitől. Ezért érdemes az alapoktól felépíteni az astangás tudásanyagot, még egy tapasztalt (nem astanga) jógi számára is!"
+    },
+    {
+      "id": 4,
+      "question": "Nem vagyok túl idős ahhoz, hogy elkezdjek astangát gyakorolni?",
+      "answer": "Sosem leszel túl idős ahhoz, hogy elkezdj astangázni! Ugyanis a Mysore-stílusú astanga gyakorlás egy olyan sajátos - személyre szabott - módszeren alapul, amely minden korosztályhoz, illetőleg edzettségi-egészségi szinthez igazítható."
+    },
+    {
+      "id": 5,
+      "question": "A reggeli Mysore-gyakorlásra szeretnék majd jönni, érdemes-e elvégezni a kezdő astanga tanfolyamot?",
+      "answer": "Igen feltétlenül! Ennek a tanfolyamnak pont az a célja, hogy a résztvevők elsajátítsák az ászanák és a hozzájuk kapcsolódó technikák (pl. vinyásza rendszer, triszthána, bandhák) helyes és biztonságos kivitelezését, és ezáltal felkészítsen a Mysore-stílusú gyakorlásra."
+    }
+  ],
+  "EN": [
+    {
+      "id": 1,
+      "question": "I'm not flexible and I've never done yoga before. Can I join the course?",
+      "answer": "The course doesn't require any previous yoga experience. It serves as a foundation for regular ashtanga yoga practice, through which we can gain physical strength and flexibility, while also bringing inner peace and balance to our lives."
+    },
+    {
+      "id": 2,
+      "question": "I can't attend every session. Can I still join the course?",
+      "answer": "The first three sessions are quite important, and it would be good if you could attend those. The remaining sessions can be supplemented with course notes."
+    },
+    {
+      "id": 3,
+      "question": "I've been practicing yoga for years, but not ashtanga yoga. Is it worth attending a beginner's course?",
+      "answer": "Ashtanga yoga uses a special approach in practicing asanas, which differs significantly from the methods of other yoga traditions. Therefore, it's worth building up ashtanga knowledge from the basics, even for an experienced (non-ashtanga) yogi!"
+    },
+    {
+      "id": 4,
+      "question": "Am I too old to start practicing ashtanga?",
+      "answer": "You're never too old to start practicing ashtanga! The Mysore-style ashtanga practice is based on a unique - personalized - method that can be adapted to every age group and level of fitness and health."
+    },
+    {
+      "id": 5,
+      "question": "I want to join the morning Mysore practice. Is it worth completing the beginner's ashtanga course?",
+      "answer": "Yes, absolutely! The purpose of this course is precisely to help participants master the proper and safe execution of asanas and related techniques (e.g., vinyasa system, tristhana, bandhas), and thereby prepare them for Mysore-style practice."
+    }
+  ]
+}

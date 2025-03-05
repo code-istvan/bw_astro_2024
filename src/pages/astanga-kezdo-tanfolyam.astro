@@ -6,6 +6,9 @@ import desktopImage from '../images/astanga-kezdo-tanfolyam-desktop.jpeg';
 import { Image } from 'astro:assets';
 import AktMobilImage from '../images/pascsimottanaszana.jpg';
 import AktDesktopImage from '../images/akt_tri.jpg';
+import AktBandhamiImage from '../images/bandhami.jpeg';
+import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
+import aktFaqData from '../data/aktFaq.json';
 import '../sass/pages/_astangaKezdoTanfolyam.scss';
 
 const metadata = {
@@ -50,6 +53,33 @@ const tematikaJobb = [
         text: 'A hosszú távú gyakorlás felépítése: a vezetett és a Mysore-óratípus, illetve az otthoni gyakorlás',
     },
 ];
+
+const hasznosOlvasmanyok = [
+    {
+        link: '/blog/david-garrigues-gyenge-testben-erotlen-lelek',
+        title: 'Gyenge testben erőtlen lélek',
+        classNames: 'body link-decoration-remove',
+    },
+
+    {
+        link: '/blog/astanga-joga-segit-a-noknek-hogy-erosebbek-legyenek',
+        title: 'Astanga jóga: „Segít a nőknek, hogy erősebbek legyenek”',
+        classNames: 'body link-decoration-remove',
+    },
+
+    {
+        link: '/blog/5-dolog-amit-az-uj-gyakorloknak-erdemes-megtanulnia',
+        title: '5 dolog amit az új gyakorlóknak érdemes megtanulnia',
+        classNames: 'body link-decoration-remove',
+    },
+    {
+        link: '/blog/sharath-jois-arrol-hogy-miben-nyujt-tobbet-egy-helyi-shala-mint-egy-hagyomanyos-edzes',
+        title: 'Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy hagyományos edzés',
+        classNames: 'body link-decoration-remove',
+    },
+];
+
+const huAktFaqs = aktFaqData.HU;
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -150,10 +180,29 @@ const tematikaJobb = [
                     bárhová "elvihetik" a gyakorlást, bármikor végezhetik.
                 </p>
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Gyakran ismételt kérdések</h3>
+                <div class="page-content__section page-content__section--faq mb-40px">
+                    {huAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
+                </div>
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
+                <Image src={AktBandhamiImage} alt="Astanga közösség Budapest" class="mb-20px" />
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     Hasznos olvasmányok az astanga-gyakorlásról
                 </h3>
+                <div class="unordered-list-style">
+                    <ul>
+                        {
+                            hasznosOlvasmanyok.map((link) => (
+                                <li>
+                                    <p>
+                                        <a href={link.link} class={link.classNames}>
+                                            {link.title}
+                                        </a>
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

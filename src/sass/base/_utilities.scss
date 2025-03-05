@@ -61,7 +61,7 @@
     list-style-position: outside;
     margin-top: 12px;
     p {
-      margin-left: 30px;
+      margin-left: 16px;
     }
 
     li {
@@ -71,7 +71,6 @@
     }
     li::before {
       content: url(../../images/svg/chevron_right.svg);
-      //   content: '>';
       color: $color-brand-orange;
       font-size: 6px;
       position: absolute;
