@@ -332,10 +332,15 @@ collections:
           widget: select,
           options: [ASHTANGA BEGINNERS COURSE, ASHTANGA MYSORE STYLE COURSE],
         }
-      - { label: Days, name: days, widget: select, options: [Kedd és péntek, 19:00 - 20:30] }
-      - { label: Days in English, name: daysEnglish, widget: select, options: [Tuesday and Friday, 7:00 PM - 8:30 PM] }
-      - { label: Duration, name: duration, widget: select, options: [4 hét, 8 alkalom] }
-      - { label: Duration in English, name: durationEnglish, widget: select, options: [4 weeks, 8 sessions] }
+      - { label: Days, name: days, widget: select, options: ['Kedd és péntek, 19:00 - 20:30'] }
+      - {
+          label: Days in English,
+          name: daysEnglish,
+          widget: select,
+          options: ['Tuesday and Friday, 7:00 PM - 8:30 PM'],
+        }
+      - { label: Duration, name: duration, widget: select, options: ['4 hét, 8 alkalom'] }
+      - { label: Duration in English, name: durationEnglish, widget: select, options: ['4 weeks, 8 sessions'] }
       - {
           label: Teacher,
           name: teacher,
