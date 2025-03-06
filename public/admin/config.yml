@@ -235,7 +235,6 @@ collections:
         search_fields: ['customTime']
         default: null
         required: false
-
   - name: classes
     label: Classes
     label_singular: Schedule
@@ -281,7 +280,6 @@ collections:
       - { label: En-Teacher-Style, name: enTeacherStyle, widget: string, required: false }
       - { label: Hu-Teacher-Title, name: huTeacherTitle, widget: string, required: false }
       - { label: En-Teacher-Title, name: enTeacherTitle, widget: string, required: false }
-
   - name: events
     label: Events
     folder: src/content/events/
@@ -315,3 +313,38 @@ collections:
           display_fields: ['teacher', ('teacherId')],
           search_fields: ['teacher', 'teacherId'],
         }
+  - name: courses
+    label: Courses
+    folder: src/content/courses/
+    format: 'json'
+    create: true
+    slug: '{{coursesid}}'
+    fields:
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Featured, name: featured, widget: boolean, default: true }
+      - { label: Course type, name: courseType, widget: select, options: [Ashtanga beginner, Mysore-course] }
+      - { label: Eventid, name: eventid, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Title, name: title, widget: select, options: [ASTANGA KEZDŐ TANFOLYAM, ASTANGA MYSORE-KURZUS] }
+      - {
+          label: Title in English,
+          name: titleEnglish,
+          widget: select,
+          options: [ASHTANGA BEGINNERS COURSE, ASHTANGA MYSORE STYLE COURSE],
+        }
+      - { label: Days, name: days, widget: select, options: [Kedd és péntek, 19:00 - 20:30] }
+      - { label: Days in English, name: daysEnglish, widget: select, options: [Tuesday and Friday, 7:00 PM - 8:30 PM] }
+      - { label: Duration, name: duration, widget: select, options: [4 hét, 8 alkalom] }
+      - { label: Duration in English, name: durationEnglish, widget: select, options: [4 weeks, 8 sessions] }
+      - {
+          label: Teacher,
+          name: teacher,
+          widget: relation,
+          collection: teachers,
+          value_field: teacherId,
+          display_fields: ['teacher', ('teacherId')],
+          search_fields: ['teacher', 'teacherId'],
+        }
+      - { label: Courselink, name: courselink, widget: string }
+      - { label: Note, name: note, widget: text, required: false }
+      - { label: Note in English, name: noteEnglish, widget: text, required: false }
