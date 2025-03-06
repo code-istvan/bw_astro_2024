@@ -8,8 +8,8 @@ author: István
 tags:
   - astangaelmélet
 date: 2020-03-30T12:30:00.000Z
-image: /src/images/uploads/paramagurumysore.jpeg
-imageMobil: /src/images/uploads/sharathji_mobil.jpeg
+image: ../../images/uploads/paramagurumysore.jpeg
+imageMobil: ../../images/uploads/sharathji_mobil.jpeg
 ---
 
 ### Paramguru Sharath Jois elmagyarázza miért nincsenek kerülőutak az astangában és mivel jár a Mysore stílus gyakorlása és tanítása.

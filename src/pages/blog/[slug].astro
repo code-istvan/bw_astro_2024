@@ -34,8 +34,8 @@ export const getStaticPaths = async () => {
 
 const authors = await getCollection('authors');
 
-const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
-const imagesMobil = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
+const images = await import.meta.glob<{ default: ImageMetadata }>('../../images/uploads/**/*.{jpeg,jpg,png,gif}');
+const imagesMobil = await import.meta.glob<{ default: ImageMetadata }>('../../images/uploads/**/*.{jpeg,jpg,png,gif}');
 
 type Props = {
     post: CollectionEntry<'blog'>;
