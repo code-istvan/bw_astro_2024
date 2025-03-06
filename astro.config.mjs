@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
-import { remarkReadingTime } from './remark-reading-time.mjs';
 import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import path from 'path';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
