@@ -318,7 +318,7 @@ collections:
     folder: src/content/courses/
     format: 'json'
     create: true
-    slug: '{{coursesid}}'
+    slug: '{{courseid}}'
     fields:
       - { label: Published, name: published, widget: boolean, default: true }
       - { label: Featured, name: featured, widget: boolean, default: true }
