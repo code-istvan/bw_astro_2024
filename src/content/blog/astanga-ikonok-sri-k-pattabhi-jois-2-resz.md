@@ -10,8 +10,8 @@ author: István
 tags:
   - astangaikon
 date: 2016-07-16T12:20:00.000Z
-image: /src/images/uploads/guruji-sharatji-rooftop_desktop.jpeg
-imageMobil: /src/images/uploads/guruji-sharatji-rooftop_mobil.jpeg
+image: ../../images/uploads/guruji-sharatji-rooftop_desktop.jpeg
+imageMobil: ../../images/uploads/guruji-sharatji-rooftop_mobil.jpeg
 ---
 
 Legutóbbi bejegyzésünkben [(1. rész)](https://bandha.works/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/) Gurudzsi

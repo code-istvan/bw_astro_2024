@@ -8,8 +8,8 @@ author: István
 tags:
   - astangaelmélet
 date: 2019-11-19T11:59:44.928Z
-image: /src/images/uploads/5things_desktop.jpg
-imageMobil: /src/images/uploads/5things_mobil.jpeg
+image: ../../images/uploads/5things_desktop.jpg
+imageMobil: ../../images/uploads/5things_mobil.jpeg
 ---
 
 A jóga gyakorlás a kezdetekben elég lehangoló is tud lenni. Rengeteg cikket lehet olvasni arról, hogy mit is várhat az

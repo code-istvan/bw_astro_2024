@@ -10,8 +10,8 @@ author: István
 tags:
   - interview
 date: 2024-10-24T15:00:00.000Z
-image: /src/images/uploads/ross_1800x600.jpeg
-imageMobil: /src/images/uploads/ross_1080x1080.jpeg
+image: ../../images/uploads/ross_1800x600.jpeg
+imageMobil: ../../images/uploads/ross_1080x1080.jpeg
 ---
 
 In this interview, Ross Stambaugh reflects on 25 years of practicing and teaching Ashtanga yoga. He shares his journey

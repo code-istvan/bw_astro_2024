@@ -13,8 +13,8 @@ author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2024-11-05T13:52:13.017Z
-image: /src/images/uploads/ross_eka_pada-copy.jpeg
-imageMobil: /src/images/uploads/ross_mobil.jpeg
+image: ../../images/uploads/ross_eka_pada-copy.jpeg
+imageMobil: ../../images/uploads/ross_mobil.jpeg
 ---
 
 Az alábbiakban három rövid történetet osztok meg, amelyek segítettek abban, hogy több mint 20 éve fenntartsam a

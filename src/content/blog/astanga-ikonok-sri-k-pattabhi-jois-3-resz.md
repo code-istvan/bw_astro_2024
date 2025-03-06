@@ -10,8 +10,8 @@ author: István
 tags:
   - astangaikon
 date: 2016-09-16T12:30:00.000Z
-image: /src/images/uploads/guruji_mysore_desktop.jpeg
-imageMobil: /src/images/uploads/guruji_mysore_mobil.jpeg
+image: ../../images/uploads/guruji_mysore_desktop.jpeg
+imageMobil: ../../images/uploads/guruji_mysore_mobil.jpeg
 ---
 
 ### Gurudzsi öröksége

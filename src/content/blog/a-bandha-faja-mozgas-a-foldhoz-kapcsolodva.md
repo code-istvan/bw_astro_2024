@@ -13,8 +13,8 @@ author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2023-11-08T12:30:00.000Z
-image: /src/images/uploads/bandha_faja.jpeg
-imageMobil: /src/images/uploads/tree_roots_mobil.jpeg
+image: ../../images/uploads/bandha_faja.jpeg
+imageMobil: ../../images/uploads/tree_roots_mobil.jpeg
 ---
 
 Amikor az elmélyülés és a pránájáma című kurzusaimon bemutatom a légzés és a bandha témaköreit, a belső érzések és

@@ -10,8 +10,8 @@ author: István
 tags:
   - táplálkozás
 date: 2022-06-01T12:30:00.000Z
-image: /src/images/uploads/kombucha-bandha_1800x600.jpeg
-imageMobil: /src/images/uploads/kombucha_mobil.jpeg
+image: ../../images/uploads/kombucha-bandha_1800x600.jpeg
+imageMobil: ../../images/uploads/kombucha_mobil.jpeg
 ---
 
 ### Az astanga jóga tudománya nem merül ki az ászanák napi rendszerességű gyakorlásával, hanem egy komplett életmódról van szó, aminek megkerülhetetlen része a jógikus táplálkozás. Számos szenior astanga gyakorló, napi rendszerességgel fogyaszt saját készítésű kombucha teát, ezzel támogatva testi és lelki egészségét.

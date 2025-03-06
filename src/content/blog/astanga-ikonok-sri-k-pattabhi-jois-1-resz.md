@@ -11,8 +11,8 @@ author: István
 tags:
   - astangaikon
 date: 2015-12-19T12:30:00.000Z
-image: /src/images/uploads/guruji_olod_old_shala_desktop.jpeg
-imageMobil: /src/images/uploads/guruji_old_old_shala_mobil.jpeg
+image: ../../images/uploads/guruji_olod_old_shala_desktop.jpeg
+imageMobil: ../../images/uploads/guruji_old_old_shala_mobil.jpeg
 ---
 
 Sri K. Pattabhi Jois, diákjai körében Gurudzsi, az egyre népszerűbbé váló astanga jóga rendszer megalapítója és

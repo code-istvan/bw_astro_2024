@@ -9,8 +9,8 @@ author: István
 tags:
   - astanga interjú
 date: 2024-10-24T17:12:00.000Z
-image: /src/images/uploads/ross_1800x600.jpeg
-imageMobil: /src/images/uploads/ross_1080x1080.jpeg
+image: ../../images/uploads/ross_1800x600.jpeg
+imageMobil: ../../images/uploads/ross_1080x1080.jpeg
 ---
 
 Ross Stambaugh közel 25 éve járja az astanga jóga útját, amely során számos országba eljutott, és rendszeresen visszatér
