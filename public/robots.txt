@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voluble-crumble-cbe048.netlify.app//sitemap-index.xml
