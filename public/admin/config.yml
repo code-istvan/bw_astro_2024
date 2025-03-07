@@ -350,6 +350,6 @@ collections:
           display_fields: ['teacher', ('teacherId')],
           search_fields: ['teacher', 'teacherId'],
         }
-      - { label: Courselink, name: courselink, widget: string }
+      - { label: CourseLink, name: courseLink, widget: string }
       - { label: Note, name: note, widget: text, required: false }
       - { label: Note in English, name: noteEnglish, widget: text, required: false }

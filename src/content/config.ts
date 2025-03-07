@@ -112,6 +112,27 @@ const eventsCollection = defineCollection({
   }),
 });
 
+const coursesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    published: z.boolean(),
+    featured: z.boolean(),
+    courseType: z.string().optional(),
+    courseid: z.string(),
+    date: z.coerce.date(),
+    title: z.string(),
+    titleEnglish: z.string().optional(),
+    days: z.string(),
+    daysEnglish: z.string(),
+    duration: z.string(),
+    durationEnglish: z.string(),
+    teacher: z.string(),
+    courseLink: z.string(),
+    note: z.string().optional(),
+    noteEnglish: z.string().optional(),
+  }),
+});
+
 export const collections = {
   blog: postsCollection,
   authors: authorsCollection,
@@ -120,4 +141,5 @@ export const collections = {
   classes: classesCollection,
   teachers: teachersCollection,
   events: eventsCollection,
+  courses: coursesCollection,
 };
