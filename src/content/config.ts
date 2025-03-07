@@ -118,7 +118,7 @@ const coursesCollection = defineCollection({
     published: z.boolean(),
     featured: z.boolean(),
     courseType: z.string().optional(),
-    courseid: z.string(),
+    courseId: z.string(),
     date: z.coerce.date(),
     title: z.string(),
     titleEnglish: z.string().optional(),
