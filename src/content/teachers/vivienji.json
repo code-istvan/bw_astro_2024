@@ -5,7 +5,7 @@
   "huTeacherFullName": "Shaker Vivien",
   "enTeacherFullName": "Vivien Shaker ",
   "enTeacherStyle": "ashtanga yoga",
-  "teacherImage": "../../images/uploads/vivien.jpeg",
+  "teacherImage": "src/images/uploads/vivien.jpeg",
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "/shaker-vivien/",
   "teacherId": "vivienJi"

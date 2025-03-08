@@ -18,7 +18,7 @@ const teachers = await getCollection('teachers', ({ data }) => {
 }).then((teachers) => teachers.sort((a, b) => a.data.teacherOrder - b.data.teacherOrder));
 
 // Képek importálása
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/teachers/*.{jpeg,jpg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/**/*.{jpeg,jpg,png,gif}');
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
