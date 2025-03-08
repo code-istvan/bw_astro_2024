@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/astanga-kezdo-tanfolyam-mobil.jpg';
 import desktopImage from '../images/astanga-kezdo-tanfolyam-desktop.jpeg';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import AktMobilImage from '../images/pascsimottanaszana.jpg';
 import AktDesktopImage from '../images/akt_tri.jpg';
 import AktBandhamiImage from '../images/bandhami.jpeg';
@@ -78,6 +79,18 @@ const hasznosOlvasmanyok = [
         classNames: 'body link-decoration-remove',
     },
 ];
+
+// Próbáld először megnézni, hogy egyáltalán létezik-e adat a courses gyűjteményben
+const courses = await getCollection('courses');
+
+// Szűrés és rendezés dátum szerint (növekvő sorrend - legközelebbi elöl)
+const astangaBeginnerCourses = courses
+    .filter((course) => course.data.courseType === 'Ashtanga beginner' && course.data.published)
+    .sort((a, b) => {
+        return new Date(a.data.date) > new Date(b.data.date) ? 1 : -1;
+    });
+
+const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
 
 const huAktFaqs = aktFaqData.HU;
 ---
@@ -183,6 +196,38 @@ const huAktFaqs = aktFaqData.HU;
                     {huAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
                 </div>
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
+
+                <!-- Kurzusok megjelenítése -->
+                <div class="courses-container mb-40px">
+                    {
+                        astangaBeginnerCourses.map((course) => (
+                            <div class="course-card">
+                                <h4 class="course-title font-family-primary">{course.data.title}</h4>
+                                <p class="course-date">
+                                    <strong>Kezdés:</strong>{' '}
+                                    {new Date(course.data.date).toLocaleDateString('hu-HU', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric',
+                                    })}
+                                </p>
+                                <p class="course-details">
+                                    <strong>Időpont:</strong> {course.data.days}
+                                </p>
+                                <p class="course-details">
+                                    <strong>Időtartam:</strong> {course.data.duration}
+                                </p>
+                                <p class="course-details">
+                                    <strong>Oktató:</strong> {course.data.teacher}
+                                </p>
+                                <a href={course.data.courseLink} class="btn btn-primary mt-10px">
+                                    Jelentkezés
+                                </a>
+                            </div>
+                        ))
+                    }
+                </div>
+
                 <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     Hasznos olvasmányok az astanga-gyakorlásról

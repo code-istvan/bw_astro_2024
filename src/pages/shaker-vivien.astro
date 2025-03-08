@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/vivien_mobil.jpeg';
+import desktopImage from '../images/vivien_desktop.jpeg';
+
+const metadata = {
+    title: 'Vivien',
+    description: 'Itt olvashatsz Shaker Viven jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            Az (astanga)jógával 2016- ban ismerkedtem meg, és kisebb nagyobb kihagyásokkal, mára rendszeres része lett
+            az életemnek. Gyerekként évekig versenyszerűen atletizáltam, később futottam, röplabdáztam, így nagyon
+            kötött izomzattal és merev testtel indultam el az astanga jóga ösvényén. Kitartó gyakorlás eredménye, hogy
+            mára már nem remeg a testem, ha meg akarom érinteni a nagylábujjamat :)!
+        </p>
+        <p class="mb-20px">
+            A jóga nekem egy csoda, azt jelenti, “kapcsolatban lenni önmagammal”. Régebben sokkal hajlamosabb voltam
+            kint keresni a biztonságot, csakis kint, nem önmagban. A jóga segített abban, hogy rájöjjek, a biztonság
+            bennem van. A gyakorlás érzékenyít és mindent jelez a testem - jót és rosszat - egészségesebb lettem.
+            Gestalt terapeutaként őszintén hiszem, hogy az emberek képesek kapcsolódni a testükhöz és ez bármikor
+            támogatja őket.
+        </p>
+        <p class="mb-20px">Nagyon hálás vagyok, hogy a Bandhaworks támogató és szakértő kezei között gyakorolhatok!</p>
+    </div>
+</BaseLayout>
