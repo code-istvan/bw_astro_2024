@@ -10,6 +10,7 @@ import AktDesktopImage from '../images/akt_tri.jpg';
 import AktBandhamiImage from '../images/bandhami.jpeg';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import aktFaqData from '../data/aktFaq.json';
+import CourseList from '../components/Courses/CourseList.astro';
 import '../sass/pages/_astangaKezdoTanfolyam.scss';
 
 const metadata = {
@@ -196,38 +197,7 @@ const huAktFaqs = aktFaqData.HU;
                     {huAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
                 </div>
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
-
-                <!-- Kurzusok megjelenítése -->
-                <div class="courses-container mb-40px">
-                    {
-                        astangaBeginnerCourses.map((course) => (
-                            <div class="course-card">
-                                <h4 class="course-title font-family-primary">{course.data.title}</h4>
-                                <p class="course-date">
-                                    <strong>Kezdés:</strong>{' '}
-                                    {new Date(course.data.date).toLocaleDateString('hu-HU', {
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric',
-                                    })}
-                                </p>
-                                <p class="course-details">
-                                    <strong>Időpont:</strong> {course.data.days}
-                                </p>
-                                <p class="course-details">
-                                    <strong>Időtartam:</strong> {course.data.duration}
-                                </p>
-                                <p class="course-details">
-                                    <strong>Oktató:</strong> {course.data.teacher}
-                                </p>
-                                <a href={course.data.courseLink} class="btn btn-primary mt-10px">
-                                    Jelentkezés
-                                </a>
-                            </div>
-                        ))
-                    }
-                </div>
-
+                <CourseList language="HU" courseType="Ashtanga beginner" />
                 <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     Hasznos olvasmányok az astanga-gyakorlásról

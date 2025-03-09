@@ -1,0 +1,74 @@
+---
+// CourseList.astro
+import { getCollection } from 'astro:content';
+
+// Define props with types
+export interface Props {
+    language: string; // 'HU' vagy 'EN' - ez csak a megjelenítésre hat
+    courseType: string; // 'Ashtanga beginner' vagy 'Mysore-course'
+    class?: string; // Opcionális CSS osztály a konténer elemhez
+}
+
+const { language = 'HU', courseType = 'Ashtanga beginner', class: className = '' } = Astro.props;
+
+// Adatok betöltése
+const courses = await getCollection('courses');
+
+// Szűrés csak a kurzustípus és published alapján, dátum szerint rendezve
+const filteredCourses = courses
+    .filter((course) => {
+        return course.data.courseType === courseType && course.data.published !== false; // ha undefined, akkor is true
+    })
+    .sort((a, b) => {
+        return new Date(a.data.date) > new Date(b.data.date) ? 1 : -1;
+    });
+
+// Segédfüggvény a nyelv alapján megfelelő érték kiválasztásához
+const getLocalizedValue = (item, fieldName) => {
+    if (language === 'EN' && item.data[`${fieldName}English`]) {
+        return item.data[`${fieldName}English`];
+    }
+    return item.data[fieldName];
+};
+---
+
+<!-- Kurzusok megjelenítése -->
+<div class={`courses-container mb-40px ${className}`}>
+    {
+        filteredCourses.length > 0 ? (
+            filteredCourses.map((course) => (
+                <div class="course-card">
+                    <h4 class="course-title font-family-primary">{getLocalizedValue(course, 'title')}</h4>
+                    <p class="course-date">
+                        <strong>{language === 'HU' ? 'Kezdés:' : 'Start date:'}</strong>{' '}
+                        {new Date(course.data.date).toLocaleDateString(language === 'HU' ? 'hu-HU' : 'en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                        })}
+                    </p>
+                    <p class="course-details">
+                        <strong>{language === 'HU' ? 'Időpont:' : 'Schedule:'}</strong>{' '}
+                        {getLocalizedValue(course, 'days')}
+                    </p>
+                    <p class="course-details">
+                        <strong>{language === 'HU' ? 'Időtartam:' : 'Duration:'}</strong>{' '}
+                        {getLocalizedValue(course, 'duration')}
+                    </p>
+                    <p class="course-details">
+                        <strong>{language === 'HU' ? 'Oktató:' : 'Teacher:'}</strong> {course.data.teacher}
+                    </p>
+                    {course.data.note && language === 'HU' && <p class="course-note mt-10px">{course.data.note}</p>}
+                    {course.data.noteEnglish && language === 'EN' && (
+                        <p class="course-note mt-10px">{course.data.noteEnglish}</p>
+                    )}
+                    <a href={course.data.courseLink} class="btn btn-primary mt-10px">
+                        {language === 'HU' ? 'Jelentkezés' : 'Register'}
+                    </a>
+                </div>
+            ))
+        ) : (
+            <p>{language === 'HU' ? 'Jelenleg nincs meghirdetett tanfolyam.' : 'No upcoming courses at the moment.'}</p>
+        )
+    }
+</div>
