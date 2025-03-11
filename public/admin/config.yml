@@ -324,6 +324,7 @@ collections:
     fields:
       - { label: Published, name: published, widget: boolean, default: true }
       - { label: Featured, name: featured, widget: boolean, default: true }
+      - { label: Course Full, name: courseFull, widget: boolean, default: false }
       - { label: Course type, name: courseType, widget: select, options: [Ashtanga beginner, Mysore-course] }
       - { label: CourseId, name: courseId, widget: string }
       - { label: Date, name: date, widget: datetime }
