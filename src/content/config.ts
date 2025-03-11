@@ -117,6 +117,7 @@ const coursesCollection = defineCollection({
   schema: z.object({
     published: z.boolean(),
     featured: z.boolean(),
+    courseFull: z.boolean(),
     courseType: z.enum(['Ashtanga beginner', 'Mysore-course']),
     courseId: z.string(),
     date: z.coerce.date(),
