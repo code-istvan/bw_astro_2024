@@ -31,18 +31,18 @@ const teacherFullName = teacher
 const teacherRoleText = language === 'HU' ? 'oktató' : 'teacher';
 const teacherLink = teacher ? teacher.data.teacherLink : '#';
 
-// Kurzus teltház ellenőrzése
 const isCourseFullyBooked = course.data.courseFull === true;
 
-// Regisztrációs/teltház szöveg
-const registrationText =
-    language === 'HU'
-        ? isCourseFullyBooked
-            ? 'Ez a kurzus már betelt.'
-            : 'A tanfolyamra a részvételi díj kiegyenlítésével tudsz jelentkezni.'
-        : isCourseFullyBooked
-          ? 'This course is fully booked.'
-          : 'You can register for the course by paying the participation fee.';
+const registrationText = {
+    normal: {
+        hu: 'A tanfolyamra a részvételi díj kiegyenlítésével tudsz jelentkezni.',
+        en: 'You can register for the course by paying the participation fee.',
+    },
+    full: {
+        hu: 'Ez a kurzus már betelt!',
+        en: 'This course is fully booked!',
+    },
+};
 ---
 
 <div class={`course-card mb-40px ${className}`}>
@@ -78,23 +78,35 @@ const registrationText =
                 </div>
             </div>
             <div class="course-card__cta-section mt-20px">
-                {
-                    !isCourseFullyBooked && (
-                        <a href={course.data.courseLink} class="btn btn--primary--solid btn--full-width-mobile">
-                            {language === 'HU' ? 'Jelentkezem' : 'Register'}
-                        </a>
-                    )
-                }
-                <p class={`mt-20px ${isCourseFullyBooked ? 'clr-status-error' : 'clr-shades-gray'}`}>
-                    {registrationText}
-                </p>
-                {
-                    (course.data.note && language === 'HU') || (course.data.noteEnglish && language === 'EN') ? (
-                        <p class="course-card__note mt-10px">
-                            {language === 'HU' ? course.data.note : course.data.noteEnglish}
-                        </p>
-                    ) : null
-                }
+                <div class="course-card__cta-section mt-20px">
+                    {
+                        !isCourseFullyBooked && (
+                            <a href={course.data.courseLink} class="btn btn--primary--solid btn--full-width-mobile">
+                                {language === 'HU' ? 'Jelentkezem' : 'Register'}
+                            </a>
+                        )
+                    }
+
+                    {
+                        isCourseFullyBooked ? (
+                            <p class="mt-20px clr-flag-notify body--bold">
+                                {language === 'HU' ? registrationText.full.hu : registrationText.full.en}
+                            </p>
+                        ) : (
+                            <p class="mt-20px clr-shades-gray">
+                                {language === 'HU' ? registrationText.normal.hu : registrationText.normal.en}
+                            </p>
+                        )
+                    }
+
+                    {
+                        (course.data.note && language === 'HU') || (course.data.noteEnglish && language === 'EN') ? (
+                            <p class="course-card__note mt-10px">
+                                {language === 'HU' ? course.data.note : course.data.noteEnglish}
+                            </p>
+                        ) : null
+                    }
+                </div>
             </div>
         </div>
     </div>
