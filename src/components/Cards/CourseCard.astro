@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import './_courseCard.scss';
+const teacherImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/teachers/*.{jpeg,jpg,png,gif}');
+export interface Props {
+    course: any;
+    language: 'HU' | 'EN';
+    class?: string;
+    teacher?: any;
+}
+const { course, teacher, language = 'HU', class: className = '' } = Astro.props;
+// Segédfüggvény a nyelv alapján megfelelő érték kiválasztásához
+const getLocalizedValue = (fieldName) => {
+    if (language === 'EN' && course.data[`${fieldName}English`]) {
+        return course.data[`${fieldName}English`];
+    }
+    return course.data[fieldName];
+};
+const formattedDate = new Date(course.data.date).toLocaleDateString(language === 'HU' ? 'hu-HU' : 'en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+
+const teacherFullName = teacher
+    ? language === 'HU'
+        ? teacher.data.huTeacherFullName
+        : teacher.data.enTeacherFullName
+    : 'Oktató';
+
+const teacherRoleText = language === 'HU' ? 'oktató' : 'teacher';
+const teacherLink = teacher ? teacher.data.teacherLink : '#';
+
+const registrationText =
+    language === 'HU'
+        ? 'A tanfolyamra a részvételi díj kiegyenlítésével tudsz jelentkezni.'
+        : 'You can register for the course by paying the participation fee.';
+---
+
+<div class={`course-card mb-40px ${className}`}>
+    <div class="course-card__wrapper">
+        <div class="course-card__header mb-20px">
+            <p class="course-card__date clr-brand-orange body--bold">{formattedDate}</p>
+        </div>
+        <div class="course-card__body">
+            <div class="course-card__title-section mb-20px">
+                <h2 class="course-card__title">{getLocalizedValue('title')}</h2>
+                <p class="course-card__schedule clr-shades-gray">{getLocalizedValue('days')}</p>
+                <p class="course-card__duration clr-shades-gray">{getLocalizedValue('duration')}</p>
+            </div>
+            <div class="course-card__teacher-section display-flex align-items-center gap-1rem mb-20px">
+                <div class="course-card__teacher-avatar">
+                    {
+                        teacher?.data?.teacherImage && teacherImages[`/${teacher.data.teacherImage}`] && (
+                            <Image
+                                src={teacherImages[`/${teacher.data.teacherImage}`]()}
+                                alt={teacherFullName}
+                                width={70}
+                                height={70}
+                                class="course-card__teacher-image avatar__image avatar__image--medium"
+                            />
+                        )
+                    }
+                </div>
+                <div class="course-card__teacher-info">
+                    <a href={teacherLink} class="course-card__teacher-name-link">
+                        <p class="course-card__teacher-name clr-brand-orange">{teacherFullName}</p>
+                    </a>
+                    <p class="course-card__teacher-title clr-shades-gray">{teacherRoleText}</p>
+                </div>
+            </div>
+            <div class="course-card__cta-section mt-20px">
+                <a href={course.data.courseLink} class="btn btn--primary--solid btn--full-width-mobile">
+                    {language === 'HU' ? 'Jelentkezem' : 'Register'}
+                </a>
+                <p class="mt-20px clr-shades-gray">
+                    {registrationText}
+                </p>
+                {
+                    (course.data.note && language === 'HU') || (course.data.noteEnglish && language === 'EN') ? (
+                        <p class="course-card__note">
+                            {language === 'HU' ? course.data.note : course.data.noteEnglish}
+                        </p>
+                    ) : null
+                }
+            </div>
+        </div>
+    </div>
+</div>

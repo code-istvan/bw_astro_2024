@@ -4,7 +4,6 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/astanga-kezdo-tanfolyam-mobil.jpg';
 import desktopImage from '../images/astanga-kezdo-tanfolyam-desktop.jpeg';
 import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
 import AktMobilImage from '../images/pascsimottanaszana.jpg';
 import AktDesktopImage from '../images/akt_tri.jpg';
 import AktBandhamiImage from '../images/bandhami.jpeg';
@@ -80,18 +79,6 @@ const hasznosOlvasmanyok = [
         classNames: 'body link-decoration-remove',
     },
 ];
-
-// Próbáld először megnézni, hogy egyáltalán létezik-e adat a courses gyűjteményben
-const courses = await getCollection('courses');
-
-// Szűrés és rendezés dátum szerint (növekvő sorrend - legközelebbi elöl)
-const astangaBeginnerCourses = courses
-    .filter((course) => course.data.courseType === 'Ashtanga beginner' && course.data.published)
-    .sort((a, b) => {
-        return new Date(a.data.date) > new Date(b.data.date) ? 1 : -1;
-    });
-
-const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
 
 const huAktFaqs = aktFaqData.HU;
 ---
@@ -199,6 +186,7 @@ const huAktFaqs = aktFaqData.HU;
                 <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
                 <CourseList language="HU" courseType="Ashtanga beginner" />
                 <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
+
                 <h3 class="clr-brand-orange font-family-primary mb-20px">
                     Hasznos olvasmányok az astanga-gyakorlásról
                 </h3>
