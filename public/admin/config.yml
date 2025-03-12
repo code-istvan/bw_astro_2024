@@ -320,7 +320,7 @@ collections:
     folder: src/content/courses/
     format: 'json'
     create: true
-    slug: '{{courseid}}'
+    slug: '{{courseId}}'
     fields:
       - { label: Published, name: published, widget: boolean, default: true }
       - { label: Featured, name: featured, widget: boolean, default: true }
