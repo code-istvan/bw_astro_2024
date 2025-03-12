@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/mysore_kurzus_mobil.jpg';
+import desktopImage from '../images/mysore_kurzus_desktop.jpg';
+import { Image } from 'astro:assets';
+import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
+import CourseList from '../components/Courses/CourseList.astro';
+import '../sass/pages/_astangaKezdoTanfolyam.scss';
+
+const metadata = {
+    title: 'ASTANGA MYSORE KURZUS',
+    description:
+        'Ezen az oldalon találod azokat az információkat, amelyek segítségével eldöntheted, hogy az Astanga Mysore kurzus megfelelő-e számodra. Ha kérdésed van, keress minket bizalommal!',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="astanga-mysore-kurzus">
+            <div class="row mt-40px">
+                <h3 class="clr-brand-orange mb-20px">
+                    <strong>
+                        A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai
+                        erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az
+                        oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes előrehaladásra.
+                    </strong>
+                </h3>
+                <p class="mb-20px">
+                    Az astanga vinyásza jógában az ászanákat tradicionálisan Mysore- (ejtsd: májszor) stílusban
+                    oktatják. A módszer ötvözi a csoportos vezetett órák és az egyéni gyakorlás előnyeit. Lényege, hogy
+                    a teremben az összes gyakorló a saját légzésének ritmusára önállóan végzi a sorozatot, ezáltal az
+                    oktató mindenkinek egyénre szabott igazításokat, utasításokat tud adni, anélkül hogy ez megzavarná
+                    az óra dinamikáját. Így az sem probléma, ha valaki rövidebben gyakorol (pl. kezdő gyakorlók), vagy
+                    ha valaki hosszabb időt tölt a teremben (pl. haladó gyakorlók) ugyanazon az órán.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">A kurzusról</h3>
+                <p>
+                    Hogyha szeretnéd kipróbálni, milyen a Mysore-stílusú astanga gyakorlás vagy otthon szeretnél egyedül
+                    gyakorolni, akkor minderre lehetőséged van a <a
+                        href="/astanga-kezdo-tanfolyam/"
+                        class="link-enhanced link-orange"
+                    >
+                        kezdő astanga tanfolyamot
+                    </a>
+                    követő négy hétben a <strong>Mysore-kurzuson</strong>. A{' '}
+                    Mysore-kurzus tananyaga az astanga kezdő tanfolyam tananyagára épül.
+                </p>
+                <p class="mt-20px">
+                    A kurzus során megtanítjuk az első sorozat álló és az első néhány ülő ászanájának sorrendjét, az
+                    ászanákhoz tartozó vinyásza számolást és belekóstolhatsz abba is, milyen a saját légzésed ütemére
+                    gyakorolni. Ezen felül megismerhetik a résztvevők a Mysore-etikettet és betekintést nyerhetnek az
+                    indiai „main shala”-nak (rendszerünk központi intézményének) a működésébe.
+                </p>
+                <p class="mt-20px">
+                    Minden alkalmat egy rövid beszélgetéssel, elméleti résszel kezdünk, ahol lesz lehetőség feltenni a
+                    gyakorlással kapcsolatban felmerülő kérdéseket. Az ászana gyakorlásban mindenkivel a saját fejlődése
+                    ütemében haladunk. A résztvevőknek a kurzus végére - ha minden alkalmon részt vettek - lesz egy
+                    stabil egyéni gyakorlásuk, amit vagy otthoni körülmények között vagy egy astanga Mysore-programban
+                    tudnak majd elmélyíteni.
+                </p>
+                <p class="mt-20px">
+                    A kurzus utolsó két reggeli alkalmán, a Mysore-programban, megtapasztalhatod milyen másokkal együtt,
+                    de mégis önállóan gyakorolni, tanári jelenlét mellett.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mt-20px">Gyakran ismételt kérdések</h3>
+                <div></div>
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Tanfolyami időpontok</h3>
+                <CourseList language="HU" courseType="Mysore-course" />
+            </div>
+        </div>
+    </div>
+</BaseLayout>
