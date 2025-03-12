@@ -81,7 +81,12 @@ const registrationText = {
                 <div class="course-card__cta-section mt-20px">
                     {
                         !isCourseFullyBooked && (
-                            <a href={course.data.courseLink} class="btn btn--primary--solid btn--full-width-mobile">
+                            <a
+                                href={course.data.courseLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn--primary--solid btn--full-width-mobile"
+                            >
                                 {language === 'HU' ? 'Jelentkezem' : 'Register'}
                             </a>
                         )
