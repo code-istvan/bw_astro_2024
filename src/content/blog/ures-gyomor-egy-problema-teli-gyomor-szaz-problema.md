@@ -13,8 +13,8 @@ author: István
 tags:
   - táplálkozás
 date: 2024-10-15T21:03:00.000Z
-image: ../../images/uploads/desktop_img.jpg
-imageMobil: ../../images/uploads/mobil_img.jpg
+image: ../../images/uploads/taplalkozas_desktop.jpg
+imageMobil: ../../images/uploads/taplalkozas_mobil.jpg
 ---
 **\## Akadályok a prána áramlásában** 
 
