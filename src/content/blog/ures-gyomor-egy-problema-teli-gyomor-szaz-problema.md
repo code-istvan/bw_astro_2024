@@ -16,7 +16,7 @@ image: ../../images/uploads/taplalkozas_desktop.jpg
 imageMobil: ../../images/uploads/taplalkozas_mobil.jpg
 ---
 
-### Akadályok a prána áramlásában\*\*
+### Akadályok a prána áramlásában
 
 > nimittamaprayojakaṃ prakṛtīnāṃ varaṇabhedastu tataḥ kṣetrikavat> Ahogy a földműves sem hordja a vizet a folyóból a
 > mezőkre, hanem eltávolítja az akadályokat, amelyek megakadályozzák a víz folyását, és gátakat hoz létre, úgy a jógikus
@@ -30,22 +30,21 @@ elérésére. Sok dolog blokkolja a prána áramlását, ezek közül a legfőbb
 összes jógaszövegben, amelyek részletesen tárgyalják a különböző jógagyakorlatokat, a mitahárát (a könnyű, szattvikus
 étrendet).
 
-### A \*\*mitahara\*\* **(mértékletes étrend) különböző jóga szövegekben**
+### A _mitahara_ (mértékletes étrend) különböző jóga szövegekben
 
 A rishikeshi Swami Sivananda rámutatott:
 
 > A nehéz ételek tompa, tamaszikus állapothoz vezetnek, ami álmosságot idéz elő. Általános tévhit, hogy nagy mennyiségű
 > étel szükséges az egészséghez és az erőhöz. Sok múlik azon, hogy a szervezet mennyire képes a tápanyagokat hatékonyan
-> feldolgozni és hasznosítani. A legtöbb betegség az egészségtelen étrendből és a túlevésből fakad. \
-> A Hatha Jóga Pradipiká azt mondja, \
-> A \*\*mitahara\*\* kellemes és édes étel, amely a gyomor egynegyedét üresen hagyja, és amelyet Shiva örömére való
-> felajánlásként fogyasztanak.
+> feldolgozni és hasznosítani. A legtöbb betegség az egészségtelen étrendből és a túlevésből fakad. A Hatha Jóga
+> Pradipiká azt mondja, A _mitahara_ kellemes és édes étel, amely a gyomor egynegyedét üresen hagyja, és amelyet Shiva
+> örömére való felajánlásként fogyasztanak.
 
 A Gheranda Samhita még tovább megy,
 
 A krijákról (tisztító technikákról) szóló részt az ászanákról szóló rész elé helyezi. Való igaz, hogy megfelelő
 elimináció nélkül nem lehet befolyásolni a pránát. Egy korábbi cikkben leírtam Indra Devi kezdeti bizonytalanságát és
-későbbi háláját, amikor T. Krishnamacharya felügyelete alatt megkezdte jógatanulmányait. A Gheranda Samhita szerint,\
+későbbi háláját, amikor T. Krishnamacharya felügyelete alatt megkezdte jógatanulmányait. A Gheranda Samhita szerint,
 
 > आमकुम्भ इवाम्भस्यो जीर्यमाणः सदा घटः | योगाग्निलेन सन्दग्धा घटशुद्धिं समाचरेत् || ८> A testünk idővel legyengül,
 > (romlik), mint egy égetetlen edény a vízben. ​​A jóga tüzével kell felizzítani és megtisztítani.
@@ -67,6 +66,6 @@ az előző cikkben leírtuk. Mert végül is, ahogy Sadhguru mondja,
 > Az üres gyomornak egy problémája van;> A teli gyomornak 100 problémája van.
 
 **Az írás szerzője:** Ganesh Balachandran, Ph.D.  
-**Az írás eredeti címe:** \[An empty stomach has one problem; A full stomach has a 100
-problems.](https://www.yogasukshma.com/articles-and-lecture-presentations-by-ganesh/an-empty-stomach-has-one-problem-a-full-stomach-has-a-100-problems  
+**Az írás eredeti címe:**
+[An empty stomach has one problem; A full stomach has a 100 problems.](https://www.yogasukshma.com/articles-and-lecture-presentations-by-ganesh/an-empty-stomach-has-one-problem-a-full-stomach-has-a-100-problems)  
 **Korrektor:** Dr. Kővári Zsuzsa
