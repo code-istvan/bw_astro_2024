@@ -6,6 +6,7 @@ import desktopImage from '../images/mysore_kurzus_desktop.jpg';
 import { Image } from 'astro:assets';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import CourseList from '../components/Courses/CourseList.astro';
+import mysoreCourseFayData from '../data/mysoreCourseFaq.json';
 import '../sass/pages/_astangaKezdoTanfolyam.scss';
 
 const metadata = {
@@ -13,6 +14,21 @@ const metadata = {
     description:
         'Ezen az oldalon találod azokat az információkat, amelyek segítségével eldöntheted, hogy az Astanga Mysore kurzus megfelelő-e számodra. Ha kérdésed van, keress minket bizalommal!',
 };
+
+const huMysoreCourseFayData = mysoreCourseFayData.HU;
+
+const hasznosOlvasmanyok = [
+    {
+        link: '/blog/5-dolog-amit-az-uj-gyakorloknak-erdemes-megtanulnia',
+        title: '5 dolog amit az új gyakorlóknak érdemes megtanulnia',
+        classNames: 'body link-decoration-remove clr-brand-orange schedule-teacher',
+    },
+    {
+        link: '/blog/sharath-jois-arrol-hogy-miben-nyujt-tobbet-egy-helyi-shala-mint-egy-hagyomanyos-edzes',
+        title: 'Sharath Jois arról, hogy miben nyújt többet egy helyi Shala mint egy hagyományos edzés',
+        classNames: 'body link-decoration-remove clr-brand-orange schedule-teacher',
+    },
+];
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -70,10 +86,30 @@ const metadata = {
                     A kurzus utolsó két reggeli alkalmán, a Mysore-programban, megtapasztalhatod milyen másokkal együtt,
                     de mégis önállóan gyakorolni, tanári jelenlét mellett.
                 </p>
-                <h3 class="clr-brand-orange font-family-primary mt-20px">Gyakran ismételt kérdések</h3>
-                <div></div>
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Gyakran ismételt kérdések</h3>
+                <div class="page-content__section page-content__section--faq mb-40px">
+                    {huMysoreCourseFayData.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
+                </div>
                 <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Tanfolyami időpontok</h3>
                 <CourseList language="HU" courseType="Mysore-course" />
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">
+                    Hasznos olvasmányok az astanga-gyakorlásról
+                </h3>
+                <div class="unordered-list-style mb-40px">
+                    <ul>
+                        {
+                            hasznosOlvasmanyok.map((link) => (
+                                <li>
+                                    <p>
+                                        <a href={link.link} class={link.classNames}>
+                                            {link.title}
+                                        </a>
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

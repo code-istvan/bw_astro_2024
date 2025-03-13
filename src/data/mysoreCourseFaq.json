@@ -1,0 +1,76 @@
+{
+  "HU": [
+    {
+      "id": 1,
+      "question": "Kezdő vagyok, gyakorolhatok Mysore-stílusban?",
+      "answer": "Igen! A Mysore-stílus a legjobb módja annak, hogy elkezdj astanga jógát gyakorolni. A Mysore-gyakorlás során ugyanis mindenki személyre szabott, egyéni oktatást kap, mindezt mégis csoportos környezetben. Minden új gyakorló először egy nagyon egyszerű sorozatot tanul meg, amit Szúrja Namaszkár-nak , magyarul Napüdvözletnek nevezünk. Ezt néhány ülőpóz követi, és végül relaxációval zárul a sorozat. Az első gyakorlás körülbelül 30-45 percig tart. Későbbiekben a gyakorlásod hossza a neked megfelelő ütemben fog növekedni. A tanár figyelemmel kíséri az előrehaladásod, és amint készen állsz rá, újabb ászaná(ka)t kapsz, az előzőekhez hozzáfűzve."
+    },
+    {
+      "id": 2,
+      "question": "Nem vagyok túl idős ahhoz, hogy elkezdjek astangát gyakorolni?",
+      "answer": "Sosem leszel túl idős ahhoz, hogy elkezdj astangázni! Ugyanis a Mysore-stílusú astanga gyakorlás egy olyan sajátos - személyre szabott - módszeren alapul, amely minden korosztályhoz, illetőleg edzettségi-egészségi szinthez igazítható."
+    },
+    {
+      "id": 3,
+      "question": "Kell-e ismernem az astanga sorozatot ahhoz, hogy Mysore-órákra járjak?",
+      "answer": "Nem. Teljesen rendben van, ha úgy csatlakozol, hogy nem ismered a sorozatot. (Lásd feljebb a kezdőkre vonatkozó válaszunkat.) Ha korábban már tanultad a sorozatot, de időközben elfelejtetted, akkor végigvesszük veled az oktató által javasolt hosszúságú gyakorlatsort, és az egyes ászanákat (jógapózokat) addig ismételjük, amíg szükséges, hogy megjegyezd őket."
+    },
+    {
+      "id": 4,
+      "question": "Hány napot gyakoroljak egy héten?",
+      "answer": "Az astanga hagyománya szerint heti hat napot gyakorlunk. Ez komoly elköteleződésnek tűnhet elsőre. Azt javasoljuk, hogy kezdetben vállalj valami számodra megvalósíthatót, és tartsd magad hozzá. Heti két-három nap például jó kiindulópont lehet. Idővel, fokozatosan, több napot is hozzáadhatsz a gyakorlásodhoz. Ha kevés az időd, otthon is végezhetsz néhány napüdvözletet. A lényeg a stabil gyakorlás, így a rövid, de rendszeres gyakorlás mindig jobb, mint a hosszabb, de rendszertelen."
+    },
+    {
+      "id": 5,
+      "question": "Nem szeretnék semmilyen igazítást kapni, attól még jöhetek Mysore-órára?",
+      "answer": "Természetesen. Ez mindenkinek a saját választása, hogy szeretne-e igazítást kapni. Ha új vagy a programban, megbeszéljük a preferenciádat, és a későbbiekben is bármikor meggondolhatod magad bármilyen indoklás nélkül. Ha az igazítás során bármikor fájdalmat vagy kellemetlenséget érzel, azt azonnal jelezd az oktató felé."
+    },
+    {
+      "id": 6,
+      "question": "Sérülésem van, gyakoroljak vagy inkább pihenjek?",
+      "answer": "Azt szoktuk tanácsolni, hogy folytasd a gyakorlást, az adott sérüléshez igazodó módosításokkal. A folyamatos mozgás fenntartja a vér áramlását, és segít a gyógyulásban. Ha bármilyen sérülésed van, azt mindig jelezd az oktató felé!"
+    },
+    {
+      "id": 7,
+      "question": "Korlátozottak az anyagi körülményeim, de szeretnék jönni gyakorolni, lenne valamilyen lehetőség számomra?",
+      "answer": "Legyél ösztöndíjas! A pályázati feltételeket és az erről szóló tájékoztatónkat az ösztöndíj menüpont alatt találod!"
+    }
+  ],
+  "EN": [
+    {
+      "id": 1,
+      "question": "I'm a beginner, can I practice in Mysore style?",
+      "answer": "Yes! Mysore style is the best way to start practicing Ashtanga yoga. During Mysore practice, everyone receives personalized, individual instruction, yet in a group environment. Every new practitioner first learns a very simple sequence called Surya Namaskar, or Sun Salutation in English. This is followed by a few seated poses, and the sequence ends with relaxation. The first practice lasts approximately 30-45 minutes. As you progress, the length of your practice will increase at a pace suitable for you. The teacher monitors your progress, and when you're ready, you'll receive new asana(s) added to the previous ones."
+    },
+    {
+      "id": 2,
+      "question": "Am I too old to start practicing Ashtanga?",
+      "answer": "You're never too old to start practicing Ashtanga! Mysore-style Ashtanga practice is based on a unique - personalized - method that can be adapted to every age group and level of fitness and health."
+    },
+    {
+      "id": 3,
+      "question": "Do I need to know the Ashtanga sequence to attend Mysore classes?",
+      "answer": "No. It's completely fine to join without knowing the sequence. (See our answer above regarding beginners.) If you have previously learned the sequence but have forgotten it in the meantime, we will go through a practice sequence of a length suggested by the instructor, and we will repeat the individual asanas (yoga poses) as many times as necessary for you to remember them."
+    },
+    {
+      "id": 4,
+      "question": "How many days should I practice in a week?",
+      "answer": "According to Ashtanga tradition, we practice six days a week. This may seem like a serious commitment at first. We suggest that you initially commit to something feasible for you and stick to it. Two or three days a week, for example, can be a good starting point. Over time, you can gradually add more days to your practice. If you have limited time, you can also do some sun salutations at home. The key is consistent practice, so short but regular practice is always better than longer but irregular practice."
+    },
+    {
+      "id": 5,
+      "question": "I don't want to receive any adjustments, can I still come to Mysore class?",
+      "answer": "Of course. It's everyone's personal choice whether they want to receive adjustments. If you're new to the program, we'll discuss your preferences, and you can change your mind at any time later without any explanation. If you feel any pain or discomfort during an adjustment, please notify the instructor immediately."
+    },
+    {
+      "id": 6,
+      "question": "I have an injury, should I practice or rather rest?",
+      "answer": "We usually advise to continue practicing with modifications appropriate to the specific injury. Continuous movement maintains blood flow and helps with healing. If you have any injuries, always inform the instructor!"
+    },
+    {
+      "id": 7,
+      "question": "My financial circumstances are limited, but I would like to come practice, would there be any option for me?",
+      "answer": "Become a scholarship recipient! You can find the application requirements and our information about this under the scholarship menu item!"
+    }
+  ]
+}
