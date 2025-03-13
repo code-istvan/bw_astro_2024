@@ -20,7 +20,7 @@ imageMobil: ../../images/uploads/taplalkozas_mobil.jpg
 
 > nimittamaprayojakaṃ prakṛtīnāṃ varaṇabhedastu tataḥ kṣetrikavat> Ahogy a földműves sem hordja a vizet a folyóból a
 > mezőkre, hanem eltávolítja az akadályokat, amelyek megakadályozzák a víz folyását, és gátakat hoz létre, úgy a jógikus
-> gyakorlatok is eltávolítják a tudatosság áramlásának akadályait. > Patandzsali Jóga-szútrák 4.3\
+> gyakorlatok is eltávolítják a tudatosság áramlásának akadályait. > Patandzsali Jóga-szútrák 4.3
 
 Ez ugyanígy van a jóga gyakorlása során is, legyen szó ászanákról, pránájámáról vagy dhjánáról (meditációról); a jóga
 gyakorlásában a sziddhi (mesteri szint) képességének elérése azon múlik, hogy mennyire tudjuk felébreszteni és
@@ -63,7 +63,7 @@ A túlevéstől való tartózkodás és a könnyű diéta betartása elengedhete
 felébreszteni, hogy a magasabb tudatosságot megtapasztalja. Ezt a tapasz cselekedeteként célszerű végezni, ahogyan azt
 az előző cikkben leírtuk. Mert végül is, ahogy Sadhguru mondja,
 
-> Az üres gyomornak egy problémája van;> A teli gyomornak 100 problémája van.
+> Az üres gyomornak egy problémája van; A teli gyomornak száz
 
 **Az írás szerzője:** Ganesh Balachandran, Ph.D.  
 **Az írás eredeti címe:**
