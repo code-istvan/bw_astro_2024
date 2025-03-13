@@ -4,6 +4,8 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mysore_kurzus_mobil.jpg';
 import desktopImage from '../images/mysore_kurzus_desktop.jpg';
 import { Image } from 'astro:assets';
+import AktMobilImage from '../images/pascsimottanaszana.jpg';
+import AktDesktopImage from '../images/akt_tri.jpg';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import CourseList from '../components/Courses/CourseList.astro';
 import mysoreCourseFayData from '../data/mysoreCourseFaq.json';
@@ -57,6 +59,12 @@ const hasznosOlvasmanyok = [
                     az óra dinamikáját. Így az sem probléma, ha valaki rövidebben gyakorol (pl. kezdő gyakorlók), vagy
                     ha valaki hosszabb időt tölt a teremben (pl. haladó gyakorlók) ugyanazon az órán.
                 </p>
+                <Image
+                    src={AktMobilImage}
+                    alt="Astanga kezdő tanfolyam Budapest"
+                    class="image--visible-mobil mb-20px"
+                />
+                <Image src={AktDesktopImage} alt="Kezdő astanga jóga Budán" class="image--visible-desktop mb-20px" />
                 <h3 class="clr-brand-orange font-family-primary mb-20px">A kurzusról</h3>
                 <p>
                     Hogyha szeretnéd kipróbálni, milyen a Mysore-stílusú astanga gyakorlás vagy otthon szeretnél egyedül
