@@ -162,9 +162,7 @@ hatékony motivációs tényező, de a testtel való megszállott foglalkozás a
 hátráltatni fogja, ami ahhoz vezet, hogy beleragadunk a fizikai erő és szépség csodálásába, elvétve így a valódi célt és
 a gyakorlás helyes módját. Az ászanák tökéletes kivitelezésének vajmi kevés köze van a jóga útján való továbbhaladáshoz.
 
-A nyugati világ ászanagyakorlását a különféle gyógyszerek túlfogyasztásához is hasonlíthatnánk: néhány tünetet talán
-megszüntethetünk egy időre, de a helytelen alkalmazás következtében más tüneteket hozhatunk létre. A gyakorlás céltalan
-figyelemmel gyakran nem kívánatos ereményekhez vezet: hiúság, sérülés, fájdalom, sértődés…
+<div class="blog-island-section">A nyugati világ ászanagyakorlását a különféle gyógyszerek túlfogyasztásához is hasonlíthatnánk: néhány tünetet talán megszüntethetünk egy időre, de a helytelen alkalmazás következtében más tüneteket hozhatunk létre. A gyakorlás céltalan figyelemmel gyakran nem kívánatos ereményekhez vezet: hiúság, sérülés, fájdalom, sértődés…</div>
 
 A gyakorlás céljával való azonosulás nélkül annak áldozatává válhatunk. A jóga nem testedzés szálkás és feszes izmok
 építése céljából. Addig, ameddig nem értjük meg az ászana helyét és szerepét Patandzsali jógájában, Gurudzsi jógájában,
@@ -210,8 +208,7 @@ kiegyensúlyozott személyiséget eredményez – mellékhatásként – másokk
 hogy a jógát spirituális gyakorlássá emeljük mindenképpen szükséges a _jámák_ és _nijámák_ tökéletesítése önmagunk és
 mások irányába.
 
-A gyakorlók könnyen becsaphatják magukat, hogy pusztán az ászanák gyakorlása elhozza a vágyott boldogságot vagy más
-vágyott célt, de ez így nem igaz: ismételten hangsúlyoznám, hogy az ászanák kizárólag terápiás jellegeűek.
+<div class="blog-island-section">A gyakorlók könnyen becsaphatják magukat, hogy pusztán az ászanák gyakorlása elhozza a vágyott boldogságot vagy más vágyott célt, de ez így nem igaz: ismételten hangsúlyoznám, hogy az ászanák kizárólag terápiás jellegeűek.</div>
 
 Az “igazi munka” = spirituális tudakozódás, terápiás ászanagyakorlással illetve a jámák és nijámák követésének
 összekapcsolásával. Ez a tudakozódás csak akkor fog számunkra gyümölcsöt hozni, ha a helyes irányba indulunk. Emiatt
@@ -239,15 +236,15 @@ tizenegyedik érzékszerv, a csapongó, vándorló “majom-elme”). Ennek ered
 
 A _pratjáhára_ a _vairagja_, azaz a lemondás tökéletességre fejlesztése, ami a gyakorlással (_abhyasa_) együtt az elme
 feletti uralomhoz vezet. Patandzsali úgy ír erről a Jóga Szútrában, hogy a legmagasabb szintű lemondás a _buddhi_
-(intellektus) és a *purus*a (Önvaló, a Látó) természet szerinti megkülönböztetéséhez, továbbá minden a gúnák által
+(intellektus) és a _purusa_ (Önvaló, a Látó) természet szerinti megkülönböztetéséhez, továbbá minden a gúnák által
 megnyilvánított dolgok iránti közömbösséghez vezet ( a _gúnák_ játéka által kreált világ iránt elvesztett érdeklődés
 vezeti az elmét az önmagába záródáshoz)
 
 > _puruṣa-khyāter-guṇa-vaitṛṣṇyam_
 
-A *puruṣa-khyāte*r vagy _vivéka khyāter_ a szútrák központi témája – minden jógagyakorlás végső célja ez: annak a
+A _puruṣa-khyāter_ vagy _vivéka khyāter_ a szútrák központi témája – minden jógagyakorlás végső célja ez: annak a
 képességnek a kifejlesztése, hogy a Látót megkülönböztessük a látott-tól. Patandzsali a Látó (_Purusa_) összekeverését
-az elmével az egoitás (vasmita\*) szóval jelöli.
+az elmével az egoitás (_vasmita_) szóval jelöli.
 
 Patandzsali-nál a II.1 szútra alapján a jóga gyakorlás második eleme a _szvádhjája_. A jógikus filozófia tanulmányozása
 a svadhyaya egy formája, ugyanis az elme működésének megértéséhez egyfajta belső térképet nyújt. A jóga filozófiától
@@ -296,8 +293,8 @@ hogy durva vagy finom tárgyakon meditáljunk, vagy meditáljunk azon a gyönyö
 kötött/megismerő (_szamprajnata_) _szamádhi_. De a _szamádhi_ legvégső formája – a forma nélküli/tartalom nélküli
 (_asamprajnata_) _szamádhi_ kizárólag teljes önkorlátozással/ürességgel érhető el.
 
-A _dharana_, *dhyanav és a *szamádhi* nem különállóak – ezek fokozatosan egymásba olvadó ágak. Ezt *szamjámának* is
-nevezzük. A *dharana\* – koncentráció – az az állapot, amire gyakorlásunk közben folyamatosan törekszünk.
+A _dharana_, _dhyanav_ és a _szamádhi_ nem különállóak – ezek fokozatosan egymásba olvadó ágak. Ezt _szamjámának_ is
+nevezzük. A _dharana_ – koncentráció – az az állapot, amire gyakorlásunk közben folyamatosan törekszünk.
 
 A *dhjána*  és a _szamádhi_ a koncentráció elmélyítése. Amint a szvádhjája gyakorlásán keresztül megértjük, hová
 helyezzük a figyelmünket – vagy inkább hogyan vonjuk vissza a figyelmünkent és tartózkodjunk az Önvalónkban, nem marad a
@@ -338,6 +335,10 @@ Az astanga jóga sokkal több, mint pusztán ászanák egymást követő sorozat
 hogy igazából a szívéig érjünk, odaadó gyakorlásra és tanulásra van szükség – hosszú időn keresztül, megszakítások
 nélkül.
 
+**Forrás:** Ashtanga Yoga is not Hatha Yoga  
+**Szerző:** Guy Donahaye  
+**A cikket magyarra fordította:** Fruzsi
+
 Felhasznált irodalom:
 
 [^1]:
@@ -348,7 +349,3 @@ Felhasznált irodalom:
 [^3]: Guruji: a Portrait of Sri K Pattabhi Jois through the Eyes of his Students
 [^4]: The Yoga of T Krisnamacharya – TKV Desikachar
 [^5]: Gaiam Life website
-
-**Forrás:** Ashtanga Yoga is not Hatha Yoga  
-**Szerző:** Guy Donahaye  
-**A cikket magyarra fordította:** Fruzsi
