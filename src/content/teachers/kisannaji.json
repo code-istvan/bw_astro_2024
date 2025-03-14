@@ -6,7 +6,7 @@
   "huTeacherFullName": "Barna Kisanna",
   "enTeacherFullName": "Kisanna Barna",
   "enTeacherStyle": "ashtanga yoga",
-  "teacherImage": "/src/images/uploads/teachers/kisanna.jpeg",
+  "teacherImage": "src/images/uploads/teachers/kisanna.jpeg",
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "/barna-kisanna/",
   "teacherId": "kisannaJi",
