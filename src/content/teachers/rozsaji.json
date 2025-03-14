@@ -1,0 +1,12 @@
+{
+  "teacher": "Rózsa",
+  "teacherOrder": 5,
+  "published": true,
+  "huTeacherFullName": "Csermelyi-Vörös Rózsa",
+  "enTeacherFullName": "Rózsa Csermelyi-Vörös",
+  "enTeacherStyle": "ashtanga yoga",
+  "teacherImage": "/src/images/uploads/teachers/rozsa.jpeg",
+  "huTeacherStyle": "astanga jóga",
+  "teacherLink": "/csermelyi-voros-rozsa/",
+  "teacherId": "rozsaJi"
+}
