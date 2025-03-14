@@ -1,0 +1,12 @@
+{
+  "teacher": "Janka",
+  "teacherOrder": 6,
+  "published": true,
+  "huTeacherFullName": "Horváth Janka",
+  "enTeacherFullName": "Janka Horváth",
+  "enTeacherStyle": "bandha yin",
+  "teacherImage": "src/images/uploads/teachers/janka_site.jpeg",
+  "huTeacherStyle": "bandha jin",
+  "teacherLink": "/horvath-janka/",
+  "teacherId": "jankaJi"
+}
