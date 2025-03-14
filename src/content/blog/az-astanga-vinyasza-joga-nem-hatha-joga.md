@@ -174,8 +174,7 @@ Ami bizonyos, hogy a jóga nagyon hatékony eszköz. Még ha “egóval” is ke
 végül lerombolja azt. Mindenesetre a könnyebb módszer az, ha felhívják figyelmünket a sikerhez vezető közvetlen útra,
 mintha hosszú és kemény úton kell megtanulnunk a leckét.
 
-Az ászana célja tehát a terápia, a gyógyítás. Ez minden. Fizikai és érzelmi terápia. Meg kell tanulnunk az ászanákat
-így, ennek az ismeretében gyakorolni.
+<div class="blog-island-section">Az ászana célja tehát a terápia, a gyógyítás. Ez minden. Fizikai és érzelmi terápia. Meg kell tanulnunk az ászanákat így, ennek az ismeretében gyakorolni.</div>
 
 **Guy:** Mit gondolsz, milyen messzire tud vinni a fizikai gyakorlás? Meddig érhetsz el pusztán fizikai gyakorlással?
 **Norman Allen:** A legtöbb esetben valószínűleg sehová más lépések megtétele nélkül… Helyes szándék, étrend, jamák és
@@ -350,4 +349,6 @@ Felhasznált irodalom:
 [^4]: The Yoga of T Krisnamacharya – TKV Desikachar
 [^5]: Gaiam Life website
 
-**Forrás:** Ashtanga Yoga is not Hatha Yoga **Szerző:** Guy Donahaye **A cikket magyarra fordította:** Fruzsi
+**Forrás:** Ashtanga Yoga is not Hatha Yoga  
+**Szerző:** Guy Donahaye  
+**A cikket magyarra fordította:** Fruzsi
