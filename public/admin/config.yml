@@ -265,7 +265,7 @@ collections:
     label: Teachers
     folder: src/content/teachers/
     media_folder: ../../images/uploads/teachers
-    public_folder: /src/images/uploads/teachers
+    public_folder: src/images/uploads/teachers
     format: 'json'
     create: true
     slug: '{{teacherId}}'
