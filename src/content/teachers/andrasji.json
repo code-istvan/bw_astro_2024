@@ -5,7 +5,7 @@
   "huTeacherFullName": "Bimba András Imre",
   "enTeacherFullName": "Andras Imre Bimba",
   "enTeacherStyle": "ashtanga yoga",
-  "teacherImage": "/src/images/uploads/teachers/andris.jpeg",
+  "teacherImage": "src/images/uploads/teachers/andris.jpeg",
   "huTeacherStyle": "astanga jóga",
   "teacherLink": "/bimba-andras-imre/",
   "teacherId": "andrasJi"
