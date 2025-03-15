@@ -282,6 +282,10 @@ collections:
       - { label: En-Teacher-Style, name: enTeacherStyle, widget: string, required: false }
       - { label: Hu-Teacher-Title, name: huTeacherTitle, widget: string, required: false }
       - { label: En-Teacher-Title, name: enTeacherTitle, widget: string, required: false }
+      - { label: Off-The-Mat, name: offTheMat, widget: boolean, default: false, required: false }
+      - { label: Hu-Off-The-Mat-Title, name: huOffTheMatTitle, widget: string, required: false }
+      - { label: En-Off-The-Mat-Title, name: enOffTheMatTitle, widget: string, required: false }
+      - { label: Off-The-Mat-Link, name: offTheMatLink, widget: string, required: false }
   - name: events
     label: Events
     folder: src/content/events/
