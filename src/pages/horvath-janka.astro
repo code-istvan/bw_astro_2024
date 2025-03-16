@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/janka_mobil.jpeg';
+import desktopImage from '../images/janka_desktop.jpeg';
+
+const metadata = {
+    title: 'Janka',
+    description: 'Itt olvashatsz Horváth Janka jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            12 éves koromban láttam egy nőt pózolni egy magazin borítóján. Olyan erősnek és egészségesnek tűnt, hogy
+            olyan akartam lenni, mint ő! Olvastam, hogy a titka a jóga és elkezdtem iskola előtt néhány testtartást
+            gyakorolni. Ettől kezdve minden vonzott a jógával kapcsolatban és élveztem a titkos gyakorlásomat
+            reggelenként.
+        </p>
+        <p class="mb-20px">
+            Pár évvel később elmentem Indiába, hogy egy tanártól tanuljak. Addigra a fő gyakorlásom egy vinyásza sorozat
+            volt, de a képzésemben a vinyásza mellett az astanga is szerepelt. Az ott töltött idő után boldog voltam,
+            hogy több tudással térhettem vissza, de nem értettem, miért olyan népszerű az astanga. Az első naptól fogva
+            nem tetszett hogy mindig ugyanazt kell csinálni.
+        </p>
+        <p class="mb-20px">
+            Akkoriban Párizsban tanultam és szerettem volna ott is egy tanárt találni. Adtam még egy esélyt az
+            astangának mert pont az első napon érkeztem, amikor Gibran Gonzales elindította a Jivamukti stúdióban a
+            mysore programot. Hagyományos szigorú tanítási stílusa rögtön megtetszett. Az első gyakorlás után éreztem,
+            amit addig még nem tapasztaltam és kíváncsian követtem ezt az új utat.
+        </p>
+        <p class="mb-20px">
+            A jin része lett a gyakorlásomnak, nagyon szeretem a csendet és a lelassulást, egyben segíti az astanga
+            kihívásaimat.
+        </p>
+        <p class="mb-20px">
+            Visszatértem Budapestre gyógytornát tanulni és annak ellenére, hogy leginkább a magányban való gyakorlást
+            választom, István mindig szívesen fogad és olyan odaadással és tudással tanít, ami napjainkban ritka.
+        </p>
+    </div>
+</BaseLayout>

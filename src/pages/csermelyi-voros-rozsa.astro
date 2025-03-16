@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/rozsa_mobil.jpeg';
+import desktopImage from '../images/rozsa_desktop.jpeg';
+
+const metadata = {
+    title: 'Rózsa',
+    description: 'Itt olvashatsz Csermelyi-Vörös Rózsa jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            Gyerekkorom óta életem szerves része a testmozgás. Versenytáncos múltam mellett szívesen kipróbáltam egyéb
+            mozgásformákat is. Így kerültem el gimnazista koromban az első jóga órámra. Örömmel tapasztaltam, hogy a
+            gyakorlás képes enyhíteni az időnként előtörő szorongásomon.
+        </p>
+        <p class="mb-20px">
+            Az astanga jógáról Sugár Bertalan óráin hallottam először. Nagyon kíváncsivá tett, viszont egy évig
+            halogattam, mire elmentem az első Mysore órára. Féltem és nem hittem magamban, nem gondoltam, hogy képes
+            vagyok egy ilyen intenzív és rendszeres gyakorlást fenntartani.
+        </p>
+        <p class="mb-20px">
+            Azonban, mivel egy nehéz időszakot éltem át és változásra vágytam, így végül egy hideg, februári reggelen
+            lejöttem a Bandha Works-be. Tisztán emlékszem az első benyomásokra. Néztem a gyakorlókat, hallgattam az
+            Ujjayi légzést és már akkor tudtam, hogy ez az amit kerestem.
+        </p>
+        <p class="mb-20px">
+            Úgymond hamar elkapott a gépszíj, rendszeresen gyakoroltam, majd 3 év után azt éreztem, hogy el kell mennem
+            Mysore-ba a forráshoz. 2022-ben felvételt nyertem a Sharath Yoga Centre-be. Nagyon szerencsésnek érzem
+            magam, hogy lehetőségem volt 2 hónapot Paramaguru Sharath Jois felügyelete alatt gyakorolnom. Ezen kívül,
+            meghatározó volt bepillantást nyerni az dél-indiai kultúrába és része lenni az emberek hétköznapjainak.
+        </p>
+        <p class="mb-20px">
+            Rendkívül hálás vagyok a tanáraimnak és a gyakorlásnak. Sokat tanultam alázatról, hitről, elfogadásról és a
+            félelmeim leküzdéséről. Kíváncsian várom, hogy mit tanít és merre visz tovább a gyakorlás.
+        </p>
+    </div>
+</BaseLayout>

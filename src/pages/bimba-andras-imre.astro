@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/andris_mobil.jpeg';
+import desktopImage from '../images/andris_desktop.jpeg';
+
+const metadata = {
+    title: 'Andris',
+    description: 'Itt olvashatsz Bimba András Imre jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            Egy barátomtól kölcsön kapott könyvben olvastam először a jóga filozófiáról és az ászanák áldásos élettani
+            hatásairól.
+        </p>
+        <p class="mb-20px">
+            2015. januárjában kezdtem el a reggeli tradicionális mysore stílusú astanga jóga gyakorlást a Bandha Works
+            jóga iskolában, amit azóta is fenntartok.
+        </p>
+        <p class="mb-20px">
+            2017. márciusában utaztam először Mysore városába, hogy tanulhassak R. Sharath Jois-tól az akkori KPJAYI
+            intézmény vezetőjétől. A negyedik Indiai látogatásom során, 2023. októberében felhatalmazást kaptam tőle az
+            astanga jóga első sorozat tanítására.
+        </p>
+    </div>
+</BaseLayout>
