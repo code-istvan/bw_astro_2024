@@ -83,6 +83,10 @@ const teachersCollection = defineCollection({
     enTeacherStyle: z.string().optional(),
     huTeacherTitle: z.string().optional(),
     enTeacherTitle: z.string().optional(),
+    offTheMat: z.boolean().optional(),
+    huOffTheMatTitle: z.string().optional(),
+    enOffTheMatTitle: z.string().optional(),
+    offTheMatLink: z.string().optional(),
   }),
 });
 

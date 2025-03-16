@@ -11,11 +11,27 @@ interface Props {
     teacherImage: string;
     teacherImageAlt: string;
     images: Record<string, () => Promise<{ default: ImageMetadata }>>;
+    offTheMat: string;
+    huOffTheMatTitle: string;
+    enOffTheMatTitle: string;
+    offTheMatLink: string;
     lang: 'hu' | 'en';
 }
 
-const { teacherName, teacherTitle, teacherStyle, teacherLink, teacherImage, teacherImageAlt, images, lang } =
-    Astro.props;
+const {
+    teacherName,
+    teacherTitle,
+    teacherStyle,
+    teacherLink,
+    teacherImage,
+    teacherImageAlt,
+    images,
+    lang,
+    offTheMat,
+    huOffTheMatTitle,
+    enOffTheMatTitle,
+    offTheMatLink,
+} = Astro.props;
 
 const buttonText = lang === 'hu' ? 'Tovább' : 'Read more';
 ---
@@ -39,9 +55,13 @@ const buttonText = lang === 'hu' ? 'Tovább' : 'Read more';
             <h3 class="teacher__name">{teacherName}</h3>
             <p class="teacher__title clr-shades-gray">{teacherTitle}</p>
             <p class="teacher__style clr-shades-gray">{teacherStyle}</p>
-            <a href={teacherLink} class="teacher__link btn--third--naked-orange">
-                <p class="mt-8px">{buttonText}</p>
-            </a>
+            {
+                teacherLink && (
+                    <a href={teacherLink} class="teacher__link btn--third--naked-orange">
+                        <p class="mt-8px">{buttonText}</p>
+                    </a>
+                )
+            }
         </div>
     </div>
 </div>
