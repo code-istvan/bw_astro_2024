@@ -1,0 +1,13 @@
+{
+  "teacher": "Temu",
+  "teacherOrder": 6,
+  "published": true,
+  "huTeacherFullName": "Temu",
+  "enTeacherFullName": "Temu",
+  "enTeacherStyle": "vinyasa krama",
+  "teacherImage": "src/images/uploads/teachers/temu.jpeg",
+  "huTeacherStyle": "vinyásza krama",
+  "teacherLink": "/temu/",
+  "teacherId": "temuJi",
+  "offTheMat": false
+}
