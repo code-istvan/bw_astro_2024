@@ -1,0 +1,13 @@
+{
+  "teacher": "Noémi",
+  "teacherOrder": 5,
+  "published": true,
+  "huTeacherFullName": "Gál Noémi Andrea",
+  "enTeacherFullName": "Noémi Andrea Gál ",
+  "enTeacherStyle": "vinyasa krama",
+  "teacherImage": "src/images/uploads/teachers/noemi.jpeg",
+  "huTeacherStyle": "vinyásza kráma",
+  "teacherLink": "/gal-noemi-andrea/",
+  "teacherId": "noemiJi",
+  "offTheMat": false
+}
