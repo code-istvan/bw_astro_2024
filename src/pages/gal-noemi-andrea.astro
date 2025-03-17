@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/noemi_mobil.jpg';
+import desktopImage from '../images/noemi_desktop.jpg';
+
+const metadata = {
+    title: 'Noémi',
+    description: 'Itt olvashatsz Gál Noémi Andrea jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            1991.11.11-én születtem. A mozgás iránti vágyam 2010-ben kezdődött, amikor az utolsó évemet töltöttem
+            gimnáziumban. A táncművészet és a színház felé orientálódtam. Sokat tanulmányoztam a mozgás anatómiáját,
+            miközben humánkineziológus végzettséget szereztem a Testnevelési Főiskolán. Szabadúszó táncosként kerestem
+            az utam, fél évet töltöttem Prágában, majd másfelet Máltán, a jóga itt vált az életem részévé. Táncos
+            előképzettségem előnyt jelentett a pózok kivitelezésében, ám a letisztult és valódi értékeket a folyamatos
+            gyakorlás által tapasztaltam meg. Hazaköltözés után – tudásom bővítése céljából – elvégeztem az
+            oktatóképzést az Atma Centerben, miközben ugyanitt azonnal kaptam lehetőséget órákat tartani. Kevés
+            tapasztalattal, de annál nagyobb lelkesedéssel próbáltam ki az ismert jógairányzatokat. A táncban megélt
+            mozgásminőséget a flow stílusban fedeztem fel, találkoztam az astangával, majd rátaláltam a Vinyásza
+            Krámára. Jelenleg ez a rendszer az, ami a legközelebb áll a szívemhez, kiteljesít és erőt ad az élet más
+            területein is. Hiszek abban, hogy az elvárások nélküli, rendszeres és odaadó gyakorlás által mindannyian
+            választ kaphatunk arra, miért vagyunk itt.
+        </p>
+    </div>
+</BaseLayout>
