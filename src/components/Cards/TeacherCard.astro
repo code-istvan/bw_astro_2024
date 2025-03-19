@@ -11,10 +11,10 @@ interface Props {
     teacherImage: string;
     teacherImageAlt: string;
     images: Record<string, () => Promise<{ default: ImageMetadata }>>;
-    offTheMat: string;
-    huOffTheMatTitle: string;
-    enOffTheMatTitle: string;
-    offTheMatLink: string;
+    offTheMat?: string;
+    huOffTheMatTitle?: string;
+    enOffTheMatTitle?: string;
+    offTheMatLink?: string;
     lang: 'hu' | 'en';
 }
 
