@@ -9,15 +9,28 @@
 //   }
 // }
 
+// .progress-bar {
+//   z-index: 1000;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 6px;
+//   animation: scaleProgress linear;
+//   animation-timeline: scroll();
+//   transform-origin: left;
+//   background-color: $color-brand-orange;
+// }
+
 .progress-bar {
-  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  height: 6px;
-  animation: scaleProgress linear;
-  animation-timeline: scroll();
+  width: 100%;
+  height: 4px;
+  background-color: #007bff; /* Kék szín, tetszés szerint változtatható */
   transform-origin: left;
-  background-color: $color-brand-orange;
+  transform: scaleX(0);
+  z-index: 1000; /* Magas z-index, hogy minden felett legyen */
+  transition: transform 0.1s ease-out; /* Kis késleltetés a simább animációért */
 }
