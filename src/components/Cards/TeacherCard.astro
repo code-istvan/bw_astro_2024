@@ -34,6 +34,8 @@ const {
 } = Astro.props;
 
 const buttonText = lang === 'hu' ? 'Tovább' : 'Read more';
+
+const formattedTeacherLink = lang === 'en' ? `/en${teacherLink}` : teacherLink;
 ---
 
 <div class="teacher">
@@ -57,7 +59,7 @@ const buttonText = lang === 'hu' ? 'Tovább' : 'Read more';
             <p class="teacher__style clr-shades-gray">{teacherStyle}</p>
             {
                 teacherLink && (
-                    <a href={teacherLink} class="teacher__link btn--third--naked-orange">
+                    <a href={formattedTeacherLink} class="teacher__link btn--third--naked-orange">
                         <p class="mt-8px">{buttonText}</p>
                     </a>
                 )

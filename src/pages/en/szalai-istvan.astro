@@ -1,18 +1,116 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
-import mobileImage from '../../images/mantra_mobil.jpg';
-import desktopImage from '../../images/mantra_desktop.jpg';
+import mobileImage from '../../images/istvan_mobil.jpeg';
+import desktopImage from '../../images/istvan_desktop.jpeg';
+import { Image } from 'astro:assets';
+import MysoreImage1 from '../../images/sharathji_and_istvan.jpg';
+import MysoreImage2 from '../../images/assist_team.jpg';
+import MysoreImage3 from '../../images/lakshmishji_and_istvan.jpg';
+import Carousel from '../../components/Carousel/Carousel.astro';
 
 const metadata = {
     title: 'István',
-    description: 'Itt olvashatsz Szalai István jógaoktatóról, a Bandha Works alapítójáról.',
+    description: 'Here you can read about István Szalai yoga teacher, the founder of Bandha Works.',
 };
+
+const mysoreImages = [
+    {
+        image: MysoreImage1,
+        alt: 'Paramaguru Sharath Jois and István Szalai at KPJAYI',
+    },
+    {
+        image: MysoreImage2,
+        alt: 'Paramaguru Sharath Jois and his assistants with István Szalai at KPJAYI',
+    },
+    {
+        image: MysoreImage3,
+        alt: 'Lakshmish Ji and István Szalai, Mysore at KPJAYI',
+    },
+];
 ---
 
-<BaseLayout title={metadata.title}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <div class="row"><blockquote>Illness is an excellent opportunity to change yourself</blockquote></div>
+        <p>
+            I started practicing yoga in 2005 in the hope of overcoming a disease considered incurable by Western
+            medicine. I achieved this goal with unexpected speed and effectiveness, which still helps maintain my
+            unwavering enthusiasm for the science of yoga. After my recovery, an active search period followed. After
+            trying various hatha yoga styles, my attention increasingly turned toward ashtanga vinyasa yoga.
+        </p>
+        <blockquote>
+            The firm foundation of the stability of the mind is careful practice performed continuously, without
+            interruption, over a long period of time. - Patanjali Yoga Sutras I.14
+        </blockquote>
+        <p class="mt-20px">
+            After three years of active asana practice, guided by an inexplicable, sudden decision, I moved to India for
+            a year. I spent the first months in the Himalayas in the company of various gurus, sadhus, and illusionists,
+            with active tuning, practice, and searching for my path. This is where I began to seriously engage with
+            ashtanga vinyasa yoga.
+        </p>
+        <p class="mt-20px">
+            In the second half-year, under the strict supervision of South Indian masters, I practiced 6-7 hours daily.
+            By then, I was primarily focused on studying the ashtanga system. In Mysore, I completed a teacher training
+            course at the Sthalam 8 Ashtanga Institute, where the high standard of theoretical and practical training
+            was ensured by professors and students from Mysore University. My teachers were: BNS Iyengar, V. Sheshadri,
+            Vinay Kumar, and Ajay Kumar.
+        </p>
+        <p class="mt-20px">
+            In 2013, driven by professional curiosity, I applied to and was accepted into KPJAYI, the ashtanga vinyasa
+            yoga institution with the greatest tradition worldwide. This fundamentally changed my previous "ashtanga"
+            perspective and approach; there was no question that this is where I wanted to study from then on.
+        </p>
+        <p class="mt-20px">
+            Currently, I visit Mysore every year, the SYC (the successor institution to KPJAYI), and my Guru, R. Sharath
+            Jois, to maintain my continuous development.
+        </p>
+        <p class="mt-20px">
+            As a practitioner following a yogic lifestyle, beyond regular practical and theoretical training, I place
+            special importance on proper, ethical nutrition. As a member of the Vegan Society, I maintain a vegan
+            lifestyle.
+        </p>
+        <blockquote>
+            ...Yoga is not for everyone; it's an extremely complex system. I would like you to think carefully about
+            your decision before you begin. Yoga turns your whole life upside down because you start to feel truly good
+            (...) It may also happen that you leave your job and go to India. Therefore, please consider very carefully
+            whether you want to start it... (David Williams)
+        </blockquote>
+        <p>
+            After 4 years of intensive teaching experience, in August 2013, I opened my own yoga school, Bandha Works,
+            with the blessing of R. Sharath Jois. Since then, I have been practicing and teaching here with unwavering
+            enthusiasm and faith.
+        </p>
+        <p class="mt-20px">
+            In 2017, I received the KPJAYI Authorized Level 1 teaching title from my Guru, R. Sharath Jois.
+        </p>
+        <p class="mt-20px">
+            In January 2018, I had the great honor of being an assistant teacher for a month alongside my Guru at KPJAYI
+            in India.
+        </p>
+        <h3 class="mt-20px clr-brand-orange">KPJAYI Mysore, India. 2018.</h3>
+        <div class="row image-track-3-type-2 mt-20px">
+            <Image src={MysoreImage1} alt="Paramaguru Sharath Jois és Szalai István a KPJAYI-ban" />
+            <Image src={MysoreImage2} alt="Paramaguru Sharath Jois és asszisztensei, Szalai István-nal a KPJAYI-ban" />
+            <Image src={MysoreImage3} alt="Lakshmish Ji és Szalai István, Mysore a KPJAYI-ban" />
+        </div>
+        <div class="image--visible-mobil mt-20px mb-40px">
+            <Carousel>
+                {
+                    mysoreImages.map((item) => (
+                        <div class="section-social-proof__slide embla__slide">
+                            <Image src={item.image} alt={item.alt} />
+                        </div>
+                    ))
+                }
+            </Carousel>
+        </div>
     </div>
 </BaseLayout>

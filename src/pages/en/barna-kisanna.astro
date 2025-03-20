@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/kisanna_mobil.png';
+import desktopImage from '../../images/kisanna_desktop.png';
+
+const metadata = {
+    title: 'Kisanna',
+    description:
+        'Here you can read about Kisanna Barna yoga teacher, psychologist, and yoga instructor at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">I am Kisanna Barna, psychologist, ashtanga yoga practitioner.</p>
+        <p class="mb-20px">
+            I first encountered yoga while I was still in university. I had tried many different styles until, on the
+            recommendation of an acquaintance, I visited and walked down to my first vinyasa krama class at Bandha
+            Works. I immediately felt that I was in the right place: I was impressed by the authenticity of the shala,
+            the professional dedication and devotion I saw in the instructors, as well as the yoga classes themselves,
+            which I began attending more and more frequently and regularly because I felt that I was better with them
+            than without them.
+        </p>
+        <p class="mb-20px">
+            A little later – in the second half of my first pregnancy, looking for a predictable series that offered
+            regular practice which could be modified to my current physical (and mental) state – I began practicing
+            ashtanga vinyasa yoga. Which I have been practicing ever since, now within the possibilities of family life
+            with young children. This arrangement reinforces my conviction that yoga is for everyone, and that it
+            extends far beyond the practice of asanas.
+        </p>
+        <p class="mb-20px">
+            In 2019, I had the opportunity to travel to India, the birthplace of yoga, where I practiced ashtanga with
+            Vijay Kumar. Four years later, in 2023, I was accepted into the Sharath Yoga Centre, where I was able to
+            practice under the supervision of Paramaguru Sharath Jois.
+        </p>
+        <p class="mb-20px">
+            For me, yoga is an opportunity to connect with ourselves. It's the quieting of inner turmoil and outer
+            noise, when we can glimpse what we're currently experiencing, 'what we're dealing with.' It regularly
+            confronts me with the limitations of my perfectionism, and teaches me to be more accepting and permissive
+            with myself, more 'letting go' of external expectations.
+        </p>
+        <p>
+            As a psychologist, I find it especially exciting to discover the parallels between the thousands-year-old
+            Eastern teachings, yoga philosophy, and modern Western psychological and neuroscience theories. A blog
+            series on this topic will be launching soon on the yoga school's website.
+        </p>
+    </div>
+</BaseLayout>
