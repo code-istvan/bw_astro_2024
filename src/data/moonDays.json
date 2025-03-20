@@ -88,26 +88,26 @@
   },
   {
     "monthValue": 4,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Április",
       "EN": "April"
     },
     "fullMoon": {
-      "HU": "8. (hétfő)",
-      "EN": "8th (Monday)"
+      "HU": "13. (vasárnap)",
+      "EN": "13th (Sunday)"
     },
     "newMoon": {
-      "HU": "24. (szerda)*",
-      "EN": "24th (Wednesday)*"
+      "HU": "28. (hétfő)*",
+      "EN": "28th (Monday)*"
     },
     "ekadashiNewMoon": {
-      "HU": "5. (péntek)",
-      "EN": "5th (Friday)"
+      "HU": "9. (szerda)",
+      "EN": "9th (Wednesday)"
     },
     "ekadashiFullMoon": {
-      "HU": "19. (péntek)",
-      "EN": "19th (Friday)"
+      "HU": "24. (csütörtök)",
+      "EN": "24th (Thursday)"
     },
     "thirdMoon": [],
     "moonPhase": {

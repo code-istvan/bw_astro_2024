@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mantra_mobil.jpg';
 import desktopImage from '../images/mantra_desktop.jpg';
+import MP3Player from '../components/MP3Player';
 
 const metadata = {
     title: 'MANTRÁK',
@@ -19,7 +20,7 @@ const metadata = {
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="container--tight-desktop">
+    <div class="container container--tight-desktop">
         <div class="mantra mt-40px">
             <h3 class="clr-brand-orange font-family-primary mb-20px">
                 A <i>mantra</i> szanszkrit szó, a jelentése „túljutni az elmén”
@@ -42,6 +43,11 @@ const metadata = {
                 hang szüli az anyagot – kezdetben volt a szó.
             </p>
             <h3 class="clr-brand-orange font-family-primary mb-20px">Mantrák amiket énekelni szoktunk</h3>
+            <MP3Player
+                url="https://mula.bandha.works/mantras/astanga_opening_mantra.mp3"
+                title="Ashtanga opening pray"
+                client:only="react"
+            />
         </div>
     </div>
 </BaseLayout>

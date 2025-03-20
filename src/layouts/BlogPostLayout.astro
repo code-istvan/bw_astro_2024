@@ -1,8 +1,11 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { formatDate, slugify } from '../components/js/utils';
+import ProgressBar from '../components/Navigation/components/ProgressBar.astro';
 
 const { title, date, canonical, canonicalLanguage, language, description, minutesRead } = Astro.props;
+
+const isBlogPost = true;
 ---
 
 <BaseLayout
@@ -13,7 +16,8 @@ const { title, date, canonical, canonicalLanguage, language, description, minute
     canonicalLanguage={canonicalLanguage}
     language={language}
 >
-    <div class="container">
+    <ProgressBar isVisible={isBlogPost} />
+    <div class="container blog-content__container">
         <h1>{title}</h1>
         <p>{formatDate(date)}</p>
         <div class="row">

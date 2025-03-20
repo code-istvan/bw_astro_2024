@@ -1,5 +1,93 @@
 ---
-// import "./_progressBar.scss";
+import './_progressBar.scss';
 ---
 
 <div class="progress-bar"></div>
+<script>
+    const progressBar = document.querySelector('.progress-bar') as HTMLDivElement;
+    const contentContainer = document.querySelector('.blog-content__container') as HTMLDivElement;
+    if (progressBar && contentContainer) {
+        function getContainerMetrics() {
+            const containerRect = contentContainer.getBoundingClientRect();
+            const containerTop = containerRect.top + window.scrollY;
+            const containerBottom = containerTop + containerRect.height - 60;
+            return {
+                top: containerTop,
+                bottom: containerBottom,
+                height: containerRect.height,
+            };
+        }
+        function updateScrollProgress() {
+            const { top, bottom, height } = getContainerMetrics();
+            const currentScroll = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            if (currentScroll < top - viewportHeight) {
+                progressBar.style.transform = 'scaleX(0)';
+                return;
+            }
+            if (currentScroll > bottom) {
+                progressBar.style.transform = 'scaleX(1)';
+                return;
+            }
+            const startViewingPoint = 0;
+            const totalScrollDistance = bottom - startViewingPoint;
+            const currentProgress = (currentScroll - startViewingPoint) / totalScrollDistance;
+            console.log(currentProgress);
+            progressBar.style.transform = `scaleX(${currentProgress})`;
+        }
+        updateScrollProgress();
+        window.addEventListener('scroll', updateScrollProgress);
+    }
+</script>
+
+<!-- ---
+import './_progressBar.scss';
+---
+
+<div class="progress-bar"></div>
+
+<script>
+    const progressBar = document.querySelector('.progress-bar');
+    const contentContainer = document.querySelector('.blog-content__container');
+
+    if (progressBar && contentContainer) {
+        function getContainerMetrics() {
+            const containerRect = contentContainer.getBoundingClientRect();
+            const containerTop = containerRect.top + window.scrollY;
+            const containerBottom = containerTop + containerRect.height - 60;
+            return {
+                top: containerTop,
+                bottom: containerBottom,
+                height: containerRect.height,
+            };
+        }
+
+        function updateScrollProgress() {
+            const { top, bottom, height } = getContainerMetrics();
+            const currentScroll = window.scrollY;
+            const viewportHeight = window.innerHeight;
+
+            if (currentScroll < top - viewportHeight) {
+                progressBar.style.transform = 'scaleX(0)';
+                return;
+            }
+
+            if (currentScroll > bottom) {
+                progressBar.style.transform = 'scaleX(1)';
+                return;
+            }
+
+            const startViewingPoint = 0;
+            const totalScrollDistance = bottom - startViewingPoint;
+            const currentProgress = (currentScroll - startViewingPoint) / totalScrollDistance;
+
+            console.log(currentProgress);
+
+            progressBar.style.transform = `scaleX(${currentProgress})`;
+        }
+
+        updateScrollProgress();
+
+        window.addEventListener('scroll', updateScrollProgress);
+    }
+</script> -->
