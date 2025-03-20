@@ -1,13 +1,13 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_colors';
 
-@keyframes scaleProgress {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
+// @keyframes scaleProgress {
+//   from {
+//     transform: scaleX(0);
+//   }
+//   to {
+//     transform: scaleX(1);
+//   }
+// }
 
 .progress-bar {
   z-index: 1000;
@@ -19,5 +19,5 @@
   animation: scaleProgress linear;
   animation-timeline: scroll();
   transform-origin: left;
-  background-color: #b45309;
+  background-color: $color-brand-orange;
 }
