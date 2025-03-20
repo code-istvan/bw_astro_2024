@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/andris_mobil.jpeg';
+import desktopImage from '../../images/andris_desktop.jpeg';
+
+const metadata = {
+    title: 'Andris',
+    description: 'Here you can read about András Imre Bimba yoga teacher, yoga instructor at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            I first read about yoga philosophy and the beneficial physiological effects of asanas in a book borrowed
+            from a friend.
+        </p>
+        <p class="mb-20px">
+            In January 2015, I began practicing traditional Mysore-style ashtanga yoga in the mornings at the Bandha
+            Works yoga school, which I have maintained ever since.
+        </p>
+        <p class="mb-20px">
+            In March 2017, I traveled to Mysore city for the first time to study with R. Sharath Jois, the director of
+            the then KPJAYI institution. During my fourth visit to India, in October 2023, I received authorization from
+            him to teach the first series of ashtanga yoga.
+        </p>
+    </div>
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/vivien_mobil.jpeg';
+import desktopImage from '../../images/vivien_desktop.jpeg';
+
+const metadata = {
+    title: 'Vivien',
+    description: 'Here you can read about Viven Shaker yoga teacher, yoga instructor at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            I first became acquainted with (ashtanga) yoga in 2016, and with smaller and larger breaks, it has now
+            become a regular part of my life. As a child, I was a competitive athlete for years, later I ran and played
+            volleyball, so I started on the path of ashtanga yoga with very tight muscles and a stiff body. It's the
+            result of persistent practice that today my body no longer trembles when I want to touch my big toe :)!
+        </p>
+        <p class="mb-20px">
+            Yoga is a miracle to me, it means 'being in connection with myself.' In the past, I was much more inclined
+            to seek security outside, only outside, not within myself. Yoga helped me realize that security is within
+            me. The practice sensitizes and my body signals everything - good and bad - I've become healthier. As a
+            Gestalt therapist, I sincerely believe that people are capable of connecting to their bodies and this
+            supports them at any time.
+        </p>
+        <p class="mb-20px">
+            I am very grateful that I can practice under the supportive and expert hands of Bandhaworks!
+        </p>
+    </div>
+</BaseLayout>

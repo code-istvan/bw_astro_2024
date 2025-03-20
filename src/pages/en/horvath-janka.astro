@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/janka_mobil.jpeg';
+import desktopImage from '../../images/janka_desktop.jpeg';
+
+const metadata = {
+    title: 'Janka',
+    description: 'Here you can read about Janka Horváth yoga teacher, yoga instructor at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            At the age of 12, I saw a woman posing on a magazine cover. She looked so strong and healthy that I wanted
+            to be like her! I read that her secret was yoga, and I started practicing some postures before school. From
+            then on, I was attracted to everything related to yoga and enjoyed my secret practice in the mornings.
+        </p>
+        <p class="mb-20px">
+            A few years later, I went to India to learn from a teacher. By then, my main practice was a vinyasa series,
+            but alongside vinyasa, ashtanga was also part of my training. After the time spent there, I was happy to
+            return with more knowledge, but I didn't understand why ashtanga was so popular. From the first day, I
+            didn't like having to do the same thing all the time.
+        </p>
+        <p class="mb-20px">
+            At that time, I was studying in Paris and wanted to find a teacher there as well. I gave ashtanga another
+            chance because I arrived on exactly the first day when Gibran Gonzales started the Mysore program at the
+            Jivamukti studio. I immediately liked his traditional strict teaching style. After the first practice, I
+            felt something I hadn't experienced before and curiously followed this new path.
+        </p>
+        <p class="mb-20px">
+            Yin has become part of my practice, I really love the silence and slowing down, while it also helps with my
+            ashtanga challenges.
+        </p>
+        <p class="mb-20px">
+            Visszatértem Budapestre gyógytornát tanulni és annak ellenére, hogy leginkább a magányban való gyakorlást
+            választom, István mindig szívesen fogad és olyan odaadással és tudással tanít, ami napjainkban ritka.
+        </p>
+    </div>
+</BaseLayout>
