@@ -30,6 +30,8 @@ const sortedSchedule = schedule
     .filter((item) => new Date(item.data.date) >= today)
     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
 
+console.log('Classes:', classes);
+
 const formatDate = (date) => {
     const dateObj = new Date(date);
     return {
@@ -47,11 +49,11 @@ const renderClassDetails = (item, index) => {
     const teacherId = item.data[index ? `teacher${index}` : 'teacher'];
     const classTime = item.data[index ? `classTime${index}` : 'classTime'];
 
-    if (!classId || !teacherId) return null;
+    if (!classId) return null;
 
     return {
         classDetails: getClassDetails(classId),
-        teacherDetails: getTeacherDetails(teacherId),
+        teacherDetails: teacherId ? getTeacherDetails(teacherId) : null,
         classTime,
     };
 };
@@ -96,18 +98,20 @@ const renderClassDetails = (item, index) => {
                                                 <a href={details.classDetails.classSignUpUrl}>Részvétel</a>
                                             </p>
                                         </div>
-                                        <p class="mb-10px">
-                                            <a
-                                                class="clr-brand-orange body body--bold"
-                                                href={details.teacherDetails.teacherLink}
-                                            >
-                                                {details.teacherDetails.teacher}
-                                            </a>
-                                        </p>
+                                        {details.teacherDetails && (
+                                            <p class="mb-10px">
+                                                <a
+                                                    class="clr-brand-orange body body--bold"
+                                                    href={details.teacherDetails.teacherLink}
+                                                >
+                                                    {details.teacherDetails.teacher}
+                                                </a>
+                                            </p>
+                                        )}
                                         <AccordionSchedule
                                             content={details.classDetails.classDetailHu}
                                             lang={lang}
-                                            uniqueId={`${item.data.date}-${details.classTime.replace(':', '')}-${outerIndex}-${innerIndex}`}
+                                            uniqueId={`${item.data.date}-${details.classTime ? details.classTime.replace(':', '') : 'unknown'}-${outerIndex}-${innerIndex}`}
                                         />
                                     </div>
                                 )
