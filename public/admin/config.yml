@@ -147,6 +147,8 @@ collections:
         value_field: teacherId
         display_fields: ['teacher', ('teacherId')]
         search_fields: ['teacher', 'teacherId']
+        default: null
+        required: false
       - label: Class Time
         name: classTime
         widget: relation
@@ -154,6 +156,8 @@ collections:
         value_field: customTime
         display_fields: ['customTime']
         search_fields: ['customTime']
+        default: null
+        required: false
       - label: Class2
         name: class2
         widget: relation
