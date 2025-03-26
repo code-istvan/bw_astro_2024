@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/noemi_mobil.jpg';
+import desktopImage from '../../images/noemi_desktop.jpg';
+
+const metadata = {
+    title: 'Noémi',
+    description: 'Read here about Noémi Andrea Gál, yoga teacher at Bandha Works',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            I was born on November 11, 1991. My passion for movement began in 2010 during my final year of high school.
+            I was drawn towards dance arts and theater. I extensively studied movement anatomy while obtaining a degree
+            in Human Kinesiology at the University of Physical Education. As a freelance dancer, I was finding my path –
+            spending six months in Prague, then a year and a half in Malta, where yoga became part of my life. My dance
+            background gave me an advantage in executing poses, but I experienced the pure and true values through
+            continuous practice. After moving back to Hungary, to expand my knowledge, I completed teacher training at
+            Atma Center, where I was immediately given the opportunity to teach classes. With little experience but
+            great enthusiasm, I tried various known yoga styles. I discovered the movement quality I experienced in
+            dance within the flow style, encountered ashtanga, and then found Vinyasa Krama. Currently, this system is
+            closest to my heart, fulfills me, and gives me strength in other areas of life as well. I believe that
+            through regular and devoted practice without expectations, we can all find answers to why we are here.
+        </p>
+    </div>
+</BaseLayout>

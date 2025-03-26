@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/temu_mobil.jpeg';
+import desktopImage from '../../images/temu_desktop.jpeg';
+
+const metadata = {
+    title: 'Temu',
+    description: 'Read here about Temu, yoga teacher at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            Movement has always been an integral part of my life, and I've been involved in competitive sports since
+            childhood. I didn't know it then, but these experiences later proved helpful in my yoga practice. I learned
+            a lot about humility, perseverance, dedication, and I've always had deep respect for my teachers.
+        </p>
+        <p class="mb-20px">
+            I first encountered yoga during my university years when I accompanied my sister to a Bikram class. I love
+            challenges and new experiences, so I approached the first class with curiosity and enjoyment. Afterward, I
+            experimented with different styles and felt that something about yoga had captured me.
+        </p>
+        <p class="mb-20px">
+            Gradually, yoga became a part of my life, and I began practicing regularly. Over the years, I've met
+            excellent teachers, learned a lot from Bertalan Sugár and Diána Téklesz, and I'm grateful to them.
+        </p>
+        <p class="mb-20px">
+            Even as a beginner practitioner, Berci recommended the Bandha Works yoga school, which I finally visited in
+            January 2023 for a vinyasa krama class. After István's and Noémi's classes, I immediately felt that I had
+            found my place where I wanted to continue developing and learning. The knowledge of the teachers, fellow
+            practitioners, and the magic of the place all contribute to helping me get closer to myself day by day, and
+            thereby enabling me to help those around me as well.
+        </p>
+    </div>
+</BaseLayout>
