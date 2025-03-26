@@ -118,26 +118,26 @@
   },
   {
     "monthValue": 5,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Május",
       "EN": "May"
     },
     "fullMoon": {
-      "HU": "8. (szerda)",
-      "EN": "8th (Wednesday)"
+      "HU": "12. (hétfő)",
+      "EN": "12th (Monday)"
     },
     "newMoon": {
-      "HU": "23. (csütörtök)",
-      "EN": "23rd (Thursday)"
+      "HU": "27. (csütörtök)",
+      "EN": "27th (Thursday)"
     },
     "ekadashiNewMoon": {
-      "HU": "5. (vasárnap)*",
-      "EN": "5th (Sunday)*"
+      "HU": "9. (péntek)",
+      "EN": "9th (Friday)"
     },
     "ekadashiFullMoon": {
-      "HU": "19. (vasárnap)",
-      "EN": "19th (Sunday)"
+      "HU": "23. (péntek)",
+      "EN": "23rd (Friday)"
     },
     "thirdMoon": [],
     "moonPhase": {
@@ -148,26 +148,26 @@
   },
   {
     "monthValue": 6,
-    "year": 2024,
+    "year": 2025,
     "month": {
       "HU": "Június",
       "EN": "June"
     },
     "fullMoon": {
-      "HU": "6. (csütörtök)",
-      "EN": "6th (Thursday)"
+      "HU": "11. (szerda)",
+      "EN": "11th (Wednesday)"
     },
     "newMoon": {
-      "HU": "22. (szombat)",
-      "EN": "22nd (Saturday)"
+      "HU": "25. (szerda)",
+      "EN": "25th (Wednesday)"
     },
     "ekadashiNewMoon": {
-      "HU": "3. (hétfő)",
-      "EN": "3rd (Monday)"
+      "HU": "7. (szombat)",
+      "EN": "7th (Saturday)"
     },
     "ekadashiFullMoon": {
-      "HU": "17. (hétfő)",
-      "EN": "17th (Monday)"
+      "HU": "22. (vasárnap)",
+      "EN": "22th (Sunday)"
     },
     "thirdMoon": [],
     "moonPhase": [],
