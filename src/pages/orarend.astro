@@ -67,7 +67,38 @@ const renderClassDetails = (item, index) => {
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="schedule container container--tight-desktop mt-40px">
+    <div class="schedule container container--tight-desktop mt-20px">
+        <div class="hidden-desktop mb-20px">
+            <a
+                href="/esemenyek/"
+                class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                aria-label="Astanga jóga tanfolyamok gomb"
+            >
+                Astanga jóga tanfolyamok
+            </a>
+        </div>
+        <!-- <div class="hidden-mobile mb-20px">
+            <div class="row">
+                <div class="col-6-md">
+                    <a
+                        href="/esemenyek/"
+                        class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                        aria-label="Astanga jóga tanfolyamok gomb"
+                    >
+                        Astanga jóga tanfolyamok
+                    </a>
+                </div>
+                <div class="col-6-md">
+                    <a
+                        href="/esemenyek/"
+                        class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                        aria-label="Astanga jóga tanfolyamok gomb"
+                    >
+                        Astanga jóga tanfolyamok
+                    </a>
+                </div>
+            </div>
+        </div> -->
         <div class="schedule__list">
             {
                 sortedSchedule.map((item, outerIndex) => (
