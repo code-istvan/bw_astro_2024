@@ -1,7 +1,7 @@
 ---
-import './_desktopMenu.scss';
 import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
 import { getMenuItemsJogaorak, getMenuItemsTudnivalok, getMenuItemsFomenu } from '../data/menuData';
+import './_desktopMenu.scss';
 
 const language = Astro.url.pathname.includes('/en/') ? 'en' : 'hu';
 const t = useTranslations(language);
@@ -10,6 +10,25 @@ const translatePath = useTranslatedPath(language);
 const jogaorakItems = getMenuItemsJogaorak(translatePath, t);
 const tudnivalokItems = getMenuItemsTudnivalok(translatePath, t);
 const fomenuItems = getMenuItemsFomenu(translatePath, t);
+
+// CTA linkek adatszerkezete
+const ctaItems = [
+    {
+        href: t('orarendLink'),
+        label: `#${t('orarendCta')}`,
+        ariaLabel: t('orarendCtaAriaLabel'),
+    },
+    {
+        href: t('mysoreprogramLink'),
+        label: `#${t('mysoreprogramCta')}`,
+        ariaLabel: t('mysoreprogramCtaAriaLabel'),
+    },
+    {
+        href: t('tanfolyamokLink'),
+        label: `#${t('tanfolyamokCta')}`,
+        ariaLabel: t('tanfolyamokCtaAriaLabel'),
+    },
+];
 ---
 
 <div id="desktopMenu" class="desktop-menu">
@@ -65,6 +84,19 @@ const fomenuItems = getMenuItemsFomenu(translatePath, t);
                         ))
                     }
                 </ul>
+            </div>
+            <div class="desktop-menu__cta display-flex display-flex--direction-column">
+                {
+                    ctaItems.map((item) => (
+                        <a
+                            href={item.href}
+                            class="btn btn--third--naked-orange btn--third--naked-orange--large"
+                            aria-label={item.ariaLabel}
+                        >
+                            {item.label}
+                        </a>
+                    ))
+                }
             </div>
         </div>
     </div>
