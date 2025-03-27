@@ -1,4 +1,5 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_fonts.scss';
+@import '/src/sass/base/_colors.scss';
 
 // Közös alap accordion osztályok - ezeket használja minden accordion komponens
 .accordion__section {
@@ -10,6 +11,9 @@
 
   &:first-child {
     border-top: 1px solid $color-shades-lightBlack;
+  }
+  &:last-child {
+    border-bottom: 1px solid $color-shades-lightBlack;
   }
 }
 
@@ -119,147 +123,3 @@
     padding: 0 12px 4px 0;
   }
 }
-
-// @import '/src/sass/global';
-
-// .accordion__section {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   width: 100%;
-//   border-bottom: 1px solid $color-shades-lightBlack;
-// }
-
-// .accordion__section:first-child {
-//   border-top: 1px solid $color-shades-lightBlack;
-// }
-
-// .accordion {
-//   background-color: transparent;
-//   color: #444;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   border: none;
-//   outline: none;
-//   transition: background-color 0.6s ease;
-//   width: 100%;
-//   padding: 0;
-//   margin-top: 12px;
-//   margin-bottom: 12px;
-// }
-
-// .accordion__title {
-//   font-family: var(--font-family-secondary);
-//   font-weight: var(--font-weight-semi-bold);
-//   font-size: var(--body-font-size-mobile);
-//   text-align: left;
-// }
-
-// @media (min-width: 768px) {
-//   .accordion__title {
-//     font-size: var(--body-font-size-desktop);
-//   }
-// }
-
-// .accordion__icon {
-//   margin-right: auto;
-//   transition: transform 0.6s ease;
-//   flex-shrink: 0;
-// }
-
-// .rotate__45deg {
-//   transform: rotate(45deg);
-// }
-
-// .accordion__content {
-//   background-color: var(--color-shades-black);
-//   overflow: hidden;
-//   transition: max-height 0.6s ease;
-//   max-height: 0;
-// }
-
-// .accordion__text {
-//   padding-bottom: 4px;
-//   padding-right: 12px;
-// }
-
-// .accordion-chevron {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-//   padding: 0;
-// }
-// .accordion__title-container {
-//   color: white;
-// }
-
-// .accordion__title-container p {
-//   font-weight: 800;
-//   padding-right: 8px;
-// }
-
-// .accordion__svg-container svg {
-//   height: 32px;
-//   width: 32px;
-// }
-
-// // Új schedule accordion stílusok
-// .schedule-accordion {
-//   &__button {
-//     background-color: transparent;
-//     cursor: pointer;
-//     border: none;
-//     outline: none;
-//     width: 100%;
-//     padding: 0;
-//   }
-
-//   &__header {
-//     width: 100%;
-//   }
-
-//   &__icon {
-//     transition: transform 0.5s ease;
-
-//     &.rotate__45deg {
-//       transform: rotate(90deg);
-//     }
-//   }
-
-//   &__text {
-//     padding-left: 4px;
-//     color: white;
-//   }
-
-//   &__content {
-//     max-height: 0;
-//     overflow: hidden;
-//     transition: max-height 0.5s ease-out;
-//   }
-
-//   &__content-inner {
-//     padding: 0 12px 4px 0;
-//   }
-// }
-
-// /* Megtartjuk a régi osztályokat is a kompatibilitás miatt */
-// .accordion__content {
-//   max-height: 0;
-//   overflow: hidden;
-//   transition: max-height 0.5s ease-out;
-// }
-
-// .accordion__icon {
-//   transition: transform 0.5s ease;
-// }
-
-// .accordion__icon.rotate__45deg {
-//   transform: rotate(90deg);
-// }
-
-// .accordion-chevron {
-//   width: 100%;
-// }

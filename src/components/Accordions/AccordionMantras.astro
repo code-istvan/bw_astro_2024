@@ -1,0 +1,90 @@
+---
+import MP3Player from '../MP3Player';
+import './_accordion.scss';
+
+const { mantras, lang } = Astro.props;
+---
+
+{
+    mantras && mantras.length > 0 ? (
+        mantras.map((mantra, index) => (
+            <div class="accordion__section">
+                <button class="accordion" data-accordion-toggle={`mantra-${index}`}>
+                    <div class="accordion-chevron">
+                        <div class="accordion__title-container">
+                            <h3>{mantra.name}</h3>
+                        </div>
+                        <div class="accordion__svg-container">
+                            <svg
+                                class="accordion__icon"
+                                data-accordion-icon={`mantra-${index}`}
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="hsl(0, 0%, 100%)"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M10.5 10V2H13.5V10H22V13H13.5V22H10.5V13H2V10H10.5Z" fill="orange" />
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <div data-accordion-content={`mantra-${index}`} class="accordion__content">
+                    {mantra.link && (
+                        <div class="mantra-audio">
+                            <MP3Player url={mantra.link} language={lang} client:only="react" />
+                        </div>
+                    )}
+                    <div class="accordion__text">
+                        <div class="mantra-section">
+                            <h4>Sanskrit</h4>
+                            <div class="mantra-sanskrit" set:html={mantra.sanskrit} />
+                        </div>
+
+                        <div class="mantra-section">
+                            <h4>Translation</h4>
+                            <div class="mantra-translation" set:html={mantra.translation} />
+                        </div>
+
+                        {mantra.comment && (
+                            <div class="mantra-section">
+                                <h4>Comment</h4>
+                                <p>{mantra.comment}</p>
+                            </div>
+                        )}
+
+                        {mantra.chantby && <p class="mantra-chantby">Chanted by: {mantra.chantby}</p>}
+                    </div>
+                </div>
+            </div>
+        ))
+    ) : (
+        <p>Nincsenek mantrák betöltve</p>
+    )
+}
+
+<style>
+    .mantra-section {
+        margin-bottom: 15px;
+    }
+
+    .mantra-section h4 {
+        margin-bottom: 5px;
+        font-weight: var(--font-weight-semi-bold);
+    }
+
+    .mantra-audio {
+        margin: 15px 0;
+    }
+
+    .mantra-chantby {
+        font-style: italic;
+        margin-top: 5px;
+        font-size: 0.9em;
+    }
+</style>
+
+<script>
+    import { initAccordion } from '../js/accordionLogic.js';
+    initAccordion();
+</script>

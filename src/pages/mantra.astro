@@ -4,12 +4,17 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/mantra_mobil.jpg';
 import desktopImage from '../images/mantra_desktop.jpg';
 import MP3Player from '../components/MP3Player';
+import AccordionMantras from '../components/Accordions/AccordionMantras.astro';
+import mantrasData from '../data/mantras.json';
 
 const metadata = {
     title: 'MANTRÁK',
     description:
         'Ezen az oldalon találod a mantrákat amiket énekelini szoktunk a jógaiskolában. Ha kérdésed van, keress minket bizalommal!',
 };
+
+const language = 'HU';
+const mantras = mantrasData[language];
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -43,12 +48,9 @@ const metadata = {
                 hang szüli az anyagot – kezdetben volt a szó.
             </p>
             <h3 class="clr-brand-orange font-family-primary mb-20px">Mantrák amiket énekelni szoktunk</h3>
-            <MP3Player
-                url="https://mula.bandha.works/mantras/astanga_opening_mantra.mp3"
-                title="Ashtanga opening pray"
-                language="HU"
-                client:only="react"
-            />
+            <div class="mantra__accordion-container mb-40px">
+                <AccordionMantras mantras={mantras} lang={language} />
+            </div>
         </div>
     </div>
 </BaseLayout>
