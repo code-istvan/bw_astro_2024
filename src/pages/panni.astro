@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/panni_mobil.png';
+import desktopImage from '../images/panni_desktop.png';
+
+const metadata = {
+    title: 'Panni',
+    description: 'Itt olvashatsz Fehér Panniról, a Bandha Works művészeti vezetőjéről.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            Egész életemben valamilyen módon mozgásban voltam. Gyerekkoromtól kezdve a sport szerves részét képezte a
+            mindennapoknak; triatlonoztam, gyorskorcsolyáztam, majd röplabdáztam, a sporton keresztül pedig kinyílt a
+            világ is, volt szerencsém utazni, megismerni más tájakat, kultúrákat, életmódokat.
+        </p>
+        <p class="mb-20px">
+            A harmadik láb ami támogatott mindig is az alkotás volt. Bármilyen formában. Lenyűgöztek a véletlenül
+            összepacázott papírlapok, a kiömlött kávé foltja a szalvétán, az alkotásnak mindenféle tudatos vagy kevésbé
+            tudatos módja.
+        </p>
+        <p class="mb-20px">
+            Építőművésznek tanultam, de mindig sokkal izgalmasabbnak találtam, hogy hogyan képesek különböző művészeti
+            területek összekapcsolódni, és együtt valami újat, értékeset teremteni, így az utóbbi éveket nem is főleg
+            építészként, hanem az építészet, tervezőgrafika, képzőművészet, tanítás határterületein való alkotással,
+            tanítással töltöttem.
+        </p>
+        <p class="mb-20px">
+            Építőművésznek tanultam, de mindig sokkal izgalmasabbnak találtam, hogy hogyan képesek különböző művészeti
+            területek összekapcsolódni, és együtt valami újat, értékeset teremteni, így az utóbbi éveket nem is főleg
+            építészként, hanem az építészet, tervezőgrafika, képzőművészet, tanítás határterületein való alkotással,
+            tanítással töltöttem.
+        </p>
+        <p class="mb-20px">
+            2015 óta az életem az indiai Ladakh-hoz is kötődik, ahol a nyaraimat töltöm; valami mély, megfoghatatlan
+            módon kapcsolódom ehhez a világhoz – a Himalája hegyeihez, az atmoszférához, az érzéshez, hogy hazaérkeztem.
+        </p>
+        <p class="mb-20px">
+            A jóga is hasonlóan észrevétlenül szivárgott be az életembe, bár érdekes módon nem Indiában találkoztam vele
+            először, hanem amikor az élsport után új mozgásformát kerestem. Eleinte izgulva jöttem le a Bandha
+            lépcsőjén, a reggeli gyakorlások után pedig csak üldögéltem, teáztam az előtérben, firkálgatva a mindig
+            magamnál tartott jegyzetfüzetbe. És ahogyan az alkotás olyan természetes volt mint levegőt venni, a jógán
+            keresztüli lélegzet is a mindennapok részévé vált, ahol újra úgy éreztem hogy otthonra leltem.
+        </p>
+        <p class="mb-20px">
+            Az astanga jóga számomra a felfedezés és a fejlődés útja, ahol a légzésre hangolt mozdulat egyszerre kihívás
+            és megnyugvás, egy biztonságos tér, ahol nap mint nap megismerhetem a határaimat, új perspektívába
+            helyezhetem őket és ahol a három pillér az életemben (mozgás, alkotás, utazás) találkozik és a legbiztosabb
+            támaszt nyújtja.
+        </p>
+        <p class="mb-20px">
+            Hálás vagyok, hogy egy ilyen hiteles és támogató közegben lehetek és fejlődhetek – és szívből ajánlom ezt az
+            utat mindenkinek, aki keresi önmagát.
+        </p>
+    </div>
+</BaseLayout>

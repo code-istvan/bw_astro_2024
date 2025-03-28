@@ -14,7 +14,11 @@ const metadata = {
 
 // Összes publikált tanár lekérése és rendezése teacherOrder szerint
 const teachers = await getCollection('teachers', ({ data }) => {
-    return data.published === true;
+    return data.published === true && data.offTheMat !== true;
+}).then((teachers) => teachers.sort((a, b) => a.data.teacherOrder - b.data.teacherOrder));
+
+const offTheMatYogies = await getCollection('teachers', ({ data }) => {
+    return data.published === true && data.offTheMat === true;
 }).then((teachers) => teachers.sort((a, b) => a.data.teacherOrder - b.data.teacherOrder));
 
 // Képek importálása
@@ -28,6 +32,25 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads
         <div class="row mb-40px gap-1">
             {
                 teachers.map((teacher) => (
+                    <div class="col-12-xs col-6-lg">
+                        <TeacherCard
+                            teacherName={teacher.data.huTeacherFullName}
+                            teacherTitle={teacher.data.huTeacherTitle}
+                            teacherStyle={teacher.data.huTeacherStyle}
+                            teacherLink={teacher.data.teacherLink}
+                            teacherImage={teacher.data.teacherImage}
+                            teacherImageAlt={teacher.data.huTeacherFullName}
+                            images={images}
+                            lang="hu"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+        <h3 class="mt-40px mb-20px">Off the mat Jógik</h3>
+        <div class="row mb-40px gap-1">
+            {
+                offTheMatYogies.map((teacher) => (
                     <div class="col-12-xs col-6-lg">
                         <TeacherCard
                             teacherName={teacher.data.huTeacherFullName}
