@@ -1,7 +1,7 @@
 {
   "teacher": "Panni",
   "enOffTheMatTitle": "Art director",
-  "huTeacherTitle": "művészeti vezető",
+  "huTeacherTitle": "shala művészeti vezető",
   "huOffTheMatTitle": "Art director",
   "published": true,
   "huTeacherFullName": "Fehér Panni",
@@ -10,5 +10,5 @@
   "teacherLink": "/panni/",
   "teacherId": "panniJi",
   "offTheMat": true,
-  "enTeacherTitle": "art director"
+  "enTeacherTitle": "shala art director"
 }
