@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/noemi_mobil.jpg';
+import desktopImage from '../images/noemi_desktop.jpg';
+
+const metadata = {
+    title: 'Zsuzsi',
+    description: 'Itt olvashatsz Kővári Zsuzsáról, a Bandha Works szenior tartalom menedzseréről.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px">
+            2016-ban csatlakoztam a Bandha Works Jógaiskola Mysore-programjához és gyakorlásomat azóta is töretlenül
+            fenntartom. Korábban versenyszerűen sportoltam (úsztam, majd kosárlabdáztam), az edzések során belémivódott
+            erények: a szorgalom, kitartás, a jógamatracon is velem vannak.
+        </p>
+        <p class="mb-20px">
+            2025 februárjában Rózsával 1 hónapot töltöttünk a SharathJi tradícióját követő bangkoki Ashtanga Yoga
+            Center-ben (AYBKK-ban). Ez a különleges időszak tovább mélyítette a kitartó, rendszeres gyakorlásba vetett
+            hitemet, még inkább megtapasztalva annak jótékony hatásait! Jövőbeli vágyam, hogy egyszer én is taníthassak,
+            és lelkesedésemmel, tapasztalataimmal segíthessek az új gyakorlóknak.
+        </p>
+        <p class="mb-20px">
+            Szívesen foglalkozom astangával kapcsolatos interjúkkal, cikkekkel. A Bandha Works Blogjának keretében az
+            elmúlt időszakban főként Iain Grysak izgalmas és érdekes írásaival találkozhattatok, de szeretnénk bővíteni
+            a repertoárt további elismert astanga tanárok írásaival, történeteivel, illetve napjainkban hasznos témákkal
+            is (mint például a táplálkozás, vegán életmód).
+        </p>
+        <p class="mb-20px">
+            Terveink között szerepel SharathJi utolsó - The Active Series című - könyvének a magyar nyelvre fordítása,
+            ezáltal is továbbvíve tanítását, hogy az aktivitás, az életerő, a kiegyensúlyozottság megőrzése és
+            fenntartása érdekében (kortól és képességektől függetlenül) minél több embert jógagyakorlásra ösztönözzünk
+        </p>
+    </div>
+</BaseLayout>
