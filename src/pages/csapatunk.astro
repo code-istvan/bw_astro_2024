@@ -24,7 +24,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
     <div class="container">
-        <div class="row mt-40px mb-40px gap-1">
+        <h3 class="mt-40px mb-20px">Oktatók</h3>
+        <div class="row mb-40px gap-1">
             {
                 teachers.map((teacher) => (
                     <div class="col-12-xs col-6-lg">

@@ -72,7 +72,7 @@ const teachersCollection = defineCollection({
   type: 'data',
   schema: z.object({
     published: z.boolean(),
-    teacherOrder: z.number(),
+    teacherOrder: z.number().optional(),
     teacherId: z.string(),
     teacher: z.string(),
     teacherLink: z.string().optional(),
