@@ -1,8 +1,28 @@
 ---
 import MP3Player from '../MP3Player';
 import './_accordion.scss';
-
 const { mantras, lang } = Astro.props;
+
+// Nyelvi beállítások
+const translations = {
+    EN: {
+        chantedBy: 'Chanted by:',
+        sanskrit: 'Sanskrit',
+        translation: 'Translation',
+        comment: 'Comment',
+        noMantras: 'No mantras loaded',
+    },
+    HU: {
+        chantedBy: 'Előadja: ',
+        sanskrit: 'Szanszkrit',
+        translation: 'Fordítás',
+        comment: 'Megjegyzés',
+        noMantras: 'Nincsenek mantrák betöltve',
+    },
+};
+
+// Aktuális nyelv kiválasztása, alapértelmezett az angol
+const t = translations[lang] || translations.EN;
 ---
 
 {
@@ -33,23 +53,25 @@ const { mantras, lang } = Astro.props;
                     {mantra.link && (
                         <div class="mantra-audio">
                             <MP3Player url={mantra.link} language={lang} client:only="react" />
-                            {mantra.chantby && <p class="mantra-chantby">Chanted by: {mantra.chantby}</p>}
+                            {mantra.chantby && (
+                                <p class="mantra-chantby">
+                                    {t.chantedBy} {mantra.chantby}
+                                </p>
+                            )}
                         </div>
                     )}
-                    <div class="accordion__text">
+                    <div class="accordion__text mt-20px mb-20px">
                         <div class="mantra-section">
-                            <h4>Sanskrit</h4>
+                            <h4 class="clr-brand-orange mb-20px">{t.sanskrit}</h4>
                             <div class="mantra-sanskrit" set:html={mantra.sanskrit} />
                         </div>
-
-                        <div class="mantra-section">
-                            <h4>Translation</h4>
+                        <div class="mantra-section mt-40px">
+                            <h4 class="clr-brand-orange mb-20px">{t.translation}</h4>
                             <div class="mantra-translation" set:html={mantra.translation} />
                         </div>
-
                         {mantra.comment && (
                             <div class="mantra-section">
-                                <h4>Comment</h4>
+                                <h4>{t.comment}</h4>
                                 <p>{mantra.comment}</p>
                             </div>
                         )}
@@ -58,30 +80,9 @@ const { mantras, lang } = Astro.props;
             </div>
         ))
     ) : (
-        <p>Nincsenek mantrák betöltve</p>
+        <p>{t.noMantras}</p>
     )
 }
-
-<style>
-    .mantra-section {
-        margin-bottom: 15px;
-    }
-
-    .mantra-section h4 {
-        margin-bottom: 5px;
-        font-weight: var(--font-weight-semi-bold);
-    }
-
-    .mantra-audio {
-        margin: 15px 0;
-    }
-
-    .mantra-chantby {
-        font-style: italic;
-        margin-top: 5px;
-        font-size: 0.9em;
-    }
-</style>
 
 <script>
     import { initAccordion } from '../js/accordionLogic.js';
