@@ -19,6 +19,7 @@
 
 .player-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: #333;
   padding: 8px 12px;
@@ -161,29 +162,36 @@
   }
 }
 
-// Reszponzív dizájn
-@media (max-width: 480px) {
-  .player-container {
-    flex-wrap: wrap;
+// Reszponzív dizájn 768px képernyőszélességig
+@media (max-width: 768px) {
+  /* Elrejtjük a hangerő gombot és a csúszkát mobilon */
+  .volume-button,
+  .volume-slider-container {
+    display: none;
   }
 
+  /* A progress-container teljes szélességet kaphat */
   .progress-container {
-    order: 1;
-    width: 100%;
-    margin: 10px 0;
+    flex: 1;
+  }
+
+  /* Az időkijelző margin igazítása */
+  .time-display {
+    margin-left: auto;
+  }
+}
+
+// Még kisebb képernyőkre további finomítások
+@media (max-width: 480px) {
+  .player-container {
+    padding: 8px;
   }
 
   .play-button {
-    order: 0;
+    margin-right: 5px;
   }
 
-  .time-display {
-    order: 2;
-    margin-right: auto;
-  }
-
-  .volume-button,
-  .volume-slider-container {
-    order: 3;
+  .progress-container {
+    margin: 0 5px;
   }
 }
