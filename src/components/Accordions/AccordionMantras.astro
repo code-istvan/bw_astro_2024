@@ -33,6 +33,7 @@ const { mantras, lang } = Astro.props;
                     {mantra.link && (
                         <div class="mantra-audio">
                             <MP3Player url={mantra.link} language={lang} client:only="react" />
+                            {mantra.chantby && <p class="mantra-chantby">Chanted by: {mantra.chantby}</p>}
                         </div>
                     )}
                     <div class="accordion__text">
@@ -52,8 +53,6 @@ const { mantras, lang } = Astro.props;
                                 <p>{mantra.comment}</p>
                             </div>
                         )}
-
-                        {mantra.chantby && <p class="mantra-chantby">Chanted by: {mantra.chantby}</p>}
                     </div>
                 </div>
             </div>
