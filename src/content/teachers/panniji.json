@@ -1,0 +1,12 @@
+{
+  "teacher": "Panni",
+  "enOffTheMatTitle": "Art director",
+  "huOffTheMatTitle": "Art director",
+  "published": true,
+  "huTeacherFullName": "Fehér Anna",
+  "enTeacherFullName": "Anna Fehér ",
+  "teacherImage": "src/images/uploads/teachers/panni_profil1.png",
+  "teacherLink": "/panni/",
+  "teacherId": "panniJi",
+  "offTheMat": true
+}
