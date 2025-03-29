@@ -89,6 +89,10 @@
   transform: rotate(45deg);
 }
 
+.rotate__90deg {
+  transform: rotate(90deg);
+}
+
 // Schedule accordion specifikus stílusok
 .schedule-accordion {
   &__button {
