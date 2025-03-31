@@ -6,7 +6,9 @@
   "published": true,
   "huTeacherFullName": "Kővári Zsuzsa",
   "enTeacherFullName": "Zsuzsa Kővári",
+  "enTeacherStyle": "content manager",
   "teacherImage": "src/images/uploads/teachers/zs.jpeg",
+  "huTeacherStyle": "tartalommenedzser",
   "teacherLink": "/kovari-zsuzsa/",
   "teacherId": "zsuzsiJi",
   "offTheMat": true
