@@ -1,20 +1,22 @@
 ---
 import Layout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/blog_mobil.jpg';
+import desktopImage from '../../images/blog_desktop.jpg';
 
 const allPosts = await getCollection('blog');
 
 const pageData = allPosts.filter((post) => post.data.language === 'English');
+
+const metadata = {
+    title: 'BLOG',
+    description: 'On this page you can find the English language blog posts of Bandha Works Ashtanga Yoga School.',
+};
 ---
 
-<Layout title="Blog">
-    <div class="container">
-        <div class="row">
-            <h1>Blog</h1>
-            <h3>edwedfew</h3>
-            <p>
-                {pageData.map((post) => post.data.title)}
-            </p>
-        </div>
-    </div>
-</Layout>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+    <div class="container blog__container mt-40px mb-40px">{pageData.map((post) => post.data.title)}</div>
+</BaseLayout>
