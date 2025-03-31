@@ -1,12 +1,12 @@
 {
-  "eventimage": "src/images/uploads/ross_mobil.jpeg",
+  "eventimage": "../../images/uploads/astanga-kezdo-tanfolyam-mobil.jpg",
   "teacher": "kisannaJi",
   "featured": true,
   "published": true,
   "date": "2025-04-08T14:45:00.000Z",
   "eventType": "Workshop",
   "eventlink": "/astanga-kezdo-tanfolyam/",
-  "eventid": "zzzzz",
+  "eventid": "aktApril",
   "titleEnglish": "Ashtanga beginners course",
   "title": "Astanga kezdő tanfolyam",
   "eventlinkEnglish": "/en/astanga-kezdo-tanfolyam/"
