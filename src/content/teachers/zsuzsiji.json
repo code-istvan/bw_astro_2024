@@ -1,0 +1,13 @@
+{
+  "teacher": "Zsuzsi",
+  "enOffTheMatTitle": "content manager",
+  "huOffTheMatTitle": "tartalommenedzser",
+  "teacherOrder": 2,
+  "published": true,
+  "huTeacherFullName": "Kővári Zsuzsa",
+  "enTeacherFullName": "Zsuzsa Kővári",
+  "teacherImage": "src/images/uploads/teachers/zs.jpeg",
+  "teacherLink": "/kovari-zsuzsi/",
+  "teacherId": "zsuzsiJi",
+  "offTheMat": true
+}
