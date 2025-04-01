@@ -9,10 +9,11 @@ interface EventCardProps {
     date: Date;
     eventImage?: string;
     eventLink: string;
+    eventApplicationLink?: string;
     images: Record<string, () => ImageMetadata>;
 }
 
-const { title, date, eventImage, eventLink, images } = Astro.props;
+const { title, date, eventImage, eventLink, eventApplicationLink, images } = Astro.props;
 const formattedDate = formatDate(date);
 ---
 
@@ -38,7 +39,7 @@ const formattedDate = formatDate(date);
     </div>
     <div class="event-card__actions">
         <a
-            href={eventLink}
+            href={eventApplicationLink}
             class="btn btn--full-width-mobile btn--primary--outline mt-20px"
             aria-label="Tudj meg többet rólunk gomb"
         >
