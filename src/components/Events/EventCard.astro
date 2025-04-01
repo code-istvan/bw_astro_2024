@@ -17,33 +17,35 @@ const { title, date, eventImage, eventLink, eventApplicationLink, images } = Ast
 const formattedDate = formatDate(date);
 ---
 
-<div class="event-card">
+<div class="event-card display-flex gap-1">
     <div class="event-card__image">
         {eventImage && <Image src={images[`/${eventImage}`]()} alt={title} />}
     </div>
     <div class="event-card__details">
-        <div class="event-card__section--hidden-desktop">
+        <div class="event-card__content">
             <p class="clr-shades-gray">{formattedDate}</p>
             <h2 class="text-uppercase">{title}</h2>
-            <a href={eventLink} class="clr-brand-orange mt-40px" aria-label="Tudj meg többet rólunk gomb">
+            <a href={eventLink} class="clr-brand-orange" aria-label="A tanfolyam részletei gomb">
                 <p><strong>Részletek</strong></p>
             </a>
         </div>
+        <div class="event-card__actions hidden-mobile">
+            <a
+                href={eventApplicationLink}
+                class="btn btn--primary--outline mt-20px"
+                aria-label="Tudj meg többet rólunk gomb"
+            >
+                Jelentkezés
+            </a>
+        </div>
     </div>
-    <div class="event-card__description event-card__section--hidden-mobile">
-        <p class="clr-shades-gray">{formattedDate}</p>
-        <h2 class="text-uppercase">{title}</h2>
-        <a href={eventLink} class="clr-brand-orange mt-40px" aria-label="Tudj meg többet rólunk gomb">
-            <p><strong>Részletek</strong></p>
-        </a>
-    </div>
-    <div class="event-card__actions">
-        <a
-            href={eventApplicationLink}
-            class="btn btn--full-width-mobile btn--primary--outline mt-20px"
-            aria-label="Tudj meg többet rólunk gomb"
-        >
-            Jelentkezés
-        </a>
-    </div>
+</div>
+<div class="event-card__actions hidden-desktop btn--full-width-mobile">
+    <a
+        href={eventApplicationLink}
+        class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+        aria-label="Tudj meg többet rólunk gomb"
+    >
+        Jelentkezés
+    </a>
 </div>

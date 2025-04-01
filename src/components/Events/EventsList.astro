@@ -36,9 +36,7 @@ const upcomingEvents = events
                     eventApplicationLink={event.data.eventApplicationLink}
                     images={images}
                 />
-                {index < upcomingEvents.length - 1 && (
-                    <div class="separator-horizontal event-card__section--hidden-mobile mt-40px" />
-                )}
+                {index < upcomingEvents.length - 1 && <div class="separator-horizontal hidden-mobile mt-40px" />}
             </div>
         ))
     }
