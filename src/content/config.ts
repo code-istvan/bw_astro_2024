@@ -112,6 +112,7 @@ const eventsCollection = defineCollection({
     shortdescriptionEnglish: z.string().optional(),
     eventlink: z.string().optional(),
     eventlinkEnglish: z.string().optional(),
+    eventApplicationLink: z.string().optional(),
     teacher: z.string(),
   }),
 });

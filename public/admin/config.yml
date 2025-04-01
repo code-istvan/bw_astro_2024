@@ -314,6 +314,7 @@ collections:
       - { label: Shortdescription in English, name: shortdescriptionEnglish, widget: text, required: false }
       - { label: Eventlink, name: eventlink, widget: string, required: false }
       - { label: Eventlink in English, name: eventlinkEnglish, widget: string, required: false }
+      - { label: EventApplicationLink, name: eventApplicationLink, widget: string, required: false }
       - {
           label: Teacher,
           name: teacher,
