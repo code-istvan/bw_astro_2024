@@ -26,7 +26,7 @@ const upcomingEvents = events
 
 <div class="mt-40px">
     {
-        upcomingEvents.map((event) => (
+        upcomingEvents.map((event, index) => (
             <div class="row mb-40px">
                 <EventCard
                     title={event.data.title}
@@ -35,7 +35,9 @@ const upcomingEvents = events
                     eventLink={event.data.eventlink}
                     images={images}
                 />
-                <div class="separator-horizontal event-card__section--hidden-mobile mt-40px" />
+                {index < upcomingEvents.length - 1 && (
+                    <div class="separator-horizontal event-card__section--hidden-mobile mt-40px" />
+                )}
             </div>
         ))
     }
