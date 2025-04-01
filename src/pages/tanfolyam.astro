@@ -9,8 +9,14 @@ const pageTitle = 'Tanfolyamok';
 ---
 
 <BaseLayout title={pageTitle} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={pageTitle}
+        pageName={pageTitle}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
         <EventsList eventType={['Tanfolyam']} maxEvents={3} />
     </div>
 </BaseLayout>
