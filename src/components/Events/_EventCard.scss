@@ -1,16 +1,26 @@
 @import '/src/sass/base/_mixins';
 
 .event-card__image {
-  grid-area: A;
+  flex-shrink: 0;
+
   @include xs {
-    width: 200px;
-    height: auto;
+    width: 120px;
+    height: 120px;
   }
   @include md {
     width: 220px;
+    height: 220px;
   }
   @include xl {
     width: 250px;
+    height: 250px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* vagy object-fit: contain; - attól függően, hogy mit szeretne elérni */
+    display: block;
   }
 }
 
@@ -32,7 +42,7 @@
 }
 
 .event-card__content {
-  h2 {
+  h3 {
     max-width: 250px;
   }
 }

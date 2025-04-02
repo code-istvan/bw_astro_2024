@@ -34,7 +34,7 @@ const metadata = {
             </div>
             <div class="hazirend__rules row">
                 <div class="col">
-                    <ol type="1" class="body">
+                    <ol type="1" class="body hazirend-list">
                         {rules.map((rule) => <li>{rule}</li>)}
                     </ol>
                 </div>
@@ -48,4 +48,16 @@ const metadata = {
     </div>
 </BaseLayout>
 
-<style></style>
+<style>
+    .hazirend-list {
+        padding-left: 40px;
+
+        @media screen and (max-width: 768px) {
+            padding-left: 30px;
+
+            li:before {
+                left: -30px;
+            }
+        }
+    }
+</style>

@@ -5,9 +5,11 @@ import mobileImage from '../images/tanfolyam_mobil.jpg';
 import desktopImage from '../images/tanfolyam_desktop.jpg';
 import EventsList from '../components/Events/EventsList.astro';
 
+const pageTitle = 'Események';
+
 const metadata = {
-    title: 'TANFOLYAMOK',
-    description: 'Itt olvashatsz a Bandha Works által szervezett tanfolyamokról.',
+    title: 'Események',
+    description: 'Itt olvashatsz a Bandha Works által szervezett eseményekről.',
 };
 ---
 
@@ -20,6 +22,8 @@ const metadata = {
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
+        <h3 class="clr-brand-orange font-family-primary mt-40px">Astanga jóga tanfolyamaink</h3>
         <EventsList eventType={['Tanfolyam']} maxEvents={3} />
+        <!-- <h3 class="clr-brand-orange font-family-primary mt-40px mb-40px">További eseményeink</h3> -->
     </div>
 </BaseLayout>
