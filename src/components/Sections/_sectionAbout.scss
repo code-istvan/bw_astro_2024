@@ -1,18 +1,21 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_fonts';
 
 .section-about {
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     p {
       max-width: 600px;
     }
-
     svg {
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
       height: auto;
+
+      @media (max-width: 320px) {
+        max-width: 260px; // Kisebb SVG kis képernyőkön
+      }
     }
   }
 
@@ -21,12 +24,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 40px;
+    // margin-top: 40px már kikommentezve
   }
 
   &__tradition {
     margin-top: 20px;
-
     &--gray-border {
       border: 1px solid gray;
     }
@@ -36,7 +38,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    @include xs {
+      margin: 20px;
+    }
+    @include sm {
+      margin: 30px;
+    }
+    @include md {
+      margin: 40px;
+    }
 
     h3 {
       font-family: $font-family-primary;
@@ -46,5 +56,77 @@
       width: fit-content;
       text-align: center;
     }
+
+    // Új szabály a SharatJiHandWriting SVG-re
+    svg {
+      max-width: 150px;
+      width: 100%;
+
+      @media (max-width: 320px) {
+        max-width: 120px; // Még kisebb kis képernyőkön
+      }
+    }
   }
 }
+
+// Az általános max-width-150 osztály javítása
+.max-width-150 {
+  max-width: 150px !important;
+  width: 100% !important;
+
+  @media (max-width: 320px) {
+    max-width: 120px !important;
+  }
+}
+
+// @import '/src/sass/base/_fonts';
+
+// .section-about {
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     p {
+//       max-width: 600px;
+//     }
+
+//     svg {
+//       width: 100%;
+//       max-width: 300px;
+//       height: auto;
+//     }
+//   }
+
+//   &__text {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+//     // margin-top: 40px;
+//   }
+
+//   &__tradition {
+//     margin-top: 20px;
+
+//     &--gray-border {
+//       border: 1px solid gray;
+//     }
+//   }
+
+//   &__wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     // margin: 40px;
+
+//     h3 {
+//       font-family: $font-family-primary;
+//     }
+
+//     p {
+//       width: fit-content;
+//       text-align: center;
+//     }
+//   }
+// }

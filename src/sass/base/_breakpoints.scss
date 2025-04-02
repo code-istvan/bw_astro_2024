@@ -1,12 +1,12 @@
-@use "sass:math";
+@use 'sass:math';
 
 $grid-breakpoints: (
-  "xs": 0,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px,
-  "xxl": 1400px,
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
 );
 
 $container-max-widths: (
@@ -18,38 +18,44 @@ $container-max-widths: (
   xxl: 1272px,
 );
 
+@mixin tiny-devices {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
 @mixin xs {
-  @media (min-width: map-get($grid-breakpoints, "xs")) {
+  @media (min-width: map-get($grid-breakpoints, 'xs')) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
     @content;
   }
 }
 
 @mixin md {
-  @media (min-width: map-get($grid-breakpoints, "md")) {
+  @media (min-width: map-get($grid-breakpoints, 'md')) {
     @content;
   }
 }
 
 @mixin lg {
-  @media (min-width: map-get($grid-breakpoints, "lg")) {
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
     @content;
   }
 }
 
 @mixin xl {
-  @media (min-width: map-get($grid-breakpoints, "xl")) {
+  @media (min-width: map-get($grid-breakpoints, 'xl')) {
     @content;
   }
 }
 
 @mixin xxl {
-  @media (min-width: map-get($grid-breakpoints, "xxl")) {
+  @media (min-width: map-get($grid-breakpoints, 'xxl')) {
     @content;
   }
 }
