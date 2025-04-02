@@ -6,14 +6,19 @@ import desktopImage from '../images/tanfolyam_desktop.jpg';
 import EventsList from '../components/Events/EventsList.astro';
 
 const pageTitle = 'Tanfolyamok';
+
+const metadata = {
+    title: 'Tanfolyamok',
+    description: 'Itt olvashatsz a Bandha Works által szervezett tanfolyamokról.',
+};
 ---
 
-<BaseLayout title={pageTitle} image={desktopImage}>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">

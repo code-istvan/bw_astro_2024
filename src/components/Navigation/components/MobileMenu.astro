@@ -26,6 +26,78 @@ import './_mobilMenu.scss';
         <MobileMenuFooter />
     </div>
 </div>
+<script>
+    import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+    import { initMenu, initMenuComponents } from './menuLogic.js';
+
+    // Javított nyelvi detektálás
+    const currentPath = window.location.pathname;
+    const language = currentPath.startsWith('/en/') || currentPath === '/en' ? 'en' : 'hu';
+
+    const t = useTranslations(language);
+    const translatePath = useTranslatedPath(language);
+
+    // Komponensek inicializálása
+    initMenuComponents(language, t, [
+        {
+            toggleId: 'toggle-jogaorak',
+            contentId: 'jogaorak',
+            labelId: 'jogaoraLabel',
+            labelTextKey: 'jogaorak',
+        },
+        {
+            toggleId: 'toggle-tudnivalok',
+            contentId: 'tudnivalok',
+            labelId: 'tudnivalokLabel',
+            labelTextKey: 'tudnivalok',
+        },
+    ]);
+    const jogorakList = document.getElementById('jogaorak');
+    const tudnivalokList = document.getElementById('tudnivalok');
+    const fomenuItems = document.getElementById('fomenuItems');
+
+    // Menüelemek dinamikus hozzáadása
+    initMenu(language, translatePath, t, jogorakList, tudnivalokList, fomenuItems);
+
+    // Plus sign forgatása
+    document.querySelectorAll('.mobile-menu__dropdown').forEach((dropdown) => {
+        dropdown.addEventListener('click', () => {
+            const svg = dropdown.querySelector('svg');
+            if (svg) {
+                svg.classList.toggle('rotate');
+            }
+        });
+    });
+</script>
+
+<!-- ---
+import MobileMenuHeader from './MobileMenuHeader.astro';
+import MobileMenuFooter from './MobileMenuFooter.astro';
+import plus_sign from '../../../images/svg/plus_sign.svg?raw';
+import './_mobilMenu.scss';
+---
+
+<div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu__wrapper">
+        <div>
+            <MobileMenuHeader />
+            <div class="mobile-menu__dropdown mt-20px" id="toggle-jogaorak">
+                <h3 id="jogaoraLabel" class="mobile-menu__label">JÓGAÓRÁK</h3>
+                <Fragment set:html={plus_sign} />
+            </div>
+            <div id="jogaorak" class="dropdown-menu__content list--no-style"></div>
+        </div>
+        <div>
+            <div class="mobile-menu__dropdown" id="toggle-tudnivalok">
+                <h3 id="tudnivalokLabel" class="mobile-menu__label">TUDNIVALÓK</h3>
+                <Fragment set:html={plus_sign} />
+            </div>
+            <div id="tudnivalok" class="dropdown-menu__content list--no-style"></div>
+        </div>
+        <div id="fomenuItems" class="mobile-menu__fomenu-items list--no-style"></div>
+        <MobileMenuFooter />
+    </div>
+</div>
 
 <script>
     import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
@@ -67,4 +139,4 @@ import './_mobilMenu.scss';
             }
         });
     });
-</script>
+</script> -->
