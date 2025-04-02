@@ -1,4 +1,5 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_colors';
+@import '/src/sass/base/_breakpoints';
 
 header {
   position: fixed;
@@ -18,11 +19,6 @@ header.scrolling {
     height: 36px;
     width: 36px;
   }
-  // .brand-logo-text {
-  //   height: 38px;
-  //   margin-left: 12px;
-  // }
-  // transition: background-color 0.5s;
 }
 
 nav {
@@ -32,7 +28,13 @@ nav {
   justify-content: space-between;
   z-index: 9999;
   div:nth-child(2) {
-    margin-right: 10px;
+    @include xs {
+      margin-right: 8px;
+    }
+    @include md {
+      margin-right: 10px;
+    }
+
     margin-left: 16px;
   }
 }
@@ -41,7 +43,12 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 20px;
+  @include xs {
+    margin-left: 14px;
+  }
+  @include md {
+    margin-left: 20px;
+  }
   cursor: pointer;
 
   .brand-logo {
