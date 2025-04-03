@@ -32,7 +32,6 @@
             const startViewingPoint = 0;
             const totalScrollDistance = bottom - startViewingPoint;
             const currentProgress = (currentScroll - startViewingPoint) / totalScrollDistance;
-            console.log(currentProgress);
             progressBar.style.transform = `scaleX(${currentProgress})`;
         }
         updateScrollProgress();
