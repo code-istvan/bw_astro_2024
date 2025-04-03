@@ -1,10 +1,25 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_fonts';
+@import '/src/sass/base/_breakpoints';
 
 .hero-container-text--wrapper {
   position: absolute;
   top: 80px;
   left: 0;
   right: 0;
+
+  @media (min-width: 280px) {
+    top: 60px;
+  }
+  @media (min-width: 300px) {
+    top: 65px;
+  }
+  @media (min-width: 320px) {
+    top: 70px;
+  }
+
+  @media (min-width: 390px) {
+    top: 90px;
+  }
 }
 
 .hero-container {
@@ -16,9 +31,51 @@
   font-size: 2rem;
   font-weight: 400;
 
-  @include xs {
-    font-size: 2.2rem;
+  @media (min-width: 280px) {
+    font-size: 2.3rem;
   }
+  @media (min-width: 300px) {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 320px) {
+    font-size: 2.8rem;
+  }
+  @media (min-width: 360px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 400px) {
+    font-size: 3.4rem;
+  }
+  @media (min-width: 450px) {
+    font-size: 3.8rem;
+  }
+  @media (min-width: 500px) {
+    font-size: 4.2rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 5.2rem;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 2.6rem;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 4rem;
+  }
+  @media (min-width: 1100px) {
+    font-size: 5rem;
+  }
+
   @include md {
     font-size: 4rem;
   }
@@ -27,7 +84,16 @@
   }
 }
 .special-p {
-  font-size: 1.2rem;
+  @media (min-width: 280px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 320px) {
+    font-size: 1.4rem;
+  }
+
+  @include md {
+    font-size: 1.6rem;
+  }
 }
 
 .hero-image-wrapper {
