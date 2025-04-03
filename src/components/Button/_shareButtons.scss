@@ -24,7 +24,7 @@
 }
 
 /* Minden gomb hover állapotában az ikon színe narancs lesz */
-.share-button:hover :global(svg) {
+.share-button:hover svg {
   fill: orange;
 }
 
