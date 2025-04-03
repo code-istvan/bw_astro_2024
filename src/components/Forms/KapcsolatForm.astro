@@ -5,6 +5,7 @@ import Checkbox from './Checkbox/Checkbox.astro';
 ---
 
 <form
+    id="kapcsolat-form"
     name="kapcsolat-form"
     action="/uzenet-elkuldve/"
     data-netlify="true"
@@ -37,7 +38,7 @@ import Checkbox from './Checkbox/Checkbox.astro';
 
     <!-- Üzenet mező -->
     <div class="row">
-        <TextArea id="comments" name="comments" placeholder="Üzenet" rows={5} required />
+        <TextArea id="comment" name="comment" placeholder="Üzenet" rows={5} required />
     </div>
 
     <!-- Checkbox mező -->
@@ -50,3 +51,14 @@ import Checkbox from './Checkbox/Checkbox.astro';
         <button type="submit" class="btn btn--full-width-mobile btn--secondary--solid">Küldés</button>
     </div>
 </form>
+
+<script>
+    import { submitContact } from './submitContact';
+
+    const form = document.getElementById('kapcsolat-form');
+    const language = 'en';
+
+    form?.addEventListener('submit', (event) => {
+        submitContact(event, language);
+    });
+</script>
