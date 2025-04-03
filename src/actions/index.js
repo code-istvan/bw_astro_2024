@@ -61,19 +61,19 @@ export const server = {
   mysoreform: defineAction({
     input: z.object({
       familyName: z.string(),
-      surName: z.string(),
+      givenName: z.string(),
       email: z.string().email(),
       experience: z.string(),
       experienceLevel: z.string(),
       language: z.string().default('hu').optional(),
     }),
     accept: 'json',
-    handler: async ({ familyName, surName, email, experience, experienceLevel, language = 'hu' }) => {
+    handler: async ({ familyName, givenName, email, experience, experienceLevel, language = 'hu' }) => {
       try {
         const mysoreEmailTemplate = mysoreEmailTemplates[language] || mysoreEmailTemplates.hu;
 
         // Kombinált név a teljes névhez
-        const fullName = `${familyName} ${surName}`;
+        const fullName = `${familyName} ${givenName}`;
 
         const { data, error } = await resend.emails.send({
           from: 'Bandha Works Shala <shala@bandha.works>',

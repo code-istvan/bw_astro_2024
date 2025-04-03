@@ -13,6 +13,7 @@ const experienceLevel = [
 ---
 
 <form
+    id="mysore-hu-form"
     name="mysore-hu-form"
     action="/jelentkezes-elkuldve/"
     data-netlify="true"
@@ -64,7 +65,7 @@ const experienceLevel = [
         <MysoreCustomSelect
             client:load
             options={experienceLevel}
-            name="selected_experience_level"
+            name="experienceLevel"
             placeholder="Válassz tapasztalati szintet"
         />
     </div>
@@ -90,6 +91,8 @@ const experienceLevel = [
 </form>
 
 <script>
+    import { submitMysore } from './submitMysore';
+
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('form[name="mysore-hu-form"]') as HTMLFormElement;
         const emailInput = document.getElementById('email') as HTMLInputElement;
@@ -129,5 +132,12 @@ const experienceLevel = [
                 setErrorState(false);
             }
         });
+    });
+
+    const form = document.getElementById('mysore-hu-form');
+    const language = 'hu';
+
+    form?.addEventListener('submit', (event) => {
+        submitMysore(event, language);
     });
 </script>
