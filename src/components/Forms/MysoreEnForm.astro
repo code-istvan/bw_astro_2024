@@ -91,6 +91,8 @@ const experienceLevel = [
 </form>
 
 <script>
+    import { submitMysore } from './submitMysore';
+
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('form[name="mysore-en-form"]') as HTMLFormElement;
         const emailInput = document.getElementById('email') as HTMLInputElement;
@@ -130,5 +132,11 @@ const experienceLevel = [
                 setErrorState(false);
             }
         });
+    });
+    const form = document.getElementById('mysore-en-form');
+    const language = 'en';
+
+    form?.addEventListener('submit', (event) => {
+        submitMysore(event, language);
     });
 </script>
