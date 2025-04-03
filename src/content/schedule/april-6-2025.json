@@ -1,10 +1,13 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": false,
-  "ekadashi": false,
-  "date": "April 6, 2025",
-  "class": "mysorePractice",
   "teacher": "rossJi",
-  "classTime": "6:30 - 9:00"
+  "classTime": "6:30 - 9:00",
+  "classTime2": "9:00 - 11:00",
+  "published": true,
+  "date": "April 6, 2025",
+  "teacher2": "rossJi",
+  "fullmoon": false,
+  "class": "mysorePractice",
+  "class2": "veganBrunch",
+  "ekadashi": false
 }
