@@ -15,7 +15,7 @@ export const submitMysore = async (event: Event, language: 'hu' | 'en') => {
     return;
   }
 
-  const successPath = language === 'en' ? '/en/feliratkozas-sikeres/' : '/feliratkozas-sikeres/';
+  const successPath = language === 'en' ? '/en/jelentkezes-elkuldve/' : '/jelentkezes-elkuldve/';
   const errorPath = language === 'en' ? '/en/feliratkozas-sikertelen/' : '/feliratkozas-sikertelen/';
 
   try {
