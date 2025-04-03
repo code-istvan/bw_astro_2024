@@ -53,7 +53,7 @@ const upcomingEvents = events
         <Carousel>
             {
                 upcomingEvents.map((event) => (
-                    <div class="section-events__slide embla__slide mt-20px">
+                    <div class="section-events__slide embla__slide">
                         <EventCardCarousel
                             title={lang === 'en' ? event.data.titleEnglish || event.data.title : event.data.title}
                             date={event.data.date}

@@ -96,6 +96,19 @@
   }
 }
 
+.special-p-en {
+  @media (min-width: 280px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 320px) {
+    font-size: 1.4rem;
+  }
+
+  @include md {
+    font-size: 1.6rem;
+  }
+}
+
 .hero-image-wrapper {
   width: 100vw;
   position: relative;

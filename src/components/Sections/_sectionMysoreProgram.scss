@@ -52,11 +52,10 @@
   &__text {
     max-width: 732px;
     margin-top: 20px;
-    margin-bottom: 20px;
 
     @include xs {
       padding-top: 20px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
 
     @include md {
