@@ -21,13 +21,11 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) =>
-        page !== 'https://stargazers.club/secret-vip-lounge-1/' &&
-        page !== 'https://stargazers.club/secret-vip-lounge-2/' &&
-        page !== 'https://stargazers.club/secret-vip-lounge-3/' &&
-        page !== 'https://stargazers.club/secret-vip-lounge-4/',
+        page !== 'https://bandha.works/adatvedelmi-tajekoztato/' &&
+        page !== 'https://bandha.works/en/adatvedelmi-tajekoztato/',
     }),
   ],
-  site: 'https://voluble-crumble-cbe048.netlify.app',
+  site: 'https://bandha.works/',
   vite: {
     resolve: {
       alias: {
