@@ -1,21 +1,131 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/orarend_mobil.jpg';
 import desktopImage from '../../images/orarend_desktop.jpg';
+import Icons from '../../components/Icons/Icons.astro';
+import AccordionSchedule from '../../components/Accordions/AccordionSchedule.astro';
+import '../../sass/pages/_orarend.scss';
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const detailsText = lang === 'hu' ? 'Részletek' : 'Details';
 
-const pageTitle = t('orarend');
+const metadata = {
+    title: 'SCHEDULE',
+    description: 'On this page you will find the schedule of our yoga school. Yoga teachers, yoga styles, times.',
+};
+
+const [schedule, teachers, classes] = await Promise.all([
+    getCollection('schedule'),
+    getCollection('teachers'),
+    getCollection('classes'),
+]);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const sortedSchedule = schedule
+    .filter((item) => new Date(item.data.date) >= today)
+    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+
+const formatDate = (date) => {
+    const dateObj = new Date(date);
+    return {
+        day: dateObj.toLocaleDateString(lang, { weekday: 'long' }).toUpperCase(),
+        fullDate: dateObj.toLocaleDateString(lang, { month: 'long', day: 'numeric' }).toUpperCase(),
+    };
+};
+
+const getTeacherDetails = (teacherId) => teachers.find((t) => t.data.teacherId === teacherId)?.data;
+
+const getClassDetails = (classId) => classes.find((cls) => cls.data.classId === classId)?.data;
+
+const renderClassDetails = (item, index) => {
+    const classId = item.data[index ? `class${index}` : 'class'];
+    const teacherId = item.data[index ? `teacher${index}` : 'teacher'];
+    const classTime = item.data[index ? `classTime${index}` : 'classTime'];
+
+    if (!classId) return null;
+
+    return {
+        classDetails: getClassDetails(classId),
+        teacherDetails: teacherId ? getTeacherDetails(teacherId) : null,
+        classTime,
+    };
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will come here</h1></div>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="schedule container container--tight-desktop mt-20px">
+        <div class="hidden-desktop mb-20px">
+            <a
+                href="https://bandha.works/en/astanga-mysore-program/"
+                class="btn btn--full-width-mobile btn--primary--outline mt-20px"
+                aria-label="Astanga mysore program button"
+            >
+                About Ashtanga Mysore Program
+            </a>
+        </div>
+        <div class="schedule__list">
+            {
+                sortedSchedule.map((item, outerIndex) => (
+                    <div class="schedule__item">
+                        <div class="schedule__date container-fluid bg-shades-darkGray">
+                            <div class="container container--tight-desktop">
+                                <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
+                                    <p class="schedule__date-day clr-shades-gray display-flex align-items-center">
+                                        {formatDate(item.data.date).day}
+                                        {item.data.fullmoon && <Icons name="Fullmoon" color="orange" />}
+                                        {item.data.newmoon && <Icons name="Newmoon" color="orange" />}
+                                        {item.data.ekadashi && <Icons name="Ekadasi" color="orange" />}
+                                    </p>
+                                    <p class="schedule__date-full clr-shades-gray">
+                                        {formatDate(item.data.date).fullDate}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
+                            (details, innerIndex) =>
+                                details && (
+                                    <div class="schedule__details">
+                                        <p class="schedule__details-time">{details.classTime}</p>
+                                        <div class="schedule__details-class display-flex justify-content-space-between align-items-center">
+                                            <h3 class="schedule__details-title">{details.classDetails.classEn}</h3>
+                                            <p class="schedule__details-signup link-enhanced link-orange">
+                                                <a href={details.classDetails.classSignUpUrl}>Buy</a>
+                                            </p>
+                                        </div>
+                                        {details.teacherDetails && (
+                                            <p class="mb-10px">
+                                                <a
+                                                    class="clr-brand-orange body body--bold"
+                                                    href={details.teacherDetails.teacherLink}
+                                                >
+                                                    {details.teacherDetails.teacher}
+                                                </a>
+                                            </p>
+                                        )}
+                                        <AccordionSchedule
+                                            content={details.classDetails.classDetailEn}
+                                            lang={lang}
+                                            uniqueId={`${item.data.date}-${details.classTime ? details.classTime.replace(':', '') : 'unknown'}-${outerIndex}-${innerIndex}`}
+                                        />
+                                    </div>
+                                )
+                        )}
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
-
-<style></style>
