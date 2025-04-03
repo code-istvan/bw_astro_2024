@@ -43,7 +43,7 @@
         "type": "Holdnapok",
         "name": "2024-es holdnapok",
         "link": "https://bandha.works/downloads/pdfs/holdnapok_bandhaworks_2024.pdf",
-        "new": true
+        "new": false
       }
     ],
     "sounds": [
@@ -99,7 +99,7 @@
         "type": "Moon Days",
         "name": "Moon Days 2024",
         "link": "https://bandha.works/downloads/pdfs/holdnapok_bandhaworks_2024.pdf",
-        "new": true
+        "new": false
       }
     ],
     "sounds": [
