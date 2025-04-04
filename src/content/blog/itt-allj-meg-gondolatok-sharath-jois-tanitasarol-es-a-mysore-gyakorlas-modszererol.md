@@ -97,8 +97,8 @@ jó is volt, Sharath tudta, hogy még van mit fejlődnöm benne.
 Miután ezt az utasítást kaptam tőle, már tudtam, hogy megszakadt a szokásos rutin, hogy rövid időközönként mindig új
 ászanákat kapok és mehetek tovább. Tudtam, hogy azon a héten, illetve a következő héten nem kapok új ászanát. Valójában
 az egész harmadik hónapban, a mysore-i tartózkodásom végéig a Dvi Pádáig gyakorolhattam. Nem lepődtem meg ezen. Minden
-hétfőn, a vezetett második sorozat előtt a barátnőm, Susan azt mondta: **\*\*„Szerintem ezen a héten biztos tovább fog
-engedni Sharath.”\*\*** Én csak mosolyogtam és azt válaszoltam: **\*\*„Majd meglátjuk.”\*\*** \
+hétfőn, a vezetett második sorozat előtt a barátnőm, Susan azt mondta: **„Szerintem ezen a héten biztos tovább fog
+engedni Sharath.”** Én csak mosolyogtam és azt válaszoltam: **„Majd meglátjuk.”**
 
 Az egómnak nem volt olyan nehéz elfogadnia, hogy leállítottak a második sorozatban. Tudtam, hogy az első utam alkalmával
 nem fogok túljutni a második sorozaton, és számítottam rá, hogy Sharath felfigyel erre a két kihívást jelentő ászanára.
@@ -273,5 +273,6 @@ arra, hogy „itt álljunk meg”, minimális iránymutatást adva, és ránk b�
 mélyítsük el az ászanát. Szerény véleményem szerint ez a Mysore-stílusú astanga gyakorlásban a tanár szerepe, és ez
 jelenti a módszer helyes alkalmazását.
 
-**\*\*Az írás szerzője:\*\*** Iain Grysak **\*\*Az írás eredeti címe:\*\*** “You Stop There” Lessons from Sharath Jois
-and Reflections on the Mysore Method **\*\*Fordította és szerkesztette:\*\*** Dr. Kővári Zsuzsa
+**Az írás szerzője:** Iain Grysak **Az írás eredeti címe:** “You Stop There” Lessons from Sharath Jois and Reflections
+on the Mysore Method  
+**Fordította és szerkesztette:** Dr. Kővári Zsuzsa
