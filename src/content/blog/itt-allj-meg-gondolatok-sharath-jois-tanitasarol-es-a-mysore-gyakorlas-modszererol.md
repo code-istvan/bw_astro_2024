@@ -273,6 +273,6 @@ arra, hogy „itt álljunk meg”, minimális iránymutatást adva, és ránk b�
 mélyítsük el az ászanát. Szerény véleményem szerint ez a Mysore-stílusú astanga gyakorlásban a tanár szerepe, és ez
 jelenti a módszer helyes alkalmazását.
 
-**Az írás szerzője:** Iain Grysak **Az írás eredeti címe:** “You Stop There” Lessons from Sharath Jois and Reflections
-on the Mysore Method  
+**Az írás szerzője:** Iain Grysak  
+**Az írás eredeti címe:** “You Stop There” Lessons from Sharath Jois and Reflections on the Mysore Method  
 **Fordította és szerkesztette:** Dr. Kővári Zsuzsa
