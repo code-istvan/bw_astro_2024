@@ -377,12 +377,27 @@ ol {
   flex-direction: row;
 }
 
+/* 
+ * Inline Text Layout - Ensures proper text wrapping for label-content pairs
+ * Forces elements to stay inline while allowing content to break naturally
+ * when necessary, preserving the visual connection between label and content.
+ */
 .inline-flex-text {
-  display: flex; /* Flexbox elrendezés */
-  align-items: center; /* Függőleges középre igazítás */
-  gap: 0.5rem; /* Kisebb távolság az elemek között */
-  flex-wrap: nowrap; /* Az elemek ne törjenek új sorba */
+  display: inline;
 }
+
+.inline-flex-text p {
+  display: inline;
+  margin: 0;
+}
+
+.inline-flex-text a {
+  display: inline;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+// End of Inline Text Layout
 
 .image-track-3 {
   display: flex;
