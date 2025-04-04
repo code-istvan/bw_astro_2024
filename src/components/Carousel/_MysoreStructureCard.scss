@@ -1,4 +1,4 @@
-@import '/src/sass/global';
+@import '/src/sass/base/_colors';
 
 .mysore-structure-card {
   background-color: $color-shades-darkGray;
@@ -10,11 +10,5 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-  }
-
-  &__title {
-  }
-
-  &__description {
   }
 }
