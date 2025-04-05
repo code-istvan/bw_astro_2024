@@ -23,12 +23,31 @@ const [schedule, teachers, classes] = await Promise.all([
     getCollection('classes'),
 ]);
 
+// A mai dátum éjfélkor
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const sortedSchedule = schedule
-    .filter((item) => new Date(item.data.date) >= today)
-    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+    .filter((item) => {
+        // Konvertáljuk a dátumot és állítsuk be éjfélre
+        const itemDate = new Date(item.data.date);
+        itemDate.setHours(0, 0, 0, 0);
+
+        // Hasonlítsuk össze a két dátumot időbélyegek alapján
+        return itemDate.getTime() >= today.getTime();
+    })
+    .sort((a, b) => {
+        const dateA = new Date(a.data.date);
+        const dateB = new Date(b.data.date);
+        return dateA.getTime() - dateB.getTime();
+    });
+
+// const today = new Date();
+// today.setHours(0, 0, 0, 0);
+
+// const sortedSchedule = schedule
+//     .filter((item) => new Date(item.data.date) >= today)
+//     .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
 
 const formatDate = (date) => {
     const dateObj = new Date(date);
