@@ -3,7 +3,6 @@
 .blog__container {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
 }
 
 .blog__content {
@@ -26,9 +25,9 @@
   top: 80px;
   height: fit-content;
   flex: 0 0 250px;
-  margin-left: 20px;
-  overflow-y: auto;
 
+  overflow-y: auto;
+  margin: 40px 0 0 20px;
   // Scrollbar eltávolítása minden böngészőben
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -41,6 +40,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-top: 40px;
 }
 
 .blog__post-wrapper {
@@ -52,7 +52,7 @@
 }
 
 .blog__tags--mobile {
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .blog__tags-title {
