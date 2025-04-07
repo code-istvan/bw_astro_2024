@@ -20,8 +20,6 @@ date: 2024-04-24T10:00:00.000Z
 image: ../../images/uploads/desktop_img.jpg
 imageMobil: ../../images/uploads/mobil_img.jpg
 ---
-# A gondolkodás szerepe az astanga jóga gyakorlásában
-
 Néhány hónappal ezelőtt e-mailben beszélgettem Andy Davisszel, a nashville-i Belmont Egyetem filozófiai docensével, aki astanga gyakorló is egyben. A gondolkodás témáját jártuk körül az ászanagyakorlás során. Sok gyakorló fenntartja azt a téves feltételezést, hogy a jóga és a meditáció célja a gondolkodás kikapcsolása. Andy és én megvitattuk ezt a feltevést és néhány ezzel kapcsolatos alternatív nézőpontomat (- amelyek a reaktivitáson alapulnak):
 
 **Andy:** Kíváncsi vagyok a gyakorlás során felmerülő kósza gondolataimra. „Kósza gondolatok” alatt azokat a gondolatokat értem, amelyek nem kapcsolódnak közvetlenül az adott ászanához. A jógatanárok gyakran a „*citta vrtti nirodha*” \[az elme gondolathullámainak uralása, lecsendesítése] által határozzák meg vagy írják le az ászanagyakorlást, ami Patandzsali szerint a jóga kimondott célja. A *citta vrtti nirodha* egyik értelmezése szerint minden kósza gondolatom annak a jele, hogy nem tudok igazán elmélyülni abban, amit csinálok. Tapasztalataim szerint a kósza gondolatok néha akadályozzák a gyakorlást, néha viszont nem. Ezzel kapcsolatban szeretnék néhány kérdést feltenni.
