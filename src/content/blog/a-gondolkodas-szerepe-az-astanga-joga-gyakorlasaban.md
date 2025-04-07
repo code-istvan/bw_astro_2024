@@ -121,6 +121,6 @@ Az az érdekes, hogy ha holnap az összes ember meghalna, az elvont, fogalmi emb
 
 **Iain:** Köszönöm én is. Kérdéseid értékes lehetőséget jelentenek számomra, hogy megvizsgáljam és tisztázzam saját nézeteimet és meggyőződéseimet. Várom a következő beszélgetésünket!
 
-**Az írás szerzője:** Iain Grysak, [Spacious Yoga](https://spaciousyoga.com), Bali
-**Az írás eredeti címe:** [The Role of Thinking in Ashtanga Yoga Practice – A Conversation between Andy Davis and Iain Grysak](https://spaciousyoga.com/the-role-of-thinking-in-ashtanga-yoga-practice/)
+**Az írás szerzője:** Iain Grysak, [Spacious Yoga](https://spaciousyoga.com), Bali  
+**Az írás eredeti címe:** [The Role of Thinking in Ashtanga Yoga Practice – A Conversation between Andy Davis and Iain Grysak](https://spaciousyoga.com/the-role-of-thinking-in-ashtanga-yoga-practice/)  
 **Fordította:** Dr. Kővári Zsuzsa
