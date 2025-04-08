@@ -17,8 +17,8 @@ author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2024-04-24T10:00:00.000Z
-image: ../../images/uploads/desktop_img.jpg
-imageMobil: ../../images/uploads/mobil_img.jpg
+image: ../../images/uploads/blog_desktop.jpeg
+imageMobil: ../../images/uploads/blog_mobil.png
 ---
 Néhány hónappal ezelőtt e-mailben beszélgettem Andy Davisszel, a nashville-i Belmont Egyetem filozófiai docensével, aki astanga gyakorló is egyben. A gondolkodás témáját jártuk körül az ászanagyakorlás során. Sok gyakorló fenntartja azt a téves feltételezést, hogy a jóga és a meditáció célja a gondolkodás kikapcsolása. Andy és én megvitattuk ezt a feltevést és néhány ezzel kapcsolatos alternatív nézőpontomat (- amelyek a reaktivitáson alapulnak):
 
@@ -57,7 +57,9 @@ Nehéz dolog, amikor megpróbálunk nem reagálni egy gondolatra. A vipasszaná 
 
 **Andy:** Vannak-e a gondolatoknak olyan módozatai/típusai, amelyeket hasznosnak találtál az ászanagyakorlás szempontjából?
 
-**Iain:** Bármilyen gondolatminta, amely az ászanagyakorlás során felmerül, lehetőséget teremt egy reakció vagy szamszkára minta megnyilvánulására. <div class="blog-island-section"> Az ászanagyakorlás lényege, hogy találkozzunk ezekkel a szokásmintákkal, tudatosítsuk őket magunkban, és megtanuljunk hatékonyabban dolgozni velük. </div> Lehet vitatkozni azon, hogy minden felmerülő gondolati minta előnyös-e, mert lehetőséget ad arra, hogy találkozzunk egy szokással és potenciálisan átalakítsuk azt, ami minden bizonnyal hasznosabb, mint annak figyelmen kívül hagyása vagy elfojtása.
+**Iain:** Bármilyen gondolatminta, amely az ászanagyakorlás során felmerül, lehetőséget teremt egy reakció vagy szamszkára minta megnyilvánulására. <div class="blog-island-section"> Az ászanagyakorlás lényege, hogy találkozzunk ezekkel a szokásmintákkal, tudatosítsuk őket magunkban, és megtanuljunk hatékonyabban dolgozni velük. </div> 
+
+Lehet vitatkozni azon, hogy minden felmerülő gondolati minta előnyös-e, mert lehetőséget ad arra, hogy találkozzunk egy szokással és potenciálisan átalakítsuk azt, ami minden bizonnyal hasznosabb, mint annak figyelmen kívül hagyása vagy elfojtása.
 
 Felmerül a kérdés: Mit tegyünk, ha ez a gondolatminta megjelenik a gyakorlásunkban? Megengedjük, hogy elvonja a figyelmünket az önmagunkba, érzéseinkbe való elmélyülés élményéről? Vagy hagyhatjuk-e, hogy a gondolat a háttérben, az ászanagyakorlás során az elmélyülésünket minimálisan megzavarja? Ez a második lehetőség az, ahol az igazi átalakulás megtörténhet.
 
