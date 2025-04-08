@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/tanfolyam_mobil.jpg';
+import desktopImage from '../../images/tanfolyam_desktop.jpg';
+import EventsList from '../../components/Events/EventsList.astro';
+
+const metadata = {
+    title: 'EVENTS',
+    description: 'Itt olvashatsz a Bandha Works által szervezett eseményekről.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <h3 class="clr-brand-orange font-family-primary mt-40px">Ashtanga yoga courses</h3>
+        <p class="clr-brand-orange mt-40px">
+            <strong>Please note:</strong> Our courses are led in Hungarian only. We do not recommend these classes for non-Hungarian
+            speakers. If you're interested in English-language instruction, please inquire about private lessons via message.
+        </p>
+        <EventsList language="en" eventType={['Tanfolyam']} maxEvents={9} />
+        <!-- <h3 class="clr-brand-orange font-family-primary mt-40px mb-40px">További eseményeink</h3> -->
+    </div>
+</BaseLayout>
