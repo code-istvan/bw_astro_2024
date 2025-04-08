@@ -1,21 +1,29 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/tanfolyam_mobil.jpg';
 import desktopImage from '../../images/tanfolyam_desktop.jpg';
+import EventsList from '../../components/Events/EventsList.astro';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const pageTitle = t('tanfolyamok');
+const metadata = {
+    title: 'COURSES',
+    description: 'Here you can read about the courses organized by Bandha Works.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will be coming here very soon</h1></div>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <p class="clr-brand-orange mt-40px">
+            <strong>Please note:</strong> Our courses are led in Hungarian only. We do not recommend these classes for non-Hungarian
+            speakers. If you're interested in English-language instruction, please inquire about private lessons via message.
+        </p>
+        <EventsList language="en" eventType={['Tanfolyam']} maxEvents={9} />
     </div>
 </BaseLayout>
-
-<style></style>
