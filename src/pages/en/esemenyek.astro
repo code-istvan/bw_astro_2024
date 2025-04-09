@@ -25,7 +25,8 @@ const metadata = {
             <strong>Please note:</strong> Our courses are held in Hungarian only. We do not recommend these classes for non-Hungarian
             speakers. If you're interested in English-language instruction, please inquire about private lessons via message.
         </p>
-        <EventsList language="en" eventType={['Tanfolyam']} maxEvents={9} />
-        <!-- <h3 class="clr-brand-orange font-family-primary mt-40px mb-40px">További eseményeink</h3> -->
+        <EventsList language="en" eventType={['Tanfolyam']} />
+        <h3 class="clr-brand-orange font-family-primary mt-40px mb-40px">Events coming up</h3>
+        <EventsList language="en" excludedEventTypes={['Tanfolyam']} />
     </div>
 </BaseLayout>

@@ -21,9 +21,8 @@ const metadata = {
     />
     <div class="container container--tight-desktop">
         <h3 class="clr-brand-orange font-family-primary mt-40px">Astanga jóga tanfolyamaink</h3>
-        <EventsList eventType={['Tanfolyam']} maxEvents={9} />
+        <EventsList eventType={['Tanfolyam']} />
         <h3 class="clr-brand-orange font-family-primary mt-40px mb-40px">További eseményeink</h3>
-        <EventsList eventType={['Workshop']} maxEvents={9} />
-        <EventsList eventType={['Tábor']} maxEvents={9} />
+        <EventsList excludedEventTypes={['Tanfolyam']} />
     </div>
 </BaseLayout>
