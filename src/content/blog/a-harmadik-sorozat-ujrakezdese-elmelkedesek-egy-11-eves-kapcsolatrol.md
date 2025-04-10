@@ -213,15 +213,3 @@ Eredetileg ezeket a képeket a [Spacious Yoga Facebook](https://www.facebook.com
 **Az írás szerzője:** Iain Grysak  
 **Az írás eredeti címe:** Starting Third Series (Again) – Reflections on an 11 year relationship.  
 **Fordította és szerkesztette:** Dr. Kővári Zsuzsa
-
-![Visvamitrászana ](/blogpostimages/1.jpeg "Visvamitrászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
-
-![Visvamitrászana  2](/blogpostimages/2.jpeg "Visvamitrászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
-
-![Vasisthászana ](/blogpostimages/3.jpeg "Vasisthászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
-
-![Vasisthászana 2](/blogpostimages/4.jpeg " Vasisthászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
-
-![Csakorászana](/blogpostimages/5.jpeg "Csakorászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
-
-![Csakorászana 2](/blogpostimages/6.jpeg "Csakorászana otthon, kb. hajnali 4-kor,  2016 áprilisában")
