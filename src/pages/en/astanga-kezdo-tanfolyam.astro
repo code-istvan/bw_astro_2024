@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/astanga-kezdo-tanfolyam-mobil.jpg';
+import desktopImage from '../../images/astanga-kezdo-tanfolyam-desktop.jpeg';
+import { Image } from 'astro:assets';
+import AktMobilImage from '../../images/pascsimottanaszana.jpg';
+import AktDesktopImage from '../../images/akt_tri.jpg';
+import AktBandhamiImage from '../../images/bandhami.jpeg';
+import AccordionFaq from '../../components/Accordions/AccordionFaq.astro';
+import aktFaqData from '../../data/aktFaq.json';
+import CourseList from '../../components/Courses/CourseList.astro';
+import '../../sass/pages/_astangaKezdoTanfolyam.scss';
+
+const metadata = {
+    title: 'ASHTANGA BEGINNER COURSE',
+    description: 'On this page you will find information that helps with your first encounter with Ashtanga yoga.',
+};
+
+const tematikaBal = [
+    {
+        text: 'Introduction to the origin and theoretical background of Ashtanga yoga',
+    },
+    {
+        textBefore: 'Mastering the correct ',
+        link: {
+            url: '/blog/a-legzes-legtokeletesebb-modja-az-astanga-jogaban/',
+            text: 'breathing technique',
+        },
+        textAfter: ', cleansing practices',
+    },
+    {
+        text: 'Theory and practice of the vinyasa system',
+    },
+    {
+        textBefore: 'The ',
+        link: {
+            url: '/blog/astanga-triszthana/',
+            text: 'tristhana,',
+        },
+        textAfter: ' the three focuses of practice',
+    },
+    {
+        text: 'The bandhas, or deeper energetic layers of asanas',
+    },
+];
+
+const tematikaJobb = [
+    {
+        text: 'The asanas of the first series of Ashtanga Vinyasa yoga, up to Purvottanasana, with precise vinyasa counting and their corresponding dristis. Where necessary, the instructor suggests personalized modifications for effective and safe practice.',
+    },
+    {
+        text: 'Building a long-term practice: led classes and Mysore-style classes, as well as home practice',
+    },
+];
+
+const hasznosOlvasmanyok = [
+    {
+        link: '/blog/david-garrigues-gyenge-testben-erotlen-lelek',
+        title: 'Weak body, feeble soul',
+        classNames: 'body link-decoration-remove',
+    },
+
+    {
+        link: '/blog/astanga-joga-segit-a-noknek-hogy-erosebbek-legyenek',
+        title: 'Ashtanga yoga: "Helps women become stronger"',
+        classNames: 'body link-decoration-remove',
+    },
+
+    {
+        link: '/blog/5-dolog-amit-az-uj-gyakorloknak-erdemes-megtanulnia',
+        title: '5 things new practitioners should learn',
+        classNames: 'body link-decoration-remove',
+    },
+    {
+        link: '/blog/sharath-jois-arrol-hogy-miben-nyujt-tobbet-egy-helyi-shala-mint-egy-hagyomanyos-edzes',
+        title: 'Sharath Jois on How a Local Shala Offers More Than a Regular Workout',
+        classNames: 'body link-decoration-remove',
+    },
+];
+
+const huAktFaqs = aktFaqData.HU;
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <h1 class="mt-40px mb-40px">Content will be coming here very soon</h1>
+        <!-- <div class="astanga-kezdo-tanfolyam">
+            <div class="row mt-40px">
+                <h3 class="clr-brand-orange mb-20px">
+                    <strong>
+                        Az astanga jóga gyakorlása hatékony és személyre szabott módszer, amely fizikai erőt,
+                        rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az
+                        oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes előrehaladásra.
+                    </strong>
+                </h3>
+                <p class="mb-20px">
+                    Az astanga szanszkrit szó jelentése nyolc ág, Patandzsali nyolclépcsős jógarendszerére utal.
+                    Patandzsali Maharishi feltehetőleg az i.e. 2. században élt nagy indiai bölcs volt, aki tömör
+                    aforizmákban, nyolc lépcsőből álló módszert dolgozott ki a hatékony testi-lelki fejlődés érdekében.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">Ászanák: Az astanga jóga alapjai</h3>
+                <p class="mb-20px">
+                    Az <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">astanga jóga</a>
+                    gyakorlását az ászanák elsajátításával kell kezdeni. Ezen speciális testhelyzetek rendszeres gyakorlásával
+                    elérhetjük, hogy testünk erős és rugalmas legyen, elménk nyugodt és kiegyensúlyozott, ami alapul szolgál
+                    majd az astanga jógarendszerében történő továbblépésre.{' '}
+                </p>
+                <Image
+                    src={AktMobilImage}
+                    alt="Astanga kezdő tanfolyam Budapest"
+                    class="image--visible-mobil mb-20px"
+                />
+                <Image src={AktDesktopImage} alt="Kezdő astanga jóga Budán" class="image--visible-desktop mb-20px" />
+                <h3 class="clr-brand-orange font-family-primary mb-20px">Bevezetés az astanga jógába</h3>
+                <p class="mb-20px">
+                    Az astanga kezdő tanfolyamon a résztvevők megismerik a rendszer eredetét és elméleti hátterét.
+                    Betekintést nyernek a gyakorlás megkezdésének folyamatába, ami ebben a jógairányzatban az ászanák
+                    gyakorlásával indul, vinyásza rendszerben. A kezdő tanfolyamon a fő hangsúly (kb. 90%) az ászanák és
+                    a hozzájuk kapcsolódó technikák (pl. hangos légzés, bandhák) helyes és biztonságos elsajátításán
+                    van.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">
+                    A nyolc alkalmas kezdő tanfolyam tematikája
+                </h3>
+                <!-- Itt kezdődik a kétoszlopos lista -->
+        <!-- <div class="tanfolyam-tematika-lista mb-20px">
+                    <div class="tanfolyam-tematika-oszlop unordered-list-style">
+                        <ul>
+                            {
+                                tematikaBal.map((item) => (
+                                    <li>
+                                        <p>
+                                            {item.text ? (
+                                                item.text
+                                            ) : (
+                                                <>
+                                                    {item.textBefore}
+                                                    <a href={item.link.url} class="link-enhanced link-orange">
+                                                        {item.link.text}
+                                                    </a>
+                                                    {item.textAfter}
+                                                </>
+                                            )}
+                                        </p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div class="tanfolyam-tematika-oszlop tematika__second-column unordered-list-style">
+                        <ul>
+                            {
+                                tematikaJobb.map((item) => (
+                                    <li>
+                                        <p>{item.text}</p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </div> -->
+        <!-- Itt végződik a kétoszlopos lista -->
+        <!-- <h3 class="clr-brand-orange font-family-primary mb-20px">
+                    A gyakorlás elmélyítése és személyre szabása
+                </h3>
+                <p class="mb-20px">
+                    A kezdő tanfolyam folytatása az <a href="/astanga-mysore-kurzus/" class="link-enhanced link-orange">
+                        astanga Mysore-kurzus
+                    </a>. Ezen a képzésen a résztvevők megtanulnak Mysore-stílusban, egyénileg, külső segítség nélkül,
+                    biztonságosan gyakorolni. Mindenkinek személyre szabjuk a gyakorlását, ami a leghatékonyabb
+                    fejlődési ütemet eredményezi. Ezek után a gyakorlók már nem lesznek, helyhez és időhöz kötve,
+                    bárhová "elvihetik" a gyakorlást, bármikor végezhetik.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">Gyakran ismételt kérdések</h3>
+                <div class="page-content__section page-content__section--faq mb-40px">
+                    {huAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
+                </div>
+                <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
+                <CourseList language="HU" courseType="Ashtanga beginner" />
+                <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
+
+                <h3 class="clr-brand-orange font-family-primary mb-20px">
+                    Hasznos olvasmányok az astanga-gyakorlásról
+                </h3>
+                <div class="unordered-list-style">
+                    <ul>
+                        {
+                            hasznosOlvasmanyok.map((link) => (
+                                <li>
+                                    <p>
+                                        <a href={link.link} class={link.classNames}>
+                                            {link.title}
+                                        </a>
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</BaseLayout>

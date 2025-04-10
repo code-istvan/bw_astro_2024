@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/zsuzsi_mobil.jpg';
+import desktopImage from '../../images/zsuzsi_desktop.jpg';
+
+const metadata = {
+    title: 'Zsuzsi',
+    description: 'Learn more about Zsuzsa Kővári, Senior Content Manager at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px mt-40px">
+        <p class="mb-20px mt-40px">
+            I joined the Bandha Works Yoga School's Mysore program in 2016 and have been maintaining my practice
+            steadily ever since. I used to be a competitive athlete (swimming, then basketball), and the virtues I
+            internalized through training—diligence, perseverance—are still with me on the yoga mat.
+        </p>
+        <p class="mb-20px">
+            In February 2025, Rózsa and I spent one month at the Ashtanga Yoga Center in Bangkok (AYBKK), which follows
+            the tradition of SharathJi. This special period further deepened my faith in consistent, dedicated practice
+            and allowed me to experience its benefits even more profoundly. One of my future aspirations is to teach as
+            well, and to support new practitioners with my enthusiasm and experience.
+        </p>
+        <p class="mb-20px">
+            I'm passionate about creating interviews and articles related to Ashtanga. Recently, through the Bandha
+            Works Blog, readers have mostly encountered the fascinating and thought-provoking writings of Iain Grysak.
+            We would love to expand this repertoire with articles and stories from other respected Ashtanga teachers, as
+            well as relevant contemporary topics (such as nutrition and vegan lifestyle).
+        </p>
+        <p class="mb-20px">
+            One of our future plans is to translate SharathJi’s latest book, <em>The Active Series</em>, into
+            Hungarian—further carrying on his teachings and encouraging as many people as possible to take up yoga
+            practice, regardless of age or ability, in order to preserve and sustain vitality, balance, and a sense of
+            active living.
+        </p>
+    </div>
+</BaseLayout>
