@@ -23,12 +23,12 @@ const [schedule, teachers, classes] = await Promise.all([
     getCollection('classes'),
 ]);
 
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-
-const sortedSchedule = schedule
-    .filter((item) => new Date(item.data.date) >= today)
-    .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+// Csak rendezzük az adatokat dátum szerint, de nem szűrjük
+const sortedSchedule = schedule.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateA.getTime() - dateB.getTime();
+});
 
 const formatDate = (date) => {
     const dateObj = new Date(date);
@@ -78,7 +78,7 @@ const renderClassDetails = (item, index) => {
         <div class="schedule__list mt-20px">
             {
                 sortedSchedule.map((item, outerIndex) => (
-                    <div class="schedule__item">
+                    <div class="schedule__item" data-date={item.data.date}>
                         <div class="schedule__date container-fluid bg-shades-darkGray">
                             <div class="container container--tight-desktop">
                                 <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
@@ -130,4 +130,48 @@ const renderClassDetails = (item, index) => {
             }
         </div>
     </div>
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set today's date to midnight
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            // Find all schedule items
+            const scheduleItems = document.querySelectorAll('.schedule__item');
+            let hasVisibleItems = false;
+
+            // Loop through each item
+            scheduleItems.forEach((item) => {
+                // Use the original date format from data-date attribute
+                const dateValue = item.getAttribute('data-date');
+                if (!dateValue) return;
+
+                // Create a date object and set to midnight
+                const itemDate = new Date(dateValue);
+                itemDate.setHours(0, 0, 0, 0);
+
+                // Compare with today
+                if (itemDate < today) {
+                    // If older, hide it
+                    item.style.display = 'none';
+                } else {
+                    hasVisibleItems = true;
+                }
+            });
+
+            // If there are no visible items, display a message
+            if (!hasVisibleItems && scheduleItems.length > 0) {
+                const scheduleList = document.querySelector('.schedule__list');
+                if (scheduleList) {
+                    const noEventsMsg = document.createElement('div');
+                    noEventsMsg.className = 'schedule__no-events';
+                    noEventsMsg.style.textAlign = 'center';
+                    noEventsMsg.style.padding = '2rem';
+                    noEventsMsg.innerHTML = '<p>Currently there are no upcoming events in the schedule.</p>';
+                    scheduleList.appendChild(noEventsMsg);
+                }
+            }
+        });
+    </script>
 </BaseLayout>
