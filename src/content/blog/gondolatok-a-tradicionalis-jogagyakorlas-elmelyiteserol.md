@@ -175,7 +175,7 @@ mesterrel (tanárral) eltöltött gyakorlás szokatlan jelenség.
 Megfigyeltem, hogy amikor az emberek a hiteles, tradíciókon alapuló gyakorlásuk során elkezdenek találkozni önmaguk
 mélyebb rétegeivel, három dolog szokott megtörténni:
 
-<div class="blog-special-list">1</div><h3> Abbahagyják a gyakorlást – visszafordulnak az úton, és elnyomják a szankhára mintákat.</h3>
+## 1. Abbahagyják a gyakorlást – visszafordulnak az úton, és elnyomják a szankhára mintákat.
 
 Ez a leggyakoribb jelenség. A gyakorlás abbahagyása szó szerint a tényleges elfordulást jelentheti. Abbahagyják az
 astangát (vagy bármilyen gyakorlás is legyen az), és áttérnek a jóga vagy gyakorlás egy másik típusára.
@@ -192,7 +192,7 @@ között. Ahelyett, hogy a gyakorlást arra használnák, hogy elmélyítsék az
 tovább. Ez mind-mind azt eredményezi, hogy elkerüljük a valódi munkát, az önmagunkhoz való tudatos kapcsolódást a
 gyakorláson keresztül. Az ember fizikailag végigmegy a mozdulatokon, de valójában nem igazán gyakorol.
 
-<div class="blog-special-list">2</div> A gyakorlást a szankhára minták táplálására és elmélyítésére használják.
+## 2. A gyakorlást a szankhára minták táplálására és elmélyítésére használják.
 
 Ez is rendszeres jelenség. Az önbecsmérlő és önsértő hajlamokkal rendelkezők nagyon termékeny talajt találhatnak az
 astanga gyakorlásban, hogy elmélyítsék ezeket a szankhárákat.
@@ -210,7 +210,7 @@ gyakorlás által generált erő és energia még manipulatívabbá és irányí
 válnak, miközben a többi diák felnéz rájuk, ez katasztrofális, káros hatással lehet magukra és a diákok életére nézve
 is. Túl sok a bántalmazó és botrányos tanárról, gururól szóló történet. Sajnos ez sem szokatlan út.
 
-<div class="blog-special-list">3</div> Csendben megfigyelik önmagukat és kitartóan gyakorolnak.
+## 3. Csendben megfigyelik önmagukat és kitartóan gyakorolnak.
 
 A türelmet és a tárgyilagos megfigyelést lehet fejleszteni. Bármit is mond nekünk az érző test, hallgatunk. Igyekszünk a
 lehető legtisztábban hallgatni. És elfogadjuk, amit mond nekünk az érző testünk. Ennek az érzékenységnek a tudatában
