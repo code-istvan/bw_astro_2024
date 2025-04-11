@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/panni_mobil.jpg';
+import desktopImage from '../../images/panni_desktop.jpg';
+
+const metadata = {
+    title: 'Panni',
+    description: 'Itt olvashatsz Fehér Panniról, a Bandha Works művészeti vezetőjéről.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <p class="mb-20px mt-40px">
+            Throughout my life, I've always been in motion in some way. From childhood, sports formed an integral part
+            of my daily life; I participated in triathlons, speed skating, then volleyball, and through sports, the
+            world opened up to me. I had the fortune to travel and discover different landscapes, cultures, and
+            lifestyles.
+        </p>
+        <p class="mb-20px">
+            The third pillar that has always supported me was creation in any form. I was fascinated by accidentally
+            smudged papers, coffee stains on napkins, and all kinds of conscious or less conscious ways of creating.
+        </p>
+        <p class="mb-20px">
+            I studied architectural art, but I always found it much more exciting to see how different artistic fields
+            can connect and together create something new and valuable. So in recent years, I've spent my time not
+            primarily as an architect, but creating and teaching at the intersections of architecture, graphic design,
+            fine arts, and education.
+        </p>
+        <p class="mb-20px">
+            Since 2015, my life has also been connected to Ladakh, India, where I spend my summers; I connect with this
+            world in a deep, intangible way – with the Himalayan mountains, the atmosphere, the feeling that I've come
+            home.
+        </p>
+        <p class="mb-20px">
+            Yoga also seeped into my life similarly unnoticed, though interestingly, I didn't first encounter it in
+            India, but when I was looking for a new form of movement after competitive sports. At first, I came down the
+            Bandha stairs nervously, and after morning practices, I would just sit and drink tea in the lobby, doodling
+            in the notebook I always carried with me. And just as creating was as natural as breathing, breath through
+            yoga also became part of everyday life, where I once again felt that I had found a home.
+        </p>
+        <p class="mb-20px">
+            For me, Ashtanga yoga is a path of discovery and development, where movement attuned to breath is both a
+            challenge and a comfort, a safe space where day by day I can discover my limits, put them in a new
+            perspective, and where the three pillars in my life (movement, creation, travel) meet and provide the most
+            reliable support.
+        </p>
+        <p class="mb-20px">
+            I am grateful to be and develop in such an authentic and supportive environment – and I wholeheartedly
+            recommend this path to anyone who is searching for themselves.
+        </p>
+    </div>
+</BaseLayout>
