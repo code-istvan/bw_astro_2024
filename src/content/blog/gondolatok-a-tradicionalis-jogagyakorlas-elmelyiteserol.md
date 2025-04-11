@@ -175,8 +175,7 @@ mesterrel (tanárral) eltöltött gyakorlás szokatlan jelenség.
 Megfigyeltem, hogy amikor az emberek a hiteles, tradíciókon alapuló gyakorlásuk során elkezdenek találkozni önmaguk
 mélyebb rétegeivel, három dolog szokott megtörténni:
 
-<div class="blog-special-list">1</div>  
-### Abbahagyják a gyakorlást – visszafordulnak az úton, és elnyomják a szankhára mintákat.
+<div class="blog-special-list">1</div><h3> Abbahagyják a gyakorlást – visszafordulnak az úton, és elnyomják a szankhára mintákat.</h3>
 
 Ez a leggyakoribb jelenség. A gyakorlás abbahagyása szó szerint a tényleges elfordulást jelentheti. Abbahagyják az
 astangát (vagy bármilyen gyakorlás is legyen az), és áttérnek a jóga vagy gyakorlás egy másik típusára.
