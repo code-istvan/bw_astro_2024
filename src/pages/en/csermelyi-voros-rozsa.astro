@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/rozsa_mobil.jpeg';
+import desktopImage from '../../images/rozsa_desktop.jpeg';
+
+const metadata = {
+    title: 'Rózsa',
+    description: 'Here you can read about Rózsa Csermelyi-Vörös, yoga instructor at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <p class="mb-20px mt-40px">
+            Physical activity has been an integral part of my life since childhood. Besides my competitive dance
+            background, I enjoyed trying other forms of movement as well. This is how I ended up at my first yoga class
+            during high school. I was pleased to discover that practicing could ease my occasionally emerging anxiety.
+        </p>
+        <p class="mb-20px">
+            I first heard about Ashtanga yoga in Bertalan Sugár's classes. It made me very curious, but I procrastinated
+            for a year before attending my first Mysore class. I was afraid and didn't believe in myself; I didn't think
+            I was capable of maintaining such an intensive and regular practice.
+        </p>
+        <p class="mb-20px">
+            However, as I was going through a difficult period and longed for change, I finally came to Bandha Works on
+            a cold February morning. I clearly remember my first impressions. I watched the practitioners, listened to
+            the Ujjayi breathing, and knew right then that this was what I had been looking for.
+        </p>
+        <p class="mb-20px">
+            I was quickly caught up in it, practicing regularly, and after 3 years I felt that I needed to go to Mysore,
+            to the source. In 2022, I was accepted to the Sharath Yoga Centre. I feel very fortunate to have had the
+            opportunity to practice for 2 months under the supervision of Paramaguru Sharath Jois. Additionally, it was
+            profound to gain insight into South Indian culture and be part of people's everyday lives.
+        </p>
+        <p class="mb-20px">
+            I am extremely grateful to my teachers and to the practice. I have learned a lot about humility, faith,
+            acceptance, and overcoming my fears. I am curious to see what the practice will teach me and where it will
+            take me next.
+        </p>
+    </div>
+</BaseLayout>
