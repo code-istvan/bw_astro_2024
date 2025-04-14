@@ -1,19 +1,53 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/mantra_mobil.jpg';
 import desktopImage from '../../images/mantra_desktop.jpg';
+import AccordionMantras from '../../components/Accordions/AccordionMantras.astro';
+import mantrasData from '../../data/mantras.json';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'MANTRAS',
+    description:
+        'On this page you can find the mantras that we usually sing in the yoga school. If you have any questions, feel free to contact us!',
+};
 
-const pageTitle = t('mantra');
+const language = 'EN';
+const mantras = mantrasData[language];
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} pageName={pageTitle} />
-    <div class="container">
-        <div class="row"><h1>Content will be coming here very soon</h1></div>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mantra mt-40px">
+            <h3 class="clr-brand-orange font-family-primary mb-20px">
+                The word <i>mantra</i> is Sanskrit, meaning "to transcend the mind"
+            </h3>
+            <p>
+                The meaning of <i>"man"</i> is mind, and <i>"tra"</i> means to cross through, to traverse. Mantras are spells
+                that are capable of changing reality, or at least our perception of it, which can actually mean the same
+                thing as the former. But to apply this magical power, we must first acknowledge that mantras are spells,
+                and therefore they are only effective when used with pure intention and correct pronunciation. Most of us
+                need to repeat a mantra many times before its effect manifests. As the alchemists of old times said for encouragement:
+            </p>
+            <blockquote>Repetition activates the magic</blockquote>
+            <p class="mb-20px">
+                Ancient yogic texts declare that God is sound and sound is God: Sabda Brahman. There is nothing else but
+                God. God is everything. God is real. God is reality. God is sound. Every form of reality is sound – or
+                music – since essentially everything consists of vibrations. What we see as material existence is
+                actually slowed down sound vibration that can be perceived with the eyes, heard with the ears, and
+                comprehended with our other senses. Sound creates matter – in the beginning was the word.
+            </p>
+            <h3 class="clr-brand-orange font-family-primary mb-20px">Mantras that we usually chant</h3>
+            <div class="mantra__accordion-container mb-40px">
+                <AccordionMantras mantras={mantras} lang={language} />
+            </div>
+        </div>
     </div>
 </BaseLayout>
