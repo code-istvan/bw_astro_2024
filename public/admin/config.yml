@@ -293,6 +293,8 @@ collections:
   - name: events
     label: Events
     folder: src/content/events/
+    media_folder: ../../images/uploads/events
+    public_folder: src/images/uploads/events
     format: 'json'
     create: true
     slug: '{{eventid}}'
