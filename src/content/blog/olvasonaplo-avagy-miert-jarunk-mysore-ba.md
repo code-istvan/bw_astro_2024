@@ -14,13 +14,11 @@ image: ../../images/uploads/kpjayi_shala_small.jpeg
 imageMobil: ../../images/uploads/kpjayi_shala_small_.jpeg
 ---
 
-A Krisztus előtti időkben, ha fizikai vagy érzelmi betegség kerített hatalmába, a gyógyulás érdekében egy távoli ásramba
-vagy gyógyhatású szentély közelébe utaztál, amely egy hegyen, egy barlangban, folyóparton vagy egy vidéki faluban
-található. Az utazással kapcsolatos döntésed nem számított meggondolatlannak, hiszen a gyógyítás ez idő tájt szent
-folyamatot jelentett, szoros kapcsolat kialakítását önmagaddal és a bölcsekkel. A barátaiddal és orvosoddal folytatott
-megbeszélés után máris megkezdted a készülődést, hogy útra kelj a gyógyító szentély felé. A több napig tartó út során
-csodálatos gyógyulásokról szóló történeteket hallhattál azoktól, akik gyógyultan hazafelé utaznak már arról a helyről,
-ahová te tartasz.
+### A Krisztus előtti időkben, ha fizikai vagy érzelmi betegség kerített hatalmába, a gyógyulás érdekében egy távoli ásramba vagy gyógyhatású szentély közelébe utaztál, amely egy hegyen, egy barlangban, folyóparton vagy egy vidéki faluban található. Az utazással kapcsolatos döntésed nem számított meggondolatlannak, hiszen a gyógyítás ez idő tájt szent folyamatot jelentett, szoros kapcsolat kialakítását önmagaddal és a bölcsekkel.
+
+A barátaiddal és orvosoddal folytatott megbeszélés után máris megkezdted a készülődést, hogy útra kelj a gyógyító
+szentély felé. A több napig tartó út során csodálatos gyógyulásokról szóló történeteket hallhattál azoktól, akik
+gyógyultan hazafelé utaznak már arról a helyről, ahová te tartasz.
 
 Reménnyel és várakozással egyre inkább átitatva érkeztél meg a remete ásramjába. Megérkezésedet követően a különböző
 böjtök, eljárások segítették elő a megtisztulásodat, amelyek szimbolikusan is eltávolították a hétköznapok helytelen
