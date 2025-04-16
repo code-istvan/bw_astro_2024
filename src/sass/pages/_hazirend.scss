@@ -1,28 +1,11 @@
-@import "/src/sass/global";
+.hazirend-list {
+  padding-left: 40px;
 
-.a {
-  border: 2px white solid;
-}
+  @media screen and (max-width: 768px) {
+    padding-left: 30px;
 
-.hazirend--desktop--container {
-  @media only screen and (min-width: 992px) {
-    width: 670px;
-    margin: 0 auto;
+    li:before {
+      left: -30px;
+    }
   }
-  a:link {
-    text-decoration: none;
-    color: $color-brand-orange !important;
-  }
-  a:visited {
-    color: $color-brand-orange !important;
-  }
-}
-
-.simple-header-style {
-  height: 50px;
-  background-color: $color-shades-darkGray;
-  border-top: 1px solid $color-shades-lightBlack;
-  border-bottom: 1px solid $color-shades-lightBlack;
-  display: flex;
-  align-items: center;
 }

@@ -4,6 +4,7 @@ import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/hazirend_mobil.jpg';
 import desktopImage from '../../images/hazirend_desktop.jpg';
 import rulesData from '../../data/houseRules.json';
+import '../../sass/pages/_hazirend.scss';
 
 const language = 'en';
 const rules = rulesData.rules.map((rule) => rule[language]);
@@ -41,23 +42,10 @@ const metadata = {
             </div>
             <div class="hazirend__footer row mt-20px mb-40px">
                 <div class="col">
-                    <p>We welcome you with love!</p>
+                    <p class="mb-20px">We welcome you with love!</p>
+                    <p><strong>Updated:</strong> April 15, 2025</p>
                 </div>
             </div>
         </div>
     </div>
 </BaseLayout>
-
-<style>
-    .hazirend-list {
-        padding-left: 40px;
-
-        @media screen and (max-width: 768px) {
-            padding-left: 30px;
-
-            li:before {
-                left: -30px;
-            }
-        }
-    }
-</style>
