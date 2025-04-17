@@ -56,39 +56,42 @@ const metadata = {
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container blog__container mt-40px">
-        <div class="blog__tags--mobile hidden-desktop">
-            <h4 class="blog__tags-title">CIMKÉK</h4>
-            <TagList />
-            <div class="blog__separator-horizontal"></div>
-        </div>
-        <div class="blog__content">
-            <div class="blog__main">
-                <ul class="blog__post-list">
-                    {
-                        page.data.map((post) => (
-                            <li class="blog__post-wrapper">
-                                <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
-                            </li>
-                        ))
-                    }
-                </ul>
-                <Pagination
-                    prevUrl={page.url.prev}
-                    nextUrl={page.url.next}
-                    currentPage={page.currentPage}
-                    totalPages={page.lastPage}
-                />
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop blog__container mt-40px">
+        <div class="row">
+            <div class="mt-40px">
+                <h3 class="clr-brand-orange mb-20px">
+                    Our blog is primarily intended for Hungarian Ashtanga yoga enthusiasts. However, we have some
+                    content available in English as well, which we list below.
+                </h3>
+                <p>
+                    <strong>
+                        Our English language blog page is currently under construction, please check back later for more
+                        content.
+                    </strong>
+                </p>
             </div>
-            <div class="blog__sidebar hidden-mobile">
-                <h4 class="blog__tags-title">CIMKÉK</h4>
-                <TagList />
-                <div class="blog__popular-posts">
-                    <h4 class="blog__popular-title">LEGKEDVELTEBB BEJEGZÉSEK</h4>
-                    <PopularPosts />
-                </div>
-            </div>
+            <ul class="blog__post-list">
+                {
+                    page.data.map((post) => (
+                        <li class="blog__post-wrapper">
+                            <PostCard frontmatter={post.data} slug={post.slug} minutesRead={post.minutesRead} />
+                        </li>
+                    ))
+                }
+            </ul>
+            <Pagination
+                prevUrl={page.url.prev}
+                nextUrl={page.url.next}
+                currentPage={page.currentPage}
+                totalPages={page.lastPage}
+            />
         </div>
     </div>
 </BaseLayout>
