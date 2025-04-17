@@ -1,0 +1,29 @@
+---
+const metadata = {
+    title: 'Linktr',
+    description: 'Itt olvashatsz Fehér Panniról, a Bandha Works művészeti vezetőjéről.',
+};
+---
+
+<div class="linktr-container"><h3>@bandhaworks</h3></div>
+
+<style>
+    .linktr-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        /* Tableten kissé keskenyebb */
+        @media only screen and (min-width: 768px) {
+            max-width: 500px;
+        }
+
+        /* Desktopon fix szélesség */
+        @media only screen and (min-width: 992px) {
+            width: 480px;
+            max-width: 480px;
+        }
+    }
+</style>
