@@ -1,6 +1,67 @@
 ---
 import Icons from '../Icons/Icons.astro';
 import './_pagination.scss';
+interface Props {
+    prevUrl: string | undefined;
+    nextUrl: string | undefined;
+    currentPage: number;
+    totalPages: number;
+}
+const { prevUrl, nextUrl, currentPage, totalPages } = Astro.props;
+
+// Debug információk
+console.log('prevUrl:', prevUrl);
+console.log('nextUrl:', nextUrl);
+console.log('currentPage:', currentPage);
+console.log('totalPages:', totalPages);
+
+// Közvetlen megközelítés: a /blog URL-re építünk, az első oldal különleges (nincs /page/1)
+const blogBaseUrl = '/blog';
+const firstPageUrl = blogBaseUrl;
+const lastPageUrl = totalPages > 1 ? `${blogBaseUrl}/${totalPages}` : blogBaseUrl;
+
+// Debug: az új URL-ek kiíratása
+console.log('firstPageUrl:', firstPageUrl);
+console.log('lastPageUrl:', lastPageUrl);
+---
+
+<nav aria-label="Blog pages" class="pagination-nav">
+    <div class="pagination-button left">
+        {
+            currentPage > 1 && (
+                <>
+                    <a href={firstPageUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronDoubleLeft" color="orange" />
+                    </a>
+                    <a href={prevUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronLeft" color="orange" />
+                    </a>
+                </>
+            )
+        }
+    </div>
+    <div class="pagination-info">
+        <p>{currentPage} / {totalPages}</p>
+    </div>
+    <div class="pagination-button right">
+        {
+            currentPage < totalPages && (
+                <>
+                    <a href={nextUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronRight" color="orange" />
+                    </a>
+                    <a href={lastPageUrl} class="link-primary" style="border: visible;">
+                        <Icons name="ChevronDoubleRight" color="orange" />
+                    </a>
+                </>
+            )
+        }
+    </div>
+</nav>
+
+<!-- ---
+import Icons from '../Icons/Icons.astro';
+import './_pagination.scss';
 
 interface Props {
     prevUrl: string | undefined;
@@ -50,4 +111,4 @@ const lastPageUrl = nextUrl?.replace(/\/page\/\d+/, `/page/${totalPages}`) || `/
             )
         }
     </div>
-</nav>
+</nav> -->
