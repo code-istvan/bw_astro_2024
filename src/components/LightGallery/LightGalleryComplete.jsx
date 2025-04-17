@@ -1,8 +1,6 @@
 // src/components/LightGalleryComplete.jsx
 import React, { useEffect, useRef } from 'react';
 import lightGallery from 'lightgallery';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
 
 // CSS importok
 import 'lightgallery/css/lightgallery.css';
@@ -43,75 +41,81 @@ const LightGalleryMasonry = ({ images, title }) => {
         lgInstance.current.destroy();
       }
 
-      // Új lightGallery példány inicializálása
-      lgInstance.current = lightGallery(galleryRef.current, {
-        plugins: [lgZoom, lgThumbnail],
-        speed: 500,
-        selector: '.masonry-item',
-        download: false,
-        counter: false,
-        showCloseIcon: true,
-        hideBarsDelay: 1500,
-        addClass: 'minimal-gallery',
-        mode: 'lg-fade',
-      });
+      // Dinamikus importálás a pluginekhez
+      Promise.all([import('lightgallery/plugins/zoom'), import('lightgallery/plugins/thumbnail')]).then(
+        ([lgZoomModule, lgThumbnailModule]) => {
+          // Új lightGallery példány inicializálása
+          lgInstance.current = lightGallery(galleryRef.current, {
+            plugins: [lgZoomModule.default, lgThumbnailModule.default],
+            speed: 500,
+            selector: '.masonry-item',
+            download: false,
+            counter: false,
+            showCloseIcon: true,
+            hideBarsDelay: 1500,
+            addClass: 'minimal-gallery',
+            mode: 'lg-fade',
+          });
 
-      // Masonry layout inicializálása
-      const resizeAllGridItems = () => {
-        const allItems = document.getElementsByClassName('masonry-item');
-        for (let x = 0; x < allItems.length; x++) {
-          resizeGridItem(allItems[x]);
+          // Masonry layout inicializálása
+          const resizeAllGridItems = () => {
+            const allItems = document.getElementsByClassName('masonry-item');
+            for (let x = 0; x < allItems.length; x++) {
+              resizeGridItem(allItems[x]);
+            }
+          };
+
+          const resizeGridItem = (item) => {
+            if (!item) return;
+            const grid = document.getElementsByClassName('masonry-grid')[0];
+            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+            const rowGap =
+              parseInt(
+                window.getComputedStyle(grid).getPropertyValue('grid-row-gap') ||
+                  window.getComputedStyle(grid).getPropertyValue('grid-gap')
+              ) || 0;
+
+            const contentHeight = item.querySelector('.masonry-content').getBoundingClientRect().height;
+            const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+
+            // Minimum 10 sornyi magasságot adunk, hogy elkerüljük a túl alacsony elemeket
+            const minSpan = 10;
+            item.style.gridRowEnd = 'span ' + Math.max(rowSpan, minSpan);
+          };
+
+          // Masonry layout frissítése képek betöltődése után
+          const allImages = document.querySelectorAll('.masonry-item img');
+          let imagesLoaded = 0;
+
+          const imageLoaded = () => {
+            imagesLoaded++;
+            if (imagesLoaded === allImages.length) {
+              resizeAllGridItems();
+            }
+          };
+
+          allImages.forEach((img) => {
+            if (img.complete) {
+              imageLoaded();
+            } else {
+              img.addEventListener('load', imageLoaded);
+            }
+          });
+
+          // Masonry layout frissítése ablak átméretezéskor
+          window.addEventListener('resize', resizeAllGridItems);
+
+          // Kezdeti layout beállítása
+          setTimeout(resizeAllGridItems, 100);
         }
-      };
-
-      const resizeGridItem = (item) => {
-        if (!item) return;
-        const grid = document.getElementsByClassName('masonry-grid')[0];
-        const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-        const rowGap =
-          parseInt(
-            window.getComputedStyle(grid).getPropertyValue('grid-row-gap') ||
-              window.getComputedStyle(grid).getPropertyValue('grid-gap')
-          ) || 0;
-
-        const contentHeight = item.querySelector('.masonry-content').getBoundingClientRect().height;
-        const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
-
-        // Minimum 10 sornyi magasságot adunk, hogy elkerüljük a túl alacsony elemeket
-        const minSpan = 10;
-        item.style.gridRowEnd = 'span ' + Math.max(rowSpan, minSpan);
-      };
-
-      // Masonry layout frissítése képek betöltődése után
-      const allImages = document.querySelectorAll('.masonry-item img');
-      let imagesLoaded = 0;
-
-      const imageLoaded = () => {
-        imagesLoaded++;
-        if (imagesLoaded === allImages.length) {
-          resizeAllGridItems();
-        }
-      };
-
-      allImages.forEach((img) => {
-        if (img.complete) {
-          imageLoaded();
-        } else {
-          img.addEventListener('load', imageLoaded);
-        }
-      });
-
-      // Masonry layout frissítése ablak átméretezéskor
-      window.addEventListener('resize', resizeAllGridItems);
-
-      // Kezdeti layout beállítása
-      setTimeout(resizeAllGridItems, 100);
+      );
 
       return () => {
         if (lgInstance.current) {
           lgInstance.current.destroy();
         }
         window.removeEventListener('resize', resizeAllGridItems);
+        const allImages = document.querySelectorAll('.masonry-item img');
         allImages.forEach((img) => {
           img.removeEventListener('load', imageLoaded);
         });
