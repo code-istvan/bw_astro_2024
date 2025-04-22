@@ -1,0 +1,146 @@
+/* src/styles/lightgallery-thumbnails.css */
+
+/* Alapvető stílusok a galériákhoz */
+.gallery-section {
+  margin-bottom: 60px;
+}
+
+.gallery-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.gallery-separator {
+  height: 1px;
+  background-color: #eeeeee;
+  margin: 40px 0;
+}
+
+/* Galéria elrendezés */
+.gallery-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+/* Képek stílusai */
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Hover effektus */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* LightGallery testreszabás */
+.minimal-gallery .lg-toolbar {
+  background-color: transparent;
+}
+
+.minimal-gallery .lg-counter {
+  display: none;
+}
+
+.minimal-gallery .lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Animációk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Késleltetett animáció a képeknek */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.gallery-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.gallery-item:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.gallery-item:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.gallery-item:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.gallery-item:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.gallery-item:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.gallery-item:nth-child(n + 10) {
+  animation-delay: 0.5s;
+}
+
+/* Reszponzív beállítások */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .gallery-item img {
+    height: 150px;
+  }
+}

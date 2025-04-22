@@ -1,0 +1,157 @@
+---
+// thumbnails.astro
+import Layout from '../layouts/BaseLayout.astro';
+import ThumbnailGallery from '../components/LightGallery/ThumbnailGallery.jsx';
+import '../components/LightGallery/_lightgallery-thumbnails.scss';
+
+// Galériák konfigurációja
+const galleries = [
+    {
+        id: 'term-gallery',
+        title: 'Természeti Képek',
+        sourceUrl: 'https://mula.bandha.works/images/test/',
+    },
+    {
+        id: 'yoga-gallery',
+        title: 'Jóga Galéria',
+        sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON_MYSORE-ROOM/', // Cseréld ki a tényleges mappára
+    },
+];
+
+// Segédfüggvény a képek letöltéséhez
+async function downloadServerImages(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch directory: ${response.status} ${response.statusText}`);
+        }
+        const html = await response.text();
+        const imageRegex = /<a href="([^"]+\.(jpg|jpeg|png|gif|webp|avif))"[^>]*>/gi;
+        let match;
+        const imageUrls = [];
+        while ((match = imageRegex.exec(html)) !== null) {
+            const imageUrl = new URL(match[1], url).href;
+            imageUrls.push(imageUrl);
+        }
+        return imageUrls;
+    } catch (error) {
+        console.error('Error fetching images:', error);
+        return [];
+    }
+}
+
+// Képek letöltése minden galériához
+const galleriesWithImages = [];
+for (const gallery of galleries) {
+    const images = await downloadServerImages(gallery.sourceUrl);
+    galleriesWithImages.push({
+        ...gallery,
+        images,
+    });
+}
+---
+
+<Layout title="Képgalériák">
+    <main>
+        <h1>Képgalériák</h1>
+
+        {
+            galleriesWithImages.map((gallery, index) => (
+                <section class="gallery-section">
+                    <h2>{gallery.title}</h2>
+
+                    {gallery.images.length > 0 ? (
+                        <ThumbnailGallery
+                            images={gallery.images}
+                            galleryId={gallery.id}
+                            title={gallery.title}
+                            client:load
+                        />
+                    ) : (
+                        <p>Nincsenek képek ebben a galériában</p>
+                    )}
+
+                    {index < galleriesWithImages.length - 1 && <div class="gallery-separator" />}
+                </section>
+            ))
+        }
+    </main>
+</Layout>
+
+<script define:vars={{ galleriesWithImages }}>
+    // Kliens oldali kód a lightgallery inicializálásához
+    import React from 'react';
+    import { createRoot } from 'react-dom/client';
+    import LightGallery from 'lightgallery/react';
+
+    // Pluginek importálása
+    import lgThumbnail from 'lightgallery/plugins/thumbnail';
+    import lgZoom from 'lightgallery/plugins/zoom';
+
+    // CSS
+    import 'lightgallery/css/lightgallery.css';
+    import 'lightgallery/css/lg-zoom.css';
+    import 'lightgallery/css/lg-thumbnail.css';
+
+    // ThumbnailGallery komponens
+    function ThumbnailGallery({ images, galleryId }) {
+        const gallerySettings = {
+            speed: 500,
+            plugins: [lgThumbnail, lgZoom],
+            thumbnail: true,
+            showCloseIcon: true,
+            download: false,
+            counter: false,
+            addClass: 'minimal-gallery',
+            mode: 'lg-fade',
+        };
+
+        return React.createElement(
+            'div',
+            { className: 'gallery-container' },
+            React.createElement(
+                LightGallery,
+                {
+                    elementClassNames: 'gallery',
+                    galleryId: galleryId,
+                    ...gallerySettings,
+                },
+                images.map((image, index) => {
+                    return React.createElement(
+                        'a',
+                        {
+                            href: image,
+                            key: index,
+                            className: 'gallery-item',
+                        },
+                        React.createElement('img', {
+                            src: image,
+                            alt: '',
+                            className: 'img-responsive',
+                            loading: 'lazy',
+                        })
+                    );
+                })
+            )
+        );
+    }
+
+    // Komponensek beillesztése az oldalba
+    document.addEventListener('DOMContentLoaded', () => {
+        galleriesWithImages.forEach((gallery) => {
+            const container = document.getElementById(`${gallery.id}-container`);
+            if (container && gallery.images.length > 0) {
+                const root = createRoot(container);
+                root.render(
+                    React.createElement(ThumbnailGallery, {
+                        images: gallery.images,
+                        galleryId: gallery.id,
+                    })
+                );
+            }
+        });
+    });
+</script>
+
+<!-- Galériák konténerei -->
+{galleriesWithImages.map((gallery) => <div id={`${gallery.id}-container`} class="gallery-mount-point" />)}
