@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/mysore_kurzus_mobil.jpg';
+import desktopImage from '../../images/mysore_kurzus_desktop.jpg';
+import { Image } from 'astro:assets';
+import AktMobilImage from '../../images/pascsimottanaszana.jpg';
+import AktDesktopImage from '../../images/akt_tri.jpg';
+import AccordionFaq from '../../components/Accordions/AccordionFaq.astro';
+import CourseList from '../../components/Courses/CourseList.astro';
+import mysoreCourseFayData from '../../data/mysoreCourseFaq.json';
+import '../../sass/pages/_astangaKezdoTanfolyam.scss';
+
+const metadata = {
+    title: 'ASHTANGA MYSORE COURSE',
+    description:
+        "On this page you will find information that will help you decide if the Ashtanga Mysore course is right for you. If you have any questions, please don't hesitate to contact us!",
+};
+
+const enMysoreCourseFayData = mysoreCourseFayData.EN;
+
+const hasznosOlvasmanyok = [
+    {
+        link: '/blog/5-dolog-amit-az-uj-gyakorloknak-erdemes-megtanulnia',
+        title: '5 things that new practitioners should learn',
+        classNames: 'body link-decoration-remove clr-brand-orange schedule-teacher',
+    },
+    {
+        link: '/blog/sharath-jois-arrol-hogy-miben-nyujt-tobbet-egy-helyi-shala-mint-egy-hagyomanyos-edzes',
+        title: 'Sharath Jois on what a local Shala offers beyond a traditional workout',
+        classNames: 'body link-decoration-remove clr-brand-orange schedule-teacher',
+    },
+];
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="astanga-mysore-kurzus">
+            <p class="clr-brand-orange mt-40px">
+                <strong>Please note:</strong> Our courses are held in Hungarian only. We do not recommend these classes for
+                non-Hungarian speakers. If you're interested in English-language instruction, please inquire about private
+                lessons via message.
+            </p>
+            <div class="row mt-20px">
+                <h3 class="clr-brand-orange mb-20px">
+                    <strong>
+                        Mysore-style Ashtanga yoga practice is an effective and personalized method that brings physical
+                        strength, flexibility, and inner peace. The continuous development it offers and the
+                        teacher-student relationship provide an opportunity for deeper understanding and personal
+                        progress.
+                    </strong>
+                </h3>
+                <p class="mb-20px">
+                    In Ashtanga Vinyasa yoga, asanas are traditionally taught in Mysore-style (pronounced: my-sore).
+                    This method combines the advantages of group-led classes and individual practice. The essence is
+                    that in the room, all practitioners independently perform the sequence at the rhythm of their own
+                    breath, allowing the instructor to give personalized adjustments and instructions to everyone
+                    without disrupting the dynamics of the class. This way, it's not a problem if someone practices
+                    shorter (e.g., beginners), or if someone spends more time in the room (e.g., advanced practitioners)
+                    during the same class.
+                </p>
+                <Image
+                    src={AktMobilImage}
+                    alt="Astanga kezdő tanfolyam Budapest"
+                    class="image--visible-mobil mb-20px"
+                />
+                <Image src={AktDesktopImage} alt="Kezdő astanga jóga Budán" class="image--visible-desktop mb-20px" />
+                <h3 class="clr-brand-orange font-family-primary mb-20px">About the course</h3>
+                <p>
+                    If you'd like to try Mysore-style Ashtanga practice or want to practice alone at home, you have the
+                    opportunity to do so in the <strong>Mysore course</strong> during the four weeks following the <a
+                        href="/en/astanga-kezdo-tanfolyam/"
+                        class="link-enhanced link-orange"
+                    >
+                        beginner Ashtanga course
+                    </a>. The Mysore course curriculum builds on the foundation established in the beginner Ashtanga
+                    course.
+                </p>
+                <p class="mt-20px">
+                    sanas of the primary series, the vinyasa counting that belongs to the asanas, and you can also get a
+                    taste of what it's like to practice to the rhythm of your own breath. Additionally, participants can
+                    learn about Mysore etiquette and gain insight into the operation of the Indian 'main shala' (the
+                    central institution of our system).
+                </p>
+                <p class="mt-20px">
+                    We begin each session with a brief conversation and theoretical part, where there will be
+                    opportunities to ask questions related to the practice. In the asana practice, we progress with each
+                    participant at their own pace of development. By the end of the course - if they have attended all
+                    sessions - participants will have a stable individual practice that they can deepen either at home
+                    or in an Ashtanga Mysore program.
+                </p>
+                <p class="mt-20px">
+                    During the last two morning sessions of the course, in the Mysore program, you can experience what
+                    it's like to practice with others, yet independently, with teacher guidance.
+                </p>
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Frequently Asked Questions</h3>
+                <div class="page-content__section page-content__section--faq mb-40px">
+                    {enMysoreCourseFayData.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
+                </div>
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Course Schedule</h3>
+                <CourseList language="EN" courseType="Mysore-course" />
+                <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">
+                    Useful readings about Ashtanga practice
+                </h3>
+                <div class="unordered-list-style mb-40px">
+                    <ul>
+                        {
+                            hasznosOlvasmanyok.map((link) => (
+                                <li>
+                                    <p>
+                                        <a href={link.link} class={link.classNames}>
+                                            {link.title}
+                                        </a>
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
