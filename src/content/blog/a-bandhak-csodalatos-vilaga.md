@@ -1,21 +1,22 @@
 ---
-published: false
+published: true
 language: Hungarian
 title: A bandhák csodálatos világa
 titleBackground: false
 canonical: https://spaciousyoga.com/the-geometry-of-bandha/
 canonicalLanguage: English
-description:
-  A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”. A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil
-  kapcsolatot hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld energiája   elkezd felfelé
-  áramolni a testbe, meg kell találnunk a „szukhát”, hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
+description: A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”.
+  A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil kapcsolatot
+  hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld
+  energiája   elkezd felfelé áramolni a testbe, meg kell találnunk a „szukhát”,
+  hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
   eloszlódjon mindenhol
 author: Zsuzsi
 tags:
   - astangaelmélet
 date: 2024-03-19T12:30:00.000Z
-image: ../../images/uploads/desktop_img.jpg
-imageMobil: ../../images/uploads/mobil_img.jpg
+image: ../../images/uploads/mula_desktop.jpeg
+imageMobil: ../../images/uploads/mula_mobil.jpeg
 ---
 
 ELŐSZÓ
