@@ -1,10 +1,13 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": false,
-  "ekadashi": false,
-  "date": "May 1, 2025",
-  "class": "mysorePractice",
   "teacher": "istvanJi",
-  "classTime": "6:30 - 9:00"
+  "classTime": "6:30 - 9:00",
+  "classTime2": "18:00 - 19:30",
+  "published": true,
+  "date": "May 1, 2025",
+  "teacher2": "temuJi",
+  "fullmoon": false,
+  "class": "mysorePractice",
+  "class2": "kramaHanuman",
+  "ekadashi": false
 }
