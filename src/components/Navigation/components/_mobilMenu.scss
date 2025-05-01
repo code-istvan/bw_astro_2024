@@ -45,7 +45,28 @@
 }
 
 .dropdown-menu__content {
+  // display none-t majd ki kell szedni ha animálni szeretném a close-t
   display: none;
+  // animation: close 2s;
+}
+
+@keyframes close {
+  0% {
+    height: auto;
+    opacity: 1;
+  }
+  20% {
+    height: auto;
+  }
+
+  50% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }
 
 .mobile-menu__fomenu-items {
@@ -59,6 +80,7 @@
   display: block;
   margin-left: -8px;
   margin-right: -4px;
+  transition: all 5s ease-out;
   a {
     text-transform: uppercase;
     margin-left: 26px;
@@ -69,6 +91,20 @@
   background-color: $color-shades-darkGray;
   padding: 12px 0;
   padding-left: 12px;
+  animation: toggle 200ms;
+}
+
+@keyframes toggle {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  20% {
+    height: auto;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .mobile-menu__wrapper {
@@ -96,98 +132,3 @@
   padding-top: 28px;
   margin-bottom: 48px;
 }
-
-// @import '/src/sass/global';
-
-// #mobileMenu.open {
-//   opacity: 1;
-//   visibility: visible;
-//   position: absolute;
-//   display: block;
-//   // height: calc(100vh - 60px);
-//   height: 100vh;
-//   top: 0;
-//   // transform: translateY(60px);
-//   margin-top: 60px;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 1;
-//   overflow-x: hidden;
-//   overflow: scroll;
-//   overflow-y: hidden;
-//   background-color: $offcanvas-menu-color;
-//   -webkit-transition: all 500ms ease-out;
-//   -o-transition: all 500ms ease-out;
-//   transition: all 500ms ease-out;
-//   padding-bottom: 60px;
-//   .mobile-menu__dropdown {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     padding: 12px 0;
-
-//     svg {
-//       margin-right: 8px;
-//       transition: transform 500ms ease-out;
-//     }
-//   }
-
-//   .mobile-menu__dropdown svg.rotate {
-//     transform: rotate(45deg);
-//     transition: transform 500ms ease-out;
-//   }
-
-//   .dropdown-menu__content {
-//     display: none;
-//   }
-
-//   .mobile-menu__fomenu-items {
-//     li {
-//       padding: 12px 0;
-//     }
-//     padding-bottom: 8px;
-//   }
-
-//   .dropdown-menu__content.show {
-//     display: block;
-//     margin-left: -8px;
-//     margin-right: -4px;
-//     a {
-//       text-transform: uppercase;
-//       margin-left: 26px;
-//     }
-//     h3 {
-//       margin: 10px 0;
-//     }
-//     background-color: $color-shades-darkGray;
-//     padding: 12px 0;
-//     padding-left: 12px;
-//   }
-// }
-
-// .mobile-menu__wrapper {
-//   margin-top: 24px;
-//   margin-left: 16px;
-//   margin-right: 4px;
-// }
-
-// .mobile-menu {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   gap: 12px;
-//   position: relative;
-//   z-index: 2;
-// }
-
-// .mobile-menu--header {
-//   border-bottom: 1px solid #333;
-//   padding-bottom: 28px;
-// }
-
-// .mobile-menu--footer {
-//   border-top: 1px solid #333;
-//   padding-top: 28px;
-//   margin-bottom: 48px;
-// }
