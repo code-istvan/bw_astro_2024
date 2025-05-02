@@ -112,6 +112,14 @@
         "language": "angol",
         "new": true,
         "favourite": ""
+      },
+      {
+        "author": "David Swenson",
+        "title": "Only dead fish go with the flow",
+        "link": "",
+        "language": "angol",
+        "new": true,
+        "favourite": ""
       }
     ],
     "olvasmanyokKrama": [
@@ -342,6 +350,14 @@
       {
         "author": "Iain Grysak",
         "title": "Ashtanga, Embodiment and Complex Systems",
+        "link": "",
+        "language": "English",
+        "new": true,
+        "favourite": ""
+      },
+      {
+        "author": "David Swenson",
+        "title": "Only dead fish go with the flow",
         "link": "",
         "language": "English",
         "new": true,
