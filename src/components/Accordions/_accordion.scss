@@ -1,5 +1,5 @@
-@import '/src/sass/base/_fonts.scss';
-@import '/src/sass/base/_colors.scss';
+// @use '/src/sass/base/_fonts.scss' as fonts;
+@use '/src/sass/base/_colors' as colors;
 
 // Közös alap accordion osztályok - ezeket használja minden accordion komponens
 .accordion__section {
@@ -7,13 +7,13 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid $color-shades-lightBlack;
+  border-bottom: 1px solid colors.$color-shades-lightBlack;
 
   &:first-child {
-    border-top: 1px solid $color-shades-lightBlack;
+    border-top: 1px solid colors.$color-shades-lightBlack;
   }
   &:last-child {
-    border-bottom: 1px solid $color-shades-lightBlack;
+    border-bottom: 1px solid colors.$color-shades-lightBlack;
   }
 }
 

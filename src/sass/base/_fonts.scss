@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import '_grid';
-@import '_breakpoints';
+@use '_grid' as grid;
+@use '_breakpoints' as breakpoints;
 
 // Font familis
 $font-family-primary: 'Abril Fatface';
@@ -94,13 +94,13 @@ $font-sizes: (
 
   &--1 {
     font-weight: $font-weight-semi-bold;
-    @include xs {
+    @include breakpoints.xs {
       font-size: #{fontSize(h1, mobile)};
     }
-    @include md {
+    @include breakpoints.md {
       font-size: #{fontSize(h1, tablet)};
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: #{fontSize(h1, desktop)};
     }
   }
@@ -108,13 +108,13 @@ $font-sizes: (
   &--2 {
     font-family: $font-family-secondary;
     font-weight: $font-weight-semi-bold;
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(h2, mobile);
     }
-    @include md {
+    @include breakpoints.md {
       font-size: fontSize(h2, tablet);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(h2, desktop);
     }
   }
@@ -123,13 +123,13 @@ $font-sizes: (
     font-family: $font-family-secondary;
     font-weight: $font-weight-semi-bold;
     text-transform: none;
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(h3, mobile);
     }
-    @include md {
+    @include breakpoints.md {
       font-size: fontSize(h3, tablet);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(h3, desktop);
     }
   }
@@ -139,13 +139,13 @@ $font-sizes: (
     font-weight: $font-weight-semi-bold;
     text-transform: uppercase;
     font-weight: 700;
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(h4, mobile);
     }
-    @include md {
+    @include breakpoints.md {
       font-size: fontSize(h4, tablet);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(h4, desktop);
     }
   }
@@ -155,13 +155,13 @@ $font-sizes: (
     font-weight: $font-weight-login-bold;
     line-height: 18px;
     text-transform: none;
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(h5, mobile);
     }
-    @include md {
+    @include breakpoints.md {
       font-size: fontSize(h5, tablet);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(h5, desktop);
     }
   }
@@ -209,13 +209,13 @@ h5 {
   line-height: 1.4;
   text-transform: none;
 
-  @include xs {
+  @include breakpoints.xs {
     font-size: fontSize(body, mobile);
   }
-  @include md {
+  @include breakpoints.md {
     font-size: fontSize(body, tablet);
   }
-  @include xl {
+  @include breakpoints.xl {
     font-size: fontSize(body, desktop);
   }
   &--bold {
@@ -228,13 +228,13 @@ h5 {
     line-height: 1.2;
     text-transform: none;
 
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(span, mobile);
     }
-    @include md {
+    @include breakpoints.md {
       font-size: fontSize(span, tablet);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(span, desktop);
     }
 
@@ -249,10 +249,10 @@ h5 {
     line-height: 1.4;
     text-transform: none;
 
-    @include xs {
+    @include breakpoints.xs {
       font-size: fontSize(small, mobile);
     }
-    @include xl {
+    @include breakpoints.xl {
       font-size: fontSize(small, desktop);
     }
 
@@ -268,4 +268,15 @@ p {
 
 .font-family-primary {
   font-family: $font-family-primary;
+}
+
+:root {
+  --font-family-primary: #{$font-family-primary};
+  --font-family-secondary: #{$font-family-secondary};
+  --font-weight-light: #{$font-weight-light};
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-login-bold: #{$font-weight-login-bold};
+  --font-weight-semi-bold: #{$font-weight-semi-bold};
+  --body-font-size-mobile: #{$body-font-size-mobile};
+  --body-font-size-desktop: #{$body-font-size-desktop};
 }
