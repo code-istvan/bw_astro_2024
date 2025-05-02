@@ -1,7 +1,7 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .course-card {
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
 
   &__wrapper {
     padding: 2rem;
@@ -9,7 +9,7 @@
   &__teacher-section {
     padding: 1rem 0;
     margin-bottom: 1rem;
-    border-top: 1px solid $color-shades-lightBlack;
-    border-bottom: 1px solid $color-shades-lightBlack;
+    border-top: 1px solid colors.$color-shades-lightBlack;
+    border-bottom: 1px solid colors.$color-shades-lightBlack;
   }
 }

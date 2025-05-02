@@ -1,8 +1,8 @@
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .section-mysore-program {
   &__wrapper {
-    @include xl {
+    @include breakpoints.xl {
       padding-block: 56px;
     }
   }
@@ -12,7 +12,7 @@
     align-items: center;
     z-index: 2;
 
-    @include xs {
+    @include breakpoints.xs {
       img {
         width: 100%;
         height: auto;
@@ -20,28 +20,28 @@
       }
     }
 
-    @include md {
+    @include breakpoints.md {
       img {
         width: 200px;
         height: 200px;
       }
     }
 
-    @include lg {
+    @include breakpoints.lg {
       img {
         width: 260px;
         height: 260px;
       }
     }
 
-    @include xl {
+    @include breakpoints.xl {
       img {
         width: 320px;
         height: 320px;
       }
     }
 
-    @include xxl {
+    @include breakpoints.xxl {
       img {
         width: 360px;
         height: 360px;
@@ -53,12 +53,12 @@
     max-width: 732px;
     margin-top: 20px;
 
-    @include xs {
+    @include breakpoints.xs {
       padding-top: 20px;
       padding-bottom: 20px;
     }
 
-    @include md {
+    @include breakpoints.md {
       margin-top: auto;
       margin-bottom: auto;
     }

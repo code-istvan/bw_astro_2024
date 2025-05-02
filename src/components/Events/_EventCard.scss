@@ -1,17 +1,17 @@
-@import '/src/sass/base/_mixins';
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .event-card__image {
   flex-shrink: 0;
 
-  @include xs {
+  @include breakpoints.xs {
     width: 120px;
     height: 120px;
   }
-  @include md {
+  @include breakpoints.md {
     width: 220px;
     height: 220px;
   }
-  @include xl {
+  @include breakpoints.xl {
     width: 250px;
     height: 250px;
   }

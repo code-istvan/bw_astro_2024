@@ -1,8 +1,8 @@
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .section-parampara {
   &__wrapper {
-    @include xl {
+    @include breakpoints.xl {
       padding-block: 56px;
     }
   }
@@ -12,7 +12,7 @@
     align-items: center;
     z-index: 2;
 
-    @include xs {
+    @include breakpoints.xs {
       order: 0;
 
       img {
@@ -22,7 +22,7 @@
       }
     }
 
-    @include md {
+    @include breakpoints.md {
       order: 1;
 
       img {
@@ -33,7 +33,7 @@
       }
     }
 
-    @include lg {
+    @include breakpoints.lg {
       img {
         width: 260px;
         height: 260px;
@@ -42,7 +42,7 @@
       }
     }
 
-    @include xl {
+    @include breakpoints.xl {
       img {
         width: 320px;
         height: 320px;
@@ -51,7 +51,7 @@
       }
     }
 
-    @include xxl {
+    @include breakpoints.xxl {
       img {
         width: 360px;
         height: 360px;
@@ -66,12 +66,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
-    @include xs {
+    @include breakpoints.xs {
       padding-top: 20px;
       padding-bottom: 40px;
     }
 
-    @include md {
+    @include breakpoints.md {
       margin-top: auto;
       margin-bottom: auto;
     }

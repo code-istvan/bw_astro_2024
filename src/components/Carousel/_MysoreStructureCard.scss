@@ -1,10 +1,10 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .mysore-structure-card {
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
 
   &__content {
-    background-color: $color-shades-darkGray;
+    background-color: colors.$color-shades-darkGray;
     padding: 32px;
     display: flex;
     flex-direction: column;

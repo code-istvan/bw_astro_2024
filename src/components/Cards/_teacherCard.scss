@@ -1,8 +1,8 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .teacher {
-  border: solid 2px $color-shades-darkGray;
+  border: solid 2px colors.$color-shades-darkGray;
   border-radius: 2px;
   box-sizing: border-box;
   height: 100%;
@@ -20,11 +20,11 @@
 .teacher-card__card-body {
   padding: 20px;
   display: flex;
-  @include xs {
+  @include breakpoints.xs {
     flex-direction: column;
     align-items: center;
   }
-  @include md {
+  @include breakpoints.md {
     flex-direction: row;
   }
 }
@@ -32,23 +32,23 @@
 .teacher__content {
   display: flex;
 
-  @include xs {
+  @include breakpoints.xs {
     flex-direction: column;
     align-items: center;
   }
 
-  @include md {
+  @include breakpoints.md {
     flex-direction: row;
   }
 }
 
 .teacher__info {
-  @include xs {
+  @include breakpoints.xs {
     text-align: center;
     padding-top: 16px;
   }
 
-  @include md {
+  @include breakpoints.md {
     text-align: left;
     padding-left: 20px;
     padding-top: 0;

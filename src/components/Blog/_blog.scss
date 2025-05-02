@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .tag-container {
   display: flex;
@@ -13,18 +13,18 @@
 .blog__tag {
   display: inline-block;
   padding: 4px 12px;
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   cursor: pointer;
   text-decoration: none;
 
   p {
-    color: $color-shades-gray;
+    color: colors.$color-shades-gray;
     margin: 0;
   }
 }
 
 .blog__tag:hover {
   p {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 }

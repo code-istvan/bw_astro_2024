@@ -1,8 +1,8 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .event-card {
-  border: solid 2px $color-shades-lightBlack;
+  border: solid 2px colors.$color-shades-lightBlack;
   border-radius: 2px;
 }
 
@@ -28,7 +28,7 @@
   align-items: flex-end;
 
   img {
-    @include xs {
+    @include breakpoints.xs {
       width: 60px;
       height: 60px;
     }
