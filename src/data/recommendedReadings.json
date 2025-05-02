@@ -104,6 +104,14 @@
         "language": "angol",
         "new": false,
         "favourite": ""
+      },
+      {
+        "author": "Iain Grysak",
+        "title": "Ashtanga, Embodiment and Complex Systems",
+        "link": "",
+        "language": "angol",
+        "new": true,
+        "favourite": ""
       }
     ],
     "olvasmanyokKrama": [
@@ -329,6 +337,14 @@
         "link": "",
         "language": "angol",
         "new": false,
+        "favourite": ""
+      },
+      {
+        "author": "Iain Grysak",
+        "title": "Ashtanga, Embodiment and Complex Systems",
+        "link": "",
+        "language": "English",
+        "new": true,
         "favourite": ""
       }
     ],
