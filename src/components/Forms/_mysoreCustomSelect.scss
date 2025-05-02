@@ -1,14 +1,14 @@
-@import '/src/sass/base/_fonts';
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_fonts' as fonts;
+@use '/src/sass/base/_colors' as colors;
 
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  font-family: $font-family-secondary;
+  font-family: fonts.$font-family-secondary;
   font-weight: 800;
   height: 44px;
   width: 100%;
-  background-color: $color-shades-lightGray;
+  background-color: colors.$color-shades-lightGray;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -18,7 +18,7 @@
 }
 
 .select-selected {
-  background-color: $color-shades-lightGray;
+  background-color: colors.$color-shades-lightGray;
 }
 
 /* Style the arrow inside the select element: */
@@ -30,29 +30,29 @@
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: black transparent transparent transparent;
+  border-color: colors.$color-shades-black transparent transparent transparent;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent colors.$color-shades-white transparent;
   top: 7px;
 }
 
 /* style the items (options), including the selected item: */
 .select-items div,
 .select-selected {
-  color: black;
+  color: colors.$color-shades-black;
   padding: 12px 16px 8px 16px;
   border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  border-color: transparent transparent rgba(colors.$color-shades-black, 0.1) transparent;
   cursor: pointer;
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: $color-shades-lightGray;
+  background-color: colors.$color-shades-lightGray;
   top: 100%;
   left: 0;
   right: 0;
@@ -66,7 +66,7 @@
 
 .select-items div:hover,
 .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(colors.$color-shades-black, 0.1);
 }
 
 .select-arrow {

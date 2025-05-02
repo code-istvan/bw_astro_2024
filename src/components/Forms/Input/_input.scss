@@ -1,5 +1,5 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_fonts';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_fonts' as fonts;
 
 .input-wrapper {
   display: flex;
@@ -13,18 +13,18 @@
   box-sizing: border-box;
   height: 44px;
   padding-left: 16px;
-  font-family: $font-family-secondary;
+  font-family: fonts.$font-family-secondary;
   font-weight: 600;
   background: transparent;
-  color: $color-shades-lightGray;
-  border: 2px solid $color-shades-lightGray; /* Alap keret */
+  color: colors.$color-shades-lightGray;
+  border: 2px solid colors.$color-shades-lightGray; /* Alap keret */
   transition:
     border 0.3s ease,
     box-shadow 0.3s ease;
 
   &:focus {
-    border: 2px solid $color-brand-orange; /* A border színe változik */
-    color: $color-brand-orange;
+    border: 2px solid colors.$color-brand-orange; /* A border színe változik */
+    color: colors.$color-brand-orange;
     outline: none; /* Böngésző alap outline eltávolítása */
   }
 }

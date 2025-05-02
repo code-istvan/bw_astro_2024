@@ -1,5 +1,5 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_fonts';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_fonts' as fonts;
 
 .textarea-label {
   display: none; /* Elrejtjük a label szövegét, ha nincs rá szükség */
@@ -17,48 +17,15 @@
   box-sizing: border-box;
   height: 100px;
   padding: 12px 16px;
-  font-family: $font-family-secondary;
+  font-family: fonts.$font-family-secondary;
   font-weight: 600;
   background: transparent;
-  color: $color-shades-lightGray;
-  box-shadow: 0px 0px 0px 2px $color-shades-lightGray inset;
+  color: colors.$color-shades-lightGray;
+  box-shadow: 0px 0px 0px 2px colors.$color-shades-lightGray inset;
   resize: vertical;
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px $color-brand-orange inset;
-    color: $color-brand-orange;
+    box-shadow: 0px 0px 0px 2px colors.$color-brand-orange inset;
+    color: colors.$color-brand-orange;
   }
-
-  //   &:hover {
-  //     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  //   }
-
-  //   &:invalid {
-  //     border-color: #dc3545;
-  //     background-color: #f8d7da;
-  //     color: #721c24;
-  //   }
-
-  //   &:valid {
-  //     border-color: #28a745;
-  //     background-color: #d4edda;
-  //     color: #155724;
-  //   }
-
-  //   &:disabled {
-  //     background-color: #e9ecef;
-  //     color: #6c757d;
-  //     cursor: not-allowed;
-  //     border-color: #ced4da;
-  //   }
-
-  //   &::placeholder {
-  //     color: red !important;
-  //     font-style: italic;
-  //   }
-
-  //   &:placeholder-shown {
-  //     font-style: italic;
-  //     color: red !important;
-  //   }
 }
