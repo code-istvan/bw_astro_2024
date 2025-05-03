@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './mp3player.scss';
 import PlayButton from './PlayButton';
 import PauseButton from './PauseButton';
 import VolumeIcon from './VolumeIcon';
+import './_mp3player.scss';
 
 // Nyelvi beállítások
 const translations = {
@@ -130,11 +130,10 @@ const MP3Player = ({ url, language = 'EN' }) => {
             max={duration || 0}
             value={currentTime}
             onChange={handleProgress}
-            className="progress-bar"
+            className="mp3-progress-bar"
             disabled={isLoading || error}
           />
         </div>
-
         <div className="time-display">
           {formatTime(currentTime)} / {formatTime(duration)}
         </div>

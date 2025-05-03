@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .social-icons__section {
   display: flex;
@@ -6,7 +6,7 @@
   gap: 8px;
 
   svg:hover {
-    fill: $color-brand-orange;
+    fill: colors.$color-brand-orange;
   }
 }
 

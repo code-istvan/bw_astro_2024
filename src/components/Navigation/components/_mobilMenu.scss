@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 #mobileMenu.open {
   opacity: 1;
@@ -14,7 +14,7 @@
   z-index: 1;
   overflow-x: hidden;
   overflow-y: auto; /* Görgethetővé teszi a függőleges tartalmat */
-  background-color: $offcanvas-menu-color;
+  background-color: colors.$offcanvas-menu-color;
   -webkit-transition: all 500ms ease-out;
   -o-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
@@ -47,7 +47,6 @@
 .dropdown-menu__content {
   // display none-t majd ki kell szedni ha animálni szeretném a close-t
   display: none;
-  // animation: close 2s;
 }
 
 @keyframes close {
@@ -88,7 +87,7 @@
   h3 {
     margin: 10px 0;
   }
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   padding: 12px 0;
   padding-left: 12px;
   animation: toggle 300ms;
@@ -123,12 +122,12 @@
 }
 
 .mobile-menu--header {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid colors.$color-shades-darkGray;
   padding-bottom: 28px;
 }
 
 .mobile-menu--footer {
-  border-top: 1px solid #333;
+  border-top: 1px solid colors.$color-shades-darkGray;
   padding-top: 28px;
   margin-bottom: 48px;
 }

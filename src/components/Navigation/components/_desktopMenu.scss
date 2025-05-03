@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .desktop-menu {
   display: none;
@@ -15,7 +15,7 @@
   overflow: scroll;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: $offcanvas-menu-color;
+  background-color: colors.$offcanvas-menu-color;
   transition: all 500ms ease-out;
 
   &.open {
@@ -64,12 +64,12 @@
   }
 
   .desktop-menu__dropdown-menu-item:hover a {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 
   #menu1 .desktop-menu__dropdown-menu-item,
   #menu2 .desktop-menu__dropdown-menu-item {
-    color: $color-shades-gray;
+    color: colors.$color-shades-gray;
   }
 
   #menu1 .desktop-menu__dropdown-menu-content ul,
@@ -80,13 +80,13 @@
   // Almenü elemek közötti elválasztó vonal
   #menu1 .desktop-menu__dropdown-menu-item:not(:last-child),
   #menu2 .desktop-menu__dropdown-menu-item:not(:last-child) {
-    border-bottom: 1px solid $color-shades-darkGray;
+    border-bottom: 1px solid colors.$color-shades-darkGray;
     padding-bottom: 10px;
   }
 
   #menu3 .desktop-menu__dropdown-menu-item h3 {
     font-size: 2rem;
-    color: white;
+    color: colors.$color-shades-white;
     font-weight: 800;
   }
 
@@ -101,7 +101,7 @@
 
   &__label {
     font-size: 2rem;
-    color: white;
+    color: colors.$color-shades-white;
     font-weight: 800;
   }
 }

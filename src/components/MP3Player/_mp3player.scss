@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .mp3-player {
   position: relative;
@@ -13,7 +13,7 @@
   }
 
   .error-message {
-    color: #e74c3c;
+    color: colors.$color-error;
   }
 }
 
@@ -21,17 +21,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #333;
+  background-color: colors.$color-shades-darkGray;
   padding: 8px 12px;
   border-radius: 4px;
-  color: white;
+  color: colors.$color-shades-white;
   width: 100%;
 }
 
 .play-button {
   background: transparent;
   border: none;
-  color: white;
+  color: colors.$color-shades-white;
   cursor: pointer;
   padding: 0;
   margin-right: 10px;
@@ -57,11 +57,11 @@
 }
 
 .svg-fill {
-  fill: $color-brand-orange;
+  fill: colors.$color-brand-orange;
 }
 
 .svg-stroke {
-  stroke: $color-brand-orange;
+  stroke: colors.$color-brand-orange;
 }
 
 .progress-container {
@@ -71,12 +71,12 @@
   align-items: center;
 }
 
-.progress-bar {
+.mp3-progress-bar {
   width: 100%;
   height: 5px;
   -webkit-appearance: none;
   appearance: none;
-  background: #555;
+  background-color: colors.$color-shades-lightBlack;
   border-radius: 2px;
   outline: none;
 
@@ -85,7 +85,7 @@
     appearance: none;
     width: 12px;
     height: 12px;
-    background: $color-brand-orange;
+    background: colors.$color-brand-orange;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -93,7 +93,7 @@
   &::-moz-range-thumb {
     width: 12px;
     height: 12px;
-    background: $color-brand-orange;
+    background: colors.$color-brand-orange;
     border-radius: 50%;
     cursor: pointer;
     border: none;
@@ -108,13 +108,13 @@
   font-size: 14px;
   margin: 0 10px;
   white-space: nowrap;
-  color: $color-brand-orange; /* Idő szöveg színe */
+  color: colors.$color-brand-orange; /* Idő szöveg színe */
 }
 
 .volume-button {
   background: transparent;
   border: none;
-  color: white;
+  color: colors.$color-shades-white;
   cursor: pointer;
   padding: 0;
   margin: 0 5px;
@@ -134,7 +134,7 @@
   height: 4px;
   -webkit-appearance: none;
   appearance: none;
-  background: #555;
+  background: colors.$color-shades-lightBlack;
   border-radius: 2px;
   outline: none;
 
@@ -143,7 +143,7 @@
     appearance: none;
     width: 10px;
     height: 10px;
-    background: $color-brand-orange;
+    background: colors.$color-brand-orange;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -151,7 +151,7 @@
   &::-moz-range-thumb {
     width: 10px;
     height: 10px;
-    background: $color-brand-orange;
+    background: colors.$color-brand-orange;
     border-radius: 50%;
     cursor: pointer;
     border: none;

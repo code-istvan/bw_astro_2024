@@ -1,5 +1,6 @@
-@import '/src/sass/base/_fonts';
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_fonts' as fonts;
+@use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_colors' as colors;
 
 .hero-container-text--wrapper {
   position: absolute;
@@ -27,7 +28,7 @@
 }
 
 .special-h1 {
-  font-family: $font-family-primary;
+  font-family: fonts.$font-family-primary;
   font-size: 2rem;
   font-weight: 400;
 
@@ -76,10 +77,10 @@
     font-size: 5rem;
   }
 
-  @include md {
+  @include breakpoints.md {
     font-size: 4rem;
   }
-  @include xl {
+  @include breakpoints.xl {
     font-size: 5rem;
   }
 }
@@ -91,7 +92,7 @@
     font-size: 1.4rem;
   }
 
-  @include md {
+  @include breakpoints.md {
     font-size: 1.6rem;
   }
 }
@@ -104,7 +105,7 @@
     font-size: 1.4rem;
   }
 
-  @include md {
+  @include breakpoints.md {
     font-size: 1.6rem;
   }
 }
@@ -126,8 +127,8 @@
 
 .hero-image {
   position: relative;
-  background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
-  /* background: linear-gradient(to bottom, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 90%) */
+  background: radial-gradient(circle, colors.$color-brand-orange 0%, rgba(255, 165, 0, 0) 100%);
+  // background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0) 100%);
 }
 @media (max-width: 799px) {
   .hero-image {
