@@ -1,5 +1,5 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 header {
   position: fixed;
@@ -14,7 +14,7 @@ header {
 }
 
 header.scrolling {
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   .brand-logo {
     height: 36px;
     width: 36px;
@@ -28,10 +28,10 @@ nav {
   justify-content: space-between;
   z-index: 9999;
   div:nth-child(2) {
-    @include xs {
+    @include breakpoints.xs {
       margin-right: 8px;
     }
-    @include md {
+    @include breakpoints.md {
       margin-right: 10px;
     }
 
@@ -43,10 +43,10 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  @include xs {
+  @include breakpoints.xs {
     margin-left: 14px;
   }
-  @include md {
+  @include breakpoints.md {
     margin-left: 20px;
   }
   cursor: pointer;
@@ -62,7 +62,7 @@ nav {
 }
 
 #brand-logo-circle {
-  fill: $color-shades-lightGray;
+  fill: colors.$color-shades-lightGray;
   -webkit-transition: -webkit-transform 1s;
   transform-origin: center;
   position: fixed;
@@ -86,7 +86,7 @@ nav {
 .hamburger .line {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: colors.$color-shades-white;
   display: block;
   margin: 4px auto;
   transition: all 0.3s ease-in-out;
@@ -118,7 +118,7 @@ nav {
   right: 0;
   bottom: 0;
   overflow: scroll;
-  background-color: $offcanvas-menu-color;
+  background-color: colors.$offcanvas-menu-color;
   transition: all 500ms ease-out;
 }
 
