@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 @media screen and (max-width: 768px) {
   .hero-big-image {
@@ -46,10 +46,10 @@
   }
   a:link {
     text-decoration: none;
-    color: $color-brand-orange !important;
+    color: colors.$color-brand-orange !important;
   }
   a:visited {
-    color: $color-brand-orange !important;
+    color: colors.$color-brand-orange !important;
   }
 }
 

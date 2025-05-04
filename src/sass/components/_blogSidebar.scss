@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 @media screen and (min-width: 768px) {
   .blogsidebar-wrapper {
@@ -7,7 +7,7 @@
 }
 
 .most-popular-posts {
-  color: $color-shades-gray;
+  color: colors.$color-shades-gray;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,6 +20,6 @@
 .most-popular-ul li {
   margin-bottom: 8px;
   a:hover {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 }

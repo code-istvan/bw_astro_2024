@@ -1,4 +1,5 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_fonts' as fonts;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .gatsby-image-wrapper {
   z-index: -1;
@@ -19,23 +20,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @include xs {
+  @include breakpoints.xs {
     gap: 0;
   }
-  @include sm {
-    gap: 0;
-  }
-  @include md {
-    gap: 0;
-  }
+  // @include breakpoints.sm {
+  //   gap: 0;
+  // }
+  // @include breakpoints.md {
+  //   gap: 0;
+  // }
 }
 
 .hero--font-big {
-  font-family: "Abril Fatface", cursive;
+  font-family: fonts.$font-family-primary;
 }
 
 .hero--font-subtitle {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: fonts.$font-family-secondary;
   margin-top: 0;
   text-align: left;
 }
@@ -201,7 +202,7 @@
       width: 100%;
     }
   }
-  @include md {
+  @include breakpoint.md {
     .btn {
       display: none;
     }
@@ -209,10 +210,10 @@
 }
 
 .hero-button-desktop {
-  @include xs {
+  @include breakpoint.xs {
     display: none;
   }
-  @include md {
+  @include breakpoint.md {
     display: block;
   }
 }

@@ -1,4 +1,4 @@
-@import '/src/sass/global';
+@use '/src/sass/base/_colors' as colors;
 
 .footer-desktop-menu {
   display: flex;
@@ -14,10 +14,10 @@
   }
 
   &__item {
-    color: $color-shades-lightGray;
+    color: colors.$color-shades-lightGray;
 
     &--highlighted {
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       text-decoration: none;
     }
   }
@@ -31,19 +31,19 @@
 
   &__submenu {
     &:hover {
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       text-decoration: none;
     }
   }
 
   &__link:hover {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
     text-decoration: none;
   }
 }
 
 .menu-flash {
-  color: $color-shades-white;
+  color: colors.$color-shades-white;
   animation-name: flash;
   animation-duration: 700ms;
   animation-timing-function: ease-in-out;
@@ -51,15 +51,9 @@
 
 @keyframes flash {
   0% {
-    color: $color-shades-white;
+    color: colors.$color-shades-white;
   }
   25% {
-    color: $color-brand-orange;
-  }
-  50% {
-    color: $color-brand-orange;
-  }
-  100% {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 }

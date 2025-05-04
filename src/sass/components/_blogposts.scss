@@ -1,4 +1,5 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_fonts' as fonts;
 
 .blog-post-header {
   h1:first-child {
@@ -80,7 +81,7 @@
 
 .blogpost-share-buttons {
   svg:hover {
-    fill: $color-brand-orange !important;
+    fill: colors.$color-brand-orange !important;
   }
 }
 
@@ -112,11 +113,11 @@ article {
 
   blockquote {
     word-break: break-word;
-    border-left: 4px solid $color-brand-orange;
+    border-left: 4px solid colors.$color-brand-orange;
     padding: 20px;
     margin-left: 0;
     margin-right: 0;
-    background-color: $color-shades-darkGray;
+    background-color: colors.$color-shades-darkGray;
     width: fit-content;
     p {
       margin-bottom: 0 !important;
@@ -126,26 +127,26 @@ article {
     }
     &::before {
       content: url(../../images/svg/quote_double.svg);
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       margin-bottom: -20px;
       margin-top: -10px;
     }
   }
 
   .blog-island-section {
-    background-color: $color-shades-darkGray;
+    background-color: colors.$color-shades-darkGray;
     padding: 32px 20px;
     margin: 20px 0;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
     font-size: 1.1428571429rem !important;
   }
 
   .blog-special-list {
     display: inline-block;
-    background-color: $color-brand-orange;
-    color: black;
+    background-color: colors.$color-brand-orange;
+    color: colors.$color-shades-black;
     width: 24px;
     height: 24px;
     text-align: center;
@@ -156,9 +157,9 @@ article {
   ul {
     list-style: none;
     margin-left: 40px;
-    font-family: $font-family-secondary;
+    font-family: fonts.$font-family-secondary;
     font-size: 1.1428571429rem !important;
-    font-weight: $font-weight-regular;
+    font-weight: fonts.$font-weight-regular;
     list-style-position: outside !important;
 
     li {
@@ -167,7 +168,7 @@ article {
     }
     li::before {
       content: url(../../images/svg/chevron_right.svg);
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       font-size: 6px;
       position: absolute;
       top: 0;
@@ -184,7 +185,7 @@ article {
   a:visited,
   a:hover,
   a:active {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
     text-decoration: none;
   }
 }

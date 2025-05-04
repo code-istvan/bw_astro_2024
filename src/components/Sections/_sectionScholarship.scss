@@ -1,4 +1,4 @@
-@import '/src/sass/base/_breakpoints';
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .section-scholarship {
   position: relative;
@@ -7,7 +7,7 @@
   align-items: center;
   overflow: hidden;
 
-  @include xs {
+  @include breakpoints.xs {
     width: 100vw;
     left: 50%;
     right: 50%;
@@ -33,7 +33,7 @@
     z-index: 1;
     padding: 20px;
 
-    @include xs {
+    @include breakpoints.xs {
       width: 100%;
     }
 

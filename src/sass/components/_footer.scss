@@ -1,9 +1,10 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .footer {
   a:link {
     text-decoration: none;
-    color: $color-shades-lightGray;
+    color: colors.$color-shades-lightGray;
   }
 
   @media only screen and (min-width: 1px) and (max-width: 320px) {
@@ -86,8 +87,8 @@
 }
 
 .footer__brand {
-  border-bottom: solid 1px $color-shades-lightBlack;
-  border-right: solid 1px $color-shades-lightBlack;
+  border-bottom: solid 1px colors.$color-shades-lightBlack;
+  border-right: solid 1px colors.$color-shades-lightBlack;
   padding: 40px 1rem;
   @include md {
     padding: 2.5rem;
@@ -111,25 +112,25 @@
 
 .footer__navigation__box {
   padding: 40px;
-  border-right: solid 1px $color-shades-lightBlack;
+  border-right: solid 1px colors.$color-shades-lightBlack;
 }
 
 .footer__social {
-  border-top: solid 1px $color-shades-lightBlack;
-  border-bottom: solid 1px $color-shades-lightBlack;
+  border-top: solid 1px colors.$color-shades-lightBlack;
+  border-bottom: solid 1px colors.$color-shades-lightBlack;
 }
 .carbon {
   margin-bottom: 0 !important;
   #wcb.wcb-d #wcb_a {
-    background-color: $color-brand-orange;
-    color: $color-shades-lightBlack;
-    border-color: $color-brand-orange;
+    background-color: colors.$color-brand-orange;
+    color: colors.$color-shades-lightBlack;
+    border-color: colors.$color-brand-orange;
   }
 
   #wcb #wcb_a,
   #wcb #wcb_g {
-    border: 0.13rem solid $color-brand-orange;
-    color: $color-shades-lightBlack;
+    border: 0.13rem solid colors.$color-brand-orange;
+    color: colors.$color-shades-lightBlack;
   }
   margin-bottom: 2rem;
 }
@@ -140,10 +141,10 @@
   text-align: center;
 
   a:link {
-    color: $color-shades-white;
+    color: colors.$color-shades-white;
   }
   a:visited {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 
   p {
@@ -153,12 +154,7 @@
     padding-bottom: 12px;
   }
 
-  // @include md {
-  //   margin-top: 2rem;
-  //   margin-bottom: 2rem;
-  // }
-
-  @include lg {
+  @include breakpoints.lg {
     flex-direction: row;
     justify-content: center;
     div:nth-child(-n + 3) {
@@ -167,7 +163,7 @@
   }
 
   .separator {
-    border-left: solid 2px $color-shades-lightBlack;
+    border-left: solid 2px colors.$color-shades-lightBlack;
     margin-left: 1rem;
     margin-right: 1rem;
   }

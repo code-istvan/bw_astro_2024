@@ -1,7 +1,7 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .blog-card {
-  border-bottom: solid 1px $color-shades-lightBlack;
+  border-bottom: solid 1px colors.$color-shades-lightBlack;
   padding-bottom: 20px;
 }
 
@@ -15,7 +15,7 @@ div.blog-card:nth-last-child(1) {
   flex-direction: row;
   align-items: center;
   p {
-    color: $color-shades-white;
+    color: colors.$color-shades-white;
   }
   padding-bottom: 0.5rem;
 }
@@ -45,7 +45,7 @@ div.blog-card:nth-last-child(1) {
   margin-top: 20px;
 
   a {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
     margin: 4px 0px;
     line-height: 1.4;
     font-size: 16px;

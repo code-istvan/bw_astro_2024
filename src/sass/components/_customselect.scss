@@ -1,13 +1,14 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_fonts' as fonts;
 
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  font-family: $font-family-secondary;
+  font-family: colors.$font-family-secondary;
   font-weight: 800;
   height: 44px;
   width: 100%;
-  background-color: $color-shades-lightGray;
+  background-color: colors.$color-shades-lightGray;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -23,7 +24,7 @@
 /* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 20px;
   right: 12px;
   width: 0;

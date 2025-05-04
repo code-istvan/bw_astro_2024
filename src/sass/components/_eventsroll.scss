@@ -1,10 +1,10 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .event-card {
   h3 {
     text-transform: uppercase;
   }
-  border: solid 2px $color-shades-lightBlack;
+  border: solid 2px colors.$color-shades-lightBlack;
   border-radius: 2px;
   box-sizing: border-box;
   height: 100%;
