@@ -1,3 +1,5 @@
+@use '/src/sass/base/_colors' as colors;
+
 *:where(:not(iframe, canvas, img, svg, video):not(svg *, footer, footer *)) {
   all: unset;
   display: revert;
@@ -37,9 +39,9 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: $color-brand-orange;
+  color: colors.$color-brand-orange;
 }
 
 a:hover p {
-  color: $color-brand-orange;
+  color: colors.$color-brand-orange;
 }
