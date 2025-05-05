@@ -41,6 +41,8 @@ export const ui = {
     tudnivalok: 'TUDNIVALÓK',
     kapcsolat: 'KAPCSOLAT',
     kapcsolatLink: '/kapcsolat',
+    blog: 'BLOG',
+    blogLink: '/blog',
 
     // KapcsolatForm
     kapcsolatFormName: 'Név',
@@ -142,6 +144,8 @@ export const ui = {
     tudnivalok: 'INFORMATION',
     kapcsolat: 'CONTACT',
     kapcsolatLink: '/en/kapcsolat',
+    blog: 'BLOG',
+    blogLink: '/en/blog',
 
     // KapcsolatForm
     kapcsolatFormName: 'Name',

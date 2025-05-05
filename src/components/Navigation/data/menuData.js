@@ -33,7 +33,7 @@ export const getMenuItemsTudnivalok = (translatePath, t) => [
 ];
 
 export const getMenuItemsFomenu = (translatePath, t) => [
-  { link: '/blog', label: 'BLOG' },
+  { link: translatePath(`/blog/`), label: t('blog') },
   {
     link: 'https://shop.bandha.works',
     label: 'SHOP',
