@@ -11,7 +11,7 @@ html {
 html,
 body {
   background-color: colors.$primary-background-color;
-  color: $color-shades-white;
+  color: colors.$color-shades-white;
   // overflow-x: hidden;
   // overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
