@@ -1,8 +1,9 @@
-@import '_colors';
-@import '_fonts';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_fonts' as fonts;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 html {
-  @include lg {
+  @include breakpoints.lg {
     font-size: 14px;
   }
 }
@@ -24,35 +25,35 @@ strong {
   font-weight: bold;
 }
 
-@include xs {
+@include breakpoints.xs {
   html,
   body {
-    font-size: $base-font-size-mobile;
+    font-size: fonts.$base-font-size-mobile;
   }
 }
 
-@include md {
+@include breakpoints.md {
   html,
   body {
-    font-size: $base-font-size-tablet;
+    font-size: fonts.$base-font-size-tablet;
   }
 }
 
-@include xl {
+@include breakpoints.xl {
   html,
   body {
-    font-size: $base-font-size-desktop;
+    font-size: fonts.$base-font-size-desktop;
   }
 }
 
 section {
-  @include xs {
+  @include breakpoints.xs {
     margin-bottom: 20px;
   }
-  @include md {
+  @include breakpoints.md {
     margin-bottom: 20px;
   }
-  @include xl {
+  @include breakpoints.xl {
     margin-bottom: 120px;
   }
 }
