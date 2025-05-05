@@ -140,7 +140,7 @@
 .title-with-background {
   background-color: colors.$color-brand-orange;
   // color: $color-shades-black;
-  color: white;
+  color: colors.$color-shades-white;
   padding: 0.5rem 1rem;
   line-height: 1.6; // Ez növeli a sorok közötti távolságot
   box-decoration-break: clone;
@@ -179,7 +179,7 @@ article {
     margin-bottom: 2rem;
     font-family: fonts.$font-family-secondary;
     font-size: 1.1428571429rem !important;
-    font-weight: $font-weight-regular;
+    font-weight: fonts.$font-weight-regular;
     list-style-position: outside !important;
 
     li {
