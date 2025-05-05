@@ -1,3 +1,6 @@
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
+
 .btn {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
@@ -27,7 +30,7 @@
 
 .btn--plain--naked {
   background-color: transparent;
-  color: $color-shades-black;
+  color: colors.$color-shades-black;
   border: none;
   padding: 0;
   font-size: 16px;
@@ -38,20 +41,20 @@
 }
 
 .btn--primary--solid {
-  background-color: $color-brand-orange;
-  color: $color-shades-black;
-  border: 2px solid $color-brand-orange;
+  background-color: colors.$color-brand-orange;
+  color: colors.$color-shades-black;
+  border: 2px solid colors.$color-brand-orange;
 }
 
 .btn--primary--solid:hover {
-  background-color: darken($color-brand-orange, 10%);
-  border-color: darken($color-brand-orange, 10%);
-  color: $color-shades-black;
+  background-color: darken(colors.$color-brand-orange, 10%);
+  border-color: darken(colors.$color-brand-orange, 10%);
+  color: colors.$color-shades-black;
 }
 
 .btn--primary--solid--full {
-  background-color: $color-brand-orange;
-  color: $color-shades-black;
+  background-color: colors.$color-brand-orange;
+  color: colors.$color-shades-black;
   border: none;
   width: 100%;
   transition: opacity 0.3s ease;
@@ -62,10 +65,10 @@
 }
 
 .btn--third--solid {
-  background-color: $color-shades-black;
-  color: $color-shades-white;
-  border: 2px solid $color-shades-black;
-  @include xl {
+  background-color: colors.$color-shades-black;
+  color: colors.$color-shades-white;
+  border: 2px solid colors.$color-shades-black;
+  @include breakpoints.xl {
     font-size: 20px;
     font-weight: 600;
     padding: 16px 32px;
@@ -79,34 +82,34 @@
 .btn--primary--outline {
   background-color: transparent;
   transition: transform 0.5s ease;
-  color: $color-brand-orange;
-  border: 2px solid $color-brand-orange;
+  color: colors.$color-brand-orange;
+  border: 2px solid colors.$color-brand-orange;
 }
 
 .btn--primary--outline:hover {
   transform: translateY(0px);
-  background-color: $color-brand-orange;
-  color: $color-shades-black;
+  background-color: colors.$color-brand-orange;
+  color: colors.$color-shades-black;
 }
 
 .btn--primary--outline-full {
   background-color: transparent;
-  color: $color-brand-orange;
-  border: 2px solid $color-brand-orange;
+  color: colors.$color-brand-orange;
+  border: 2px solid colors.$color-brand-orange;
   width: 100%;
 }
 
 .btn--primary--outline-full:hover {
   transform: translateY(0px);
-  background-color: $color-brand-orange;
-  color: $color-shades-black;
+  background-color: colors.$color-brand-orange;
+  color: colors.$color-shades-black;
 }
 
 .btn--secondary--solid {
-  background-color: $color-shades-gray;
-  color: $color-shades-black;
+  background-color: colors.$color-shades-gray;
+  color: colors.$color-shades-black;
 
-  @include xl {
+  @include breakpoints.xl {
     font-size: 20px;
     font-weight: 600;
     padding: 16px 32px;
@@ -114,13 +117,13 @@
 }
 
 .btn--secondary--solid:hover {
-  color: $color-shades-black;
+  color: colors.$color-shades-black;
   opacity: 0.7;
 }
 
 .btn--secondary--solid--full {
-  background-color: $color-shades-gray;
-  color: $color-shades-black;
+  background-color: colors.$color-shades-gray;
+  color: colors.$color-shades-black;
   width: 100%;
 
   // @include xl {
@@ -133,10 +136,10 @@
 // footer button
 .btn--secondary--outline {
   background-color: transparent;
-  color: $color-shades-lightGray;
-  border: 2px solid $color-shades-lightGray;
+  color: colors.$color-shades-lightGray;
+  border: 2px solid colors.$color-shades-lightGray;
 
-  @include xl {
+  @include breakpoints.xl {
     font-size: 20px;
     font-weight: 600;
     padding: 16px 32px;
@@ -145,16 +148,16 @@
 
 .btn--secondary--outline:hover {
   transform: translateY(0px);
-  background-color: $color-shades-lightGray;
-  color: $color-shades-black;
+  background-color: colors.$color-shades-lightGray;
+  color: colors.$color-shades-black;
 }
 
 // shop modal button
 .btn--third--outline {
   background-color: transparent;
-  color: $color-shades-black;
-  border: 2px solid $color-shades-black;
-  @include xl {
+  color: colors.$color-shades-black;
+  border: 2px solid colors.$color-shades-black;
+  @include breakpoints.xl {
     font-size: 20px;
     font-weight: 600;
     padding: 16px 32px;
@@ -163,14 +166,14 @@
 
 .btn--third--outline:hover {
   transform: translateY(0px);
-  background-color: $color-shades-black;
-  color: $color-shades-white;
+  background-color: colors.$color-shades-black;
+  color: colors.$color-shades-white;
 }
 
 //blog posts, events button
 .btn--third--naked-orange {
   background-color: transparent;
-  color: $color-brand-orange;
+  color: colors.$color-brand-orange;
   font-weight: 600;
   padding-left: 0;
   padding-right: 0;
@@ -183,20 +186,20 @@
 .btn--third--naked-orange:hover {
   transform: translateY(0px);
   background-color: transparent;
-  color: $color-brand-orange;
-  text-decoration: underline 3px solid $color-brand-orange;
+  color: colors.$color-brand-orange;
+  text-decoration: underline 3px solid colors.$color-brand-orange;
 }
 
 .btn--small--outline {
   background-color: transparent;
-  color: $color-shades-lightGray;
-  border: 2px solid $color-shades-lightGray;
+  color: colors.$color-shades-lightGray;
+  border: 2px solid colors.$color-shades-lightGray;
 }
 
 .btn--small--outline:hover {
   transform: translateY(0px);
-  background-color: $color-shades-lightGray;
-  color: $color-shades-black;
+  background-color: colors.$color-shades-lightGray;
+  color: colors.$color-shades-black;
 }
 
 .center-button {
