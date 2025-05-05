@@ -6,7 +6,7 @@ description: Ross Stambaugh közel 25 éve gyakorolja az Astanga jógát. Az
   interjúban megosztja tapasztalatait és útját Mysore-tól Budapestig.
 author: István
 tags:
-  - astanga interjú
+  - interjú
 date: 2024-10-24T17:12:00.000Z
 image: ../../images/uploads/ross_1800x600.jpeg
 imageMobil: ../../images/uploads/ross_1080x1080.jpeg
