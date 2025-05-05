@@ -2,9 +2,8 @@
 published: true
 language: Hungarian
 title: Negyed évszázad astanga jógája – Beszélgetés Ross Stambaugh-val (USA)
-description:
-  Ross Stambaugh közel 25 éve gyakorolja az Astanga jógát. Az interjúban megosztja tapasztalatait és útját Mysore-tól
-  Budapestig.
+description: Ross Stambaugh közel 25 éve gyakorolja az Astanga jógát. Az
+  interjúban megosztja tapasztalatait és útját Mysore-tól Budapestig.
 author: István
 tags:
   - astanga interjú
@@ -12,11 +11,7 @@ date: 2024-10-24T17:12:00.000Z
 image: ../../images/uploads/ross_1800x600.jpeg
 imageMobil: ../../images/uploads/ross_1080x1080.jpeg
 ---
-
-Ross Stambaugh közel 25 éve járja az astanga jóga útját, amely során számos országba eljutott, és rendszeresen visszatér
-a tradíció központjába, Mysore-ba. Ebben az interjúban mesél a jógával való találkozásáról, tanári tapasztalatairól és
-az életét átalakító hatásokról, amelyek túlmutatnak a fizikai gyakorláson. Hamarosan Budapestre érkezik, hogy megossza
-tudását a helyi astangás közösséggel.
+### Ross Stambaugh közel 25 éve járja az astanga jóga útját, amely során számos országba eljutott, és rendszeresen visszatér a tradíció központjába, Mysore-ba. Ebben az interjúban mesél a jógával való találkozásáról, tanári tapasztalatairól és az életét átalakító hatásokról, amelyek túlmutatnak a fizikai gyakorláson. Hamarosan Budapestre érkezik, hogy megossza tudását a helyi astangás közösséggel.
 
 ### Hogyan ismerkedtél meg az astanga jógával?
 
