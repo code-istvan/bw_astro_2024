@@ -9,22 +9,3 @@
 .tag-container p {
   margin: 0;
 }
-
-.blog__tag {
-  display: inline-block;
-  padding: 4px 12px;
-  background-color: colors.$color-shades-darkGray;
-  cursor: pointer;
-  text-decoration: none;
-
-  p {
-    color: colors.$color-shades-gray;
-    margin: 0;
-  }
-}
-
-.blog__tag:hover {
-  p {
-    color: colors.$color-brand-orange;
-  }
-}

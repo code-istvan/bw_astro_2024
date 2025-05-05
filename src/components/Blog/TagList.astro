@@ -2,8 +2,16 @@
 import { getCollection } from 'astro:content';
 import './_blog.scss';
 
+// Language prop alapértéke: magyar
+const language = Astro.props.language || 'Hungarian';
+
 const allPosts = await getCollection('blog');
-const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+// Posztok szűrése nyelv szerint - a language mező teljes névvel szerepel
+const filteredPosts = allPosts.filter((post) => post.data.language === language);
+
+// Tag-ek kinyerése a szűrt posztokból
+const tags = [...new Set(filteredPosts.map((post) => post.data.tags).flat())];
 
 const tagContainerClass = `${Astro.props.class || ''} tag-container`.trim();
 ---

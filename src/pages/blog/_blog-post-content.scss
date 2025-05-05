@@ -1,6 +1,6 @@
-@import '/src/sass/base/_colors';
-@import '/src/sass/base/_breakpoints';
-@import '/src/sass/base/_fonts';
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_fonts' as fonts;
 
 // Layout
 .blog-content {
@@ -44,7 +44,7 @@
   }
 
   &__desktop-image {
-    @include xl {
+    @include breakpoints.xl {
       margin-bottom: 20px;
     }
 
@@ -88,7 +88,7 @@
           transform: translateY(-50%);
           height: 24px;
           width: 2px;
-          background-color: $color-shades-lightBlack;
+          background-color: colors.$color-shades-lightBlack;
         }
       }
     }
@@ -138,7 +138,7 @@
 }
 
 .title-with-background {
-  background-color: $color-brand-orange;
+  background-color: colors.$color-brand-orange;
   // color: $color-shades-black;
   color: white;
   padding: 0.5rem 1rem;
@@ -165,7 +165,7 @@ article {
   }
 
   h3 {
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 
   strong {
@@ -177,7 +177,7 @@ article {
     list-style: none;
     margin-left: 40px;
     margin-bottom: 2rem;
-    font-family: $font-family-secondary;
+    font-family: fonts.$font-family-secondary;
     font-size: 1.1428571429rem !important;
     font-weight: $font-weight-regular;
     list-style-position: outside !important;
@@ -188,7 +188,7 @@ article {
 
       &::before {
         content: url(../../images/svg/chevron_right.svg);
-        color: $color-brand-orange;
+        color: colors.$color-brand-orange;
         font-size: 6px;
         position: absolute;
         top: 0;
@@ -210,7 +210,7 @@ article {
     &:visited,
     &:hover,
     &:active {
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       text-decoration: none;
     }
   }
@@ -218,11 +218,11 @@ article {
   // Quotes
   blockquote {
     word-break: break-word;
-    border-left: 4px solid $color-brand-orange;
+    border-left: 4px solid colors.$color-brand-orange;
     padding: 20px;
     margin-left: 0;
     margin-right: 0;
-    background-color: $color-shades-darkGray;
+    background-color: colors.$color-shades-darkGray;
     width: fit-content;
 
     p {
@@ -234,7 +234,7 @@ article {
 
     &::before {
       content: url(../../images/svg/quote_double.svg);
-      color: $color-brand-orange;
+      color: colors.$color-brand-orange;
       margin-bottom: -20px;
       margin-top: -10px;
     }
@@ -242,19 +242,19 @@ article {
 
   // Special Sections
   .blog-island-section {
-    background-color: $color-shades-darkGray;
+    background-color: colors.$color-shades-darkGray;
     padding: 32px 20px;
     margin: 20px 0;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
     font-size: 1.1428571429rem !important;
   }
 
   .blog-special-list {
     display: inline-block;
-    background-color: $color-brand-orange;
-    color: black;
+    background-color: colors.$color-brand-orange;
+    color: colors.$color-shades-black;
     width: 24px;
     height: 24px;
     text-align: center;

@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .blog__container {
   display: flex;
@@ -45,7 +45,7 @@
 
 .blog__post-wrapper {
   &:not(:last-child) {
-    border-bottom: 1px solid $color-shades-lightBlack;
+    border-bottom: 1px solid colors.$color-shades-lightBlack;
     padding-bottom: 10px;
     margin-bottom: 24px;
   }
@@ -62,7 +62,7 @@
 .blog__separator-horizontal {
   height: 1px;
   width: 100%;
-  background-color: $color-shades-lightBlack;
+  background-color: colors.$color-shades-lightBlack;
   margin-top: 40px;
 }
 
