@@ -1,8 +1,9 @@
 @use '/src/sass/base/_colors' as colors;
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_fonts' as fonts;
 
 .btn {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: fonts.$font-family-secondary;
   font-weight: 400;
   cursor: pointer;
   transition: transform 0.5s ease;
