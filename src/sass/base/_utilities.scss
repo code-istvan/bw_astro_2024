@@ -159,10 +159,10 @@
 .island-section-tradition {
   background-color: colors.$color-shades-darkGray;
   margin: 20px 0;
-  @include xs {
+  @include breakpoints.xs {
     padding: 32px 8px;
   }
-  @include md {
+  @include breakpoints.md {
     padding: 32px 20px;
   }
 }
@@ -364,7 +364,7 @@ ol {
     width: 1.4em;
     height: 1.4em;
     background-color: colors.$color-brand-orange;
-    color: $color-shades-black;
+    color: colors.$color-shades-black;
     font-family: fonts.$font-family-secondary;
     font-weight: 800;
     text-align: center;
