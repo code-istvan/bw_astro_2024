@@ -1,11 +1,12 @@
 ---
 published: true
 language: English
-title: '25 Years of Ashtanga: An Interview with Ross Stambaugh'
-description:
-  In this interview, Ross Stambaugh reflects on 25 years of practicing and teaching Ashtanga yoga. He shares his journey
-  from discovering the practice in Cincinnati to his many visits to Mysore, where he continues to deepen his
-  understanding. Learn how Ashtanga has shaped his life both on and off the mat.
+title: "25 Years of Ashtanga: An Interview with Ross Stambaugh"
+description: In this interview, Ross Stambaugh reflects on 25 years of
+  practicing and teaching Ashtanga yoga. He shares his journey from discovering
+  the practice in Cincinnati to his many visits to Mysore, where he continues to
+  deepen his understanding. Learn how Ashtanga has shaped his life both on and
+  off the mat.
 author: István
 tags:
   - interview
@@ -14,8 +15,7 @@ image: ../../images/uploads/ross_1800x600.jpeg
 imageMobil: ../../images/uploads/ross_1080x1080.jpeg
 ---
 
-In this interview, Ross Stambaugh reflects on 25 years of practicing and teaching Ashtanga yoga. He shares his journey
-from discovering the practice in Cincinnati to his many visits to Mysore, where he continues to deepen his
+### In this interview, Ross Stambaugh reflects on 25 years of practicing and teaching Ashtanga yoga. He shares his journey from discovering the practice in Cincinnati to his many visits to Mysore, where he continues to deepen his
 understanding. Learn how Ashtanga has shaped his life both on and off the mat.
 
 ### How did you get introduced to Ashtanga yoga?
