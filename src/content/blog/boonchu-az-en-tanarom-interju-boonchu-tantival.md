@@ -52,4 +52,7 @@ A másik oldal a visszacsatolás. Az emberek nem akarnak változtatni azon, amit
 Sharath azt mondja, hogy heti hat napot kell gyakorolni, egyébként nem segíthet rajtad. Csak fel kell kelned és gyakorolni. Ez a te életed. 
 Még ha nem is akarom, akkor is megteszem. Az első egy-két évben a gyakorlás izgalmas lehet: Óhh, ezt vagy azt akarom csinálni, hátraugrani, előreugrani, hátrahajolni stb. De ha elmúlt az izgalom, akkor találsz valami mozdulatot, amit szeretsz. Meg kell tennem, és biztosnak kell lennem abban, hogy jól csinálom, hogy ne „öljem meg” magam, mivel sok diák várja, hogy tanítsam őket. Heti hat napon ezt kell tennem! Ez az én életem!
 
-**Fordította:** Dr. Kővári Zsuzsa
+**Az írás szerzője, az interjút készítette:** Yulia Smirnova  
+**Az interjú eredeti angol címe:** [Boonchu is My Teacher. Interview with Boonchu Tanti.](https://yuliawordpress.wordpress.com/2017/05/02/boonchu-is-my-teacher-interview-with-boonchu-tanti/)  
+**Fordította:** Dr. Kővári Zsuzsa  
+
