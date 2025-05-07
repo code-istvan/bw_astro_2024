@@ -42,7 +42,7 @@ const { title, description, image = desktopImage, canonical, language, canonical
 <meta
     property="og:image"
     content={typeof image === 'string'
-        ? new URL(image, Astro.site)
+        ? new URL(image.replace(/^\.\.\/\.\.\/images\/uploads\//, 'assets/images/uploads/'), Astro.site)
         : new URL(image?.src || desktopImage.src, Astro.site)}
 />
 <!-- <meta property="og:image" content={new URL(image?.src || desktopImage.src, Astro.site)} /> -->
