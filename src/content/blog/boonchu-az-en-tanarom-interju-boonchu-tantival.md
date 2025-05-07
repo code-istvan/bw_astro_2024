@@ -1,7 +1,7 @@
 ---
 published: true
 language: Hungarian
-title: "Boonchu az én tanárom. Interjú Boonchu Tantival "
+title: Boonchu az én tanárom
 titleBackground: false
 canonical: https://yuliawordpress.wordpress.com/2017/05/02/boonchu-is-my-teacher-interview-with-boonchu-tanti/
 canonicalLanguage: English
