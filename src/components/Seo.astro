@@ -39,13 +39,6 @@ const { title, description, image = desktopImage, canonical, language, canonical
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta
-    property="og:image"
-    content={typeof image === 'string'
-        ? new URL(image.replace(/^\.\.\/\.\.\/images\/uploads\//, 'assets/images/uploads/'), Astro.site)
-        : new URL(image?.src || desktopImage.src, Astro.site)}
-/>
-<!-- <meta property="og:image" content={new URL(image?.src || desktopImage.src, Astro.site)} /> -->
 <!-- <meta property="og:image" content={new URL(image?.src, Astro.url)} /> -->
 <!-- <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
