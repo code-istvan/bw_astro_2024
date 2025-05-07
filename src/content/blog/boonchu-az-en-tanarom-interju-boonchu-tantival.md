@@ -19,6 +19,8 @@ imageMobil: ../../images/uploads/boonchu.jpeg
 ---
 ### Boonchu Tanti az astanga 2. sorozatának tanítására felhatalmazott jógatanár Bangkokban. Ő a bangkoki Ashtanga Yoga Center (AYBKK) alapítója. Boonchu végzettsége szerint mérnök, elkötelezett tanár és gyakorló. Érdekli a fotózás, videózás, illetőleg az astanga témakörében digitális képeket, rajzokat készít. A világ minden tájáról érkeznek hozzá gyakorolni, és a tanítványai a legképzettebbek. Boonchu 12 éve gyakorol astanga jógát. Minden reggel a szádhanájával kezdi a napot, és utána tanítja diákjait. Ebben az interjúban mesélni fog nekünk az első astangás élményeiről és tanítási stílusáról.
 
+**Az interjú 2017.05.02-án készült.**
+
 ### Tudom, hogy sok időt töltöttél az edzőteremben, mielőtt elkezdtél astangázni. Miért az astangát választottad? Mesélj nekünk az első tapasztalataidról.
 
 Több mint 10 évig sok időt töltöttem az edzőteremben. Bangkokban nőttem fel. Bangkokban az emberek nem sportoltak annyit, mint Európában és Amerikában. Úgy gondolom, hogy az emberek a majmoktól származnak, és ebből adódóan képesnek kell lennünk úgy mozogni, mint a majmok. Mindig is szerettem mozogni, mászni és futni. A barátaimmal fociztam, kosárlabdáztam és úsztam. Később elkezdtem edzeni egy edzőteremben. Amikor Amerikába költöztem, edzőterembe járni kevésbé volt időigényes, mint más dolgok. Ott át tudtam mozgatni az egész testemet, illetve külön-külön dolgoztam a különböző testrészeimen, mint például vádli, hasizom, lábak, stb. Szerettem volna egyszerre az egész testemet átmozgatni, de nem tudtam, hogyan csináljam. Hamar rájöttem, hogy az edzéseimnek nincs értelme.
