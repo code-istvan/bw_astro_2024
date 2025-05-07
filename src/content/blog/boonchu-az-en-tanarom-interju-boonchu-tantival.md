@@ -14,8 +14,8 @@ author: Zsuzsi
 tags:
   - interjú
 date: 2025-05-06T16:21:00.000Z
-image: ../../images/uploads/yogi_1.jpeg
-imageMobil: ../../images/uploads/yogi_2.jpeg
+image: ../../images/uploads/boonchu2.jpeg
+imageMobil: ../../images/uploads/boonchu.jpeg
 ---
 ### Boonchu Tanti az astanga 2. sorozatának tanítására felhatalmazott jógatanár Bangkokban. Ő a bangkoki Ashtanga Yoga Center (AYBKK) alapítója. Boonchu végzettsége szerint mérnök, elkötelezett tanár és gyakorló. Érdekli a fotózás, videózás, illetőleg az astanga témakörében digitális képeket, rajzokat készít. A világ minden tájáról érkeznek hozzá gyakorolni, és a tanítványai a legképzettebbek. Boonchu 12 éve gyakorol astanga jógát. Minden reggel a szádhanájával kezdi a napot, és utána tanítja diákjait. Ebben az interjúban mesélni fog nekünk az első astangás élményeiről és tanítási stílusáról.
 
