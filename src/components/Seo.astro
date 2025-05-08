@@ -2,7 +2,7 @@
 import desktopImage from '../images/mysore_desktop.jpg';
 
 const originalCanonical = new URL(Astro.url.pathname, Astro.site);
-const { title, description, image = desktopImage.src, canonical, language, canonicalLanguage } = Astro.props;
+const { title, description, image = desktopImage, canonical, language, canonicalLanguage } = Astro.props;
 
 const images = await import.meta.glob<{ default: ImageMetadata }>('../images/uploads/**/*.{jpeg,jpg,png,gif}');
 console.log('image', image);
