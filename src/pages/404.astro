@@ -1,22 +1,28 @@
 ---
 import Link from '../components/Link.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import desktopImage from '../images/404_desktop.jpeg';
+import mobileImage from '../images/404_mobil.jpeg';
+
+const metadata = {
+    title: '404! NENT TALÁLOM!',
+    description: 'Ezen az oldalon nem található semmi.',
+};
 ---
 
-<BaseLayout title="Page Not Found" noindex={true}>
-    <div
-        class="container"
-        style={{
-            display: 'grid',
-            placeItems: 'center',
-            textAlign: 'center',
-            gap: 'var(--space-sm)',
-        }}
-    >
-        <div>
-            <h1 class="h1">404! Nem találom</h1>
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="mt-40px mb-40px">
             <p>A keresett oldal nem létezik, vagy eltávolításra került.</p>
+            <a href="/" class="link-enhanced link-orange">Vissza a FŐOLDALRA</a>
         </div>
-        <Link href="/" style="secondary" text="Vissza a FŐOLDALRA" />
     </div>
 </BaseLayout>
