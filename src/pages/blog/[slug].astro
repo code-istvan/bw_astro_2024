@@ -45,15 +45,19 @@ type Props = {
 const { post, minutesRead } = Astro.props;
 const { Content } = await post.render();
 const currentAuthor = authors.find((author) => author.data.name === post.data.author);
+
+console.log('404', await images[post.data.image]());
+console.log('403', (await images[post.data.image]()).default);
+const ogImage = images[post.data.image] ? (await images[post.data.image]()).default : null;
 ---
 
 <BlogPostLayout
     title={post.data.title}
     language={post.data.language}
+    image={ogImage}
     canonical={post.data.canonical}
     canonicalLanguage={post.data.canonicalLanguage}
     titleBackground={post.data.titleBackground}
-    image={post.data.image}
     description={post.data.description}
 >
     {
