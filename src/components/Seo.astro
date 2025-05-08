@@ -3,9 +3,6 @@ import desktopImage from '../images/mysore_desktop.jpg';
 
 const originalCanonical = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = desktopImage, canonical, language, canonicalLanguage } = Astro.props;
-
-const images = await import.meta.glob<{ default: ImageMetadata }>('../images/uploads/**/*.{jpeg,jpg,png,gif}');
-console.log('image', image);
 ---
 
 <title>{title} | Bandha Works Astanga Jógaiskola</title>
@@ -43,11 +40,3 @@ console.log('image', image);
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
-<!-- <meta property="og:image" content={new URL(image?.src, Astro.url)} /> -->
-<!-- <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://bandha.works/_astro/mysore_desktop.TkYHQufV.jpg">
-<!-- <meta property="twitter:creator" content={TWITTER_HANDLE} />
-<meta property="twitter:site" content={TWITTER_HANDLE} /> -->
