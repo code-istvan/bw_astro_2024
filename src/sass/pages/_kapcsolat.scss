@@ -1,10 +1,10 @@
-@import '/src/sass/base/_grid';
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .contact-header {
-  @include xs {
+  @include breakpoints.xs {
     margin-top: 20px;
   }
-  @include md {
+  @include breakpoints.md {
     margin-top: 40px;
   }
 }

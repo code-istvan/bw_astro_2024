@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .horizontal-scroller {
   width: 100%;
@@ -53,11 +53,11 @@
 .dot {
   width: 10px;
   height: 10px;
-  background: $color-shades-darkGray;
+  background: colors.$color-shades-darkGray;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .dot.active {
-  background: $color-brand-orange;
+  background: colors.$color-brand-orange;
 }
