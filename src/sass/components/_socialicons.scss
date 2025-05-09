@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .socialIcons-box {
   @media only screen and (min-width: 1px) and (max-width: 370px) {
@@ -15,7 +15,6 @@
   @media only screen and (min-width: 371px) {
     display: flex;
     flex-direction: row;
-    // justify-content: center;
 
     div:nth-child(-n + 2) {
       svg {
@@ -25,11 +24,11 @@
   }
 
   svg {
-    fill: $color-shades-lightGray;
+    fill: colors.$color-shades-lightGray;
   }
 
   svg:hover {
-    fill: $color-brand-orange;
+    fill: colors.$color-brand-orange;
   }
 }
 

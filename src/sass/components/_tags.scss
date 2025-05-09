@@ -1,9 +1,9 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .tags__page {
   a {
     padding-left: 20px;
-    color: $color-shades-white;
+    color: colors.$color-shades-white;
   }
   a:link {
     text-decoration: none;
@@ -15,7 +15,7 @@
 
   a:hover {
     text-decoration: none;
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 
   a:active {

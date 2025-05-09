@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .navbar-menu-mobil-header-wrapper {
   margin: 28px 14px 0;
@@ -11,6 +11,6 @@
     flex-wrap: wrap;
     z-index: 2;
     padding-bottom: 28px;
-    border-bottom: 1px solid $color-shades-darkGray;
+    border-bottom: 1px solid colors.$color-shades-darkGray;
   }
 }

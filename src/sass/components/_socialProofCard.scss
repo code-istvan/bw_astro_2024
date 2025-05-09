@@ -1,10 +1,11 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .social-proof-card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   margin-bottom: 16px;
 
   @media only screen and (min-width: 1px) and (max-width: 300px) {
@@ -60,10 +61,10 @@
 .social-proof-card__wrapper-body {
   text-align: left;
   margin-top: 12px;
-  @include xs {
+  @include breakpoints.xs {
     height: 180px;
   }
-  @include md {
+  @include breakpoints.md {
     height: 100px;
   }
 }
@@ -100,26 +101,21 @@
   }
 
   dialog {
-    background-color: $color-shades-darkGray;
-    color: $color-shades-white;
+    background-color: colors.$color-shades-darkGray;
+    color: colors.$color-shades-white;
     padding-bottom: 24px;
-    @include xs {
+    @include breakpoints.xs {
       margin-top: 60px;
       margin-left: 5%;
       margin-right: 5%;
     }
-    @include md {
+    @include breakpoints.md {
       margin-top: 10%;
       margin-left: 10%;
       margin-right: 10%;
       max-height: 90vh;
       overflow-y: auto;
     }
-    // @include xl {
-    //   margin-top: auto;
-    //   margin-left: 10%;
-    //   margin-right: 10%;
-    // }
 
     p {
       margin-right: 30px;
@@ -149,12 +145,11 @@ dialog:div {
   }
   to {
     opacity: 1;
-    // transform: translateY(-10%) scale(1);
   }
 }
 
 .social-proof-card--modal-open {
-  background-color: orange;
+  background-color: colors.$color-brand-orange;
   animation: dialogFadeIn 0.3s ease-out;
 }
 
@@ -165,5 +160,5 @@ dialog:div {
 }
 
 dialog::backdrop {
-  background-color: rgba(38, 38, 38, 0.9);
+  background-color: colors.$color-shades-darkerGray;
 }

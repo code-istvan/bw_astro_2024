@@ -1,4 +1,5 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .tabs__checkbox {
   position: absolute;
@@ -7,22 +8,22 @@
 }
 
 .tabs__label.active {
-  color: orange;
+  color: colors.$color-brand-orange;
   margin-bottom: -2px;
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid colors.$color-brand-orange;
 }
 
 .tabs__label.not-active:hover {
-  color: orange;
+  color: colors.$color-brand-orange;
 }
 
 .tabs__header {
   display: flex;
   cursor: pointer;
-  border-bottom: 1px solid $color-shades-lightBlack;
+  border-bottom: 1px solid colors.$color-shades-lightBlack;
   gap: 28px;
 
-  @include xs {
+  @include breakpoints.xs {
     width: 100%;
     justify-content: space-between;
   }
