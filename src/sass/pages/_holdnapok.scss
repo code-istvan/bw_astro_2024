@@ -1,22 +1,24 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
+@use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_fonts' as fonts;
 
 .holdnapok-wrapper {
   table {
-    font-family: arial, sans-serif;
+    font-family: fonts.$font-family-secondary;
     border-collapse: collapse;
     width: 100%;
   }
 
   td,
   th {
-    border: 1px solid #dddddd;
+    border: 1px solid colors.$color-shades-gray;
     text-align: left;
     padding: 8px;
-    color: $color-brand-orange;
+    color: colors.$color-brand-orange;
   }
 
   tr:nth-child(even) {
-    background-color: $color-shades-lightBlack;
+    background-color: colors.$color-shades-lightBlack;
   }
 }
 
@@ -63,40 +65,40 @@
 
   .button--is-inactive p {
     padding: 11px 0;
-    color: $color-shades-lightBlack;
+    color: colors.$color-shades-lightBlack;
   }
 }
 
 .holdnapok--right-side {
-  @include lg {
+  @include breakpoints.lg {
     order: 2;
     margin-top: 40px;
   }
 }
 
 .moondays--holdnaptar-text {
-  @include xs {
+  @include breakpoints.xs {
     display: none;
   }
-  @include lg {
+  @include breakpoints.lg {
     display: block;
   }
 }
 
 .moondays--tab {
-  @include xs {
+  @include breakpoints.xs {
     margin-top: -40px;
   }
-  @include lg {
+  @include breakpoints.lg {
     margin-top: 0px;
   }
 }
 
 .moondays--star-section {
-  @include xs {
+  @include breakpoints.xs {
     display: block;
   }
-  @include lg {
+  @include breakpoints.lg {
     display: none;
   }
 }

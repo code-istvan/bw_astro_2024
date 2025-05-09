@@ -1,7 +1,7 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .szaznyolc-timings {
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
 }
 
 .szaznyolc-timings--wrapper {

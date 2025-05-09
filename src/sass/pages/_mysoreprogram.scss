@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_breakpoints' as breakpoints;
 
 .card__mysore-program {
   padding: 20px;
@@ -10,7 +10,7 @@
 
 .mysore-program--wrapper {
   .framed-section-orange__body {
-    @include xl {
+    @include breakpoints.xl {
       width: 90%;
     }
   }
