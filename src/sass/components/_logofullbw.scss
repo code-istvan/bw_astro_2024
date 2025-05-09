@@ -1,7 +1,7 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 #fulllogo {
-  fill: $logo-color-primary;
+  fill: colors.$logo-color-primary;
   margin-top: 20px;
   margin-bottom: 4px;
 }

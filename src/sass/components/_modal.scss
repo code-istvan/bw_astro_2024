@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .modal--overlay {
   position: fixed;
@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparentize(colors.$color-shades-black, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .modal--content {
-  background-color: $color-shades-lightGray;
-  color: black;
+  background-color: colors.$color-shades-lightGray;
+  color: colors.$color-shades-black;
   padding: 40px;
   max-width: 500px;
   border-radius: 4px;

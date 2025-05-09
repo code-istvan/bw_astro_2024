@@ -1,11 +1,11 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 #text {
-  fill: whitesmoke;
+  fill: colors.$color-shades-lightGray;
 }
 
 #logo_text {
-  fill: $logo-color-primary;
+  fill: colors.$logo-color-primary;
 }
 
 ._logo_text {

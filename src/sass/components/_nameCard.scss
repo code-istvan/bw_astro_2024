@@ -1,11 +1,11 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 .name-card {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 4px;
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   padding: 12px 12px;
   span {
     font-weight: 800;

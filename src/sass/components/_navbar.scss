@@ -1,4 +1,4 @@
-@import "/src/sass/global";
+@use '/src/sass/base/_colors' as colors;
 
 @keyframes fadein {
   from {
@@ -29,13 +29,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  transition: background-color 200ms ease, transform 800ms ease;
+  transition:
+    background-color 200ms ease,
+    transform 800ms ease;
   z-index: 9999;
 }
 
 .scrolled {
-  background-color: $navbar-scrolled-background-color;
-  // transition: background-color 1300ms ease, transform 200ms ease;
+  background-color: colors.$navbar-scrolled-background-color;
   .logo-round {
     height: 36px;
     width: 36px;
@@ -48,5 +49,5 @@
 
 .hide {
   transform: translateY(-56px);
-  background-color: $primary-background-color;
+  background-color: colors.$primary-background-color;
 }
