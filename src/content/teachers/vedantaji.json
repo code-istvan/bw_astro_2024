@@ -1,0 +1,13 @@
+{
+  "teacher": "Vedanta Anga",
+  "teacherOrder": 11,
+  "published": true,
+  "huTeacherFullName": "Vedanta Anga",
+  "enTeacherFullName": "Vedanta Anga",
+  "enTeacherStyle": "ashtanga yoga",
+  "teacherImage": "src/images/uploads/teachers/vedanta_teacher.png",
+  "huTeacherStyle": "astanga jóga",
+  "teacherLink": "https://vedantaanga.com",
+  "teacherId": "vedantaJi",
+  "offTheMat": false
+}
