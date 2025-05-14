@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 .schedule__date-wrapper {
   height: 3rem;
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $color-shades-lightBlack;
+    background-color: colors.$color-shades-lightBlack;
   }
 }
 

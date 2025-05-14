@@ -15,7 +15,7 @@ const { name, country } = Astro.props;
 </div>
 
 <style lang="scss">
-    @import '/src/sass/base/_colors';
+    @use '/src/sass/base/_colors' as colors;
     .guest-teacher-item {
         display: inline-block;
         margin-right: 8px;
@@ -26,7 +26,7 @@ const { name, country } = Astro.props;
         flex-direction: row;
         align-items: baseline;
         gap: 4px;
-        background-color: $color-shades-darkGray;
+        background-color: colors.$color-shades-darkGray;
         padding: 12px 12px;
         span {
             font-weight: 800;

@@ -1,3 +1,6 @@
+@use '/src/sass/base/_utilities' as utilities;
+@use '/src/sass/base/_buttons' as buttons;
+
 .carousel-wrapper {
   display: block;
 }

@@ -1,6 +1,8 @@
 @use 'sass:math';
+@use 'sass:map';
 @use '_grid' as grid;
 @use '_breakpoints' as breakpoints;
+@use '_functions' as functions;
 
 // Font familis
 $font-family-primary: 'Abril Fatface';
@@ -40,49 +42,49 @@ $small-font-size-mobile: 14px;
 $small-font-size-desktop: 16px;
 
 @function fontSize($type, $device: 'desktop') {
-  @return map-get(map-get($font-sizes, $type), $device);
+  @return map.get(map.get($font-sizes, $type), $device);
 }
 
 $font-sizes: (
   h1: (
-    desktop: calculateRem($base-font-size-desktop, $h1-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $h1-font-size-tablet),
-    mobile: calculateRem($base-font-size-mobile, $h1-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $h1-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $h1-font-size-tablet),
+    mobile: functions.calculateRem($base-font-size-mobile, $h1-font-size-mobile),
   ),
   h2: (
-    desktop: calculateRem($base-font-size-desktop, $h2-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $h2-font-size-tablet),
-    mobile: calculateRem($base-font-size-mobile, $h2-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $h2-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $h2-font-size-tablet),
+    mobile: functions.calculateRem($base-font-size-mobile, $h2-font-size-mobile),
   ),
   h3: (
-    desktop: calculateRem($base-font-size-desktop, $h3-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $h3-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $h3-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $h3-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $h3-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $h3-font-size-mobile),
   ),
   h4: (
-    desktop: calculateRem($base-font-size-desktop, $h4-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $h4-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $h4-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $h4-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $h4-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $h4-font-size-mobile),
   ),
   h5: (
-    desktop: calculateRem($base-font-size-desktop, $h5-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $h5-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $h5-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $h5-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $h5-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $h5-font-size-mobile),
   ),
   body: (
-    desktop: calculateRem($base-font-size-desktop, $body-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $body-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $body-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $body-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $body-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $body-font-size-mobile),
   ),
   span: (
-    desktop: calculateRem($base-font-size-desktop, $span-font-size-desktop),
-    tablet: calculateRem($base-font-size-tablet, $span-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $span-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-desktop, $span-font-size-desktop),
+    tablet: functions.calculateRem($base-font-size-tablet, $span-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $span-font-size-mobile),
   ),
   small: (
-    desktop: calculateRem($base-font-size-mobile, $small-font-size-mobile),
-    tablet: calculateRem($base-font-size-mobile, $small-font-size-mobile),
-    mobile: calculateRem($base-font-size-mobile, $small-font-size-mobile),
+    desktop: functions.calculateRem($base-font-size-mobile, $small-font-size-mobile),
+    tablet: functions.calculateRem($base-font-size-mobile, $small-font-size-mobile),
+    mobile: functions.calculateRem($base-font-size-mobile, $small-font-size-mobile),
   ),
 );
 

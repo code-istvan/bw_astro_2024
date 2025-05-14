@@ -1,5 +1,6 @@
 @use '/src/sass/base/_colors' as colors;
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_utilities' as utilities;
 
 .teacher {
   border: solid 2px colors.$color-shades-darkGray;

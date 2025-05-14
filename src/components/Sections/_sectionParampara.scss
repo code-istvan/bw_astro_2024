@@ -1,4 +1,6 @@
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_utilities' as utilities;
+@use '/src/sass/base/_buttons' as buttons;
 
 .section-parampara {
   &__wrapper {

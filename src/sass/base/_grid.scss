@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:map';
 @use '_breakpoints' as breakpoints;
 
 $grid-columns: 12;
@@ -22,31 +23,31 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   box-sizing: border-box;
 
   @include breakpoints.xs {
-    max-width: map-get(breakpoints.$container-max-widths, 'xs');
+    max-width: map.get(breakpoints.$container-max-widths, 'xs');
     padding: 0 14px;
   }
 
   @include breakpoints.sm {
-    max-width: map-get(breakpoints.$container-max-widths, 'sm');
+    max-width: map.get(breakpoints.$container-max-widths, 'sm');
     padding: 0;
   }
 
   @include breakpoints.md {
-    max-width: map-get(breakpoints.$container-max-widths, 'md');
+    max-width: map.get(breakpoints.$container-max-widths, 'md');
     // padding: 0 21px;
   }
 
   @include breakpoints.lg {
-    max-width: map-get(breakpoints.$container-max-widths, 'lg');
+    max-width: map.get(breakpoints.$container-max-widths, 'lg');
   }
 
   @include breakpoints.xl {
-    max-width: map-get(breakpoints.$container-max-widths, 'xl');
+    max-width: map.get(breakpoints.$container-max-widths, 'xl');
     // padding: 0 24px;
   }
 
   @include breakpoints.xxl {
-    max-width: map-get(breakpoints.$container-max-widths, 'xxl');
+    max-width: map.get(breakpoints.$container-max-widths, 'xxl');
   }
 }
 

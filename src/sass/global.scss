@@ -1,19 +1,19 @@
 // variables & functions
-@import '/src/sass/base/_variable';
+@forward '/src/sass/base/_variable';
 
 // mixins
-@import '/src/sass/base/_mixins';
+@forward '/src/sass/base/_mixins';
 
 // base
-@import '/src/sass/base/_base';
-@import '/src/sass/base/_reset';
-@import '/src/sass/base/_fonts';
-@import '/src/sass/base/_buttons';
-@import '/src/sass/base/_breakpoints';
-@import '/src/sass/base/_grid';
+@forward '/src/sass/base/_base';
+@forward '/src/sass/base/_reset';
+@use '/src/sass/base/_fonts' as fonts;
+@forward '/src/sass/base/_buttons';
+@use '/src/sass/base/_breakpoints' as breakpoints;
+@forward '/src/sass/base/_grid';
 
 // colors
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 // utilities
-@import '/src/sass/base/_utilities';
+@forward '/src/sass/base/_utilities';

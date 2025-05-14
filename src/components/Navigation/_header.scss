@@ -1,5 +1,6 @@
 @use '/src/sass/base/_colors' as colors;
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_mixins' as mixins;
 
 header {
   position: fixed;
@@ -28,14 +29,13 @@ nav {
   justify-content: space-between;
   z-index: 9999;
   div:nth-child(2) {
+    margin-left: 16px;
     @include breakpoints.xs {
       margin-right: 8px;
     }
     @include breakpoints.md {
       margin-right: 10px;
     }
-
-    margin-left: 16px;
   }
 }
 
@@ -43,13 +43,13 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   @include breakpoints.xs {
     margin-left: 14px;
   }
   @include breakpoints.md {
     margin-left: 20px;
   }
-  cursor: pointer;
 
   .brand-logo {
     margin-right: 8px;

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '/src/sass/base/_colors' as colors;
 @use '/src/sass/base/_breakpoints' as breakpoints;
 @use '/src/sass/base/_fonts' as fonts;
@@ -48,8 +49,8 @@
 }
 
 .btn--primary--solid:hover {
-  background-color: darken(colors.$color-brand-orange, 10%);
-  border-color: darken(colors.$color-brand-orange, 10%);
+  background-color: color.adjust(colors.$color-brand-orange, $lightness: -10%);
+  border-color: color.adjust(colors.$color-brand-orange, $lightness: -10%);
   color: colors.$color-shades-black;
 }
 

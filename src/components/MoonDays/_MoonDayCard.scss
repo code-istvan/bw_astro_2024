@@ -1,7 +1,7 @@
-@import '/src/sass/global';
+@use '/src/sass/base/_colors' as colors;
 
 .moondays-card {
-  border: 2px solid $color-shades-lightBlack;
+  border: 2px solid colors.$color-shades-lightBlack;
   padding: 16px;
 
   &__header {

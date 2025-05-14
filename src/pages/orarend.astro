@@ -103,14 +103,19 @@ const renderClassDetails = (item, index) => {
                                             <h3 class="schedule__details-title">{details.classDetails.classHu}</h3>
                                             {details.classDetails.classHu !== 'Holdnap' && (
                                                 <p class="schedule__details-signup link-enhanced link-orange">
-                                                    <a href={details.classDetails.classSignUpUrl}>Részvétel</a>
+                                                    <a
+                                                        href={details.classDetails.classSignUpUrl}
+                                                        class="link-enhanced link-orange"
+                                                    >
+                                                        Részvétel
+                                                    </a>
                                                 </p>
                                             )}
                                         </div>
                                         {details.teacherDetails && (
                                             <p class="mb-10px">
                                                 <a
-                                                    class="clr-brand-orange body body--bold"
+                                                    class="link-enhanced link-orange body body--bold"
                                                     href={details.teacherDetails.teacherLink}
                                                 >
                                                     {details.teacherDetails.teacher}

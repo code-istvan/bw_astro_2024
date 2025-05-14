@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 /* A modal és a háttér overlay CSS maradhat ugyanaz */
 .modal-toggle {
@@ -32,8 +32,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $color-shades-gray;
-  color: $color-shades-black;
+  background-color: colors.$color-shades-gray;
+  color: colors.$color-shades-black;
   padding: 20px;
   width: 90%;
   max-width: 500px;

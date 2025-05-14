@@ -1,4 +1,8 @@
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@forward '/src/sass/base/_buttons';
+@forward '/src/sass/base/_utilities';
+@forward '/src/sass/base/_mixins';
+@forward '/src/sass/global';
 
 .contact-header {
   @include breakpoints.xs {

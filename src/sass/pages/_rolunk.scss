@@ -1,4 +1,4 @@
-@import '/src/sass/global';
+@use '/src/sass/base/_colors' as colors;
 
 .guest-teachers-mobil {
   width: 100%;
@@ -8,14 +8,14 @@
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
-  background-color: $color-brand-orange;
+  background-color: colors.$color-brand-orange;
 }
 .guest-teachers-mobil::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
 
 .guest-teachers-container-mobil {
-  background-color: $color-brand-orange;
+  background-color: colors.$color-brand-orange;
   overflow-x: auto;
   div:nth-child(1),
   div:nth-child(2),
@@ -30,7 +30,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-  background-color: $color-brand-orange;
+  background-color: colors.$color-brand-orange;
 }
 
 @media screen and (min-width: 870px) {
@@ -51,9 +51,3 @@
     padding-bottom: 0;
   }
 }
-
-// .fire-ceremony-image {
-//   width: 100%;
-//   height: auto;
-//   object-fit: contain;
-// }

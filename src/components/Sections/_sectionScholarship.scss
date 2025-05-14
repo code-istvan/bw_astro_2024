@@ -1,4 +1,6 @@
 @use '/src/sass/base/_breakpoints' as breakpoints;
+@use '/src/sass/base/_utilities' as utilities;
+@use '/src/sass/base/_buttons' as buttons;
 
 .section-scholarship {
   position: relative;
@@ -32,14 +34,13 @@
     position: relative;
     z-index: 1;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include breakpoints.xs {
       width: 100%;
     }
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__header {

@@ -1,4 +1,4 @@
-@import '/src/sass/global';
+@use '/src/sass/base/_colors' as colors;
 
 .card-social-proof {
   display: flex;
@@ -9,7 +9,7 @@
 
   padding: 12px;
   margin: 12px;
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
   position: relative;
 }
 
@@ -23,12 +23,11 @@
 .card-social-proof--header {
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
   gap: 12px;
 }
 
 .osztondij-timings {
-  background-color: $color-shades-darkGray;
+  background-color: colors.$color-shades-darkGray;
 }
 
 .osztondij-timings--wrapper {
@@ -44,12 +43,12 @@
 }
 
 .slick-dots li button:before {
-  color: $color-shades-lightGray;
+  color: colors.$color-shades-lightGray;
   font-size: 12px;
 }
 
 .slick-dots li.slick-active button:before {
-  color: $color-brand-orange;
+  color: colors.$color-brand-orange;
 }
 
 .slick-dots li {
@@ -57,9 +56,9 @@
 }
 
 .slick-dots li:focus {
-  color: $color-shades-lightGray !important; /* A kívánt szín */
+  color: colors.$color-shades-lightGray !important; /* A kívánt szín */
 }
 
 .slick-dots li:hover {
-  color: $color-shades-lightGray !important; /* A kívánt szín */
+  color: colors.$color-shades-lightGray !important; /* A kívánt szín */
 }

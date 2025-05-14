@@ -21,20 +21,11 @@ const metadata = {
 
 <BaseLayout title={metadata.title} description={metadata.description}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} indexHu={true} />
-    <!-- <div class="content-wrapper"> -->
+
     <About />
     <Parampara />
     <MysoreProgram />
     <Events maxEventsDesktop={3} maxEventsMobile={5} />
     <Scholarship />
     <SocialProofs />
-    <!-- </div> -->
 </BaseLayout>
-
-<style>
-    /* .content-wrapper {
-        position: relative;
-        z-index: 1;
-        background-color: hsl(0, 0%, 15%);
-    } */
-</style>

@@ -1,4 +1,4 @@
-@import '/src/sass/base/_colors';
+@use '/src/sass/base/_colors' as colors;
 
 /* Alapértelmezetten elrejtjük a tab tartalmat */
 .tab-content {
@@ -21,7 +21,7 @@
   justify-content: space-between; /* A két <li> a bal és jobb szélekhez igazodik */
   padding: 0;
   list-style: none; /* Eltüntetjük a listajeleket */
-  border-bottom: 1px solid $color-shades-lightBlack; /* Aláhúzás a tabok alatt */
+  border-bottom: 1px solid colors.$color-shades-lightBlack; /* Aláhúzás a tabok alatt */
 }
 
 /* Tabok alap stílusok */
