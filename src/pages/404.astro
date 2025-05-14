@@ -4,9 +4,31 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import desktopImage from '../images/404_desktop.jpeg';
 import mobileImage from '../images/404_mobil.jpeg';
 
+// Nyelv meghatározása az URL alapján
+const url = Astro.request.url;
+const isEnglish = url.includes('/en');
+
+// Többnyelvű szövegek
+const translations = {
+    hu: {
+        title: '404! NEM TALÁLOM!',
+        description: 'Ezen az oldalon nem található semmi.',
+        message: 'A keresett oldal nem létezik, vagy eltávolításra került.',
+        backHome: 'Vissza a FŐOLDALRA',
+    },
+    en: {
+        title: '404! PAGE NOT FOUND!',
+        description: 'Nothing is found on this page.',
+        message: 'The page you are looking for does not exist or has been removed.',
+        backHome: 'Back to HOMEPAGE',
+    },
+};
+
+const lang = isEnglish ? 'en' : 'hu';
+const t = translations[lang];
 const metadata = {
-    title: '404! NENT TALÁLOM!',
-    description: 'Ezen az oldalon nem található semmi.',
+    title: t.title,
+    description: t.description,
 };
 ---
 
@@ -20,8 +42,10 @@ const metadata = {
     />
     <div class="container container--tight-desktop">
         <div class="mt-40px mb-40px">
-            <p>A keresett oldal nem létezik, vagy eltávolításra került.</p>
-            <a href="/" class="link-enhanced link-orange">Vissza a FŐOLDALRA</a>
+            <p>{t.message}</p>
+            <a href={isEnglish ? '/en/' : '/'} class="link-enhanced link-orange">
+                {t.backHome}
+            </a>
         </div>
     </div>
 </BaseLayout>
