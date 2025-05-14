@@ -22,7 +22,8 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         page !== 'https://bandha.works/adatvedelmi-tajekoztato/' &&
-        page !== 'https://bandha.works/en/adatvedelmi-tajekoztato/',
+        page !== 'https://bandha.works/en/adatvedelmi-tajekoztato/' &&
+        page !== 'https://bandha.works/404',
     }),
   ],
   site: 'https://bandha.works/',
