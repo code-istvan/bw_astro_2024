@@ -4,22 +4,22 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import desktopImage from '../images/404_desktop.jpeg';
 import mobileImage from '../images/404_mobil.jpeg';
 
-// Nyelv meghatározása az URL alapján
 const url = Astro.request.url;
 const isEnglish = url.includes('/en');
 
-// Többnyelvű szövegek
 const translations = {
     hu: {
-        title: '404! NEM TALÁLOM!',
+        title: '404! NIRBĪJA SZAMĀDHI!',
         description: 'Ezen az oldalon nem található semmi.',
-        message: 'A keresett oldal nem létezik, vagy eltávolításra került.',
+        message:
+            'Ez az oldal elérte a NIRBĪJA SZAMĀDHI állapotát… A tartalom megszűnt. A forma eltűnt. Csak a csend maradt. De ha mégis keresel valamit ebben az illuzórikus világban, térj vissza a főoldalra – ott talán újra feltűnik a valóság egy formája.',
         backHome: 'Vissza a FŐOLDALRA',
     },
     en: {
-        title: '404! PAGE NOT FOUND!',
+        title: '404! NIRBĪJA SAMĀDHI!',
         description: 'Nothing is found on this page.',
-        message: 'The page you are looking for does not exist or has been removed.',
+        message:
+            'This page has entered the state of NIRBĪJA SAMĀDHI… Content dissolved. Form disappeared. Only silence remains. But if you still seek something in this illusory world, return to the homepage – there you might glimpse reality once again.',
         backHome: 'Back to HOMEPAGE',
     },
 };
@@ -43,9 +43,11 @@ const metadata = {
     <div class="container container--tight-desktop">
         <div class="mt-40px mb-40px">
             <p>{t.message}</p>
-            <a href={isEnglish ? '/en/' : '/'} class="link-enhanced link-orange">
-                {t.backHome}
-            </a>
+            <p>
+                <a href={isEnglish ? '/en/' : '/'} class="link-enhanced link-orange">
+                    {t.backHome}
+                </a>
+            </p>
         </div>
     </div>
 </BaseLayout>
