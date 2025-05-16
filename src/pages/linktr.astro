@@ -9,9 +9,9 @@ const metadata = {
 };
 
 const links = [
-    { label: 'Weboldalam', href: 'https://example.com' },
-    { label: 'Instagram', href: 'https://instagram.com/teprofilod' },
-    { label: 'Kapcsolat', href: 'mailto:valaki@example.com' },
+    { label: 'BLOG', href: '/blog/' },
+    { label: 'ESEMÉNYEK', href: '/ESEMENYEK/' },
+    { label: 'WEBSITE', href: '/' },
 ];
 
 // const { lang = 'hu' } = Astro.url.searchParams;
@@ -19,14 +19,19 @@ const currentLanguage = Astro.currentLocale;
 ---
 
 <LinktrLayout title={metadata.title} description={metadata.description} language="Hungarian">
-    <div class="linktr-container display-flex display-flex--direction-column align-items-center mt-40px">
-        <Icons name="BwSymbol" color="white" />
-        <h3 class="mt-20px mb-20px">@bandhaworks</h3>
-        <LanguagePickerLinktr />
-        <div class="links">
+    <div
+        class="linktr__container container--linktr-desktop display-flex display-flex--direction-column align-items-center"
+    >
+        <div class="linktr__header display-flex display-flex--direction-column align-items-center">
+            <div class="linktr__logo display-flex align-items-flex-start mt-40px">
+                <Icons name="BwSymbol" color="white" /><LanguagePickerLinktr />
+            </div>
+            <p class="linktr__name mt-20px mb-20px">@bandhaworks</p>
+        </div>
+        <div class="linktr__buttons">
             {
                 links.map((link) => (
-                    <a href={link.href} class="link-btn">
+                    <a href={link.href} class="btn btn--primary--outline-full mb-20px">
                         {link.label}
                     </a>
                 ))

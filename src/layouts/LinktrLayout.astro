@@ -4,6 +4,7 @@ import faviconSvgSrc from '../images/favicon.svg';
 import { AstroFont } from 'astro-font';
 import Seo from '../components/Seo.astro';
 import '../sass/global.scss';
+import './_linktrLayout.scss';
 
 interface Props {
     title: string;
@@ -43,7 +44,7 @@ const { title, description, noindex, language } = Astro.props as Props;
 
         {noindex && <meta name="robots" content="noindex, nofollow" />}
     </head>
-    <body>
+    <body class="bg-shades-darkGray">
         <slot />
     </body>
 </html>

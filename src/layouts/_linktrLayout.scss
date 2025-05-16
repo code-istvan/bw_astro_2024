@@ -1,0 +1,11 @@
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; // vagy a class-hoz tartozó háttérszín
+}
+
+.linktr__logo > *:first-child {
+  margin-left: 28px;
+}
