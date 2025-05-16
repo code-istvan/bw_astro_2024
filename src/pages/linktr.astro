@@ -1,7 +1,7 @@
 ---
 import LinktrLayout from '../layouts/LinktrLayout.astro';
 import Icons from '../components/Icons/Icons.astro';
-import LanguagePicker from '../components/LanguagePicker.astro';
+import LanguagePickerLinktr from '../components/LanguagePickers/LanguagePickerLinktr.astro';
 
 const metadata = {
     title: 'LINKTR',
@@ -22,7 +22,7 @@ const currentLanguage = Astro.currentLocale;
     <div class="linktr-container display-flex display-flex--direction-column align-items-center mt-40px">
         <Icons name="BwSymbol" color="white" />
         <h3 class="mt-20px mb-20px">@bandhaworks</h3>
-        <LanguagePicker />
+        <LanguagePickerLinktr />
         <div class="links">
             {
                 links.map((link) => (
@@ -34,3 +34,15 @@ const currentLanguage = Astro.currentLocale;
         </div>
     </div>
 </LinktrLayout>
+
+<script is:inline>
+    (function () {
+        const url = new URL(window.location.href);
+        const hasLang = url.searchParams.has('lang');
+
+        if (!hasLang) {
+            const fallback = `${url.pathname}?lang=hu`;
+            window.location.replace(fallback);
+        }
+    })();
+</script>
