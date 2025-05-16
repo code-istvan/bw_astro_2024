@@ -1,33 +1,42 @@
 ---
-import { languages } from "../i18n/ui";
-import { useTranslatedPath } from "../i18n/utils";
-import language_HU from "../images/svg/language_HU.svg?raw";
-import language_EN from "../images/svg/language_EN.svg?raw";
-import "../sass/components/_languagePicker.scss";
+import { languages } from '../i18n/ui';
+import { useTranslatedPath } from '../i18n/utils';
+import language_HU from '../images/svg/language_HU.svg?raw';
+import language_EN from '../images/svg/language_EN.svg?raw';
 
 const currentLanguage = Astro.currentLocale;
+const currentPathname = Astro.url.pathname;
+const currentSearchParams = Astro.url.searchParams;
 ---
 
 <div>
     {
         Object.entries(languages).map(([lang, { shortName }]) => {
-            if (currentLanguage === lang) return;
+            if (currentLanguage === lang) return null;
 
-            const translatePath = useTranslatedPath(lang);
-            const path = translatePath(Astro.url.pathname);
+            let path;
+
+            if (currentPathname === '/linktr') {
+                path = lang === 'en' ? '/linktr?lang=en' : '/linktr';
+            } else if (
+                currentPathname === '/linktr' &&
+                currentSearchParams.has('lang') &&
+                currentSearchParams.get('lang') === 'en'
+            ) {
+                path = '/linktr';
+            } else {
+                const translatePath = useTranslatedPath(lang);
+                path = translatePath(currentPathname);
+            }
 
             return (
                 <div id="language-picker">
                     <a
                         href={path}
                         class="link-class"
-                        aria-label="Itt választhatsz nyelvet. Angol vagy magyar nyelvek közül választhatsz. You can choose your language here. You can choose between English or Hungarian."
+                        aria-label={`Itt választhatsz nyelvet. Angol vagy magyar nyelvek közül választhatsz. You can choose your language here. You can choose between English or Hungarian. Cambiar a ${shortName === 'HU' ? 'húngaro' : 'inglés'}.`}
                     >
-                        {shortName === "HU" ? (
-                            <Fragment set:html={language_HU} />
-                        ) : (
-                            <Fragment set:html={language_EN} />
-                        )}
+                        {shortName === 'HU' ? <Fragment set:html={language_HU} /> : <Fragment set:html={language_EN} />}
                     </a>
                 </div>
             );

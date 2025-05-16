@@ -27,6 +27,9 @@ export default defineConfig({
     }),
   ],
   site: 'https://bandha.works/',
+  // redirects: {
+  //   '/en/linktr': '/linktr?lang=en',
+  // },
   vite: {
     resolve: {
       alias: {

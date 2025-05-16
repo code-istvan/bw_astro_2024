@@ -1,6 +1,7 @@
 ---
 import LinktrLayout from '../layouts/LinktrLayout.astro';
 import Icons from '../components/Icons/Icons.astro';
+import LanguagePicker from '../components/LanguagePicker.astro';
 
 const metadata = {
     title: 'LINKTR',
@@ -12,12 +13,16 @@ const links = [
     { label: 'Instagram', href: 'https://instagram.com/teprofilod' },
     { label: 'Kapcsolat', href: 'mailto:valaki@example.com' },
 ];
+
+// const { lang = 'hu' } = Astro.url.searchParams;
+const currentLanguage = Astro.currentLocale;
 ---
 
 <LinktrLayout title={metadata.title} description={metadata.description} language="Hungarian">
     <div class="linktr-container display-flex display-flex--direction-column align-items-center mt-40px">
         <Icons name="BwSymbol" color="white" />
-        <h3 class="mt-20px mb-20px">@bandha.works</h3>
+        <h3 class="mt-20px mb-20px">@bandhaworks</h3>
+        <LanguagePicker />
         <div class="links">
             {
                 links.map((link) => (
