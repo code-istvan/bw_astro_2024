@@ -22,11 +22,16 @@ const currentLanguage = Astro.currentLocale;
     <div
         class="linktr__container container--linktr-desktop display-flex display-flex--direction-column align-items-center"
     >
-        <div class="linktr__header display-flex display-flex--direction-column align-items-center">
-            <div class="linktr__logo display-flex align-items-flex-start mt-40px">
-                <Icons name="BwSymbol" color="white" /><LanguagePickerLinktr />
+        <div class="linktr__language container row"><LanguagePickerLinktr /></div>
+        <div class="linktr__header container row display-flex display-flex--direction-column align-items-center">
+            <div class="linktr__logo">
+                <Icons name="BwSymbol" color="white" />
             </div>
-            <p class="linktr__name mt-20px mb-20px">@bandhaworks</p>
+            <p class="linktr__name body body--bold mt-20px">@bandhaworks</p>
+            <p class="linktr__bio text-align-center mb-20px">
+                Tradicionális astanga jógaiskola a Paramaguru áldásával. Napi Mysore órák. Nemzetközi vendégtanárok.
+                Astanga workshopok, elvonulások… Spirituális alapelvekre épülő, támogató közösség építése.”.
+            </p>
         </div>
         <div class="linktr__buttons">
             {

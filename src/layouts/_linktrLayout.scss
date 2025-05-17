@@ -6,12 +6,20 @@ body {
   background-color: #1a1a1a; // vagy a class-hoz tartozó háttérszín
 }
 
-.linktr__logo > *:first-child {
-  margin-left: 28px;
-}
-
 .linktr__buttons {
   width: 100%;
   max-width: 480px;
   padding: 20px;
+}
+
+#language-picker-linktr {
+  margin-left: auto;
+}
+
+.linktr__language {
+  margin-top: 0.5rem;
+}
+
+.linktr__bio {
+  margin-top: 0.5rem;
 }
