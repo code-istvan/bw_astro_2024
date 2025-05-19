@@ -1,7 +1,7 @@
 ---
 published: true
 language: Hungarian
-title: A guru bennünk él – Vedanta Anga az Ashtanga útjáról
+title: A guru bennünk él – Beszélgetés Vedanta Angával az astanga útjáról
 titleBackground: false
 description: Ebben a bensőséges hangvételű interjúban Vedanta Anga megosztja
   személyes útját az astanga jógával, beszél a guru–parampara szerepéről a mai
