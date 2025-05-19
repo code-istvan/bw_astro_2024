@@ -3,6 +3,7 @@ import { formatDate, slugify } from '../../components/js/utils.js';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import './_postcard.scss';
+
 const images = await import.meta.glob<{ default: ImageMetadata }>('../../images/uploads/**/*.{jpeg,jpg,png,gif}');
 const authors = await getCollection('authors');
 const { frontmatter, slug, minutesRead } = Astro.props;
@@ -12,6 +13,7 @@ const currentAuthor = authors.find(({ data: { name: authorName } }) => authorNam
 // VÁLTOZÁS: Nyelv támogatás hozzáadása
 const lang = Astro.url.pathname.includes('/en/') ? 'en' : 'hu';
 const isEnglish = lang === 'en';
+const langPrefix = Astro.url.pathname.includes('/en/') ? '/en' : '';
 
 // VÁLTOZÁS: Fordítások objektum
 const translations = {
@@ -64,7 +66,7 @@ const formattedDate = isEnglish
         <!-- VÁLTOZÁS: Olvasási idő fordítás -->
         <p class="blog-post__reading-time clr-shades-gray">{minutesRead} {translations[lang].readingTime}</p>
     </div>
-    <a href={`/blog/${slugify(slug)}`} class="blog-post__read-more-link">
+    <a href={`${langPrefix}/blog/${slugify(slug)}`} class="blog-post__read-more-link">
         <!-- VÁLTOZÁS: Tovább gomb fordítás -->
         <p class="blog-post__read-more-text clr-brand-orange body body--bold mt-20px">{translations[lang].readMore}</p>
     </a>

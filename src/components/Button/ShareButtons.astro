@@ -1,10 +1,12 @@
 ---
 import Icons from '../Icons/Icons.astro';
 import './_shareButtons.scss';
+
+const lang = Astro.props.lang ?? 'hu';
 ---
 
 <div class="share-container">
-    <p>BEJEGYZÉS MEGOSZTÁSA</p>
+    <p>{lang === 'en' ? 'SHARE THIS POST' : 'BEJEGYZÉS MEGOSZTÁSA'}</p>
     <div class="share-buttons">
         <button
             class="share-button facebook"

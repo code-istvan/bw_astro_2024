@@ -2,8 +2,6 @@
 import Pagination from '../../../components/Blog/Pagination.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PostCard from '../../../components/Blog/PostCard.astro';
-import TagList from '../../../components/Blog/TagList.astro';
-// import PopularPosts from '../../../components/Blog/PopularPosts.astro';
 import { type CollectionEntry } from 'astro:content';
 import { slugify, calculateReadingTime } from '../../../components/js/utils.js';
 import { getCollection } from 'astro:content';
@@ -70,7 +68,6 @@ const metadata = {
                     Our blog is primarily intended for Hungarian Ashtanga yoga enthusiasts. However, we have some
                     content available in English as well, which we list below.
                 </h3>
-                <!-- <div class="taglist"><TagList language="English" /></div> -->
                 <p>
                     <strong>
                         Our English language blog page is currently under construction, please check back later for more
