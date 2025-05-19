@@ -15,8 +15,8 @@ date: 2025-05-19T14:58:00.000Z
 image: ../../images/uploads/vedanta_desktop.jpeg
 imageMobil: ../../images/uploads/vedanta_mobil.jpeg
 ---
-###     How did you get introduced to Ashtanga yoga?  
-When I was in dire need of healing my injured shoulder and wanted to delve deeply into the study of yoga, I researched the word “Āshtanga,” which I had heard many times  while working with a Yoga and Ayurveda company and also at the Rishikesh yoga festival earlier.  Through my research, I discovered that āshtanga, a practice that caught my attention for its discipline and sincerity, could also serve as a source for using asana methods to heal my shoulder.
+### How did you get introduced to Ashtanga yoga?  
+When I was in dire need of healing my injured shoulder and wanted to delve deeply into the study of yoga, I researched the word *Āshtanga*, which I had heard many times  while working with a Yoga and Ayurveda company and also at the Rishikesh yoga festival earlier. Through my research, I discovered that āshtanga, a practice that caught my attention for its discipline and sincerity, could also serve as a source for using asana methods to heal my shoulder.
 
 ### The Yoga Sutras don't mention that we should seek out a Guru and learn the science of yoga from them. In your opinion, what is the significance of Guru parampara in our modern age today, where yoga can be learned from numerous sources?  
 When we look back on history, Patanjali himself had students to whom he taught and passed on his knowledge. This has been a common tradition in India, where a student learns from a teacher and later teaches their own students, continuing the cycle. With so much information available today, it's easy to become confused and lost in the clouds of ignorance. A true Guru or lineage acts as a compass, ensuring the teachings remain aligned with the original purpose without losing their essence. Many sincere seekers may not have easy access to a living Guru in these modern times. In such cases, deep devotion to authentic teachings, humility, and surrender to the divine can invoke inner guidance
