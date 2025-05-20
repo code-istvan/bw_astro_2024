@@ -2,7 +2,7 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import { MiniLogo } from './MiniLogo.tsx';
 import MapStyle from './MapStyle';
-import '../../sass/components/_googlemap.scss';
+import './_googlemap.scss';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 

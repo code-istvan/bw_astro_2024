@@ -1,25 +1,25 @@
-@use '/src/sass/base/_colors' as colors;
+// @use '/src/sass/base/_colors' as colors;
 
-@media screen and (min-width: 768px) {
-  .blogsidebar-wrapper {
-    margin-top: 60px;
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .blogsidebar-wrapper {
+//     margin-top: 60px;
+//   }
+// }
 
-.most-popular-posts {
-  color: colors.$color-shades-gray;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  svg {
-    display: block;
-  }
-}
+// .most-popular-posts {
+//   color: colors.$color-shades-gray;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   gap: 5px;
+//   svg {
+//     display: block;
+//   }
+// }
 
-.most-popular-ul li {
-  margin-bottom: 8px;
-  a:hover {
-    color: colors.$color-brand-orange;
-  }
-}
+// .most-popular-ul li {
+//   margin-bottom: 8px;
+//   a:hover {
+//     color: colors.$color-brand-orange;
+//   }
+// }

@@ -2,6 +2,7 @@
 const { content, lang, uniqueId } = Astro.props;
 const buttonText = lang === 'hu' ? 'Részletek' : 'Details';
 const accordionId = `schedule-${uniqueId}`;
+
 import './_accordion.scss';
 ---
 

@@ -1,0 +1,15 @@
+---
+interface Props {
+    name: string;
+    country: string;
+}
+
+const { name, country } = Astro.props;
+---
+
+<div class="guest-teacher-item">
+    <div class="name-card">
+        <h4>{name}</h4>
+        <span class="clr-brand-orange">{country}</span>
+    </div>
+</div>

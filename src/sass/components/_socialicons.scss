@@ -1,41 +1,41 @@
-@use '/src/sass/base/_colors' as colors;
+// @use '/src/sass/base/_colors' as colors;
 
-.socialIcons-box {
-  @media only screen and (min-width: 1px) and (max-width: 370px) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    div:first-child {
-      margin-bottom: 20px;
-    }
-    svg {
-      padding-right: 20px;
-    }
-  }
-  @media only screen and (min-width: 371px) {
-    display: flex;
-    flex-direction: row;
+// .socialIcons-box {
+//   @media only screen and (min-width: 1px) and (max-width: 370px) {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     div:first-child {
+//       margin-bottom: 20px;
+//     }
+//     svg {
+//       padding-right: 20px;
+//     }
+//   }
+//   @media only screen and (min-width: 371px) {
+//     display: flex;
+//     flex-direction: row;
 
-    div:nth-child(-n + 2) {
-      svg {
-        padding-right: 20px;
-      }
-    }
-  }
+//     div:nth-child(-n + 2) {
+//       svg {
+//         padding-right: 20px;
+//       }
+//     }
+//   }
 
-  svg {
-    fill: colors.$color-shades-lightGray;
-  }
+//   svg {
+//     fill: colors.$color-shades-lightGray;
+//   }
 
-  svg:hover {
-    fill: colors.$color-brand-orange;
-  }
-}
+//   svg:hover {
+//     fill: colors.$color-brand-orange;
+//   }
+// }
 
-.socialIcons-center {
-  justify-content: center;
-}
+// .socialIcons-center {
+//   justify-content: center;
+// }
 
-.socialIcons-left {
-  justify-content: flex-start;
-}
+// .socialIcons-left {
+//   justify-content: flex-start;
+// }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../sass/components/_counter.scss';
+import './_counter.scss';
 
 export default function Counter({ language = 'eng' }) {
   const initialDate = '2013-08-25';

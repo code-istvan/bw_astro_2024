@@ -1,59 +1,59 @@
-@use '/src/sass/base/_breakpoints' as breakpoints;
+// @use '/src/sass/base/_breakpoints' as breakpoints;
 
-.section--mysore-program {
-  @media only screen and (min-width: 1px) and (max-width: 768px) {
-    .btn {
-      width: 100%;
-    }
-  }
-}
+// .section--mysore-program {
+//   @media only screen and (min-width: 1px) and (max-width: 768px) {
+//     .btn {
+//       width: 100%;
+//     }
+//   }
+// }
 
-.section--mysore-program--wrapper {
-  @include breakpoints.xl {
-    padding-block: 56px;
-  }
-}
+// .section--mysore-program--wrapper {
+//   @include breakpoints.xl {
+//     padding-block: 56px;
+//   }
+// }
 
-.section--mysore-program--image {
-  display: flex;
-  align-items: center;
-  z-index: 2;
+// .section--mysore-program--image {
+//   display: flex;
+//   align-items: center;
+//   z-index: 2;
 
-  @include breakpoints.xs {
-    .gatsby-image-wrapper img {
-      width: fit-content;
-    }
-  }
+//   @include breakpoints.xs {
+//     .gatsby-image-wrapper img {
+//       width: fit-content;
+//     }
+//   }
 
-  @include breakpoints.md {
-    .gatsby-image-wrapper img {
-      width: 220px;
-    }
-  }
+//   @include breakpoints.md {
+//     .gatsby-image-wrapper img {
+//       width: 220px;
+//     }
+//   }
 
-  @include breakpoints.xl {
-    .gatsby-image-wrapper img {
-      width: 380px;
-    }
-  }
-}
+//   @include breakpoints.xl {
+//     .gatsby-image-wrapper img {
+//       width: 380px;
+//     }
+//   }
+// }
 
-.section--mysore-program-text {
-  max-width: 732px;
-  margin-top: 20px;
-  // margin-bottom: 20px;
+// .section--mysore-program-text {
+//   max-width: 732px;
+//   margin-top: 20px;
+//   // margin-bottom: 20px;
 
-  @include breakpoints.xs {
-    padding-top: 20px;
-    // padding-bottom: 40px;
-  }
+//   @include breakpoints.xs {
+//     padding-top: 20px;
+//     // padding-bottom: 40px;
+//   }
 
-  @include breakpoints.md {
-    padding-left: 16px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  @include breakpoints.xl {
-    padding-left: 44px;
-  }
-}
+//   @include breakpoints.md {
+//     padding-left: 16px;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//   }
+//   @include breakpoints.xl {
+//     padding-left: 44px;
+//   }
+// }

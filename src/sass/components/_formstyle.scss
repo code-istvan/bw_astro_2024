@@ -1,20 +1,20 @@
-@use '/src/sass/base/_colors' as colors;
+// @use '/src/sass/base/_colors' as colors;
 
-.form-style {
-  input[type='checkbox'] {
-    vertical-align: middle;
-    position: relative;
-    bottom: 1px;
-  }
-  label {
-    display: block;
-  }
+// .form-style {
+//   input[type='checkbox'] {
+//     vertical-align: middle;
+//     position: relative;
+//     bottom: 1px;
+//   }
+//   label {
+//     display: block;
+//   }
 
-  a:link {
-    text-decoration: none;
-    color: colors.$color-brand-orange !important;
-  }
-  a:visited {
-    color: colors.$color-brand-orange !important;
-  }
-}
+//   a:link {
+//     text-decoration: none;
+//     color: colors.$color-brand-orange !important;
+//   }
+//   a:visited {
+//     color: colors.$color-brand-orange !important;
+//   }
+// }

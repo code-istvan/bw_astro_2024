@@ -1,59 +1,59 @@
-@use '/src/sass/base/_colors' as colors;
+// @use '/src/sass/base/_colors' as colors;
 
-.footer-desktop-menu {
-  display: flex;
-  flex-direction: row;
+// .footer-desktop-menu {
+//   display: flex;
+//   flex-direction: row;
 
-  &__list {
-    list-style-type: none;
-  }
-  &__link {
-    a {
-      text-decoration: none;
-    }
-  }
+//   &__list {
+//     list-style-type: none;
+//   }
+//   &__link {
+//     a {
+//       text-decoration: none;
+//     }
+//   }
 
-  &__item {
-    color: colors.$color-shades-lightGray;
+//   &__item {
+//     color: colors.$color-shades-lightGray;
 
-    &--highlighted {
-      color: colors.$color-brand-orange;
-      text-decoration: none;
-    }
-  }
+//     &--highlighted {
+//       color: colors.$color-brand-orange;
+//       text-decoration: none;
+//     }
+//   }
 
-  &__header {
-    margin-bottom: 4px;
-    background-color: transparent;
-    cursor: pointer !important;
-    padding: 0 !important;
-  }
+//   &__header {
+//     margin-bottom: 4px;
+//     background-color: transparent;
+//     cursor: pointer !important;
+//     padding: 0 !important;
+//   }
 
-  &__submenu {
-    &:hover {
-      color: colors.$color-brand-orange;
-      text-decoration: none;
-    }
-  }
+//   &__submenu {
+//     &:hover {
+//       color: colors.$color-brand-orange;
+//       text-decoration: none;
+//     }
+//   }
 
-  &__link:hover {
-    color: colors.$color-brand-orange;
-    text-decoration: none;
-  }
-}
+//   &__link:hover {
+//     color: colors.$color-brand-orange;
+//     text-decoration: none;
+//   }
+// }
 
-.menu-flash {
-  color: colors.$color-shades-white;
-  animation-name: flash;
-  animation-duration: 700ms;
-  animation-timing-function: ease-in-out;
-}
+// .menu-flash {
+//   color: colors.$color-shades-white;
+//   animation-name: flash;
+//   animation-duration: 700ms;
+//   animation-timing-function: ease-in-out;
+// }
 
-@keyframes flash {
-  0% {
-    color: colors.$color-shades-white;
-  }
-  25% {
-    color: colors.$color-brand-orange;
-  }
-}
+// @keyframes flash {
+//   0% {
+//     color: colors.$color-shades-white;
+//   }
+//   25% {
+//     color: colors.$color-brand-orange;
+//   }
+// }

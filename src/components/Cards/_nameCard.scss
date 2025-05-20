@@ -1,0 +1,21 @@
+@use '/src/sass/base/_colors' as colors;
+
+.guest-teacher-item {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.name-card {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+  background-color: colors.$color-shades-darkGray;
+  padding: 12px 12px;
+  span {
+    font-weight: 800;
+  }
+  h4 {
+    margin: 0;
+  }
+}

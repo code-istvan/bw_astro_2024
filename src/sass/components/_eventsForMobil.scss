@@ -1,53 +1,53 @@
-@use '/src/sass/base/_colors' as colors;
+// @use '/src/sass/base/_colors' as colors;
 
-.events-row {
-  display: flex; // Sorba rendezzük a kártyákat
-  flex-wrap: nowrap; // Nem engedjük, hogy tördelődjenek
-  overflow-x: auto; // Engedélyezzük a horizontális görgetést
-  width: 100%; // A konténer szélessége 100%
-  gap: 12px; // A kártyák közötti rés
+// .events-row {
+//   display: flex; // Sorba rendezzük a kártyákat
+//   flex-wrap: nowrap; // Nem engedjük, hogy tördelődjenek
+//   overflow-x: auto; // Engedélyezzük a horizontális görgetést
+//   width: 100%; // A konténer szélessége 100%
+//   gap: 12px; // A kártyák közötti rés
 
-  scroll-snap-type: x mandatory;
+//   scroll-snap-type: x mandatory;
 
-  // Scrollbár eltüntetése
-  &::-webkit-scrollbar {
-    display: none;
-  }
+//   // Scrollbár eltüntetése
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
 
-  scrollbar-width: none; // Firefoxhoz
-}
+//   scrollbar-width: none; // Firefoxhoz
+// }
 
-.events-col {
-  flex: 0 0 100%; // A kártya nem növekszik, nem zsugorodik, és a szélessége 100% (azaz a szülő szélessége)
-  box-sizing: border-box;
+// .events-col {
+//   flex: 0 0 100%; // A kártya nem növekszik, nem zsugorodik, és a szélessége 100% (azaz a szülő szélessége)
+//   box-sizing: border-box;
 
-  // Scroll Snap pont
-  scroll-snap-align: center;
+//   // Scroll Snap pont
+//   scroll-snap-align: center;
 
-  .EventsMobilCard {
-    width: 100%; // A kártya szélessége a konténerével megegyezik
-    flex: none; // Ezen az állításon nem változtat
-  }
-}
+//   .EventsMobilCard {
+//     width: 100%; // A kártya szélessége a konténerével megegyezik
+//     flex: none; // Ezen az állításon nem változtat
+//   }
+// }
 
-.pagination-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+// .pagination-dots {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 10px;
 
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    border: 1px solid colors.$color-shades-lightBlack; /* Inactive circle color */
-    background-color: colors.$color-shades-lightBlack;
-    border-radius: 50%;
-    transition: background-color 0.3s;
+//   .dot {
+//     width: 10px;
+//     height: 10px;
+//     margin: 0 5px;
+//     border: 1px solid colors.$color-shades-lightBlack; /* Inactive circle color */
+//     background-color: colors.$color-shades-lightBlack;
+//     border-radius: 50%;
+//     transition: background-color 0.3s;
 
-    &.active {
-      background-color: colors.$color-brand-orange;
-      border: 1px solid colors.$color-brand-orange;
-    }
-  }
-}
+//     &.active {
+//       background-color: colors.$color-brand-orange;
+//       border: 1px solid colors.$color-brand-orange;
+//     }
+//   }
+// }
