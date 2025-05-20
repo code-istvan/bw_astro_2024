@@ -15,6 +15,8 @@ date: 2025-05-19T14:58:00.000Z
 image: ../../images/uploads/vedanta_desktop.jpeg
 imageMobil: ../../images/uploads/vedanta_mobil.jpeg
 ---
+### What does it mean to remain faithful to a yoga tradition in a world where anyone can teach, and true masters are not always physically present? As an Ashtanga practitioner and teacher, Vedanta Anga approaches the guru–parampara with deep reverence, while also affirming that practice itself is the true teacher, and the guru lives within us. In this interview, he shares personal experiences—from discovering yoga and the teachings of Sharath Guruji, to the role of Ayurveda and mantra chanting in his life, and how he maintains his inner compass even after the passing of his teacher—in the quiet of daily practice.
+
 ### How did you get introduced to Ashtanga yoga?  
 When I was in dire need of healing my injured shoulder and wanted to delve deeply into the study of yoga, I researched the word *Āshtanga*, which I had heard many times  while working with a Yoga and Ayurveda company and also at the Rishikesh yoga festival earlier. Through my research, I discovered that āshtanga, a practice that caught my attention for its discipline and sincerity, could also serve as a source for using asana methods to heal my shoulder.
 
