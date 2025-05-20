@@ -9,7 +9,7 @@ export interface CarouselProps {
 const { name, text }: CarouselProps = Astro.props;
 ---
 
-<section class="embla mb-40px">
+<div class="embla">
     <div class="embla__viewport">
         <div class="embla__container">
             <slot />
@@ -18,6 +18,6 @@ const { name, text }: CarouselProps = Astro.props;
     <div class="embla__controls">
         <div class="embla__dots"></div>
     </div>
-</section>
+</div>
 
 <script src="/src/components/Carousel/carousel.js"></script>
