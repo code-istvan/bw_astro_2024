@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 language: Hungarian
 title: A guru bennünk él – beszélgetés Vedanta Angával az astanga útjáról
 titleBackground: false
