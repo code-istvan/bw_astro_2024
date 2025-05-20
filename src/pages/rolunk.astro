@@ -26,8 +26,8 @@ const guestTeachers = data.guestTeachers;
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="container">
-        <div class="row container--tight-desktop">
+    <div class="container container--tight-desktop">
+        <div class="row">
             <h3 class="font-family-primary clr-brand-orange mt-20px">
                 A Bandha Works Jógaiskolát 2013-ban három mérnök alapította, akiket összekötött azon törekvés, hogy a
                 tradicionális astanga vinyásza jógát népszerűsítsék, oktassák Magyarországon.
@@ -82,14 +82,14 @@ const guestTeachers = data.guestTeachers;
             </p>
         </div>
         <div class="separator-horizontal-full mt-20px mb-20px"></div>
-        <div class="row container--tight-desktop">
+        <div class="row">
             <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Első évtizedünk</h3>
             <p class="mb-20px">
                 Abban a nagy megtiszteltetésben volt részünk, hogy rengeteg nemzetközileg is elismert astanga jóga
                 tanárt láthattunk vendégül az évek során:
             </p>
         </div>
-        <div class="row container--tight-desktop">
+        <div class="row">
             <div class="guest-teachers-container-mobil">
                 <div class="guest-teachers-mobil">
                     {guestTeachers[0].map((person, index) => <NameCard name={person.name} country={person.country} />)}
@@ -111,7 +111,7 @@ const guestTeachers = data.guestTeachers;
             </div>
         </div>
         <div class="separator-horizontal mt-40px"></div>
-        <div class="row">
+        <div class="row mb-40px">
             <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">2018. április 18.</h3>
             <p class="mb-20px">
                 Az új jógaiskolánk felszentelésénél abban a különleges áldásban részesültünk, hogy az ünnepségen a <strong

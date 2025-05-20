@@ -26,8 +26,8 @@ const guestTeachers = data.guestTeachers;
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="container">
-        <div class="row container--tight-desktop">
+    <div class="container container--tight-desktop">
+        <div class="row">
             <h3 class="font-family-primary clr-brand-orange mt-20px">
                 The Bandha Works Yoga School was founded in 2013 by three engineers who were united by their desire to
                 promote and teach traditional ashtanga vinyasa yoga in Hungary.
@@ -89,14 +89,14 @@ const guestTeachers = data.guestTeachers;
             </p>
         </div>
         <div class="separator-horizontal-full mt-20px mb-20px"></div>
-        <div class="row container--tight-desktop">
+        <div class="row">
             <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">Our first decade</h3>
             <p class="mb-20px">
                 We have had the great privilege of hosting many internationally renowned ashtanga yoga teachers over the
                 years:
             </p>
         </div>
-        <div class="row container--tight-desktop">
+        <div class="row">
             <div class="guest-teachers-container-mobil">
                 <div class="guest-teachers-mobil">
                     {guestTeachers[0].map((person, index) => <NameCard name={person.name} country={person.country} />)}
@@ -118,7 +118,7 @@ const guestTeachers = data.guestTeachers;
             </div>
         </div>
         <div class="separator-horizontal mt-40px"></div>
-        <div class="row container--tight-desktop">
+        <div class="row mb-40px">
             <h3 class="clr-brand-orange font-family-primary mt-20px mb-20px">18 April 2018.</h3>
             <p class="mb-20px">
                 At the dedication of our new yoga school, we were blessed to have the <strong>Jois family</strong>, <strong
