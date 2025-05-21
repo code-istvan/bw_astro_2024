@@ -1,9 +1,9 @@
 ---
 published: true
 language: Hungarian
-title: A guru bennünk él – beszélgetés Vedanta Angával az astanga útjáról
+title: A guru bennünk él – beszélgetés Védanta Angával az astanga útjáról
 titleBackground: false
-description: Ebben a bensőséges hangvételű interjúban Vedanta Anga megosztja
+description: Ebben a bensőséges hangvételű interjúban Védanta Anga megosztja
   személyes útját az astanga jógával, beszél a guru–parampara szerepéről a mai
   világban, valamint arról, hogyan gazdagítja mindennapi szádhanáját az ájurvéda
   és a mantraéneklés. Sharath Guruji elvesztésére reflektálva a belső
@@ -16,7 +16,7 @@ date: 2025-05-19T15:20:00.000Z
 image: ../../images/uploads/vedanta_desktop.jpeg
 imageMobil: ../../images/uploads/vedanta_mobil.jpeg
 ---
-### Mit jelent ma hűnek maradni egy jógahagyományhoz egy olyan világban, ahol bárki taníthat, és a valódi mesterek már nincsenek mindig fizikailag jelen? Vedanta Anga astanga gyakorlóként és tanítóként mély tisztelettel viszonyul a guru–paramparához, ugyanakkor azt vallja: a gyakorlás a valódi tanító, és a guru bennünk él tovább. Ebben az interjúban személyes tapasztalatairól mesél: hogyan talált rá a jógára és Sharath Guruji tanításaira, milyen szerepet játszik életében az ájurvéda és a mantraéneklés, és hogyan őrzi meg belső iránytűjét a mester elvesztése után is – a gyakorlás csendjében.
+### Mit jelent ma hűnek maradni egy jógahagyományhoz egy olyan világban, ahol bárki taníthat, és a valódi mesterek már nincsenek mindig fizikailag jelen? Védanta Anga astanga gyakorlóként és tanítóként mély tisztelettel viszonyul a guru–paramparához, ugyanakkor azt vallja: a gyakorlás a valódi tanító, és a guru bennünk él tovább. Ebben az interjúban személyes tapasztalatairól mesél: hogyan talált rá a jógára és Sharath Guruji tanításaira, milyen szerepet játszik életében az ájurvéda és a mantraéneklés, és hogyan őrzi meg belső iránytűjét a mester elvesztése után is – a gyakorlás csendjében.
 
 ### Hogyan ismerkedtél meg az astanga jógával?
 
