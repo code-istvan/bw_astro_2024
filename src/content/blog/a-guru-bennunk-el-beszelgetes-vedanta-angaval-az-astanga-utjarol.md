@@ -84,6 +84,8 @@ Ugyanakkor a temetése után egyfajta megkönnyebbülést éreztem. A gyakorlás
 
 Ha valóban szeretjük az astanga jógát, és tiszteljük a hagyományokat meg a gurunkat, akkor ennek az útnak a jövője mindig biztosított lesz. Ha viszont irigység, düh vagy ego vezérel minket, az az egyéni útnak sem tesz jót. A gyakorlás és a hagyomány azonban túl fog élni bármit – ahogy más jógairányzatok is folytatódtak mestereik fizikai jelenléte nélkül. A jövő a tanítványokon és gyakorlókon múlik. Ez a mi dharmánk – hogy megőrizzük.
 
-Én folytatom a gyakorlást egyedül is, de ha van lehetőségem tanulni más tanítóktól – Mysore-ban vagy bárhol –, élni fogok vele. Véleményem szerint Guruji tanítása mindig is egyszerű és világos volt: erősítsd meg a tested, hogy ellenálljon a viharoknak, gyakorold a jama és nijama elveit, és alakíts ki etikus életvezetést a spirituális út érdekében.
+Én folytatom a gyakorlást egyedül is, de ha van lehetőségem tanulni más tanítóktól – Mysore-ban vagy bárhol –, élni fogok vele. 
+
+<div class="blog-island-section">Véleményem szerint Guruji tanítása mindig is egyszerű és világos volt: erősítsd meg a tested, hogy ellenálljon a viharoknak, gyakorold a jama és nijama elveit, és alakíts ki etikus életvezetést a spirituális út érdekében.</div>
 
 Hiszem, hogy a guru akkor jelenik meg, amikor szükség van rá – legyen az fizikai vagy asztrális formában. Nincs szükségünk arra, hogy életünk minden szakaszában fizikailag is jelen legyen mellettünk egy guru. Tanításait akkor is lehet gyakorolni és beépíteni az életünkbe, ha már nincs itt. Ha folyton a guru jelenlétét keressük, abból könnyen újabb kötődés alakul ki. A gyakorlás viszont éppen a ragaszkodás elengedéséről szól. Csak így lehetünk valóban szabadok.
