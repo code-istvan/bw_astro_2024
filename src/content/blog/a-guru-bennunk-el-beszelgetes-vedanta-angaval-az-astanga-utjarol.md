@@ -34,7 +34,7 @@ Az astanga jógával kapcsolatos kezdeti kutatásaim során ismertem meg Sharath
 
 Az első mysore-i időszakomban mély kapcsolatot éreztem a jelenléte, az útmutatása és a szelíd szigorúsága által. Nem voltak elvárásaim vele szemben; egyszerűen csak teljes szívemből szerettem volna elköteleződni a gyakorlásnak és a vele való közös útnak. Az a tudat, hogy megtaláltam a gurumat, teljességgel töltött el.
 
-### Tapasztaltál bármilyen előnyt az astanga gyakorlásában abból, hogy bráhmin családban nőttél fel, ahol már gyerekként megismerkedhettél a jama és nijama elveivel? És ha már itt tartunk: szerinted mennyire fontos sorrendben követni a nyolc ág útját? Hatékony lehet a gyakorlás akkor is, ha más sorrendben közelítjük meg?
+### Tapasztaltál bármilyen előnyt az astanga gyakorlásában abból, hogy bráhmin családban nőttél fel, ahol már gyerekként megismerkedhettél a jama és nijama elveivel? És ha már itt tartunk: szerinted mennyire fontos sorrendben követni a nyolcágú jóga útját? Hatékony lehet a gyakorlás akkor is, ha más sorrendben közelítjük meg?
 
 Igen, mindenképp. Hálás vagyok, hogy a jama és nijama elveit már a szüleimtől megtanulhattam. Valójában sok indiai családban ezek az erkölcsi és etikai értékek természetes részei a nevelésnek – egyfajta „mit szabad és mit nem” kódexként. Ezek a tanítások gyakran a Bhagavad Gítából és más szent szövegekből erednek.
 
