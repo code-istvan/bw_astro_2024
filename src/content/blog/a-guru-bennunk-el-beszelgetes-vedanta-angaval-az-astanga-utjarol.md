@@ -22,7 +22,7 @@ imageMobil: ../../images/uploads/vedanta_mobil.jpeg
 
 Amikor sürgősen szükségem volt a vállsérülésem gyógyítására, és szerettem volna komolyabban foglalkozni a jóga tanulmányozásával, elkezdtem kutatni az „astanga” szót, amit korábban sokszor hallottam – egy Jóga és Ájurvéda témájú cégnél végzett munkám során, valamint a rishikeshi jógafesztiválon. A kutatásom során felfedeztem, hogy az astanga – egy fegyelmet és őszinteséget sugárzó gyakorlás – nemcsak mélyebb elköteleződésre ad lehetőséget, hanem a vállam gyógyításához is eszközt kínálhat az ászanákon keresztül.
 
-### A Jóga Szútrák nem írják elő, hogy tanítót kell keresnünk, és tőle kellene megtanulnunk a jóga tudományát. Véleményed szerint mi a jelentősége a guru-paramparának napjainkban, amikor a jógát számos forrásból is elsajátíthatjuk?
+### A Jóga Szútrák nem írják elő, hogy tanítót kell keresnünk, és tőle kellene megtanulnunk a jóga tudományát. Véleményed szerint mi a jelentősége a guru-paramparának napjainkban, amikor a jógát számos forrásból gyakorolhatjuk?
 
 Ha visszatekintünk a történelemre, Patandzsalinak is voltak tanítványai, akiknek továbbadta a tudását. Indiában ez mindig is élő hagyomány volt: a tanítvány a tanártól tanul, majd később ő maga is tanítja a saját tanítványait, így folytatva a láncolatot. A mai világban, amikor rengeteg információ elérhető, könnyű eltévedni vagy összezavarodni. Egy valódi guru vagy egy hiteles tanítói vonal iránytűként szolgál, amely segít, hogy a tanítások hűek maradjanak eredeti céljukhoz, és ne veszítsék el a lényegüket.
 
