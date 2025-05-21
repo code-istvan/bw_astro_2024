@@ -43,7 +43,7 @@ const mobileEvents = filteredEvents.slice(0, maxEventsMobile);
 const desktopEvents = filteredEvents.slice(0, maxEventsDesktop);
 ---
 
-<div class="section-events container mb-40px">
+<section class="section-events">
     <div>
         <h2 class="section-events__title heading heading--1 text-center mb-20px">
             {currentTranslation.sectionEventsTitle}
@@ -51,7 +51,7 @@ const desktopEvents = filteredEvents.slice(0, maxEventsDesktop);
     </div>
 
     <!-- Carousel 1080px alatt -->
-    <div class="carousel-wrapper">
+    <div class="carousel-wrapper container">
         <Carousel>
             {
                 mobileEvents.map((event) => (
@@ -75,7 +75,7 @@ const desktopEvents = filteredEvents.slice(0, maxEventsDesktop);
     </div>
 
     <!-- Flexbox elrendezés 1080px felett -->
-    <div class="flex-wrapper">
+    <div class="flex-wrapper container">
         {
             desktopEvents.map((event) => (
                 <div class="flex-item mt-20px">
@@ -93,8 +93,7 @@ const desktopEvents = filteredEvents.slice(0, maxEventsDesktop);
             ))
         }
     </div>
-
-    <div class="centered-block">
+    <div class="centered-block container">
         <a
             href={currentTranslation.sectionEventsLink}
             class="btn btn--full-width-mobile btn--primary--outline mt-20px"
@@ -103,4 +102,4 @@ const desktopEvents = filteredEvents.slice(0, maxEventsDesktop);
             {currentTranslation.sectionEventsButton}
         </a>
     </div>
-</div>
+</section>
