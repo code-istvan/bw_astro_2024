@@ -90,4 +90,4 @@ Ha valóban szeretjük az astanga jógát, és tiszteljük a hagyományokat meg 
 
 Hiszem, hogy a guru akkor jelenik meg, amikor szükség van rá – legyen az fizikai vagy asztrális formában. Nincs szükségünk arra, hogy életünk minden szakaszában fizikailag is jelen legyen mellettünk egy guru. Tanításait akkor is lehet gyakorolni és beépíteni az életünkbe, ha már nincs itt. Ha folyton a guru jelenlétét keressük, abból könnyen újabb kötődés alakul ki. A gyakorlás viszont éppen a ragaszkodás elengedéséről szól. Csak így lehetünk valóban szabadok.
 
-### Nagyon köszönjük, hogy időt szántál ránk, és megosztottad velünk ezeket a tapasztalatokat, meglátásokat és bölcsességeket. …A gondolataid mélyen megérintettek bennünket! Hála és köszönet 🙏
+### Nagyon köszönjük, hogy időt szántál ránk, és megosztottad velünk ezeket a tapasztalatokat, meglátásokat és bölcsességeket. …A gondolataid mélyen megérintettek bennünket 🙏
