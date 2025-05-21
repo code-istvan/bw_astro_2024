@@ -42,7 +42,7 @@ A különböző hagyományok útjai eltérhetnek, de a cél ugyanaz. Van, ahol a
 
 Az astanga hagyományban Sharath Guruji mindig hangsúlyozta, hogy nem az ászana a legfontosabb – a jama és nijama az alap. Ezek olyanok, mint egy belső iránytű, egy ellenőrzőlista, amely meghatározza, milyen úton járunk. Ezek nélkül a tudat nem tiszta, és így a gyakorlás – a belső csend – sem tud kibontakozni.
 
-Számomra nagyon fontos a sorrendiség: ez a nyolc ág rendszere tudatosan lett felépítve az emberiség fejlődésének szolgálatában. Ahogyan egy ászanát sem tudunk helyesen gyakorolni, amíg nem találjuk meg benne a könnyedséget és a stabilitást, ugyanúgy nem tudunk továbblépni egyik ágról a másikra anélkül, hogy a megelőző lépcsőt valóban megéltük volna.
+Számomra nagyon fontos a sorrendiség: ez a nyolcágú jógarendszer tudatosan lett felépítve az emberiség fejlődésének szolgálatában. Ahogyan egy ászanát sem tudunk helyesen gyakorolni, amíg nem találjuk meg benne a könnyedséget és a stabilitást, ugyanúgy nem tudunk továbblépni egyik ágról a másikra anélkül, hogy a megelőző lépcsőt valóban megéltük volna.
 
 ### Milyen félreértésekkel találkozol leggyakrabban az astanga jógával kapcsolatban a nyugati gyakorlók körében?
 
