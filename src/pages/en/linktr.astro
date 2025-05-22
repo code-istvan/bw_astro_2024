@@ -1,13 +1,13 @@
 ---
-import LinktrLayout from '../layouts/LinktrLayout.astro';
-import Icons from '../components/Icons/Icons.astro';
-import LanguagePicker from '../components/LanguagePickers/LanguagePicker.astro';
-import linktrData from '../data/linktr.json';
+import LinktrLayout from '../../layouts/LinktrLayout.astro';
+import Icons from '../../components/Icons/Icons.astro';
+import LanguagePicker from '../../components/LanguagePickers/LanguagePicker.astro';
+import linktrData from '../../data/linktr.json';
 
-const content = linktrData.hu;
+const content = linktrData.en;
 ---
 
-<LinktrLayout title={content.title} description={content.description} language="Hungarian">
+<LinktrLayout title={content.title} description={content.description} language="English">
     <div
         class="linktr__container container--linktr-desktop display-flex display-flex--direction-column align-items-center"
     >

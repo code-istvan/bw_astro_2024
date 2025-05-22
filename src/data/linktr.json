@@ -1,0 +1,46 @@
+{
+  "hu": {
+    "title": "LINKTR",
+    "description": "BandhaWorks jógaiskola linktr oldala",
+    "bio": "Tradicionális astanga jógaiskola a Paramaguru áldásával. Reggeli Mysore-program, neves külföldi vendégtanárok, workshopok és elvonulások. Spirituális alapelvekre épülő közösség, ahol a gyakorlás közösséget teremt.",
+    "iconLink": "/",
+    "buttons": [
+      {
+        "id": 1,
+        "label": "VÉDANTA INTERJÚ",
+        "href": "/blog/a-guru-bennunk-el-beszelgetes-vedanta-angaval-az-astanga-utjarol/"
+      },
+      { "id": 2, "label": "ASTANGA MYSORE PROGRAM", "href": "/astanga-mysore-program/" },
+      { "id": 3, "label": "TANFOLYAMOK", "href": "/tanfolyam/" },
+      { "id": 4, "label": "ESEMÉNYEK", "href": "/esemenyek/" },
+      { "id": 5, "label": "KAPCSOLAT", "href": "/kapcsolat/" },
+      { "id": 6, "label": "WEBOLDAL", "href": "/" },
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "en": {
+    "title": "LINKTR",
+    "description": "The Linktree page of BandhaWorks Yoga School",
+    "bio": "Traditional Ashtanga yoga school blessed by Paramaguru. Morning Mysore program, renowned international guest teachers, workshops and retreats. A community rooted in spiritual principles, where daily practice builds real connection.",
+    "iconLink": "/en/",
+    "buttons": [
+      {
+        "id": 1,
+        "label": "VEDANTA INTERVIEW",
+        "href": "/blog/the-guru-lives-within-vedanta-anga-on-the-path-of-ashtanga/"
+      },
+      { "id": 2, "label": "EVENTS", "href": "/en/events/" },
+      { "id": 3, "label": "WEBSITE", "href": "/en/" },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  }
+}
