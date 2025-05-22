@@ -12,10 +12,10 @@
       },
       { "id": 2, "label": "ASTANGA MYSORE PROGRAM", "href": "/astanga-mysore-program/" },
       { "id": 3, "label": "TANFOLYAMOK", "href": "/tanfolyam/" },
-      { "id": 4, "label": "ESEMÉNYEK", "href": "/esemenyek/" },
-      { "id": 5, "label": "KAPCSOLAT", "href": "/kapcsolat/" },
-      { "id": 6, "label": "WEBOLDAL", "href": "/" },
-      {},
+      { "id": 4, "label": "ÓRAREND", "href": "/orarend/" },
+      { "id": 5, "label": "ESEMÉNYEK", "href": "/esemenyek/" },
+      { "id": 6, "label": "KAPCSOLAT", "href": "/kapcsolat/" },
+      { "id": 7, "label": "WEBOLDAL", "href": "/" },
       {},
       {},
       {}
@@ -24,20 +24,20 @@
   "en": {
     "title": "LINKTR",
     "description": "The Linktree page of BandhaWorks Yoga School",
-    "bio": "Traditional Ashtanga yoga school blessed by Paramaguru. Morning Mysore program, renowned international guest teachers, workshops and retreats. A community rooted in spiritual principles, where daily practice builds real connection.",
+    "bio": "Traditional Ashtanga yoga shala blessed by the Paramaguru. Morning Mysore program, renowned international guest teachers, workshops and retreats. A community rooted in spiritual principles, where daily practice builds real connection.",
     "iconLink": "/en/",
     "buttons": [
       {
         "id": 1,
         "label": "VEDANTA INTERVIEW",
-        "href": "/blog/the-guru-lives-within-vedanta-anga-on-the-path-of-ashtanga/"
+        "href": "/en/blog/the-guru-lives-within-vedanta-anga-on-the-path-of-ashtanga/"
       },
-      { "id": 2, "label": "EVENTS", "href": "/en/events/" },
-      { "id": 3, "label": "WEBSITE", "href": "/en/" },
-      {},
-      {},
-      {},
-      {},
+      { "id": 2, "label": "ASHTANGA MYSORE PROGRAM", "href": "/astanga-mysore-program/" },
+      { "id": 3, "label": "ABOUT BANDHAWORKS", "href": "/en/rolunk/" },
+      { "id": 4, "label": "SCHEDULE", "href": "/en/orarend/" },
+      { "id": 5, "label": "EVENTS", "href": "/en/esemenyek/" },
+      { "id": 6, "label": "CONTACT", "href": "/en/kapcsolat/" },
+      { "id": 7, "label": "WEBSITE", "href": "/en/" },
       {},
       {},
       {}

@@ -3,6 +3,7 @@ import LinktrLayout from '../layouts/LinktrLayout.astro';
 import Icons from '../components/Icons/Icons.astro';
 import LanguagePicker from '../components/LanguagePickers/LanguagePicker.astro';
 import linktrData from '../data/linktr.json';
+import SocialIcons from '../components/Icons/SocialIcons.astro';
 
 const content = linktrData.hu;
 ---
@@ -35,6 +36,9 @@ const content = linktrData.hu;
                         </a>
                     ))
             }
+        </div>
+        <div class="linktr__social-icons mb-40px">
+            <SocialIcons />
         </div>
     </div>
 </LinktrLayout>
