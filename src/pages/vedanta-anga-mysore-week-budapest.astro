@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/vedanta_mobil.jpeg';
+import desktopImage from '../images/vedanta_desktop.jpeg';
+
+const metadata = {
+    title: 'VÉDANTA ANGA (IND) - ASTANGA MYSORE HÉT BUDAPEST',
+    description: 'Itt olvashatsz Védanta Anga Astanga Mysore hétéről. Budapesten, a Bandha Works jógaiskolában.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <h3 class="mb-20px mt-40px clr-brand-orange">
+            Ritka lehetőség, hogy egy autentikus, brámin családban nevelkedett astanga jógaoktatótól tanulhassunk – és
+            mindez a Bandha Works patináns, felszentelt falai között történik. Első alkalommal érkezik Budapestre
+            Védanta Anga, aki a mysore-i Paramaguru Sharath Jois által elismert, Level 2-es autorizációval rendelkező
+            tanár.
+        </h3>
+        <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">Védanta Anga</h3>
+        <p class="mb-20px">
+            Védanta bráhmin családban született és nevelkedett, életét gyermekkora óta mélyen átszövi a spiritualitás,
+            különösen a Bhakti jóga gyakorlása. 15 éves korára a medtiáció szerves részévé vált a mindennapi
+            rituáléinak, karöltve a mantraénekléssel, amit szüleivel közösen végzett különböző vallási szertartások
+            részeként templomokban és otthonukban. A jógaászanákkal, mint fizikai tevékenységgel fiatalkorában
+            teniszedzései során ismerkedett meg, de csak később, egy teniszezésből származó vállsérülést követően
+            mélyítette el ászanagyakorlását, megsegítve felépülését. Vedanta az Ashtanga jóga tanulmányozását és
+            gyakorlását tanárával Paramaguru Sharath Jois-al, Mysore-ban folytatta, aki 2-es szinten autorizálta őt.
+            Emellett ájurvéda gyakorló és 1. szintű terapeuta is. Tanult továbbá a Natural Health Science from the
+            International Institute of Mahayoga and Natural Hygiene (IMANAH) intézetében. Az itt elsajátított tudása
+            segítségével természetes gyógymódokkal segíti emberek gyógyulását különböző betegségekből. Ezen felül
+            Vedanta az Advaita Vedanta filozófia tanulmányozásával is foglalkozik. Vedanta tanításai a légzést, a
+            csendet, az összpontosítást és a belső erőt hangsúlyozzák. Gyakran épít be meditációt, pránájámát és mantra
+            éneklést a foglalkozásaiba, megosztva azoknak a gyakorlatoknak az összességét, melyeket spirituális útja
+            során magáévá tett.
+        </p>
+        <p class="mb-20px">
+            A Mysore héten való részvétel költsége 120USD (6 alkalom). Az eseményre a recepciónkon tudsz jelentkezni a
+            részvételi díj kifizetésével. Mysore-programunk rendszeres* gyakorlói és Mysore Program Pártoló tagjaink
+            számára a programon való részvétel ingyenes.
+        </p>
+        <p class="mb-20px">
+            A programváltoztatás jogát fenntartjuk. A résztvevők a részvételükkel hozzájárulnak, hogy az eseményen
+            fényképek készülhetnek róluk!
+        </p>
+
+        <p class="mb-20px">
+            *minimum három hónap folyamatos gyakorlás Mysore-programunkban az eseményt közvetlenül megelőző időszakban.
+        </p>
+        <h3 class="mb-20px mt-40px clr-brand-orange">
+            Ha érdekel az astanga jóga mélyebb, hagyományos megközelítése, ne hagyd ki ezt a kivételes alkalmat:
+            gyakorolj egy olyan tanárral, aki nemcsak a rendszer technikáját, hanem annak szellemiségét is otthonról
+            hozza magával.
+        </h3>
+    </div>
+</BaseLayout>
