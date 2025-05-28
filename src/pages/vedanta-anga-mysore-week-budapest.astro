@@ -3,11 +3,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/vedanta_mobil.jpeg';
 import desktopImage from '../images/vedanta_desktop.jpeg';
+import { Image } from 'astro:assets';
+import VedantaImage1 from '../images/vedanta_ji_1.jpeg';
+import VedantaImage2 from '../images/vedanta_ji_2.jpeg';
+import VedantaImage3 from '../images/vedanta_ji_3.jpeg';
+import Carousel from '../components/Carousel/Carousel.astro';
 
 const metadata = {
     title: 'VÉDANTA ANGA (IND) - ASTANGA MYSORE HÉT BUDAPEST',
     description: 'Itt olvashatsz Védanta Anga Astanga Mysore hétéről. Budapesten, a Bandha Works jógaiskolában.',
 };
+
+const mysoreImages = [
+    {
+        image: VedantaImage1,
+        alt: 'Vedanta Anga Asana',
+    },
+    {
+        image: VedantaImage2,
+        alt: 'Vedanta Anga Ashtanga',
+    },
+    {
+        image: VedantaImage3,
+        alt: 'Vedanta Anga Padmasana',
+    },
+];
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -42,6 +62,25 @@ const metadata = {
             éneklést a foglalkozásaiba, megosztva azoknak a gyakorlatoknak az összességét, melyeket spirituális útja
             során magáévá tett.
         </p>
+
+        <div class="row image-track-3-type-2 hidden-mobile mt-20px mb-40px">
+            <Image src={VedantaImage1} alt="Vedanta Anga Asana" />
+            <Image src={VedantaImage2} alt="Vedanta Anga Ashtanga" />
+            <Image src={VedantaImage3} alt="Vedanta Anga Padmasana" />
+        </div>
+
+        <div class="image--visible-mobil hidden-desktop mb-40px mt-20px">
+            <Carousel>
+                {
+                    mysoreImages.map((item) => (
+                        <div class="section-social-proof__slide embla__slide">
+                            <Image src={item.image} alt={item.alt} />
+                        </div>
+                    ))
+                }
+            </Carousel>
+        </div>
+
         <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">A Mysore-hét programja</h3>
         <ul class="mb-20px">
             <li class="mb-10px">
