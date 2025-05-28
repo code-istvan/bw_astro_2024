@@ -38,7 +38,7 @@ const mysoreImages = [
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="container container--tight-desktop mb-40px">
+    <div class="container container--tight-desktop">
         <div class="row"><blockquote>Egy betegség kitűnő lehetőség, hogy megváltoztasd magad</blockquote></div>
         <p>
             2005-ben kezdtem jógázni abban a reményben, hogy sikerül leküzdenem egy – a nyugati orvostudomány által –
@@ -93,12 +93,12 @@ const mysoreImages = [
             KPJAYI-ban, Indiában.
         </p>
         <h3 class="mt-20px clr-brand-orange">KPJAYI Mysore, India. 2018.</h3>
-        <div class="row image-track-3-type-2 mt-20px">
+        <div class="row image-track-3-type-2 hidden-mobile mt-20px mb-40px">
             <Image src={MysoreImage1} alt="Paramaguru Sharath Jois és Szalai István a KPJAYI-ban" />
             <Image src={MysoreImage2} alt="Paramaguru Sharath Jois és asszisztensei, Szalai István-nal a KPJAYI-ban" />
             <Image src={MysoreImage3} alt="Lakshmish Ji és Szalai István, Mysore a KPJAYI-ban" />
         </div>
-        <div class="image--visible-mobil mt-20px mb-40px">
+        <div class="image--visible-mobil hidden-desktop mb-40px mt-20px">
             <Carousel>
                 {
                     mysoreImages.map((item) => (
