@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/osztondij_mobil.jpg';
 import desktopImage from '../../images/osztondij_desktop.jpg';
@@ -12,19 +11,20 @@ import SocialProofCard from '../../components/Carousel/SocialProofCard.astro';
 import SocialProofs from '../../data/socialProofs.json';
 import '../../sass/pages/_osztondij.scss';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const metadata = {
+    title: 'SCHOLARSHIP',
+    description: 'The Bandha Works Yoga School offers a scholarship for those who cannot afford a yoga pass.',
+};
 
-const pageTitle = t('osztondij');
 const proofs = SocialProofs.scholarshipEnglish;
 ---
 
-<BaseLayout title={pageTitle}>
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage
         mobileImgUrl={mobileImage}
         desktopImgUrl={desktopImage}
-        alt={pageTitle}
-        pageName={pageTitle}
+        alt={metadata.title}
+        pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
