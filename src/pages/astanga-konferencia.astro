@@ -3,15 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/konferencia_mobil.jpeg';
 import desktopImage from '../images/konferencia_desktop.jpeg';
-import firstTimeData from '../data/firstTime.json';
 
 const metadata = {
     title: 'KONFERENCIA',
     description:
         'Ezen az oldalon az astanga jóga konferenciáról olvashatsz, amelyet a Bandha Works jógaiskolában tartunk.',
 };
-
-const huFirstTimeData = firstTimeData.HU;
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -24,7 +21,7 @@ const huFirstTimeData = firstTimeData.HU;
     />
     <div class="container container--tight-desktop">
         <div class="elsoalkalom-wrapper tight--desktop--container">
-            <div class="row mt-40px mb-20px">
+            <div class="mt-40px mb-20px">
                 <p class="mb-20px">
                     Az astanga konferencia hagyománya a Mysore-i KPJAYI-ból (K Pattabhi Jois Ashtanga Yoga Institute)
                     származik, ahol is heti rendszerességgel összegyűlnek az intézményben gyakorlók és a vezető oktató,
@@ -44,7 +41,7 @@ const huFirstTimeData = firstTimeData.HU;
                 <p class="mb-20px">
                     <strong>Következő esemény időpontja:</strong> 2025. június 28., szombat, 10:00 - 11:00
                 </p>
-                <p class="mb-20px"><strong>Vendégünk:</strong> Védanta Anga, SYC Authorized Level 2</p>
+                <p class="mb-20px"><strong>Vendégünk:</strong> Védanta Anga (IND), SYC Authorized Level 2</p>
                 <p class="mb-20px"><strong>Várunk szeretettel!</strong></p>
             </div>
         </div>
