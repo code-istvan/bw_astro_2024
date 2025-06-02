@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/konferencia_mobil.jpeg';
+import desktopImage from '../images/konferencia_desktop.jpeg';
+import firstTimeData from '../data/firstTime.json';
+
+const metadata = {
+    title: 'KONFERENCIA',
+    description:
+        'Ezen az oldalon az astanga jóga konferenciáról olvashatsz, amelyet a Bandha Works jógaiskolában tartunk.',
+};
+
+const huFirstTimeData = firstTimeData.HU;
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="elsoalkalom-wrapper tight--desktop--container">
+            <div class="row mt-40px mb-20px">
+                <p class="mb-20px">
+                    Az astanga konferencia hagyománya a Mysore-i KPJAYI-ból (K Pattabhi Jois Ashtanga Yoga Institute)
+                    származik, ahol is heti rendszerességgel összegyűlnek az intézményben gyakorlók és a vezető oktató,
+                    Guruji Sharath Jois. A konferenciát általában egy adott aktuális téma kifejtésével kezdi SharathJi
+                    majd a diákok kérdéseket tehetnek fel a gyakorlással kapcsolatosan, amire a reggeli órákon sajnos
+                    nincs lehetőség.
+                </p>
+                <p class="mb-20px">
+                    Ezt a tradíciót követve mi is összegyűlünk havi rendszerességgel, hogy lehetőséget teremtsünk a
+                    gyakorlók számára, hogy feltegyék kérdéseiket és mélyítsék megértésüket az astanga jóga
+                    tudományában.
+                </p>
+                <p class="mb-20px">
+                    A konferencián való részvétel ingyenes a Mysore-programunk résztvevői számára, de örömmel fogadjuk,
+                    ha hozol magaddal egy kis gyümölcsöt, vegán süteményt vagy egy szép virágot Patandzsalinak.
+                </p>
+                <p class="mb-20px">
+                    <strong>Következő esemény időpontja:</strong> 2025. június 28., szombat, 10:00 - 11:00
+                </p>
+                <p class="mb-20px"><strong>Vendégünk:</strong> Védanta Anga, SYC Authorized Level 2</p>
+                <p class="mb-20px"><strong>Várunk szeretettel!</strong></p>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
