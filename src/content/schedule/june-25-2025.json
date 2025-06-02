@@ -1,10 +1,16 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": true,
-  "ekadashi": false,
-  "date": "June 25, 2025",
-  "class": "vedantaMantra",
   "teacher": "vedantaJi",
-  "classTime": "6:30 - 7:00"
+  "classTime": "6:30 - 7:00",
+  "classTime2": "7:00 - 7:30",
+  "classTime3": "18:00 - 19:30",
+  "published": true,
+  "date": "June 25, 2025",
+  "teacher2": "vedantaJi",
+  "fullmoon": false,
+  "teacher3": "istvanJi",
+  "class": "vedantaMantra",
+  "class2": "vedantaMeditacio",
+  "class3": "kramaNaga",
+  "ekadashi": false
 }
