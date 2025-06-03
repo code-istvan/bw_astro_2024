@@ -3,11 +3,14 @@
   "teacher": "vedantaJi",
   "classTime": "5:30 - 9:00",
   "classTime2": "9:30 - 10:00",
+  "classTime3": "10:00 - 11:00",
   "published": true,
   "date": "June 28, 2025",
   "teacher2": "vedantaJi",
   "fullmoon": false,
+  "teacher3": "vedantaJi",
   "class": "mysorePractice",
   "class2": "vedantaMantra",
+  "class3": "astangaKonferecia",
   "ekadashi": false
 }
