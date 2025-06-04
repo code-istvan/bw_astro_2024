@@ -1,0 +1,89 @@
+{
+  "HU": [
+    {
+      "id": 1,
+      "date": "JÚNIUS 23. - HÉTFŐ",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE-GYAKORLÁS"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "JÚNIUS 24. - KEDD",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE-GYAKORLÁS"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "JÚNIUS 25. - SZERDA – HOLDNAP",
+      "program": [
+        {
+          "time": "6:30 - 7:00",
+          "activity": "MANTRA ÉNEKLÉS"
+        },
+        {
+          "time": "7:00 - 7:30",
+          "activity": "MEDITÁCIÓ ÉS LÉGZŐGYAKORLATOK"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "date": "JÚNIUS 26. - CSÜTÖRTÖK",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE-GYAKORLÁS"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "date": "JÚNIUS 27. - PÉNTEK",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE-GYAKORLÁS"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "date": "JÚNIUS 28. - SZOMBAT",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE-GYAKORLÁS"
+        },
+        {
+          "time": "9:00 - 9:30",
+          "activity": "CHAI TIME"
+        },
+        {
+          "time": "9:30 - 10:00",
+          "activity": "MANTRAÉNEKLÉS"
+        },
+        {
+          "time": "10:00 - 11:00",
+          "activity": "KONFERENCIA"
+        },
+        {
+          "time": "11:00 - 11:30",
+          "activity": "FÉNYKÉPEZKEDÉS"
+        },
+        {
+          "time": "17:00 - 18:30",
+          "activity": "MYSORE THALI – ZÁRÓESEMÉNY"
+        }
+      ]
+    }
+  ],
+  "EN": []
+}

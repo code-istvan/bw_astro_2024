@@ -8,6 +8,8 @@ import VedantaImage1 from '../images/vedanta_ji_1.jpeg';
 import VedantaImage2 from '../images/vedanta_ji_2.jpeg';
 import VedantaImage3 from '../images/vedanta_ji_3.jpeg';
 import Carousel from '../components/Carousel/Carousel.astro';
+import AccordionVedantaSchedule from '../components/Accordions/AccordionVedantaSchedule.astro';
+import vadantaSchedule from '../data/vedanta_schedule.json';
 
 const metadata = {
     title: 'VÉDANTA ANGA (IND) - ASTANGA MYSORE HÉT BUDAPEST',
@@ -101,131 +103,14 @@ const mysoreImages = [
                 }
             </Carousel>
         </div>
-
         <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">A Mysore-hét programja</h3>
-        <ul class="mb-20px">
-            <li class="mb-10px">
-                <strong><p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 23. - HÉTFŐ</p></strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>5:30 - 9:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE-GYAKORLÁS</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="mb-10px">
-                <strong><p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 24. - KEDD</p></strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>5:30 - 9:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE-GYAKORLÁS</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="mb-10px">
-                <strong>
-                    <p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 25. - SZERDA – HOLDNAP</p>
-                </strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>6:30 - 7:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MANTRA ÉNEKLÉS</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>7:00 - 7:30</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MEDITÁCIÓ ÉS LÉGZŐGYAKORLATOK</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="mb-10px">
-                <strong>
-                    <p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 26. - CSÜTÖRTÖK</p>
-                </strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>5:30 - 9:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE-GYAKORLÁS</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="mb-10px">
-                <strong><p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 27. - PÉNTEK</p></strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>5:30 - 9:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE-GYAKORLÁS</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="mb-10px">
-                <strong>
-                    <p class="clr-brand-orange font-family-primary body body--bold">JÚNIUS 28. - SZOMBAT</p>
-                </strong>
-                <ul>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>5:30 - 9:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE-GYAKORLÁS</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>9:00 - 9:30</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">CHAI TIME</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>9:30 - 10:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MANTRAÉNEKLÉS</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>10:00 - 11:00</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">KONFERENCIA</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>11:00 - 11:30</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">FÉNYKÉPEZKEDÉS</span>
-                    </li>
-                    <li>
-                        <span class="mr-0_5rem clr-shades-gray body body--bold body--font-family-secondary">
-                            <em>17:00 - 18:30</em>
-                        </span>
-                        <span class="body body--bold body--font-family-secondary">MYSORE THALI – ZÁRÓESEMÉNY*</span>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <p class="mb-20px">
-            <small>* a részvételi díj nem tartalmazza a Mysore thali költségét, amely 4.000 Ft.</small>
-        </p>
+        <div><AccordionVedantaSchedule id="mysore-program" schedule={vadantaSchedule.HU} /></div>
         <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">Részvételi feltételek</h3>
         <p class="mb-20px">
             A Mysore héten való részvétel költsége 120EUR (6 alkalom). Az eseményre a recepciónkon tudsz jelentkezni a
             részvételi díj kifizetésével. Mysore-programunk rendszeres** gyakorlói és Mysore Program Pártoló tagjaink
-            számára a programon való részvétel ingyenes.
+            számára a programon való részvétel ingyenes. A részvételi díj nem tartalmazza a Mysore thali költségét,
+            amely 4.000 Ft.
         </p>
         <p class="mb-20px">
             A programváltoztatás jogát fenntartjuk. A résztvevők a részvételükkel hozzájárulnak, hogy az eseményen
@@ -236,8 +121,8 @@ const mysoreImages = [
         </p>
         <h3 class="mb-20px mt-40px clr-brand-orange">
             Ha érdekel az astanga jóga mélyebb, hagyományos megközelítése, ne hagyd ki ezt a kivételes alkalmat:
-            gyakorolj egy olyan tanárral, aki nemcsak a rendszer technikáját, hanem annak szellemiségét is otthonról
-            hozza magával.
+            gyakorolj egy olyan tanárral, aki nemcsak a rendszer technikáját, hanem annak szellemiségét is indiai
+            otthonából hozza magával.
         </h3>
     </div>
 </BaseLayout>
