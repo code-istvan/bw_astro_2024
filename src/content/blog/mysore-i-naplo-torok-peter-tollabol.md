@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 language: Hungarian
 title: Mysore-i napló, Török Péter tollából
 titleBackground: false
