@@ -50,6 +50,16 @@ const registrationText = {
         <div class="course-card__header mb-20px">
             <p class="course-card__date clr-brand-orange body--bold">{formattedDate}</p>
         </div>
+        <div>
+            {
+                (course.data.note && language === 'HU') || (course.data.noteEnglish && language === 'EN') ? (
+                    <p class="course-card__note clr-flag-notify body body--bold mt-10px mb-10px">
+                        {language === 'HU' ? course.data.note : course.data.noteEnglish}
+                    </p>
+                ) : null
+            }
+        </div>
+
         <div class="course-card__body">
             <div class="course-card__title-section mb-20px">
                 <h2 class="course-card__title">{getLocalizedValue('title')}</h2>
@@ -102,14 +112,6 @@ const registrationText = {
                                 {language === 'HU' ? registrationText.normal.hu : registrationText.normal.en}
                             </p>
                         )
-                    }
-
-                    {
-                        (course.data.note && language === 'HU') || (course.data.noteEnglish && language === 'EN') ? (
-                            <p class="course-card__note mt-10px">
-                                {language === 'HU' ? course.data.note : course.data.noteEnglish}
-                            </p>
-                        ) : null
                     }
                 </div>
             </div>
