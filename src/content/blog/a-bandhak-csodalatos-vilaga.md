@@ -18,8 +18,6 @@ image: ../../images/uploads/mula_desktop.jpeg
 imageMobil: ../../images/uploads/mula_mobil.jpeg
 ---
 
-ELŐSZÓ
-
 ### Az ászanagyakorlás során, amikor kapcsolatba kerülünk a testünkkel, a központunkkal, egyúttal belépünk a múla bandha „birodalmába”, amely a gyökércsakra támogatójaként a gerincoszlop alján található. [Sri K. Pattabhi Jois](https://bandha.works/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/) (Guruji) sokszor hangsúlyozta, hogy milyen fontos a múla bandha gyakorlása és folyamatos tartása. Azt mondta, hogy a múla bandha a végbélnyílás (medencefenék) körüli izmok összehúzása, amely kontrollt biztosít az elme felett, ezért azt folyamatosan a nap 24 órájában tartani kell.
 
 Az astanga jóga gyakorlói körében, a bandhák tekintetében többféle nézőpont is kialakult, ami egy többrétegű izgalmas új
