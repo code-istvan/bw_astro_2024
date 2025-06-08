@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import VedantaImage1 from '../images/vedanta_ji_1.jpeg';
 import VedantaImage2 from '../images/vedanta_ji_2.jpeg';
 import VedantaImage3 from '../images/vedanta_ji_3.jpeg';
+import VedantaImageLong from '../images/vedanta_ji_long.jpg';
 import Carousel from '../components/Carousel/Carousel.astro';
 import AccordionVedantaSchedule from '../components/Accordions/AccordionVedantaSchedule.astro';
 import vadantaSchedule from '../data/vedanta_schedule.json';
@@ -41,6 +42,14 @@ const mysoreImages = [
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop mb-40px">
+        <div class="island-section-alert">
+            <p>
+                <strong>
+                    Már csak két szabad hely elérhető VédantaJi Mysore-hetére, a 7:00 és 7:30-as kezdési időpontokra.
+                </strong>
+            </p>
+        </div>
+
         <h3 class="mb-20px mt-40px clr-brand-orange">
             Ritka lehetőség, hogy egy autentikus, brámin családban nevelkedett astanga jógaoktatótól tanulhassunk – és
             mindez a Bandha Works patináns, felszentelt falai között történik. Első alkalommal érkezik Budapestre
@@ -90,10 +99,8 @@ const mysoreImages = [
                 </strong>
             </p>
         </div>
-        <div class="row image-track-3-type-2 hidden-mobile mt-20px mb-40px">
-            <Image src={VedantaImage1} alt="Vedanta Anga Asana" />
-            <Image src={VedantaImage2} alt="Vedanta Anga Ashtanga" />
-            <Image src={VedantaImage3} alt="Vedanta Anga Padmasana" />
+        <div class="hidden-mobile mt-20px mb-40px">
+            <Image src={VedantaImageLong} alt="Vedanta Anga Asana" />
         </div>
         <div class="image--visible-mobil hidden-desktop mb-40px mt-20px">
             <Carousel>
