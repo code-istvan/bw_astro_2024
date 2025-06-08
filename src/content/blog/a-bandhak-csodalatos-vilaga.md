@@ -5,11 +5,10 @@ title: A bandhák csodálatos világa
 titleBackground: false
 canonical: https://spaciousyoga.com/the-geometry-of-bandha/
 canonicalLanguage: English
-description: A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”.
-  A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil kapcsolatot
-  hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld
-  energiája   elkezd felfelé áramolni a testbe, meg kell találnunk a „szukhát”,
-  hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
+description:
+  A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”. A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil
+  kapcsolatot hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld energiája   elkezd felfelé
+  áramolni a testbe, meg kell találnunk a „szukhát”, hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
   eloszlódjon mindenhol
 author: Zsuzsi
 tags:
@@ -82,7 +81,7 @@ megtapasztalhatjuk a várható érzeteink spektrumának mindkét határát, és 
 maximális szabadságot és teret érzékelhetünk a perspektívánkban és az energiaáramlásunkban. A középúttól kezdve tetszés
 szerint bármelyik irányba mozoghatunk, így a lehető legtöbb lehetőség áll rendelkezésünkre.
 
-![Trikonasana B](/images/uploads/iain_triko.jpg)
+![Trikonasana B](../../images/uploads/iain_triko.jpg)
 
 A Trikonászana B-ről készült fenti fénykép (amely nem fotózásra beállított kép, hanem egy szokásos gyakorlás során
 készült) szépen illusztrálja a múla és az uddijána bandha fizikai értelemben vett dinamikáját. Ez az egyik kedvenc

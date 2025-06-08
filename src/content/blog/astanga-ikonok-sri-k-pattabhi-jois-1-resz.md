@@ -35,7 +35,7 @@ házuk verandáján olvasta a Rámajánát, a családtagjai csak nevettek rajta:
 
 – Ó! Nézzétek a nagy tudóst! Miért fecséreled az idődet könyvekre? Menj, és törődj inkább a tehenekkel!
 
-"![Pattabhi Jois asana practice](/blogpostimages/p4.jpg.webp)"
+![Pattabhi Jois asana practice](/blogpostimages/p4.jpg.webp)
 
 Gurudzsi tizennégy évesen egy szertartás keretein belül megkapta apjától a brahminok szent fonalát, jelezve, hogy a
 brahmin fiú a felnőttkorba lép és megkezdi spirituális életét. A nagy eseményt követően elhatározta, hogy annak
