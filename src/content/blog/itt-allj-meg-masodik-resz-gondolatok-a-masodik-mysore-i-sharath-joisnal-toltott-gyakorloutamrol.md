@@ -15,10 +15,7 @@ date: 2025-06-09T16:53:00.000Z
 image: ../../images/uploads/desktop_img.jpg
 imageMobil: ../../images/uploads/mobil_img.jpg
 ---
-Itt állj meg, második rész – Gondolatok a második mysore-i, Sharath Joisnál töltött gyakorlóutamról
-
-
-Nemrég érkeztem haza a második három hónapos utazásomról Mysore-ból, ahol Sharath Jois-nál gyakoroltam a KPJAYI-ban.
+### Nemrég érkeztem haza a második három hónapos utazásomról Mysore-ból, ahol Sharath Jois-nál gyakoroltam a KPJAYI-ban.
 
 Tavaly két blogbejegyzést írtam az első utamról: “A New Chapter” és “[Itt állj meg](https://bandha.works/blog/itt-allj-meg-gondolatok-sharath-jois-tanitasarol-es-a-mysore-gyakorlas-modszererol/)” címmel. Ezek a cikkek a tapasztalataimról szólnak, hogyan is kezdtem újra Sharath-tal az astanga jóga gyakorlását, miután már 12 éven át napi szinten gyakoroltam, előző tanárommal, Rolf Naujokattal befejeztük a 4. sorozatot, és jópár éve magam is Mysore-stílusú astanga tanár vagyok. 
 
