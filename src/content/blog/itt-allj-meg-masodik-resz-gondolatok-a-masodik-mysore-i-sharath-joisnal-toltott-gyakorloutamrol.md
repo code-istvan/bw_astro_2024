@@ -1,7 +1,8 @@
 ---
 published: true
 language: Hungarian
-title: Itt állj meg, második rész – Gondolatok a második mysore-i, Sharath Joisnál töltött gyakorlóutamról
+title: Itt állj meg, második rész – Gondolatok a második mysore-i, Sharath
+  Joisnál töltött gyakorlóutamról
 titleBackground: false
 canonical: "https://spaciousyoga.com/you-stop-there-part-ii-reflections-on-my-s\
   econd-trip-in-mysore/ "
@@ -10,7 +11,7 @@ description: Ide jön egy rövid leírás
 author: Zsuzsi
 tags:
   - astangaelmélet
-date: 1901-06-09T18:53:00.000Z
+date: 2025-06-10T16:16:00.000Z
 image: ../../images/uploads/stop_there_-desktop.jpeg
 imageMobil: ../../images/uploads/stop_there_mobil.jpeg
 ---
