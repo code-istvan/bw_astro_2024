@@ -11,7 +11,7 @@ description: Ide jön egy rövid leírás
 author: Zsuzsi
 tags:
   - astangaelmélet
-date: 2025-06-09T16:53:00.000Z
+date: 1901-06-09T18:53:00.000Z
 image: ../../images/uploads/desktop_img.jpg
 imageMobil: ../../images/uploads/mobil_img.jpg
 ---
