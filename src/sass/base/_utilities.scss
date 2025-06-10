@@ -371,23 +371,53 @@ blockquote {
   text-transform: uppercase;
 }
 
+// ol {
+//   list-style: none;
+//   counter-reset: item;
+//   font-family: fonts.$font-family-secondary;
+//   font-size: 1.1428571429rem !important;
+//   font-weight: fonts.$font-weight-regular;
+
+//   li {
+//     counter-increment: item;
+//     margin-bottom: 14px;
+//     position: relative;
+//   }
+//   li:before {
+//     margin-right: 20px;
+//     content: counter(item);
+//     position: absolute;
+//     left: -40px;
+//     width: 1.4em;
+//     height: 1.4em;
+//     background-color: colors.$color-brand-orange;
+//     color: colors.$color-shades-black;
+//     font-family: fonts.$font-family-secondary;
+//     font-weight: 800;
+//     text-align: center;
+//     display: inline-block;
+//   }
+// }
+
 ol {
   list-style: none;
   counter-reset: item;
   font-family: fonts.$font-family-secondary;
   font-size: 1.1428571429rem !important;
   font-weight: fonts.$font-weight-regular;
+  padding-left: 40px; // Hely a számoknak
 
   li {
     counter-increment: item;
     margin-bottom: 14px;
     position: relative;
   }
+
   li:before {
     margin-right: 20px;
     content: counter(item);
     position: absolute;
-    left: -40px;
+    left: -40px; // Ez most már a padding területén belül lesz
     width: 1.4em;
     height: 1.4em;
     background-color: colors.$color-brand-orange;
@@ -396,6 +426,7 @@ ol {
     font-weight: 800;
     text-align: center;
     display: inline-block;
+    line-height: 1.4em; // Függőleges központosításhoz
   }
 }
 
