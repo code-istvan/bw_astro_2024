@@ -17,10 +17,7 @@ date: 2023-10-18T10:00:00.000Z
 image: ../../images/uploads/eka_pada_desktop.jpeg
 imageMobil: ../../images/uploads/eka_pada_mobil.jpeg
 ---
-### Nemrég tértem vissza az első három hónapos utamról Mysore-ból, ahol Sharath Joisnál gyakoroltam. Nem vagyok kezdő az
-astanga jóga rendszerében, korábbi tanárommal, Rolf Naujokat-tel 2014-ben már a teljes 4. sorozatot gyakoroltam, és
-közel 12 éve tartom fenn napi szintű astanga gyakorlásomat. Tudtam, hogy mikor első alkalommal megyek Mysore-ba, ez nem
-fog számítani.
+### Nemrég tértem vissza az első három hónapos utamról Mysore-ból, ahol Sharath Joisnál gyakoroltam. Nem vagyok kezdő az astanga jóga rendszerében, korábbi tanárommal, Rolf Naujokat-tel 2014-ben már a teljes 4. sorozatot gyakoroltam, és közel 12 éve tartom fenn napi szintű astanga gyakorlásomat. Tudtam, hogy mikor első alkalommal megyek Mysore-ba, ez nem fog számítani.
 
 Amikor a három hónapos szemeszter előtt elmentem regisztrálni, Sharath feltette nekem a szokásos kérdését: **„Ki a
 tanárod?”** Azt válaszoltam, hogy az elmúlt 8 évben Rolffal gyakoroltam, és néhány évvel azelőtt pedig Mark Derbytől
