@@ -24,7 +24,7 @@ fog számítani.
 
 Amikor a három hónapos szemeszter előtt elmentem regisztrálni, Sharath feltette nekem a szokásos kérdését: **„Ki a
 tanárod?”** Azt válaszoltam, hogy az elmúlt 8 évben Rolffal gyakoroltam, és néhány évvel azelőtt pedig Mark Derbytől
-tanultam. Sharath nem kérdezett visza, hogy melyik az utolsó ászanám, melyik sorozatot gyakoroltam, és magamtól én sem
+tanultam. Sharath nem kérdezett vissza, hogy melyik az utolsó ászanám, melyik sorozatot gyakoroltam, és magamtól én sem
 kezdtem erről beszélni; több kérdése nem is volt hozzám.
 
 Sharath mindenkinél az első sorozattal kezdi a gyakorlást, aki első alkalommal jön Mysore-ba, függetlenül attól, hogy az
