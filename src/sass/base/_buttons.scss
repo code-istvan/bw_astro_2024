@@ -57,13 +57,14 @@
 .btn--primary--solid--full {
   background-color: colors.$color-brand-orange;
   color: colors.$color-shades-black;
-  border: none;
+  border: 2px solid colors.$color-brand-orange;
   width: 100%;
   transition: opacity 0.3s ease;
 }
 
 .btn--primary--solid--full:hover {
   opacity: 0.8;
+  color: colors.$color-shades-black;
 }
 
 .btn--third--solid {
