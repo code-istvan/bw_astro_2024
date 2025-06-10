@@ -1,14 +1,15 @@
 ---
 published: true
 language: Hungarian
-title: „Itt állj meg"– Gondolatok Sharath Jois tanításáról és a Mysore-gyakorlás módszeréről
+title: „Itt állj meg"– Gondolatok Sharath Jois tanításáról és a Mysore-gyakorlás
+  módszeréről
 titleBackground: false
 canonical: https://spaciousyoga.com/you-stop-there-lessons-from-sharath-jois/
 canonicalLanguage: English
-description:
-  A túl sok igazítás elveszi az önállóságot a diáktól, aki mintegy a   tanár irányítása alá kerül. A diákok függővé
-  válnak a tanártól a „nagyszerű   igazítások” miatt, mert ezáltal jól érzik magukat. De soha nem fejlesztik ki   azon
-  képességüket, hogy ezt maguktól érjék el.
+description: A túl sok igazítás elveszi az önállóságot a diáktól, aki mintegy
+  a   tanár irányítása alá kerül. A diákok függővé válnak a tanártól a
+  „nagyszerű   igazítások” miatt, mert ezáltal jól érzik magukat. De soha nem
+  fejlesztik ki   azon képességüket, hogy ezt maguktól érjék el.
 author: Zsuzsi
 tags:
   - astangaelmélet
@@ -16,8 +17,7 @@ date: 2023-10-18T10:00:00.000Z
 image: ../../images/uploads/eka_pada_desktop.jpeg
 imageMobil: ../../images/uploads/eka_pada_mobil.jpeg
 ---
-
-Nemrég tértem vissza az első három hónapos utamról Mysore-ból, ahol Sharath Joisnál gyakoroltam. Nem vagyok kezdő az
+### Nemrég tértem vissza az első három hónapos utamról Mysore-ból, ahol Sharath Joisnál gyakoroltam. Nem vagyok kezdő az
 astanga jóga rendszerében, korábbi tanárommal, Rolf Naujokat-tel 2014-ben már a teljes 4. sorozatot gyakoroltam, és
 közel 12 éve tartom fenn napi szintű astanga gyakorlásomat. Tudtam, hogy mikor első alkalommal megyek Mysore-ba, ez nem
 fog számítani.
@@ -273,6 +273,6 @@ arra, hogy „itt álljunk meg”, minimális iránymutatást adva, és ránk b�
 mélyítsük el az ászanát. Szerény véleményem szerint ez a Mysore-stílusú astanga gyakorlásban a tanár szerepe, és ez
 jelenti a módszer helyes alkalmazását.
 
-**Az írás szerzője:** Iain Grysak  
-**Az írás eredeti címe:** “You Stop There” Lessons from Sharath Jois and Reflections on the Mysore Method  
+**Az írás szerzője:** Iain Grysak\
+**Az írás eredeti címe:** “You Stop There” Lessons from Sharath Jois and Reflections on the Mysore Method\
 **Fordította és szerkesztette:** Dr. Kővári Zsuzsa
