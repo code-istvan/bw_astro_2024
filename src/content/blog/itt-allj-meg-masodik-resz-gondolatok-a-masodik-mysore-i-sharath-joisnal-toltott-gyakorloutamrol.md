@@ -7,7 +7,8 @@ titleBackground: false
 canonical: "https://spaciousyoga.com/you-stop-there-part-ii-reflections-on-my-s\
   econd-trip-in-mysore/ "
 canonicalLanguage: English
-description: Ide jön egy rövid leírás
+description: Nemrég érkeztem haza a második három hónapos utazásomról
+  Mysore-ból, ahol Sharath Jois-nál gyakoroltam a KPJAYI-ban
 author: Zsuzsi
 tags:
   - astangaelmélet
