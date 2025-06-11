@@ -7,8 +7,12 @@ titleBackground: false
 canonical: "https://spaciousyoga.com/you-stop-there-part-ii-reflections-on-my-s\
   econd-trip-in-mysore/ "
 canonicalLanguage: English
-description: Nemrég érkeztem haza a második három hónapos utazásomról
-  Mysore-ból, ahol Sharath Jois-nál gyakoroltam a KPJAYI-ban
+description: Több okból osztom meg ezt a történetet. Fontosnak érzem, hogy
+  nyilvánosan is beszéljünk a gyakorlás sötétebb oldaláról, a „helytelen
+  gyakorlás” veszélyeiről, és megosszuk ezt egymással. Ahogy a közösségi média
+  és a popkultúra egyre inkább imázsversenyként és „divatbemutatóként”
+  népszerűsíti az ászanák gyakorlását, megnő annak a veszélye, hogy ezt a
+  trendet követve sérülést okozzunk magunknak."
 author: Zsuzsi
 tags:
   - astangaelmélet
