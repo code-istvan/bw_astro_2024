@@ -105,3 +105,87 @@ Végigböngészem az újságot, különösen a krikett-híreket élvezem, tekint
 Utána Gwendolyne veszi át a szót, ismerteti a gyanútlan jógikra leselkedő veszélyeket: csapvíz, nyers gyümölcsök, hullámok, szúnyogok, stb. Aztán megnyugtat, hogy azért nem annyira szörnyű ez a hely. Felszólít, hogy mindenki hozzon magával törülközőt, anélkül nem nyúlnak hozzá. Végül: „Szívesen válaszolunk kérdésekre bármikor – éjfélkor nem.”
 
 A konferencia után rohanok az ajurvéda-masszázsra, dr. Unnikrishnan kezei alá. Első lecke: ne menj homokos fenékkel masszázsra! Anélkül is igen mélyreható és helyenként fájdalmas élmény (számomra legalábbis; mások nagyon kellemes és pihentető kezelésekről számoltak be). Az érdekes illatú olaj csak megköti a homokszemcséket és segíti egyenletesen szétoszlatni őket az egész testemen. Unni doktor csalhatatlan érzékkel megtalálja az összes fájdalmas csomót a combjaimban, lábszáramon és a hátamon, és alaposan végigmegy rajtuk, többnyire az alsókarjával és teljes testsúlyát beleadva. „Igen, az első néhány kezelés egy kicsit fájdalmas” veti oda lezseren, amikor panaszt emelek. De azért azt érzem egész idő alatt, hogy ezeket a csomókat és merev ízületeket simogatással nem lehet kilazítani. Unni doktor szerint ahhoz, hogy a lábaim hosszában levő kb. kétcentis különbséget megszüntesse, legalább öt kezelésre lesz szükség. A következőt lekötöm csütörtök estére. 450 rúpiát fizetek, ami kb. 10 euro; Helsinkiben a csontkovács egy alkalomért kért 50 eurót, annyiból meg lehet reszkírozni az itteni öt kezelést.
+
+### december 11, szerda
+
+Az első Mysore gyakorlat. Kókusztej-kóstoló. Roobent takarít. Miért nem népszerű az astanga Olaszországban? Az áramszünet mellékhatásai.
+Korai fekvés és jó sok alvás után az első Mysore meglepően jól megy. Jó részben nyilván azért, mert most a saját tempómban haladhatok és nem kell egyfolytában lassítanom/gyorsítanom. Lino számolása eléggé egyenetlen, és az ülő ászanákhoz nekem általában több időre van szükségem, mint amennyit ő ad, ami elég stresszes.
+
+Christina tegnap mesélte, hogy a Peacock mellett van egy kókuszdióárus. Minthogy a reggeli gyakorlat után bozótvágó késsel felnyitott kókuszdióból kókusztejet szürcsölni úgyszólván kötelező gyakorlat minden astangi részére Indiában, ma reggel én is kipróbálom. Meglepően könnyű, enyhén édes, frissítő, vízszerű ital. A belét egyelőre nem eszem meg, meglátjuk, hogy reagál a gyomrom. Az árus szerint a Mysore-ban termő kókuszdiók leve sűrűbb, nehezebb, mert az vízben szegényebb terület; ezért lehet egyes európai gyomroknak megterhelő.
+
+A hotelben elérkezett a heti takarítás ideje. Míg zuhany után kint hűsölök a közös erkélyen, ahonnan a szobák nyílnak, Roobent söpör a szobámban; aztán megjelenik, álmatag mozdulatokkal terelgetve néhány porcicát a partvissal. A tevékenysége sokkal inkább emlékeztet valamiféle klasszikus táncra, amelyben nagy hangsúlyt helyeznek a mozdulatok szertartásos eleganciájára, mint takarításra. A kis kupacot végigsepri az erkély hosszában, majd fokonként le a lépcsőn, ahol eltűnik a szemem elől. Úgy látszik, a szemétlapátot nem ismerik errefelé.
+
+Délután, internetezés után Gabrielével, egy szimpatikus, magas, izmos és állandóan vigyorgó olasz jógival ebédelünk a Keerth-ben (aka Kerala Food). Mint kiderül, ő is tanítani készül, Rómában; meghányjuk-vetjük a téma különböző aspektusait, valamint hogy miért nem népszerű (még) az astanga egyikünk hazájában sem. (Gabriele szerint náluk azért nem, mert az olaszok alapvetően hedonisták, nem szeretnek keményen dolgozni). A kaja egyébként jó és olcsó.
+
+Este elég későn vetődöm haza, miközben beköszöntött már az áramszünet, így meg kell várnom a végét, hogy megfürödhessek. Sőt, még tovább is, mert víz azután sincsen. Roobent elkéri a zseblámpámat és elmegy a ház mögé szerelni valamit, végül előbűvöli a vizet a csapból, de közben már jóval elmúlt tíz óra.
+
+### december 12, csütörtök
+
+India hatása az álmokra. Turistainformációk. Újabb masszázs. Áramszünet-hegyek.
+
+Éjjel nem alszom jól, rendkívül színes és meglehetősen őrült álmaim vannak (mint érkezésem óta rendszeresen – úgy látszik, India még éjjel is erőteljesen hat rám). A jóga reggel egész jól megy, végre rendesen végigcsinálom az első sorozatot és utána a saját lábamon távozom a sálábol. A reggeli kókusztej után megkóstolom a belét is – mmmm.
+Délután elsétálok az Ashok hotelhez, a kapun belül van a turistainformációs iroda. A helyi (vagy általában indiai) fesztiválok pontos időpontját szeretném megtudni, de lecsapok egy Kovalam- térképre is. Bár rendkívül készségesek, a fesztiválokról nem adnak lényeges informáciot, csak néhány általános brosúrát. Viszont kiderül, hogy vasárnap kezdődik egy egyhónapos kulturális fesztivál Trivandrumban; sajnos a konkrét programot még nem ismerik. Az Ashok parkja nagyon szép, és itt végre hallani-látni a varjakon kívül más madarakat is. Egy csapat közepes méretű, fekete-fehér madár, nem tudom milyen fajta lehet, fecskénél testesebb. Utána továbbsétálok, megnézem a Samudra beachet is.
+Este újból masszázs, két részletben. Először George bemelegít, aztán jön Unni. Most sokkal élvezetesebb mint az első, bár időnként még mindig fájdalmas.
+
+A mai rekord: 3 áramszünet, közülük egy napközben.
+
+### december 13, péntek
+
+A finn jógik titkos bázisa. Kacsák minden színben.
+
+Reggel összefutok Aulival, akiből kiszedem a finn jógik titkos bázisának hollétét. A Silent Valley (avagy Suprabutham) elég messze van a parttól, már a kókuszpálma-ültetvények mellett. Ennek megfelelően csendes és olcsó, a kaja pedig szuper. Újabb kísérletet teszek az indiai reggelivel, de az idlik sem nyerik meg igazán a tetszésemet.
+
+A Lonely Planet melletti kis tavacskához kacsák is tartoznak. Nyilván egy vegetáriánus étterem közelében biztonságban érzik magukat. Némelyik közönséges fehér, mint a hazaiak, de van fekete foltos, barna, szürke, sőt bíborpiros is.
+Amúgy gyakorlat közben, már majdnem a legvégén (Pindasana közben) sikerült valahogy meghúznom a hátamat, ennek ürügyén a napot jórészt ágyban töltöm, olvasással.
+
+### december 14, szombat
+
+Road movie a nagyvárosban. Az első lunghim.
+Eljött végre a szünnap! Azért korán ébredek, dacára annak, hogy előző este éjfélig olvastam (megengedhetetlen lazaság). A parti séta kellemes a hűvösben, különösen mert a boltok még zárva, árusok nem zargatnak. Reggelinél kiderül, hogy Eva és Michelle a nagyvárosba készülnek Raijival; betársulok én is a kalandba. Autóriksával megyünk, 250 rúpiáért oda-vissza. Előtte persze illően felöltözünk, ujjas trikóba, hosszúnadrágba. A road movie nappal és riksában még hatásosabb, mint első alkalommal. Hárman a lányokkal ülünk hátul, Raiji meg beül a sofőr mellé fél fenékkel. Én ülök jobboldalt (baloldali közlekedés van), és ez nem a gyenge idegzetűeknek való hely. Amikor a szembejövő óriási teherautókat csak az utolsó pillanatban kerüljük el, átlagosan mintegy három centiméterrel, az igen mély hatást tud gyakorolni az emberre.
+Végre eljön az alkalom, hogy megvehessem életem első lunghiját (sőt rögtön hármat). Hazatérésünk után fel is próbálom az elsőt, ami nem olyan egyszerű. Még hetekbe fog telni kitanulni a lunghiviselés nemes művészetét. Mindenesetre az indiaiak nem röhögnek láttomon nagyon hangosan, amit jó jelnek veszek.
+Trivandrum amúgy izgalmas, földközeli, nyüzsgő, színes-szagos-hangos hely, a lányok dolguk végeztével mennének is rögtön vissza kedves, nyugalmas Kovalamunkba. Nekem viszont tetszik, szívesen maradnék még. A riksából nem láttam eleget a városból. Mondjuk a koldusok tényleg lehangolóak. A bevásárlóközpont előtt, ahol vásárolunk, csapatba gyűlnek, mire távozunk, már tucatnyian vannak. Öregek, sovány asszonyok síró gyerekekkel a karjukon, és nem csak hogy beszélnek hozzánk és és kérincsélnek, hanem a karunkat is elkapják. Még ha csak néhány volna, adhatnánk is nekik pénzt, de ennyi elől csak menekülni lehet.
+
+### december 15, vasárnap
+
+A kókusztej élet, erő, egészség. Világgazdasági eszmecsere a Bakeryben. A koppenhágai astanga iskola.
+
+Új emberek érkeztek, engem előléptettek 6.45-re, a krém mostantól 5.30-kor kezd. Christinától eltanultam, hogy egy csésze chai-jal kezdjem a napot. Nagyon jól felpezsdít és átmelegít a jóga előtt, meg a cukor energiája is jól jön. Elég jól sikerül a gyakorlat, úgy látszik egy hét után már kezdek végre belejönni. Utána a szokásos kókusztej-orgia (két adag). Babu, az árus elmagyarázza, hogy a kókusztej élet, erő, egészség. „Ha minden reggel kókusztejet iszol egy hónapig, olyan erős leszel, hogy a falat… így!” és mutatja, hogyan fogjuk a falat átütni puszta ököllel. Lehet, hogy Bruce Lee titka is ebben rejlett? „És ha bármi bajod van, elmész egy ajurvédikus orvoshoz, az is azt fogja mondani, igyál sok kókusztejet, az meggyógyít. Ezt most nem csak azért mondom, mert én véletlenül kókuszt árulok, ez egyszerűen így van.”
+
+Reggelinél a Bakeryben Michelle (közgazdász végzettségű), Adarsh (egy fiatal amerikai srác) és jómagam megvitatjuk az amerikai és világgazdaság helyzetét, különös tekintettel a fosszilis tüzelőanyagok várható kifogyására. Michelle éppen arról magyaráz, hogyan befolyásolja az OPEC az olajárakat, amikor Adarsh közbekérdez: ” Az OPEC az az Exxon olajvállalat, ugye?” Elmagyarázom neki az OPEC mibenlétét. Ezek után tisztelettel néz rám, és megkérdi, hogy nekem is közgazdász végzettségem van-e.
+
+Este a dán szomszédaimmal vacsorázunk a Keerth-ben, plusz egy Robin nevű középkorú, busa koponyájú úriemberrel, aki – mint kiderül – angol létére Dániában él már régóta, sőt a koppenhágai astanga iskola egyik oktatója és mindenese. Két éve indultak (persze nem nulláról, Lino sokat segített), és mostanra több száz tanulójuk van.
+
+A hot ginger lemon mézzel egyébként kiváló ital.
+
+### december 16, hétfő
+
+A kókuszdió-függőség első jelei. Karácsonyi díszek. Az első hasmenés. Masszázs szülési fájdalmakkal. Unikum Unnitól.
+
+Jó gyakorlat, a híd is szépen sikerül. A hátrahajlásokat azért még kihagyom, holnap is lesz nap. Utána három kókuszdió tartalmát fogyasztom el. Attól tartok, visszavonhatatlanul elindultam a kókusztej-függőség síkos lejtőjén.
+
+A tenger ma alacsonyabb, az egész heti dagadás után. De a hullámok még mindig hatalmasak. Többek szerint a közelgő újhold duzzasztja fel a vizet.
+
+Egyre több jelét látni az érkező karácsonynak. Csillag alakú lampionok mindenfelé, színes szalagok a mennyezeten a Silent Valleyben, a Bakeryben ma megjelent egy kis fenyőfa, a Lonely Planetnél pedig lámpafüzéreket aggattak a fákra.
+
+Reggeli után megérkezik az első indiai hasmenésem. Elég enyhének bizonyul, de azért megnyugtat, hogy a világ rendje helyreállt. Hogy nézett volna ki, hogy még egy árva hasmenést sem kapok Indiában?
+
+Délután újra masszázs. Miközben George engem melegít be, a szomszéd szobában Michelle úgy kiáltozik Unni kezei alatt, mintha gyereket szülne. Aztán rajtam a sor, nem tudom eldönteni, hogy jobb-e hogyha én is kiabálok, vagy inkább próbáljak ellazulni és lélegezni. Úgy tűnik, van bennem egyfajta gátlás a fájdalmam hangos kinyilvánításával szemben. Másfelől ha a lazításra és a légzésre igyekszem koncentrálni, mégiscsak kevésbé fáj. Utána Unnitól még orvosságot is kapok a gyomromra. A folyadék színe és szaga határozottan az Unikumra emlékeztet, eltekintve az alkoholtol.
+További említésre méltó fejlemények: a Nargeese Kofta nagyon finom.
+
+### december 17, kedd
+
+Megvan a teljes első sorozat. Főzőiskola II.
+Az első napüdvözlet ellen a tagjaim vehemensen tiltakoznak, meglehetősen ernyedtnek érzem magam. Úgyhogy gyorsabb lélegzetre kapcsolok és megpróbálok túllenni az egészen minél hamarább. Ezek után meglepően jól megy, egész lazán végigcsinálom a sorozatot és a végén úgy döntök, hogy a hátrahajlásokat is megkísértem. Elena jön és segít. Yippee! Túlvagyok a teljes első sorozaton.
+
+Este újabb főzőiskola a Lonely Planetban. Fénypontok: Chapati, Vegetable Pakora, Dhal Fry, Banana Fritters.
+
+### december 18, szerda
+
+Testi bajok. 4 jógi és 76 hangya reggelije. Kalandok a nagyvárosban. Panicker csiklandoz.
+Teljes meglepetésemre ma alig izzadok. Legfeljebb pár fokkal lehet hűvösebb, mint eddig, de izzadságban ez azt jelenti, hogy a nadrágomon már akadnak száraz foltok, és a gyapjúszőnyegem – ami eddig tocsogott a víztől – ma félig száraz marad. Emellett a gyakorlat ráadásul nagyon jól is megy, kezd megjönni az erőm. Mígnem Kukkutasana közben Rosanna segítségével meghúzom a jobb csuklómat, onnantól egyre kevésbé tudom használni. Ráadásul Supta Padangusthasana közben a jobb csípőm a szokott módon kiakad, és percekig kínlódom eredménytelenül, hogy visszakattintsam. Mikor feladom és megyek tovább az Ubhaya Padangusthasanára, persze magától visszaugrik, úgyhogy utána megcsinálom a S.P. bal oldalát is. A hidat a csuklóm miatt kihagyom, a hátrahajlásokat csak félig csinálom, egyedül. Lino nagyon kedves, ad a csuklómra árnikakrémet.
+
+Reggeli Simonékkal, színhelye a Shivas Moon melletti Suku’s. Láthatóan népszerű hely: legalább nyolcvan vendég van jelen, igaz, közülük 76 hangya; ezek nagyrészt az asztalon, a teáskancsókon és a cukortartóban korzóznak. Kettőt találok a zabkásámban is, az egyiket kimentem, de a másik már reménytelen állapotban van.
+
+Utána irány Trivandrum, busszal, ami sokkal élvezetesebbnek bizonyul, mint a riksa. Simon énmellettem egy új-zélandi pár, Nick és Nicky, valamint egy vékony, ragyogó szürke szemű dán lány, Stine alkotja a csapatot. Nickékkel valamelyik reggel a Bakeryben ismerkedtem össze, amikoris Nicky hosszasan faggatott Közép-Európáról. Tőlük hallottam először új-zélandi angolt, igen mókás. Elvegyülünk a tömegben, mint Paul és társai a Hairben. Kis mellékutakon kanyargunk a város felé, az út szélén nők és gyerekek követ törnek, gyártják az útépítéshez való kőzúzalékot. Egy kapu mellett kacskaringós-csomós malajálam felirat, a kapufélfán sarló-kalapácsos ötágú csillag, kékben. Iskolás lányok-fiúk mindenfelé az út szélén, egyenruhában. Boltok, színes falak, szeméthalmok. MG Road, a főutca. Járdák nincsenek, mindenki ömlesztve tolong. Utcatáblák sem mutatkoznak, így elég nehéz meglelni a DC Books könyvesboltot, ahová igyekszünk. Simon el is véti, elveszítjük szem elől. A bolt szuper, rengeteg jó könyv van, jógárol is. Sajnos az időnk véges, ide még vissza kell jönni. Utána megpróbálom felkutatni a turistainformációs központot. A riksás először egy kis bódéhoz visz, amin ugyan valóban olvasható a „tourist” szó, de meggyőzzük hogy ez nem az. A következő próbálkozásra eljutunk a térképemen szereplő „Tourist Reception Office”- hoz. Ott viszont nem tudnak segíteni, átirányítanak a pályaudvarra. Megleljük a helyet, de nincs ott senki, a közelben ácsorgók szerint ebédelni ment az informátor, de itt van nem messze egy hotelben egy másik hely, ahol biztos tudnak segíteni. Itt feladjuk, irány a Parthas. Stine számára óriási lelki próbatétel mintegy háromszáz szárianyag közül tizenöt perc alatt választani, de végül három anyaggal beéri. Utána nekem már sietnem kell vissza Kovalamba, masszázsra, ő még marad megnézni a Chalai Bazárt.
+
+Unni ezúttal új elemként a térdét is beveti a hátam egyengetésére. Igen keményen megdolgozza a csípőmet és a szokásos módon a combokat is, egészen elgyengülök tőle, mire Panicker (a harmadik masszőr) magamhoz térít csiklandozással és fülhúzással. Emellett a csuklómat is alaposan átdolgozza, jólesik.
