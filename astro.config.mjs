@@ -3,7 +3,6 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 import path from 'path';
 import sitemap from '@astrojs/sitemap';
-import db from '@astrojs/db';
 
 export default defineConfig({
   output: 'static',
@@ -20,7 +19,6 @@ export default defineConfig({
   // },
   integrations: [
     react(),
-    db(),
     sitemap({
       filter: (page) =>
         page !== 'https://bandha.works/adatvedelmi-tajekoztato/' &&
