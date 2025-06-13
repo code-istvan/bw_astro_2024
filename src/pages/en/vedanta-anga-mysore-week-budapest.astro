@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/vedanta_mobil.jpeg';
+import desktopImage from '../../images/vedanta_desktop.jpeg';
+import { Image } from 'astro:assets';
+import VedantaImage1 from '../../images/vedanta_ji_1.jpeg';
+import VedantaImage2 from '../../images/vedanta_ji_2.jpeg';
+import VedantaImage3 from '../../images/vedanta_ji_3.jpeg';
+import VedantaImageLong from '../../images/vedanta_ji_long.jpg';
+import Carousel from '../../components/Carousel/Carousel.astro';
+import AccordionVedantaSchedule from '../../components/Accordions/AccordionVedantaSchedule.astro';
+import vadantaSchedule from '../../data/vedanta_schedule.json';
+
+const metadata = {
+    title: 'VEDANTA ANGA (IND) - ASHTANGA MYSORE WEEK IN BUDAPEST',
+    description: 'Read about Védanta Anga’s Ashtanga Mysore week at Bandha Works Yoga School in Budapest.',
+};
+
+const mysoreImages = [
+    {
+        image: VedantaImage1,
+        alt: 'Vedanta Anga Asana',
+    },
+    {
+        image: VedantaImage2,
+        alt: 'Vedanta Anga Ashtanga',
+    },
+    {
+        image: VedantaImage3,
+        alt: 'Vedanta Anga Padmasana',
+    },
+];
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <div class="island-section-alert">
+            <p>
+                <strong>Only two spots left for VedantaJi’s Mysore week, for the 7:00 and 7:30 start times.</strong>
+            </p>
+        </div>
+
+        <h3 class="mb-20px mt-40px clr-brand-orange">
+            It’s a rare opportunity to study with an authentic Ashtanga yoga teacher raised in a traditional Brahmin
+            family – all within the consecrated, time-honored walls of Bandha Works. Védanta Anga is visiting Budapest
+            for the first time. He is a Level 2 authorized teacher, recognized by Paramaguru Sharath Jois in Mysore.
+        </h3>
+        <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">
+            Spiritual Roots – The Path of a Bhakti Yogi
+        </h3>
+        <p class="mb-20px">
+            Vedanta was born and raised in a Brahmin family, and his life has been deeply immersed in spirituality since
+            early childhood – particularly in the practice of Bhakti Yoga. By the age of 15, meditation had become an
+            integral part of his daily rituals, along with mantra chanting, which he practiced together with his parents
+            during various religious ceremonies both in temples and at home.
+        </p>
+        <h3 class="mb-20px font-family-primary clr-brand-orange">
+            Through the Body – The Ashtanga Path and Paramaguru Sharath Jois
+        </h3>
+        <p class="mb-20px">
+            Védanta was first introduced to yoga asanas as a physical activity during his youth through tennis training.
+            However, it wasn’t until later—after sustaining a shoulder injury from tennis—that he deepened his asana
+            practice to support his recovery. He went on to study and practice Ashtanga Yoga with his teacher,
+            Paramaguru Sharath Jois, in Mysore, who authorized him at Level 2.
+        </p>
+        <h3 class="mb-20px font-family-primary clr-brand-orange">Natural Healing and Inner Growth</h3>
+        <p class="mb-20px">
+            In addition, Vedanta is an Ayurvedic practitioner and a Level 1 therapist. He also studied Natural Health
+            Science at the International Institute of Mahayoga and Natural Hygiene (IMANAH). Drawing on the knowledge he
+            gained there, he supports people's healing from various illnesses using natural methods. Védanta also
+            studies the philosophy of Advaita Vedanta. His teachings emphasize breath, silence, focus, and inner
+            strength. He often incorporates meditation, pranayama, and mantra chanting into his sessions, sharing the
+            full spectrum of practices he has embraced on his spiritual path.
+        </p>
+        <div class="island-section text-align-center">
+            <h3 class="mb-20px clr-brand-orange font-family-primary">
+                <strong>INTERVIEW WITH VEDANTA</strong>
+            </h3>
+            <p>
+                <strong>
+                    Read our <a
+                        href="/blog/the-guru-lives-within-vedanta-anga-on-the-path-of-ashtanga/"
+                        class="link-enhanced link-orange"
+                    >
+                        interview with Védanta Anga
+                    </a>, where he shares insights about his path as a teacher and the role of spirituality in his daily
+                    life.
+                </strong>
+            </p>
+        </div>
+        <div class="hidden-mobile mt-20px mb-40px">
+            <Image src={VedantaImageLong} alt="Vedanta Anga Asana" />
+        </div>
+        <div class="image--visible-mobil hidden-desktop mb-40px mt-20px">
+            <Carousel>
+                {
+                    mysoreImages.map((item) => (
+                        <div class="section-social-proof__slide embla__slide">
+                            <Image src={item.image} alt={item.alt} />
+                        </div>
+                    ))
+                }
+            </Carousel>
+        </div>
+        <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">Schedule of the Mysore Week</h3>
+        <div><AccordionVedantaSchedule id="mysore-program" schedule={vadantaSchedule.HU} /></div>
+        <h3 class="mb-20px mt-40px font-family-primary clr-brand-orange">Terms of Participation</h3>
+        <p class="mb-20px">
+            The cost of participating in the Mysore Week is <strong>€120</strong> (6 sessions). You can register for the
+            event at our front desk by paying the participation fee. For our regular* Mysore practitioners and Mysore Program
+            Supporter members, participation in the program is free of charge. The participation fee does not include the
+            cost of the Mysore thali, which is <strong>4,000 HUF</strong>.
+        </p>
+        <p class="mb-20px">
+            We reserve the right to make changes to the program. By participating in the event, attendees acknowledge
+            and agree that photos may be taken of them during the program.
+        </p>
+        <p class="mb-20px">
+            *minimum of three months of consistent practice in our Mysore program during the period leading up to the
+            event.
+        </p>
+        <h3 class="mb-20px mt-40px clr-brand-orange">
+            If you're interested in a deeper, traditional approach to Ashtanga Yoga, don’t miss this unique opportunity:
+            practice with a teacher who brings not only the technique of the system, but also its spirit—rooted in his
+            Indian home.
+        </h3>
+    </div>
+</BaseLayout>
