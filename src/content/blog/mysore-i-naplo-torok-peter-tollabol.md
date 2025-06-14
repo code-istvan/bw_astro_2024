@@ -13,7 +13,7 @@ imageMobil: ../../images/uploads/torok_peter_.jpeg
 ---
 ### Péter 2002-2003 telén három és fél hónapot töltött dél-Indiában, ezalatt tanult Lino Mielével Kovalamban (Kerala), illetve Pattabhi Joisszal Mysore-ban (Karnataka). Élményeiről az itt olvasható naplót vezette az interneten.
 
-### December 4, szerda
+### 2002. december 4, szerda
 
 Delhi-Mumbai-Trivandrum-Kovalam. Az indiai repterek: biztonság mindeneknél (tán még az utasoknál is) előbbrevaló, avagy a munkanélküliség problémájának indiai megoldása.
 
@@ -29,7 +29,7 @@ Trivandrumba már este érkezünk. A repülőtérre kiszállva, mintha terráriu
 
 **Kovalam:** a taxisofőr néhányszor megáll érdeklődni a „hotel Biko” után. Aztán megállunk egy szűk sikátorban és belecsöppenünk a nyüzsgő embertömeg kellős közepébe, ahol rögtön lecsapnak ránk a hordárok és kalauzok. Miután a közelharcot jelen állapotomban és idegen terepen reménytelennek ítélem, megadom magam sorsomnak és követem azt, aki állítása szerint ismeri Linót (a jógatanárunkat) és elvezet engem a hotel Bikóba. Természetesen egy másik hotelban lyukadunk ki, mert a Peacockban állítása szerint telt ház van. De ez (a Sky Palace névre hallgat) első látásra meglepően jól néz ki, kicsi és barátságos. A szobák is tisztának látszanak, ez egy új hotel. 450 rúpiáról sikerül lealkudnom az árat 300-ra, ezzel egyelőre megelégszem. Másnap még kereshetek jobb helyet. Ismételt követelésemre vezetőm elkalauzol a Peacockba is, ahol valóban telt ház van, és pár percre esik gyalog; ettől megnyugszom. Később a Sky Palace-ban megismerkedem az egyik szomszédommal, egy Sylvia nevű ciprusi hölggyel, aki sok más szobát megnézett, de ez volt a legtisztább, és ő is 300 rúpiáért kapta meg, három hétre. Mint később kiderül, ő már hét éve Indiában él, de a véleménye még ettől függetlenül is megnyugtat, hogy nem jártam rosszul.
 
-### December 5, csütörtök
+### 2002. december 5, csütörtök
 
 Az első napok Kovalamban. Bevezetés a madártanba. Éneklő halászok és fényképező turisták. Jógik mindenfelé. Manapság már az áramszünetben sem lehet megbízni. A bűvös szó.
 
@@ -47,13 +47,14 @@ Este Sylvia meginvitál a Lonely Planet étterembe, indiai klasszikus táncestre
 
 Hazafelé menet az árusok kerülnek szóba. Eddigi kísérleteim, hogy lerázzam őket, csak mérsékelten sikerültek. Ha meginvitált valamelyik a boltjába, és azt mondtam neki: „talán majd legközelebb”, következő alkalommal amikor arra jartam – lett légyen az öt perc elteltével -, már nem menekülhettem, hiszen szerinte „megígértem hogy legközelebb bejövök”. Sylvia elárulja a bűvös szót: „tomorrow”, azaz holnap. Ezt értik, mert ők is ugyanilyen értelemben használják: a holnap mindig holnap van.
 
-### December 6, péntek
+### 2002. december 6, péntek
 
 A diszkriminált varjú. Roobent és családja. Sebestyén Márti világhíre. Om Nama Shivaya.
 
 Péntek reggel megint sokáig lustálkodom az ágyban, nem akaródzik felkelni. Kis ódzkodás után nekikezdek az ászanáknak. A Leg Balance ma nagyon nem akar menni, imbolygok mint egy szélkakas. Megcsinálom az álló gyakorlatokat, mára ennyi. Holnap fel kell végre kelnem tisztességes időben, hét óra előtt, amikor még hűvösebb van és csendesebb, és a szomszéd udvarbeli kifőzde tűzhelyének füstjét nem hordja be az ablakomon a szél. Savászana után hirtelen olyan álmosság fog el, hogy majdnem visszahengeredek az ágyra szundítani egy jót. Azért legyőzöm a kísértést és egy langyos zuhany felébreszt, de még utána is csak kókadozom. Kiülök a teraszra egy palack vízzel. Nem tudom mi ez, nem érzem rosszul magam, csak könnyűnek és üresnek. És pillanatnyilag abszolút nincs bennem semmi indíttatás bármit is elkezdeni vagy bárhová elindulni. Jó, hát akkor üldögéljünk.
 
 Felbukkan Christina és híreket hoz: jelentkezés a workshopra vasárnap reggel 7.30-kor. Szóval van még egy szabad napunk, aztán kezdődik a nyomorú sors Lino kemény keze alatt. Egy idő után aztán megjön az indíttatás a gyomor irányából. Pillanatnyilag szigorúan hazai (értsd: európai) ízekre vágyom, úgyhogy irány a German Bakery! Kellemes, szellős terasz, tökéletes kilátás egyfelől a tengerpartra, másfelől rozsdás palatetőkre, illetve a szomszédos lapos háztetőn töméntelen mennyiségű üres vizesüvegre és egyéb szemétre. Jin és jang, vagy mifene. A kaja finom, európai (is), bár az árát is megkérik (na jó, hol nem Kovalamban?). Egy varjú odatelepszik mögém a korlátra, egy méterre tőlem, és folyamatosan, félhangosan, de szemrehányóan károg. Nyilván megsértődött, amiért a pincér őt nem szolgálja ki. Beljebb is repül, leül az egyik szék karfájára, de hiába próbálkozik. Fel is adja végül és távozik.
+
 Én még elüldögélek egy jó ideig, aztán követem a varjú példáját (bár én konvencionális módon a lépcsőt választom távozásra). Ideje internetezni, és elkezdeni írni a naplómat. De minden hely vagy dugig van, vagy zárva, vagy üzemen kívül. Végül a Volga szálló (nem röhögni, tényleg ez a neve!) mellé keveredek vissza, leülök kivárni egy szabad helyet, kozben beszédbe elegyedünk a szemben üldögélő pufók indiai sráccal. Arunnak hívják és egy hotelban dolgozik a Lighthouse Beach felső végén (de a hotel nevét sikerült elfelejtenem, Sea vagy Rock, tán még meglelem). Meghív ebédelni a hotelba, ami igen előkelő hely (és persze ennek megfelelően drágák is a szobák, viszont állítása szerint kiváló éttermük van és 10% kedvezményt kapok, ha rá hivatkozok). Na majd meglátjuk, egyáltalán megtalálom-e a helyet. Mindenesetre jól elbeszélgetünk a kommunizmusról (Keralában és odahaza), Magyarországról, a házasodási szokásaink különbözőségéről stb.
 A szállodánkban a portás-mindenes szelíd képű, mandulaszemű srác; amikor mosolyog (ez gyakran megesik, mint általában az indiaiaknál), vakító hófehér fogsort villant. A neve, mint kiderült, Roobent. Ez első hallásra meglepő, de kiderül, hogy keresztény. Az apja Alex, a felesége Mini, a bátyja James, az öccse Kleofas névre hallgat.
 
@@ -61,7 +62,7 @@ Este a szomszéd hotelben buli van, jó hangos zenével. Szerencsére elég jó 
 
 Tíz körül lefekszem, de a buli még tart; ágyból hallgatom a zenét, szerencsére nem túl hangos. A Deep Forest után Vaya Con Diosra váltanak, aztán zárásképpen egy mantralemezt tesznek fel. Egy szál női hang énekli az „Om Nama Shivaya” mantrát. Egyszer csak hihetetlenül megfog, magával ragad, mintha lebegnék, elérzékenyülök, kiüresedek. Itt meglehetősen kézzelfogható ezeknek a mantráknak az ereje és a valósága.
 
-### december 7, szombat
+### 2002. december 7, szombat
 
 A jet lag utóhatásai. Ajurvéda, matematika és horoszkópok. Menekülés a gyümölcsárus elől. Az első szúnyog.
 
@@ -73,7 +74,7 @@ Délután megejtem az első fürdésemet. A tarkóm ugyanis az első nap jól le
 
 Este a Lonely Planetben ínycsiklandó főtt zöldségeket eszem kesudióval, sajtos naan kenyérrel és citromos rizzsel. Desszertnek Lonely Planet palacsinta, gyümölcsökkel és vaníliafagylalttal. Isteni, de meg is kérik az árát. Közben összeakadok az első szúnyoggal Kovalamban. Meglepő módon eddig egyet sem láttam, pedig sok van a környéken. Viszont a hotelünk jó helyen van és az emeleti szobák szúnyogmentesek.
 
-### december 8, vasárnap
+### 2002. december 8, vasárnap
 
 A workshop megkezdődik. Komoly jógik mindenfelé. Roobent és a kék ing. Naplemente.
 Reggel 7.30-kor kezdődik az első gyakorlatunk Linóval. Nagy a nyüzsgés a Hotel Peacock tetején, legalább 70 ember zsúfolódik be. A matracok között csak egy-egy kőkockányi térköz marad a padlón. Lino nagyon kedves, egész más mint ahogy korábban gondoltam. Megígéri, hogy nagyon lazán kezdünk, az első napokban vezetett órák lesznek, „slowly-slowly”. Azért végignyomják a teljes első sorozatot, a Supta Kurmasana után aki akarja, abbahagyhatja. Nekem ennyi elég volt mára, a Marichyasana után már igen pilledt voltam és úgy izzadtam, hogy körülöttem kisebb halastó képződött. A befejező sorozat alatt az ebihalak már szépen fejlődésnek is indultak, de akkor Rosanna – Lino egyik asszisztense – feltörölte az egész ökoszisztémát egy nagy törülközővel. Kell vennem egy gyapjúszőnyeget mihamarább, mert különben a saját izzadságomban fogok fuldokolni minden reggel. A nagy többség eközben folytatta az első sorozat végéig. Kissé meg vagyok szeppenve. Itt mindenki nagyon komolynak, elszántnak és advancednek látszik. Szerencsére Christinával megvigasztaljuk egymást, hogy azért talán nekünk kevésbé advancedeknek is van hely a nap alatt (és a Peacock teraszán).
@@ -92,7 +93,7 @@ Este főzőiskola van a Lonely Planetben. Heten vagyunk velem együtt, rajtam k�
 
 Vacsora közben elbeszélgetünk a csoport másik férfitagjával, egy idősebb, hosszú hajú-szakállú, igen méltóságteljes külsejű úriemberrel. Mint kiderül, ír, Leo névre hallgat és Raja Yoga oktató. Hosszasan és élvezetesen megtárgyaljuk az iskolák hasonlóságait és különbségeit, meg Indiát. Leo, noha nem ért a számítógéphez, indulás előtt csináltatott magának egy emilcímet, hogy levelezhessen a családjával. Amikor levelet írni bement az egyik itteni internet-kávézóba, megkérte a boyt hogy lépjen be az accountjára, mert neki fogalma sincs, hogy kell azt csinálni. A srác megtette, majd hosszas gondolkodás után megkérdezte: „Are there tribals in England?” (Angliában is vannak bennszülöttek?)
 
-### december 10, kedd
+### 2002. december 10, kedd
 
 Az új szőnyeg felavatása. Veerappan, a bandita. Konferencia. Az ajurvédikus masszázs tanulságai.
 
@@ -106,7 +107,7 @@ Utána Gwendolyne veszi át a szót, ismerteti a gyanútlan jógikra leselkedő 
 
 A konferencia után rohanok az ajurvéda-masszázsra, dr. Unnikrishnan kezei alá. Első lecke: ne menj homokos fenékkel masszázsra! Anélkül is igen mélyreható és helyenként fájdalmas élmény (számomra legalábbis; mások nagyon kellemes és pihentető kezelésekről számoltak be). Az érdekes illatú olaj csak megköti a homokszemcséket és segíti egyenletesen szétoszlatni őket az egész testemen. Unni doktor csalhatatlan érzékkel megtalálja az összes fájdalmas csomót a combjaimban, lábszáramon és a hátamon, és alaposan végigmegy rajtuk, többnyire az alsókarjával és teljes testsúlyát beleadva. „Igen, az első néhány kezelés egy kicsit fájdalmas” veti oda lezseren, amikor panaszt emelek. De azért azt érzem egész idő alatt, hogy ezeket a csomókat és merev ízületeket simogatással nem lehet kilazítani. Unni doktor szerint ahhoz, hogy a lábaim hosszában levő kb. kétcentis különbséget megszüntesse, legalább öt kezelésre lesz szükség. A következőt lekötöm csütörtök estére. 450 rúpiát fizetek, ami kb. 10 euro; Helsinkiben a csontkovács egy alkalomért kért 50 eurót, annyiból meg lehet reszkírozni az itteni öt kezelést.
 
-### december 11, szerda
+### 2002. december 11, szerda
 
 Az első Mysore gyakorlat. Kókusztej-kóstoló. Roobent takarít. Miért nem népszerű az astanga Olaszországban? Az áramszünet mellékhatásai.
 Korai fekvés és jó sok alvás után az első Mysore meglepően jól megy. Jó részben nyilván azért, mert most a saját tempómban haladhatok és nem kell egyfolytában lassítanom/gyorsítanom. Lino számolása eléggé egyenetlen, és az ülő ászanákhoz nekem általában több időre van szükségem, mint amennyit ő ad, ami elég stresszes.
@@ -119,7 +120,7 @@ Délután, internetezés után Gabrielével, egy szimpatikus, magas, izmos és �
 
 Este elég későn vetődöm haza, miközben beköszöntött már az áramszünet, így meg kell várnom a végét, hogy megfürödhessek. Sőt, még tovább is, mert víz azután sincsen. Roobent elkéri a zseblámpámat és elmegy a ház mögé szerelni valamit, végül előbűvöli a vizet a csapból, de közben már jóval elmúlt tíz óra.
 
-### december 12, csütörtök
+### 2002. december 12, csütörtök
 
 India hatása az álmokra. Turistainformációk. Újabb masszázs. Áramszünet-hegyek.
 
@@ -129,7 +130,7 @@ Este újból masszázs, két részletben. Először George bemelegít, aztán j�
 
 A mai rekord: 3 áramszünet, közülük egy napközben.
 
-### december 13, péntek
+### 2002. december 13, péntek
 
 A finn jógik titkos bázisa. Kacsák minden színben.
 
@@ -138,14 +139,15 @@ Reggel összefutok Aulival, akiből kiszedem a finn jógik titkos bázisának ho
 A Lonely Planet melletti kis tavacskához kacsák is tartoznak. Nyilván egy vegetáriánus étterem közelében biztonságban érzik magukat. Némelyik közönséges fehér, mint a hazaiak, de van fekete foltos, barna, szürke, sőt bíborpiros is.
 Amúgy gyakorlat közben, már majdnem a legvégén (Pindasana közben) sikerült valahogy meghúznom a hátamat, ennek ürügyén a napot jórészt ágyban töltöm, olvasással.
 
-### december 14, szombat
+### 2002. december 14, szombat
 
 Road movie a nagyvárosban. Az első lunghim.
 Eljött végre a szünnap! Azért korán ébredek, dacára annak, hogy előző este éjfélig olvastam (megengedhetetlen lazaság). A parti séta kellemes a hűvösben, különösen mert a boltok még zárva, árusok nem zargatnak. Reggelinél kiderül, hogy Eva és Michelle a nagyvárosba készülnek Raijival; betársulok én is a kalandba. Autóriksával megyünk, 250 rúpiáért oda-vissza. Előtte persze illően felöltözünk, ujjas trikóba, hosszúnadrágba. A road movie nappal és riksában még hatásosabb, mint első alkalommal. Hárman a lányokkal ülünk hátul, Raiji meg beül a sofőr mellé fél fenékkel. Én ülök jobboldalt (baloldali közlekedés van), és ez nem a gyenge idegzetűeknek való hely. Amikor a szembejövő óriási teherautókat csak az utolsó pillanatban kerüljük el, átlagosan mintegy három centiméterrel, az igen mély hatást tud gyakorolni az emberre.
 Végre eljön az alkalom, hogy megvehessem életem első lunghiját (sőt rögtön hármat). Hazatérésünk után fel is próbálom az elsőt, ami nem olyan egyszerű. Még hetekbe fog telni kitanulni a lunghiviselés nemes művészetét. Mindenesetre az indiaiak nem röhögnek láttomon nagyon hangosan, amit jó jelnek veszek.
+
 Trivandrum amúgy izgalmas, földközeli, nyüzsgő, színes-szagos-hangos hely, a lányok dolguk végeztével mennének is rögtön vissza kedves, nyugalmas Kovalamunkba. Nekem viszont tetszik, szívesen maradnék még. A riksából nem láttam eleget a városból. Mondjuk a koldusok tényleg lehangolóak. A bevásárlóközpont előtt, ahol vásárolunk, csapatba gyűlnek, mire távozunk, már tucatnyian vannak. Öregek, sovány asszonyok síró gyerekekkel a karjukon, és nem csak hogy beszélnek hozzánk és és kérincsélnek, hanem a karunkat is elkapják. Még ha csak néhány volna, adhatnánk is nekik pénzt, de ennyi elől csak menekülni lehet.
 
-### december 15, vasárnap
+### 2002. december 15, vasárnap
 
 A kókusztej élet, erő, egészség. Világgazdasági eszmecsere a Bakeryben. A koppenhágai astanga iskola.
 
@@ -157,7 +159,7 @@ Este a dán szomszédaimmal vacsorázunk a Keerth-ben, plusz egy Robin nevű kö
 
 A hot ginger lemon mézzel egyébként kiváló ital.
 
-### december 16, hétfő
+### 2002. december 16, hétfő
 
 A kókuszdió-függőség első jelei. Karácsonyi díszek. Az első hasmenés. Masszázs szülési fájdalmakkal. Unikum Unnitól.
 
@@ -172,14 +174,15 @@ Reggeli után megérkezik az első indiai hasmenésem. Elég enyhének bizonyul,
 Délután újra masszázs. Miközben George engem melegít be, a szomszéd szobában Michelle úgy kiáltozik Unni kezei alatt, mintha gyereket szülne. Aztán rajtam a sor, nem tudom eldönteni, hogy jobb-e hogyha én is kiabálok, vagy inkább próbáljak ellazulni és lélegezni. Úgy tűnik, van bennem egyfajta gátlás a fájdalmam hangos kinyilvánításával szemben. Másfelől ha a lazításra és a légzésre igyekszem koncentrálni, mégiscsak kevésbé fáj. Utána Unnitól még orvosságot is kapok a gyomromra. A folyadék színe és szaga határozottan az Unikumra emlékeztet, eltekintve az alkoholtol.
 További említésre méltó fejlemények: a Nargeese Kofta nagyon finom.
 
-### december 17, kedd
+### 2002. december 17, kedd
 
 Megvan a teljes első sorozat. Főzőiskola II.
+
 Az első napüdvözlet ellen a tagjaim vehemensen tiltakoznak, meglehetősen ernyedtnek érzem magam. Úgyhogy gyorsabb lélegzetre kapcsolok és megpróbálok túllenni az egészen minél hamarább. Ezek után meglepően jól megy, egész lazán végigcsinálom a sorozatot és a végén úgy döntök, hogy a hátrahajlásokat is megkísértem. Elena jön és segít. Yippee! Túlvagyok a teljes első sorozaton.
 
 Este újabb főzőiskola a Lonely Planetban. Fénypontok: Chapati, Vegetable Pakora, Dhal Fry, Banana Fritters.
 
-### december 18, szerda
+### 2002. december 18, szerda
 
 Testi bajok. 4 jógi és 76 hangya reggelije. Kalandok a nagyvárosban. Panicker csiklandoz.
 Teljes meglepetésemre ma alig izzadok. Legfeljebb pár fokkal lehet hűvösebb, mint eddig, de izzadságban ez azt jelenti, hogy a nadrágomon már akadnak száraz foltok, és a gyapjúszőnyegem – ami eddig tocsogott a víztől – ma félig száraz marad. Emellett a gyakorlat ráadásul nagyon jól is megy, kezd megjönni az erőm. Mígnem Kukkutasana közben Rosanna segítségével meghúzom a jobb csuklómat, onnantól egyre kevésbé tudom használni. Ráadásul Supta Padangusthasana közben a jobb csípőm a szokott módon kiakad, és percekig kínlódom eredménytelenül, hogy visszakattintsam. Mikor feladom és megyek tovább az Ubhaya Padangusthasanára, persze magától visszaugrik, úgyhogy utána megcsinálom a S.P. bal oldalát is. A hidat a csuklóm miatt kihagyom, a hátrahajlásokat csak félig csinálom, egyedül. Lino nagyon kedves, ad a csuklómra árnikakrémet.
@@ -189,3 +192,162 @@ Reggeli Simonékkal, színhelye a Shivas Moon melletti Suku’s. Láthatóan né
 Utána irány Trivandrum, busszal, ami sokkal élvezetesebbnek bizonyul, mint a riksa. Simon énmellettem egy új-zélandi pár, Nick és Nicky, valamint egy vékony, ragyogó szürke szemű dán lány, Stine alkotja a csapatot. Nickékkel valamelyik reggel a Bakeryben ismerkedtem össze, amikoris Nicky hosszasan faggatott Közép-Európáról. Tőlük hallottam először új-zélandi angolt, igen mókás. Elvegyülünk a tömegben, mint Paul és társai a Hairben. Kis mellékutakon kanyargunk a város felé, az út szélén nők és gyerekek követ törnek, gyártják az útépítéshez való kőzúzalékot. Egy kapu mellett kacskaringós-csomós malajálam felirat, a kapufélfán sarló-kalapácsos ötágú csillag, kékben. Iskolás lányok-fiúk mindenfelé az út szélén, egyenruhában. Boltok, színes falak, szeméthalmok. MG Road, a főutca. Járdák nincsenek, mindenki ömlesztve tolong. Utcatáblák sem mutatkoznak, így elég nehéz meglelni a DC Books könyvesboltot, ahová igyekszünk. Simon el is véti, elveszítjük szem elől. A bolt szuper, rengeteg jó könyv van, jógárol is. Sajnos az időnk véges, ide még vissza kell jönni. Utána megpróbálom felkutatni a turistainformációs központot. A riksás először egy kis bódéhoz visz, amin ugyan valóban olvasható a „tourist” szó, de meggyőzzük hogy ez nem az. A következő próbálkozásra eljutunk a térképemen szereplő „Tourist Reception Office”- hoz. Ott viszont nem tudnak segíteni, átirányítanak a pályaudvarra. Megleljük a helyet, de nincs ott senki, a közelben ácsorgók szerint ebédelni ment az informátor, de itt van nem messze egy hotelben egy másik hely, ahol biztos tudnak segíteni. Itt feladjuk, irány a Parthas. Stine számára óriási lelki próbatétel mintegy háromszáz szárianyag közül tizenöt perc alatt választani, de végül három anyaggal beéri. Utána nekem már sietnem kell vissza Kovalamba, masszázsra, ő még marad megnézni a Chalai Bazárt.
 
 Unni ezúttal új elemként a térdét is beveti a hátam egyengetésére. Igen keményen megdolgozza a csípőmet és a szokásos módon a combokat is, egészen elgyengülök tőle, mire Panicker (a harmadik masszőr) magamhoz térít csiklandozással és fülhúzással. Emellett a csuklómat is alaposan átdolgozza, jólesik.
+
+### 2002. december 19, csütörtök
+
+Holdtölte, fakultatív szabadnap. A csuklóm ma nem enged jógázni. Lustálkodom egész nap. Raiji elhozza az új ingemet Trivandrumból; gyönyörű.
+
+### 2002. december 20, péntek
+
+Csuklókímélő jógagyakorlat. A nap felfedezése a Badam. Parádé az új ingben. Az első fotózás.
+
+Könnyű jógagyakorlat, a csuklómra való tekintettel (no push up, no jump through). Megintcsak keveset izzadok. A csuklóm elég jól bírja, a gyakorlat laza és nagyon szuper, el se fáradtam tőle. Úgy látszik, valójában éppen az erőelemektol fáradok el a vinyászákban, nem maguktól az ászanáktól. A hidat megint kihagyom, Lino segit a fél-hátrahajlásoknál. Elfelejtettem szólni neki, hogy maradok még egy hétre, a késői regisztráció büntetése (vagy jutalma) hogy jövő héttől csak 7.15-re jut hely számomra.
+
+Reggeli a Suprabhatham-ban, a nap felfedezése a Badam (kesudiós milk shake).
+
+Az új ing szuper, ing még sosem illett rám így. Emellett mindenki megdicséri, akivel csak találkozom. Világoskék, kockás.
+
+Délután megemberelem magam és elindulok fotózni, Kovalam belső részén. Este újabb masszázs, meglepően jó és jóval kevésbé fájdalmas mint legutóbb. A combomban a csomók sokat oldódtak és a vállam is lazább.
+
+### december 21, szombat
+
+Samudra Beach Party. Az első Pincha Mayurasana. Coca-Cola mámorban fetrengő nyugati ifjúság. Naplemente iskolásokkal.
+
+A tervek szerint ma kirándulunk Neyyar Dam-hoz, a Shivananda ásramba. A kirándulás célpontja végül többrendű kacskaringók után (cherchez la femme) Samudra Beach lesz, délutánra. Mentirosót játszunk, nagy sikere van. Darren segítségével először életemben kipróbálom a Pincha Mayurasanát, ha nem is túl szépen, de sikerül, kétszer is. A kézállást a csuklóm miatt nem próbálgatom. Ebédre felhágunk a Lobsterhez, a partfal tetejére. Szép kilátás, ami az árakon is meglátszik, ezzel szemben lassú kiszolgálás. A régóta hiányolt Coca Cola mámorában Marcos, egy gyönyörű brazil fiú táncra perdül, pillanatok alatt az egész társaság követi példáját. Az arrajáró indiai anyák megbotránkozva terelik odébb csemetéiket a káros nyugati befolyástól. Napnyugta előtt lemegyünk még egyet fürdeni. Verseny a hímek között: ki állja meg a helyét a hullámokkal
+szemben. A hullámok nyernek. A partról egy teljes alsótagozatos osztály figyel minket tanárnői társaságában, nettül felsorakozva, szokásos kék egyenruhájukban. Megvitatjuk, hogy érdemes-e harsány üvöltéssel egyszerre rájuk rontanunk a vízből; végül is nem próbáljuk ki. Kárbaveszett nap. Azért még megnézzük a naplementét, a gyerekekkel együtt.
+
+Hírek: Delhiben karácsonykor megindul az első metró. Orissa államban pusztulnak a parti mangroveerdők és védett teknősök, valamint helyenként emberek halnak éhen. Gujarat államban a választásokat heves és véres kampány után a BJP nyerte nagy fölénnyel, annak is a keményvonalas hindu fundamentalista szárnya, N. Modi vezetésével.
+
+### 2002. december 22, vasárnap
+
+A csuklóm javul, jól megy a gyakorlat. Befizetek újabb két hétre, január 3.-ig. Délután talpmasszázs Panickerrel (nem az én talpamat masszírozza, hanem rajtam járkál). Nagyon jó, igazából kellemesebb, mint Unni alkaros masszázsa, mert a talp puhább. Csak a jobb térdkalácsomat kimozdítja kissé a helyéről, estére bedagad. Lino kenőcsével kezelem azt is.
+Kipróbálom a Mosai Masalát a Kerala Foodban. Óriási adag és nagyon finom. Házisajt, kesudió, spenót, mindenféle zöldségek vannak benne.
+
+### 2002. december 23, hétfő
+
+Vásárfia Mysore-ból. Kókusztej-hitelszámla. Roobent, a bölcsész.
+
+A csuklóm nagyjából OK, a térdem is bírja a gyakorlatot. Utána vásárfiat nézegetünk: megjött Nagarathna és pereputtya Mysore-ból, hoztak magukkal jógaszőnyegeket, könyveket, zsákokat, CD-ket meg még ki tudja mi mindent. De nem adják olcsón: a „Mula Bandha” könyvet 120 rúpiáért adják, miközben Trivandrumban megkapni 80-ért.
+Kókusztej-hitelszámlát nyitok Babunál: befizetem előre 20 adag árát, így nem kell mindig magammal hordoznom a pénztárcámat (ő pedig remélhetőleg vehet majd egy új kést magának, mert a meglévőn már több a csorba mint az él).
+
+A nap híre: a keralai miniszterelnök, A. K. Antony, Kovalamba látogat, hogy egyezkedjen a vendéglősökkel, akik karácsonytól sztrájkolni akarnak. A legtöbbjük ugyanis illegálisan szolgál fel alkoholt a turistáknak, mert az alkoholengedély nagyon drága, viszont az utóbbi időben a rendőrség rendszeresen razziákat tart.
+Úgy tűnik, kezdek belejönni a lunghiviselés mesterségébe. Az indiaiak általában mosolyognak, amikor meglátnak, és van aki meg is dicséri: „Kerala style, good!”
+
+Délután pránajáma Linóval. Végre azonosítom Greget, akivel Budapesten csak telefonon tudtunk beszélni. Enyhén őrült fazon, de jó fej. Együtt vacsorázunk és lefektetjük a jövőbeli együttműködésünk alapjait.
+Roobentet este az iskolarendszerről faggatom. Elég hasonló a miénkhez: 4+4 év elemi, utána 3 év középiskola (high school), majd 2-3 év főiskola vagy egyetem. Roobent, mint kiderül, angol irodalom szakon végzett, a felesége pedig fizikus. De munkalehetőség Keralában kevés akad számukra.
+
+2002. december 24, kedd
+
+Látogatás Roobent falujában. Christina elrablása. Ebed banánlevélről, kézzel. A kókuszrost- kötélgyárban. Kéregető Mikulás.
+
+A tegnapi gyakorlaton felbuzdulva ma korábban kelek egy kis meditáció és pránajáma kedvéért. Finom. Reggel mindenkivel „Happy Christmas”-t köszönünk egymásnak, aztán röhögünk, mert teljesen abszurdan hangzik. A csuklóm és a térdem nagyjából rendben, az ászanák jól mennek, viszont a testem, különösen a combjaim egyre merevebbek az utóbbi napokban (ezt mástól is hallom).
+Délben kirándulásra indulunk: Roobent elvisz minket a falujába. Előtte karácsonyi ajándékként összeadunk neki és a családjának fejenként 500 rúpiát. Mivel a kislánya épp most egyéves, viszünk egy tortát is. Christinát a tortával indulás előtt kis híján elrabolják. Egy öregember hívja magával a Bakerynél, ő pedig követi, abban a hiszemben, hogy a taxisofőrünk az. Az öreg felvezeti egy házba, ahol hirtelen egy csomó taxisofőr csatlakozik hozzájuk, leteszik a tortát az asztalra és nekikészülődnek, hogy egy nagy késsel felvágják – ekkor Christina felfogja, hogy itt valami félreértés van, felkapja a tortát és elmenekül.
+
+A taxiút ismet szürreális road movie. Színek, hangok, szagok kavalkádja. Látunk egy lányt, aki két kézzel egy esernyőt egyensúlyoz a fején: a fogantyú a feje búbján, ily módon árnyékot egyáltalán nem vet a hordozójára. Magritte elélvezne, ha ezt látná. Meglepő, hogy a majd egyórás úton szinte egyfolytában lakott területen haladunk. A falvak egybefolynak. Eddig csodálkoztam, hogy fér el Keralában, fél Magyarországnyi területen 30 millió ember.
+
+Roobent faluja Kerala és Tamil Nadu határán, a tengerparton fekszik, Poovar mellett. A családja óriási vendégszeretettel fogad minket. Hagyományos dél-indiai thalit fogyasztunk a padlón ülve, banánlevélről, kézzel. Óriási és ízletes adagok mindenből. Végül megkönyörülnek rajtunk és nem adnak több repetát. A lányok viszont kapnak ajándékba egy-egy szárit, és rögtön fel is öltöztetik őket; lenyűgözőek.
+
+Utána sétát teszünk a faluban, megtekintjük a helyi nevezetességeket. A falu teljes lakossága – az alvók, betegek és holtak kivételével – a főutca mentén sorakozik és lankadatlan figyelemmel követi minden mozdulatunkat. Viszonzásul én is fényképezek, ahol engedik, bár még nem mindig igazodok el az indiai gesztusok között (az igent a fej függőleges síkban jobbra-balra ingatásával jelzik, amit a gyakorlatlan ember akár nemnek is érthet). A látogatásunk valószínűleg hetekre beszédtéma lesz. Megnézzük, hogyan szárítják a kókuszbelet, amiből majd kókuszolajat préselnek. Meglátogatjuk a kókuszrost-kötélgyárat, ahol a kedvünkért még sodornak is egy darab kötelet. A módszer zseniális, Brenda és Christina megpróbálják maguk is, de esélyük sincs. Ennyit a nyugati kultúrfölényről. Utána megnézzük még a lagúnát is, Roobent egy lakóhajót is akar nekünk mutatni, de már sötétedik, nagy nehezen lebeszéljük. Indulás haza. A taxiban filmi zene szól, ami csak fokozza a road movie hatását. Már besötétedett, az út mentén lampionok, színes lámpafüzérek, girlandok, karácsonyi díszek, betlehemek mindenfelé. Aztán beköszönt az áramszünet; a taxi félsötétben kerülgeti a riksákat, motorosokat, biciklistákat és egyéb népeket.
+
+Újra Kovalamban. Harangkongás, hujjogás: egy hindu templomban Ganésának áldoznak. Az utcán egy megkésett Mikulás tartja a markát baksisért. Az itteni mikulások lényegesen kevésbé adakozóak, mint azt odahaza megszokhattuk. Az esti partira senkinek sincs már energiája, irány az ágy. Azért éjfél után még felébresztenek a szomszédban durrogó petárdák. Boldog Karácsonyt, azt.
+
+### 2002. december 25, szerda
+
+Lino karácsonyi ajándéka. Kathakali. Erőszakmentesség-gyakorlat.
+Reggel félig komatóz állapotban, nagy nehezen kiszakítom magam az ágyból. A vécén ülve percekig bambulok. Semmi energiát nem érzek magamban, még mintha szédülnék is kicsit. Igyekszem meggyőzni magam, hogy ezek a tünetek feljogosítanak arra, hogy kihagyjam a mai gyakorlatot. Végül is megemberelem magam és nekiindulok. Ahhoz képest egész olajozottan megy, sőt a Marichyasana sorozat az utóbbi napokban kezd egyre jobban sikerülni. A Marichyasana D-t már egyedül is meg tudom csinálni mindkét oldalon.
+
+Aztán valami hihetetlen dolog történik. Ahogy a végén készülődöm a hídhoz, egyszer csak megjelenik Lino és rám szol: „Jump back!” Először azt hiszem, hogy a hátrahajlásokat akarja csináltatni, de nem. A vinyasa után leguggoltat, és akkor már tudom, mi jön: PASHASANA – ELKEZDTEM A MÁSODIK SOROZATOT!!! Lino segítségével meglepően könnyen megy, mindkét oldalon össze tudom kapcsolni az ujjaimat. Utána még a Krounchasanat is megcsináltatja. Meg vagyok döbbenve. Idén nyárig meg se fordult a fejemben, hogy valaha is eljuthatok a második sorozatig. Akkor Stefan egyszer azt mondta, hogy még a Supta Kurmasanán kell alaposan dolgozni, aztán jöhet; azóta melengettem magamban az érzést, hogy majd egyszer, néhány év múlva, talán… és most egyszer csak megtörtént. Azt hiszem, kevés ennél szebb karácsonyi ajándékot kaptam eddig életemben.
+
+Reggeli után a part zsúfolásig tele van indiaiakkal. Ezrek sétálnak a parton, fröcskölnek a vízben, úsznak, korzóznak színes csónakokon fel-alá. Sosem láttam még ennyi embert itt.
+
+Délután jógi-ebéd a Lonely Planetban, indiai táncosokkal. Este megnézem a Kathakali-előadást (hagyományos keralai táncszínház) a hotel Neptune-ban, a táncosok kifestésével és beöltözésével együtt. Két tekercs fényképet lövök el, nagyrészt találomra beállított expozícióval, mert a vakuval még kevés a tapasztalatom. Utólag jut eszembe, hogy negatív filmet kellett volna használnom dia helyett, akkor több esélyem lenne, hogy értékelhető képek szülessenek. Ráadásul Trivandrumban nem is tudok profi laborról, ahol diafilmet elő tudnának hívni, így az eredményt is csak sokára fogom látni. Na mindegy. Az előadás különleges. Nem csak a jelmezek (és felöltésük folyamata), de legfőképpen a táncosok mesterségbeli tudása. A kisujjuk hegyétől a szemöldökük csücskéig minden porcikájuk részt vesz a játékban. Minden érzelemnek, lelkiállapotnak megvan a maga végletekig kanonizált kifejezésmódja.
+
+Éjjel 11-kor arra ébredek (valószínűleg fél Kovalammal együtt), hogy a szomszéd hotelben buliznak a teraszon és csutkáig felcsavarták a hangerőt. Eddig csak vasárnap esténként volt parti, és viszonylag korán abbahagyták, de ez már több a soknál. Átmegyek megkérni őket, hogy halkítsák le. Vigyorgó, mámoros, bárgyú arcok. Elmondom a mondókámat. „Igen, persze” mondják, és nem mozdulnak. Megismétlem, hátha nem értették elsőre: „persze, persze”, mondják újból, és megintcsak nem csinálnak semmit. Kezd felmenni bennem a pumpa. Egy középkorú fószer megkérdi, hová valósi vagyok. Aztán elkezdi magyarázni, hogy Magyarországon is ugyanígy megy ez, Újévkor, meg hát, izé, Karácsonykor is, az emberek jól érzik magukat, és ezt el kell viselnem, elvégre csak egyszer van egy évben. Én próbálom neki elmagyarázni, hogy: a) a demokrácia nem azt jelenti, hogy mások jogait semmibe vesszük, b) az itteni lakosok jelentős része hindu, illetve muzulmán, számukra a Karácsony nem ünnep. Erre nem tud mit válaszolni, így visszavonul, mondván, hogy a hangerősítésben nem ő az illetékes. Odafordulok újból a zenegép mellett álló fickóhoz, és összetett kezekkel elismétlem a kérésem. Végül úgy látszik, belátja, hogy másképp nem szabadul meg tőlem, és kelletlenül lejjebb csavarja a hangerőt. Még mindig messze túl hangos (bár most már legalább a saját hangunkat halljuk), de úgy látom, ma este ennél többet nem érhetek el, úgyhogy megköszönom megértésüket és távozom. Kifelé menet egy másik tag még barátságosan figyelmembe ajánlja a füldugót, mint kompromisszumos megoldást. Nem nyitok vitát. Ez egy jó lehetőség volt az ahimszá (erőszakmentesség) gyakorlására, és egy kicsit büszke vagyok magamra, hogy sikerült megoldanom a helyzetet, bár utólag látom, hogy különösen az elején túl sok felesleges harag volt bennem. Ezzel együtt elaludni még jó ideig nem tudok, füldugóval sem.
+
+### 2002. december 26, csütörtök
+
+Ajurvédikus orvosságok.
+Reggel meglepő módon különösebb gond nélkül felkelek 5.20-kor, és a pránajáma jól megy. Az ászanagyakorlat viszont elég fárasztó. De Marichyasana D-ben a bal oldalon először életemben – Frank segítségével – sikerül megfognom a csuklómat! A Pashasana egyedül trükkös, az egyensúly nem akar összejönni, de segítséggel megint megy.
+
+Délben bemegyek Trivandrumba filmet vásárolni; ISO 400-as filmből már alig van, pedig az fogy a legjobban. Egyúttal beadom az eddig ellőtt negatívokat előhívni. Odafelé a buszon próbálok fényképezni, de nehéz, mert a busz alig áll meg. Azért így is élvezetes.
+Délután masszázs, külön hangsúllyal a nyakamon és a térdemen. A térdemet Panicker varázslatos módon rendberakja, a nyakamon Unni dolgozik, de nem ér el áttörést. Utána megkérdezem Panickert a pattanásaimrol, amik mindkét alkaromon szép sorban jöttek ki pár napja. Ráncolja a szemöldökét, kérdez egyet-mást, pulzust mér, aztán hosszas tanakodás következik Vinoyjal. Végül a kezembe nyom két üveget. A diagnózis: túlhevült a testem (amit hajlamos vagyok elhinni, tekintve, hogy mennyit izzadok), ezért le kell hűteni és egyúttal a véremet is meg kell tisztítani. Az egyik sötét folyadék, amit naponta háromszor étkezés előtt kell bevenni; a közvetlen hatása, hogy émelygek hacsak ételre gondolok. Lehet, hogy tévedésből fogyókúrás gyógyszert adtak?
+Este újabb főzőiskola a Lonely Planetben, Stine is részt vesz. Pechje van, mert a legtöbb ételben van tej vagy sajt, ő viszont tejérzékeny. Vacsora után nagyon jót beszélgetünk, az első igazán mély beszélgetés amióta itt vagyok. Nagyon-nagyon örülünk egymásnak. Aztán fél tizenegykor eszmélünk, hogy ideje van az alvásnak.
+Lefekvés előtt beveszem a másik orvosságot, az előírás szerint. Ez fekete, sűrű ragacs, állaga és szaga leginkább egy régi, beszáradt szilvalekvárra emlékeztet. De a hasonlóság itt végetér. Émelyítő iszapíze van, lenyelni csak néhány korty víz segítségével lehet. Valahogy letuszkolok egy púpos kanálnyit, aztán igyekszem leöblíteni az ízét.
+
+### 2002. december 27, péntek
+
+Az ajurvédikus orvosság ereje bebizonyosodik. Választási elemzések. 20 igazi hős.
+Hajnali háromkor arra ébredek, hogy a gyomromban óriási buli zajlik, a jelekből ítélve össztánccal és tűzijátékkal egybekötve. A hejehuja egész reggelig folytatódik, amikor is, hogy úgy mondjam, a jócskan elázott vendégek végre elindulnak hazafelé. Ilyen körülmények között szóba sem jöhet a jóga. A nap nagy részében ágyban maradok, szunyókálok és olvasok. Mindenesetre bebizonyosodott, hogy az ajurvédikus orvosság tényleg hatásos :-/
+
+Elemzések a hetilapokban a BJP gudzsaráti győzelméről. Mivel Indiában jövőre 9 szövetségi államban lesznek választások, a fő kérdés: meg tudja-e játszani a BJP a gudzsaráti stratégiát (nevezetesen: rájátszani a muszlimgyűlöletre) győzelmesen más államokban is? A válogatott szakértők és elemzők tömörített válaszai, sorrendben: Minden bizonnyal. Semmiképpen. Esetleg, de egyáltalán nem biztos. Igen. Nem. De igen. De nem. Vagy igen, vagy nem. Meglátjuk.
+
+A „The Week” 20 éves születésnapi száma bemutat húsz igazi hőst Indiából: mindennapi, sokszor teljesen ismeretlen embereket, akik mindazonáltal valami kiemelkedő tettet hajtottak végre mások segítségére. Azt hiszem, ezt érdemes megörökíteni, már csak azért is, mert sokat elárul Indiáról. További információk: Good News India
+
+**Mohammed Habib** (80; Delhi): több mint 60 év alatt több ezer azonosítatlan holttestnek adta meg önkéntesen a végtisztességet (temetés vagy hamvasztás), anélkül, hogy munkájáért bármi fizetséget vagy támogatást elfogadott volna.
+
+ **Jagat Singh Chaudhary** (52; Kot malla, Uttaranchal): 20 éves munkával létrehozott egy kéthektáros erdőséget 50,000 fával és egyéb növénnyel, amelyek nagy része ebben a magasságban (1500 m) és klímában magától nem él meg.
+
+ **Simputer team** (Bangalore): megterveztek és létrehoztak egy indiai viszonyokra szabott hordozható számítógépet. A Simputer olcsó, nem érzékeny a porra, elemről működik, Linuxot futtat, elfér egy ingzsebben, tud beszélni (jelenleg 11 indiai nyelven), érintéssel, hanggal és képekkel kezelhető (így írástudatlanok is használhatják). Modemen keresztül lehet vele internetezni és egy smart cardon tárolja a személyes adatokat, így több felhasználója is lehet. A Simputer a GPL licensz alá eső szabad termék, azaz jogai ingyenesen hozzáférhetők bárki számára.
+
+ **Dayamani Barla** (35; Jarkhand): emberi jogi aktivista, évek óta harcol a Koel Karo vízlépcső megépítése ellen, amely 255 faluban 250,000 embert kényszerítene lakóhelye elhagyására és ezzel hagyományos kultúrájának feladására. Emellett egy nők jogaiért küzdő szervezetnek is a vezetője, amelynek fő tevékenysége annak megakadályozására irányul, hogy a törzsi területekről lányokat adjanak el prostituáltnak Delhibe.
+
+ **Bharathan** (39; Dindigul): 15 éves kutatás során 120 természetes, környezetbarát festékanyagot fedezett fel. Ezek bármilyen fajta szövet, vagy akár bőr festésére is használhatók, a festési folyamat pedig nem produkál mérgező mellékterméket.
+
+ **Poonam Natarajan** (Chennai): létrehozott és vezet egy speciális iskolát fizikailag vagy mentálisan sérült gyermekek nevelésére.
+
+ **Raja Ram Tiwari** (75; Allahabad): 1946 ota segít a vallási fesztiválokon (kumbh) elveszett embereknek megtalálni szeretteiket. 2001-ben az allahabadi Maha Kumbh Melán 40 millió ember vett részt, és Tiwari segítőivel együtt 130,000 embert hozott össze elveszett hozzátartozóival, barátaival. Eddig körülbelül 400,000 felnőttnek és 25,000 gyereknek segített 57 fesztiválon. 
+
+**Dr. Himmatrao S. Bawaskar** (52; Jalna): felfedezte a vörös skorpió mérgének ellenszerét. A vörös skorpió marása ellenszer nélkül az esetek 80 százalékában halálos.
+
+ **P.U. Thomas** (52; Kottayam, Kerala): megalapított és vezet egy menhelyet és kórházat a szegények, hajléktalanok és elmezavarokkal küzdők számára.
+
+ **Komal Kothari** (74; Jodhpur, Rajasthan): több mint ötven éve gyűjti és menti Rajasthan hagyományos kulturális és művészeti formáit, zenéjét, öltözékeit, költészetét, festészetét és népszokásait.
+
+ **Gursharan Singh** (73; Chandigarh): 30 éve szervez, rendez és ad elő utcai színdarabokat, amelyekkel aktuális problémákra világít rá, kérdéseket tesz fel és oktatja az embereket. Célja a társadalmi egyenlőtlenségek megszüntetése, különösen az alacsony kasztok és a nők helyzetének javítása.
+
+ **Dr. Anand Karve** (65; Pune): több környezetbarát termelési és újrafelhasználási módszer feltalálója és népszerűsítője, többek között: tüzelőanyag készítése a nádcukor (sugarcane) gyártási melléktermékeiből; növénytermesztés különleges homokágyon, tápanyagokkal, háromszoros termésátlagot eredményezve; öntözés tengervízzel; alacsony költségű üvegház; házépítési technológia bambuszból.
+
+ **Pothaboina Suryanarayana** (62; Tenali, Andhra Pradesh): 15 éves kora óta vak, alapítója és vezetője egy szervezetnek a csökkentlátók segítésére. A szervezet segít tagjainak ösztöndíjak elnyerésében, könyvek vásárlásában és kölcsönökhöz jutni.
+
+ **Brijial Sahu** (60; Kudari Dalli, Chattisgarh): 40 éves munkával eltérítette egy folyó vizét, hogy öntözést biztosítson a maga, és falujának földjei számára, ezzel megmentve a falut az aszály pusztításától.
+
+ **Swinder Singh Saini** (Ropar, Punjab): 10 éves kora óta a hockey felvirágoztatásának szentelte életét, elérte, hogy Punjab – és India maga – hockey-nagyhatalommá váljon.
+
+ **Kamla Bai** (79; Mahaveerji, Rajasthan): 50 éve küzd a nők egyenlőségéért és oktatásáért. Az általa 1953-ban, 6 diákkal megalapított iskola ma 1800 fős bentlakásos főiskola (residential postgraduate college). Álma hogy Rajasthanban minden nőt megtanítson írni-olvasni.
+
+ **K.J. Baby** (47; Wyanad, Kerala): megalapított és vezet egy iskolát a törzsi társadalmak gyermekeinek tanítására, amely tekintettel van azok különleges helyzetére és igényeire, és segít továbbörökíteni kultúrájukat.
+
+ **Mohammed Abdul Wahab** (53; Bhangar, West Bengal): megalapította és vezeti a Samity-t, egy klinika-hálózatot a szegények orvosi ellátására. 1979-ben 2 rúpiával a zsebében kezdett; ma a szervezetnek 30 klinikája van Bengálban, és eljutnak rengeteg olyan faluba, ahol a lakók máskülönben nem kapnának orvosi ellátást. Emellett részt vállalnak sok szegény muzulmán gyerek oktatásában, a nők helyzetének javításában (önsegítő csoportok és kisvállalkozások indításával) és a falvak egészségügyi állapotának javításában is (pl. latrinák építésével).
+
+ **Ramesh Sharma** (Durg, Madhya Pradesh): ez a rendőrtiszt szabadidejében fákat ültet. 10 év alatt több mint 250,000 fát ültetett Madhya Pradesh és Chattisgarh államokban, sőt még Boszniában is, ahol az ENSZ békefenntartójaként járt. Emellett iskolákat alapított az utcagyerekek nevelésére, és ráérő idejében tavakat tisztít. Mindez mintegy 2500 rúpiájába kerül havonta, de támogatást nem fogad el senkitől.
+
+ **Vijay Kumar Naik** (47; Bhavnagar, Gujarat): megtervezett és megépített egy műlábat, amellyel törökülésben is lehet ülni, egy elektronikus (myoelectronic) műkezet, amely teljesen úgy működik, mint a valódi, és egy térdszorítót (poly-centric knee brace) a csontritkulásban szenvedők számára, amely megszünteti a fájdalmakat és elkerülhetővé teszi a műtétet.
+
+### 2002. december 28, szombat
+
+Éjjelre csak a tegnapi rémlekváradag felét nyomtam le, a gyomrom ennek megfelelően illendően viseli magát. Az ízlésem határozottan megváltozott, amit részben ennek tulajdonítok: mostanában kifejezetten a sós ételeket és italokat kívánom, az édes nem is esik jól. Felfedeztem a sós lasszit. Este úgy döntök, abbahagyom a kúrát; túl sok ez nekem egyszerre a jógával együtt.
+
+ ### 2002. december 29, vasárnap
+
+Magyar nyelvlecke. Stalin élt, Stalin él, Stalin élni fog.
+
+Két nap szünet után elég jó gyakorlat, de a hidam szánalmas. Utolsó masszázs a Heritage-ban: lábmasszázs Panickerrel. Keddre előjegyeztem magam Vijay-hez, sokan dicsérik.
+
+Délután felmegyek a Tourist Information-be jegyeket foglalni a holnapi Kalaripayattu harcművészeti bemutatóra Trivandrumba. A hivatalnok kérésére lefordítok neki magyarra egy halom kifejezést és mondatot, mint például „Egyedül utazik?” és „Keralában mindig szívesen látjuk!”. Utána az emberke akkurátusan leírja minden mondat mellé a kiejtését malajálamban. A malajálam írás gyönyörű. Csupa ív, hurok és csomó. A fellépés egyébként ingyenes, csak az oda- vissza utat kell megoldanunk.
+
+Napi hírek: Kasmírban militánsok négy nőt megöltek a napokban modern ruhaviseletük miatt. Tamil Naduban az ellenzéki DMK államszerte tüntetéseket szervez a kormány ellen. A megmozdulások egyik vezetője M.K. Stalin, a DMK ifjúsági szárnyának vezetője.
+
+### 2002. december 30, hétfő
+
+Reggel pránajáma. Ma megint kapok két új ászanát: Shalabhasana A&B és Bhekasana. A Pashasana először megy egyedül!!! (egy törülközővel a sarkam alatt, az egyensúly mián). A hátrahajlások is jól mennek.
+
+Délután Trivandrumba megyünk Stinével. Az esti bemutató előtt még akad néhány elintéznivalónk. Stine az előző nap vett egy merülőforralót a Chalai Bazárban, ami az üzletben ugyan működött, de otthon már nem, és amikor szétszedte, kiderült, hogy belül csupa rozsda. A rend kedvéért megpróbálja visszacserélni, vagy visszakérni a pénzét, persze hiába. Az eladó azt mondja, hogy csak a főnök dönthet, aki persze éppen nincs ott, de hamarosan jön. Vagy egy kicsit később, esetleg holnap. Feladjuk. Meglátok egy boltot, ahol csillaglampionokat árulnak, veszek belőlük egy halommal. Utána eszünk, aztán irány a Kanakakkunnu palota, ahol a bemutatót tartják.
+
+A Kalaripayattu elég látványosnak bizonyul. Egyes elemei és alapállásai a kung-fura emlékeztetnek, de van benne sok dobás is, kétkezes védések és hárítások, karcsavarások. Általában páros formagyakorlatokat adnak elő, ahol az egyik félnek fegyvere is van: egy vagy két kés, kard, bot, lánc, pajzs. A koreográfia szerint a másik előszor puszta kézzel védekezik, majd lefegyverzi ellenfelét, így megfordulnak a szerepek. Időnként igen mókás dobásokat és forgásokat mutatnak be.
+
+### 2002. december 31, kedd
+
+Reggel nem vagyok túl energikus, egy gyors gyakorlatot nyomok le. A Shalabhasana elég jól megy egyedül, a Bhekasana még Rosanna segítségével se sehogy. A bokám egyszerűen túl merev hozzá. Délután masszázs Vijay-nél, Mohannal, az egyik tanítvánnyal. Igen alapos, másfél órás (Panickeré 45 perc volt), mindent beleadó, kiváló talpmasszázs. A Heritage-ről többet szó se essék! Kár, hogy több masszázsra már nem lesz időm itt.
+
+Este nagyon álmotos vagyok, egy csepp energiám sincs a fékevesztett újévi partihoz. Ledőlök egy kicsit, tíz felé végül összevakarom magam és átmegyek a Neptune-ba. Elég sokan vannak, kb. a fele nem jógi. A zene meglehetős, nem igazán az én stílusom. Azért hagyom átáramolni magamon, szép lassan elkezd mozgatni, be is szállok táncolni egy félórára. Aztán már itt is az éjfél, tűzijáték- petárdák durrognak mindenfelé. Tőlünk is lődöznek szorgalmasan a tetőterasz másik oldaláról, mígnem az egyik rakéta a nádtetőn landol a fejünk felett. Az indiaiak lelkesen odasereglenek és ásványvizes palackok bevetésével gyorsan eloltják, az incidens számukra láthatólag csak növeli a parti becsét. Csodálom, hogy nem égett le semmi ezen az éjszakán.
+Éjfél után DJ Kishan vezényletével elénekeljük az Om Namo Narayanaya mantrát a világbékéért. Utána haza. PJ, a hotel vezetője az újévi jókívánságokkal együtt kezembe nyom egy Cornettót.
