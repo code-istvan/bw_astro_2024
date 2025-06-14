@@ -1,11 +1,10 @@
 ---
 published: true
 language: Hungarian
-title: 'Astanga ikonok: Sri K. Pattabhi Jois 2. rész'
+title: "Astanga ikonok: Sri K. Pattabhi Jois 2. rész"
 titleBackground: false
-description:
-  Ebben a részben Gurudzsi 1960-as évek utáni életét mutatjuk be,   amikor is az astanga jóga elkezdi meghódítani a
-  nyugati világot
+description: Ebben a részben Gurudzsi 1960-as évek utáni életét mutatjuk
+  be,   amikor is az astanga jóga elkezdi meghódítani a nyugati világot
 author: István
 tags:
   - astangaikon
@@ -13,7 +12,6 @@ date: 2016-07-16T12:20:00.000Z
 image: ../../images/uploads/guruji-sharatji-rooftop_desktop.jpeg
 imageMobil: ../../images/uploads/guruji-sharatji-rooftop_mobil.jpeg
 ---
-
 Legutóbbi bejegyzésünkben [(1. rész)](https://bandha.works/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/) Gurudzsi
 életét az 1960-as évek végéig követtük nyomon. Még nem sejtette akkor, hogy az általa olyan odaadóan tanított astanga
 jóga meghódítja majd a világot, és ő maga számtalan különböző országba fog ellátogatni, hogy diákok ezreit tanítsa, és
@@ -33,7 +31,7 @@ diák látogatott el hozzá évente, aztán ez a szám rohamosan nőni kezdett. 
 havonta Mysore-ban Karácsony környékén, amely az év legnépszerűbb időszaka volt. A salában egy időben már 10-12 ember
 gyakorolt, Gurudzsi ekkor már a nyolcvanas éveiben járt, és teljes gőzzel tanított, napi 8-9 órát.
 
-"![Old shala Guruji and Sharathji](/blogpostimages/ashtanga_mysore_600.jpg.webp)"
+![GuruJi és SharathJi az old shalában](../../images/uploads/guruji-sharath.jpeg)
 
 Annyi ember várakozott arra, hogy bejusson gyakorolni, hogy Gurudzsi úgy döntött, új helyre költözteti a Salát, Gokulam
 városrészbe. Az új sala ötször annyi diák befogadására volt alkalmas. 2002-re, mire megnyitott, olyan diákok özönlöttek
@@ -83,7 +81,7 @@ szerint, Gurudzsi képes volt úgy beletenni őket egy-egy pózba, hogy semmilye
 pedig maguktól még eszükbe se jutott volna azt az ászanát kipróbálni, olyan lehetetlen mutatványnak tűnt. Értett ahhoz,
 hogy a diák az elméjét kikapcsolva teljesen átadja magát neki.
 
-"![Guruji and Sharathji in the old shala](/blogpostimages/guruji-sharath.jpg.webp)"
+![Pattabhi Jois, Guruji, Samasthithi](../../images/uploads/gj2.jpeg)
 
 Abban az áldásban részesültem, hogy gyakorolhattam azon falak között, ahol Gurudzsi is tanított annak idején, ahol ma
 már unokája, Sharath vezeti a jógaiskolát, és folytatja Gurudzsi hagyományát. Megható volt hallani, ahogy Sharath a
@@ -113,4 +111,4 @@ egészen addig, amíg elérte a kilencvenes éveit. Egy súlyos fertőzés miatt
 jógamesternek talán nem sikerült. Egymástól független, ismeretlen embereket formált egy családdá, közösséggé, és ez ő
 igazi öröksége amely tovább él.
 
-"![](/blogpostimages/gj-1.jpg.webp)"
+![Thank You GuruJi](../../images/uploads/gj-1.jpeg)
