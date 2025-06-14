@@ -5,10 +5,11 @@ title: A bandhák csodálatos világa
 titleBackground: false
 canonical: https://spaciousyoga.com/the-geometry-of-bandha/
 canonicalLanguage: English
-description:
-  A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”. A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil
-  kapcsolatot hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld energiája   elkezd felfelé
-  áramolni a testbe, meg kell találnunk a „szukhát”, hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
+description: A „múla” kifejezést gyakran úgy fordítják, hogy „gyökér”.
+  A   „gyökeresedés” lényege, hogy a testünkkel mély, stabil kapcsolatot
+  hozzunk   létre a talajjal. Miután ez a gyökeresedés létrejött, és a Föld
+  energiája   elkezd felfelé áramolni a testbe, meg kell találnunk a „szukhát”,
+  hogy ez az   energia keresztülhaladjon, kibontakozhasson bennünk és
   eloszlódjon mindenhol
 author: Zsuzsi
 tags:
@@ -17,7 +18,6 @@ date: 2024-03-19T12:30:00.000Z
 image: ../../images/uploads/mula_desktop.jpeg
 imageMobil: ../../images/uploads/mula_mobil.jpeg
 ---
-
 ### Az ászanagyakorlás során, amikor kapcsolatba kerülünk a testünkkel, a központunkkal, egyúttal belépünk a múla bandha „birodalmába”, amely a gyökércsakra támogatójaként a gerincoszlop alján található. [Sri K. Pattabhi Jois](https://bandha.works/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/) (Guruji) sokszor hangsúlyozta, hogy milyen fontos a múla bandha gyakorlása és folyamatos tartása. Azt mondta, hogy a múla bandha a végbélnyílás (medencefenék) körüli izmok összehúzása, amely kontrollt biztosít az elme felett, ezért azt folyamatosan a nap 24 órájában tartani kell.
 
 Az astanga jóga gyakorlói körében, a bandhák tekintetében többféle nézőpont is kialakult, ami egy többrétegű izgalmas új
@@ -79,7 +79,7 @@ megtapasztalhatjuk a várható érzeteink spektrumának mindkét határát, és 
 maximális szabadságot és teret érzékelhetünk a perspektívánkban és az energiaáramlásunkban. A középúttól kezdve tetszés
 szerint bármelyik irányba mozoghatunk, így a lehető legtöbb lehetőség áll rendelkezésünkre.
 
-![Trikonasana B](../../images/uploads/iain_triko.jpg)
+![Trikonasana B](../../images/uploads/trikonasana-b-2.jpeg)
 
 A Trikonászana B-ről készült fenti fénykép (amely nem fotózásra beállított kép, hanem egy szokásos gyakorlás során
 készült) szépen illusztrálja a múla és az uddijána bandha fizikai értelemben vett dinamikáját. Ez az egyik kedvenc
