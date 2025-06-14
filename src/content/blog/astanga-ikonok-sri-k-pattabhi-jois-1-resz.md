@@ -69,7 +69,7 @@ házasságba. Gurudzsi édesapja is jóváhagyta a frigyet, annak ellenére, hog
 illettek össze. – Összeillünk, vagy sem, én hozzá akarok menni! – jelentette ki Szavitramma, és ezzel nem szállt vitába
 senki.
 
-"![Amma Jois](/blogpostimages/ammag.jpg.webp)"
+![Amma Jois Guruji's wife](../../images/uploads/ammag.jpeg)
 
 Az ifjú pár még abban az évben összeházasodott, 1933 nyarán, Amma születésnapján. A lakodalom után Amma visszatért a
 családjához, Gurudzsi pedig az egyetemre. Nem is látták egymást az elkövetkező három-négy évben, míg végül Amma
@@ -96,10 +96,9 @@ mondta Krishnamacharyának, hogy a művet megtalálja a Kalkuttai Egyetem könyv
 és szerinte már nem is létezik. Szerinte, amikor Krishnamacharya eltöltött egy kis időt Kalkuttában, akkor alaposan
 tanulmányozta a könyvet, de az akkor már nagyon rossz állapotban volt és sok része hiányzott is. Gurudzsi
 Krishnamacharyától, a Jóga Koruntából származó módszereket tanulta meg. Sajnos lehetetlen ma már megbizonyosodni a könyv
-létezéséről, annak hitelességéről, de általánosan elfogadott, hogy ez a forrása a Pattabhi Jois által tanított astanga
-jógának.
+létezéséről, annak hitelességéről, de általánosan elfogadott, hogy ez a forrása a Pattabhi Jois által tanított astanga jógának.
 
-"![astanga yoga nilayam](/blogpostimages/an.jpg.webp)"
+![Astanga yoga nilayam](../../images/uploads/an.jpeg)
 
 Gurudzsi élete egészen az 1960-as évekig a szokott mederben folyt, oktatott az egyetemen, valamint tanított az 1948-ban
 az otthonában megalapított, Astanga Jóga Kutatóintézetben (a mai KPJAYI). Egész életét a jógának szentelte, buzgó
