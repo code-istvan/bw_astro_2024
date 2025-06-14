@@ -1,12 +1,12 @@
 ---
 published: true
 language: Hungarian
-title: 'Astanga ikonok: Sri K. Pattabhi Jois 1. rész'
+title: "Astanga ikonok: Sri K. Pattabhi Jois 1. rész"
 titleBackground: false
-description:
-  Pattabhi Jois, a világszerte elismert astanga jóga rendszer megalapítója és tanítója, fiatal korától Krishnamacharya
-  tanítványaként, majd a mysore-i Maharádzsa támogatásával vált az évtizedek során a jóga egyik legbefolyásosabb
-  mesterévé
+description: Pattabhi Jois, a világszerte elismert astanga jóga rendszer
+  megalapítója és tanítója, fiatal korától Krishnamacharya tanítványaként, majd
+  a mysore-i Maharádzsa támogatásával vált az évtizedek során a jóga egyik
+  legbefolyásosabb mesterévé
 author: István
 tags:
   - astangaikon
@@ -14,7 +14,6 @@ date: 2015-12-19T12:30:00.000Z
 image: ../../images/uploads/guruji_olod_old_shala_desktop.jpeg
 imageMobil: ../../images/uploads/guruji_old_old_shala_mobil.jpeg
 ---
-
 Sri K. Pattabhi Jois, diákjai körében Gurudzsi, az egyre népszerűbbé váló astanga jóga rendszer megalapítója és
 népszerűsítője 1915. július 26-án, Guru Purnima napján született (a Guru hónapjának teliholdas napja) a Karnátaka
 államban levő Kowshika nevű faluban, Mysore-tól 150 km-re. Édesapja, a közel hetven családot számláló falu asztrológusa
@@ -35,7 +34,7 @@ házuk verandáján olvasta a Rámajánát, a családtagjai csak nevettek rajta:
 
 – Ó! Nézzétek a nagy tudóst! Miért fecséreled az idődet könyvekre? Menj, és törődj inkább a tehenekkel!
 
-![Pattabhi Jois asana practice](/blogpostimages/p4.jpg.webp)
+![Pattabhi Jois asana practice](../../images/uploads/p4.jpeg)
 
 Gurudzsi tizennégy évesen egy szertartás keretein belül megkapta apjától a brahminok szent fonalát, jelezve, hogy a
 brahmin fiú a felnőttkorba lép és megkezdi spirituális életét. A nagy eseményt követően elhatározta, hogy annak
@@ -83,7 +82,7 @@ hogy ő tanulni jött Mysore-ba. A mahárádzsa fizetést, szállást és öszt�
 Gurudzsinak nagy lehetőség volt. Így 1937-ben megalapították az egyetemen a jóga tanszéket, amelynek a vezetője Gurudzsi
 lett egészen 1973-as nyugdíjba vonulásáig. A tanszéket meg is szüntették ezután. Amikor később megkérdezték tőle, hogy
 szerzett-e tanári diplomát, azt felelte, hogy igen, és elmesélte milyen nehéz volt a vizsgája: Krishnamacharya elé vitt
-egy beteg embert, és azt mondta: „Hozd rendbe!” 1956-ban _vidván_ (professzori) diplomát szerezett Védanta
+egy beteg embert, és azt mondta: „Hozd rendbe!” 1956-ban *vidván* (professzori) diplomát szerezett Védanta
 tudományokból, emellett 1976 és 1978 között az Indiai Orvosi Egyetemen, a jógatudományok tiszteletbeli professzora is
 volt. Az egyetemen töltött évei során lehetősége volt elmélyedni a jógairodalomban, tanulmányozta Patandzsali Jóga
 Darsanáját, a Hatha Jóga Pradipikát, a Jóga Jádzsnyavalkját és az Upanisádokat.
