@@ -1,11 +1,10 @@
 ---
 published: true
 language: Hungarian
-title: 'Astanga ikonok: Sri K. Pattabhi Jois 3. rész'
+title: "Astanga ikonok: Sri K. Pattabhi Jois 3. rész"
 titleBackground: false
-description:
-  Gurudzsi örökségét és az astanga jóga lényegét mutatjuk be, amely a gyakorláson keresztül vezet a belső tisztaság és
-  spirituális fejlődés felé
+description: Gurudzsi örökségét és az astanga jóga lényegét mutatjuk be, amely a
+  gyakorláson keresztül vezet a belső tisztaság és spirituális fejlődés felé
 author: István
 tags:
   - astangaikon
@@ -13,7 +12,6 @@ date: 2016-09-16T12:30:00.000Z
 image: ../../images/uploads/guruji_mysore_desktop.jpeg
 imageMobil: ../../images/uploads/guruji_mysore_mobil.jpeg
 ---
-
 ### Gurudzsi öröksége
 
 Gurudzsiről szóló cikksorozatunk utolsó befejező bejegyzése következik, amely szeretett jógamesterünk hagyományát,
@@ -66,7 +64,7 @@ erősíti a szerveket. Ebben a sorozatban sok hátrahajlító pózt, csavarást,
 egyszerűbb kartámaszokat, majd egy sor fejenállás variáció hozza a következő fordulatot a sorozat végén, amely új
 energiaáramlást indít be a test középső tengelyén, és fokozza az agy vérellátását.
 
-Az utolsó négy sorozat a haladó A, B, C és D – a _Stíra Baga_ (Az erő központosítása). Ezeknek a pózoknak a célja a
+Az utolsó négy sorozat a haladó A, B, C és D – a *Stíra Baga* (Az erő központosítása). Ezeknek a pózoknak a célja a
 test/elme/idegrendszer központosítása és belülről eredő megszilárdítása. Ezen haladó pózok megfelelő alapok nélküli
 kivitelezése sokkal nagyobb kárt okozhat a test/elme/idegrendszer hármasában a pózok puszta intenzitásából eredően, mint
 amekkora hasznot nyerünk általa. Ezért, csak évek óta tartó gyakorlást követően, tanárunk által jónak látott időben
@@ -86,7 +84,7 @@ erősítésében, az étkezés, egészség, táplálék stb. tekintetében.
 > Találd meg azt, ami számodra a legjobban működik. A tiszta test természetesen tudja, hogy mi a jó neki! Hallgass a
 > belső hangra, és fokozatosan meg fogod tanulni, hogy mi az ami jó és mi az ami kevésbé hasznos számodra.
 
-"![ashtanga samasthiti](/blogpostimages/gj2.jpg.webp)"
+![Ashtanga Jóga Samasthithi Guruji](../../images/uploads/gj2.jpeg)
 
 Ezeknek a gyakorlatsoroknak a legnagyobb előnye az, hogy az ember a jóllétét és egészségét tudja javítani, mindamellett,
 hogy kialakul egy újfajta megközelítése az életének, a belső mélységek felé kialakuló nagyobb fogékonyság által.
@@ -125,10 +123,11 @@ az volt, hogy gyakoroljanak, és tanulják meg azt a rendszert amit oktatott. Az
 tudást, és a tanultak megértését mutatja, megkaphatta Gurudzsi áldását az oktatásra. Azok akik megfelelő képzettség
 nélkül oktatják a rendszerét Gurudzsi azt mondja:
 
-> Legyenek ilyen tanárok is, és reménykedjünk, hogy a diákjaik egy napon megtalálják azt, akit valójában
-> megérdemelnének.
+> Legyenek ilyen tanárok is, és reménykedjünk, hogy a diákjaik egy napon megtalálják azt, akit valójában megérdemelnének.
 
-"![Main shala pooja](/blogpostimages/guruji5.jpg.webp)"
+![Guruji pooja](../../images/uploads/guruji5.jpeg)
+
+
 
 Ortodox brahminként és a Sri Sankaracsarja által elterjesztett Advatia hagyományok követőjeként, Gurudzsi számára a
 rendszer elsajátításához elengedhetetlen volt a hitelesség és az elköteleződés. A Védák tanításában ennek
@@ -174,7 +173,7 @@ Befejezésként következzen egy részlet Sandra Anderson Gurudzsival készült 
 **SA:** Milyen rendszerben tanítja az ászanákat és a pránajámát? **PJ:** Én kizárólag astanga jógát tanítok, az eredeti
 rendszert, amely Patandzsali Jóga Szútráiból ered. (…)
 
-> _Taszmin száti szvasá prásvaszajor gáti viccsédá pránajáma._ (II.49.)
+> *Taszmin száti szvasá prásvaszajor gáti viccsédá pránajáma.* (II.49.)
 
 Először az ászanát kell tökéletesíteni, aztán kezdhető el a pránajáma gyakorlása: a belégzés és a kilégzés irányítása, a
 légzés szabályozása, a légzés visszatartása. Az ászana tökéletesítését követően jöhet a pránajáma tökéletesítése. Ez a
@@ -182,7 +181,7 @@ jóga módszere.
 
 **SA:** Milyen a tökéletes ászana, hogyan lehet kivitelezni? **PJ:**
 
-> _Stíra szukham ászanam (II. 46)_
+> *Stíra szukham ászanam (II. 46)*
 
 A tökéletes ászana azt jelenti, hogy szilárdan és boldogan három órán keresztül benne tudsz lenni, minden gond nélkül.
 Miután a lábaidat kiszeded az ászanából a tested továbbra is boldog. Abban a rendszerben amit én tanítok, nagyon sok
@@ -229,8 +228,8 @@ akármilyen édesen hangzik is. Nagyon nehéz. Csak az édes igazságot mondd, m
 halott ember. Szóval a gyenge elme gyenge testet is jelent. Ezért kell egy jó alapot építeni az ászana és pránajáma
 gyakorlással, hogy a test, az elme és az idegrendszer jól működjön. Aztán tudsz az ahimszával, szatjával és a többi
 jámával, nijámával foglalkozni. **SA:** Mi a helyzet az astanga jóga többi ágával? Tanít meditációt? **PJ:** A meditáció
-a _djána_, a hetedik lépcsőfoka az astangának. Amikor az egyik lépcsőt tökéletesítettük, akkor jöhet a következő. A
-_djána_ kivitelezéséhez egyenes háttal kell ülnöd, becsukott szemekkel, az orrcsúcsra fókuszálva. Ha ez nincs meg, akkor
+a *djána*, a hetedik lépcsőfoka az astangának. Amikor az egyik lépcsőt tökéletesítettük, akkor jöhet a következő. A
+*djána* kivitelezéséhez egyenes háttal kell ülnöd, becsukott szemekkel, az orrcsúcsra fókuszálva. Ha ez nincs meg, akkor
 nem vagy elmélyülve. Ha a szem nyitott, az elme is az. A jóga 95% gyakorlat, és csak 5% elmélet. Gyakorlat nélkül nem
 működik, nem lesz semmi haszna. Szóval muszáj gyakorolni, követni kell a megfelelő rendszert, lépésről-lépésre. És akkor
 fog működni.
@@ -241,7 +240,7 @@ Az előadások hangzatosak; adsz egy jó előadást, és mindenki azt gondolja, 
 > A hosszú időn keresztül alázatosan, megszakítás nélkül végzett gyakorlás hozza a tökéletességet. Egy év, két év, tíz
 > év… az egész életed során gyakorolsz.
 
-![Thank you Guruji](/blogpostimages/gj-1.jpg.webp)
+![Thank you Guruji](../../images/uploads/gj-1.jpeg)
 
 **Forrás:** Alexander Medin: Sri K. Pattabhi Jois and the Ashtanga Research Intitute **Sandra Anderson:** „An Interview
 with K Pattabhi Jois: Practice Makes Perfect” [^1]: Narapuma Magazine, 2004
