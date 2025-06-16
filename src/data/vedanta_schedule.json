@@ -85,5 +85,90 @@
       ]
     }
   ],
-  "EN": []
+  "EN": [
+    {
+      "id": 1,
+      "date": "JUNE 23 – MONDAY",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE PRACTICE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "JUNE 24 – TUESDAY",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE PRACTICE"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "JUNE 25 – WEDNESDAY – MOON DAY",
+      "program": [
+        {
+          "time": "6:30 - 7:00",
+          "activity": "MANTRA CHANTING"
+        },
+        {
+          "time": "7:00 - 7:30",
+          "activity": "MEDITATION AND PRANAYAMA"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "date": "JUNE 26 – THURSDAY",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE PRACTICE"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "date": "JUNE 27 – FRIDAY",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE PRACTICE"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "date": "JUNE 28 – SATURDAY",
+      "program": [
+        {
+          "time": "5:30 - 9:00",
+          "activity": "MYSORE PRACTICE"
+        },
+        {
+          "time": "9:00 - 9:30",
+          "activity": "CHAI TIME"
+        },
+        {
+          "time": "9:30 - 10:00",
+          "activity": "MANTRA CHANTING"
+        },
+        {
+          "time": "10:00 - 11:00",
+          "activity": "CONFERENCE"
+        },
+        {
+          "time": "11:00 - 11:30",
+          "activity": "PHOTOSHOOT"
+        },
+        {
+          "time": "17:00 - 18:30",
+          "activity": "MYSORE THALI – CLOSING EVENT"
+        }
+      ]
+    }
+  ]
 }
