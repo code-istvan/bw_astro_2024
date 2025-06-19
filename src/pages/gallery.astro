@@ -11,17 +11,23 @@ const metadata = {
     description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
 };
 
-// Galéria források címekkel
 const galleries = [
     {
-        title: 'Mysore Images',
+        id: 1,
+        year: 2024,
+        titleHu: 'Mysore Képek',
+        titleEn: 'Mysore Images',
         sourceUrl: 'https://mula.bandha.works/images/test/',
+        highlighted: false,
     },
     {
-        title: 'David Robson Mysore Room',
-        sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON_MYSORE-ROOM/', // Itt adj meg egy másik mappát
+        id: 2,
+        year: 2016,
+        titleHu: 'David Robson Mysore Terem',
+        titleEn: 'David Robson Mysore Room',
+        sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON_MYSORE-ROOM/',
+        highlighted: true,
     },
-    // További galériákat ide adhatsz
 ];
 
 // Képek letöltése a galériákhoz
@@ -42,7 +48,7 @@ for (const gallery of galleries) {
         {
             galleriesWithImages.map((gallery, index) => (
                 <div class="gallery-section">
-                    <h2>{gallery.title}</h2>
+                    <h2>{gallery.titleHu}</h2>
                     {gallery.images.length > 0 ? (
                         <LightGalleryMasonry images={gallery.images} title="" client:load />
                     ) : (
