@@ -1,0 +1,57 @@
+---
+import { slugify } from '../../components/ts/utils';
+import { galleries, GalleryWithImages } from './config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/gallery_mobil.jpeg';
+import desktopImage from '../../images/gallery_desktop.jpeg';
+import LightGalleryMasonry, { downloadServerImages } from '../../components/LightGallery/LightGalleryComplete.jsx';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    return galleries.map((gallery) => {
+        return {
+            params: {
+                slug: slugify(gallery.titleEn),
+            },
+            props: {
+                gallery,
+            },
+        };
+    });
+}
+const { gallery } = Astro.props;
+
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
+const galleriesWithImages: GalleryWithImages[] = [];
+const images = await downloadServerImages(gallery.sourceUrl);
+galleriesWithImages.push({
+    ...gallery,
+    images,
+});
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        <h1>{gallery.titleEn}</h1>
+        {
+            galleriesWithImages.map((gallery, index) => (
+                <div class="gallery-section">
+                    <h2>{gallery.titleHu}</h2>
+                    {gallery.images.length > 0 ? (
+                        <LightGalleryMasonry images={gallery.images} title="" client:load />
+                    ) : (
+                        <p>Nincsenek képek a galériában</p>
+                    )}
+                    {index < galleriesWithImages.length - 1 && <div class="gallery-separator" />}
+                </div>
+            ))
+        }
+    </div>
+</BaseLayout>

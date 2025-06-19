@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/gallery_mobil.jpeg';
+import desktopImage from '../../images/gallery_desktop.jpeg';
+import { galleries } from './config';
+import { slugify } from '../../components/ts/utils';
+import '../../components/LightGallery/_lightGalleryComplete.scss';
+
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        {
+            galleries.map((gallery) => {
+                return <a href={`/gallery/${slugify(gallery.titleEn)}`}>{gallery.titleEn}</a>;
+            })
+        }
+    </div>
+</BaseLayout>
