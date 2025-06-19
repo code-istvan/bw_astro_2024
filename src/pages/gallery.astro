@@ -1,16 +1,24 @@
 ---
-// Import a React komponensünk és a segédfüggvények
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/gallery_mobil.jpeg';
+import desktopImage from '../images/gallery_desktop.jpeg';
 import LightGalleryMasonry, { downloadServerImages } from '../components/LightGallery/LightGalleryComplete.jsx';
 import '../components/LightGallery/_lightGalleryComplete.scss';
+
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
 
 // Galéria források címekkel
 const galleries = [
     {
-        title: 'Természeti Képek',
+        title: 'Mysore Images',
         sourceUrl: 'https://mula.bandha.works/images/test/',
     },
     {
-        title: 'Városi Fotók',
+        title: 'David Robson Mysore Room',
         sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON_MYSORE-ROOM/', // Itt adj meg egy másik mappát
     },
     // További galériákat ide adhatsz
@@ -27,7 +35,58 @@ for (const gallery of galleries) {
 }
 ---
 
-<html lang="hu">
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        {
+            galleriesWithImages.map((gallery, index) => (
+                <div class="gallery-section">
+                    <h2>{gallery.title}</h2>
+                    {gallery.images.length > 0 ? (
+                        <LightGalleryMasonry images={gallery.images} title="" client:load />
+                    ) : (
+                        <p>Nincsenek képek a galériában</p>
+                    )}
+                    {index < galleriesWithImages.length - 1 && <div class="gallery-separator" />}
+                </div>
+            ))
+        }
+    </div>
+</BaseLayout>
+
+<style>
+    /* body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+    } */
+    /* .page-title {
+        margin-bottom: 30px;
+        color: #333;
+        font-weight: 300;
+        letter-spacing: 1px;
+    } */
+    /* .gallery-section {
+        margin-bottom: 60px;
+    }
+    .gallery-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 300;
+        color: #333;
+        letter-spacing: 0.5px;
+    } */
+    .gallery-separator {
+        height: 1px;
+        background-color: #eeeeee;
+        margin: 40px 0;
+    }
+</style>
+
+<!-- <html lang="hu">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -80,4 +139,4 @@ for (const gallery of galleries) {
             ))
         }
     </body>
-</html>
+</html> -->
