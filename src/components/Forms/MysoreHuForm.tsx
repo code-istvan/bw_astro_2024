@@ -144,7 +144,7 @@
 //         onChange={handleCheckboxChange}
 //       />
 //       <div className="row mt-20px mb-40px">
-//         <button type="submit" disabled={loading} className="btn btn--full-width-mobile btn--secondary--solid">
+//         <button type="submit" disabled={loading} className="btn btn--width-full-mobile btn--secondary--solid">
 //           {loading ? 'Küldés...' : 'Küldés'}
 //         </button>
 //       </div>
