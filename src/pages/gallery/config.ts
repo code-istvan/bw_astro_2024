@@ -27,4 +27,13 @@ export const galleries: GalleryWithImages[] = [
     highlighted: true,
     images: [],
   },
+  {
+    id: 1,
+    year: 2017,
+    titleHu: 'Harmony Mysore Hét',
+    titleEn: 'Harmony Mysore Week',
+    sourceUrl: 'https://mula.bandha.works/images/2017-HARMONY-MYSORE-WEEK/',
+    highlighted: false,
+    images: [],
+  },
 ];
