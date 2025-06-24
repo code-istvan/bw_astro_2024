@@ -16,8 +16,8 @@ const metadata = {
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
-    <div class="container mt-40px mb-40px">
-        <div class="gallery-card-wrapper">
+    <div class="container">
+        <div class="gallery-card-wrapper mt-40px mb-40px">
             {
                 galleries.map((gallery) => {
                     const slug = slugify(gallery.titleEn);
