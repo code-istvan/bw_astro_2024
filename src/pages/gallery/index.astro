@@ -17,13 +17,13 @@ const metadata = {
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
     <div class="container mt-40px mb-40px">
-        <div class="display-flex flex-wrap gap-1">
+        <div class="gallery-card-wrapper">
             {
                 galleries.map((gallery) => {
                     const slug = slugify(gallery.titleEn);
                     return (
-                        <a href={`/gallery/${slug}`} class="name-card-link">
-                            <div class="name-card">
+                        <a href={`/gallery/${slug}`} class="gallery-card-link">
+                            <div class="gallery-card">
                                 <h4>{gallery.titleEn}</h4>
                                 <span class="clr-brand-orange"> {gallery.year}</span>
                             </div>
@@ -38,17 +38,30 @@ const metadata = {
 <style lang="scss">
     @use '/src/sass/base/_colors' as colors;
 
-    .name-card {
+    .gallery-card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .gallery-card-link {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .gallery-card {
         display: flex;
         flex-direction: row;
         align-items: baseline;
-        width: fit-content;
         gap: 4px;
         background-color: colors.$color-shades-darkGray;
         padding: 12px 12px;
+        white-space: nowrap;
+
         span {
             font-weight: 800;
         }
+
         h4 {
             margin: 0;
         }
