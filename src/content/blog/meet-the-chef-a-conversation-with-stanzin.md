@@ -8,7 +8,7 @@ description: In this heartfelt interview, Stanzin shares how his passion for
   a vegan restaurant kitchen. He talks about the flavors of Ladakh, the
   creativity involved in plant-based cooking, and how food connects to care,
   tradition, and the practice of yoga.
-author: István
+author: Panni
 tags:
   - interview
 date: 2025-06-24T14:42:00.000Z
