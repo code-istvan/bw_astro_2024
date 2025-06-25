@@ -15,10 +15,7 @@ date: 2025-06-25T10:00:00.000Z
 image: ../../images/uploads/stanzin1.jpeg
 imageMobil: ../../images/uploads/stanzin2.jpeg
 ---
-
-# Ismerd meg a séfet: Beszélgetés Stanzinnel
-
-Ételekről, hagyományról és kreativitásról a konyhában
+### Ételekről, hagyományról és kreativitásról a konyhában
 
 ### Tíz éve vagyok tanúja annak, milyen mély szeretettel főzöl és mennyire szereted az ételeket. Hol kezdődött ez nálad?
 
