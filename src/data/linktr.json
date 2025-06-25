@@ -7,8 +7,8 @@
     "buttons": [
       {
         "id": 1,
-        "label": "VÉDANTA INTERJÚ",
-        "href": "/blog/a-guru-bennunk-el-beszelgetes-vedanta-angaval-az-astanga-utjarol/"
+        "label": "STANZIN INTERJÚ",
+        "href": "/blog/ismerd-meg-a-sefet-beszelgetes-stanzinnel/"
       },
       { "id": 2, "label": "ASTANGA MYSORE PROGRAM", "href": "/astanga-mysore-program/" },
       { "id": 3, "label": "TANFOLYAMOK", "href": "/tanfolyam/" },
@@ -29,8 +29,8 @@
     "buttons": [
       {
         "id": 1,
-        "label": "VEDANTA INTERVIEW",
-        "href": "/en/blog/the-guru-lives-within-vedanta-anga-on-the-path-of-ashtanga/"
+        "label": "STANZIN INTERVIEW",
+        "href": "/en/blog/meet-the-chef-a-conversation-with-stanzin/"
       },
       { "id": 2, "label": "ASHTANGA MYSORE PROGRAM", "href": "/astanga-mysore-program/" },
       { "id": 3, "label": "ABOUT BANDHAWORKS", "href": "/en/rolunk/" },
