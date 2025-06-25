@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import GalleryCard from '../../components/Cards/GalleryCard.astro';
 import mobileImage from '../../images/gallery_mobil.jpeg';
 import desktopImage from '../../images/gallery_desktop.jpeg';
 import { galleries } from './config';
@@ -21,14 +22,7 @@ const metadata = {
             {
                 galleries.map((gallery) => {
                     const slug = slugify(gallery.titleEn);
-                    return (
-                        <a href={`/gallery/${slug}`} class="gallery-card-link">
-                            <div class="gallery-card">
-                                <h4>{gallery.titleEn}</h4>
-                                <span class="clr-brand-orange"> {gallery.year}</span>
-                            </div>
-                        </a>
-                    );
+                    return <GalleryCard title={gallery.titleEn} year={gallery.year} slug={slug} />;
                 })
             }
         </div>

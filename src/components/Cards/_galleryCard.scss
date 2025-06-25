@@ -1,0 +1,32 @@
+@use '/src/sass/base/_colors' as colors;
+
+.gallery-card-link {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+  background-color: colors.$color-shades-darkGray;
+  padding: 12px 12px;
+  white-space: nowrap;
+
+  span {
+    font-weight: 800;
+  }
+
+  h4 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-card {
+    max-width: 280px;
+    white-space: normal; // Így engedi a sortörést!
+    flex-wrap: wrap; // Plusz, ha a flexes tartalom törni akar!
+  }
+}

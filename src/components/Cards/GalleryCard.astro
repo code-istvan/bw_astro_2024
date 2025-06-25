@@ -1,0 +1,17 @@
+---
+export interface Props {
+    title: string;
+    year: string | number;
+    slug: string;
+}
+import './_galleryCard.scss';
+
+const { title, year, slug } = Astro.props;
+---
+
+<a href={`/gallery/${slug}`} class="gallery-card-link">
+    <div class="gallery-card">
+        <h4>{title}</h4>
+        <span class="clr-brand-orange">{year}</span>
+    </div>
+</a>
