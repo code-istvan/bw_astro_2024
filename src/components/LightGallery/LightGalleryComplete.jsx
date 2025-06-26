@@ -7,6 +7,7 @@ import lightGallery from 'lightgallery';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
+import './_lightGalleryComplete.scss';
 
 // Segédfüggvény a képek letöltéséhez egy mappából
 export const downloadServerImages = async (url) => {

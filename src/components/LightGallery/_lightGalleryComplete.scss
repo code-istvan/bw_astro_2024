@@ -128,3 +128,15 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
+
+//custom css
+
+.lg-toolbar.lg-group {
+  top: 3.5rem;
+}
+
+@media (min-width: 576px) {
+  .lg-object.lg-image {
+    top: 3.5rem;
+  }
+}

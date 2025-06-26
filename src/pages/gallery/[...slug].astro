@@ -39,7 +39,6 @@ galleriesWithImages.push({
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
     <div class="container">
-        <h1>{gallery.titleEn}</h1>
         {
             galleriesWithImages.map((gallery, index) => (
                 <div class="gallery-section">
@@ -53,5 +52,6 @@ galleriesWithImages.push({
                 </div>
             ))
         }
+        <a href="/gallery">Back</a>
     </div>
 </BaseLayout>
