@@ -14,6 +14,7 @@ collections:
     label: Blog Posts
     label_singular: Blog
     folder: src/content/blog/
+    identifier_field: title
     create: true
     slug: '{{slug}}'
     extension: .md
