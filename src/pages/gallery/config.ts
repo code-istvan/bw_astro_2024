@@ -21,6 +21,16 @@ export const galleries: GalleryWithImages[] = [
     tags: ['oldshala', 'mysore', 'davidrobson'],
   },
   {
+    id: 2,
+    year: 2016,
+    titleHu: 'David Robson Workshop',
+    titleEn: 'David Robson Workshop',
+    sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON-WORKSHOP/',
+    highlighted: true,
+    images: [],
+    tags: ['oldshala', 'mysore', 'davidrobson'],
+  },
+  {
     id: 3,
     year: 2017,
     titleHu: 'Harmony Mysore Hét',
