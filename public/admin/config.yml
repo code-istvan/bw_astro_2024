@@ -18,6 +18,11 @@ collections:
     slug: '{{slug}}'
     extension: .md
     format: frontmatter
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    nested:
+      depth: 10
+      subfolders: true
+      summary: '{{title}}'
     fields:
       - label: Published
         name: published
