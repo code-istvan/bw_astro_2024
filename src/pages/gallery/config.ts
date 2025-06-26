@@ -6,18 +6,10 @@ export type GalleryWithImages = {
   sourceUrl: string;
   highlighted: boolean;
   images: string[];
+  tags: string[];
 };
 
 export const galleries: GalleryWithImages[] = [
-  {
-    id: 1,
-    year: 2024,
-    titleHu: 'Mysore Képek',
-    titleEn: 'Mysore Images',
-    sourceUrl: 'https://mula.bandha.works/images/test/',
-    highlighted: false,
-    images: [],
-  },
   {
     id: 2,
     year: 2016,
@@ -26,6 +18,7 @@ export const galleries: GalleryWithImages[] = [
     sourceUrl: 'https://mula.bandha.works/images/2016-DAVID-ROBSON_MYSORE-ROOM/',
     highlighted: true,
     images: [],
+    tags: ['oldshala', 'mysore', 'davidrobson'],
   },
   {
     id: 3,
@@ -35,6 +28,7 @@ export const galleries: GalleryWithImages[] = [
     sourceUrl: 'https://mula.bandha.works/images/2017-HARMONY-MYSORE-WEEK/',
     highlighted: false,
     images: [],
+    tags: ['newshala', 'mysore', 'harmony'],
   },
   {
     id: 4,
@@ -44,5 +38,26 @@ export const galleries: GalleryWithImages[] = [
     sourceUrl: 'https://mula.bandha.works/images/2018-HARMONY-MYSORE-WEEK/',
     highlighted: false,
     images: [],
+    tags: ['newshala', 'mysore', 'harmony'],
+  },
+  {
+    id: 5,
+    year: 2018,
+    titleHu: 'Új Shala Tűz Ceremónia',
+    titleEn: 'New Shala Fire Ceremony',
+    sourceUrl: 'https://mula.bandha.works/images/2018-FIRE-CEREMONY/',
+    highlighted: false,
+    images: [],
+    tags: ['newshala', 'fireceremony'],
+  },
+  {
+    id: 6,
+    year: 2018,
+    titleHu: 'Santina Mysore Hét',
+    titleEn: 'Santina Mysore Week',
+    sourceUrl: 'https://mula.bandha.works/images/2018-SANTINA-MYSORE-WEEK/',
+    highlighted: false,
+    images: [],
+    tags: ['newshala', 'mysore', 'santina'],
   },
 ];

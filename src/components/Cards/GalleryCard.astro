@@ -3,15 +3,29 @@ export interface Props {
     title: string;
     year: string | number;
     slug: string;
+    tags: string[];
 }
 import './_galleryCard.scss';
 
-const { title, year, slug } = Astro.props;
+const { title, year, slug, tags } = Astro.props;
 ---
 
 <a href={`/gallery/${slug}`} class="gallery-card-link">
     <div class="gallery-card">
-        <h4>{title}</h4>
-        <span class="clr-brand-orange">{year}</span>
+        <div class="gallery-title-row">
+            <h4>{title}</h4>
+            <span class="clr-brand-orange">{year}</span>
+        </div>
+        {
+            tags && tags.length > 0 && (
+                <div class="gallery-tags mt-1">
+                    {tags.map((tag) => (
+                        <span class="gallery-tag">
+                            <p>#{tag}</p>
+                        </span>
+                    ))}
+                </div>
+            )
+        }
     </div>
 </a>

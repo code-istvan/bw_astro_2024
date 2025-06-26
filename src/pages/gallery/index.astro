@@ -22,7 +22,7 @@ const metadata = {
             {
                 galleries.map((gallery) => {
                     const slug = slugify(gallery.titleEn);
-                    return <GalleryCard title={gallery.titleEn} year={gallery.year} slug={slug} />;
+                    return <GalleryCard title={gallery.titleEn} year={gallery.year} slug={slug} tags={gallery.tags} />;
                 })
             }
         </div>
