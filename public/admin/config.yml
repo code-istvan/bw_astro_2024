@@ -13,15 +13,11 @@ collections:
   - name: blog
     label: Blog Posts
     label_singular: Blog
-    nested:
-      depth: 100
-      summary: '{{title}}'
     folder: src/content/blog/
     create: true
     slug: '{{slug}}'
     extension: .md
     format: frontmatter
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
     fields:
       - label: Published
         name: published
@@ -80,9 +76,6 @@ collections:
   - name: authors
     label: Authors
     label_singular: Authors
-    nested:
-      depth: 100
-      summary: '{{name}}'
     folder: src/content/authors/
     media_folder: ../../images/uploads/authors
     public_folder: src/images/uploads/authors
@@ -90,7 +83,6 @@ collections:
     format: json
     create: true
     slug: '{{name}}'
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
     fields:
       - label: Name
         name: name
