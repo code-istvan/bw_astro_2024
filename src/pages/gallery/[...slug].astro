@@ -42,7 +42,7 @@ galleriesWithImages.push({
         {
             galleriesWithImages.map((gallery, index) => (
                 <div class="gallery-section">
-                    <h2>{gallery.titleHu}</h2>
+                    <h2 class="mt-40px mb-40px">{gallery.titleHu}</h2>
                     {gallery.images.length > 0 ? (
                         <LightGalleryMasonry images={gallery.images} title="" client:load />
                     ) : (
