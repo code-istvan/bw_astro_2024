@@ -12,6 +12,8 @@ const metadata = {
     title: 'GALÉRIA',
     description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
 };
+
+const sortedGalleries = [...galleries].sort((a, b) => b.year - a.year); // újabb év elöl
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -20,7 +22,7 @@ const metadata = {
     <div class="container">
         <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
             {
-                galleries.map((gallery) => {
+                sortedGalleries.map((gallery) => {
                     const slug = slugify(gallery.titleEn);
                     return <GalleryCard title={gallery.titleEn} year={gallery.year} slug={slug} tags={gallery.tags} />;
                 })
