@@ -1,8 +1,8 @@
 {
   "eventimage": "src/images/uploads/events/vedanta_ji4.jpeg",
   "teacher": "vedantaJi",
-  "featured": true,
-  "published": true,
+  "featured": false,
+  "published": false,
   "date": "2025-06-23T11:48:00.000Z",
   "eventApplicationLink": "https://www.facebook.com/events/3065222150328734/",
   "eventType": "Workshop",
