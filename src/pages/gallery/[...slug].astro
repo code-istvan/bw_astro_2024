@@ -6,6 +6,7 @@ import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/gallery_mobil.jpeg';
 import desktopImage from '../../images/gallery_desktop.jpeg';
 import LightGalleryMasonry, { downloadServerImages } from '../../components/LightGallery/LightGalleryComplete.jsx';
+import IconButton from '../../components/Button/IconButton.astro';
 
 export const prerender = true;
 
@@ -52,6 +53,15 @@ galleriesWithImages.push({
                 </div>
             ))
         }
-        <a href="/gallery">Back</a>
+        <IconButton
+            href="/gallery"
+            variant="third-naked-orange"
+            iconName="ArrowLeft"
+            iconClass="orange"
+            class="mt-20px link-orange no-padding mb-40px back-button"
+            ariaLabel="Vissza az előző oldalra gomb"
+        >
+            Vissza az előző oldalra
+        </IconButton>
     </div>
 </BaseLayout>
