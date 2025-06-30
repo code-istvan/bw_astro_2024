@@ -13,7 +13,7 @@ const metadata = {
     description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
 };
 
-const sortedGalleries = [...galleries].sort((a, b) => b.year - a.year); // újabb év elöl
+const sortedGalleries = [...galleries].sort((a, b) => b.year - a.year);
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>

@@ -1,0 +1,75 @@
+---
+import Matrix from '../components/Matrix/Matrix.astro';
+import LoginLayout from '../layouts/LoginLayout.astro';
+
+const metadata = {
+    title: 'LOGIN',
+    description: 'Ezen az oldalon tudsz bejelentkezni a Bandha Works jógastúdió oldalára.',
+};
+---
+
+<LoginLayout title={metadata.title} description={metadata.description}>
+    <Matrix />
+    <dialog class="login-dialog" open>
+        <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Jelszó" />
+    </dialog>
+</LoginLayout>
+
+<style lang="scss">
+    @use '/src/sass/base/_colors' as colors;
+
+    .login-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(colors.$color-brand-orange, 0.85);
+        border-radius: 18px;
+        padding: 2.2rem 2.5rem 2rem 2.5rem;
+        min-width: 320px;
+        max-width: 90vw;
+        box-shadow:
+            0 0 32px 4px rgba(255, 140, 0, 0.45),
+            0 0 8px rgba(255, 140, 0, 0.95),
+            0 0 4px #ff8c00;
+        border: none;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+    }
+
+    .login-dialog input[type='text'],
+    .login-dialog input[type='password'] {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.65rem 1rem;
+        border-radius: 7px;
+        border: 1px solid #ffb84d;
+        background: rgba(255, 255, 255, 0.09);
+        color: #222;
+        font-size: 1.1rem;
+        font-family: inherit;
+        box-shadow: 0 0 8px #ffb84d70 inset;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+    .login-dialog input[type='text']:focus,
+    .login-dialog input[type='password']:focus {
+        border-color: #ff8c00;
+        background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* .login-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: orange;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    } */
+</style>
