@@ -1,8 +1,8 @@
 {
   "eventimage": "src/images/uploads/events/hajoga.jpeg",
   "teacher": "istvanJi",
-  "featured": true,
-  "published": true,
+  "featured": false,
+  "published": false,
   "date": "2025-06-07T15:19:00.000Z",
   "eventApplicationLink": "https://www.facebook.com/events/795832139328099",
   "eventType": "Workshop",
