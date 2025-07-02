@@ -14,5 +14,29 @@
       "label_en": "ASHTANGA MYSORE PROGRAM",
       "href_en": "/en/astanga-mysore-program/"
     }
+  ],
+  "buttons_hu": [
+    {
+      "published": true,
+      "label": "Gomb1 hu",
+      "href": "/gomb1hu/"
+    },
+    {
+      "published": true,
+      "label": "Gomb2 hu",
+      "href": "/gomb2 hu"
+    }
+  ],
+  "buttons_en": [
+    {
+      "published": true,
+      "label": "Button1 EN",
+      "href": "/button2en/"
+    },
+    {
+      "published": true,
+      "label": "Button2 EN",
+      "href": "/button2en/"
+    }
   ]
 }
