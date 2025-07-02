@@ -1,9 +1,5 @@
 {
   "hu": {
-    "title": "LINKTR",
-    "description": "BandhaWorks jógaiskola linktr oldala",
-    "bio": "Tradicionális astanga jógaiskola a Paramaguru áldásával. Reggeli Mysore-program, neves külföldi vendégtanárok, workshopok és elvonulások. Spirituális alapelvekre épülő közösség, ahol a gyakorlás közösséget teremt.",
-    "iconLink": "/",
     "buttons": [
       {
         "id": 1,
@@ -22,10 +18,6 @@
     ]
   },
   "en": {
-    "title": "LINKTR",
-    "description": "The Linktree page of BandhaWorks Yoga School",
-    "bio": "Traditional Ashtanga yoga shala blessed by the Paramaguru. Morning Mysore program, renowned international guest teachers, workshops and retreats. A community rooted in spiritual principles, where daily practice builds real connection.",
-    "iconLink": "/en/",
     "buttons": [
       {
         "id": 1,

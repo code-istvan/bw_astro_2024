@@ -5,10 +5,17 @@ import LanguagePicker from '../components/LanguagePickers/LanguagePicker.astro';
 import linktrData from '../data/linktr.json';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
 
+const headerData = {
+    title: 'LINKTR',
+    description: 'BandhaWorks jógaiskola linktr oldala',
+    bio: 'Tradicionális astanga jógaiskola a Paramaguru áldásával. Reggeli Mysore-program, neves külföldi vendégtanárok, workshopok és elvonulások. Spirituális alapelvekre épülő közösség, ahol a gyakorlás közösséget teremt.',
+    iconLink: '/',
+};
+
 const content = linktrData.hu;
 ---
 
-<LinktrLayout title={content.title} description={content.description} language="Hungarian">
+<LinktrLayout title={headerData.title} description={headerData.description} language="Hungarian">
     <div
         class="linktr__container container--linktr-desktop display-flex display-flex--direction-column align-items-center"
     >
@@ -17,13 +24,13 @@ const content = linktrData.hu;
         </div>
         <div class="linktr__header container row display-flex display-flex--direction-column align-items-center">
             <div class="linktr__logo">
-                <a href={content.iconLink} class="linktr__home-icon">
+                <a href={headerData.iconLink} class="linktr__home-icon">
                     <Icons name="BwSymbol" color="white" />
                 </a>
             </div>
             <p class="linktr__name body body--bold mt-20px">@bandhaworks</p>
             <p class="linktr__bio text-align-center mb-20px">
-                {content.bio}
+                {headerData.bio}
             </p>
         </div>
         <div class="linktr__buttons">

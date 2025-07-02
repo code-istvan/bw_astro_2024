@@ -5,10 +5,17 @@ import LanguagePicker from '../../components/LanguagePickers/LanguagePicker.astr
 import linktrData from '../../data/linktr.json';
 import SocialIcons from '../../components/Icons/SocialIcons.astro';
 
+const headerData = {
+    title: 'LINKTR',
+    description: 'The Linktree page of BandhaWorks Yoga School',
+    bio: 'Traditional Ashtanga yoga shala blessed by the Paramaguru. Morning Mysore program, renowned international guest teachers, workshops and retreats. A community rooted in spiritual principles, where daily practice builds real connection.',
+    iconLink: '/en/',
+};
+
 const content = linktrData.en;
 ---
 
-<LinktrLayout title={content.title} description={content.description} language="English">
+<LinktrLayout title={headerData.title} description={headerData.description} language="English">
     <div
         class="linktr__container container--linktr-desktop display-flex display-flex--direction-column align-items-center"
     >
@@ -17,13 +24,13 @@ const content = linktrData.en;
         </div>
         <div class="linktr__header container row display-flex display-flex--direction-column align-items-center">
             <div class="linktr__logo">
-                <a href={content.iconLink} class="linktr__home-icon">
+                <a href={headerData.iconLink} class="linktr__home-icon">
                     <Icons name="BwSymbol" color="white" />
                 </a>
             </div>
             <p class="linktr__name body body--bold mt-20px">@bandhaworks</p>
             <p class="linktr__bio text-align-center mb-20px">
-                {content.bio}
+                {headerData.bio}
             </p>
         </div>
         <div class="linktr__buttons">
