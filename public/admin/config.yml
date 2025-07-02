@@ -367,3 +367,21 @@ collections:
       - { label: CourseLink, name: courseLink, widget: string }
       - { label: Note, name: note, widget: text, required: false }
       - { label: Note in English, name: noteEnglish, widget: text, required: false }
+  - name: linktr-buttons
+    label: Linktr Buttons
+    folder: src/content/linktr/
+    format: 'json'
+    create: true
+    slug: '{{courseId}}'
+    fields:
+      - label: Buttons
+        name: buttons
+        widget: list
+        max: 12 # vagy amennyi kell
+        summary: '{{label_hu}} ({{label_en}})'
+        fields:
+          - { label: Published, name: published, widget: boolean, default: true }
+          - { label: Title (Hungarian), name: label_hu, widget: string }
+          - { label: Href (Hungarian), name: href_hu, widget: string }
+          - { label: Title (English), name: label_en, widget: string }
+          - { label: Href (English), name: href_en, widget: string }
