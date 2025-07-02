@@ -48,7 +48,7 @@ export const galleries: GalleryWithImages[] = [
     sourceUrl: 'https://mula.bandha.works/images/2014-PETROS-JIVAMUKTI-WEEKEND/',
     highlighted: false,
     images: [],
-    tags: ['oldshala', 'mysore', 'workshop', 'petros'],
+    tags: ['oldshala', 'workshop', 'petros'],
   },
   {
     id: 2,
@@ -89,5 +89,15 @@ export const galleries: GalleryWithImages[] = [
     highlighted: false,
     images: [],
     tags: ['newshala', 'mysore', 'santina'],
+  },
+  {
+    id: 9,
+    year: 2024,
+    titleHu: 'Ross Astanga Hét',
+    titleEn: 'Ross Ashtanga Week',
+    sourceUrl: 'https://mula.bandha.works/images/2024-ROSS-WORKSHOP/',
+    highlighted: true,
+    images: [],
+    tags: ['oldshala', 'mysore', 'davidrobson'],
   },
 ];
