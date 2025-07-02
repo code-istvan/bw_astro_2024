@@ -377,6 +377,7 @@ collections:
       - label: Buttons
         name: buttons
         widget: list
+        default: 'Linktr Buttons'
         max: 12 # vagy amennyi kell
         summary: '{{label_hu}} ({{label_en}})'
         fields:
