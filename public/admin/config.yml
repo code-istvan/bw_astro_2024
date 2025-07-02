@@ -374,15 +374,19 @@ collections:
     create: true
     slug: '{{courseId}}'
     fields:
-      - label: Buttons
-        name: buttons
+      - label: Hungarian Buttons
+        name: buttons_hu
         widget: list
-        default: 'Linktr Buttons'
-        max: 12 # vagy amennyi kell
-        summary: '{{label_hu}} ({{label_en}})'
+        summary: '{{label}}'
         fields:
           - { label: Published, name: published, widget: boolean, default: true }
-          - { label: Title (Hungarian), name: label_hu, widget: string }
-          - { label: Href (Hungarian), name: href_hu, widget: string }
-          - { label: Title (English), name: label_en, widget: string }
-          - { label: Href (English), name: href_en, widget: string }
+          - { label: Title, name: label, widget: string }
+          - { label: Href, name: href, widget: string }
+      - label: English Buttons
+        name: buttons_en
+        widget: list
+        summary: '{{label}}'
+        fields:
+          - { label: Published, name: published, widget: boolean, default: true }
+          - { label: Title, name: label, widget: string }
+          - { label: Href, name: href, widget: string }
