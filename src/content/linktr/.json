@@ -1,0 +1,18 @@
+{
+  "buttons": [
+    {
+      "published": true,
+      "label_hu": "STANZIN INTERJÚ",
+      "href_hu": "/blog/ismerd-meg-a-sefet-beszelgetes-stanzinnel/",
+      "label_en": "STANZIN INTERVIEW",
+      "href_en": "/en/blog/meet-the-chef-a-conversation-with-stanzin/"
+    },
+    {
+      "published": true,
+      "label_hu": "ASTANGA MYSORE-PROGRAM",
+      "href_hu": "/astanga-mysore-program/",
+      "label_en": "ASHTANGA MYSORE PROGRAM",
+      "href_en": "/en/astanga-mysore-program/"
+    }
+  ]
+}
