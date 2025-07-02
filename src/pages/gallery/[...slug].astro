@@ -43,7 +43,17 @@ galleriesWithImages.push({
         {
             galleriesWithImages.map((gallery, index) => (
                 <div class="gallery-section">
-                    <h2 class="mt-40px mb-40px">{gallery.titleHu}</h2>
+                    <h2 class="mt-40px mb-20px">{gallery.titleHu}</h2>
+                    <IconButton
+                        href="/gallery"
+                        variant="third-naked-orange"
+                        iconName="ArrowLeft"
+                        iconClass="orange"
+                        class="mt-20px link-orange no-padding mb-40px back-button"
+                        ariaLabel="Vissza az előző oldalra gomb"
+                    >
+                        Vissza az előző oldalra
+                    </IconButton>
                     {gallery.images.length > 0 ? (
                         <LightGalleryMasonry images={gallery.images} title="" client:load />
                     ) : (
