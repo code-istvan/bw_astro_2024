@@ -2,25 +2,75 @@
   "buttons_hu": [
     {
       "published": true,
-      "label": "magyar1",
-      "href": "/magyar1/"
+      "label": "STANZIN INTERJÚ",
+      "href": "/blog/ismerd-meg-a-sefet-beszelgetes-stanzinnel/"
     },
     {
       "published": true,
-      "label": "magyar2",
-      "href": "/magyar2/"
+      "label": "ASTANGA MYSORE PROGRAM",
+      "href": "/astanga-mysore-program/"
+    },
+    {
+      "published": true,
+      "label": "TANFOLYAMOK",
+      "href": "/tanfolyam/"
+    },
+    {
+      "published": true,
+      "label": "ÓRAREND",
+      "href": "/orarend/"
+    },
+    {
+      "published": true,
+      "label": "ESEMÉNYEK",
+      "href": "/esemenyek/"
+    },
+    {
+      "published": true,
+      "label": "KAPCSOLAT",
+      "href": "/kapcsolat/"
+    },
+    {
+      "published": true,
+      "label": "WEBOLDAL",
+      "href": "/"
     }
   ],
   "buttons_en": [
     {
       "published": true,
-      "label": "english1",
-      "href": "/english1/"
+      "label": "STANZIN INTERVIEW",
+      "href": "/en/blog/meet-the-chef-a-conversation-with-stanzin/"
     },
     {
       "published": true,
-      "label": "english2",
-      "href": "/english2/"
+      "label": "ASHTANGA MYSORE PROGRAM",
+      "href": "/astanga-mysore-program/"
+    },
+    {
+      "published": true,
+      "label": "ABOUT BANDHAWORKS",
+      "href": "/en/rolunk/"
+    },
+    {
+      "published": true,
+      "label": "SCHEDULE",
+      "href": "/en/orarend/"
+    },
+    {
+      "published": true,
+      "label": "EVENTS",
+      "href": "/en/esemenyek/"
+    },
+    {
+      "published": true,
+      "label": "CONTACT",
+      "href": "/en/kapcsolat/"
+    },
+    {
+      "published": true,
+      "label": "WEBSITE",
+      "href": "/en/"
     }
   ]
 }
