@@ -130,4 +130,14 @@ export const galleries: GalleryWithImages[] = [
     images: [],
     tags: ['oldshala', 'mysore', 'santina'],
   },
+  {
+    id: 13,
+    year: 2014,
+    titleHu: 'Mysore Magic',
+    titleEn: 'Mysore Magic',
+    sourceUrl: 'https://mula.bandha.works/images/MYSORE-MAGIC/',
+    highlighted: true,
+    images: [],
+    tags: ['street', 'mysore', 'india'],
+  },
 ];

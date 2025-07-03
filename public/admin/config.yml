@@ -305,7 +305,7 @@ collections:
           label: Esemény típusa,
           name: eventType,
           widget: select,
-          options: [Tanfolyam, Workshop, Konferencia, Tábor, Egyéb közösségi, SharathDzsi],
+          options: [Tanfolyam, Workshop, Konferencia, Tábor, Egyéb közösségi],
         }
       - { label: Eventid, name: eventid, widget: string }
       - { label: Date, name: date, widget: datetime }
@@ -369,24 +369,25 @@ collections:
       - { label: Note in English, name: noteEnglish, widget: text, required: false }
   - name: linktr-buttons
     label: Linktr Buttons
-    folder: src/content/linktr/
-    format: 'json'
-    create: true
-    slug: '{{courseId}}'
-    fields:
-      - label: Hungarian Buttons
-        name: buttons_hu
-        widget: list
-        summary: '{{label}}'
+    files:
+      - name: linktr-buttons
+        label: Linktr Buttons
+        file: src/content/linktr/linktr-buttons.json
+        format: 'json'
         fields:
-          - { label: Published, name: published, widget: boolean, default: true }
-          - { label: Title, name: label, widget: string }
-          - { label: Href, name: href, widget: string }
-      - label: English Buttons
-        name: buttons_en
-        widget: list
-        summary: '{{label}}'
-        fields:
-          - { label: Published, name: published, widget: boolean, default: true }
-          - { label: Title, name: label, widget: string }
-          - { label: Href, name: href, widget: string }
+          - label: Hungarian Buttons
+            name: buttons_hu
+            widget: list
+            summary: '{{label}}'
+            fields:
+              - { label: Published, name: published, widget: boolean, default: true }
+              - { label: Title, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+          - label: English Buttons
+            name: buttons_en
+            widget: list
+            summary: '{{label}}'
+            fields:
+              - { label: Published, name: published, widget: boolean, default: true }
+              - { label: Title, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
