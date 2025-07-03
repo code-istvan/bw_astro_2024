@@ -4,6 +4,11 @@
       "published": true,
       "label": "magyar1",
       "href": "/magyar1/"
+    },
+    {
+      "published": true,
+      "label": "magyar2",
+      "href": "/magyar2/"
     }
   ],
   "buttons_en": [
@@ -11,6 +16,11 @@
       "published": true,
       "label": "english1",
       "href": "/english1/"
+    },
+    {
+      "published": true,
+      "label": "english2",
+      "href": "/english2/"
     }
   ]
 }
