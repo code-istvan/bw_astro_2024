@@ -1,0 +1,16 @@
+{
+  "buttons_hu": [
+    {
+      "published": true,
+      "label": "magyar1",
+      "href": "/magyar1/"
+    }
+  ],
+  "buttons_en": [
+    {
+      "published": true,
+      "label": "english1",
+      "href": "/english1/"
+    }
+  ]
+}
