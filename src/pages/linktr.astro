@@ -2,8 +2,8 @@
 import LinktrLayout from '../layouts/LinktrLayout.astro';
 import Icons from '../components/Icons/Icons.astro';
 import LanguagePicker from '../components/LanguagePickers/LanguagePicker.astro';
-import linktrData from '../data/linktr.json';
 import SocialIcons from '../components/Icons/SocialIcons.astro';
+import linktrButtons from '../content/linktr-buttons.json';
 
 const headerData = {
     title: 'LINKTR',
@@ -12,7 +12,7 @@ const headerData = {
     iconLink: '/',
 };
 
-const content = linktrData.hu;
+const buttonsHu = linktrButtons.buttons_hu ?? [];
 ---
 
 <LinktrLayout title={headerData.title} description={headerData.description} language="Hungarian">
@@ -35,8 +35,8 @@ const content = linktrData.hu;
         </div>
         <div class="linktr__buttons">
             {
-                content.buttons
-                    .filter((btn) => btn.label && btn.href)
+                buttonsHu
+                    .filter((btn) => btn.published && btn.label && btn.href)
                     .map((btn) => (
                         <a href={btn.href} class="btn btn--primary--outline-full mb-20px">
                             {btn.label}

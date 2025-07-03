@@ -139,26 +139,6 @@ const coursesCollection = defineCollection({
   }),
 });
 
-const linktrButtonsCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    buttons_hu: z.array(
-      z.object({
-        published: z.boolean(),
-        label: z.string(),
-        href: z.string(),
-      })
-    ),
-    buttons_en: z.array(
-      z.object({
-        published: z.boolean(),
-        label: z.string(),
-        href: z.string(),
-      })
-    ),
-  }),
-});
-
 export const collections = {
   blog: postsCollection,
   authors: authorsCollection,
@@ -168,5 +148,4 @@ export const collections = {
   teachers: teachersCollection,
   events: eventsCollection,
   courses: coursesCollection,
-  linktrButtons: linktrButtonsCollection,
 };
