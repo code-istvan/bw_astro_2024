@@ -398,12 +398,13 @@ collections:
     extension: json
     format: json
     create: true
-    slug: '{{year}}-{{slug}}'
+    slug: '{{year}}-{{fileName}}'
     fields:
       - { label: Published, name: published, widget: boolean, default: true }
       - { label: Year, name: year, widget: number }
       - { label: Title (HU), name: titleHu, widget: string }
       - { label: Title (EN), name: titleEn, widget: string }
+      - { label: File name, name: fileName, widget: string }
       - { label: Source URL, name: sourceUrl, widget: string }
       - { label: Highlighted, name: highlighted, widget: boolean, default: false }
       - label: Tags
