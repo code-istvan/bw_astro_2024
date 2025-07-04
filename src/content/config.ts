@@ -139,6 +139,20 @@ const coursesCollection = defineCollection({
   }),
 });
 
+const imageGalleryCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    published: z.boolean(),
+    year: z.number(),
+    titleHu: z.string(),
+    titleEn: z.string(),
+    fileName: z.string(),
+    sourceUrl: z.string(),
+    highlighted: z.boolean(),
+    tags: z.string().array(),
+  }),
+});
+
 export const collections = {
   blog: postsCollection,
   authors: authorsCollection,
@@ -148,4 +162,5 @@ export const collections = {
   teachers: teachersCollection,
   events: eventsCollection,
   courses: coursesCollection,
+  imageGallery: imageGalleryCollection,
 };
