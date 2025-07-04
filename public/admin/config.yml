@@ -391,3 +391,22 @@ collections:
               - { label: Published, name: published, widget: boolean, default: true }
               - { label: Title, name: label, widget: string }
               - { label: Href, name: href, widget: string }
+  - name: image-gallery
+    label: Image Galleries
+    label_singular: Image Gallery
+    folder: src/content/gallery/
+    extension: json
+    format: json
+    create: true
+    slug: '{{year}}-{{slug}}'
+    fields:
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Year, name: year, widget: number }
+      - { label: Title (HU), name: titleHu, widget: string }
+      - { label: Title (EN), name: titleEn, widget: string }
+      - { label: Source URL, name: sourceUrl, widget: string }
+      - { label: Highlighted, name: highlighted, widget: boolean, default: false }
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string }
