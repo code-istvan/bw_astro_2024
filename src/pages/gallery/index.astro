@@ -5,8 +5,6 @@ import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import GalleryCard from '../../components/Cards/GalleryCard.astro';
 import mobileImage from '../../images/gallery_mobil.jpeg';
 import desktopImage from '../../images/gallery_desktop.jpeg';
-// import { galleries } from './config';
-import { slugify } from '../../components/ts/utils';
 import '../../components/LightGallery/_lightGalleryComplete.scss';
 
 const metadata = {
@@ -24,22 +22,13 @@ const sortedGalleries = [...publishedGalleries].sort((a, b) => b.data.year - a.d
 
     <div class="container">
         <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
-            <!-- {
-                sortedGalleries.map((gallery) => {
-                    const slug = slugify(gallery.titleEn);
-                    return <GalleryCard title={gallery.titleEn} year={gallery.year} slug={slug} tags={gallery.tags} />;
-                })
-            } -->
-
             {
                 sortedGalleries.map((gallery) => {
-                    // Már van fileName property, ha azt akarod slug-nak használni!
-                    // Ha nem, akkor slugify(gallery.data.titleEn)
                     return (
                         <GalleryCard
                             title={gallery.data.titleEn}
                             year={gallery.data.year}
-                            slug={gallery.data.fileName}
+                            slug={`${gallery.data.year}-${gallery.data.fileName}`}
                             tags={gallery.data.tags}
                         />
                     );

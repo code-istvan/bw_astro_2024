@@ -1,7 +1,6 @@
 ---
-import { slugify } from '../../components/ts/utils';
-import { galleries, type GalleryWithImages } from './config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import HeroImage from '../../components/HeroImage/HeroImage.astro';
 import mobileImage from '../../images/gallery_mobil.jpeg';
 import desktopImage from '../../images/gallery_desktop.jpeg';
@@ -11,24 +10,27 @@ import IconButton from '../../components/Button/IconButton.astro';
 export const prerender = true;
 
 export async function getStaticPaths() {
-    return galleries.map((gallery) => {
+    const galleries = await getCollection('imageGallery');
+    return galleries.map((entry) => {
         return {
             params: {
-                slug: slugify(gallery.titleEn),
+                slug: `${entry.data.year}-${entry.data.fileName}`,
             },
             props: {
-                gallery,
+                gallery: entry.data,
             },
         };
     });
 }
+
 const { gallery } = Astro.props;
 
 const metadata = {
     title: 'GALÉRIA',
     description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
 };
-const galleriesWithImages: GalleryWithImages[] = [];
+
+const galleriesWithImages = [];
 const images = await downloadServerImages(gallery.sourceUrl);
 galleriesWithImages.push({
     ...gallery,
