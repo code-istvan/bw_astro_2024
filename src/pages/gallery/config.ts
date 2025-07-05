@@ -160,4 +160,14 @@ export const galleries: GalleryWithImages[] = [
     images: [],
     tags: ['oldshala', 'mysore', 'govindakai'],
   },
+  {
+    id: 16,
+    year: 2015,
+    titleHu: 'Őszi Astanga Jóga Elvonulás',
+    titleEn: 'Spring Ashtanga Yoga Retreat',
+    sourceUrl: 'https://mula.bandha.works/images/2015-SPRING-ASHTANGA-RETREAT/',
+    highlighted: true,
+    images: [],
+    tags: ['oldshala', 'mysore', 'govindakai'],
+  },
 ];
