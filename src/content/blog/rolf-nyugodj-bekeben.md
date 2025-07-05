@@ -1,7 +1,7 @@
 ---
 published: true
 language: Hungarian
-title: "Rolf nyugodj békében! "
+title: "Rolf - Nyugodj békében! "
 titleBackground: false
 canonical: https://www.integralashtanga.com/mind-medicine/2024/7/8/rolf-interview
 canonicalLanguage: English
