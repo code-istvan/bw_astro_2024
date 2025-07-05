@@ -1,7 +1,7 @@
 ---
 published: true
 language: Hungarian
-title: ROLF NYUGODJ BÉKÉBEN!
+title: "Rolf nyugodj békében! "
 titleBackground: false
 canonical: https://www.integralashtanga.com/mind-medicine/2024/7/8/rolf-interview
 canonicalLanguage: English
@@ -15,7 +15,7 @@ imageMobil: ../../images/uploads/jogi.jpeg
 ---
 ### Rolf Naujokat az egyik legkedvesebb barátom volt a Lakshmi Puramban töltött gyakorlásom időszakából. Ugyanakkor csatlakoztunk a shalához, de Rolf egy haladó gyakorló volt, aki már néhány évtizede Indiában élt. Sokat voltunk együtt azokban az időkben, sok boldog órát töltöttünk együtt gyakorlással, főzéssel, közös étkezéssel.
 
-### Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel – ha vannak szentek az astanga jóga hagyományában, Rolf biztosan az egyik közülük. Megosztom ezt az interjút, amelyet Rolffal készítettem Goában 2007-ben. Itt a hanganyag, alább pedig az átirat.
+Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel – ha vannak szentek az astanga jóga hagyományában, Rolf biztosan az egyik közülük. Megosztom ezt az interjút, amelyet Rolffal készítettem Goában 2007-ben. Itt a hanganyag, alább pedig az átirat.
 
 ### Rolf, el tudnád mesélni, hogyan kerültél Indiába?
 
