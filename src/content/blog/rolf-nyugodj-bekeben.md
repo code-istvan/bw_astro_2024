@@ -218,3 +218,9 @@ Szerintem a tanítás és a szeretet megosztása sok tanítványával és hívé
 Hát, ez az egész, az egész csomag. Nem csak egy dolog a sok közül; ez az egész számomra. A Gurujival való találkozás, a tanítás befogadása, az idő, amit az ő jelenlétében tölthettem, illetve tölthetek. És nem is tudok mit kifogásolni, ez egy egészen különleges dolog. Azt hiszem, leginkább az az egyik legnagyobb dolog, amiért hálás vagyok, amiről úgy érzem, hogy még a gyakorlást is továbbviszi, hogy ez az egész úgy nyilvánul meg az életemben, hogy megoszthatom és taníthatok. Szerintem ez egy hatalmas dolog. Igen, ilyen módon a hála érzése azért is van bennem, mert megélhetek abból, amit én szeretek csinálni, és ez valójában, ne felejtsd el, valami nagyon különleges dolog. Igen, ez a te utad, az, ahogyan a kenyeredet sütöd, az az életmódod része, és ez valami hihetetlen. Nem olyasmit teszel, amit utálsz, amikor kenyeret sütsz. Azzal teszel valamit, amiben élsz, és megkapod a napi szükségleteidet. És ez Guruji tanításának módja, a gyakorlatról is gondoskodik.
 
 ### Köszönöm szépen, Rolf.
+
+**Az írás szerzője:** Guy Donahaye\
+**Az írás eredeti címe:**
+[Rolf – Rest in Peace!](https://www.integralashtanga.com/mind-medicine/2024/7/8/rolf-interview)\
+**Fordította
+és szerkesztette:** Dr. Kővári Zsuzsa
