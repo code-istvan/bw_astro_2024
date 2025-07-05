@@ -394,7 +394,7 @@ collections:
   - name: image-gallery
     label: Image Galleries
     label_singular: Image Gallery
-    folder: src/content/gallery/
+    folder: src/content/imageGallery/
     extension: json
     format: json
     create: true
