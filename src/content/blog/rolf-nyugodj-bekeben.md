@@ -5,7 +5,9 @@ title: "Rolf - Nyugodj békében! "
 titleBackground: false
 canonical: https://www.integralashtanga.com/mind-medicine/2024/7/8/rolf-interview
 canonicalLanguage: English
-description: ROLF NYUGODJ BÉKÉBEN!
+description: Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel –
+  ha vannak szentek az astanga jóga hagyományában, Rolf biztosan az egyik
+  közülük." Ma egy éve, hogy már nincs velünk, de tanítása és szelleme tovább él
 author: Zsuzsi
 tags:
   - interjú
