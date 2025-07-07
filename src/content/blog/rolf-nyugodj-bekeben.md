@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 language: Hungarian
 title: "Rolf - Nyugodj békében! "
 titleBackground: false
