@@ -45,7 +45,10 @@ galleriesWithImages.push({
         {
             galleriesWithImages.map((gallery, index) => (
                 <div class="gallery-section">
-                    <h2 class="mt-40px mb-20px">{gallery.titleHu}</h2>
+                    <h2 class="mt-40px mb-20px">
+                        {gallery.titleHu}
+                        <span class="gallery-image-count body body--bold "> ({gallery.images.length} kép)</span>
+                    </h2>
                     <IconButton
                         href="/galeria/"
                         variant="third-naked-orange"
