@@ -23,13 +23,13 @@ const sortedGalleries = [...publishedGalleries].sort((a, b) => b.data.year - a.d
     <div class="container">
         <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
             {
-                sortedGalleries.map((gallery) => {
+                sortedGalleries.map((galeria) => {
                     return (
                         <GalleryCard
-                            title={gallery.data.titleEn}
-                            year={gallery.data.year}
-                            slug={`${gallery.data.year}-${gallery.data.fileName}`}
-                            tags={gallery.data.tags}
+                            title={galeria.data.titleHu}
+                            year={galeria.data.year}
+                            slug={`${galeria.data.year}-${galeria.data.fileName}`}
+                            tags={galeria.data.tags}
                         />
                     );
                 })

@@ -17,13 +17,13 @@ export async function getStaticPaths() {
                 slug: `${entry.data.year}-${entry.data.fileName}`,
             },
             props: {
-                gallery: entry.data,
+                galeria: entry.data,
             },
         };
     });
 }
 
-const { gallery } = Astro.props;
+const { galeria } = Astro.props;
 
 const metadata = {
     title: 'GALÉRIA',
@@ -31,9 +31,9 @@ const metadata = {
 };
 
 const galleriesWithImages = [];
-const images = await downloadServerImages(gallery.sourceUrl);
+const images = await downloadServerImages(galeria.sourceUrl);
 galleriesWithImages.push({
-    ...gallery,
+    ...galeria,
     images,
 });
 ---
@@ -47,7 +47,7 @@ galleriesWithImages.push({
                 <div class="gallery-section">
                     <h2 class="mt-40px mb-20px">{gallery.titleHu}</h2>
                     <IconButton
-                        href="/gallery"
+                        href="/galeria/"
                         variant="third-naked-orange"
                         iconName="ArrowLeft"
                         iconClass="orange"
@@ -66,7 +66,7 @@ galleriesWithImages.push({
             ))
         }
         <IconButton
-            href="/gallery"
+            href="/galeria/"
             variant="third-naked-orange"
             iconName="ArrowLeft"
             iconClass="orange"
