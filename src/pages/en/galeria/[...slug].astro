@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import HeroImage from '../../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../../images/gallery_mobil.jpeg';
+import desktopImage from '../../../images/gallery_desktop.jpeg';
+import LightGalleryMasonry, { downloadServerImages } from '../../../components/LightGallery/LightGalleryComplete.jsx';
+import IconButton from '../../../components/Button/IconButton.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const galleries = await getCollection('imageGallery');
+    return galleries.map((entry) => {
+        return {
+            params: {
+                slug: `${entry.data.year}-${entry.data.fileName}`,
+            },
+            props: {
+                galeria: entry.data,
+            },
+        };
+    });
+}
+
+const { galeria } = Astro.props;
+
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
+
+const galleriesWithImages = [];
+const images = await downloadServerImages(galeria.sourceUrl);
+galleriesWithImages.push({
+    ...galeria,
+    images,
+});
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        {
+            galleriesWithImages.map((gallery, index) => (
+                <div class="gallery-section">
+                    <h2 class="mt-40px mb-20px">{gallery.titleEn}</h2>
+                    <IconButton
+                        href="/en/galeria/"
+                        variant="third-naked-orange"
+                        iconName="ArrowLeft"
+                        iconClass="orange"
+                        class="mt-20px link-orange no-padding mb-40px back-button"
+                        ariaLabel="Back to previous page button"
+                    >
+                        Back to previous page
+                    </IconButton>
+                    {gallery.images.length > 0 ? (
+                        <LightGalleryMasonry images={gallery.images} title="" client:load />
+                    ) : (
+                        <p>There are no images in this gallery</p>
+                    )}
+                    {index < galleriesWithImages.length - 1 && <div class="gallery-separator" />}
+                </div>
+            ))
+        }
+        <IconButton
+            href="/en/galeria/"
+            variant="third-naked-orange"
+            iconName="ArrowLeft"
+            iconClass="orange"
+            class="mt-20px link-orange no-padding mb-40px back-button"
+            ariaLabel="Vissza az előző oldalra gomb"
+        >
+            Vissza az előző oldalra
+        </IconButton>
+    </div>
+</BaseLayout>

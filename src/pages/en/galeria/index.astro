@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import HeroImage from '../../../components/HeroImage/HeroImage.astro';
+import GalleryCard from '../../../components/Cards/GalleryCard.astro';
+import mobileImage from '../../../images/gallery_mobil.jpeg';
+import desktopImage from '../../../images/gallery_desktop.jpeg';
+import '../../../components/LightGallery/_lightGalleryComplete.scss';
+
+const metadata = {
+    title: 'GALLERY',
+    description: 'On this page, you will find the image galleries of the Bandha Works yoga shala.',
+};
+
+const galleries = await getCollection('imageGallery');
+const publishedGalleries = galleries.filter((g) => g.data.published);
+const sortedGalleries = [...publishedGalleries].sort((a, b) => b.data.year - a.data.year);
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
+            {
+                sortedGalleries.map((galeria) => {
+                    return (
+                        <GalleryCard
+                            title={galeria.data.titleEn}
+                            year={galeria.data.year}
+                            slug={`${galeria.data.year}-${galeria.data.fileName}`}
+                            tags={galeria.data.tags}
+                            lang="en"
+                        />
+                    );
+                })
+            }
+        </div>
+    </div>
+</BaseLayout>

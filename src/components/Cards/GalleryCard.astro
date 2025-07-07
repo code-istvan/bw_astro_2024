@@ -4,13 +4,14 @@ export interface Props {
     year: string | number;
     slug: string;
     tags: string[];
+    lang?: string;
 }
 import './_galleryCard.scss';
 
-const { title, year, slug, tags } = Astro.props;
+const { title, year, slug, tags, lang } = Astro.props;
 ---
 
-<a href={`/galeria/${slug}`} class="gallery-card-link">
+<a href={`${lang === 'en' ? '/en' : ''}/galeria/${slug}`} class="gallery-card-link">
     <div class="gallery-card">
         <div class="gallery-title-row">
             <h4>{title}</h4>
