@@ -11,7 +11,7 @@ description: Egy igazán csodálatos lélek, tele odaadással és nagylelkűség
 author: Zsuzsi
 tags:
   - interjú
-date: 2025-07-05T17:10:00.000Z
+date: 2025-07-08T19:10:00.000Z
 image: ../../images/uploads/jogi_2.jpeg
 imageMobil: ../../images/uploads/jogi.jpeg
 ---
