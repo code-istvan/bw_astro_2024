@@ -5,9 +5,10 @@ title: "Rolf - Nyugodj békében! "
 titleBackground: false
 canonical: https://www.integralashtanga.com/mind-medicine/2024/7/8/rolf-interview
 canonicalLanguage: English
-description: Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel –
+description: 'Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel –
   ha vannak szentek az astanga jóga hagyományában, Rolf biztosan az egyik
-  közülük." Ma egy éve, hogy már nincs velünk, de tanítása és szelleme tovább él
+  közülük." Ma egy éve, hogy Rolf Naujokat már nincs velünk, de tanítása és
+  szelleme tovább él, mindig velünk marad... '
 author: Zsuzsi
 tags:
   - interjú
@@ -21,7 +22,7 @@ Egy igazán csodálatos lélek, tele odaadással és nagylelkűséggel – ha va
 
 ### Rolf, el tudnád mesélni, hogyan kerültél Indiába?
 
-Óhh, Indiába... 1973-ban vagy 1974-ben történt, és valójában egy hippi utazáson keresztül jöttem – Isztambul, Afganisztán, majd Pakisztán, India útvonalon -, nem sokat tudva a jógáról, de annál inkább a hippi utazásra koncentrálva. Indiában először Haidarábádba érkeztem, ami megváltoztatta az életemhez való hozzáállásomat. Kapcsolatba kerültem a jógával, egyre mélyebben. Így találkoztam az első gurummal, ez a Babaji vezetett el a jóga útjára. Ott kezdődött minden számomra. 1973-ban, 1974-ben, majd 1975-ben már kialakítottam egy napi gyakorlást, nem astanga, hanem hatha jógát, hagyományos módon, pránjámával, sok krijával és ülőgyakorlattal. Szóval volt egy kis szádhanám, böjtnapokkal és különféle jógatevékenységekkel, és ez a mai napig velem maradt.
+Óhh, Indiába... 1973-ban vagy 1974-ben történt, és valójában egy hippi utazáson keresztül jöttem – Isztambul, Afganisztán, majd Pakisztán, India útvonalon -, nem sokat tudva a jógáról, de annál inkább a hippi utazásra koncentrálva. Indiában először Haidarábádba érkeztem, ami megváltoztatta az életemhez való hozzáállásomat. Kapcsolatba kerültem a jógával, egyre mélyebben. Így találkoztam az első gurummal, ez a Babaji vezetett el a jóga útjára. Ott kezdődött minden számomra. 1973-ban, 1974-ben, majd 1975-ben már kialakítottam egy napi gyakorlást, nem astanga, hanem hatha jógát, hagyományos módon, pránájámával, sok krijával és ülőgyakorlattal. Szóval volt egy kis szádhanám, böjtnapokkal és különféle jógatevékenységekkel, és ez a mai napig velem maradt.
 
 A stílus az évek során változott. Aztán volt egy időszak, amikor hét évig gyakoroltam Iyengar jógát, utána áttértem az astangára. Az 1980 és 1983 közötti időszakban találkoztam az astangával, amikor Danny Paradise-szal és Cliff Barberrel éltem, akik astanga jógát gyakoroltak, én pedig akkoriban Iyengart. Ők ráirányítottak az astangára, az első négy sorozatra. Szóval gyakoroltam..., de nem rendszeresen. Továbbra is Iyengar jógáztam és azt tanítottam. Ez egy régi stílusú Iyengar volt; kevesebb kellékkel, és még sok ugrással. Nagyon kellemes volt.
 
