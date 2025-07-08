@@ -9,6 +9,11 @@ import IconButton from '../../components/Button/IconButton.astro';
 
 export const prerender = true;
 
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
+
 export async function getStaticPaths() {
     const galleries = await getCollection('imageGallery');
     return galleries.map((entry) => {
@@ -25,10 +30,7 @@ export async function getStaticPaths() {
 
 const { galeria } = Astro.props;
 
-const metadata = {
-    title: 'GALÉRIA',
-    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
-};
+const ogTitle = `Galéria - ${galeria.titleHu}`;
 
 const galleriesWithImages = [];
 const images = await downloadServerImages(galeria.sourceUrl);
@@ -38,7 +40,7 @@ galleriesWithImages.push({
 });
 ---
 
-<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+<BaseLayout {...metadata} title={ogTitle} description={metadata.description} image={desktopImage}>
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
     <div class="container">

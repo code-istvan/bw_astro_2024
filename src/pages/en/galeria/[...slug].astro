@@ -23,13 +23,13 @@ export async function getStaticPaths() {
     });
 }
 
-const { galeria } = Astro.props;
-
 const metadata = {
     title: 'GALLERY',
     description: 'You can find the image galleries of the Bandha Works yoga shala on this page.',
 };
 
+const { galeria } = Astro.props;
+const ogTitle = `Gallery - ${galeria.titleEn}`;
 const galleriesWithImages = [];
 const images = await downloadServerImages(galeria.sourceUrl);
 galleriesWithImages.push({
