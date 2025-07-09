@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import GalleryCard from '../../../components/Cards/GalleryCard.astro';
+import GalleryTagList from '../../../components/GalleryTags/GalleryTagList.astro';
+import HeroImage from '../../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../../images/gallery_mobil.jpeg';
+import desktopImage from '../../../images/gallery_desktop.jpeg';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IconButton from '../../../components/Button/IconButton.astro';
+
+const metadata = {
+    title: 'GALÉRIA',
+    description: 'Ezen az oldalon megtalálod a Bandha Works jógastúdió képgalériáit.',
+};
+
+export async function getStaticPaths() {
+    // Lekérjük az összes egyedi taget
+    const galleries = await getCollection('imageGallery');
+    const allTags = galleries.flatMap((g) => g.data.tags).filter(Boolean);
+    const uniqueTags = Array.from(new Set(allTags));
+
+    // Létrehozunk egy oldalt minden taghez
+    return uniqueTags.map((tag) => ({
+        params: { tag },
+        props: { tag },
+    }));
+}
+
+const { tag } = Astro.props;
+const galleries = await getCollection('imageGallery');
+
+// Kiszűrjük azokat a galériákat, amik tartalmazzák a taget
+const filteredGalleries = galleries.filter((g) => g.data.tags.includes(tag));
+
+const ogTitle = `Galéria - ${tag}`;
+---
+
+<BaseLayout {...metadata} title={ogTitle} description={metadata.description} image={desktopImage}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+
+    <div class="container">
+        <p class="page-title mt-40px mb-40px">
+            Itt találod azokat a galériákat, amelyek tartalmazzák a következő címkét: <span class="clr-brand-orange">
+                #{tag}
+            </span>
+        </p>
+        <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
+            {
+                filteredGalleries.length > 0 ? (
+                    filteredGalleries.map((galeria) => (
+                        <GalleryCard
+                            title={galeria.data.titleHu}
+                            year={galeria.data.year}
+                            slug={`${galeria.data.year}-${galeria.data.fileName}`}
+                            tags={galeria.data.tags}
+                        />
+                    ))
+                ) : (
+                    <p>
+                        No galleries found with tag: <b>#{tag}</b>
+                    </p>
+                )
+            }
+        </div>
+        <GalleryTagList />
+        <IconButton
+            href="/galeria/"
+            variant="third-naked-orange"
+            iconName="ArrowLeft"
+            iconClass="orange"
+            class="mt-20px link-orange no-padding mb-40px back-button"
+            ariaLabel="Vissza az előző oldalra gomb"
+        >
+            Vissza az előző oldalra
+        </IconButton>
+    </div>
+</BaseLayout>

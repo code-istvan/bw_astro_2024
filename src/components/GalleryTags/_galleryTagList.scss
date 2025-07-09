@@ -1,0 +1,6 @@
+@use '/src/sass/base/_colors' as colors;
+
+.gallery-tags .gallery-tag:hover,
+.gallery-tags .gallery-tag:focus {
+  color: colors.$color-brand-orange !important;
+}
