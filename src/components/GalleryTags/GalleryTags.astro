@@ -1,0 +1,15 @@
+---
+const { tags = [] } = Astro.props;
+---
+
+{
+    tags.length > 0 && (
+        <div class="gallery-tags mb-20px">
+            <p class="clr-shades-gray ">
+                {tags.map((tag) => (
+                    <span class="gallery-tag">#{tag}&nbsp;</span>
+                ))}
+            </p>
+        </div>
+    )
+}
