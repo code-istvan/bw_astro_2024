@@ -6,6 +6,7 @@ import mobileImage from '../../../images/gallery_mobil.jpeg';
 import desktopImage from '../../../images/gallery_desktop.jpeg';
 import LightGalleryMasonry, { downloadServerImages } from '../../../components/LightGallery/LightGalleryComplete.jsx';
 import IconButton from '../../../components/Button/IconButton.astro';
+import GalleryTags from '../../../components/GalleryTags/GalleryTags.astro';
 
 export const prerender = true;
 
@@ -49,7 +50,9 @@ galleriesWithImages.push({
                         {gallery.titleEn}{' '}
                         <span class="gallery-image-count body body--bold "> ({gallery.images.length} images)</span>
                     </h2>
-
+                    <div>
+                        <GalleryTags tags={gallery.tags} />
+                    </div>
                     <IconButton
                         href="/en/galeria/"
                         variant="third-naked-orange"

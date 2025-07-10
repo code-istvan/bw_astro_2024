@@ -22,8 +22,7 @@ const sortedGalleries = [...publishedGalleries].sort((a, b) => b.data.year - a.d
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
     <div class="container">
-        <div class="row"><GalleryTagList /></div>
-
+        <div class="row mt-20px"><GalleryTagList /></div>
         <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-20px mb-40px">
             {
                 sortedGalleries.map((galeria) => {

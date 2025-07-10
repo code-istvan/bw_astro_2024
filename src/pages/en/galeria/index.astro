@@ -6,6 +6,7 @@ import GalleryCard from '../../../components/Cards/GalleryCard.astro';
 import mobileImage from '../../../images/gallery_mobil.jpeg';
 import desktopImage from '../../../images/gallery_desktop.jpeg';
 import '../../../components/LightGallery/_lightGalleryComplete.scss';
+import GalleryTagList from '../../../components/GalleryTags/GalleryTagList.astro';
 
 const metadata = {
     title: 'GALLERY',
@@ -21,7 +22,8 @@ const sortedGalleries = [...publishedGalleries].sort((a, b) => b.data.year - a.d
     <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
 
     <div class="container">
-        <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-40px mb-40px">
+        <div class="row mt-20px"><GalleryTagList /></div>
+        <div class="gallery-card-wrapper display-flex flex-wrap gap-1rem mt-20px mb-40px">
             {
                 sortedGalleries.map((galeria) => {
                     return (
