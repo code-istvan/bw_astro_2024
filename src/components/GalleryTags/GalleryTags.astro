@@ -4,12 +4,12 @@ const { tags = [] } = Astro.props;
 
 {
     tags.length > 0 && (
-        <div class="gallery-tags mb-20px">
-            <p class="clr-shades-gray ">
-                {tags.map((tag) => (
-                    <span class="gallery-tag">#{tag}&nbsp;</span>
-                ))}
-            </p>
+        <div class="display-flex gap-0_5rem flex-wrap body mb-20px">
+            {tags.map((tag) => (
+                <div class="gallery__tag">
+                    <span class="clr-shades-gray">#{tag}</span>
+                </div>
+            ))}
         </div>
     )
 }

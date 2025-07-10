@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import './_galleryTagList.scss';
 
 const galleries = await getCollection('imageGallery');
 
@@ -10,14 +9,17 @@ const uniqueTags = Array.from(new Set(allTags)).sort();
 const slugify = (str) => encodeURIComponent(str);
 ---
 
-<div class="gallery-taglist body body--bold mt-20px">
+<div class="body mt-20px">
     {
         uniqueTags.length > 0 && (
-            <div class="gallery-tags mb-20px">
+            <div class="display-flex gap-0_5rem flex-wrap mb-20px">
                 {uniqueTags.map((tag) => (
-                    <a href={`/galeria/tag/${slugify(tag)}`} class="gallery-tag">
-                        #{tag}
-                    </a>
+                    <div class="gallery__tag">
+                        {' '}
+                        <a href={`/galeria/tag/${slugify(tag)}`} class="clr-shades-gray">
+                            #{tag}
+                        </a>
+                    </div>
                 ))}
             </div>
         )
