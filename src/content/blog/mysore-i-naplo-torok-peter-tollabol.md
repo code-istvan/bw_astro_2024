@@ -440,3 +440,158 @@ Esténket a dekadens nyugati kultúra gyönyöreivel töltjük. Elegem van a fű
 Egy indiai meleg.
 
 Reggel Simon és a kiwik átköltöznek Kochiba. Én maradok, a napot nagyrészt alvással, olvasással és regenerálódással töltöm. A DishNet az Esplanade-ban (a pizzás mellett) kitűnő szélessávú Internet-elérést biztosít, 30 rúpiáért óránként (a kovalami tarifa fele). Este vacsorázni indulok; az úton mellémszegődik egy fickó, megszólít, mint mindenki. A szokásos bevezető kérdések után megkérdezi, házas vagyok-e, van-e barátnőm. Van, mondom, és mi a helyzet vele? Ó, ő nem házas, mondja, barátnője sincs, hanem barátja (boyfriend). Először azt hiszem, csak félreértésről van szó, de tisztázó kérdéseimre kiderül, hogy tényleg a fiúkat szereti. Én a lányokat, közlöm vele. Ez nem tántorítja el, megkérdi, érdekelnek-e a szexfilmek. Momentán nem, válaszolom. Végül közli, hogy szívesen elkísér vacsorázni, illetve meglátogat később a hotelben. Tapintatosan lemondok a megtiszteltetésről.
+
+### 2003. január 9, csütörtök
+
+Városnézés Kochiban. Gekkóbébi a fürdőszobában.
+Reggel áthajózok Fort Cochinba, reggelinél találkozunk a többiekkel, majd városnézni indulunk. Mattancherry messze van gyalog. A zsinagóga jó kis eklektikus épület, sokat elárul a korabeli kereskedelmi kapcsolatokról: kínai padlócsempék, belga üveggömb-lámpák, indiai színek. A Dutch Palace freskói lenyűgözőek, kár hogy a Rámájana képein szinte lehetetlen kivenni, ki kicsoda, melyik részlet melyik epizódhoz tartozik és hol mi történik; az egész összefolyik istenalakok, démonok, királyok, hősök, szörnyek, állatok, harcosok és fegyverek kavargásába. A másik szárny freskói különböző istenalakokat ábrázolnak, ezek átláthatóbbak (és nem kevésbé szépek). Különösen Lakshmi gyönyörű. Az alsó szinten a freskók sokkal rosszabb állapotban vannak, jó részük gyakorlatilag láthatatlan. Krishna ledéren és szemmel láthatólag kedvtelve játszadozik a félmeztelen pásztorlánykákkal.
+
+A zsidónegyedben kasmíri árusok minden mennyiségben (zsidók már alig maradtak itt), ugyanazokat a szobrokat, faragványokat, ékszereket árulja mindegyik. A keresztény templomok nem különösebben látványosak. A St. Francis templom mögött a füvön a srácok krikettedzést tartanak. Összességében Kochi csalódás számomra. Ugyanolyan koszos, elhanyagolt és lepukkant, mint akármelyik indiai város, és az európai stílusú épületek csak rontanak a helyzeten, mert arra emlékeztetnek, hogy ez valamikor tényleg egész szép hely lehetett. Amúgy ezekből nincs sok, és azok sem túlságosan stílusosak.
+
+Beadom előhívatni a filmet. Vacsora a Four Foods-ban, keralai hal kókuszos curryvel. Desszertnek falooda (Mumbai-stilusu fagylalt, tesztaval). Mmmm. Utána a Bimbi’s-nél veszek burfit. Este fogmosáskor a fürdőszobában egy gekkóbébire leszek figyelmes a tükör felett. Legfeljebb három centi hosszú lehet, gyönyörű, mint egy kis ékszer. Legalább tíz másodpercig szemezünk egymással, aztán kimegyek a fényképezőgépemért, de mire visszatérek, már eltünt.
+
+### 2003. január 10, péntek\
+
+Ünnepség Siva templomában.\
+
+Reggel elmegyek a Siva-templomhoz, felmérni a helyzetet az ünnepség délutáni kezdete előtt. Meglepetés: már tart a körmenet. Hét elefánt, gyönyörűen feldíszítve, és vagy negyven zenész alkotja a menetet. Az elefántok éppen békésen álldogálnak és jobbbra-balra himbálózva táplálkoznak, hajtóik halmozzák eléjük a tápot. A zene fülhasogató. Közel egy órába telik, míg a lassú tempójú kezdéstől fokozatosan felgyorsulnak és belehevülnek a zenészek. Dobosok és cintányérosok adják az alapot, hozzá oboások és kürtösök fokozzák a hangulatot és a ricsajt. A tempó dübörgése felett párzási lázban égő egzotikus madárrajként kering a kürtök primitív, kéthangú kvart-dallama. A csúcs után visszaállnak az eredeti lassú tempóra és a körmenet előrehalad egy saroknyit. Közben kint durrognak a petárdák. Szerencsére nálam van a kis kamera, benne egy majdnem teljes tekerccsel. De pótfilm nincs nálam, így a tekercs ellövése után eljövök. Utána elmegyek az előhívott filmekért és beadom az újat, meg egy másikat, ami tegnap benn maradt a hátizsákom alján. Hihetetlenül olcsó reggeli az Indian Coffee House-ban: paradicsomos omlett, pirítós vajjal, grape juice és chai 27 rúpiáért!
+Délután vissza a templomba. Lézengő emberek, az elefántok leszerszámozva, békésen fogyasztanak a fák alatt. Az újabb körmenet csak 6 óra felé kezdődik el és csak három elefánttal. A zenészek is mások, kevesebben és másfajta dobokon játszanak, oboások sincsenek. Viszont a zene jóval dinamikusabb és gyorsabb, a körmenet maga is gyorsabban halad előre. A zenészek és a tömeg minden megállónál extázisig fokozzák a hangulatot, az elefántok tetején is felállnak a fiúk és ritmusra rázzák hatalmas fehér és rózsaszín toll-legyezőiket. Amint beérnek a templom elé, a papok és a nép virágszirmokat szórnak a vezérlő elefántra és a fején hordozott Siva-képmásra. Utána körbejárnak a templom udvarán, miközben a hivők serege meggyújtja a templom falán elhelyezett ezernyi mécsest. A szürkületben, a mécsesek és ívlámpák fényében árad a tömeg az udvaron, középen imbolyognak az elefántok óriás szürke szigetei. A körmenet után a színpadon vallásos énekeket ad elő egy nagy csoport énekes, zenészekkel. Néhányat én is felismerek, mint az „Om Nama Sivaya” mantrát, velük is éneklem. Ezrek vesznek körbe, kisgyerekektől az öregekig minden korosztály képviselteti magát.
+
+Amikor kisétálok, a bejárat előtt két nadaswaram-játékos dobosok kíséretében fújja méteres hangszerét. A kapu előtt az út hosszában telerakva petárdákkal, a sor végén egy négyszögben százával sorakoznak. Nyolc órakor gyújtják meg a kígyó farkát. Égszakadás-földindulás. Utána még tuzijáték-rakétákat is eregetnek a teljesség kedvéért. A produkció minden bizonnyal még jóval azután is emlékezetes marad minden szem- és fültanú számára, hogy (ha) hallásuk épsége visszaállt.
+
+### 2003. január 11, szombat
+
+Siva az utcán. A keralai buszsofőr életfilozófiája. Körmenetek szezonja.
+
+Reggel eldöntöm magamban: irány Mysore. Unom a poggyászomat cipelni, igy Thrissur kimarad, Ooty és környéke pedig Mysore-ból is elérhető. Foglalok egy jegyet az esti buszra, amelyikkel Simon is utazik.
+Pakolás közben dobszót hallok az utcáról. Aztán az ablak alatt zenészek nyomában elvonul egy feldíszített elefánt Siva képmásával. Amint visszatérnék a teendőimhez, egyszercsak hatalmas dörgés-robajlás. Nem a szomszéd ház omlott össze, csak petárdák újból, ezúttal a szomszéd sarkon; a fesztivál folytatódik, síppal-dobbal-puskaporral. Ha ez így megy tovább még kilenc napig, tán jobb is, hogy lelépek.
+Este 8-kor indul a busz, indiai idő szerint (azaz egy óra csúszással). Tele van, de majdnem mindenkinek jut ülőhely. Hamar ízelítőt kapunk a keralai vezetési stílusból. A buszsofőröket láthatóan két cél vezérli errefelé: megelőzni mindenkit, aki él és mozog az úton, és lehetőleg folyamatosan az út állapota által megengedett legnagyobb sebességnél gyorsabban hajtani. Szerencsére az éj sötétjében nem mérhetjük fel teljes egészében, mi is történik körülöttünk. Aludni így sem könnyű, már csak azért sem, mert a huplik miatt az utazás jelentős részét szó szerint a levegőben töltjük.
+
+Este 10 után többször is körmenetek ébresztenek szunyókálásunkból a falvakban, amelyeken keresztülhajtunk. Két óra alatt 5 körmenetet számolok. Elefántok ugyan nincsenek, ezek szegényebb népek, de mindenhol jelen vannak az elmaradhatatlan dobosok és fúvósok, lámpák (olajlámpások, karbidlámpák, de egy helyen egy generátort hordozó teherautó vezeti a menetet és a vezetékre felfűzve fénycsöveket hordoz a nép)… és persze petárdák, rakéták, tűzijáték. Sok helyen a házak, a kertkapuk, kerítések, tetők, kókuszpálmák is ki vannak világítva színes lámpafüzérekkel. Elhaladunk egy keresztény templom mellett, amely az alaptól a kereszt hegyéig tele van aggatva fényfüzérekkel. Mesés, valószerutlen az egész. A konkrét valóságból pillanatok alatt átkerültünk egy mesébe.
+
+Aztán persze visszazökkenünk hamar az országutak rögvalóságába. Éjfél után megállunk vacsorára egy útmenti névtelen kifőzdében. Kókusztejet, paradicsomcurryt szolgálnak fel, evőeszköz nélkül. Sikerül időben végeznem az étellel, meginni a forró chai nagy részét, megmosni a kezemet és még pisilni is; sőt még nem is utolsóként szállok vissza a buszra.
+
+### 2003. január 12, vasárnap
+
+Mysore. Az új lakásunk.
+
+Hajnalra igencsak hűvösre fordul; felértünk a Dekkán-fennsíkra. Egy megállónál sikerül előbányásznom azt a kis meleg ruhát, amim van, még a törülközőmet is magam köré csavarom, de azért fagyoskodom továbbra is. Reggel 7 körül Mysore-ba érkezünk; első dolgunk bevágni egy jó forró chai-t. Az első benyomások, a hidegen túl, kellemesek. Tágas város, széles utcák, szép koloniál stílusú házak, tisztaság (már legalábbis Keralához képest). Aztán irány a Hotel Kaveri, a jógik közkedvelt szálláshelye. Stefan nincs ott, a portán egy üzenet vár tőle: előző nap végre talált egy szép lakást Lakshmipuramban, Pattabhi Jois régi sálájához közel, és át is költözött oda. Estére már én is beköltözöm. Stefan segít hurcolkodni, aztán vacsorázni megyünk. A lakás gyönyörű, majdnem európai szintű; márványpadlós, tágas. (Persze hozzá kell tenni, hogy a márvány errefelé sokkal olcsóbb és tartósabb, mint a fa). Három hálószoba, mindegyik külön fürdőszobával, erkéllyel és vízmelegítővel. Apró gikszer, hogy a vízmelegítőket nem lehet egyszerre használni, mert a túlterhelés kivágja a biztosítékot. Azért mégiscsak Indiában vagyunk. A harmadik lakótársunk Carol, egy ausztrál lány, aki szintén jógázik, de Venkateshnél, egy másik tanárnál.
+
+### 2003. január 13, hétfő
+
+Ismerkedés és bevásárlás.
+
+Reggel együtt jógázunk Stefannal a hallban. A hall még táncteremnek is elmegy – Stefan tangószenvedélyének ismeretében biztosra veszem, hogy ez kipróbálásra is kerül majd. Utána körbevisz a környéken, megmutatni a fontos tájékozódási pontokat: Nagarathna (kifőzde, könyvesbolt, internet); a Mysore Mandala (étkezde, jóga- és kulturális központ), ahol Ian, a tulaj, Skóciából keveredett idáig; a Nilgiri’s szupermarket; Hortario háza, ahol reggelit és vacsorát adnak. Délután megpróbálok pénzt kinyerni automatából. Az ICICI banknál Trivandrum után másodszor is kudarcot vallok, végül a HDFC-nel sikerül. Felismerem a szabályt: a Visa-kártyám csak négybetűs nevű bankoknál működik. Délután bevásárlókörútra megyünk, berendezni az új odút. Függönynek olcsó selyemszárik, lepedőnek lunghi, plusz még ágytakarók, poharak, kések, stb. Végül kibérlünk egy robogót, mert az új sála Gokulamban, a város másik felén van.
+
+### 2003. január 14, kedd
+
+Kipróbálom az internetet Nagaratnánál – gyors (kábelmodemes) és olcsó, csomagban akár 8 rúpia óránként. Délután elmegyünk Gokulamba, regisztrálni magunkat Sharath-tal. Komoly kérdőívet kell kitölteni, fényképet mellékelve, és alá kell írni egy nyilatkozatot is, amiben többek között megígérjük, hogy nem tanulunk más tanárokkal ászanát és pránajámát, amíg Pattabhival vagy Sharath-tal tanulunk.
+
+Az új sála gyönyörű, márványpadlós, tömörfa ablak- és ajtókeretekkel, láthatólag nem sajnálták a pénzt (és volt miből – hja, az a csekély 26,900 rúpia (550 USD) koponyánként, amit az első hónapra lepengettünk…). 6.30-kor kezdünk, csütörtökon.
+
+### 2003. január 15, szerda
+
+Mosási veszteség. India válasza a Milka tehénre. Őrült spanyol szomszédaink.
+
+Reggel újból ászanagyakorlat otthon – az utolsó alkalom, egy jó darabig. Megcsinálok mindent amit tudok, és jól is megy. Megjöttek a mosásból a ruháim; irtózatosan koszosak voltak, a mosodás mondta is, hogy kétszer kellett kimosni őket. Most már-már tiszták. Csak a narancsszín lunghim szétszakadt a kezelés közben. Annyi baj legyen, 60 rúpiáért nem sír az ember (1 rúpia = 5 Ft), jó lesz még törlőrongynak.
+
+Ma van Pongal, a hindu újév, úgyhogy mindenhol édességekkel kínálnak minket, a teheneket pedig sárgára festik. Látunk is az úton egy frissen festett, oldószerszagú tehenet egy lámpaoszlophoz kikötve; nem látszik túl boldognak. Dehát a szentségnek ára van.
+Ebédre Stefan vendégeket hív, spanyol szomszédaink személyében. Boris chilei és meleg, Luria egy barcelonai leányzó. Teljesen őrültek, szenvedélyesek, színpadiasak, hangosak és elragadóak. Mindenki testvéreknek nézi őket, mert nem csak az arcuk, hanem a gesztusaik, a viselkedésük, a hanghordozásuk is döbbenetesen egyforma.
+
+### 2003. január 16, csütörtök
+
+Az első igazi Mysore gyakorlat. Pótreggeli Sushilával.
+A reggeli robogóút dermesztő. Magamra vettem minden felvehetőt, de nem elég. Bár korán érkezünk, az előszobában már kisebb csapat várakozik. Hét körül bejutunk mi is. A gyakorlat nagyon simán megy, sok az energia a teremben, hajlékony vagyok és laza – egészen Baddha Kónászanáig, amely után Sharath közli: „Baddha Konasana not correct, Shoulderstand!” Tehát a kovalami előrehaladás után most két lépés vissza.
+
+Utána reggeli Tinánál. Gokulamban pillanatnyilag ő az egyetlen lehetőség, ráadásul olcsó és finom. Emellett főzni is tanít, továbbá általános információforrás kiadó lakások és bármi egyéb ügyében.
+
+Odahaza Carol meginvitál egy pótreggelire és bemutat Sushilának. Sushila ajurvédikus masszőr, aki házhoz jön és még meg is etet. Az ételhordója tartalma háromnak is bőven elég lenne, úgyhogy Carol tőlem kér segítséget.
+
+### 2003. január 17, péntek
+
+Kabátvásárlás.
+
+Hidegebb van, mint tegnap. A gyakorlatom majdnem ugyanolyan jó, mint a tegnapi, a Baddha Kónászanában a padló egész közelinek tűnik, de nem eléggé (legalábbis Sharath számára nem). A Janu Sirsasana B-ben túlfeszítem a jobb térdemet, délutanra elég rendesen bedagad és fájni kezd. Még jó, hogy szombat szünnap.
+
+Délután elmegyek kabátot vásárolni. Egyik sem európai hímek méreteire készült, de a hajnali sötétségben amúgy sem az esztétikus megjelenés a fő szempont. Ha szűk, legalább nem fúj be alá a szél. Kapucnija is van, 150 rúpiáért igen tisztességes darab.
+
+### 2003. január 18, szombat
+
+Joseph ál-szülinapi bulija. Matracvásárlás. Isten hozta a klubban.
+
+Joseph szülinapi bulija a Southern Star hotelben, a medence mellett. Amint pohárköszöntőjében elmondja, voltaképpen nem is most van a születésnapja, de ez egy jó ürügy arra, hogy a hölgytársasággal megismerkedhessen. Szomszédunk Dimitris, egy kozmopolita görög, akivel igen izgalmas és szerteágazó beszélgetést folytatunk egész délután; a lányokra nem is jut időnk (bár nem így terveztük…).
+
+Este párna- és lepedővásárba indulunk. A Chamaraja Roadon egy sor bolt kínálatát nézzük végig, majd hosszú és élvezetes alku következik.
+A térdem még mindig fáj. Ugy tűnik, megváltottam belépőmet a Fájós Térdű Jógik Klubjába.
+
+### 2003. január 19, vasárnap
+
+A térddel nem jó cicózni.
+
+Reggel a lótuszülést kihagyom, de egyébként a térdem elég jól működik, szinte minden mást végigcsinálok. Ez hibának bizonyul: délutánra a térdem sokkal rosszabb állapotban van, mint előző nap. Tanulság, tanulság! Nick (közben ők is megérkeztek) nekem adja az árnikakrémét.
+A nap alvással és lazulással telik. Este összefutok Annie-val, meginvitál a Jaganmohan palotába, indiai klasszikus táncestre. Későn érkezünk, szerencsére, mert az első órában csak Kannada nyelvű beszédek és ceremóniák zajlanak. Utána jön a tánc. Újra meg kell állapítsam, nem az én műfajom. Elragadó az első tíz percben, de aztán kezdi zavarni az embert, hogy egy kukkot nem ért a szimbolikából. Itt egy történetet táncolnak el, de kellő előképzettség nélkül az embernek halvány gőze sincs arról, hogy mi is történik valójában.
+
+### 2003. január 20, hétfő
+
+Thai masszázs. Stefan ágynak esik.
+
+A térdem állapota rosszabbodott, ma már egy féllótuszt sem tudok megcsinálni. Nem is erőltetem, eső után köpönyeg. Délután thai masszázsra megyek Enzóhoz. Nagyon kellemes élmény. A thai masszázs valahol a shiatsu és a jóga között van. Sok nyújtas, jógapózok, de dolgozik a meridiánokkal is. Enzo elsőre elég brutális stílusú, hangos, szókimondó és igen határozott véleménye van a világ dolgairól. De a masszázs során kiderül, hogy nagyon kedves és melegszívű.
+
+Stefan napok óta náthás, estére már hőemelkedése is van, úgyhogy a másnapi gyakorlatot kihagyja.
+
+### 2003. január 21, kedd
+
+Riksahívás hajnalban. Kansa király uralkodása Orissában.
+
+Reggel egyedül indulok Gokulamba. Reggel 6-kor még nem egyszerű riksát találni, úgyhogy küldök egy apró kérést Istenhez. Amint kiérek a Double Tank Roadra, érkezik is egy riksa és még mielőtt megszólalnék, a sofőr kérdez: „Gokulam?” Ezt persze könnyen kitalálhatta a hátizsákomból antennaként kiálló jógamatracról.
+A gyakorlatom egészen féloldalas, a térdem nem áll jobban a tegnapinál. Délután nagyot alszom, aztán Stefannal beszélgetünk, többek között a kommunikációról. Hasznos visszajelzéseket kapok tőle a stílusomról és a hibáimról. Érdemes jobban használnom a szemkontaktust és nem próbálni túl sokat elmondani egyszerre. Este matracot vásárolunk. Stefan egy másodikat, a meglévő tetejére, én egy szélesebbet, mert a 80 cm nem elég. Mivel 210 cm hosszú matracot Indiában sehol nem tartanak, rendelek egyet, másnapra ígérik.
+A nap híre: Orissa állam egy városában tizedik napja tart egy vallási ünnep, amelynek során a város a legendabeli Kansa király uralma alá kerül. Kansa a Mahabharatából ismert Krishna (Vishnu isten egyik földi megtestesülése) nagybátyja volt, aki szülei korai halála után elbitorolta tőle a trónt. A király (akit egy helyi rendőrőrmester alakít már tízegynéhány éve) elefántháton, uralkodói pompával járja a várost. Ha valami rendellenességet vagy vétket észlel, a bűnösöket (akár a város vezetőit is) bírósága elé idézi, ahol példás büntetést szab ki rájuk. A fesztivál idejére az egész város Krisna szülővárosát, a közeli folyó pedig a szent Jamuna folyót alakítja. Az ünnepség tizenegyedik, utolsó napjan Krisna megérkezik, megöli a bitorlót és birtokba veszi örökségét. Az idei fesztivál egyik fénypontja volt, amikor Kansa király ünnepélyesen megnyitott egy informatikai vásárt, melynek során a résztvevőket felszólította, hogy terjesszék az Interneten is a vallási ünnep hírét.
+
+### 2003. január 22, szerda
+
+Stefan újra nyeregben. Guruji robotpilótán.
+
+A sofőröm meggyógyult, úgyhogy reggel nem kell riksát hívnom. A gyakorlatom végén, a híd közben Pattabhi megjelenik és felhúz álló helyzetbe, aztán végigcsinálja velem a hátrahajlásokat. Ennek még nem volna itt az ideje, mert nem csinálom a teljes első sorozatot, az öreg láthatólag robotpilótára állt. Egyébként is úgy tipeg fel-alá, mint egy felhúzós játékbaba, és néha nincs egészen jelen. Stefantól több napnyi gyakorlat után megkérdezte egyik reggel, hogy regisztrálta-e már magát. Arra egyáltalán nem emlékszik, hogy Stefan már többször tanult nála korábban. Mindenesetre azt, hogy egyáltalán eszébe jutott hátrahajlásokat csináltatni velem, jó jelnek veszem, mert ezek szerint a hidam nem lehet nagyon rossz.
+
+### 2003. január 23, csütörtök
+
+Kirándulás a folyóhoz. Madarak, tehenek és kígyók.
+A térdem mintha egy picivel jobb állapotban lenne, mint tegnap. Sharath, a mindennapos gyötrésem után Baddha Kónászanában, némileg elégedettnek látszik, és közli: „még egy hét”. A végén Guruji ismét megcsináltatja velem a hátrahajlásokat.
+
+Kirándulunk a Kaveri folyóhoz Stefannal, Anne Nuotióval és a barátjával, Kiével. Anne annak idején alaposan megsértődött rám, amikor rossz értékelést adtam a finn nyelvóráiról, de úgy látszik, mostanra megbocsátott. Kiéről kiderül, hogy egy menő finn rockzenekarban gitározik.
+
+Amint kiérünk Mysore-ból, az út igencsak göröngyös lesz; szegény robogónk megszenvedi a bukkanókat. De az út nem túl forgalmas, lehet nézelődni. Rizsföldek, tehenek, flamingók. Egy rövid időre rátérünk a Bangalore-i útra, ami viszont életveszélyes. Sűrű forgalom, buszok és teherautok süvítenek mindkét irányba. Szerencsére hamarosan egy mellékútra kanyarodunk és megérkezünk. A Kaveri vize nagyon alacsony, lépten-nyomon sziklák állnak ki a mederből. Gyönyörű, nyugodt környezet, délutáni sziesztaidő. A környék tele madarakkal: papagájok, jégmadarak és még Kie tudja csak, mi minden (gyakorlott madárleső lévén). Meglátogatjuk Stefan egy régi barátját, Yvette- et, egy öreg spanyol hölgyet, aki már évtizedek óta itt él. Egy fantasztikus öreg villában lakik, kétszáz éves kerttel körülvéve. Óriási mangó-, avokádó- és „jackfruit” fák, ráadásul szinte mind
+virágzik. A lépcső oldalán egy hatalmas bougainvilleabokor, talpig fehér szirmok felhőjében. Odébb a fák tövében néhány tehén hűsöl. Yvette organikus élelmiszert termeszt és hímzéseket készít. Valaha 300 varrónőnek adott munkát, ma már csak néhányan vannak. Nyugdíjat nem kap, ebből próbál megélni. Mivel a környéken ez az egyetlen vegyszermentes terület, nála nyüzsögnek a hangyák, bogarak, kígyók és békák. Beszélgetés közben, a lépcsőn ülve, zörgést hallok a bougainvillea alól. Aztán egyszercsak megpillantom a zaj okozóját, egy kicsi, vékony kígyó személyében, aki éppen besiklik egy lukba a lépcső alatt. Krait, mondja Yvette; az errefelé élő két mérges faj egyike, és közülük a veszélyesebb. A másik a kobra, ami jóval nagyobb. Volt egy kobrája is, a ház mellett élt egy odúban.
+A folyó itt egy sziklapadon folyik át, sok kis ágra szakadva, medencékben, keskeny csatornákban örvénylik. Kiváló hely fürdésre, napozásra egyaránt; ki is használjuk. Alkonyatkor hazaindulunk; az esti csúcsforgalom ideje, a levegő tele porral és szúnyogokkal.
+
+### 2003. január 24, péntek
+
+Első ebédem egyedül. Konferencia Gurujival. Jógi-party. Az angolszász társalgási szokások.
+
+A térdem lassan javulóban. Először életemben megcsinálom a Szupta Kurmászanát egyedül! A hídnál Guruji megint odaáll, de Sharath magyaráz neki valamit kannadául, gondolom azt, hogy én még nem tartok ott; úgyhogy végül békén hagy. De a hidam azért jól megy.
+
+Ebédre vendégeket hívunk, Annie és Anastasia, két amerikai leányzó személyében. És én főzök. Stefan sok szerencsét kíván és magamra hagy a konyhában, a dög. A menü fűszeres paradicsomleves zöldbabbal (zöldborsó helyett) és dhal, vörös rizzsel. A paradicsomleves végül is inkább főzelék lesz, de finom. A kókusztej kiválóan megédesíti. A dhal csípősebbre sikerül a kelleténél, de nem rossz. Összességében jól sikerül, mindenki dicséri, nem is hagynak sokat belőle.
+
+Délután konferencia Gurujival. Egy lány megkérdezi, jó-e a stretching az ászanagyakorlat előtt. Guruji édesdeden felkacag és a fejét rázza. Megtudjuk továbbá: napi 1 liter forralt tej (reggel-este fél liter) élet, erő, egészség. Hetente egyszer vagy többször vegyünk Castor olajfürdőt, ez lehűti és hajlékonnyá teszi a testet. Férfiak hetente háromszor, nők kétszer. Miért, kérdezi valaki. Mert a férfiak merevebbek, jön a válasz. Bejelentés: szanszkrit chanting órákat indítanak, hetente háromszor.
+
+Este party Clare & Philippa házában. Ismét alkalmunk nyílik tanulmányozni az angolszász társalgási szokásokat, amelyek eleinte komolyan megzavartak Kovalamban. Mostanra felismertem, hogy a hiba nem bennem van, egyszerűen ezek az emberek (tisztelet a kivételnek) így működnek. Nagyon kedvesek, mosolygósak, udvariasak, és sohasem vetemednek arra, hogy a felszínes csevegésen túlmenően bármi személyeset is mondjanak. Érzelmileg teljesen elérhetetlenek; semmilyen módon nem derül ki, hogy az udvarias mosoly mögött van-e emberi személy. Nem véletlen, hogy egyre inkább imádom a latin népeket.
+Stefant viszont kiszemeli magának egy apró, de energikus amerikai leányzó, Monique; benne is van ám latin vér jócskán, és szereti a tangót! Úgyhogy romantikus érzemények keringnek a levegőben, amikor hazaérünk.
+
+### 2003. január 25, szombat
+
+Reggel sort kerítek egy kis meditációra. Keresztbetett lábakkal nem tudok ülni, de a sarokülést elég jól bírja a térdem. Kísérleti jelleggel OM-ot zümmögök minden kilégzésre; jó érzéssel tölt el.
+
+Délután Stefan tangóleckét ad Monique-nak. Én prózaian takarítok.
+
+Este Carol és Shashi meginvitál egy éjszakai meditációra. Négy részből áll: pranajama, gyertyanézés, zenehallgatás és savászana. Shashival jólesik megölelni egymást. Szilárd és meleg az ölelése.
+
+### 2003. január 26, vasárnap
+
+A talpam közelről. Birkák, vadlovak és malacok az úton. Robogólecke.
+
+Reggel nagyon hosszú a sor, sok az új arc és láthatóan mindenki őrülten koránkelő. Fél nyolc is van már, mire bekerülünk. A Baddha Kónászanám alakulóban – érdekes élmeny egyre közelebbről tanulmányozni a talpamat.
+Hazafelé látunk egy robogón utazó birkát. A gazda ölében ül, rezignáltan nézelődve. Igazából azon sem lepődnék meg, ha ő vezetne. Errefelé minden lehetséges. Valamelyik nap vadlovak lófráltak az út közepén. Vadmalacok is vannak szép számmal, általában családostul.
+
+Az első robogóleckém. A környékbeli kis utcák jók a gyakorlásra, a főutakra egyelőre nem merészkedek ki. Lényeg, hogy most már ismerem a kezelőszerveket. A többi csak gyakorlás kérdése.
+
+A Mandalában újból csikkhegyek tornyosulnak: Ian visszaérkezett a szabadságáról Goából. Pikk Dámát játszunk Jenniferrel, Iannal és egy Rob nevű sráccal.
