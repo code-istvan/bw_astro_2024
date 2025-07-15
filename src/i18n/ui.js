@@ -41,6 +41,8 @@ export const ui = {
     tudnivalok: 'TUDNIVALÓK',
     kapcsolat: 'KAPCSOLAT',
     kapcsolatLink: '/kapcsolat',
+    galeria: 'GALÉRIA',
+    galeriaLink: '/galeria',
     blog: 'BLOG',
     blogLink: '/blog',
 
@@ -144,6 +146,8 @@ export const ui = {
     tudnivalok: 'INFORMATION',
     kapcsolat: 'CONTACT',
     kapcsolatLink: '/en/kapcsolat',
+    galeria: 'GALLERY',
+    galeriaLink: '/en/galeria',
     blog: 'BLOG',
     blogLink: '/en/blog',
 
