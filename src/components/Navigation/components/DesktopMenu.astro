@@ -79,11 +79,26 @@ const ctaItems = [
                                     <a href={item.link} class="desktop-menu__link">
                                         {item.label}
                                     </a>
+                                    {item.badge && <span class="menu-badge">{item.badge}</span>}
                                 </h3>
                             </li>
                         ))
                     }
                 </ul>
+
+                <!-- <ul>
+                    {
+                        fomenuItems.map((item) => (
+                            <li class="desktop-menu__dropdown-menu-item">
+                                <h3>
+                                    <a href={item.link} class="desktop-menu__link">
+                                        {item.label}
+                                    </a>
+                                </h3>
+                            </li>
+                        ))
+                    }
+                </ul> -->
             </div>
             <div class="desktop-menu__cta display-flex display-flex--direction-column">
                 {

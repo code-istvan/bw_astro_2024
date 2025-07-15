@@ -1,12 +1,12 @@
 @use '/src/sass/base/_colors' as colors;
 
 .menu-badge {
-  font-size: 0.65em;
+  font-size: 0.5em;
   color: colors.$color-brand-orange;
-  margin-left: 0.5em;
+  //   margin-left: 0.5em;
   vertical-align: top;
   position: relative;
-  top: -0.7em;
+  top: -0.4em;
   letter-spacing: 0.05em;
   text-transform: lowercase;
   font-weight: 600;
