@@ -27,9 +27,18 @@
 }
 
 @media (max-width: 576px) {
+  .gallery-card-link,
   .gallery-card {
-    max-width: 280px;
-    white-space: normal; // Így engedi a sortörést!
-    flex-wrap: wrap; // Plusz, ha a flexes tartalom törni akar!
+    width: 100%;
+    max-width: 100%;
+    display: block;
   }
 }
+
+// @media (min-width: 576px) {
+//   .gallery-card {
+//     max-width: 250px;
+//     white-space: normal;
+//     flex-wrap: wrap;
+//   }
+// }
