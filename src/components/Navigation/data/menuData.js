@@ -39,7 +39,7 @@ export const getMenuItemsFomenu = (translatePath, t) => [
     label: 'SHOP',
   },
   { link: translatePath(`/kapcsolat/`), label: t('kapcsolat') },
-  { link: translatePath(`/galeria/`), label: t('galeria') },
+  { link: translatePath(`/galeria/`), label: t('galeria'), badge: 'béta' },
 ];
 
 export const getMobileMenuHeader = (translatePath, t) => [
