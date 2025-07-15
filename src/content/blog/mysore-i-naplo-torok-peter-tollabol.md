@@ -209,7 +209,7 @@ Az új ing szuper, ing még sosem illett rám így. Emellett mindenki megdicsér
 
 Délután megemberelem magam és elindulok fotózni, Kovalam belső részén. Este újabb masszázs, meglepően jó és jóval kevésbé fájdalmas mint legutóbb. A combomban a csomók sokat oldódtak és a vállam is lazább.
 
-### december 21, szombat
+### 2002. december 21, szombat
 
 Samudra Beach Party. Az első Pincha Mayurasana. Coca-Cola mámorban fetrengő nyugati ifjúság. Naplemente iskolásokkal.
 
@@ -236,7 +236,7 @@ A nap híre: a keralai miniszterelnök, A. K. Antony, Kovalamba látogat, hogy e
 Délután pránajáma Linóval. Végre azonosítom Greget, akivel Budapesten csak telefonon tudtunk beszélni. Enyhén őrült fazon, de jó fej. Együtt vacsorázunk és lefektetjük a jövőbeli együttműködésünk alapjait.
 Roobentet este az iskolarendszerről faggatom. Elég hasonló a miénkhez: 4+4 év elemi, utána 3 év középiskola (high school), majd 2-3 év főiskola vagy egyetem. Roobent, mint kiderül, angol irodalom szakon végzett, a felesége pedig fizikus. De munkalehetőség Keralában kevés akad számukra.
 
-2002. december 24, kedd
+### 2002. december 24, kedd
 
 Látogatás Roobent falujában. Christina elrablása. Ebed banánlevélről, kézzel. A kókuszrost- kötélgyárban. Kéregető Mikulás.
 
@@ -450,9 +450,9 @@ A zsidónegyedben kasmíri árusok minden mennyiségben (zsidók már alig marad
 
 Beadom előhívatni a filmet. Vacsora a Four Foods-ban, keralai hal kókuszos curryvel. Desszertnek falooda (Mumbai-stilusu fagylalt, tesztaval). Mmmm. Utána a Bimbi’s-nél veszek burfit. Este fogmosáskor a fürdőszobában egy gekkóbébire leszek figyelmes a tükör felett. Legfeljebb három centi hosszú lehet, gyönyörű, mint egy kis ékszer. Legalább tíz másodpercig szemezünk egymással, aztán kimegyek a fényképezőgépemért, de mire visszatérek, már eltünt.
 
-### 2003. január 10, péntek\
+### 2003. január 10, péntek
 
-Ünnepség Siva templomában.\
+Ünnepség Siva templomában.
 
 Reggel elmegyek a Siva-templomhoz, felmérni a helyzetet az ünnepség délutáni kezdete előtt. Meglepetés: már tart a körmenet. Hét elefánt, gyönyörűen feldíszítve, és vagy negyven zenész alkotja a menetet. Az elefántok éppen békésen álldogálnak és jobbbra-balra himbálózva táplálkoznak, hajtóik halmozzák eléjük a tápot. A zene fülhasogató. Közel egy órába telik, míg a lassú tempójú kezdéstől fokozatosan felgyorsulnak és belehevülnek a zenészek. Dobosok és cintányérosok adják az alapot, hozzá oboások és kürtösök fokozzák a hangulatot és a ricsajt. A tempó dübörgése felett párzási lázban égő egzotikus madárrajként kering a kürtök primitív, kéthangú kvart-dallama. A csúcs után visszaállnak az eredeti lassú tempóra és a körmenet előrehalad egy saroknyit. Közben kint durrognak a petárdák. Szerencsére nálam van a kis kamera, benne egy majdnem teljes tekerccsel. De pótfilm nincs nálam, így a tekercs ellövése után eljövök. Utána elmegyek az előhívott filmekért és beadom az újat, meg egy másikat, ami tegnap benn maradt a hátizsákom alján. Hihetetlenül olcsó reggeli az Indian Coffee House-ban: paradicsomos omlett, pirítós vajjal, grape juice és chai 27 rúpiáért!
 Délután vissza a templomba. Lézengő emberek, az elefántok leszerszámozva, békésen fogyasztanak a fák alatt. Az újabb körmenet csak 6 óra felé kezdődik el és csak három elefánttal. A zenészek is mások, kevesebben és másfajta dobokon játszanak, oboások sincsenek. Viszont a zene jóval dinamikusabb és gyorsabb, a körmenet maga is gyorsabban halad előre. A zenészek és a tömeg minden megállónál extázisig fokozzák a hangulatot, az elefántok tetején is felállnak a fiúk és ritmusra rázzák hatalmas fehér és rózsaszín toll-legyezőiket. Amint beérnek a templom elé, a papok és a nép virágszirmokat szórnak a vezérlő elefántra és a fején hordozott Siva-képmásra. Utána körbejárnak a templom udvarán, miközben a hivők serege meggyújtja a templom falán elhelyezett ezernyi mécsest. A szürkületben, a mécsesek és ívlámpák fényében árad a tömeg az udvaron, középen imbolyognak az elefántok óriás szürke szigetei. A körmenet után a színpadon vallásos énekeket ad elő egy nagy csoport énekes, zenészekkel. Néhányat én is felismerek, mint az „Om Nama Sivaya” mantrát, velük is éneklem. Ezrek vesznek körbe, kisgyerekektől az öregekig minden korosztály képviselteti magát.
