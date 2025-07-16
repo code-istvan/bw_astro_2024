@@ -1,6 +1,7 @@
 ---
 import { useTranslations, useTranslatedPath } from '../../../i18n/utils';
 import { getMenuItemsJogaorak, getMenuItemsTudnivalok, getMenuItemsFomenu } from '../data/menuData';
+import Icons from '../../Icons/Icons.astro';
 import './_desktopMenu.scss';
 
 const language = Astro.url.pathname.includes('/en/') ? 'en' : 'hu';
@@ -26,19 +27,12 @@ const fomenuItems = getMenuItemsFomenu(translatePath, t);
                                         href={item.link}
                                         class={`desktop-menu__link${item.extraClass ? ` ${item.extraClass}` : ''}`}
                                     >
-                                        {item.label}
-                                        {/* {item.extraClass === 'highlighted' && (
-                                            <svg
-                                                width="18"
-                                                height="18"
-                                                viewBox="0 0 24 24"
-                                                style="margin-left:0.3em;vertical-align:middle;"
-                                                fill="#ff9800"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M15 6l-6 6 6 6" />
-                                            </svg>
-                                        )} */}
+                                        <span class="desktop-menu__label-and-icon">
+                                            {item.label}
+                                            {item.extraClass === 'highlighted' && (
+                                                <Icons name="ArrowLeft" color="orange" />
+                                            )}
+                                        </span>
                                     </a>
                                 </h3>
                             </li>

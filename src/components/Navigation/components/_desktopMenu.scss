@@ -26,9 +26,9 @@
 
   &__off-canvas-menu {
     display: grid;
-    grid-template-columns: 1fr repeat(3, minmax(auto, 230px)) 1fr;
+    grid-template-columns: 1fr repeat(3, minmax(auto, 260px)) 1fr;
     width: 100%;
-    gap: 90px;
+    gap: 50px;
   }
 
   &__item {
@@ -110,4 +110,10 @@
   .desktop-menu {
     display: none !important;
   }
+}
+
+.desktop-menu__label-and-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
 }
