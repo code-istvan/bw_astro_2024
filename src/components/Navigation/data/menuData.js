@@ -1,11 +1,12 @@
 export const getMenuItemsJogaorak = (translatePath, t) => [
-  { link: translatePath(`/orarend/`), label: t('orarend') },
+  { link: translatePath(`/orarend/`), label: t('orarend'), extraClass: 'highlighted' },
   { link: translatePath(`/arak/`), label: t('arak') },
   {
     link: translatePath(`/astanga-mysore-program/`),
     label: t('mysoreprogram'),
+    extraClass: 'highlighted',
   },
-  { link: translatePath(`/tanfolyam/`), label: t('tanfolyamok') },
+  { link: translatePath(`/tanfolyam/`), label: t('tanfolyamok'), extraClass: 'highlighted' },
   { link: translatePath(`/csapatunk/`), label: t('csapatunk') },
   {
     link: translatePath(`/vinyasza-jogairanyzatok/`),

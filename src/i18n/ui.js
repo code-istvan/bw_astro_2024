@@ -104,11 +104,11 @@ export const ui = {
     ekadasi: 'ÉKÁDASI',
 
     // CTA gombok
-    orarendCta: 'órarend',
+    orarendCta: 'Órarend',
     orarendCtaAriaLabel: 'Astanga jóga órarend gomb',
-    mysoreprogramCta: 'mysore-program',
+    mysoreprogramCta: 'Mysore-program',
     mysoreprogramCtaAriaLabel: 'Astanga mysore program gomb',
-    tanfolyamokCta: 'tanfolyamok',
+    tanfolyamokCta: 'Tanfolyamok',
     tanfolyamokCtaAriaLabel: 'Astanga jóga tanfolyamok gomb',
   },
 
@@ -205,11 +205,11 @@ export const ui = {
     ekadasi: 'EKADASI',
 
     // CTA buttons
-    orarendCta: 'schedule',
+    orarendCta: 'Schedule',
     orarendCtaAriaLabel: 'Ashtanga yoga schedule button',
-    mysoreprogramCta: 'mysore-program',
+    mysoreprogramCta: 'Mysore-program',
     mysoreprogramCtaAriaLabel: 'Ashtanga mysore program button',
-    tanfolyamokCta: 'courses',
+    tanfolyamokCta: 'Courses',
     tanfolyamokCtaAriaLabel: 'Ashtanga yoga courses button',
   },
 };
