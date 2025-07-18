@@ -10,10 +10,16 @@ const metadata = {
 
 <LoginLayout title={metadata.title} description={metadata.description}>
     <Matrix />
-    <dialog class="login-dialog" open>
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Jelszó" />
-    </dialog>
+    <div class="container">
+        <dialog class="login-dialog" open>
+            <!-- <h2>Ashtanga Matrix</h2> -->
+            <p class="mb-20px">Wake up, you are not alone...</p>
+            <!-- <p class="mb-20px">Welcome to the Ashtanga Matrix! Please log in to continue.</p> -->
+            <!-- <p>Kérjük, add meg a felhasználóneved és a jelszavad!</p> -->
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+        </dialog>
+    </div>
 </LoginLayout>
 
 <style lang="scss">
@@ -25,7 +31,7 @@ const metadata = {
         left: 50%;
         transform: translate(-50%, -50%);
         background: rgba(colors.$color-brand-orange, 0.85);
-        border-radius: 18px;
+        // border-radius: 2px;
         padding: 2.2rem 2.5rem 2rem 2.5rem;
         min-width: 320px;
         max-width: 90vw;
@@ -60,6 +66,12 @@ const metadata = {
     .login-dialog input[type='password']:focus {
         border-color: #ff8c00;
         background: rgba(255, 255, 255, 0.16);
+    }
+
+    .login-dialog h2,
+    .login-dialog p {
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        color: #222;
     }
 
     /* .login-dialog {
