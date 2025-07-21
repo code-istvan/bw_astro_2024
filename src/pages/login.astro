@@ -9,44 +9,88 @@ const metadata = {
 ---
 
 <LoginLayout title={metadata.title} description={metadata.description}>
-    <Matrix />
-    <div class="container">
-        <dialog class="login-dialog" open>
-            <!-- <h2>Ashtanga Matrix</h2> -->
-            <p class="mb-20px">Wake up, you are not alone...</p>
-            <!-- <p class="mb-20px">Welcome to the Ashtanga Matrix! Please log in to continue.</p> -->
-            <!-- <p>Kérjük, add meg a felhasználóneved és a jelszavad!</p> -->
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-        </dialog>
+    <div class="login-root">
+        <Matrix />
+        <div class="dialog-overlay">
+            <dialog class="login-dialog" open>
+                <p class="mb-20px align-left">Wake up Neo...</p>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="login-btn">Login</button>
+            </dialog>
+        </div>
     </div>
 </LoginLayout>
 
 <style lang="scss">
     @use '/src/sass/base/_colors' as colors;
 
+    // Gyökér overlay konténer
+    .login-root {
+        position: relative;
+        min-height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+
+        // Minden gyereke abszolút legyen, hogy egymásra feküdjenek
+        > * {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // A Matrix overlay hátul
+    .Matrix {
+        z-index: 1;
+    }
+
+    // A dialog overlay réteg, flex-szel középre igazítva
+    .dialog-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        pointer-events: none; // Így a dialog-overlay nem fogja el a klikkeket, csak a benne lévő dialog engedélyezett.
+    }
+
+    // Maga a dialog doboz
     .login-dialog {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(colors.$color-brand-orange, 0.85);
-        // border-radius: 2px;
-        padding: 2.2rem 2.5rem 2rem 2.5rem;
-        min-width: 320px;
+        position: relative;
+        pointer-events: all; // Engedélyezi az input mezőket
+        margin: 0;
+        min-width: 280px;
         max-width: 90vw;
+        width: 100%;
+        background: rgba(colors.$color-brand-orange, 0.85);
+        padding: 2.2rem 2.5rem 2rem 2.5rem;
         box-shadow:
             0 0 32px 4px rgba(255, 140, 0, 0.45),
             0 0 8px rgba(255, 140, 0, 0.95),
             0 0 4px #ff8c00;
         border: none;
-        z-index: 10;
+        border-radius: 8px; // Visszatettem, szebb :)
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: 'Fira Mono', 'Consolas', monospace;
     }
 
+    // Dialog feliratok
+    .login-dialog h2,
+    .login-dialog p {
+        font-family: inherit;
+        color: #222;
+    }
+
+    .login-dialog .align-left {
+        align-self: flex-start;
+        text-align: left;
+        width: 100%; // vagy auto, ha nem kell végig érjen
+    }
+
+    // Input mezők
     .login-dialog input[type='text'],
     .login-dialog input[type='password'] {
         width: 100%;
@@ -60,28 +104,54 @@ const metadata = {
         font-family: inherit;
         box-shadow: 0 0 8px #ffb84d70 inset;
         outline: none;
-        transition: border-color 0.2s;
+        transition:
+            border-color 0.2s,
+            background 0.2s;
     }
+
     .login-dialog input[type='text']:focus,
     .login-dialog input[type='password']:focus {
         border-color: #ff8c00;
         background: rgba(255, 255, 255, 0.16);
     }
 
-    .login-dialog h2,
-    .login-dialog p {
-        font-family: 'Fira Mono', 'Consolas', monospace;
-        color: #222;
+    // Reszponzivitás, hogy mobilon se lógjon ki
+    @media (max-width: 400px) {
+        .login-dialog {
+            min-width: unset;
+            width: 96vw;
+            padding: 1.2rem 0.5rem 1rem 0.5rem;
+        }
     }
 
-    /* .login-dialog {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: orange;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    } */
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login-btn {
+        margin-top: 0.5rem;
+        padding: 0.65rem 1rem;
+        border-radius: 7px;
+        border: 1px solid #ffb84d;
+        background: rgba(255, 255, 255, 0.12);
+        color: #222;
+        font-size: 1.1rem;
+        font-family: inherit;
+        box-shadow: 0 0 8px #ffb84d70 inset;
+        outline: none;
+        cursor: pointer;
+        transition:
+            border-color 0.2s,
+            background 0.2s,
+            color 0.2s;
+    }
+
+    .login-btn:hover,
+    .login-btn:focus {
+        border-color: #ff8c00;
+        background: rgba(255, 255, 255, 0.22);
+        color: #222;
+    }
 </style>
