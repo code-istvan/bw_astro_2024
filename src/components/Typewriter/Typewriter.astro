@@ -1,5 +1,5 @@
 ---
-// egy új, szűz .astro file, csak ennyi:
+const { textArray } = Astro.props;
 ---
 
 <div class="output" id="output-astro-demo">
@@ -49,9 +49,8 @@
     }
 </style>
 
-<script type="module" is:inline>
+<script type="module" is:inline define:vars={{ textArray }}>
     window.addEventListener('DOMContentLoaded', () => {
-        const textArray = ['Első kérdés?|Válasz első sor', 'Második kérdés?|Második válasz'];
         const output = document.getElementById('output-astro-demo');
         if (!output) return;
         const eHeader = output.querySelector('h1');

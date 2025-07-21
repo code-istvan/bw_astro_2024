@@ -14,13 +14,36 @@ const metadata = {
         <div class="dialog-overlay">
             <dialog class="login-dialog" open>
                 <p class="mb-20px align-left">Wake up Neo...</p>
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button type="submit" class="login-btn">Login</button>
+                <form id="login-form">
+                    <input type="text" name="identifier" placeholder="Username" />
+                    <input type="password" name="password" placeholder="Password" />
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
             </dialog>
         </div>
     </div>
 </LoginLayout>
+
+<script>
+    import { actions } from 'astro:actions';
+
+    const form = document.querySelector('form');
+
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const identifier = formData.get('identifier');
+        const password = formData.get('password');
+        const userData = new FormData();
+        userData.append('identifier', identifier);
+        userData.append('password', password);
+        const { data, error } = await actions.login(userData);
+
+        console.log({ identifier, password });
+        console.log({ data, error });
+    });
+</script>
 
 <style lang="scss">
     @use '/src/sass/base/_colors' as colors;

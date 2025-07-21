@@ -7,6 +7,7 @@ import { hirlevelEmailTemplate } from './templates/hirlevelEmailTemplate';
 import { newsletterEmailTemplate } from './templates/newsletterEmailTemplate';
 import { mysoreHuEmailTemplate } from './templates/mysoreHuEmailTemplate';
 import { mysoreEnEmailTemplate } from './templates/mysoreEnEmailTemplate';
+import { turso } from '../turso';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
@@ -26,6 +27,36 @@ const mysoreEmailTemplates = {
 };
 
 export const server = {
+  login: defineAction({
+    accept: 'form',
+    input: z.object({
+      identifier: z.string().min(1, 'Email or alias required'),
+      password: z.string().min(1, 'Password required'),
+    }),
+    handler: async ({ identifier, password }) => {
+      console.log('Login attempt with:', { identifier, password });
+      try {
+        const { rows } = await turso.execute('SELECT * FROM users WHERE (email = ? OR alias = ?) AND password = ?', [
+          identifier,
+          identifier,
+          password,
+        ]);
+        if (rows.length > 0) {
+          const user = rows[0];
+          delete user.password;
+          return {
+            success: true,
+            user: user,
+            message: 'Login success',
+          };
+        } else {
+          throw new Error('Wrong credentials');
+        }
+      } catch (error) {
+        throw new Error(error.message || 'Error while logging in');
+      }
+    },
+  }),
   contact: defineAction({
     input: z.object({
       name: z.string(),
