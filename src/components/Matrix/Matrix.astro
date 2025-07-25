@@ -1,32 +1,55 @@
 ---
+const {
+    style = 'sanskrit',
+    color = 'color-one', // lehet: 'color-one' vagy 'color-two'
+} = Astro.props;
 
+// Hex értékek előre definiálva
+const colorMap = {
+    'color-one': '#ff8c00', // colors.$color-brand-orange
+    'color-two': '#d8d8d8', // colors.$color-shades-lightGray
+};
+
+const resolvedColor = colorMap[color] || colorMap['color-one']; // fallback ha hibás prop jön
 ---
 
-<canvas id="canv"></canvas>
+<canvas id="canv" data-style={style} data-color={resolvedColor}></canvas>
 
-<script>
-    const canvas = document.getElementById('canv') as HTMLCanvasElement;
+<script is:inline>
+    const canvas = document.getElementById('canv');
     const ctx = canvas.getContext('2d');
+
+    const style = canvas.dataset.style;
+    const charColor = canvas.dataset.color;
 
     const w = (canvas.width = document.body.offsetWidth);
     const h = (canvas.height = document.body.offsetHeight);
     const cols = Math.floor(w / 20) + 1;
     const ypos = Array(cols).fill(0);
 
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = '#000'; // fix háttér
     ctx.fillRect(0, 0, w, h);
 
+    function getChar(style) {
+        if (style === 'binary') {
+            return Math.random() > 0.5 ? '0' : '1';
+        } else {
+            return String.fromCharCode(Math.floor(Math.random() * (0x097f - 0x0900 + 1)) + 0x0900);
+        }
+    }
+
     function matrix() {
-        ctx.fillStyle = '#0001';
+        ctx.fillStyle = '#0001'; // áttetsző háttérfrissítés
         ctx.fillRect(0, 0, w, h);
 
-        ctx.fillStyle = 'hsl(37.3, 90.4%, 51.2%)';
+        ctx.fillStyle = charColor;
         ctx.font = '16pt monospace';
 
         ypos.forEach((y, ind) => {
-            const text = String.fromCharCode(Math.floor(Math.random() * (0x097f - 0x0900 + 1)) + 0x0900);
+            const text = getChar(style);
             const x = ind * 20;
             ctx.fillText(text, x, y);
+
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
             else ypos[ind] = y + 20;
         });
