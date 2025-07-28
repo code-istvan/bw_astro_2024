@@ -13,7 +13,7 @@ const metadata = {
         <Matrix style="binary" color="color-two" />
         <div class="dialog-overlay">
             <dialog class="login-dialog" open>
-                <p class="mb-20px align-left">Wake up Neo...</p>
+                <h3 class="mb-20px align-left">Only Way Out is logIN</h3>
                 <form id="login-form">
                     <input type="text" name="identifier" placeholder="Username" />
                     <input type="password" name="password" placeholder="Password" />
@@ -84,16 +84,12 @@ const metadata = {
         pointer-events: all; // Engedélyezi az input mezőket
         margin: 0;
         min-width: 280px;
-        max-width: 90vw;
+        max-width: 400px;
         width: 100%;
-        background: rgba(colors.$color-brand-orange, 0.85);
+        background-color: colors.$color-shades-gray;
+        color: colors.$color-shades-black;
         padding: 2.2rem 2.5rem 2rem 2.5rem;
-        box-shadow:
-            0 0 32px 4px rgba(255, 140, 0, 0.45),
-            0 0 8px rgba(255, 140, 0, 0.95),
-            0 0 4px #ff8c00;
         border: none;
-        border-radius: 8px; // Visszatettem, szebb :)
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -119,13 +115,11 @@ const metadata = {
         width: 100%;
         margin-bottom: 1rem;
         padding: 0.65rem 1rem;
-        border-radius: 7px;
-        border: 1px solid #ffb84d;
-        background: rgba(255, 255, 255, 0.09);
+        border: 2px solid colors.$color-shades-black;
+        background-color: colors.$color-shades-gray;
         color: #222;
         font-size: 1.1rem;
         font-family: inherit;
-        box-shadow: 0 0 8px #ffb84d70 inset;
         outline: none;
         transition:
             border-color 0.2s,
@@ -134,7 +128,7 @@ const metadata = {
 
     .login-dialog input[type='text']:focus,
     .login-dialog input[type='password']:focus {
-        border-color: #ff8c00;
+        border-color: colors.$color-shades-black;
         background: rgba(255, 255, 255, 0.16);
     }
 
@@ -156,13 +150,11 @@ const metadata = {
     .login-btn {
         margin-top: 0.5rem;
         padding: 0.65rem 1rem;
-        border-radius: 7px;
-        border: 1px solid #ffb84d;
+        border: 2px solid colors.$color-shades-black;
         background: rgba(255, 255, 255, 0.12);
         color: #222;
         font-size: 1.1rem;
         font-family: inherit;
-        box-shadow: 0 0 8px #ffb84d70 inset;
         outline: none;
         cursor: pointer;
         transition:
@@ -173,8 +165,8 @@ const metadata = {
 
     .login-btn:hover,
     .login-btn:focus {
-        border-color: #ff8c00;
+        border-color: colors.$color-brand-orange;
         background: rgba(255, 255, 255, 0.22);
-        color: #222;
+        color: colors.$color-brand-orange;
     }
 </style>
