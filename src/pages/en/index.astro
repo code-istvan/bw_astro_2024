@@ -10,11 +10,15 @@ import Scholarship from '../../components/Sections/SectionScholarship.astro';
 import SocialProofs from '../../components/Sections/SectionSocialProofs.astro';
 import About from '../../components/Sections/SectionAbout.astro';
 
-const pageTitle = 'Welcome to Bandha Works';
+const metadata = {
+    title: 'Bandha Works Ashtanga Yoga Shala',
+    description:
+        'Discover Ashtanga Yoga at Bandha Works Yoga School! Ashtanga Mysore-style practice, beginner courses, and Vinyasa Krama yoga classes.',
+};
 ---
 
-<BaseLayout title={pageTitle}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={pageTitle} indexEn={true} />
+<BaseLayout title={metadata.title} description={metadata.description}>
+    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} indexEn={true} />
     <About />
     <Parampara />
     <MysoreProgram />
