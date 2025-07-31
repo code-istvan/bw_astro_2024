@@ -59,20 +59,32 @@ const text = translations[language] || translations.hu;
                 <p><strong>{text.details}</strong></p>
             </a>
         </div>
-        <div class="event-card__actions hidden-mobile">
-            <a href={eventApplicationLink} class="btn btn--primary--outline mt-20px" aria-label={text.applyAriaLabel}>
-                {text.apply}
-            </a>
-        </div>
+        {
+            eventApplicationLink && (
+                <div class="event-card__actions hidden-mobile">
+                    <a
+                        href={eventApplicationLink}
+                        class="btn btn--primary--outline mt-20px"
+                        aria-label={text.applyAriaLabel}
+                    >
+                        {text.apply}
+                    </a>
+                </div>
+            )
+        }
     </div>
 </div>
 
-<div class="event-card__actions hidden-desktop btn--width-full-mobile">
-    <a
-        href={eventApplicationLink}
-        class="btn btn--width-full-mobile btn--primary--outline mt-20px"
-        aria-label={text.applyAriaLabel}
-    >
-        {text.apply}
-    </a>
-</div>
+{
+    eventApplicationLink && (
+        <div class="event-card__actions hidden-desktop btn--width-full-mobile">
+            <a
+                href={eventApplicationLink}
+                class="btn btn--width-full-mobile btn--primary--outline mt-20px"
+                aria-label={text.applyAriaLabel}
+            >
+                {text.apply}
+            </a>
+        </div>
+    )
+}
