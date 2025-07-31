@@ -61,7 +61,7 @@ export default function Counter({ language = 'eng' }) {
   };
 
   return (
-    <>
+    <div className="counter">
       <span className="counter--no-wrap heading heading--3 font-weight-400 clr-brand-orange">
         {renderText(years, 'years')}
       </span>
@@ -75,6 +75,6 @@ export default function Counter({ language = 'eng' }) {
           , {renderText(days, 'days')}
         </span>
       )}
-    </>
+    </div>
   );
 }
