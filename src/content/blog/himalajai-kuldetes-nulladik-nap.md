@@ -25,13 +25,14 @@ imageMobil: ../../images/uploads/guru_1x1.jpeg
 Krishnamacharya végül hét és fél évig tanult ezen a vidéken:
 - 🕉️ pránájáma ,
 - 🕉️ csikitsza krama – a jóga terápiás alkalmazása ,
-- 🕉️ a Yoga Sutra és a Yoga Kuranta teljes memorizálása ,
+- 🕉️ a Jóga Szutra és a Joga Korunta teljes memorizálása ,
 - 🕉️ napi tanítás a gurujától — könyvek nélkül, élő hagyományban.
 
 A tanulás végén tanítója ezt mondta neki: > Most menj vissza a társadalomba, és élj egy családapa életét. Terjeszd a jóga üzenetét. Ez az a guru dakṣiṇā(tanítói ellenszolgáltatás), amit kérek tőled azért, amit tanítottam neked.
 
-### Ez nem egy tanfolyam volt. ### Ez beavatás volt — testbe, lélekbe, hagyományba.
+### Ez nem egy tanfolyam volt. 
+### Ez beavatás volt — testbe, lélekbe, hagyományba.
 
-Most mi is elindulunk. Nem ugyanazon az ösvényen, de ugyanabba az irányba. Nem tanítót keresünk, hanem **kapcsolatot a forrással**. Nem múltat, hanem **jelenlétet**.
+Most mi is elindulunk.  Nem ugyanazon az ösvényen, de ugyanabba az irányba. Nem tanítót keresünk, hanem **kapcsolatot a forrással**.  Nem múltat, hanem **jelenlétet**.
 
 [Kövessd az utazásunkat képekben is – kattints ide a galériához.](https://bandha.works/galeria/2025-ladakh-retreat/)
