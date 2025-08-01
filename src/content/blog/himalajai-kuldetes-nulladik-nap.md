@@ -33,3 +33,5 @@ A tanulás végén tanítója ezt mondta neki: > Most menj vissza a társadalo
 ### Ez nem egy tanfolyam volt. ### Ez beavatás volt — testbe, lélekbe, hagyományba.
 
 Most mi is elindulunk. Nem ugyanazon az ösvényen, de ugyanabba az irányba. Nem tanítót keresünk, hanem **kapcsolatot a forrással**. Nem múltat, hanem **jelenlétet**.
+
+[Kövessd az utazásunkat képekben is – kattints ide a galériához.](https://bandha.works/galeria/2025-ladakh-retreat/)
