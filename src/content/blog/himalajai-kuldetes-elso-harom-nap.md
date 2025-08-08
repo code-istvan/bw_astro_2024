@@ -41,4 +41,4 @@ Több napos utazás után csapatunk megérkezett és készen állunk.
 
 A kalandra, a tanításokra, és mindarra, amit a hegyek mutatnak majd.
 
-[Utazás képekben](https://bandha.works/galeria/2025-ladakh-retreat/) - az album folyamatosan bővűl
+[Utazás képekben](https://bandha.works/galeria/2025-ladakh-retreat/) - az album folyamatosan bővűl!
