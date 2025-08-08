@@ -28,7 +28,8 @@ Krishnamacharya végül hét és fél évig tanult ezen a vidéken:
 - 🕉️ a Jóga Szútra és a Jóga Korunta teljes memorizálása ,
 - 🕉️ napi tanítás a gurujától — könyvek nélkül, élő hagyományban.
 
-A tanulás végén tanítója ezt mondta neki: > Most menj vissza a társadalomba, és élj egy családapa életét. Terjeszd a jóga üzenetét. Ez az a guru dakṣiṇā(tanítói ellenszolgáltatás), amit kérek tőled azért, amit tanítottam neked.
+A tanulás végén tanítója ezt mondta neki:  
+> Most menj vissza a társadalomba, és élj egy családapa életét. Terjeszd a jóga üzenetét. Ez az a guru dakṣiṇā(tanítói ellenszolgáltatás), amit kérek tőled azért, amit tanítottam neked.
 
 ### Ez nem egy tanfolyam volt. 
 ### Ez beavatás volt — testbe, lélekbe, hagyományba.
