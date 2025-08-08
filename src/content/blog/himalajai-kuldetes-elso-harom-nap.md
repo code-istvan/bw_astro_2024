@@ -15,7 +15,7 @@ imageMobil: ../../images/uploads/kailash.jpg11-2x-upscale.jpeg
 ---
 ### Úton az Istenek Földjére
 
-Egész nap mozgásban vagyunk – repülők, várakozás, átszállások. **De ez az út már most a gyakorlás része.
+Egész nap mozgásban vagyunk – repülők, várakozás, átszállások. **De ez az út már most a gyakorlás része.**
 
 <div class="blog-island-section">Régen, aki gyógyulni vágyott, útra kelt – nem gyógyszert keresett, hanem egy helyet, ahol újra kapcsolódhatott önmagához.</div>
 
