@@ -16,7 +16,7 @@ imageMobil: ../../images/uploads/leh_mobil.jpg
 
 Az ízek, illatok meglepnek, a színek vibrálnak, az imák az égbe szállnak, és minden szélfuvallat emlékeztet: itt most tényleg máshol vagyunk.
 
-Egyelőre csak kapkodjuk a fejünket - és néha a levegőt -, de élvezzük minden pillanatát.  
+Egyelőre csak kapkodjuk a fejünket — és néha a levegőt —, de élvezzük minden pillanatát.  
 
 <div class="blog-island-section">Itt a hegyek között a légzés nemcsak élet, hanem iránytű is.  Mutatja, mikor lassíts, mikor állj meg, mikor engedd, hogy a táj beléd áramoljon.  Aki itt megtanul lélegezni, az bárhol megtalálja a középpontját – akár a matracon, akár az élet útvesztőiben.</div>
 
