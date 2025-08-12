@@ -12,7 +12,7 @@ date: 2025-08-11T23:35:00.000+05:30
 image: ../../images/uploads/leh_desktop.jpg
 imageMobil: ../../images/uploads/leh_mobil.jpg
 ---
-<h3 class="clr-brand-orange">3500 méteren a jóga új értelmet nyer – főleg, ha közben próbálsz levegőt venni.</h3>
+<h3 class="clr-brand-orange">3500 méteren már az első jóga is extrém sportnak számít – főleg, ha közben próbálsz levegőt venni.</h3>
 
 Az ízek, illatok meglepnek, a színek vibrálnak, az imák az égbe szállnak, és minden szélfuvallat emlékeztet: itt most tényleg máshol vagyunk.
 
