@@ -26,3 +26,7 @@ Ebben a gasztroklímában még a vadjeges, halálfejes kóla sem életbiztosít�
 A jóga itt már nem csak a matracon van — hanem abban, ahogy jársz, lélegzel, kitartasz.
 
 **Ez az Istenek földje — legyen veled a jóga ereje.**
+
+[Utazás képekben](https://bandha.works/galeria/) – folyamatosan bővül! Itt, a Himalájában az energia fordítottan arányos az internet sebességével. Néhány kép már megérkezett a Galériába, de a legtöbb még türelmesen várja a sorát. Amint a hálózat engedi, újabb és újabb pillanatokat osztunk meg.
+
+Őszintén szólva — nem is bánjuk, hogy lassú a net. Így a figyelmünk most ott van, ahol lennie kell: befelé.
