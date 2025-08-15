@@ -28,3 +28,7 @@ Innen dél felé követjük az Indus folyót. A víz lustán, de kérlelhetetlen
 „Igyál a hőből” – mondják a helyiek, de hozzáteszik: ne feledd, ezek a források nyugtalan erőkből táplálkoznak. Itt minden korty figyelmeztetés is.
 
 **A kerék forog. A víz forr. És mi, a Himalája útjain, egyszerre nézői és szereplői vagyunk ennek a történetnek.**
+
+[Utazás képekben](https://bandha.works/galeria/) – folyamatosan bővül! Itt, a Himalájában az energia fordítottan arányos az internet sebességével. Néhány kép már megérkezett a Galériába, de a legtöbb még türelmesen várja a sorát. Amint a hálózat engedi, újabb és újabb pillanatokat osztunk meg.
+
+Őszintén szólva — nem is bánjuk, hogy lassú a net. Így a figyelmünk most ott van, ahol lennie kell: befelé.
