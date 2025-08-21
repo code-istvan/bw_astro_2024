@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 language: Hungarian
 title: Himalájai küldetés - Az Élet kereke és a föld lélegzete
 titleBackground: false
