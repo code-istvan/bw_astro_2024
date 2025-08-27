@@ -25,4 +25,4 @@ A rendszeresség ad erőt, a jól felépített napirend ad stabilitást — ezek
 
 Végül rájövünk: minden út ugyanoda mutat — befelé. **Only way out is in**.
 
-[Utazás képekben –](https://bandha.works/galeria/) – **ÚJ képek!** Az album folyamatosan bővül: most is találsz benne fotókat azokról a hegyi ösvényekről, amelyek ezt az elmélkedést inspirálták.
+[Utazás képekben –](https://bandha.works/galeria/) **ÚJ képek!** Az album folyamatosan bővül: most is találsz benne fotókat azokról a hegyi ösvényekről, amelyek ezt az elmélkedést inspirálták.
