@@ -17,7 +17,7 @@ imageMobil: ../../images/uploads/road_mobil.jpeg
 
 A szádána a rendszeres, elkötelezett gyakorlás — számunkra az astanga jóga nyolcágú rendszere —, ahol a külső ágak folyamatos gyakorlása előkészíti a belső ágak megtapasztalását. Ide tartozik a ***jama*** (erkölcsi irányelvek), a ***nijama*** (önfegyelem és tisztaság), az ***ászana*** (testgyakorlás) és a ***pránájáma*** (tudatos légzés).
 
-Az astanga jóga szádánája tanítja meg, hogy az akaraterő a komfortzónán túli tapasztalatok rendszeres gyakorlásával épül fel, miközben tisztítja a testet és az elmét — így válik erősebbé minden külső akadálynál.
+Az astanga jóga szádánája tanítja meg, hogy az akaraterő a komfortzónán túli tapasztalatok rendszeres gyakorlásával épül fel, miközben tisztítja a testet és az elmét — így válik erősebbé minden külső akadálynál. Ebben a jógairányzatban a szádána egyben tapas is: lemondás a késői fekvésről vagy bizonyos nagyvárosi szociális szokásokról, azért, hogy korán kelve, még a nap indulása előtt legyen idő a minőségi, nyugodt gyakorlásra. A tapas hőt termel, amely „elégeti” a fejlődést hátráltató szennyeződéseket. Patandzsali szerint a gyakorlás akkor hozza meg gyümölcsét, ha nagy odaadással, megszakítás nélkül és hosszú időn át végezzük.
 
 <div class="blog-island-section"> A szádána megtanít arra, hogy a valódi változást nem a nagy ugrások hozzák, hanem a kitartó, rendszeres apró lépések. Ahogy a hegyek között is csak lépésről lépésre lehet haladni, úgy a mindennapokban is a kis, következetes szokások adják az erőt és az egyensúlyt. A rendszeresség ad erőt, a jól felépített napirend ad stabilitást — ezek együtt vezetnek el a spirituális átalakuláshoz.</div>
 
