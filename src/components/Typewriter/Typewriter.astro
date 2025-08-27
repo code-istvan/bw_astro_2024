@@ -1,4 +1,6 @@
 ---
+import './_typewriter.scss';
+
 const {
     textArray = [],
     id: propId,
@@ -16,44 +18,6 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
         <p></p>
     </div>
 </div>
-
-<style>
-    .typewriter-wrap {
-        display: block;
-        margin: 0 0 1rem 0;
-    }
-    .output {
-        font-family: 'Source Code Pro', monospace;
-        color: white;
-    }
-    .output.align-left {
-        text-align: left;
-    }
-    .output.align-center {
-        text-align: center;
-    }
-
-    .cursor::after {
-        content: '';
-        display: inline-block;
-        margin-left: 3px;
-        background-color: white;
-        animation: blink 0.5s infinite;
-        height: 16px;
-        width: 8px;
-        vertical-align: -2px;
-    }
-    @keyframes blink {
-        0%,
-        49% {
-            opacity: 1;
-        }
-        50%,
-        100% {
-            opacity: 0;
-        }
-    }
-</style>
 
 <script type="module" is:inline define:vars={{ textArray, uid, loopAll, loopAllDelay }}>
     // Globális vezérlő a sorba rendezéshez és a teljes kör ismétléséhez
