@@ -4,10 +4,21 @@
   display: block;
   margin: 0 0 1rem 0;
 }
+
 .output {
   font-family: 'Source Code Pro', monospace;
+  /* ALAP: fehér szöveg + kurzor-szín CSS változó */
   color: colors.$color-shades-white;
+  --tw-cursor-color: #{colors.$color-shades-white};
 }
+
+.output > p {
+  font-size: 1.25rem; /* vagy 1.5rem, ami kell */
+  font-weight: 900; /* telt */
+  /* ha variable fontot töltesz (fent igen), ez még pontosabb: */
+  font-variation-settings: 'wght' 900;
+}
+
 .output.align-left {
   text-align: left;
 }
@@ -15,16 +26,29 @@
   text-align: center;
 }
 
+/* VÁLTOZATOK: ha a konténeren ott a megfelelő class,
+   akkor a szöveg és a kurzor színe is együtt vált. */
+.output.cursor-orange {
+  color: colors.$color-brand-orange;
+  --tw-cursor-color: #{colors.$color-brand-orange};
+}
+.output.cursor-white {
+  color: colors.$color-shades-white;
+  --tw-cursor-color: #{colors.$color-shades-white};
+}
+
+/* Kurzor a CSS-változót használja, így együtt vált a szöveggel */
 .cursor::after {
   content: '';
   display: inline-block;
   margin-left: 3px;
-  background-color: colors.$color-shades-white;
+  background-color: var(--tw-cursor-color);
   animation: blink 0.5s infinite;
   height: 16px;
   width: 8px;
   vertical-align: -2px;
 }
+
 @keyframes blink {
   0%,
   49% {

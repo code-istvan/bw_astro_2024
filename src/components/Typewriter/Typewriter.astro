@@ -5,8 +5,9 @@ const {
     textArray = [],
     id: propId,
     align = 'left',
-    loopAll = false, // ÚJ: az egész oldal Typewriter-sorozata ismétlődjön?
-    loopAllDelay = 1000, // ÚJ: szünet a körök között (ms)
+    loopAll = false, // az egész oldal Typewriter-sorozata ismétlődjön?
+    loopAllDelay = 1000, // szünet a körök között (ms)
+    cursorColor = 'white', // ÚJ: 'white' | 'orange'
 } = Astro.props;
 
 // Egyedi azonosító minden példánynak
@@ -14,7 +15,11 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
 ---
 
 <div class="typewriter-wrap">
-    <div class={`output ${align === 'center' ? 'align-center' : 'align-left'}`} id={`output-${uid}`} data-tw-id={uid}>
+    <div
+        class={`output ${align === 'center' ? 'align-center' : 'align-left'} ${cursorColor === 'orange' ? 'cursor-orange' : 'cursor-white'}`}
+        id={`output-${uid}`}
+        data-tw-id={uid}
+    >
         <p></p>
     </div>
 </div>
@@ -23,10 +28,8 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
     // Globális vezérlő a sorba rendezéshez és a teljes kör ismétléséhez
     const TW = (function () {
         const g = typeof window !== 'undefined' ? window : {};
-        // Queue a futtatandó példányoknak (aktuális kör)
-        g.__twQueue = g.__twQueue || [];
-        // A példányok "starter" függvényei (fix sorrendben, teljes kör ismétléséhez)
-        g.__twStarters = g.__twStarters || [];
+        g.__twQueue = g.__twQueue || []; // aktuális kör feladatai
+        g.__twStarters = g.__twStarters || []; // fix sorrend a kör újraindításához
         g.__twRunning = g.__twRunning || false;
         g.__twLoopAll = g.__twLoopAll ?? false;
         g.__twLoopAllDelay = g.__twLoopAllDelay ?? 1000;
@@ -43,9 +46,7 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
             } else {
                 // Kör vége
                 if (g.__twLoopAll && g.__twStarters.length > 0) {
-                    // Teljes kör újratöltése kis szünettel
                     setTimeout(() => {
-                        // újra feltöltjük a queue-t az eredeti sorrendben
                         g.__twQueue.push(...g.__twStarters.map((fn) => fn));
                         runNext();
                     }, g.__twLoopAllDelay);
@@ -66,7 +67,6 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
         function registerStarter(fn) {
             g.__twStarters.push(fn);
         }
-
         function done() {
             runNext();
         }
@@ -80,16 +80,17 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
 
         const eParagraph = output.querySelector('p');
 
-        // Konfigurációk
-        const speedForward = 100; // gépelés tempó
-        const speedWait = 1000; // várakozás, mielőtt töröl
-        const speedBackspace = 25; // törlés tempó
-        const blinkPeriod = 500; // 0.5s: a CSS blink animáció periódusa
+        // tempók
+        const speedForward = 100; // gépelés
+        const speedWait = 1000; // vár, mielőtt töröl
+        const speedBackspace = 25; // törlés
+        const blinkPeriod = 500; // 0.5s: a CSS blink periódusa
+
         if (typeof TW.setLoopAll === 'function') {
             TW.setLoopAll(loopAll, loopAllDelay);
         }
 
-        // Egy példány futtatója (starter) — ezt tesszük be a queue-ba és a starters listába is
+        // Egy példány futtatója
         const starter = () => {
             let i = 0,
                 a = 0,
@@ -99,7 +100,7 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
                 const aString = textArray[a];
 
                 if (!isBackspacing) {
-                    // Vége a jelenlegi üzenetnek → vár, majd töröl
+                    // üzenet vége → vár, majd töröl
                     if (i >= aString.length) {
                         isBackspacing = true;
                         setTimeout(typeWriter, speedWait);
@@ -108,11 +109,11 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
 
                     const ch = aString.charAt(i);
 
-                    // PIPE: egymás utáni '|' jelek szünetet okoznak (a karakterek nem íródnak ki)
+                    // '|' → gondolkodó szünet (több '|' → hosszabb)
                     if (ch === '|') {
                         let pipes = 0;
                         while (aString.charAt(i + pipes) === '|') pipes++;
-                        i += pipes; // átugorjuk a pipe-okat
+                        i += pipes; // nem írjuk ki a '|' jeleket
                         if (!eParagraph.classList.contains('cursor')) eParagraph.classList.add('cursor');
                         setTimeout(typeWriter, pipes * blinkPeriod);
                         return;
@@ -123,17 +124,17 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
                     i++;
                     setTimeout(typeWriter, speedForward);
                 } else {
-                    // Törlés
+                    // törlés fázis
                     if (eParagraph.textContent.length > 0) {
                         eParagraph.textContent = eParagraph.textContent.slice(0, -1);
                         setTimeout(typeWriter, speedBackspace);
                     } else {
-                        // Következő üzenet ugyanebben a példányban
+                        // következő üzenet ugyanebben a példányban
                         isBackspacing = false;
                         i = 0;
                         a = (a + 1) % textArray.length;
 
-                        // Ha visszaértünk az elejére → példány teljesen kész
+                        // visszaértünk az elejére → példány kész
                         if (a === 0) {
                             eParagraph.classList.remove('cursor'); // kurzor le
                             TW.done(); // jöhet a következő példány
@@ -144,13 +145,13 @@ const uid = propId ?? `tw-${crypto.randomUUID?.() ?? Math.random().toString(36).
                 }
             }
 
-            // Indítás: kurzor fel, tiszta tartalom
+            // indulás: tiszta tartalom + kurzor fel
             eParagraph.textContent = '';
             eParagraph.classList.add('cursor');
             setTimeout(typeWriter, 300);
         };
 
-        // Regisztráljuk ezt a startert a teljes körhöz és az első futtatáshoz is beállítjuk
+        // regisztráljuk a kört és indítjuk
         TW.registerStarter(starter);
         TW.enqueue(starter);
     });
