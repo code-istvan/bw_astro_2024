@@ -1,0 +1,25 @@
+{
+  "HU": [
+    {
+      "id": 1,
+      "question": "Nem tudok eljönni mindhárom alkalomra. Csatlakozhatok így is az eseményhez?",
+      "answer": "Sajnos nem. A csoportdinamika és a Drámászana koncepciójának teljessége érdekében alapfeltétel, hogy minden résztvevő mindhárom alkalmon jelen legyen."
+    },
+    {
+      "id": 2,
+      "question": "Túl kevés a konkrétum a leírásban, szeretnék többet tudni az eseményről.",
+      "answer": "A Drámászana folyamata mindenkinél másként bontakozik ki, ezért nem adható róla teljesen pontos forgatókönyv. A leírás szándékosan hagy teret a bizonytalanságnak: a részvételhez szükség van nyitottságra, hogy megengedd magadnak a találkozást az ismeretlennel. Ami biztos: a kör tart, és végig kísérünk téged ebben a folyamatban."
+    },
+    {
+      "id": 3,
+      "question": "Részt vehetek az eseményen, ha pszichiátriai kezelés vagy gyógyszerszedés alatt állok?",
+      "answer": "A Drámászana mély önismereti folyamat, amely intenzív testi-lelki hatásokat hozhat felszínre. Fontos a belső stabilitás és az, hogy biztonságban tudj kapcsolódni önmagadhoz és a csoporthoz. Éppen ezért pszichiátriai gyógyszeres kezelés alatt állók számára ez az esemény nem ajánlott. Ha érintett vagy, kérlek most még ne csatlakozz, hanem keress olyan útvonalat, amely a jelen helyzetedben is támogat és biztonságot ad."
+    },
+    {
+      "id": 4,
+      "question": "Mi történik, ha az esemény során váratlanul nehéz vagy intenzív élmények kerülnek felszínre? Kapok-e utólag segítséget a szervezőktől?",
+      "answer": "A Drámászana lényege, hogy előhozza mindazt, ami eddig rejtve volt. Az, ami feljön, mindenkinél más: lehet fájdalmas, lehet felszabadító, lehet zavarba ejtő. Mi a teret és a kereteket adjuk, de a feldolgozás útja mindenkinek a saját felelőssége és feladata. A Drámászana nem pszichoterápia, és a folyamaton túl nem nyújtunk személyes kísérést."
+    }
+  ],
+  "EN": []
+}
