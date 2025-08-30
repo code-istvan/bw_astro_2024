@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/dramaszana_mobil.jpeg';
 import desktopImage from '../images/dramaszana_desktop.jpeg';
 import Typewriter from '../components/Typewriter/Typewriter.astro';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import dramaszanaFaqsData from '../data/dramaszanaFaq.json';
+import Istvan from '../images/uploads/teachers/istvan.png';
 
 const metadata = {
     title: 'DRÁMÁSZANA - ÁSZANA, LÉGZÉS, BANDHA, DRISTI, PRATYAHARA',
@@ -277,10 +279,24 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
                     </div>
                     <!-- Csoportvezető blokk -->
                     <div class="dramaszana-info__section dramaszana-info__section--teacher mt-20px">
-                        <p class="dramaszana-info__label body--bold">Csoportvezető</p>
-                        <p class="dramaszana-info__content body--bold">
-                            <a href="/szalai-istvan/" class="dramaszana-info__link clr-brand-orange">Szalai István</a>
-                        </p>
+                        <div class="dramaszana-info__content">
+                            <div class="dramaszana-teacher display-flex align-items-center gap-1rem">
+                                <Image
+                                    src={Istvan}
+                                    alt="Szalai István astanga jógaóktató"
+                                    class="lead-teacher__avatar-image avatar__image avatar__image--medium"
+                                />
+                                <div class="dramaszana-teacher__meta">
+                                    <a
+                                        href="/szalai-istvan/"
+                                        class="dramaszana-teacher__name clr-brand-orange body--bold"
+                                    >
+                                        <p class="body--bold">Szalai István</p>
+                                    </a>
+                                    <span>csoportvezető</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Ár blokk -->
                     <div class="dramaszana-info__section dramaszana-info__section--price mt-20px">
@@ -297,7 +313,7 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
                         >
                             Jelentkezem
                         </a>
-                        <p class="clr-shades-gray mt-20px">
+                        <p class="mt-20px">
                             Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
                             elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
                         </p>
