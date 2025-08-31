@@ -1,10 +1,13 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": false,
-  "ekadashi": false,
-  "date": "September 21, 2025",
-  "class": "mysorePractice",
   "teacher": "istvanJi",
-  "classTime": "6:30 - 9:00"
+  "classTime": "6:30 - 9:00",
+  "classTime2": "16:00 - 18:00",
+  "published": true,
+  "date": "September 21, 2025",
+  "teacher2": "istvanJi",
+  "fullmoon": false,
+  "class": "mysorePractice",
+  "class2": "astangaKonferecia",
+  "ekadashi": false
 }
