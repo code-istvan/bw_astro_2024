@@ -1,0 +1,23 @@
+@use '/src/sass/base/_colors' as colors;
+.dramaszana-info {
+  background-color: colors.$color-shades-darkGray;
+  padding: 2rem;
+}
+
+.dramaszana-info__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dramaszana-info__section {
+  padding-bottom: 1rem; /* egy kis belső tér a vonal felett */
+  margin-bottom: 1rem; /* tér a vonal alatt */
+  border-bottom: 1px solid colors.$color-shades-lightBlack; /* halvány szürke szeparátor */
+}
+
+.dramaszana-info__section:last-child,
+.dramaszana-info__section--apply {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

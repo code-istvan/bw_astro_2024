@@ -8,6 +8,7 @@ import Typewriter from '../components/Typewriter/Typewriter.astro';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import dramaszanaFaqsData from '../data/dramaszanaFaq.json';
 import Istvan from '../images/uploads/teachers/istvan.png';
+import '../sass/pages/_dramaszana.scss';
 
 const metadata = {
     title: 'DRÁMÁSZANA - ÁSZANA, LÉGZÉS, BANDHA, DRISTI',
@@ -271,6 +272,9 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
                     <div class="dramaszana-info__section dramaszana-info__section--header">
                         <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">2025. október 5-től</p>
                         <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
+                        <p class="dramaszana-info__subtitle clr-flag-notify body--bold">
+                            Már csak 4 szabad hely maradt az eseményre.
+                        </p>
                         <p class="dramaszana-info__subtitle clr-shades-gray">2025. október 5., 12., 19.</p>
                         <p class="dramaszana-info__subtitle clr-shades-gray">Vasárnaponként, 17:00–19:00</p>
                         <p class="dramaszana-info__subtitle body--bold mt-20px">
@@ -350,29 +354,3 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
         </div>
     </div>
 </BaseLayout>
-
-<style lang="scss">
-    @use '/src/sass/base/_colors' as colors;
-    .dramaszana-info {
-        background-color: colors.$color-shades-darkGray;
-        padding: 2rem;
-    }
-
-    .dramaszana-info__wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .dramaszana-info__section {
-        padding-bottom: 1rem; /* egy kis belső tér a vonal felett */
-        margin-bottom: 1rem; /* tér a vonal alatt */
-        border-bottom: 1px solid colors.$color-shades-lightBlack; /* halvány szürke szeparátor */
-    }
-
-    .dramaszana-info__section:last-child,
-    .dramaszana-info__section--apply {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-</style>
