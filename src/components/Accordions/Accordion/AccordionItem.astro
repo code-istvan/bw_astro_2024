@@ -1,0 +1,46 @@
+---
+const { uid } = Astro.props;
+if (!uid) throw new Error('AccordionItem.astro: "uid" prop kötelező.');
+---
+
+<div class="accordion__section__item">
+    <button
+        id={`${uid}-button`}
+        class="accordion"
+        data-accordion-toggle={uid}
+        aria-expanded="false"
+        aria-controls={`${uid}-content`}
+        type="button"
+    >
+        <div class="accordion-chevron">
+            <div class="accordion__title-container">
+                <!-- TITLE SLOT -->
+                <slot name="title" />
+            </div>
+            <div class="accordion__svg-container">
+                <svg
+                    class="accordion__icon"
+                    data-accordion-icon={uid}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M10.5 10V2H13.5V10H22V13H13.5V22H10.5V13H2V10H10.5Z" fill="orange"></path>
+                </svg>
+            </div>
+        </div>
+    </button>
+
+    <div
+        id={`${uid}-content`}
+        data-accordion-content={uid}
+        class="accordion__content"
+        role="region"
+        aria-labelledby={`${uid}-button`}
+    >
+        <div class="accordion__text">
+            <slot />
+        </div>
+    </div>
+</div>

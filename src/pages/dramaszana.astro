@@ -7,6 +7,8 @@ import desktopImage from '../images/dramaszana_desktop.jpeg';
 import Typewriter from '../components/Typewriter/Typewriter.astro';
 import AccordionFaq from '../components/Accordions/AccordionFaq.astro';
 import dramaszanaFaqsData from '../data/dramaszanaFaq.json';
+import Accordion from '../components/Accordions/Accordion/Accordion.astro';
+import AccordionItem from '../components/Accordions/Accordion/AccordionItem.astro';
 import Istvan from '../images/uploads/teachers/istvan.png';
 import '../sass/pages/_dramaszana.scss';
 
@@ -268,12 +270,74 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
             </div>
             <h3 class="font-family-primary clr-brand-orange mb-20px">Részvételi tudnivalók</h3>
             <div class="dramaszana-info mb-20px">
+                <h3 class="clr-flag-notify body--bold">
+                    Az októberi Drámászana önismereti műhelyre sajnos már nincs szabad helyünk.
+                </h3>
+            </div>
+
+            <!-- <div class="dramaszana-info mb-20px">
                 <div class="dramaszana-info__wrapper">
                     <div class="dramaszana-info__section dramaszana-info__section--header">
                         <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">2025. október 5-től</p>
                         <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
                         <p class="dramaszana-info__subtitle clr-flag-notify body--bold"></p>
                         <p class="dramaszana-info__subtitle clr-shades-gray">2025. október 5, 12, 19.</p>
+                        <p class="dramaszana-info__subtitle clr-shades-gray">Vasárnaponként, 17:00–19:00</p>
+                        <p class="dramaszana-info__subtitle body--bold mt-20px">
+                            Az eseményen maximum tíz résztvevő számára tudunk helyet biztosítani.
+                        </p>
+                    </div>
+                    <div class="dramaszana-info__section dramaszana-info__section--teacher mt-20px">
+                        <div class="dramaszana-info__content">
+                            <div class="dramaszana-teacher display-flex align-items-center gap-1rem">
+                                <Image
+                                    src={Istvan}
+                                    alt="Szalai István astanga jógaóktató"
+                                    class="lead-teacher__avatar-image avatar__image avatar__image--medium"
+                                />
+                                <div class="dramaszana-teacher__meta">
+                                    <a
+                                        href="/szalai-istvan/"
+                                        class="dramaszana-teacher__name clr-brand-orange body--bold"
+                                    >
+                                        <p class="body--bold">Szalai István</p>
+                                    </a>
+                                    <span>csoportvezető</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dramaszana-info__section dramaszana-info__section--price mt-20px">
+                        <p class="dramaszana-info__label body--bold">Részvételi díj</p>
+                        <p class="dramaszana-info__content clr-shades-gray">30.000 Ft</p>
+                    </div>
+                    <div class="dramaszana-info__section dramaszana-info__section--apply">
+                        <a
+                            href="https://shop.bandha.works/products/dramaszana"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn--primary--solid btn--width-full-mobile"
+                        >
+                            Jelentkezem
+                        </a>
+                        <p class="mt-20px clr-flag-notify body--bold">
+                            Az eseményre jelenleg nincs lehetőség jelentkezni, a csoport betelt.
+                        </p>
+                        <p class="mt-20px">
+                            Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
+                            elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="dramaszana-info mb-20px">
+                <div class="dramaszana-info__wrapper">
+                    <div class="dramaszana-info__section dramaszana-info__section--header">
+                        <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">2025. november 9-től</p>
+                        <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
+
+                        <p class="dramaszana-info__subtitle clr-shades-gray">2025. november 9, 16, 23.</p>
                         <p class="dramaszana-info__subtitle clr-shades-gray">Vasárnaponként, 17:00–19:00</p>
                         <p class="dramaszana-info__subtitle body--bold mt-20px">
                             Az eseményen maximum tíz résztvevő számára tudunk helyet biztosítani.
@@ -307,105 +371,51 @@ const huDramaszanaFaqs = dramaszanaFaqsData.HU;
                     </div>
                     <!-- Jelentkezem blokk -->
                     <div class="dramaszana-info__section dramaszana-info__section--apply">
-                        <!-- <a
+                        <a
                             href="https://shop.bandha.works/products/dramaszana"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="btn btn--primary--solid btn--width-full-mobile"
                         >
-                            Jelentkezem -->
-                    </div>
-                    <p class="mt-20px clr-flag-notify body--bold">
-                        Az eseményre jelenleg nincs lehetőség jelentkezni, a csoport betelt.
-                    </p>
-                    <p class="mt-20px">
-                        Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
-                        elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="dramaszana-info mb-20px">
-            <div class="dramaszana-info__wrapper">
-                <div class="dramaszana-info__section dramaszana-info__section--header">
-                    <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">2025. november 9-től</p>
-                    <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
-                    <p class="dramaszana-info__subtitle clr-flag-notify body--bold">
-                        Még 5 szabad hely maradt az eseményre.
-                    </p>
-                    <p class="dramaszana-info__subtitle clr-shades-gray">2025. november 9, 16, 23.</p>
-                    <p class="dramaszana-info__subtitle clr-shades-gray">Vasárnaponként, 17:00–19:00</p>
-                    <p class="dramaszana-info__subtitle body--bold mt-20px">
-                        Az eseményen maximum tíz résztvevő számára tudunk helyet biztosítani.
-                    </p>
-                </div>
-                <!-- Csoportvezető blokk -->
-                <div class="dramaszana-info__section dramaszana-info__section--teacher mt-20px">
-                    <div class="dramaszana-info__content">
-                        <div class="dramaszana-teacher display-flex align-items-center gap-1rem">
-                            <Image
-                                src={Istvan}
-                                alt="Szalai István astanga jógaóktató"
-                                class="lead-teacher__avatar-image avatar__image avatar__image--medium"
-                            />
-                            <div class="dramaszana-teacher__meta">
-                                <a href="/szalai-istvan/" class="dramaszana-teacher__name clr-brand-orange body--bold">
-                                    <p class="body--bold">Szalai István</p>
-                                </a>
-                                <span>csoportvezető</span>
-                            </div>
-                        </div>
+                            Jelentkezem
+                        </a>
+                        <p class="dramaszana-info__subtitle clr-flag-notify body--bold mt-20px">
+                            Még 5 szabad hely maradt az eseményre.
+                        </p>
+                        <p class="mt-20px">
+                            Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
+                            elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
+                        </p>
                     </div>
                 </div>
-                <!-- Ár blokk -->
-                <div class="dramaszana-info__section dramaszana-info__section--price mt-20px">
-                    <p class="dramaszana-info__label body--bold">Részvételi díj</p>
-                    <p class="dramaszana-info__content clr-shades-gray">30.000 Ft</p>
-                </div>
-                <!-- Jelentkezem blokk -->
-                <div class="dramaszana-info__section dramaszana-info__section--apply">
-                    <a
-                        href="https://shop.bandha.works/products/dramaszana"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn--primary--solid btn--width-full-mobile"
-                    >
-                        Jelentkezem
-                    </a>
-                    <p class="mt-20px">
-                        Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
-                        elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
-                    </p>
-                </div>
             </div>
-        </div>
 
-        <div class="mb-40px mt-40px">
-            <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
-            <div class="page-content__section page-content__section--faq mb-40px">
-                {
-                    huDramaszanaFaqs.length > 0 ? (
-                        huDramaszanaFaqs.map((faq) => (
-                            <AccordionFaq
-                                key={faq.id}
-                                id={`accordion-${faq.id}`}
-                                Egyedi
-                                ID
-                                minden
-                                accordion
-                                elemhez
-                                className="accordion-title"
-                                faqs={[faq]}
-                                Egyedi
-                                kérdés-válasz
-                                átadása
-                            />
-                        ))
-                    ) : (
-                        <div>Nincs elérhető információ.</div>
-                    )
-                }
+            <div class="mb-40px mt-40px">
+                <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
+                <div class="page-content__section page-content__section--faq mb-40px">
+                    {
+                        huDramaszanaFaqs.length > 0 ? (
+                            huDramaszanaFaqs.map((faq) => (
+                                <AccordionFaq
+                                    key={faq.id}
+                                    id={`accordion-${faq.id}`}
+                                    Egyedi
+                                    ID
+                                    minden
+                                    accordion
+                                    elemhez
+                                    className="accordion-title"
+                                    faqs={[faq]}
+                                    Egyedi
+                                    kérdés-válasz
+                                    átadása
+                                />
+                            ))
+                        ) : (
+                            <div>Nincs elérhető információ.</div>
+                        )
+                    }
+                </div>
             </div>
         </div>
     </div>
