@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/dramaszana_mobil.jpeg';
+import desktopImage from '../../images/dramaszana_desktop.jpeg';
+import Istvan from '../images/uploads/teachers/istvan.png';
+
+const metadata = {
+    title: 'DRAMASANA - ASANA, BREATH, BANDHA, DRISTI',
+    description:
+        'Drámasana is a process of self-discovery that, through asana, breathing, bandhas and drishti, helps to bring to the surface and understand deeper patterns and emotions.',
+};
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">
+        <div class="dramaszana-wrapper tight--desktop--container">
+            <div class="row mt-40px mb-20px">
+                <h3 class="clr-brand-orange">
+                    Ten of us together in the circle. We go to the place where you have no face, where there are no
+                    familiar words, no known gestures; we go beyond the comforting politeness. Ten of us together, yet
+                    each on our own. Because in the decisive moment, you are alone…
+                </h3>
+            </div>
+            <div class="row mb-20px">
+                <p>
+                    The event will be held in Hungarian, and we welcome applications from yoga practitioners who speak
+                    Hungarian at a communicative level.
+                </p>
+            </div>
+        </div>
+    </div></BaseLayout
+>
