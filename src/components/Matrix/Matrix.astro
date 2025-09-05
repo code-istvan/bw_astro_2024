@@ -1,59 +1,114 @@
 ---
+// Matrix.astro
 const {
-    style = 'sanskrit',
-    color = 'color-one', // lehet: 'color-one' vagy 'color-two'
+    style = 'matrix', // 'matrix' | 'binary'
+    color = 'matrix-green', // 'color-one' | 'color-two' | 'matrix-green'
 } = Astro.props;
 
-// Hex értékek előre definiálva
 const colorMap = {
-    'color-one': '#ff8c00', // colors.$color-brand-orange
-    'color-two': '#d8d8d8', // colors.$color-shades-lightGray
+    'color-one': '#ff8c00', // brand orange
+    'color-two': '#d8d8d8', // light gray
+    'matrix-green': '#00ff41',
 };
 
-const resolvedColor = colorMap[color] || colorMap['color-one']; // fallback ha hibás prop jön
+const resolvedColor = colorMap[color] || colorMap['matrix-green'];
 ---
 
-<canvas id="canv" data-style={style} data-color={resolvedColor}></canvas>
+<!-- Font preload – a /public/fonts mappából szolgáljuk ki -->
+<link rel="preload" as="font" href="/fonts/matrix_code_nfi.ttf" type="font/ttf" crossorigin />
+
+<style is:global>
+    @font-face {
+        font-family: 'Matrix Code NFI';
+        src: url('/fonts/matrix_code_nfi.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+    }
+</style>
+
+<canvas id="canv" data-style={style} data-color={resolvedColor} style="display:block;width:100%;height:100%;"></canvas>
 
 <script is:inline>
     const canvas = document.getElementById('canv');
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: false });
 
-    const style = canvas.dataset.style;
+    const mode = canvas.dataset.style; // 'matrix' | 'binary'
     const charColor = canvas.dataset.color;
 
-    const w = (canvas.width = document.body.offsetWidth);
-    const h = (canvas.height = document.body.offsetHeight);
-    const cols = Math.floor(w / 20) + 1;
-    const ypos = Array(cols).fill(0);
+    const glyphSize = 20; // px
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
 
-    ctx.fillStyle = '#000'; // fix háttér
-    ctx.fillRect(0, 0, w, h);
+    let w, h, cols, ypos;
 
-    function getChar(style) {
-        if (style === 'binary') {
-            return Math.random() > 0.5 ? '0' : '1';
-        } else {
-            return String.fromCharCode(Math.floor(Math.random() * (0x097f - 0x0900 + 1)) + 0x0900);
+    function resize() {
+        const cssW = canvas.clientWidth || document.body.offsetWidth;
+        const cssH = canvas.clientHeight || document.body.offsetHeight;
+
+        w = canvas.width = Math.floor(cssW * dpr);
+        h = canvas.height = Math.floor(cssH * dpr);
+
+        cols = Math.floor(w / (glyphSize * dpr)) + 1;
+        ypos = Array(cols).fill(0);
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.textBaseline = 'top';
+
+        // első háttér
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+    }
+
+    resize();
+    window.addEventListener('resize', () => {
+        clearTimeout(window.__matrixResizeT);
+        window.__matrixResizeT = setTimeout(resize, 100);
+    });
+
+    // --- Karakterkészletek ---
+    const HALF_WIDTH_KATAKANA = Array.from('ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ');
+
+    function getCharMatrix() {
+        return HALF_WIDTH_KATAKANA[(Math.random() * HALF_WIDTH_KATAKANA.length) | 0];
+    }
+
+    function getCharBinary() {
+        // EREDETI egysoros bináris verzió (referenciának meghagyva):
+        // return Math.random() > 0.5 ? '0' : '1';
+        return Math.random() > 0.5 ? '0' : '1';
+    }
+
+    // betűtípus betöltés megvárása
+    async function ensureFont() {
+        try {
+            await document.fonts.load(`16pt "Matrix Code NFI"`);
+            await document.fonts.ready;
+        } catch (_) {
+            // fallback: monospace
         }
     }
 
-    function matrix() {
-        ctx.fillStyle = '#0001'; // áttetsző háttérfrissítés
+    function frame() {
+        // áttetsző „csóva”
+        ctx.fillStyle = 'rgba(0,0,0,0.06)';
         ctx.fillRect(0, 0, w, h);
 
         ctx.fillStyle = charColor;
-        ctx.font = '16pt monospace';
+        ctx.font = `16pt "Matrix Code NFI", monospace`;
 
         ypos.forEach((y, ind) => {
-            const text = getChar(style);
-            const x = ind * 20;
-            ctx.fillText(text, x, y);
+            const ch = mode === 'binary' ? getCharBinary() : getCharMatrix();
+            const x = ind * glyphSize;
+            ctx.fillText(ch, x, y);
 
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            else ypos[ind] = y + 20;
+            else ypos[ind] = y + glyphSize;
         });
     }
 
-    setInterval(matrix, 150);
+    (async function start() {
+        await ensureFont();
+        // 150 ms – mint az eredeti tempó
+        setInterval(frame, 150);
+    })();
 </script>
