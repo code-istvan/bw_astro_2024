@@ -48,6 +48,16 @@ const metadata = {
 <style lang="scss">
     @use '/src/sass/base/_colors' as colors;
 
+    /* görgetés letiltása ezen az oldalon */
+    html,
+    body {
+        height: 100%;
+    }
+    body.login-page {
+        overflow: hidden;
+        overscroll-behavior: none; /* kevésbé „ugrál” iOS-en */
+    }
+
     // Gyökér overlay konténer
     .login-root {
         position: relative;
