@@ -19,7 +19,7 @@ Utunk Wanla kolostorán keresztül vezetett, amely Ladakh egyik legrégebbike. A
 
 Ahogy átlépjük Zanszkár kapuját, olyan emberek fogadnak bennünket, akiknek életét ezek a hegyek formálták: arcukban a kitartás, mosolyukban a szívből fakadó melegség. Az ő egyszerű, mégis mély bölcsességük tanít arra, hogy a létezés ritmusa itt más: lassabb, természetesebb, összhangban a földdel, a széllel és az ég végtelenjével.
 
-A Himalája ezen eldugott völgye nemcsak a testet próbálja meg a magaslataival és útjaival, hanem a lelket is. Arra hív, hogy elengedjük mindazt, ami felesleges, és nyitott szívvel lépjünk be a csendbe. Mert Zanszkárban az ég közelsége emlékeztet arra, hogy mindannyian részei vagyunk a nagy egésznek: a földnek, az embereknek, a felhők táncának és a hegyek időtlen csendjének.
+<div class="blog-island-section">A Himalája ezen eldugott völgye nemcsak a testet próbálja meg a magaslataival és útjaival, hanem a lelket is. Arra hív, hogy elengedjük mindazt, ami felesleges, és nyitott szívvel lépjünk be a csendbe. Mert Zanszkárban az ég közelsége emlékeztet arra, hogy mindannyian részei vagyunk a nagy egésznek: a földnek, az embereknek, a felhők táncának és a hegyek időtlen csendjének.</div>
 
 Ez az érkezés nem csupán egy új táj felfedezése volt, hanem egy belső hazaérkezés is — oda, ahol a szív megtalálja a békéjét, és ahol a csendben felsejlik az örök út: az együttérzés, a jelenlét és a szabadság ösvénye.
 
