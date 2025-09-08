@@ -22,3 +22,5 @@ Ahogy átlépjük Zanszkár kapuját, olyan emberek fogadnak bennünket, akiknek
 A Himalája ezen eldugott völgye nemcsak a testet próbálja meg a magaslataival és útjaival, hanem a lelket is. Arra hív, hogy elengedjük mindazt, ami felesleges, és nyitott szívvel lépjünk be a csendbe. Mert Zanszkárban az ég közelsége emlékeztet arra, hogy mindannyian részei vagyunk a nagy egésznek: a földnek, az embereknek, a felhők táncának és a hegyek időtlen csendjének.
 
 Ez az érkezés nem csupán egy új táj felfedezése volt, hanem egy belső hazaérkezés is — oda, ahol a szív megtalálja a békéjét, és ahol a csendben felsejlik az örök út: az együttérzés, a jelenlét és a szabadság ösvénye.
+
+[Utazás képekben –](https://bandha.works/galeria/) **ÚJ képek!** Az album folyamatosan bővül: most is találsz benne fotókat azokról a hegyi ösvényekről, amelyek ezt az elmélkedést inspirálták.
