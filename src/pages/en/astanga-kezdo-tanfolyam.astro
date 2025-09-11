@@ -79,7 +79,7 @@ const hasznosOlvasmanyok = [
     },
 ];
 
-const huAktFaqs = aktFaqData.HU;
+const enAktFaqs = aktFaqData.EN;
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -91,121 +91,108 @@ const huAktFaqs = aktFaqData.HU;
         containerClass="container--tight-desktop"
     />
     <div class="container container--tight-desktop">
-        <h1 class="mt-40px mb-40px">Content will be coming here very soon</h1>
-        <!-- <div class="astanga-kezdo-tanfolyam">
-            <div class="row mt-40px">
-                <h3 class="clr-brand-orange mb-20px">
-                    <strong>
-                        Az astanga jóga gyakorlása hatékony és személyre szabott módszer, amely fizikai erőt,
-                        rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az
-                        oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes előrehaladásra.
-                    </strong>
-                </h3>
-                <p class="mb-20px">
-                    Az astanga szanszkrit szó jelentése nyolc ág, Patandzsali nyolclépcsős jógarendszerére utal.
-                    Patandzsali Maharishi feltehetőleg az i.e. 2. században élt nagy indiai bölcs volt, aki tömör
-                    aforizmákban, nyolc lépcsőből álló módszert dolgozott ki a hatékony testi-lelki fejlődés érdekében.
-                </p>
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Ászanák: Az astanga jóga alapjai</h3>
-                <p class="mb-20px">
-                    Az <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">astanga jóga</a>
-                    gyakorlását az ászanák elsajátításával kell kezdeni. Ezen speciális testhelyzetek rendszeres gyakorlásával
-                    elérhetjük, hogy testünk erős és rugalmas legyen, elménk nyugodt és kiegyensúlyozott, ami alapul szolgál
-                    majd az astanga jógarendszerében történő továbblépésre.{' '}
-                </p>
-                <Image
-                    src={AktMobilImage}
-                    alt="Astanga kezdő tanfolyam Budapest"
-                    class="image--visible-mobil mb-20px"
-                />
-                <Image src={AktDesktopImage} alt="Kezdő astanga jóga Budán" class="image--visible-desktop mb-20px" />
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Bevezetés az astanga jógába</h3>
-                <p class="mb-20px">
-                    Az astanga kezdő tanfolyamon a résztvevők megismerik a rendszer eredetét és elméleti hátterét.
-                    Betekintést nyernek a gyakorlás megkezdésének folyamatába, ami ebben a jógairányzatban az ászanák
-                    gyakorlásával indul, vinyásza rendszerben. A kezdő tanfolyamon a fő hangsúly (kb. 90%) az ászanák és
-                    a hozzájuk kapcsolódó technikák (pl. hangos légzés, bandhák) helyes és biztonságos elsajátításán
-                    van.
-                </p>
-                <h3 class="clr-brand-orange font-family-primary mb-20px">
-                    A nyolc alkalmas kezdő tanfolyam tematikája
-                </h3>
-                <!-- Itt kezdődik a kétoszlopos lista -->
-        <!-- <div class="tanfolyam-tematika-lista mb-20px">
-                    <div class="tanfolyam-tematika-oszlop unordered-list-style">
-                        <ul>
-                            {
-                                tematikaBal.map((item) => (
-                                    <li>
-                                        <p>
-                                            {item.text ? (
-                                                item.text
-                                            ) : (
-                                                <>
-                                                    {item.textBefore}
-                                                    <a href={item.link.url} class="link-enhanced link-orange">
-                                                        {item.link.text}
-                                                    </a>
-                                                    {item.textAfter}
-                                                </>
-                                            )}
-                                        </p>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    </div>
-                    <div class="tanfolyam-tematika-oszlop tematika__second-column unordered-list-style">
-                        <ul>
-                            {
-                                tematikaJobb.map((item) => (
-                                    <li>
-                                        <p>{item.text}</p>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    </div>
-                </div> -->
-        <!-- Itt végződik a kétoszlopos lista -->
-        <!-- <h3 class="clr-brand-orange font-family-primary mb-20px">
-                    A gyakorlás elmélyítése és személyre szabása
-                </h3>
-                <p class="mb-20px">
-                    A kezdő tanfolyam folytatása az <a href="/astanga-mysore-kurzus/" class="link-enhanced link-orange">
-                        astanga Mysore-kurzus
-                    </a>. Ezen a képzésen a résztvevők megtanulnak Mysore-stílusban, egyénileg, külső segítség nélkül,
-                    biztonságosan gyakorolni. Mindenkinek személyre szabjuk a gyakorlását, ami a leghatékonyabb
-                    fejlődési ütemet eredményezi. Ezek után a gyakorlók már nem lesznek, helyhez és időhöz kötve,
-                    bárhová "elvihetik" a gyakorlást, bármikor végezhetik.
-                </p>
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Gyakran ismételt kérdések</h3>
-                <div class="page-content__section page-content__section--faq mb-40px">
-                    {huAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
-                </div>
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Tanfolyami időpontok</h3>
-                <CourseList language="HU" courseType="Ashtanga beginner" />
-                <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
-
-                <h3 class="clr-brand-orange font-family-primary mb-20px">
-                    Hasznos olvasmányok az astanga-gyakorlásról
-                </h3>
-                <div class="unordered-list-style">
-                    <ul>
-                        {
-                            hasznosOlvasmanyok.map((link) => (
-                                <li>
-                                    <p>
-                                        <a href={link.link} class={link.classNames}>
-                                            {link.title}
-                                        </a>
-                                    </p>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+        <p class="clr-brand-orange mt-40px mb-20px">
+            <strong>Please note:</strong> Our courses are held in Hungarian only. We do not recommend these classes for non-Hungarian
+            speakers. If you're interested in English-language instruction, please inquire about private lessons via message.
+        </p>
+        <h3 class="clr-brand-orange mb-20px">
+            <strong>
+                The practice of Ashtanga yoga is an effective and personalized method that brings physical strength,
+                flexibility, and inner peace. The continuous progress it offers, together with the teacher-student
+                relationship, provides an opportunity for deeper understanding and personal growth.
+            </strong>
+        </h3>
+        <p class="mb-20px">
+            The Sanskrit word "Ashtanga" means "eight limbs," referring to Patanjali's eightfold system of yoga.
+            Patanjali Maharishi was a great Indian sage, who most likely lived in the 2nd century BCE, and composed
+            concise aphorisms outlining an eight-step method for effective physical and spiritual development.
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Asanas: The Foundation of Ashtanga Yoga</h3>
+        <p class="mb-20px">
+            The practice of <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">Ashtanga Yoga</a>
+            should begin with the study of the asanas. Through the regular practice of these special postures, the body becomes
+            strong and flexible, and the mind calm and balanced—providing the foundation for progressing further in the Ashtanga
+            yoga system.
+        </p>
+        <Image src={AktMobilImage} alt="Ashtanga beginner course Budapest" class="image--visible-mobil mb-20px" />
+        <Image src={AktDesktopImage} alt="Beginner Ashtanga Yoga in Buda" class="image--visible-desktop mb-20px" />
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Introduction to Ashtanga Yoga</h3>
+        <p class="mb-20px">
+            In the beginner Ashtanga course, participants are introduced to the origins and theoretical background of
+            the system. They gain insight into the process of starting the practice, which in this tradition begins with
+            the asanas, practiced within the vinyasa system. In the beginner course, the main focus (about 90%) is on
+            learning the correct and safe execution of the asanas and the related techniques (such as audible breathing
+            and bandhas).
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">
+            What You’ll Learn in the Eight-Session Beginner Course
+        </h3>
+        <div class="tanfolyam-tematika-lista mb-20px">
+            <div class="tanfolyam-tematika-oszlop unordered-list-style">
+                <ul>
+                    {
+                        tematikaBal.map((item) => (
+                            <li>
+                                <p>
+                                    {item.text ? (
+                                        item.text
+                                    ) : (
+                                        <>
+                                            {item.textBefore}
+                                            <a href={item.link.url} class="link-enhanced link-orange">
+                                                {item.link.text}
+                                            </a>
+                                            {item.textAfter}
+                                        </>
+                                    )}
+                                </p>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
-        </div> -->
+            <div class="tanfolyam-tematika-oszlop tematika__second-column unordered-list-style">
+                <ul>
+                    {
+                        tematikaJobb.map((item) => (
+                            <li>
+                                <p>{item.text}</p>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Deepening and Personalizing the Practice</h3>
+        <p class="mb-20px">
+            The continuation of the beginner course is the
+            <a href="/astanga-mysore-kurzus/" class="link-enhanced link-orange">Ashtanga Mysore course.</a> In this program,
+            participants learn to practice safely in the Mysore style—individually, without external guidance. Everyone’s
+            practice is personalized, which results in the most effective pace of progress. After this, practitioners are
+            no longer tied to a specific place or time; they can “take” the practice with them and do it anytime, anywhere.
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Frequently Asked Questions</h3>
+        <div class="page-content__section page-content__section--faq mb-40px">
+            {enAktFaqs.map((faq) => <AccordionFaq id={`accordion-akt-${faq.id}`} faqs={[faq]} />)}
+        </div>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Upcoming Course Dates</h3>
+        <CourseList language="EN" courseType="Ashtanga beginner" />
+        <Image src={AktBandhamiImage} alt="Astanga közösség 4eBudapest" class="mb-20px" />
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Recommended Readings on Ashtanga Practice</h3>
+        <div class="unordered-list-style mb-40px">
+            <ul>
+                {
+                    hasznosOlvasmanyok.map((link) => (
+                        <li>
+                            <p>
+                                <a href={link.link} class={link.classNames}>
+                                    {link.title}
+                                </a>
+                            </p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </div>
 </BaseLayout>
