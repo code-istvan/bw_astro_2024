@@ -2,6 +2,7 @@
 import EventCard from './EventCard.astro';
 import { getCollection } from 'astro:content';
 import type { ImageMetadata } from 'astro';
+import './_EventList.scss';
 
 // Add excludedEventTypes parameter with default empty array
 const {
@@ -39,10 +40,10 @@ const upcomingEvents = events
     .slice(0, maxEvents);
 ---
 
-<div class="mt-40px">
+<div class="mt-40px mb-40px">
     {
         upcomingEvents.map((event, index) => (
-            <div class="row mb-40px">
+            <div class="row">
                 <EventCard
                     title={language === 'en' && event.data.titleEnglish ? event.data.titleEnglish : event.data.title}
                     date={event.data.date}
@@ -56,7 +57,7 @@ const upcomingEvents = events
                     images={images}
                     language={language}
                 />
-                {index < upcomingEvents.length - 1 && <div class="separator-horizontal mt-40px" />}
+                {index < upcomingEvents.length - 1 && <div class="separator-horizontal event-card__separator" />}
             </div>
         ))
     }
