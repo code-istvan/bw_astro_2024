@@ -22,4 +22,4 @@ A falu határában a kolostor másfajta ritmust diktál. A chomo-k, a buddhista 
 
 Innen kanyarodik tovább a zanszkári út Stongdey és Karsha kolostorai felé, ahol új falak és régi imák várják a találkozást. Minden állomás új kapu, amelyen belépve egy kicsit mindig önmagunkhoz érkezünk közelebb.
 
-[Utazás képekben –](https://bandha.works/galeria/) **ÚJ képek!** Az album folyamatosan bővül: most is találsz benne fotókat azokról a hegyi ösvényekről, amelyek ezt az elmélkedést inspirálták.
+[Utazás képekben –](https://bandha.works/galeria/) Az album folyamatosan bővül: most is találsz benne fotókat azokról a hegyi ösvényekről, amelyek ezt az elmélkedést inspirálták.
