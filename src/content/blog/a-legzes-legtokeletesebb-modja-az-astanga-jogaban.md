@@ -11,8 +11,8 @@ author: István
 tags:
   - astangaelmélet
 date: 2020-12-30T12:30:00.000+01:00
-image: ../../images/uploads/desktop_img.jpg
-imageMobil: ../../images/uploads/mobil_img.jpg
+image: ../../images/uploads/sharathji_breating_desktop.jpeg
+imageMobil: ../../images/uploads/sharathji_breating_mobil.jpeg
 ---
 Egy különleges légzéstechnika a kulcsa a vinyásza rendszernek, amelyen az astanga jóga alapul. Pattabhi Jois sokszor hangsúlyozta ezt, Vāmana Risit idézve a Jóga Koruntából:
 
