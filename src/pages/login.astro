@@ -1,6 +1,7 @@
 ---
 import Matrix from '../components/Matrix/Matrix.astro';
 import LoginLayout from '../layouts/LoginLayout.astro';
+import '../sass/pages/_login.scss';
 
 const metadata = {
     title: 'LOGIN',
@@ -14,7 +15,7 @@ const metadata = {
         <div class="dialog-overlay">
             <dialog class="login-dialog" open>
                 <h3 class="mb-20px align-left">Only Way Out is logIN</h3>
-                <form id="login-form">
+                <form id="login-form" class="login-form">
                     <input type="text" name="identifier" placeholder="Username" />
                     <input type="password" name="password" placeholder="Password" />
                     <button type="submit" class="login-btn">Login</button>
@@ -27,156 +28,22 @@ const metadata = {
 <script>
     import { actions } from 'astro:actions';
 
-    const form = document.querySelector('form');
+    const form = document.querySelector('#login-form') as HTMLFormElement | null;
 
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const formData = new FormData(form);
+        const formData = new FormData(form as HTMLFormElement);
         const identifier = formData.get('identifier');
         const password = formData.get('password');
+
         const userData = new FormData();
         userData.append('identifier', identifier);
         userData.append('password', password);
+
         const { data, error } = await actions.login(userData);
 
         console.log({ identifier, password });
         console.log({ data, error });
     });
 </script>
-
-<style lang="scss">
-    @use '/src/sass/base/_colors' as colors;
-
-    /* görgetés letiltása ezen az oldalon */
-    html,
-    body {
-        height: 100%;
-    }
-    body.login-page {
-        overflow: hidden;
-        overscroll-behavior: none; /* kevésbé „ugrál” iOS-en */
-    }
-
-    // Gyökér overlay konténer
-    .login-root {
-        position: relative;
-        min-height: 100dvh;
-        width: 100vw;
-        overflow: hidden;
-
-        // Minden gyereke abszolút legyen, hogy egymásra feküdjenek
-        > * {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    // A Matrix overlay hátul
-    .Matrix {
-        z-index: 1;
-    }
-
-    // A dialog overlay réteg, flex-szel középre igazítva
-    .dialog-overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-        pointer-events: none; // Így a dialog-overlay nem fogja el a klikkeket, csak a benne lévő dialog engedélyezett.
-    }
-
-    // Maga a dialog doboz
-    .login-dialog {
-        position: relative;
-        pointer-events: all; // Engedélyezi az input mezőket
-        margin: 0;
-        min-width: 240px;
-        max-width: 400px;
-        width: 100%;
-        background-color: colors.$color-shades-gray;
-        color: colors.$color-shades-black;
-        padding: 2.2rem 2.5rem 2rem 2.5rem;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Fira Mono', 'Consolas', monospace;
-    }
-
-    // Dialog feliratok
-    .login-dialog h2,
-    .login-dialog p {
-        font-family: inherit;
-        color: #222;
-    }
-
-    .login-dialog .align-left {
-        align-self: flex-start;
-        text-align: left;
-        width: 100%; // vagy auto, ha nem kell végig érjen
-    }
-
-    // Input mezők
-    .login-dialog input[type='text'],
-    .login-dialog input[type='password'] {
-        width: 100%;
-        margin-bottom: 1rem;
-        padding: 0.65rem 1rem;
-        border: 2px solid colors.$color-shades-black;
-        background-color: colors.$color-shades-gray;
-        color: #222;
-        font-size: 1.1rem;
-        font-family: inherit;
-        outline: none;
-        transition:
-            border-color 0.2s,
-            background 0.2s;
-    }
-
-    .login-dialog input[type='text']:focus,
-    .login-dialog input[type='password']:focus {
-        border-color: colors.$color-shades-black;
-        background: rgba(255, 255, 255, 0.16);
-    }
-
-    // Reszponzivitás, hogy mobilon se lógjon ki
-    @media (max-width: 400px) {
-        .login-dialog {
-            min-width: unset;
-            width: 96vw;
-            padding: 1.2rem 0.5rem 1rem 0.5rem;
-        }
-    }
-
-    .login-form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .login-btn {
-        margin-top: 0.5rem;
-        padding: 0.65rem 1rem;
-        border: 2px solid colors.$color-shades-black;
-        background: rgba(255, 255, 255, 0.12);
-        color: #222;
-        font-size: 1.1rem;
-        font-family: inherit;
-        outline: none;
-        cursor: pointer;
-        transition:
-            border-color 0.2s,
-            background 0.2s,
-            color 0.2s;
-    }
-
-    .login-btn:hover,
-    .login-btn:focus {
-        border-color: colors.$color-brand-orange;
-        background: rgba(255, 255, 255, 0.22);
-        color: colors.$color-brand-orange;
-    }
-</style>

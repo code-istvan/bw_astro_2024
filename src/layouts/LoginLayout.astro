@@ -1,13 +1,10 @@
 ---
 import faviconSrc from '../images/favicon.png';
 import faviconSvgSrc from '../images/favicon.svg';
-import Header from '../components/Navigation/Header.astro';
-import Footer from '../components/Footer/Footer.astro';
 import { AstroFont } from 'astro-font';
 import Seo from '../components/Seo.astro';
 import '../sass/global.scss';
 
-// Props interface
 interface Props {
     title: string;
     description?: string;
@@ -20,8 +17,7 @@ interface Props {
     titleBackground?: boolean;
 }
 
-const url = Astro.url;
-const { title, isHomePage, description, noindex, language, canonicalLanguage, titleBackground } = Astro.props as Props;
+const { language = 'Hungarian', noindex } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -38,12 +34,12 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Favicon optimalizálva -->
+        <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href={faviconSvgSrc.src} />
         <link rel="apple-touch-icon" href={faviconSrc.src} />
         <link rel="manifest" href="/manifest.json" />
 
-        <!-- Font optimalizálva -->
+        <!-- Font -->
         <AstroFont
             config={[
                 {
@@ -53,7 +49,7 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
                     preload: true,
                     display: 'swap',
                     selector: 'body',
-                    fallback: 'serif', // Eltávolítottuk a preloadFiles tulajdonságot
+                    fallback: 'serif',
                 },
             ]}
         />
@@ -62,7 +58,8 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
         {noindex && <meta name="robots" content="noindex, nofollow" />}
     </head>
 
-    <body>
+    <!-- FIXEN login-page class -->
+    <body class="login-page">
         <div class="layout-content-wrapper">
             <slot />
         </div>
@@ -70,9 +67,15 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
 </html>
 
 <style>
+    html,
     body {
+        height: 100%;
+        width: 100%;
         margin: 0;
-        height: 100vh;
-        width: 100vw;
+    }
+
+    body.login-page {
+        overflow: hidden;
+        overscroll-behavior: none; /* kevésbé „ugrál” iOS-en */
     }
 </style>
