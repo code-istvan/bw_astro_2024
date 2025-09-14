@@ -37,8 +37,9 @@
   min-width: 240px;
   max-width: 400px;
   width: 100%;
-  background-color: colors.$color-shades-gray;
-  color: colors.$color-shades-black;
+  // background-color: colors.$color-shades-gray;
+  background-color: colors.$color-shades-black;
+  // color: colors.$color-shades-gray;
   padding: 2.2rem 2.5rem 2rem 2.5rem;
   border: none;
   display: flex;
@@ -47,11 +48,11 @@
   font-family: 'Fira Mono', 'Consolas', monospace;
 }
 
-.login-dialog h2,
-.login-dialog p {
-  font-family: inherit;
-  color: #222;
-}
+// .login-dialog h2,
+// .login-dialog p {
+//   font-family: inherit;
+//   color: #222;
+// }
 
 .login-dialog .align-left {
   align-self: flex-start;
@@ -60,56 +61,56 @@
 }
 
 /* Input mezők */
-.login-dialog input[type='text'],
-.login-dialog input[type='password'] {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.65rem 1rem;
-  border: 2px solid colors.$color-shades-black;
-  background-color: colors.$color-shades-gray;
-  color: #222;
-  font-size: 1.1rem;
-  font-family: inherit;
-  outline: none;
-  transition:
-    border-color 0.2s,
-    background 0.2s;
-}
+// .login-dialog input[type='text'],
+// .login-dialog input[type='password'] {
+//   width: 100%;
+//   margin-bottom: 1rem;
+//   padding: 0.65rem 1rem;
+//   border: 2px solid colors.$color-shades-black;
+//   background-color: colors.$color-shades-gray;
+//   color: #222;
+//   font-size: 1.1rem;
+//   font-family: inherit;
+//   outline: none;
+//   transition:
+//     border-color 0.2s,
+//     background 0.2s;
+// }
 
-.login-dialog input[type='text']:focus,
-.login-dialog input[type='password']:focus {
-  border-color: colors.$color-shades-black;
-  background: rgba(255, 255, 255, 0.16);
-}
+// .login-dialog input[type='text']:focus,
+// .login-dialog input[type='password']:focus {
+//   border-color: colors.$color-shades-black;
+//   background: rgba(255, 255, 255, 0.16);
+// }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+// .login-form {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+// }
 
-.login-btn {
-  margin-top: 0.5rem;
-  padding: 0.65rem 1rem;
-  border: 2px solid colors.$color-shades-black;
-  background: rgba(255, 255, 255, 0.12);
-  color: #222;
-  font-size: 1.1rem;
-  font-family: inherit;
-  outline: none;
-  cursor: pointer;
-  transition:
-    border-color 0.2s,
-    background 0.2s,
-    color 0.2s;
-}
+// .login-btn {
+//   margin-top: 0.5rem;
+//   padding: 0.65rem 1rem;
+//   border: 2px solid colors.$color-shades-black;
+//   background: rgba(255, 255, 255, 0.12);
+//   color: #222;
+//   font-size: 1.1rem;
+//   font-family: inherit;
+//   outline: none;
+//   cursor: pointer;
+//   transition:
+//     border-color 0.2s,
+//     background 0.2s,
+//     color 0.2s;
+// }
 
-.login-btn:hover,
-.login-btn:focus {
-  border-color: colors.$color-brand-orange;
-  background: rgba(255, 255, 255, 0.22);
-  color: colors.$color-brand-orange;
-}
+// .login-btn:hover,
+// .login-btn:focus {
+//   border-color: colors.$color-brand-orange;
+//   background: rgba(255, 255, 255, 0.22);
+//   color: colors.$color-brand-orange;
+// }
 
 @media (max-width: 400px) {
   .login-dialog {

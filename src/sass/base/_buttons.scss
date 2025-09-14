@@ -26,6 +26,10 @@
   }
 }
 
+.btn--width-full {
+  width: 100%;
+}
+
 .btn--plain--naked {
   background-color: transparent;
   color: colors.$color-shades-black;
@@ -173,6 +177,14 @@
 .btn--third--naked-orange {
   background-color: transparent;
   color: colors.$color-brand-orange;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn--third--naked-gray {
+  background-color: transparent;
+  color: colors.$color-shades-gray;
   font-weight: 600;
   padding-left: 0;
   padding-right: 0;

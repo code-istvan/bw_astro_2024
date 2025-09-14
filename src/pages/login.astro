@@ -1,6 +1,9 @@
 ---
 import Matrix from '../components/Matrix/Matrix.astro';
 import LoginLayout from '../layouts/LoginLayout.astro';
+import Input from '../components/Forms/Input/Input.astro';
+import IconButton from '../components/Button/IconButton.astro';
+import { actions } from 'astro:actions';
 import '../sass/pages/_login.scss';
 
 const metadata = {
@@ -10,16 +13,38 @@ const metadata = {
 ---
 
 <LoginLayout title={metadata.title} description={metadata.description}>
-    <div class="login-root container">
+    <div class="login-root">
         <Matrix style="matrix" color="color-one" />
         <div class="dialog-overlay container">
             <dialog class="login-dialog" open>
-                <h3 class="mb-20px align-left">Only Way Out is logIN</h3>
-                <form id="login-form" class="login-form">
-                    <input type="text" name="identifier" placeholder="Username" />
-                    <input type="password" name="password" placeholder="Password" />
-                    <button type="submit" class="login-btn">Login</button>
-                </form>
+                <h3 class="align-left">Only Way Out is logIN</h3>
+                <p class="mb-20px align-left clr-shades-gray">Please log in to your account to continue.</p>
+                <!-- Progressive enhancement: server-oldali submit alapból -->
+                <div class="input-wrapper">
+                    <form id="login-form" class="login-form" method="post" action={actions.login}>
+                        <div class="row gap-1rem">
+                            <div class="col-12-xs">
+                                <Input id="identifier" name="identifier" type="text" placeholder="Username" required />
+                            </div>
+                            <div class="col-12-xs">
+                                <Input id="password" name="password" type="password" placeholder="Password" required />
+                            </div>
+                            <div class="col-12-xs">
+                                <button type="submit" class="btn btn--primary--solid btn--width-full">LogIN</button>
+                            </div>
+                            <IconButton
+                                href="/"
+                                variant="btn--third--naked-gray"
+                                iconName="ArrowLeft"
+                                iconColor="lightGray"
+                                class="no-padding mt-20px back-button"
+                                ariaLabel="Vissza a főoldalra gomb"
+                            >
+                                Vissza a főoldalra
+                            </IconButton>
+                        </div>
+                    </form>
+                </div>
             </dialog>
         </div>
     </div>

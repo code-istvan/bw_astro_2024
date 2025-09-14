@@ -3,10 +3,11 @@ import Icons from '../Icons/Icons.astro';
 
 interface Props {
     href?: string;
-    variant?: 'primary' | 'secondary' | 'third' | 'third-naked-orange';
+    variant?: 'primary' | 'secondary' | 'third' | 'third-naked-orange' | 'btn--third--naked-gray';
     iconName: string;
     iconPosition?: 'left' | 'right';
     iconClass?: string;
+    iconColor?: string;
     class?: string;
     ariaLabel?: string;
 }
@@ -17,23 +18,24 @@ const {
     iconName,
     iconPosition = 'left',
     iconClass = '',
+    iconColor,
     class: className = '',
     ariaLabel,
 } = Astro.props;
 
 const baseClass = 'btn';
-const variantClass = variant ? `${baseClass}--${variant}` : '';
-const combinedClass = `${baseClass} ${variantClass} ${className}`.trim();
+const variantClass = variant ? (variant.startsWith('btn--') ? variant : `${baseClass}--${variant}`) : '';
+const combinedClass = [baseClass, variantClass, className].filter(Boolean).join(' ');
 ---
 
 {
     href ? (
         <a href={href} class={combinedClass} aria-label={ariaLabel}>
-            {iconPosition === 'left' && <Icons name={iconName} class={iconClass} />}
+            {iconPosition === 'left' && <Icons name={iconName} class={iconClass} color={iconColor} />}
             <span class="btn-content">
                 <slot />
             </span>
-            {iconPosition === 'right' && <Icons name={iconName} class={iconClass} />}
+            {iconPosition === 'right' && <Icons name={iconName} class={iconClass} color={iconColor} />}
         </a>
     ) : (
         <button type="button" class={combinedClass} aria-label={ariaLabel}>
