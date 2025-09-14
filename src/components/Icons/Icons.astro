@@ -31,10 +31,11 @@ interface Props {
     name: string;
     color?: string;
     class?: string;
+    inheritColor?: boolean;
 }
 
-const { name, color = 'orange', class: className = '' } = Astro.props;
-const fillColor = ColorSwitch(color);
+const { name, color = 'orange', class: className = '', inheritColor = false } = Astro.props;
+const fillColor = inheritColor ? 'currentColor' : ColorSwitch(color);
 
 const icons = {
     ArrowLeft: `
@@ -42,16 +43,16 @@ const icons = {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="${color}"
+      fill="${fillColor}"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M23 13.0919L3 13.0919L3 10.0919L23 10.0919L23 13.0919Z"
-        fill="${color}"
+        fill="${fillColor}"
       />
       <path
         d="M13 18.9706L10.8787 21.0919L3.45406 13.6673L1.33274 11.546L3.45406 9.42466L10.8787 2.00004L13 4.12136L5.57538 11.546L13 18.9706Z"
-        fill="${color}"
+        fill="${fillColor}"
       />
     </svg>`,
     ChevronLeft: `
