@@ -1,14 +1,14 @@
 ---
 import Icons from '../Icons/Icons.astro';
 import Counter from '../Counter/Counter';
-import { useTranslations, getLangFromUrl } from '../../i18n/utils';
+import { useTranslations, getLangFromUrl } from '../../i18n';
 import './_sectionAbout.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const isEnglish = lang === 'en';
-const sectionAboutTraditionText = t('sectionAboutTraditionText')();
+const sectionAboutTraditionText = t('sectionAboutTraditionText');
 ---
 
 <section class="section-about">
