@@ -25,3 +25,5 @@ Minden kanyarban ott érezni a szellemét – a zabolátlan hullámokban és jeg
 Ez egy tánc a folyóval, ami soha nem nyugszik meg. Ahol a mozdulat és a lélegzet összeolvad a túlélés ösztönével.
 
 Ahol a víz nemcsak visz, hanem kérdez is: merre tartasz, mit cipelsz, és le tudod-e tenni?
+
+[Utazás képekben –](https://bandha.works/galeria/) Az album folyamatosan bővül.
