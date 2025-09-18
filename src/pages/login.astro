@@ -10,6 +10,9 @@ const metadata = {
     title: 'LOGIN',
     description: 'Ezen az oldalon tudsz bejelentkezni a Bandha Works jógastúdió oldalára.',
 };
+
+const result = Astro.getActionResult(actions.login);
+console.log('Result:', result);
 ---
 
 <LoginLayout title={metadata.title} description={metadata.description}>
@@ -55,7 +58,8 @@ const metadata = {
 <script>
     import { actions } from 'astro:actions';
 
-    const form = document.querySelector('#login-form') as HTMLFormElement | null;
+    const form = document.querySelector('#login-form');
+    console.log('Form:', form);
 
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -67,7 +71,7 @@ const metadata = {
         const userData = new FormData();
         userData.append('identifier', identifier);
         userData.append('password', password);
-
+        console.log('Hello2', userData);
         const { data, error } = await actions.login(userData);
 
         console.log({ identifier, password });
