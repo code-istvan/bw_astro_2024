@@ -1,6 +1,6 @@
 ---
 import { getMobileMenuHeader } from '../data/menuData.js';
-import { useTranslations, useTranslatedPath } from '../../../i18n/utils.js';
+import { useTranslations, useTranslatedPath } from '../../../i18n/index.ts';
 
 const currentUrl = Astro.url.pathname;
 const language = currentUrl.startsWith('/en/') || currentUrl === '/en' ? 'en' : 'hu';

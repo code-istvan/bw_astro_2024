@@ -1,8 +1,9 @@
-// Re-export everything from the TypeScript versions
+// Re-export everything from the TypeScript files
 export * from './ui';
 export * from './utils';
 
-// You can also create specific exports for easier imports
-export { getLangFromUrl, useTranslations, useTranslatedPath } from './utils';
-export { ui, defaultLang, showDefaultLang, languages } from './ui';
+// Export types from utils.ts for explicit access
+export type { TranslationFunction, PathTranslationFunction } from './utils';
+
+// Export types from ui.ts for explicit access
 export type { SupportedLanguage, UITranslations, Language, Languages, UI } from './ui';
