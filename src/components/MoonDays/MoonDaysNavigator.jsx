@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MoonDayCard from './MoonDayCard';
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/index.ts';
 
 const MoonDaysNavigator = ({ moonDays, lang }) => {
   const [currentMonthId, setCurrentMonthId] = useState(new Date().getMonth() + 1);

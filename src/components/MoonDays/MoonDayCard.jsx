@@ -1,6 +1,6 @@
 // MoonDayCard.jsx
 import React from 'react';
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/index.ts';
 import './_MoonDayCard.scss';
 
 const MoonDayCard = ({ data, lang }) => {
