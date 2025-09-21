@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import mysoreProgram from '../../images/mysore_program_bw.jpg';
-import { useTranslations, getLangFromUrl } from '../../i18n/utils';
+import { useTranslations, getLangFromUrl } from '../../i18n/index.ts';
 import './_sectionMysoreProgram.scss';
 
 const lang = getLangFromUrl(Astro.url);
