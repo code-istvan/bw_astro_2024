@@ -20,7 +20,7 @@ Itt meditált egykor Naropa, a híres indiai jógi és tudós, akinek jelenléte
 A kolostor falából forrás fakad, melyet gyógyítónak tartanak. A víz hideg, tiszta és szinte súlytalan, mégis hordoz valamit abból a belső munkából, amit századokon át gyakoroltak itt. A levegő vibrál — mintha az ima még mindig folyna, hangtalanul, de megszakítás nélkül.
 
 <div class="blog-island-section">
-<h5 class="clr-brand-orange">NAROPA – A határokon túli tanító</h5>
+<h4 class="body-bold">NAROPA – A határokon túli tanító</h4>
 
 Naropa nemcsak egy jógi vagy tudós volt – hanem beavatott utazó a forma és formlesség határán. A tanítvány, aki minden kényelmet, rangot és szellemi státuszt maga mögött hagyott, hogy a belső világ labirintusában találja meg a szabadságot. Ő nem a templomokban keresett válaszokat, hanem a paradoxonban: a vágyban rejlő elengedésben, a szenvedésben megmutatkozó tisztaságban, a formában rejtőző ürességben.
 
