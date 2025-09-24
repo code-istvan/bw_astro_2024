@@ -1,6 +1,6 @@
 ---
-import faviconSrc from '../images/favicon.png';
-import faviconSvgSrc from '../images/favicon.svg';
+// import faviconSrc from '../images/favicon.png';
+// import faviconSvgSrc from '../images/favicon.svg';
 import Header from '../components/Navigation/Header.astro';
 import Footer from '../components/Footer/Footer.astro';
 import { AstroFont } from 'astro-font';
@@ -38,10 +38,17 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Favicon optimalizálva -->
+        <!-- Favicon optimalizálva
         <link rel="icon" type="image/svg+xml" href={faviconSvgSrc.src} />
         <link rel="apple-touch-icon" href={faviconSrc.src} />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" /> -->
+
+        <!-- Favicons (served from /public) -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         <!-- Font optimalizálva -->
         <AstroFont
