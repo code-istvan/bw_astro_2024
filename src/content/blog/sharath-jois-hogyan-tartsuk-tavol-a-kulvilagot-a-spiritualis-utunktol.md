@@ -43,3 +43,7 @@ Ez segít majd a megfelelő alapok kialakításában, ami elengedhetetlen a spir
 Ez a keresés, kutatás a jóga finom része. Egyszerű, és nagyon jól érzed majd magad, miután meghallgattál egy gurut vagy egy tanárt. Ez egyfajta terápia, ami jobban inspirál, mint egy közösségi médiában eltöltött óra, ami csak fokozza a figyelem iránti vágyadat.
 
 A mai világban keresőként azt javaslom, hogy kapcsold ki a mobiltelefonodat. Próbálj meg elmenni egy ásramba vagy egy közeli shalába, ahol kapcsolódhatsz. Ragaszkodj a napi gyakorláshoz, és próbálj meg minél több jógikus tudást szerezni. A tudás tapasztalatból származik. Ha magad is elmélyülsz a jógában és eljutsz egy bizonyos szintre a spirituális úton, sok mindent megtapasztalhatsz, olyan dolgokat is, amiket egész életedben nem tapasztaltál, amikről nem is tudtál, mert túlságosan ragaszkodtál a külső tevékenységekhez.
+
+**Az írás eredetlieg a Sonima oldalán jelent meg.**  
+**Az írás eredeti címe:** [Sharath Jois on Keeping the External World From Interfering with Your Spiritual Path](https://www.sonima.com/yoga/distractions/) 
+**Fordította:** Dr. Kővári Zsuzsa
