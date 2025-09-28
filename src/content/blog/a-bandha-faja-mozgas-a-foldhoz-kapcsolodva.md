@@ -1,13 +1,13 @@
 ---
 published: true
 language: Hungarian
-title: 'A bandha „fája”: Mozgás a Földhöz kapcsolódva'
+title: "A bandha „fája”: Mozgás a Földhöz kapcsolódva"
 titleBackground: false
 canonical: https://spaciousyoga.com/the-tree-of-bandha/
 canonicalLanguage: English
-description:
-  A bandha alapvető mozgása két egymást kiegészítő vagy ellentétes mozgásminta együttes összekapcsolása. A földbe
-  gyökerezés, valamint a földből felfelé emelkedés és a földből kifelé terjeszkedés egymást kiegészítő erőiről
+description: A bandha alapvető mozgása két egymást kiegészítő vagy ellentétes
+  mozgásminta együttes összekapcsolása. A földbe gyökerezés, valamint a földből
+  felfelé emelkedés és a földből kifelé terjeszkedés egymást kiegészítő erőiről
   beszélhetünk.
 author: Zsuzsi
 tags:
@@ -401,6 +401,6 @@ különülünk el a környezetünktől (a környezettel szerves egységet alkotu
 elszigeteltségével, és inkább egy gazdag kapcsolati hálózattal átszőtt élő szervezet - azaz az élő és lélegző Földünk
 egészének - érzékelhető valóságát tapasztaljuk meg, annak részeként létezve.\
 
-**Az írás szerzője:** Iain Grysak, \[Spacious Yoga](https://spaciousyoga.com), Bali  
+**Az írás szerzője:** Iain Grysak, [Spacious Yoga](https://spaciousyoga.com), Bali  
 **Az írás eredeti címe:** The Tree of Bandha: Moving in Embodied Relationship with the Earth – by Iain Grysak  
 **Fordította és szerkesztette:** Dr. Kővári Zsuzsa
