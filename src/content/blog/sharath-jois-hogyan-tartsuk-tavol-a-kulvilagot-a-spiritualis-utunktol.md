@@ -12,7 +12,7 @@ description: Mi történik, ha a külvilág zajától és a közösségi média 
 author: Zsuzsi
 tags:
   - astangaelmélet
-date: 2025-09-28T15:04:00.000+02:00
+date: 2025-09-29T09:43:00.000+02:00
 image: ../../images/uploads/shrathji_article_desktop.jpeg
 imageMobil: ../../images/uploads/shrathji_article_mobil.jpeg
 ---
