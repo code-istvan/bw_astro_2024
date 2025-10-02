@@ -5,7 +5,7 @@ import path from 'path';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   adapter: netlify(),
   i18n: {
     defaultLocale: 'hu',
