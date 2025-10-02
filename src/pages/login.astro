@@ -6,6 +6,8 @@ import IconButton from '../components/Button/IconButton.astro';
 import { actions } from 'astro:actions';
 import '../sass/pages/_login.scss';
 
+export const prerender = false;
+
 const metadata = {
     title: 'LOGIN',
     description: 'Ezen az oldalon tudsz bejelentkezni a Bandha Works jógastúdió oldalára.',
@@ -13,6 +15,12 @@ const metadata = {
 
 const result = Astro.getActionResult(actions.login);
 console.log('Result:', result);
+console.log('Actions:', result?.error.message);
+if (result && !result.error) {
+    Astro.cookies.set('user-session', result.data.id);
+    console.log('User session set with ID:', result.data);
+    return Astro.redirect(`/dasboard`);
+}
 ---
 
 <LoginLayout title={metadata.title} description={metadata.description}>
@@ -32,6 +40,11 @@ console.log('Result:', result);
                             <div class="col-12-xs">
                                 <Input id="password" name="password" type="password" placeholder="Password" />
                             </div>
+
+                            <div class="col-12-xs">
+                                <p class="clr-red"></p>
+                            </div>
+
                             <div class="col-12-xs">
                                 <button type="submit" class="btn btn--primary--solid btn--width-full">LogIN</button>
                             </div>
@@ -57,6 +70,7 @@ console.log('Result:', result);
 
 <script>
     import { actions } from 'astro:actions';
+    import { navigate } from 'astro:transitions/client';
 
     const form = document.querySelector('#login-form');
     console.log('Form:', form);
@@ -73,8 +87,13 @@ console.log('Result:', result);
         userData.append('password', password);
         console.log('Hello2', userData);
         const { data, error } = await actions.login(userData);
+        console.log({ data, error });
+        if (error) document.querySelector('.clr-red').textContent = error.message;
 
-        console.log({ identifier, password });
+        if (!error) {
+            navigate('/dasboard');
+        }
+        console.log('1234', identifier, password);
         console.log({ data, error });
     });
 </script>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/elsoalkalom_mobil.jpg';
+import desktopImage from '../images/elsoalkalom_desktop.jpg';
+import firstTimeData from '../data/firstTime.json';
+
+const metadata = {
+    title: 'ELSŐ ALKALOM',
+    description:
+        'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
+};
+
+const huFirstTimeData = firstTimeData.HU;
+if (!Astro.cookies.has('user-session')) {
+    console.log('INVALID USER, REDIRECT');
+}
+---
+
+<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop">HELLO</div>
+</BaseLayout>

@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { defineAction } from 'astro:actions';
+import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { kapcsolatEmailTemplate } from './templates/kapcsolatEmailTemplate';
 import { contactEmailTemplate } from './templates/contactEmailTemplate';
@@ -34,7 +34,6 @@ export const server = {
       password: z.string().min(1, 'Password required'),
     }),
     handler: async ({ identifier, password }) => {
-      console.log('Login attempt with:', { identifier, password });
       try {
         const { rows } = await turso.execute('SELECT * FROM users WHERE (email = ? OR alias = ?) AND password = ?', [
           identifier,
@@ -46,14 +45,18 @@ export const server = {
           delete user.password;
           return {
             success: true,
+            id: crypto.randomUUID(),
             user: user,
             message: 'Login success',
           };
         } else {
-          throw new Error('Wrong credentials');
+          throw new Error('BAD YOGI - Invalid credentials');
         }
       } catch (error) {
-        throw new Error(error.message || 'Error while logging in');
+        throw new ActionError({
+          code: 'UNAUTHORIZED',
+          message: error.message ?? 'Wrong credentials',
+        });
       }
     },
   }),
