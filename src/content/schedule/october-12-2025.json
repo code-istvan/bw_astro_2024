@@ -2,12 +2,15 @@
   "newmoon": false,
   "teacher": "istvanJi",
   "classTime": "6:30 - 9:00",
-  "classTime2": "17:00 - 19:00",
+  "classTime2": "9:00 - 11:00",
+  "classTime3": "17:00 - 19:00",
   "published": true,
   "date": "October 12, 2025",
   "teacher2": "istvanJi",
   "fullmoon": false,
+  "teacher3": "istvanJi",
   "class": "mysorePractice",
-  "class2": "dramaSana",
+  "class2": "veganBrunch",
+  "class3": "dramaSana",
   "ekadashi": false
 }
