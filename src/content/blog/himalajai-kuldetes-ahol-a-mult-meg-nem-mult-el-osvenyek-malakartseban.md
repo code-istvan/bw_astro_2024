@@ -28,7 +28,7 @@ Ma, ahogy új utak vágják át a hegyeket, az erőd már nem katonákat őriz, 
 
 Az ég itt kiszámíthatatlan hirtelenséggel változik. Egyik pillanatban még éget a nap, a másikban már mennydörgés robban a sziklák között. Amikor a vihar minket is elért, egy kecskeólban találtunk menedéket — egy doksában, amelyet hajdan arra használtak, hogy megóvják benne a termést a falu állatainak falánkságától.
 
-Ahogy a tetőkön doboló eső moraja összekeveredett a kecskék bégetésével, világossá vált, milyen kevésen múlik minden: az emberi útjai, a túlélés, a hit. Ilyen menedékhelyeken nincs múlt és jövő — csak a jelen pillanat, amely egyszerre zord és könyörületes.
+Ahogy a tetőkön doboló eső moraja összekeveredett a kecskék mekegésével, világossá vált, milyen kevésen múlik minden: az emberi útjai, a túlélés, a hit. Ilyen menedékhelyeken nincs múlt és jövő — csak a jelen pillanat, amely egyszerre zord és könyörületes.
 
 Ezekben a hegyekben az ember nem hódító, csak vendég. És ha szerencséje van, egy időre elfogadják — nem azért, mert különleges, hanem mert csendben marad, és figyel.
 
