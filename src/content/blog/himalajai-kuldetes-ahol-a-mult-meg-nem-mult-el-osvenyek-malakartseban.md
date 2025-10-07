@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 language: Hungarian
 title: "Himalájai küldetés – Ahol a múlt még nem múlt el: ösvények Malakartséban"
 titleBackground: false
