@@ -12,12 +12,14 @@ date: 2025-10-06T16:21:00.000+02:00
 image: ../../images/uploads/budha_desktop.jpeg
 imageMobil: ../../images/uploads/budha_mobil.jpeg
 ---
-A Malakartse erődben még ma is hallani a Selyemút visszhangját — azt a világot, ahol egykor kereskedők találkoztak, árut, nyelveket és hitet cserélve egymással. Mi is ezen az ősi útvonalon haladtunk tovább, mintha nemcsak a tájat, hanem az idő rétegeit is gyalogolnánk visszafelé. Az ember ilyenkor óhatatlanul elcsendesedik: nem kirándulónak érzi magát, hanem valaminek a folytatásának.
+<h3 class="clr-brand-orange">A Malakartse erődben még ma is hallani a Selyemút visszhangját — azt a világot, ahol egykor kereskedők találkoztak, árut, nyelveket és hitet cserélve egymással.</h3>
+
+Mi is ezen az ősi útvonalon haladtunk tovább, mintha nemcsak a tájat, hanem az idő rétegeit is gyalogolnánk visszafelé. Az ember ilyenkor óhatatlanul elcsendesedik: nem kirándulónak érzi magát, hanem valaminek a folytatásának.
 
 Innen indult a régi Jumlam-trek is, a hírhedten hosszú és fáradságos út, amelyen az utazóknak százszor is át kellett gázolniuk a folyón, míg végül Leh-t elérték. Ma már új utak vágnak keresztül a hegyeken, de a völgyek mélyén még mindig ott kísért a régi világ ritmusa — azé, ahol az út nemcsak távolság, hanem beavatás volt.
 
-Egy magyar lábnyom a Himalájában
-Kőrösi Csoma Sándor, a „vándor tudós” 1819-ben indult útnak a Himalája felé, hogy felkutassa a magyarok eredetét. Zanszkaron és Ladakhon át jutott el a tibeti kolostorokig, ahol éveket töltött szent szövegek másolásával és fordításával. Munkájának gyümölcse lett az első tibeti–angol szótár és nyelvtan — olyan művek, amelyek máig alapkövei a tibeti tanulmányoknak.
+<div class="blog-island-section">
+EGY MAGYAR LÁBNYOM A HIMALÁJÁBAN<br>Kőrösi Csoma Sándor, a „vándor tudós” 1819-ben indult útnak a Himalája felé, hogy felkutassa a magyarok eredetét. Zanszkaron és Ladakhon át jutott el a tibeti kolostorokig, ahol éveket töltött szent szövegek másolásával és fordításával. Munkájának gyümölcse lett az első tibeti–angol szótár és nyelvtan — olyan művek, amelyek máig alapkövei a tibeti tanulmányoknak.</div>
 
 Megdöbbentő érzés ugyanazon ösvényen járni, amelyen ő is az első lépéseit tette Zanszkar felé. Az ember ilyenkor nemcsak utazik, hanem kapcsolódik — egy magyar történethez, amely egyszer már visszatalált ide.
 
