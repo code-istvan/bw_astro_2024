@@ -31,3 +31,5 @@ Az ég itt kiszámíthatatlan hirtelenséggel változik. Egyik pillanatban még 
 Ahogy a tetőkön doboló eső moraja összekeveredett a kecskék bégetésével, világossá vált, milyen kevésen múlik minden: az emberi útjai, a túlélés, a hit. Ilyen menedékhelyeken nincs múlt és jövő — csak a jelen pillanat, amely egyszerre zord és könyörületes.
 
 Ezekben a hegyekben az ember nem hódító, csak vendég. És ha szerencséje van, egy időre elfogadják — nem azért, mert különleges, hanem mert csendben marad, és figyel.
+
+[Utazás képekben –](https://bandha.works/galeria/) Az album folyamatosan bővül.
