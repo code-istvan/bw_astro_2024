@@ -5,8 +5,8 @@ import Icons from '../../Icons/Icons.astro';
 import './_desktopMenu.scss';
 
 const language = Astro.url.pathname.includes('/en/') ? 'en' : 'hu';
-const t = useTranslations(language);
-const translatePath = useTranslatedPath(language);
+const t = useTranslations?.(language) ?? ((key) => key);
+const translatePath = useTranslatedPath?.(language) ?? ((path) => path);
 
 const jogaorakItems = getMenuItemsJogaorak(translatePath, t);
 const tudnivalokItems = getMenuItemsTudnivalok(translatePath, t);

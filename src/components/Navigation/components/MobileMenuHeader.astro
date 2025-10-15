@@ -5,8 +5,8 @@ import { useTranslations, useTranslatedPath } from '../../../i18n/index.ts';
 const currentUrl = Astro.url.pathname;
 const language = currentUrl.startsWith('/en/') || currentUrl === '/en' ? 'en' : 'hu';
 
-const t = useTranslations(language);
-const translatePath = useTranslatedPath(language);
+const t = useTranslations?.(language) ?? ((key) => key);
+const translatePath = useTranslatedPath?.(language) ?? ((path) => path);
 const mobileMenuHeaderItems = getMobileMenuHeader(translatePath, t);
 ---
 

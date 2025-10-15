@@ -2,11 +2,11 @@
 import Icons from '../Icons/Icons.astro';
 import SocialIcons from '../Icons/SocialIcons.astro';
 import FooterDesktopMenu from './FooterDesktopMenu.astro';
-import { useTranslations, getLangFromUrl } from '../../i18n/index.ts';
+import { useTranslations } from '../../i18n/utils.ts';
 import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
 import './_footer.scss';
 
-const lang = getLangFromUrl(Astro.url);
+const { lang = 'hu' } = Astro.props;
 const t = useTranslations(lang);
 ---
 

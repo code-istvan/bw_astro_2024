@@ -22,6 +22,9 @@ interface Props {
 
 const url = Astro.url;
 const { title, isHomePage, description, noindex, language, canonicalLanguage, titleBackground } = Astro.props as Props;
+
+const currentUrl = Astro.url.pathname.toLowerCase();
+const lang = currentUrl.startsWith('/en/') ? 'en' : 'hu';
 ---
 
 <!doctype html>
@@ -111,6 +114,6 @@ const { title, isHomePage, description, noindex, language, canonicalLanguage, ti
                 document.body.appendChild(script);
             }
         </script>
-        <Footer />
+        <Footer lang={lang} />
     </body>
 </html>

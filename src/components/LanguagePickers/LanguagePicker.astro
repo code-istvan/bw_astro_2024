@@ -1,5 +1,5 @@
 ---
-import { languages } from '../../i18n';
+import { languages } from '../../i18n/index.ts';
 import { useTranslatedPath, type SupportedLanguage } from '../../i18n';
 import language_HU from '../../images/svg/language_HU.svg?raw';
 import language_EN from '../../images/svg/language_EN.svg?raw';
@@ -9,7 +9,7 @@ const currentLanguage = Astro.currentLocale;
 
 <div>
     {
-        Object.entries(languages).map(([langKey, { shortName }]) => {
+        Object.entries(languages ?? {}).map(([langKey, { shortName }]) => {
             const lang = langKey as SupportedLanguage; // Type assertion
 
             if (currentLanguage === lang) return;

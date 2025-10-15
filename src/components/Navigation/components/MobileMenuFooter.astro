@@ -6,8 +6,8 @@ import { getMobileMenuFooter } from '../data/menuData.js';
 const currentUrl = Astro.url.pathname;
 const language = currentUrl.startsWith('/en/') || currentUrl === '/en' ? 'en' : 'hu';
 
-const t = useTranslations(language);
-const translatePath = useTranslatedPath(language);
+const t = useTranslations?.(language) ?? ((key) => key);
+const translatePath = useTranslatedPath?.(language) ?? ((path) => path);
 const mobileMenuFooterItems = getMobileMenuFooter(translatePath, t);
 ---
 

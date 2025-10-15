@@ -1,17 +1,13 @@
 ---
 import Carousel from '../Carousel/Carousel.astro';
 import EventCardCarousel from '../Events/EventCardCarousel.astro';
-import { getLangFromUrl } from '../../i18n/index.ts';
 import { getCollection } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import './_sectionEvents.scss';
 
-const { eventType = [], maxEventsDesktop = 3, maxEventsMobile = 5, lang: propLang } = Astro.props;
+const { eventType = [], maxEventsDesktop = 3, maxEventsMobile = 5, lang = 'hu' } = Astro.props;
 const events = await getCollection('events');
 const images = await import.meta.glob<{ default: ImageMetadata }>('/src/images/uploads/**/*.{jpeg,jpg,png,gif}');
-
-// Használd a prop-ot, ha meg van adva, egyébként az URL-ből olvasd ki
-const lang = propLang || getLangFromUrl(Astro.url);
 
 // Belső fordítások
 const translations = {
