@@ -5,15 +5,19 @@ import mobileImage from '../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../images/elsoalkalom_desktop.jpg';
 import firstTimeData from '../data/firstTime.json';
 
+export const prerender = false;
+
 const metadata = {
     title: 'ELSŐ ALKALOM',
     description:
         'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
 };
 
+const token = await Astro.session?.get('user-session');
+
 const huFirstTimeData = firstTimeData.HU;
-if (!Astro.cookies.has('user-session')) {
-    console.log('INVALID USER, REDIRECT');
+if (!token) {
+    return Astro.redirect('/login');
 }
 ---
 

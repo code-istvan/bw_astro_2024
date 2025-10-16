@@ -33,7 +33,8 @@ export const server = {
       identifier: z.string().min(1, 'Email or alias required'),
       password: z.string().min(1, 'Password required'),
     }),
-    handler: async ({ identifier, password }) => {
+    handler: async ({ identifier, password }, context) => {
+      console.log('Login action called with:', { identifier, password });
       try {
         const { rows } = await turso.execute('SELECT * FROM users WHERE (email = ? OR alias = ?) AND password = ?', [
           identifier,
@@ -43,9 +44,12 @@ export const server = {
         if (rows.length > 0) {
           const user = rows[0];
           delete user.password;
+          const id = crypto.randomUUID();
+          context.session.set('user-session', id, { maxAge: 60 * 60 * 24 * 7, httpOnly: true }); // 1 week
+
           return {
             success: true,
-            id: crypto.randomUUID(),
+            id,
             user: user,
             message: 'Login success',
           };
