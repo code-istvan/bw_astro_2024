@@ -43,8 +43,8 @@ export const server = {
         ]);
         if (rows.length > 0) {
           const user = rows[0];
-          delete user.password;
-          const id = crypto.randomUUID();
+          // delete user.password;
+          const id = user.id;
           context.session.set('user-session', id, { maxAge: 60 * 60 * 24 * 7, httpOnly: true }); // 1 week
 
           return {

@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../images/elsoalkalom_desktop.jpg';
 import firstTimeData from '../data/firstTime.json';
+import { turso } from '../turso';
 
 export const prerender = false;
 
@@ -19,6 +20,21 @@ const huFirstTimeData = firstTimeData.HU;
 if (!token) {
     return Astro.redirect('/login');
 }
+
+console.log('User token:', token);
+
+const { rows } = await turso.execute(
+    `
+  SELECT * FROM users 
+  WHERE id = ? 
+  AND pass_yearly = 1 
+  AND pass_membership = 1 
+  AND pass_monthly = 1
+`,
+    [token]
+);
+
+const user = rows[0];
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -29,5 +45,11 @@ if (!token) {
         pageName={metadata.title}
         containerClass="container--tight-desktop"
     />
-    <div class="container container--tight-desktop">HELLO</div>
+    <div class="container container--tight-desktop">
+        HELLO
+        <h1>{user.name}</h1>
+        {user.pass_yearly && <span>✅ Pass Anual</span>}
+        {user.pass_membership && <span>✅ Membresía</span>}
+        {user.pass_monthly && <span>✅ Pass Mensual</span>}
+    </div>
 </BaseLayout>
