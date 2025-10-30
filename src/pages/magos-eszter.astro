@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/eszter_mobil.jpeg';
+import desktopImage from '../images/eszter_desktop.jpeg';
+
+const metadata = {
+    title: 'ESZTER',
+    description: 'Itt olvashatsz Magos Eszter jógaoktatóról, a Bandha Works jógaoktatójáról.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <p class="mb-20px mt-40px">
+            Foglalkozásomat tekintve nyelvész-irodalmár-esztéta vagyok, de szeretem magamat kalandorként jellemezni. Az
+            életem különböző szakaszaiban bekövetkezett változásokra, kivétel nélkül mindig egy pulzáló, belülről jövő
+            kíváncsiság indított, így volt ez a jóga esetében is.
+        </p>
+        <p class="mb-20px">
+            2013 és 2016 között heti 3 alkalommal hatha jógáztam, majd 2016-ban eljutottam Indiába, ahol megszületett
+            bennem az elhatározás, hogy mélyebben megértsem a bennem és körülöttem zajló eseményeket, így olyan
+            rendszert kerestem, ami ehhez a leginkább hozzásegíthet. Korábban ezt a nyelvek (spanyol, angol), az
+            irodalom és a filozófia biztosították számomra, de a Diwali napjaiban megismert varanasi halottégető
+            ghatokon egy zsigeri érzés azt tudatta velem, hogy a valódi tapasztalás nyelve a test-elmében rejtőzik –
+            ennek felfedése pedig csak rendszeres jógagyakorlás útján valósulhat meg. Ezt követően iratkoztam be a kezdő
+            astanga tanfolyamra a Bandha Worksbe.
+        </p>
+        <p class="mb-20px">
+            Tisztán emlékszem az első „chaturanga élményemre”, ahol ezt mondtam magamban: „azért remélem, ilyen nem
+            sokszor lesz benne”. Hasonlóan kiemelkedő pillanat volt a śīrṣāsana (fejenállás), amit a kurzuson
+            valamennyien együtt csináltunk – teljesen biztos voltam benne, hogy eldőlök és velem együtt mindenki más is,
+            egymás után, vagy egyszerre, de lelki szemeim előtt a katasztrófa garantált volt. Az első esetben reményeim
+            szertefoszlottak, a másodikban igazam lett. A tanfolyam vége felé István említette, hogy ezután már el lehet
+            kezdeni a Mysore típusú gyakorlást is, heti háromszor, reggel 6-tól, lehetőség szerint éhgyomorra. Egy évig
+            halogattam ezt a döntést, mert mind a három kitétel abszurdnak tűnt.
+        </p>
+        <p class="mb-20px">
+            2017-ben „véletlenül” láttam, hogy Saraswati Jois astanga workshopot tart a Magnet Házban – ezt jelnek
+            vettem és elmentem rá. Az a heti 6 alkalom (reggel 7 órás kezdéssel és 100%-os túlélési aránnyal) végül arra
+            késztetett, hogy visszamenjek a Bandha Worksbe. Mysore típusú gyakorlásom azóta töretlen. Az ezt követő
+            években váltakozva gyakoroltam a Bandhában (amikor Budapesten voltam) és egyedül (a Covid alatt és az
+            utazásaim idején). Ebben az időszakban több remek guruval is gyakorolhattam, mint: Santina Giardina-Chard,
+            Hamish Hendry, Harmony Slater, Molnár Réka, Ross Stambaugh, Vedanta és SarathJi.
+        </p>
+        <p class="mb-20px">
+            GuruJi Pattabhi Jois szerint: „Practice and all is coming” – és ezzel teljes mértékben egyetértek.
+        </p>
+        <p class="mb-20px">
+            Az astanga jóga számomra odaadás, elköteleződés, belső erő és fegyelem. Ezen kívül irreális jelenidő is:
+            tükör, melyben ott látom magam, ahol egyszerre létezem is meg nem is – a felszín alatti önvaló
+            visszaverődése, mely lehetővé teszi a valódi látást. Egyben pedig „a negyed centi terének” újraértelmezése,
+            egy egyszerre elfogyó és teremtődő hely, mely negyed centinként részecskéire bomlik, hogy új, belső
+            csatornákat nyisson meg és egy állandóan rezgő, felfelé emelkedő spirál útján vezessen az ismeretlenbe.
+        </p>
+        <p class="mb-20px">Ez az a kaland, amit (jelen) életem végéig szeretnék űzni.</p>
+    </div>
+</BaseLayout>
