@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/eszter_mobil.jpeg';
+import desktopImage from '../../images/eszter_desktop.jpeg';
+
+const metadata = {
+    title: 'ESZTER',
+    description: 'Here you can read about Eszter Magos, a yoga teacher at Bandha Works',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
+    <div class="container container--tight-desktop mb-40px">
+        <p class="mb-20px mt-40px">
+            By profession, I am a linguist, literary scholar, and aesthetics scholar, but I like to describe myself as
+            an adventurer. The changes that occurred in the various stages of my life were always, without exception,
+            prompted by a pulsating, inner curiosity, and this was also the case with yoga.
+        </p>
+        <p class="mb-20px">
+            Between 2013 and 2016, I practiced Hatha yoga 3 times a week, and then in 2016, I traveled to India, where
+            the resolve was born in me to understand the events happening within and around me more deeply, so I looked
+            for a system that could best assist with this. Previously, languages (Spanish, English), literature, and
+            philosophy provided this for me, but at the cremation ghats of Varanasi, which I got to know during the days
+            of Diwali, a visceral feeling told me that the language of true experience is hidden in the body-mind—and
+            its unveiling can only be realized through regular yoga practice. Following this, I enrolled in the beginner
+            Astanga course at Bandha Works.
+        </p>
+        <p class="mb-20px">
+            I clearly remember my first chaturanga (low plank posture) experience, where I said to myself: "I hope this
+            is not in it very often." That hope quickly faded. I was equally sure of disaster when we all attempted
+            śīrṣāsana (headstand) together during the course. I was sure that I’d fall over, turning our carefully
+            balanced group into a pile of pretzels. Towards the end of the course, István mentioned that after this, it
+            was possible to start Mysore-style practice, three times a week, starting at 6 in the morning, preferably on
+            an empty stomach. I postponed this decision for a year because all three conditions seemed absurd.
+        </p>
+        <p class="mb-20px">
+            In 2017, I "accidentally" saw that Saraswati Jois was holding an Astanga workshop at Magnet House—I took
+            this as a sign and went. Those 6 times a week (starting at 7 am and with a 100% survival rate) finally
+            prompted me to return to Bandha Works. My Mysore-style practice has been unbroken ever since. In the
+            following years, I practiced alternately at Bandha (when I was in Budapest) and alone (during Covid and my
+            travels). During this period, I also had the opportunity to practice with several excellent gurus, such as:
+            Santina Giardina-Chard, Hamish Hendry, Harmony Slater, Réka Molnár, Ross Stambaugh, Vedanta, and SarathJi.
+        </p>
+        <p class="mb-20px">
+            According to GuruJi Pattabhi Jois: "Practice and all is coming"—and I fully agree with this.
+        </p>
+        <p class="mb-20px">
+            For me, Astanga yoga is dedication, commitment, inner strength, and discipline. In addition, it is also an
+            unreal present time: a mirror in which I see myself where I simultaneously exist and do not exist—the
+            reflection of the sub-surface self that enables true sight. And at the same time, it is the reinterpretation
+            of "the space of a quarter of an inch," a place that is both consumed and created, which breaks down into
+            particles, quarter of an inch by quarter of an inch, to open up new, inner channels and lead along a
+            constantly vibrating, upward-moving spiral path into the unknown.
+        </p>
+        <p class="mb-20px">This is the adventure that I want to pursue until the end of my (current) life.</p>
+    </div>
+</BaseLayout>
