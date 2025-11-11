@@ -33,11 +33,12 @@ Az egész magyarországi életem lassan arról szólt, hogy készültem a követ
 
 ![KPJAYI, Mysore, India, Assist TEAM](../../images/uploads/mysoresharathji.png)
 
-Időközben családot alapítottam, és ez a folyamat természetesen belesimult a gyakorlásba. A nagyobbik kisfiam két idényt, a kisebbik egyet töltött velünk Mysore-ban, ebben a különleges keleti világban. Emlékszem, amikor a nagyobbik fiam először találkozott Sharath Ji-vel egy konferencián – akkor állt fel életében először. 
+Időközben családot alapítottam, és ez a folyamat természetesen belesimult a gyakorlásba. A nagyobbik kisfiam két idényt, a kisebbik egyet töltött velünk Mysore-ban, ebben a különleges keleti világban. Emlékszem, amikor a nagyobbik fiam először találkozott Sharath Ji-vel egy konferencián, akkor állt fel életében először. 
 
 Az a pillanat számomra szimbolikus volt: mintha a gyakorlás és az élet ugyanabban a ritmusban mozdult volna tovább.
 
-Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos élet. Most már tudom, mennyire igaz ez. Ahogy a családom nőtt, a kapcsolatom Sharath Ji-vel is mélyült. Azt hiszem, látta rajtam, hogy az elköteleződés az életem szerves részévé vált – nemcsak a gyakorlásban, hanem minden másban is. 
+Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos élet. Most már tudom, mennyire igaz ez. Ahogy a családom nőtt, a kapcsolatom Sharath Ji-vel is mélyült. Azt hiszem, látta rajtam, hogy az elköteleződés az életem szerves részévé vált, nemcsak a gyakorlásban, hanem minden másban is. \
+
 **Nem gondoltam volna, hogy egyszer ennyire hiányozni fog ez a világ.**
 
 <h3 class="clr-brand-orange">A hír</h3>
@@ -53,6 +54,7 @@ Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyak
  Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz. Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
 
 <h3 class="clr-brand-orange">A csend tanítása</h3>
+
 Ahogy teltek a napok, ez a düh lassan ürességgé oldódott. A gyakorlásom közben sokáig úgy éreztem, mintha egy darabot kitéptek volna belőlem. 
 
 <div class="blog-island-section">De ahogy napról napra visszatértem a matracra, elkezdtem megérteni, hogy a kapcsolat nem szakadt meg, csak átalakult.</div>
@@ -63,8 +65,8 @@ Rájöttem, hogy minden pillanat, amit mellette töltöttem, nem múlt el, beép
 
 Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanazokkal a mozdulatokkal, ugyanazzal az odaadással lépek a matracra, mint amikor még ő állt elöl a teremben.
 
-<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem <strong>mint erő, mint irány, mint csend.</strong></div>  És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.\
-\
+<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem <strong>mint erő, mint irány, mint csend.</strong></div>  És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.
+
 <h3 class="clr-brand-orange">Hűség és hála</h3>
 
 Soha nem volt bennem kétség: tudtam, hogy nem akarok másik gurut. Nem is tudnék. A jóga útján, ha valaki olyan mestert kap, mint **Sharath Ji**, azzal egy életre szóló kapcsolat születik – nem pusztán tanár és tanítvány között, hanem lélek és lélek között. 
@@ -86,6 +88,4 @@ Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy
 
 Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
 
-<h3 class="clr-brand-orange">A fény tovább él</h3>
-
-<div class="blog-island-section">Ahogy tanította: practice, practice, practice – and all is coming.</div>
+<div class="blog-island-section">A fény tovább él! Ahogy tanította: practice, practice, practice – and all is coming.</div>
