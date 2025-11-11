@@ -48,8 +48,7 @@ Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy 
 
 Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel. Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
 
-**Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**
-
+**Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**\
 
  Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz. Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
 
@@ -64,9 +63,8 @@ Rájöttem, hogy minden pillanat, amit mellette töltöttem, nem múlt el, beép
 
 Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanazokkal a mozdulatokkal, ugyanazzal az odaadással lépek a matracra, mint amikor még ő állt elöl a teremben.
 
-<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem \*\*mint erő\*\*, \*\*mint irány\*\*, \*\*mint csend\*\*.</div>
- És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.
-
+<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem <strong>mint erő, mint irány, mint csend.</strong></div>  És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.\
+\
 <h3 class="clr-brand-orange">Hűség és hála</h3>
 
 Soha nem volt bennem kétség: tudtam, hogy nem akarok másik gurut. Nem is tudnék. A jóga útján, ha valaki olyan mestert kap, mint **Sharath Ji**, azzal egy életre szóló kapcsolat születik – nem pusztán tanár és tanítvány között, hanem lélek és lélek között. 
