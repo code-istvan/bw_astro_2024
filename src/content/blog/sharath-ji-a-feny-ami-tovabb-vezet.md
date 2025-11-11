@@ -20,6 +20,7 @@ imageMobil: ../../images/uploads/sharathji_1year_mobil.jpeg
 Nyolc év gyakorlás után úgy tűnik, én is készen álltam. A sors úgy rendezte, hogy találkozhassak a gurummal, **Sharath Ji**-vel, az astanga jóga paramagurujával. Attól a pillanattól kezdve a gyakorlásom többé már nem csupán test- és légzőgyakorlatok sora volt, hanem [kapcsolódás egy élő hagyományhoz](https://bandha.works/parampara/), amelyet ő őrzött és adott tovább – egyszerűséggel, fegyelemmel, mély hittel.
 
 <h3 class="clr-brand-orange">A Mysore-évek</h3>
+
 Az első év, 2013, még visszafogottan telt. Egy hónapot gyakoroltam vele Mysore-ban, az *old shalában*, amely akkoriban még a KPJAYI nevet viselte.
 
 Ebben az esztendőben csupán egyszer jött oda hozzám, és mindössze két mondatot mondott személyesen. De abban a két mondatban benne volt minden: olyan erejű volt, hogy a következő évem vezérfonalává vált. Eleinte csalódott voltam. Egy hónap alatt ennyi,  két mondat? – kérdeztem magamban. Később megértettem, hogy az első időszak nála a csendes megfigyelés ideje volt. Figyelte, ki hogyan viselkedik a matracon és azon túl, a közösségi eseményeken; ki tér vissza, és ki az, aki valóban tanulni jön – nem pedig feltűnősködni vagy oktatói jogosultságért.
