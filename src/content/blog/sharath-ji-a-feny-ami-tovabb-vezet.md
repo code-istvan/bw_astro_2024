@@ -40,7 +40,7 @@ Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos
 
 <h3 class="clr-brand-orange">A hír</h3>
 
-2025. November 12-én hajnalban, 3:34-kor, nem sokkal azután, hogy felkeltem, értesültem róla, hogy Sharath Ji meghalt – azaz elhagyta a fizikai testét. A halálhíre teljesen váratlanul ért. Azt éreztem, hogy álmodom – ez nem lehet igaz. Amikor meggyőződtem róla, hogy ébren vagyok, az járt a fejemben, hogy ez csak valami rossz vicc lehet. Ez nem történhet meg velem. Sem az astangás közösségünkkel, a rengeteg tanítvánnyal, akik bálványként imádták és tisztelték. Köztük én is. Terveztük, hogy hamarosan Budapestre is ellátogat; életében először tanított volna itt. 
+2025 november 12-én hajnalban, 3:34-kor, nem sokkal azután, hogy felkeltem, értesültem róla, hogy Sharath Ji meghalt – azaz elhagyta a fizikai testét. A halálhíre teljesen váratlanul ért. Azt éreztem, hogy álmodom – ez nem lehet igaz. Amikor meggyőződtem róla, hogy ébren vagyok, az járt a fejemben, hogy ez csak valami rossz vicc lehet. Ez nem történhet meg velem. Sem az astangás közösségünkkel, a rengeteg tanítvánnyal, akik bálványként imádták és tisztelték. Köztük én is. Terveztük, hogy hamarosan Budapestre is ellátogat; életében először tanított volna itt. 
 
 Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy talán el kellene maradnia az aznapi, hajnali 5:30-kor kezdődő Mysore-gyakorlásnak. Aztán gyorsan rájöttem, hogy ez lenne az, amit ő a legkevésbé szeretne. Az életét ennek a gyakorlásnak szentelte – biztos voltam benne, hogy nem akarná, hogy egyetlen óra is elmaradjon miatta.
  
