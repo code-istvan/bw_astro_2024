@@ -17,7 +17,7 @@ imageMobil: ../../images/uploads/sharathji_1year_mobil.jpeg
 </h3> 
 <h3 class="clr-brand-orange">A Guru megjelenése</h3>
 
-Nyolc év gyakorlás után úgy tűnik, én is készen álltam. A sors úgy rendezte, hogy találkozhassak a gurummal, **Sharath Ji**-vel, az astanga jóga paramagurujával. Attól a pillanattól kezdve a gyakorlásom többé már nem csupán test- és légzőgyakorlatok sora volt, hanem [kapcsolódás egy élő hagyományhoz](https://bandha.works/parampara/), amelyet ő őrzött és adott tovább – egyszerűséggel, fegyelemmel, mély hittel.
+Nyolc év gyakorlás után úgy tűnik, én is készen álltam. A sors úgy rendezte, hogy találkozhassak a gurummal, **Sharath Ji**-vel, az astanga jóga paramagurujával. Attól a pillanattól kezdve a gyakorlásom többé már nem csupán test- és légzőgyakorlatok sora volt, hanem [kapcsolódás egy élő hagyományhoz](https://bandha.works/parampara/), amelyet ő őrzött és adott tovább, egyszerűséggel, fegyelemmel, mély hittel.
 
 <h3 class="clr-brand-orange">A Mysore-évek</h3>
 
@@ -25,7 +25,7 @@ Az első év, 2013, még visszafogottan telt. Egy hónapot gyakoroltam vele Myso
 
 ![Mysore Main Shala](../../images/uploads/mysoreistvan_blog.jpeg)
 
-Ebben az esztendőben csupán egyszer jött oda hozzám, és mindössze két mondatot mondott személyesen. De abban a két mondatban benne volt minden: olyan erejű volt, hogy a következő évem vezérfonalává vált. Eleinte csalódott voltam. Egy hónap alatt ennyi,  két mondat? – kérdeztem magamban. Később megértettem, hogy az első időszak nála a csendes megfigyelés ideje volt. Figyelte, ki hogyan viselkedik a matracon és azon túl, a közösségi eseményeken; ki tér vissza, és ki az, aki valóban tanulni jön – nem pedig feltűnősködni vagy oktatói jogosultságért.
+Ebben az esztendőben csupán egyszer jött oda hozzám, és mindössze két mondatot mondott személyesen. De abban a két mondatban benne volt minden: olyan erejű volt, hogy a következő évem vezérfonalává vált. Eleinte csalódott voltam. Egy hónap alatt ennyi,  két mondat? – kérdeztem magamban. Később megértettem, hogy az első időszak nála a csendes megfigyelés ideje volt. Figyelte, ki hogyan viselkedik a matracon és azon túl, a közösségi eseményeken; ki tér vissza, és ki az, aki valóban tanulni jön, nem pedig feltűnősködni vagy oktatói jogosultságért.
 
 <div class="blog-island-section">Ez volt az ő természetes szűrője: a türelem, a szándék tisztasága és az elköteleződés próbája.</div>
 
@@ -45,9 +45,9 @@ Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos
 
 <h3 class="clr-brand-orange">A hír</h3>
 
-2025 november 12-én hajnalban, 3:34-kor, nem sokkal azután, hogy felkeltem, értesültem róla, hogy Sharath Ji meghalt – azaz elhagyta a fizikai testét. A halálhíre teljesen váratlanul ért. Azt éreztem, hogy álmodom – ez nem lehet igaz. Amikor meggyőződtem róla, hogy ébren vagyok, az járt a fejemben, hogy ez csak valami rossz vicc lehet. Ez nem történhet meg velem. Sem az astangás közösségünkkel, a rengeteg tanítvánnyal, akik bálványként imádták és tisztelték. Köztük én is. Terveztük, hogy hamarosan Budapestre is ellátogat; életében először tanított volna itt. 
+2025 november 12-én hajnalban, 3:34-kor, nem sokkal azután, hogy felkeltem, értesültem róla, hogy Sharath Ji meghalt, azaz elhagyta a fizikai testét. A halálhíre teljesen váratlanul ért. Azt éreztem, hogy álmodom, ez nem lehet igaz. Amikor meggyőződtem róla, hogy ébren vagyok, az járt a fejemben, hogy ez csak valami rossz vicc lehet. Ez nem történhet meg velem. Sem az astangás közösségünkkel, a rengeteg tanítvánnyal, akik bálványként imádták és tisztelték. Köztük én is. Terveztük, hogy hamarosan Budapestre is ellátogat; életében először tanított volna itt. 
 
-Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy talán el kellene maradnia az aznapi, hajnali 5:30-kor kezdődő Mysore-gyakorlásnak. Aztán gyorsan rájöttem, hogy ez lenne az, amit ő a legkevésbé szeretne. Az életét ennek a gyakorlásnak szentelte – biztos voltam benne, hogy nem akarná, hogy egyetlen óra is elmaradjon miatta.
+Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy talán el kellene maradnia az aznapi, hajnali 5:30-kor kezdődő Mysore-gyakorlásnak. Aztán gyorsan rájöttem, hogy ez lenne az, amit ő a legkevésbé szeretne. Az életét ennek a gyakorlásnak szentelte, biztos voltam benne, hogy nem akarná, hogy egyetlen óra is elmaradjon miatta.
 
 Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel. Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
 
@@ -73,8 +73,8 @@ Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanaz
 
 <h3 class="clr-brand-orange">Hűség és hála</h3>
 
-Soha nem volt bennem kétség: tudtam, hogy nem akarok másik gurut. Nem is tudnék. A jóga útján, ha valaki olyan mestert kap, mint **Sharath Ji**, azzal egy életre szóló kapcsolat születik – nem pusztán tanár és tanítvány között, hanem lélek és lélek között. 
-Nem érzem hiányát új tanításoknak, sem új vezetésnek. Azt érzem, hogy amit tőle kaptam, az elég – és az a feladatom, hogy méltón vigyem tovább.
+Soha nem volt bennem kétség: tudtam, hogy nem akarok másik gurut. Nem is tudnék. A jóga útján, ha valaki olyan mestert kap, mint **Sharath Ji**, azzal egy életre szóló kapcsolat születik, nem pusztán tanár és tanítvány között, hanem lélek és lélek között. 
+Nem érzem hiányát új tanításoknak, sem új vezetésnek. Azt érzem, hogy amit tőle kaptam, az elég, és az a feladatom, hogy méltón vigyem tovább.
 
 A hűség számomra nem ragaszkodás, hanem emlékezés a lényegre.  Arra, amit újra és újra tanított: ***practice, practice, practice – and all is coming.***
 
@@ -84,11 +84,11 @@ A jelenléte nem múlt el, csak formát váltott.  Ott van minden mozdulatban,
 
 **Hálát érzek.** Legfőképp azért vagyok hálás, hogy a tanítványa lehettem. És azért is, mert megmentette az életemet.
 
-A jóga előtti életem önpusztító volt, folyamatos bizonyítási kényszer, megállás nélküli munka és a tárgyi javak hajszolása jellemezte. Olyan tempóban éltem, ami konkrétan megbetegített – egy, a nyugati orvosok szerint gyógyíthatatlan betegségbe.
+A jóga előtti életem önpusztító volt, folyamatos bizonyítási kényszer, megállás nélküli munka és a tárgyi javak hajszolása jellemezte. Olyan tempóban éltem, ami konkrétan megbetegített, egy, a nyugati orvosok szerint gyógyíthatatlan betegségbe.
 
 <div class="blog-island-section">De a jóga, amit tőle tanultam, mégis meggyógyított. Megtanított újra létezni, tisztábban, csendesebben, egy másfajta értékrend mentén.</div>
 
-Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak átlényegül. Mert a valódi tanító nem kint van. A tanítvány szívében él tovább – ott, ahol a gyakorlás és a csend találkozik.
+Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak átlényegül. Mert a valódi tanító nem kint van. A tanítvány szívében él tovább, ott, ahol a gyakorlás és a csend találkozik.
 
 Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
 
