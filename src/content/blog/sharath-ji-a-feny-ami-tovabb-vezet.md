@@ -23,6 +23,8 @@ Nyolc év gyakorlás után úgy tűnik, én is készen álltam. A sors úgy rend
 
 Az első év, 2013, még visszafogottan telt. Egy hónapot gyakoroltam vele Mysore-ban, az *old shalában*, amely akkoriban még a KPJAYI nevet viselte.
 
+![Mysore Main Shala](../../images/uploads/mysoreistvan_blog.jpeg)
+
 Ebben az esztendőben csupán egyszer jött oda hozzám, és mindössze két mondatot mondott személyesen. De abban a két mondatban benne volt minden: olyan erejű volt, hogy a következő évem vezérfonalává vált. Eleinte csalódott voltam. Egy hónap alatt ennyi,  két mondat? – kérdeztem magamban. Később megértettem, hogy az első időszak nála a csendes megfigyelés ideje volt. Figyelte, ki hogyan viselkedik a matracon és azon túl, a közösségi eseményeken; ki tér vissza, és ki az, aki valóban tanulni jön – nem pedig feltűnősködni vagy oktatói jogosultságért.
 
 <div class="blog-island-section">Ez volt az ő természetes szűrője: a türelem, a szándék tisztasága és az elköteleződés próbája.</div>
@@ -31,13 +33,13 @@ Teltek-múltak az évek, és azon kaptam magam, hogy Mysore lett az első szám�
 
 Az egész magyarországi életem lassan arról szólt, hogy készültem a következő Mysore-idényre. A napjaimat a gyakorlás, a tanítás és a visszatérésre való felkészülés ritmusa határozta meg.
 
-![KPJAYI, Mysore, India, Assist TEAM](../../images/uploads/mysoresharathji.png)
-
 Időközben családot alapítottam, és ez a folyamat természetesen belesimult a gyakorlásba. A nagyobbik kisfiam két idényt, a kisebbik egyet töltött velünk Mysore-ban, ebben a különleges keleti világban. Emlékszem, amikor a nagyobbik fiam először találkozott Sharath Ji-vel egy konferencián, akkor állt fel életében először. 
 
 Az a pillanat számomra szimbolikus volt: mintha a gyakorlás és az élet ugyanabban a ritmusban mozdult volna tovább.
 
-Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos élet. Most már tudom, mennyire igaz ez. Ahogy a családom nőtt, a kapcsolatom Sharath Ji-vel is mélyült. Azt hiszem, látta rajtam, hogy az elköteleződés az életem szerves részévé vált, nemcsak a gyakorlásban, hanem minden másban is. \
+![KPJAYI, Mysore, India, Assist TEAM](../../images/uploads/mysoresharathji_blog.jpeg)
+
+Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos élet. Most már tudom, mennyire igaz ez. Ahogy a családom nőtt, a kapcsolatom Sharath Ji-vel is mélyült. Azt hiszem, látta rajtam, hogy az elköteleződés az életem szerves részévé vált, nemcsak a gyakorlásban, hanem minden másban is. 
 
 **Nem gondoltam volna, hogy egyszer ennyire hiányozni fog ez a világ.**
 
@@ -49,7 +51,7 @@ Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy 
 
 Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel. Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
 
-**Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**\
+**Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**
 
  Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz. Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
 
