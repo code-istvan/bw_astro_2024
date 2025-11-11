@@ -44,19 +44,15 @@ Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos
 
 Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy talán el kellene maradnia az aznapi, hajnali 5:30-kor kezdődő Mysore-gyakorlásnak. Aztán gyorsan rájöttem, hogy ez lenne az, amit ő a legkevésbé szeretne. Az életét ennek a gyakorlásnak szentelte – biztos voltam benne, hogy nem akarná, hogy egyetlen óra is elmaradjon miatta.
  
-Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel.
-
-Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
+Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel. Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
 
 **Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**
- Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz.
-
-Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
+ Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz. Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
 
 <h3 class="clr-brand-orange">A csend tanítása</h3>
 Ahogy teltek a napok, ez a düh lassan ürességgé oldódott. A gyakorlásom közben sokáig úgy éreztem, mintha egy darabot kitéptek volna belőlem. 
 
-<div class="blog-island-section">De ahogy napról napra visszatértem a matracra, elkezdtem megérteni, hogy a kapcsolat nem szakadt meg – csak átalakult.</div>
+<div class="blog-island-section">De ahogy napról napra visszatértem a matracra, elkezdtem megérteni, hogy a kapcsolat nem szakadt meg, csak átalakult.</div>
 
 Sharath Ji szavai, a jelenléte, a mozdulatai mind ott éltek bennem. Ahogy belehelyezkedtem az ászanákba, ahogy belélegeztem és ahogy ki, és ahogy tartottam a bandhákat, hallottam a hangját.
 
@@ -72,25 +68,21 @@ Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanaz
 Soha nem volt bennem kétség: tudtam, hogy nem akarok másik gurut. Nem is tudnék. A jóga útján, ha valaki olyan mestert kap, mint **Sharath Ji**, azzal egy életre szóló kapcsolat születik – nem pusztán tanár és tanítvány között, hanem lélek és lélek között. 
 Nem érzem hiányát új tanításoknak, sem új vezetésnek. Azt érzem, hogy amit tőle kaptam, az elég – és az a feladatom, hogy méltón vigyem tovább.
 
-A hűség számomra nem ragaszkodás, hanem emlékezés a lényegre. Arra, amit újra és újra tanított: ***practice, practice, practice – and all is coming.***
+A hűség számomra nem ragaszkodás, hanem emlékezés a lényegre.  Arra, amit újra és újra tanított: ***practice, practice, practice – and all is coming.***
 
 Nem keresek új hangot, mert az ő hangja ott maradt bennem. Minden reggeli gyakorlás, minden légzés egy halk tisztelgés előtte. Nem akarom elfelejteni, és nem akarom helyettesíteni sem.
 
-A jelenléte nem múlt el – csak formát váltott. Ott van minden mozdulatban, minden csendben, minden pillanatban, amikor újra a matracra lépek.
+A jelenléte nem múlt el, csak formát váltott.  Ott van minden mozdulatban, minden csendben, minden pillanatban, amikor újra a matracra lépek.
 
 **Hálát érzek.** Legfőképp azért vagyok hálás, hogy a tanítványa lehettem. És azért is, mert megmentette az életemet.
 
-A jóga előtti életem önpusztító volt – folyamatos bizonyítási kényszer, megállás nélküli munka és a tárgyi javak hajszolása jellemezte. Olyan tempóban éltem, ami konkrétan megbetegített – egy, a nyugati orvosok szerint gyógyíthatatlan betegségbe.
+A jóga előtti életem önpusztító volt, folyamatos bizonyítási kényszer, megállás nélküli munka és a tárgyi javak hajszolása jellemezte. Olyan tempóban éltem, ami konkrétan megbetegített – egy, a nyugati orvosok szerint gyógyíthatatlan betegségbe.
 
-<div class="blog-island-section">De a jóga, amit tőle tanultam, mégis meggyógyított. Megtanított újra létezni – tisztábban, csendesebben, egy másfajta értékrend mentén.</div>
+<div class="blog-island-section">De a jóga, amit tőle tanultam, mégis meggyógyított. Megtanított újra létezni, tisztábban, csendesebben, egy másfajta értékrend mentén.</div>
 
-Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval.
-Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal.
-Csak átlényegül. Mert a valódi tanító nem kint van. A tanítvány szívében él tovább – ott, ahol a gyakorlás és a csend találkozik.
+Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak átlényegül. Mert a valódi tanító nem kint van. A tanítvány szívében él tovább – ott, ahol a gyakorlás és a csend találkozik.
 
-Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval.
-Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal.
-Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
+Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
 
 <h3 class="clr-brand-orange">A fény tovább él</h3>
 
