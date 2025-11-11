@@ -31,6 +31,8 @@ Teltek-múltak az évek, és azon kaptam magam, hogy Mysore lett az első szám�
 
 Az egész magyarországi életem lassan arról szólt, hogy készültem a következő Mysore-idényre. A napjaimat a gyakorlás, a tanítás és a visszatérésre való felkészülés ritmusa határozta meg.
 
+![KPJAYI, Mysore, India, Assist TEAM](../../images/uploads/mysoresharathji.png)
+
 Időközben családot alapítottam, és ez a folyamat természetesen belesimult a gyakorlásba. A nagyobbik kisfiam két idényt, a kisebbik egyet töltött velünk Mysore-ban, ebben a különleges keleti világban. Emlékszem, amikor a nagyobbik fiam először találkozott Sharath Ji-vel egy konferencián – akkor állt fel életében először. 
 
 Az a pillanat számomra szimbolikus volt: mintha a gyakorlás és az élet ugyanabban a ritmusban mozdult volna tovább.
@@ -43,10 +45,12 @@ Az astanga hagyományban tréfásan mondják, hogy a hetedik sorozat a családos
 2025 november 12-én hajnalban, 3:34-kor, nem sokkal azután, hogy felkeltem, értesültem róla, hogy Sharath Ji meghalt – azaz elhagyta a fizikai testét. A halálhíre teljesen váratlanul ért. Azt éreztem, hogy álmodom – ez nem lehet igaz. Amikor meggyőződtem róla, hogy ébren vagyok, az járt a fejemben, hogy ez csak valami rossz vicc lehet. Ez nem történhet meg velem. Sem az astangás közösségünkkel, a rengeteg tanítvánnyal, akik bálványként imádták és tisztelték. Köztük én is. Terveztük, hogy hamarosan Budapestre is ellátogat; életében először tanított volna itt. 
 
 Miután értesültem a halálhíréről, egy pillanatra az jutott eszembe, hogy talán el kellene maradnia az aznapi, hajnali 5:30-kor kezdődő Mysore-gyakorlásnak. Aztán gyorsan rájöttem, hogy ez lenne az, amit ő a legkevésbé szeretne. Az életét ennek a gyakorlásnak szentelte – biztos voltam benne, hogy nem akarná, hogy egyetlen óra is elmaradjon miatta.
- 
+
 Az első napokban nem is tudtam rendesen gyakorolni. Csak egy rövid ászanagyakorlást végeztem, inkább megszokásból, mint tudatos jelenléttel. Sírni sem tudtam. Mintha minden érzelem egyszerre fagyott volna belém.
 
 **Amikor kezdett lassan tudatosulni bennem, hogy ez nem álom, és nem is valami rossz vicc, akkor jött a düh.**
+
+
  Nem erről volt szó. A jógik hosszú életet élnek, legalábbis így tanultuk. Pattabhi Jois, Sharath Ji nagyapja, **93 éves** koráig élt, Krishnamacharya, az ő mestere pedig több mint **száz évet**. Azt hittem, Sharath Ji is követi majd ezt a sort. Legalább száz évig velünk lesz. Jó néhány évtizedre számítottam még, annyi mindent szerettem volna még tanulni és kérdezni tőle. Dühös voltam. Nagyon dühös. Nem értettem az egészet.
 
 <h3 class="clr-brand-orange">A csend tanítása</h3>
@@ -60,7 +64,7 @@ Rájöttem, hogy minden pillanat, amit mellette töltöttem, nem múlt el, beép
 
 Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanazokkal a mozdulatokkal, ugyanazzal az odaadással lépek a matracra, mint amikor még ő állt elöl a teremben.
 
-<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem **mint erő**, **mint irány**, **mint csend**.</div>
+<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem \*\*mint erő\*\*, \*\*mint irány\*\*, \*\*mint csend\*\*.</div>
  És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.
 
 <h3 class="clr-brand-orange">Hűség és hála</h3>
