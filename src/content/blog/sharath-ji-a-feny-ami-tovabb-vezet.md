@@ -90,4 +90,4 @@ A jóga előtti életem önpusztító volt, folyamatos bizonyítási kényszer, 
 
 Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
 
-<div class="blog-island-section">A fény tovább él! Ahogy tanította: practice, practice, practice – and all is coming.</div>
+<div class="blog-island-section">A fény tovább él! Ahogy tanította: "Practice, practice, practice – and all is coming."</div>
