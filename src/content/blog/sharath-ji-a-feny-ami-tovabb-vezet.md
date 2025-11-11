@@ -35,7 +35,7 @@ Az egész magyarországi életem lassan arról szólt, hogy készültem a követ
 
 Időközben családot alapítottam, és ez a folyamat természetesen belesimult a gyakorlásba. A nagyobbik kisfiam két idényt, a kisebbik egyet töltött velünk Mysore-ban, ebben a különleges keleti világban. Emlékszem, amikor a nagyobbik fiam először találkozott Sharath Ji-vel egy konferencián, akkor állt fel életében először. 
 
-Az a pillanat számomra szimbolikus volt: mintha a gyakorlás és az élet ugyanabban a ritmusban mozdult volna tovább.
+<div class="blog-island-section">Az a pillanat számomra szimbolikus volt: mintha a gyakorlás és az élet ugyanabban a ritmusban mozdult volna tovább.</div>
 
 ![KPJAYI, Mysore, India, Assist TEAM](../../images/uploads/mysoresharathji_blog.jpeg)
 
