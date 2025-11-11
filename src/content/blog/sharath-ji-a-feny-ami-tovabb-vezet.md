@@ -65,7 +65,9 @@ Rájöttem, hogy minden pillanat, amit mellette töltöttem, nem múlt el, beép
 
 Először csak a gyakorlás tartott meg, az, hogy ugyanabban az időben, ugyanazokkal a mozdulatokkal, ugyanazzal az odaadással lépek a matracra, mint amikor még ő állt elöl a teremben.
 
-<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem <strong>mint erő, mint irány, mint csend.</strong></div>  És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.
+<div class="blog-island-section">Később megértettem, hogy ez maga a tanítás folytatása. Nem kívülről jön többé, hanem belülről. Ma már nem érzem, hogy elvesztettem őt. Amikor gyakorlok, érzem, hogy ott van, nem mint alak, hanem <strong>mint erő, mint irány, mint csend.</strong></div>  
+
+És ez a csend ugyanaz, amit mindig is tanított: hogy a jóga végső soron a belső kapcsolat helyreállítása.
 
 <h3 class="clr-brand-orange">Hűség és hála</h3>
 
