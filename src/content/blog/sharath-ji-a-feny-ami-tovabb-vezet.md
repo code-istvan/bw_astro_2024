@@ -88,8 +88,6 @@ A jóga előtti életem önpusztító volt, folyamatos bizonyítási kényszer, 
 
 <div class="blog-island-section">De a jóga, amit tőle tanultam, mégis meggyógyított. Megtanított újra létezni, tisztábban, csendesebben, egy másfajta értékrend mentén.</div>
 
-Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak átlényegül. Mert a valódi tanító nem kint van. A tanítvány szívében él tovább, ott, ahol a gyakorlás és a csend találkozik.
-
 Nem sokan tapasztalhatják meg, milyen egy ilyen mély, személyes kapcsolat egy Guruval. Én megkaptam ezt az ajándékot, és tudom, hogy ez a kapcsolat nem ér véget a halállal. Csak formát vált. **A Guru fénye tovább világít a tanítvány szívében, ott, ahol a gyakorlás és a csend egybeolvad.**
 
 <div class="blog-island-section">A fény tovább él! Ahogy tanította: practice, practice, practice – and all is coming.</div>
