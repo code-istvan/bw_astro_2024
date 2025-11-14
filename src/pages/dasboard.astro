@@ -23,18 +23,34 @@ if (!token) {
 
 console.log('User token:', token);
 
-const { rows } = await turso.execute(
-    `
-  SELECT * FROM users 
-  WHERE id = ? 
-  AND pass_yearly = 1 
-  AND pass_membership = 1 
-  AND pass_monthly = 1
-`,
-    [token]
-);
+const { rows } = await turso.execute({
+    sql: `
+        SELECT 
+            u.*,
+            p.id as pass_id,
+            p.pass_type,
+            p.expiration_date,
+            p.uses_remaining,
+            p.is_active as pass_is_active
+        FROM users u
+        LEFT JOIN user_passes up ON u.id = up.user_id
+        LEFT JOIN passes p ON up.pass_id = p.id 
+            AND p.is_active = 1 
+            AND p.expiration_date > datetime('now')
+        WHERE u.id = ?
+        ORDER BY p.expiration_date DESC
+        LIMIT 1
+    `,
+    args: [token],
+});
+
+console.log('rows:', rows);
 
 const user = rows[0];
+
+console.log('User:', user);
+console.log('Pass ID:', user.pass_id);
+console.log('Expiration:', user.expiration_date);
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -47,7 +63,7 @@ const user = rows[0];
     />
     <div class="container container--tight-desktop">
         HELLO
-        <h1>{user.name}</h1>
+        <h1>{user.fullname}</h1>
         {user.pass_yearly && <span>✅ Pass Anual</span>}
         {user.pass_membership && <span>✅ Membresía</span>}
         {user.pass_monthly && <span>✅ Pass Mensual</span>}
