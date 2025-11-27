@@ -24,27 +24,33 @@ if (!token) {
 console.log('User token:', token);
 
 const { rows } = await turso.execute({
-    sql: `
-        SELECT 
-            u.*,
+    sql: `SELECT 
+            u.fullname,
+            u.email,
+            u.alias,
             p.id as pass_id,
-            p.pass_type,
+            p.pass_type,         
             p.expiration_date,
-            p.uses_remaining,
-            p.is_active as pass_is_active
-        FROM users u
-        LEFT JOIN user_passes up ON u.id = up.user_id
-        LEFT JOIN passes p ON up.pass_id = p.id 
-            AND p.is_active = 1 
-            AND p.expiration_date > datetime('now')
-        WHERE u.id = ?
-        ORDER BY p.expiration_date DESC
-        LIMIT 1
-    `,
+            p.uses_remaining,    
+            p.is_active         
+          FROM users u
+          JOIN user_passes up ON u.id = up.user_id     
+          JOIN passes p ON up.pass_id = p.id            
+          WHERE u.id = ? 
+          AND p.is_active = 1`,
+    args: [token],
+});
+
+const { rows: passCheck } = await turso.execute({
+    sql: `SELECT * FROM users u
+    JOIN user_passes up ON u.id = up.user_id     
+    JOIN passes p ON up.pass_id = p.id            
+    WHERE u.id = ?`,
     args: [token],
 });
 
 console.log('rows:', rows);
+console.log('passCheck:', passCheck);
 
 const user = rows[0];
 
@@ -64,8 +70,5 @@ console.log('Expiration:', user.expiration_date);
     <div class="container container--tight-desktop">
         HELLO
         <h1>{user.fullname}</h1>
-        {user.pass_yearly && <span>✅ Pass Anual</span>}
-        {user.pass_membership && <span>✅ Membresía</span>}
-        {user.pass_monthly && <span>✅ Pass Mensual</span>}
     </div>
 </BaseLayout>
