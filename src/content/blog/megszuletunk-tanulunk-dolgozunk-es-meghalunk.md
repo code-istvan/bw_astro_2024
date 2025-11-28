@@ -29,3 +29,5 @@ Most már egy teljesen más értékrend szerint. Gyötrelmes és hosszú de azt 
 A Bandha Works egy hely, nem Budapesten, nem egy távoli perspektívás rendszerben, hanem mélyen Önmagunkban, ahova eljutunk, ha miután felismertük, a bejáratnál el is hagytuk az Egonkat. 
 
 <h3 class="clr-brand-orange">A Bandha Worksben megszületünk, tanulunk és esélyt kapunk egy más folytatásra.</h3>
+
+**Írta:** Sipőcz Evelin
