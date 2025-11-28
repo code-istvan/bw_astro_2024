@@ -1,8 +1,11 @@
 {
-  "published": true,
-  "fullmoon": true,
   "newmoon": false,
-  "ekadashi": false,
+  "classTime2": "19:00 - 21:00",
+  "published": true,
   "date": "December 5, 2025",
-  "class": "holdNP"
+  "teacher2": "istvanJi",
+  "fullmoon": true,
+  "class": "holdNP",
+  "class2": "mysoreKurzus",
+  "ekadashi": false
 }
