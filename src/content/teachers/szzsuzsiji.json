@@ -1,0 +1,12 @@
+{
+  "teacher": "Zsuzsi",
+  "published": true,
+  "huTeacherFullName": "Szuromi Zsuzsi",
+  "enTeacherFullName": "Zsuzsi Szuromi",
+  "enTeacherStyle": "vinyasa krama",
+  "teacherImage": "src/images/uploads/teachers/sz_zsuzsi.jpeg",
+  "huTeacherStyle": "vinyasa krama",
+  "teacherLink": "/szuromi-zsuzsi/",
+  "teacherId": "szzsuzsiJi",
+  "offTheMat": false
+}
