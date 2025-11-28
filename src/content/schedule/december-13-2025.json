@@ -1,10 +1,13 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": false,
-  "ekadashi": false,
+  "teacher": "szzsuzsiJi",
+  "classTime": "10:00 - 11:30",
+  "classTime2": "17:00 - 19:30",
+  "published": true,
   "date": "December 13, 2025",
-  "class": "noemiWs",
-  "teacher": "noemiJi",
-  "classTime": "17:00 - 19:30"
+  "teacher2": "noemiJi",
+  "fullmoon": false,
+  "class": "freekrama",
+  "class2": "noemiWs",
+  "ekadashi": false
 }
