@@ -16,7 +16,7 @@ imageMobil: ../../images/uploads/evelin_mobil.jpeg
 ---
 <h3 class="clr-brand-orange">Megszületünk, tanulunk, dolgozunk és meghalunk. Ez a demokratikus változat. Azt gondoltam, tartalmas, pozitív irányba törekvő életet éltem huszonkét évig. Gyermekkorom óta terveim voltak, folyamatos, változatos mozgásban volt az életem. Tanulmányok, művészet és jött a jóga. Abban a kivételes helyzetben vagyok, hogy megtalált. Talán újra.</h3>  
 
-Érdekesnek és közelinek éreztem, feltétel és gondolkodás nélkül kezdtem el az energiám a jóga felé fordítani. Amikor a leginkább feltöltött állapotomban voltam, szinte az utolsó pillanatban, mit sem sejtve kíváncsiságtól csillogó szemmel kerültem a Bandha Worksbe egy ösztöndíjjal. 
+Érdekesnek és közelinek éreztem, feltétel és gondolkodás nélkül kezdtem el az energiám a jóga felé fordítani. Amikor a leginkább feltöltött állapotomban voltam, szinte az utolsó pillanatban, mit sem sejtve kíváncsiságtól csillogó szemmel kerültem a Bandha Worksbe egy [ösztöndíjjal](https://bandha.works/osztondij/). 
 
 Magam sem értettem hogyan és miért, annak ellenére, hogy nem voltam gyakorlott jógázó és a fizikai testem sosem örvendezett bárminemű aktív mozgás hatására, másnap már a [Mysore-típusú órán](https://bandha.works/astanga-mysore-program/) találtam magam. 
 
