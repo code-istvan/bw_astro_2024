@@ -1,10 +1,16 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": false,
-  "ekadashi": false,
-  "date": "January 1, 2026",
-  "class": "mysorePractice",
   "teacher": "istvanJi",
-  "classTime": "6:30 - 9:00"
+  "classTime": "6:30 - 9:00",
+  "classTime2": "17:00 - 18:30",
+  "classTime3": "19:00 - 20:30",
+  "published": true,
+  "date": "January 1, 2026",
+  "teacher2": "istvanJi",
+  "fullmoon": false,
+  "teacher3": "istvanJi",
+  "class": "mysorePractice",
+  "class2": "sun108",
+  "class3": "sun108",
+  "ekadashi": false
 }
