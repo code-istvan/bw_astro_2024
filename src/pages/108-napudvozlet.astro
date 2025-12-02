@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/108_napudvozlet_mobil.jpg';
+import desktopImage from '../images/108_napudvozlet.jpg';
+
+const metadata = {
+  title: 'ÚJÉVI 108 NAPÜDVÖZLET',
+  description: 'Itt olvashatsz az Újévi 108 napüdvözlet eseményünkről.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="container container--tight-desktop">
+    <h2 class="mt-40px clr-brand-orange">
+      <strong>
+        Kezdd az Újévet 108 napüdvözlettel! Ez az intenzív mozgó meditációs technika kiváló módszert kínál, hogy
+        elengedd az előző év feszültségeit, aggodalmait, problémáit és kitisztult testtel és elmével vágj neki a 2026-os
+        évnek!
+      </strong>
+    </h2>
+    <blockquote>
+      Hridrógam mama szúrja harimánam csa násaja <br />
+      Ó, Nap, szabadíts meg a szívemre és elmémre egészségtelen sápadságtól. <br />
+      Rig-Véda. I. 50. 11.
+    </blockquote>
+    <p class="mb-20px">
+      <a href="/astanga-ikonok-sri-k-pattabhi-jois-1-resz/" class="link-enhanced link-orange">Sri K. Pattabhi Jois</a> (Gurudzsi)
+      szerint a napüdvüzletek gyakorlása által nem csak a fizikai test betegségei gyógyíthatóak, hanem a mentális kórok is,
+      akár legyenek ezek múltbéli cselekedetek (prárabdha karma) ebben a születésben érvényesülő negatív hatásai. Ennek eredményeként
+      elérhető a hosszú élet, jó egészség, kicsattanó erő és éles elme.
+    </p>
+    <h3 class="clr-brand-orange font-family-primary mb-20px">Miért 108?</h3>
+    <p class="mb-20px">
+      A <strong>108</strong>-as szám rendkívül nagy jelentőséggel bír a védikus kultúrában, <strong>108</strong> szem van
+      a hinduk imafüzérén és az Upanisadok száma is ugyanennyi. Ezen kedvező szám és a Nap között mindig is szoros kapcsolatot
+      feltételeztek, hiszen a Nap átmérője épp <strong>108</strong>-szorosa Földének, illetve a két égitest között
+      távolság a Nap átmérőjének <strong>108</strong>
+      -szorosa.
+    </p>
+    <h3 class="clr-brand-orange font-family-primary mb-20px">A napüdvözlet technológiája</h3>
+    <p class="mb-20px">
+      A napüdvözlet a test középpontját, a <strong>solar plexus</strong> területét aktivizálja, ami megmagyarázza az elnevezését
+      és a kapcsolatát a csillaggal.
+    </p>
+    <p class="mb-40px">
+      A gyakorlatsor végzése közben a légzés és a mozdulatok tökéletes összehangolása és a tekintet fókuszálása az egyik
+      legkiválóbb módszer a <strong>mozgó meditációs</strong> élmény megtapasztalására. A <strong>
+        Szúrja Namaszkára
+      </strong>mozdulatsor már önmagában végezve is rendkívüli gyógyító hatással rendelkezik, a legkedvezőbb hatás pedig
+      akkor érhető el, ha <strong>108</strong>
+      -szor végezzük, amely szám a Napot szimbolizálja.
+    </p>
+    <p class="mb-40px"></p>
+  </div>
+</BaseLayout>
