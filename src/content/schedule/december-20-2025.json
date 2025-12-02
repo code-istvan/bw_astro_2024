@@ -1,8 +1,11 @@
 {
-  "published": true,
-  "fullmoon": false,
   "newmoon": true,
-  "ekadashi": false,
+  "classTime2": "10:00 - 11:30",
+  "published": true,
   "date": "December 20, 2025",
-  "class": "holdNP"
+  "teacher2": "szzsuzsiJi",
+  "fullmoon": false,
+  "class": "holdNP",
+  "class2": "freekrama",
+  "ekadashi": false
 }
