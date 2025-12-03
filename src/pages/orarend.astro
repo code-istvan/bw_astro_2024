@@ -13,29 +13,29 @@ const lang = getLangFromUrl(Astro.url);
 const detailsText = lang === 'hu' ? 'Részletek' : 'Details';
 
 const metadata = {
-    title: 'ÓRAREND',
-    description: 'Ezen az oldalon megtalálod jógaiskolánk órarendjét. Jógatanárok, jógafajták, időpontok.',
+  title: 'ÓRAREND',
+  description: 'Ezen az oldalon megtalálod jógaiskolánk órarendjét. Jógatanárok, jógafajták, időpontok.',
 };
 
 const [schedule, teachers, classes] = await Promise.all([
-    getCollection('schedule'),
-    getCollection('teachers'),
-    getCollection('classes'),
+  getCollection('schedule'),
+  getCollection('teachers'),
+  getCollection('classes'),
 ]);
 
 // Csak rendezzük az adatokat dátum szerint, de nem szűrjük
 const sortedSchedule = schedule.sort((a, b) => {
-    const dateA = new Date(a.data.date);
-    const dateB = new Date(b.data.date);
-    return dateA.getTime() - dateB.getTime();
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateA.getTime() - dateB.getTime();
 });
 
 const formatDate = (date) => {
-    const dateObj = new Date(date);
-    return {
-        day: dateObj.toLocaleDateString(lang, { weekday: 'long' }).toUpperCase(),
-        fullDate: dateObj.toLocaleDateString(lang, { month: 'long', day: 'numeric' }).toUpperCase(),
-    };
+  const dateObj = new Date(date);
+  return {
+    day: dateObj.toLocaleDateString(lang, { weekday: 'long' }).toUpperCase(),
+    fullDate: dateObj.toLocaleDateString(lang, { month: 'long', day: 'numeric' }).toUpperCase(),
+  };
 };
 
 const getTeacherDetails = (teacherId) => teachers.find((t) => t.data.teacherId === teacherId)?.data;
@@ -43,169 +43,161 @@ const getTeacherDetails = (teacherId) => teachers.find((t) => t.data.teacherId =
 const getClassDetails = (classId) => classes.find((cls) => cls.data.classId === classId)?.data;
 
 const renderClassDetails = (item, index) => {
-    const classId = item.data[index ? `class${index}` : 'class'];
-    const teacherId = item.data[index ? `teacher${index}` : 'teacher'];
-    const classTime = item.data[index ? `classTime${index}` : 'classTime'];
+  const classId = item.data[index ? `class${index}` : 'class'];
+  const teacherId = item.data[index ? `teacher${index}` : 'teacher'];
+  const classTime = item.data[index ? `classTime${index}` : 'classTime'];
 
-    if (!classId) return null;
+  if (!classId) return null;
 
-    return {
-        classDetails: getClassDetails(classId),
-        teacherDetails: teacherId ? getTeacherDetails(teacherId) : null,
-        classTime,
-    };
+  return {
+    classDetails: getClassDetails(classId),
+    teacherDetails: teacherId ? getTeacherDetails(teacherId) : null,
+    classTime,
+  };
 };
 ---
 
 <BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage
-        mobileImgUrl={mobileImage}
-        desktopImgUrl={desktopImage}
-        alt={metadata.title}
-        pageName={metadata.title}
-        containerClass="container--tight-desktop"
-    />
-    <div class="schedule container container--tight-desktop mt-20px">
-        <div class="hidden-desktop mb-20px">
-            <a
-                href="/esemenyek/"
-                class="btn btn--width-full-mobile btn--primary--outline mt-20px"
-                aria-label="Astanga jóga tanfolyamok gomb"
-            >
-                Astanga jóga tanfolyamok
-            </a>
-        </div>
-        <div class="hidden-desktop mb-20px">
-            <a
-                href="/dramaszana/"
-                class="btn btn--width-full-mobile btn--primary--solid mt-20px"
-                aria-label="Drámászana gomb"
-            >
-                Drámászana
-            </a>
-        </div>
-        <div class="row gap-1 hidden-mobile">
-            <div class="col-6-xs">
-                <a
-                    href="/astanga-kezdo-tanfolyam/"
-                    class="btn btn--width-full-mobile btn--primary--outline-full mt-20px"
-                    aria-label="Astanga jóga kezdő tanfolyam gomb"
-                >
-                    Astanga kezdő tanfolyam
-                </a>
-            </div>
-            <div class="col-6-xs">
-                <a
-                    href="/dramaszana/"
-                    class="btn btn--width-full-mobile btn--primary--solid--full mt-20px"
-                    aria-label="Drámászana gomb"
-                >
-                    Drámászana
-                </a>
-            </div>
-        </div>
-        <div class="schedule__list mt-20px">
-            {
-                sortedSchedule.map((item, outerIndex) => (
-                    <div class="schedule__item" data-date={item.data.date}>
-                        <div class="schedule__date container-fluid bg-shades-darkGray">
-                            <div class="container container--tight-desktop">
-                                <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
-                                    <p class="schedule__date-day clr-shades-gray display-flex align-items-center">
-                                        {formatDate(item.data.date).day}
-                                        {item.data.fullmoon && <Icons name="Fullmoon" color="orange" />}
-                                        {item.data.newmoon && <Icons name="Newmoon" color="orange" />}
-                                        {item.data.ekadashi && <Icons name="Ekadasi" color="orange" />}
-                                    </p>
-                                    <p class="schedule__date-full clr-shades-gray">
-                                        {formatDate(item.data.date).fullDate}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
-                            (details, innerIndex) =>
-                                details && (
-                                    <div class="schedule__details">
-                                        <p class="schedule__details-time">{details.classTime}</p>
-                                        <div class="schedule__details-class display-flex justify-content-space-between align-items-center">
-                                            <h3 class="schedule__details-title">{details.classDetails.classHu}</h3>
-                                            {details.classDetails.classHu !== 'Holdnap' && (
-                                                <p class="schedule__details-signup link-enhanced link-orange">
-                                                    <a
-                                                        href={details.classDetails.classSignUpUrl}
-                                                        class="link-enhanced link-orange"
-                                                    >
-                                                        Részvétel
-                                                    </a>
-                                                </p>
-                                            )}
-                                        </div>
-                                        {details.teacherDetails && (
-                                            <p class="mb-10px">
-                                                <a
-                                                    class="link-enhanced link-orange body body--bold"
-                                                    href={details.teacherDetails.teacherLink}
-                                                >
-                                                    {details.teacherDetails.teacher}
-                                                </a>
-                                            </p>
-                                        )}
-                                        <AccordionSchedule
-                                            content={details.classDetails.classDetailHu}
-                                            lang={lang}
-                                            uniqueId={`${item.data.date}-${details.classTime ? details.classTime.replace(':', '') : 'unknown'}-${outerIndex}-${innerIndex}`}
-                                        />
-                                    </div>
-                                )
-                        )}
-                    </div>
-                ))
-            }
-        </div>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="schedule container container--tight-desktop mt-20px">
+    <div class="hidden-desktop mb-20px">
+      <a
+        href="/esemenyek/"
+        class="btn btn--width-full-mobile btn--primary--outline mt-20px"
+        aria-label="Astanga jóga tanfolyamok gomb"
+      >
+        Astanga jóga tanfolyamok
+      </a>
     </div>
+    <div class="hidden-desktop mb-20px">
+      <a
+        href="/108-napudvozlet/"
+        class="btn btn--width-full-mobile btn--primary--solid mt-20px"
+        aria-label="108 napüdvözlet gomb"
+      >
+        Újévi 108 Napüdvözlet
+      </a>
+    </div>
+    <div class="row gap-1 hidden-mobile">
+      <div class="col-6-xs">
+        <a
+          href="/astanga-kezdo-tanfolyam/"
+          class="btn btn--width-full-mobile btn--primary--outline-full mt-20px"
+          aria-label="Astanga jóga kezdő tanfolyam gomb"
+        >
+          Astanga kezdő tanfolyam
+        </a>
+      </div>
+      <div class="col-6-xs">
+        <a
+          href="/108-napudvozlet/"
+          class="btn btn--width-full-mobile btn--primary--solid--full mt-20px"
+          aria-label="Drámászana gomb"
+        >
+          Újévi 108 Napüdvözlet
+        </a>
+      </div>
+    </div>
+    <div class="schedule__list mt-20px">
+      {
+        sortedSchedule.map((item, outerIndex) => (
+          <div class="schedule__item" data-date={item.data.date}>
+            <div class="schedule__date container-fluid bg-shades-darkGray">
+              <div class="container container--tight-desktop">
+                <div class="schedule__date-wrapper display-flex justify-content-space-between align-items-center">
+                  <p class="schedule__date-day clr-shades-gray display-flex align-items-center">
+                    {formatDate(item.data.date).day}
+                    {item.data.fullmoon && <Icons name="Fullmoon" color="orange" />}
+                    {item.data.newmoon && <Icons name="Newmoon" color="orange" />}
+                    {item.data.ekadashi && <Icons name="Ekadasi" color="orange" />}
+                  </p>
+                  <p class="schedule__date-full clr-shades-gray">{formatDate(item.data.date).fullDate}</p>
+                </div>
+              </div>
+            </div>
+            {Array.from({ length: 5 }, (_, i) => renderClassDetails(item, i)).map(
+              (details, innerIndex) =>
+                details && (
+                  <div class="schedule__details">
+                    <p class="schedule__details-time">{details.classTime}</p>
+                    <div class="schedule__details-class display-flex justify-content-space-between align-items-center">
+                      <h3 class="schedule__details-title">{details.classDetails.classHu}</h3>
+                      {details.classDetails.classHu !== 'Holdnap' && (
+                        <p class="schedule__details-signup link-enhanced link-orange">
+                          <a href={details.classDetails.classSignUpUrl} class="link-enhanced link-orange">
+                            Részvétel
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                    {details.teacherDetails && (
+                      <p class="mb-10px">
+                        <a class="link-enhanced link-orange body body--bold" href={details.teacherDetails.teacherLink}>
+                          {details.teacherDetails.teacher}
+                        </a>
+                      </p>
+                    )}
+                    <AccordionSchedule
+                      content={details.classDetails.classDetailHu}
+                      lang={lang}
+                      uniqueId={`${item.data.date}-${details.classTime ? details.classTime.replace(':', '') : 'unknown'}-${outerIndex}-${innerIndex}`}
+                    />
+                  </div>
+                )
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
 
-    <script is:inline>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Beállítjuk a mai dátumot éjfélre
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Beállítjuk a mai dátumot éjfélre
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
 
-            // Megtaláljuk az összes órarendi elemet
-            const scheduleItems = document.querySelectorAll('.schedule__item');
-            let hasVisibleItems = false;
+      // Megtaláljuk az összes órarendi elemet
+      const scheduleItems = document.querySelectorAll('.schedule__item');
+      let hasVisibleItems = false;
 
-            // Végigmegyünk minden elemen
-            scheduleItems.forEach((item) => {
-                // Az eredeti dátum formátumot használjuk a data-date attribútumból
-                const dateValue = item.getAttribute('data-date');
-                if (!dateValue) return;
+      // Végigmegyünk minden elemen
+      scheduleItems.forEach((item) => {
+        // Az eredeti dátum formátumot használjuk a data-date attribútumból
+        const dateValue = item.getAttribute('data-date');
+        if (!dateValue) return;
 
-                // Létrehozunk egy dátum objektumot és beállítjuk éjfélre
-                const itemDate = new Date(dateValue);
-                itemDate.setHours(0, 0, 0, 0);
+        // Létrehozunk egy dátum objektumot és beállítjuk éjfélre
+        const itemDate = new Date(dateValue);
+        itemDate.setHours(0, 0, 0, 0);
 
-                // Összehasonlítjuk a mai nappal
-                if (itemDate < today) {
-                    // Ha régebbi, elrejtjük
-                    item.style.display = 'none';
-                } else {
-                    hasVisibleItems = true;
-                }
-            });
+        // Összehasonlítjuk a mai nappal
+        if (itemDate < today) {
+          // Ha régebbi, elrejtjük
+          item.style.display = 'none';
+        } else {
+          hasVisibleItems = true;
+        }
+      });
 
-            // Ha nincs egyetlen látható elem sem, megjelenítünk egy üzenetet
-            if (!hasVisibleItems && scheduleItems.length > 0) {
-                const scheduleList = document.querySelector('.schedule__list');
-                if (scheduleList) {
-                    const noEventsMsg = document.createElement('div');
-                    noEventsMsg.className = 'schedule__no-events';
-                    noEventsMsg.style.textAlign = 'center';
-                    noEventsMsg.style.padding = '2rem';
-                    noEventsMsg.innerHTML = '<p>Jelenleg nincs közelgő esemény az órarendben.</p>';
-                    scheduleList.appendChild(noEventsMsg);
-                }
-            }
-        });
-    </script>
+      // Ha nincs egyetlen látható elem sem, megjelenítünk egy üzenetet
+      if (!hasVisibleItems && scheduleItems.length > 0) {
+        const scheduleList = document.querySelector('.schedule__list');
+        if (scheduleList) {
+          const noEventsMsg = document.createElement('div');
+          noEventsMsg.className = 'schedule__no-events';
+          noEventsMsg.style.textAlign = 'center';
+          noEventsMsg.style.padding = '2rem';
+          noEventsMsg.innerHTML = '<p>Jelenleg nincs közelgő esemény az órarendben.</p>';
+          scheduleList.appendChild(noEventsMsg);
+        }
+      }
+    });
+  </script>
 </BaseLayout>
