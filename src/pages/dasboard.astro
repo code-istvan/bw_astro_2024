@@ -9,44 +9,44 @@ import { turso } from '../turso';
 export const prerender = false;
 
 const metadata = {
-    title: 'ELSŐ ALKALOM',
-    description:
-        'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
+  title: 'LOGIN OLDAL',
+  description:
+    'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
 };
 
 const token = await Astro.session?.get('user-session');
 
 const huFirstTimeData = firstTimeData.HU;
 if (!token) {
-    return Astro.redirect('/login');
+  return Astro.redirect('/login');
 }
 
 console.log('User token:', token);
 
 const { rows } = await turso.execute({
-    sql: `SELECT 
+  sql: `SELECT
             u.fullname,
             u.email,
             u.alias,
             p.id as pass_id,
-            p.pass_type,         
+            p.pass_type,
             p.expiration_date,
-            p.uses_remaining,    
-            p.is_active         
+            p.uses_remaining,
+            p.is_active
           FROM users u
-          JOIN user_passes up ON u.id = up.user_id     
-          JOIN passes p ON up.pass_id = p.id            
-          WHERE u.id = ? 
+          JOIN user_passes up ON u.id = up.user_id
+          JOIN passes p ON up.pass_id = p.id
+          WHERE u.id = ?
           AND p.is_active = 1`,
-    args: [token],
+  args: [token],
 });
 
 const { rows: passCheck } = await turso.execute({
-    sql: `SELECT * FROM users u
-    JOIN user_passes up ON u.id = up.user_id     
-    JOIN passes p ON up.pass_id = p.id            
+  sql: `SELECT * FROM users u
+    JOIN user_passes up ON u.id = up.user_id
+    JOIN passes p ON up.pass_id = p.id
     WHERE u.id = ?`,
-    args: [token],
+  args: [token],
 });
 
 console.log('rows:', rows);
@@ -55,20 +55,20 @@ console.log('passCheck:', passCheck);
 const user = rows[0];
 
 console.log('User:', user);
-console.log('Pass ID:', user.pass_id);
-console.log('Expiration:', user.expiration_date);
+// console.log('Pass ID:', user.pass_id);
+// console.log('Expiration:', user.expiration_date);
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage
-        mobileImgUrl={mobileImage}
-        desktopImgUrl={desktopImage}
-        alt={metadata.title}
-        pageName={metadata.title}
-        containerClass="container--tight-desktop"
-    />
-    <div class="container container--tight-desktop">
-        HELLO
-        <h1>{user.fullname}</h1>
-    </div>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="container container--tight-desktop">
+    HELLO
+    <h1>{user.fullname}</h1>
+  </div>
 </BaseLayout>

@@ -11,85 +11,85 @@ const t = useTranslations(lang);
 ---
 
 <footer>
-    <div class="container-fluid footer bg-shades-darkGray mt-3">
-        <div class="row footer__first-row">
-            <div class="col-12-xs col-6-md">
-                <div class="footer__brand">
-                    <div>
-                        <a href="/" class="btn" aria-label="vissza a nyitó oldalra">
-                            <Icons name="BwSymbol" color="white" />
-                        </a>
-                    </div>
-                    <div class="footer__icon-text">
-                        <p>
-                            {t('footerBrandTextLine1')}
-                            <br />
-                            {t('footerBrandTextLine2')}
-                            <br />
-                            {t('footerBrandTextLine3')}
-                        </p>
-                    </div>
-                </div>
-                <div class="footer__navigation">
-                    <div class="footer__navigation-box">
-                        <FooterDesktopMenu />
-                    </div>
-                </div>
-            </div>
-            <div class="col-12-xs col-6-md footer__newsletter">
-                <div class="footer__newsletter-box text-center">
-                    <h3 class="mb-1 mt-0">{t('footerNewsletterTitle')}</h3>
-                    <p class="mb-2 mt-0">{t('footerNewsletterText')}</p>
-                    <div class="centered-block">
-                        <a
-                            href={t('footerNewsletterLink')}
-                            class="btn btn--secondary--outline mt-20px mb-20px"
-                            aria-label="Feliratkozás hírlevélre"
-                        >
-                            {t('footerNewsletterButton')}
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="container-fluid footer bg-shades-darkGray mt-3">
+    <div class="row footer__first-row">
+      <div class="col-12-xs col-6-md">
+        <div class="footer__brand">
+          <div>
+            <a href="/" class="btn" aria-label="vissza a nyitó oldalra">
+              <Icons name="BwSymbol" color="white" />
+            </a>
+          </div>
+          <div class="footer__icon-text">
+            <p>
+              {t('footerBrandTextLine1')}
+              <br />
+              {t('footerBrandTextLine2')}
+              <br />
+              {t('footerBrandTextLine3')}
+            </p>
+          </div>
         </div>
-        <div class="footer__social">
-            <div class="pt-2 pb-2">
-                <SocialIcons />
-            </div>
+        <div class="footer__navigation">
+          <div class="footer__navigation-box">
+            <FooterDesktopMenu />
+          </div>
         </div>
-        <div class="footer__bottom">
-            <div class="footer__bottom-box mt-2 mb-2">
-                <div class="footer__bottom-copyright">
-                    <p class="small">Designed and code by</p>
-                    <a
-                        href="https://omworks.hu"
-                        class="link-enhanced link-orange"
-                        aria-label="Tovább az OmWorks Yoga Creatives oldalra"
-                    >
-                        <p class="small">OmWorks Yoga Creatives</p>
-                    </a>
-                </div>
-                <div class="separator"></div>
-                <div>
-                    <p class="small">
-                        Copyright© 2013-{new Date().getFullYear()} BandhaWorks
-                    </p>
-                </div>
-                <div class="separator"></div>
-
-                <div>
-                    <a
-                        href={t('footerPrivacyLink')}
-                        class="link-enhanced"
-                        aria-label="Tovább az Adatvédelmi tájékoztató oldalra"
-                    >
-                        <p class="small">{t('footerPrivacyText')}</p>
-                    </a>
-                </div>
-            </div>
-            <div class="mt-20px mb-40px">
-                <WebsiteCarbonBadge url={String(Astro.url)} co2="0.06" percentage="95" client:only="react" />
-            </div>
+      </div>
+      <div class="col-12-xs col-6-md footer__newsletter">
+        <div class="footer__newsletter-box text-center">
+          <h3 class="mb-1 mt-0">{t('footerNewsletterTitle')}</h3>
+          <p class="mb-2 mt-0">{t('footerNewsletterText')}</p>
+          <div class="centered-block">
+            <a
+              href={t('footerNewsletterLink')}
+              class="btn btn--secondary--outline mt-20px mb-20px"
+              aria-label="Feliratkozás hírlevélre"
+            >
+              {t('footerNewsletterButton')}
+            </a>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="footer__social">
+      <div class="pt-2 pb-2">
+        <SocialIcons />
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-box mt-2 mb-2">
+        <div class="footer__bottom-copyright">
+          <p class="small">Designed and code by</p>
+          <a
+            href="https://omworks.hu"
+            class="link-enhanced link-orange"
+            aria-label="Tovább az OmWorks Yoga Creatives oldalra"
+          >
+            <p class="small">OmWorks Yoga Creatives</p>
+          </a>
+        </div>
+        <div class="separator"></div>
+        <div>
+          <p class="small">
+            Copyright© 2013-{new Date().getFullYear()} BandhaWorks
+          </p>
+        </div>
+        <div class="separator"></div>
+
+        <div>
+          <a
+            href={t('footerPrivacyLink')}
+            class="link-enhanced link-orange"
+            aria-label="Tovább az Adatvédelmi tájékoztató oldalra"
+          >
+            <p class="small">{t('footerPrivacyText')}</p>
+          </a>
+        </div>
+      </div>
+      <div class="mt-20px mb-40px">
+        <WebsiteCarbonBadge url={String(Astro.url)} co2="0.06" percentage="95" client:only="react" />
+      </div>
+    </div>
+  </div>
 </footer>
