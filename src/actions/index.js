@@ -65,6 +65,7 @@ export const server = {
     },
   }),
   logout: defineAction({
+    accept: 'form',
     handler: async (_, context) => {
       try {
         context.session.destroy();

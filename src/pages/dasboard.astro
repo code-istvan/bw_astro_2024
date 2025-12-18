@@ -83,14 +83,12 @@ console.log('User:', user);
   const logoutBtn = document.getElementById('logout_button');
 
   logoutBtn?.addEventListener('click', async () => {
-    const { data, error } = await actions.logout();
+    const { data, error } = await actions.logout(new FormData());
 
     if (error) {
       console.error('Error:', error);
       return;
     }
-
-    console.log(data.message);
     navigate('/login');
   });
 </script>
