@@ -64,6 +64,23 @@ export const server = {
       }
     },
   }),
+  logout: defineAction({
+    handler: async (_, context) => {
+      try {
+        context.session.destroy();
+        console.log('cant log');
+        return {
+          success: true,
+          message: 'Logout success',
+        };
+      } catch (error) {
+        throw new ActionError({
+          code: 'UNAUTHORIZED',
+          message: error.message ?? 'Cant logout',
+        });
+      }
+    },
+  }),
   contact: defineAction({
     input: z.object({
       name: z.string(),

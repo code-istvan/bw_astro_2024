@@ -25,19 +25,19 @@ console.log('User token:', token);
 
 const { rows } = await turso.execute({
   sql: `SELECT
-            u.fullname,
-            u.email,
-            u.alias,
-            p.id as pass_id,
-            p.pass_type,
-            p.expiration_date,
-            p.uses_remaining,
-            p.is_active
-          FROM users u
-          JOIN user_passes up ON u.id = up.user_id
-          JOIN passes p ON up.pass_id = p.id
-          WHERE u.id = ?
-          AND p.is_active = 1`,
+          u.first_name,
+          u.email,
+          u.alias,
+          u.last_asana,
+          p.id as pass_id,
+          p.pass_type,
+          p.expiration_date,
+          p.uses_remaining,
+          p.is_active
+        FROM users u
+        LEFT JOIN user_passes up ON u.id = up.user_id
+        LEFT JOIN passes p ON up.pass_id = p.id AND p.is_active = 1
+        WHERE u.id = ?`,
   args: [token],
 });
 
@@ -67,8 +67,30 @@ console.log('User:', user);
     pageName={metadata.title}
     containerClass="container--tight-desktop"
   />
+
   <div class="container container--tight-desktop">
     HELLO
-    <h1>{user.fullname}</h1>
+    <h1>{user.first_name}</h1>
+    <p>{user.last_asana}</p>
+    <button onclick="handleLogout()" id="logout_button">LOG OUT</button>
   </div>
 </BaseLayout>
+
+<script>
+  import { actions } from 'astro:actions';
+  import { navigate } from 'astro:transitions/client';
+
+  const logoutBtn = document.getElementById('logout_button');
+
+  logoutBtn?.addEventListener('click', async () => {
+    const { data, error } = await actions.logout();
+
+    if (error) {
+      console.error('Error:', error);
+      return;
+    }
+
+    console.log(data.message);
+    navigate('/login');
+  });
+</script>

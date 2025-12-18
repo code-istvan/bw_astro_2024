@@ -7,88 +7,83 @@ import { actions } from 'astro:actions';
 import '../sass/pages/_login.scss';
 
 const metadata = {
-    title: 'LOGIN',
-    description: 'Ezen az oldalon tudsz bejelentkezni a Bandha Works jógastúdió oldalára.',
+  title: 'LOGIN',
+  description: 'Ezen az oldalon tudsz bejelentkezni a Bandha Works jógastúdió oldalára.',
 };
 
 const token = await Astro.session?.get('user-session');
 
 if (token) {
-    return Astro.redirect('/dasboard');
+  return Astro.redirect('/dasboard');
 }
 ---
 
 <LoginLayout title={metadata.title} description={metadata.description}>
-    <div class="login-root">
-        <Matrix style="matrix" color="color-one" />
-        <div class="dialog-overlay container">
-            <dialog class="login-dialog" open>
-                <h3 class="align-left">The Only Way Out is logIN</h3>
-                <p class="mb-20px align-left clr-shades-gray">Please log in to your account to continue.</p>
-                <!-- Progressive enhancement: server-oldali submit alapból -->
-                <div class="input-wrapper">
-                    <form id="login-form" class="login-form" method="post" action={actions.login}>
-                        <div class="row gap-1rem">
-                            <div class="col-12-xs">
-                                <Input id="identifier" name="identifier" type="text" placeholder="Username" />
-                            </div>
-                            <div class="col-12-xs">
-                                <Input id="password" name="password" type="password" placeholder="Password" />
-                            </div>
+  <div class="login-root">
+    <Matrix style="matrix" color="color-one" />
+    <div class="dialog-overlay container">
+      <dialog class="login-dialog" open>
+        <h3 class="align-left">The Only Way Out is logIN</h3>
+        <p class="mb-20px align-left clr-shades-gray">Please log in to your account to continue.</p>
+        <!-- Progressive enhancement: server-oldali submit alapból -->
+        <div class="input-wrapper">
+          <form id="login-form" class="login-form" method="post" action={actions.login}>
+            <div class="row gap-1rem">
+              <div class="col-12-xs">
+                <Input id="identifier" name="identifier" type="text" placeholder="Username" />
+              </div>
+              <div class="col-12-xs">
+                <Input id="password" name="password" type="password" placeholder="Password" />
+              </div>
 
-                            <div class="col-12-xs">
-                                <p class="clr-red"></p>
-                            </div>
+              <div class="col-12-xs">
+                <p class="clr-red"></p>
+              </div>
 
-                            <div class="col-12-xs">
-                                <button type="submit" class="btn btn--primary--solid btn--width-full">LogIN</button>
-                            </div>
-                            <IconButton
-                                href="/"
-                                variant="btn--third--naked-gray"
-                                iconName="ArrowLeft"
-                                iconColor="lightGray"
-                                class="no-padding mt-20px back-button"
-                                ariaLabel="Vissza a főoldalra gomb"
-                                hoverEffect="iconColor"
-                                hoverIconColor="orange"
-                            >
-                                Back to homepage
-                            </IconButton>
-                        </div>
-                    </form>
-                </div>
-            </dialog>
+              <div class="col-12-xs">
+                <button type="submit" class="btn btn--primary--solid btn--width-full">LogIN</button>
+              </div>
+              <IconButton
+                href="/"
+                variant="btn--third--naked-gray"
+                iconName="ArrowLeft"
+                iconColor="lightGray"
+                class="no-padding mt-20px back-button"
+                ariaLabel="Vissza a főoldalra gomb"
+                hoverEffect="iconColor"
+                hoverIconColor="orange"
+              >
+                Back to homepage
+              </IconButton>
+            </div>
+          </form>
         </div>
+      </dialog>
     </div>
+  </div>
 </LoginLayout>
 
 <script>
-    import { actions } from 'astro:actions';
-    import { navigate } from 'astro:transitions/client';
+  import { actions } from 'astro:actions';
+  import { navigate } from 'astro:transitions/client';
 
-    const form = document.querySelector('#login-form');
-    console.log('Form:', form);
+  const form = document.querySelector('#login-form');
+  console.log('Form:', form);
 
-    form?.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        console.log('Hello');
-        const formData = new FormData(form as HTMLFormElement);
-        const identifier = formData.get('identifier');
-        const password = formData.get('password');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form as HTMLFormElement);
+    const identifier = formData.get('identifier');
+    const password = formData.get('password');
 
-        const userData = new FormData();
-        userData.append('identifier', identifier);
-        userData.append('password', password);
-        console.log('Hello2', userData);
-        const { data, error } = await actions.login(userData);
-        console.log({ data, error });
-        if (error) document.querySelector('.clr-red').textContent = error.message;
+    const userData = new FormData();
+    userData.append('identifier', identifier);
+    userData.append('password', password);
+    const { data, error } = await actions.login(userData);
+    if (error) document.querySelector('.clr-red').textContent = error.message;
 
-        if (!error) {
-            navigate('/dasboard');
-        }
-        console.log('1234', identifier, password);
-        console.log({ data, error });
-    });
+    if (!error) {
+      navigate('/dasboard');
+    }
+  });
 </script>
