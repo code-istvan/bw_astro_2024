@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroImage from '../../components/HeroImage/HeroImage.astro';
+import mobileImage from '../../images/sz_zsuzsi_mobil.jpeg';
+import desktopImage from '../../images/sz_zsuzsi_desktop.jpeg';
+
+const metadata = {
+  title: 'Zsuzsi',
+  description: 'Here you can read more about Zsuzsi Szuromi, yoga teacher at Bandha Works.',
+};
+---
+
+<BaseLayout {...metadata} title={metadata.title} description={metadata.description} image={desktopImage}>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="container container--tight-desktop mb-40px">
+    <p class="mb-20px mt-40px">
+      I first encountered yoga in 2021 during a vinyasa flow class. At the beginning, my practice was rather irregular
+      and impulse-driven, continuing this way until the end of my second year.
+    </p>
+    <p class="mb-20px">
+      With a degree in economics, I was already working for my third multinational company at the time, which I left
+      behind in a sudden surge of momentum, driven by complete disillusionment and a search for answers. I moved abroad
+      hoping for a fresh start, and amid many difficulties, one stable point remained: my daily asana practice. Back
+      then, I knew nothing about yoga philosophy; I simply practiced the asanas as my sole anchor.
+    </p>
+    <p class="mb-20px">
+      After moving back home, unsure of which direction to take, I completed a teacher training. Among the many
+      mandatory readings, the first book I happened to pick up was the Bhagavad Gita. I believe this is where it all
+      truly began. Simply reading it felt like a remedy for my anxieties, a balm for the heart. This book was followed
+      by many other wonderful readings; I studied, read, and my world opened up — it was a truly beautiful summer.
+    </p>
+    <p class="mb-20px">
+      That summer, during my required teaching observations, I went to Astoria to try a hot yoga class. The class was
+      taught by Noémi, and at the end she came up to me and suggested that I try Ashtanga at Bandha Works; she practiced
+      there and thought I would enjoy it. Encouraged by her words, I signed up for the beginner course in November,
+      which was followed by my first Mysore practice in December.
+    </p>
+    <p class="mb-20px">
+      Since then, my world has changed significantly. I have received many answers, and a genuine journey of
+      self-discovery has begun.
+    </p>
+    <p class="mb-20px">
+      The practice helps to quiet inner turmoil and tension, and through the silence and awakening awareness, it allows
+      insight into the processes of the mind, its contents, and our inner workings. It is a gift to have a space like
+      the shala, where—without words—we strive toward a shared intention and breathe together. I love the sacredness of
+      the mornings, the energy that fills the practice space, the homely warmth of shared tea and gentle smiles, and the
+      possibility to exist here honestly, without filters.
+    </p>
+    <p class="mb-20px">
+      I believe that yoga can help everyone live a fuller life, and that one day, after long wanderings, we may finally
+      find a place to anchor.
+    </p>
+  </div>
+</BaseLayout>
