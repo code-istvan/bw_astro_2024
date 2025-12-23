@@ -9,26 +9,29 @@ import { turso } from '../turso';
 export const prerender = false;
 
 const metadata = {
-  title: 'LOGIN OLDAL',
-  description:
-    'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
+    title: 'LOGIN OLDAL',
+    description:
+        'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
 };
 
 const token = await Astro.session?.get('user-session');
 
 const huFirstTimeData = firstTimeData.HU;
 if (!token) {
-  return Astro.redirect('/login');
+    return Astro.redirect('/login');
 }
 
 console.log('User token:', token);
 
 const { rows } = await turso.execute({
-  sql: `SELECT
+    sql: `SELECT
           u.first_name,
+          u.family_name,
           u.email,
           u.alias,
           u.last_asana,
+          u.role,
+          u.birthday,
           p.id as pass_id,
           p.pass_type,
           p.expiration_date,
@@ -38,15 +41,15 @@ const { rows } = await turso.execute({
         LEFT JOIN user_passes up ON u.id = up.user_id
         LEFT JOIN passes p ON up.pass_id = p.id AND p.is_active = 1
         WHERE u.id = ?`,
-  args: [token],
+    args: [token],
 });
 
 const { rows: passCheck } = await turso.execute({
-  sql: `SELECT * FROM users u
+    sql: `SELECT * FROM users u
     JOIN user_passes up ON u.id = up.user_id
     JOIN passes p ON up.pass_id = p.id
     WHERE u.id = ?`,
-  args: [token],
+    args: [token],
 });
 
 console.log('rows:', rows);
@@ -60,35 +63,45 @@ console.log('User:', user);
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-  <HeroImage
-    mobileImgUrl={mobileImage}
-    desktopImgUrl={desktopImage}
-    alt={metadata.title}
-    pageName={metadata.title}
-    containerClass="container--tight-desktop"
-  />
+    <HeroImage
+        mobileImgUrl={mobileImage}
+        desktopImgUrl={desktopImage}
+        alt={metadata.title}
+        pageName={metadata.title}
+        containerClass="container--tight-desktop"
+    />
 
-  <div class="container container--tight-desktop">
-    HELLO
-    <h1>{user.first_name}</h1>
-    <p>{user.last_asana}</p>
-    <button onclick="handleLogout()" id="logout_button">LOG OUT</button>
-  </div>
+    <div class="container container--tight-desktop">
+        HELLO
+        <h1>{user.first_name}</h1>
+        <h1>{user.family_name}</h1>
+        <p>
+            {user.birthday}
+        </p>
+        <p>{user.last_asana}</p>
+        <p>
+            {user.pass_type}
+        </p>
+        <p>
+            {user.role}
+        </p>
+        <button onclick="handleLogout()" id="logout_button">LOG OUT</button>
+    </div>
+
+    <script>
+        import { actions } from 'astro:actions';
+        import { navigate } from 'astro:transitions/client';
+
+        const logoutBtn = document.getElementById('logout_button');
+
+        logoutBtn?.addEventListener('click', async () => {
+            const { data, error } = await actions.logout(new FormData());
+
+            if (error) {
+                console.error('Error:', error);
+                return;
+            }
+            navigate('/login');
+        });
+    </script>
 </BaseLayout>
-
-<script>
-  import { actions } from 'astro:actions';
-  import { navigate } from 'astro:transitions/client';
-
-  const logoutBtn = document.getElementById('logout_button');
-
-  logoutBtn?.addEventListener('click', async () => {
-    const { data, error } = await actions.logout(new FormData());
-
-    if (error) {
-      console.error('Error:', error);
-      return;
-    }
-    navigate('/login');
-  });
-</script>
