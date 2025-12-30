@@ -11,337 +11,312 @@ import Istvan from '../images/uploads/teachers/istvan.png';
 import '../sass/pages/_dramaszana.scss';
 
 const metadata = {
-    title: 'DRÁMÁSZANA - ÁSZANA, LÉGZÉS, BANDHA, DRISTI',
-    description:
-        'A Drámászana egy önismereti folyamat, amely az ászana, a légzés, a bandhák és a drishti segítségével segít felszínre hozni és megérteni a mélyebb mintákat és érzéseket.',
+  title: 'DRÁMÁSZANA - ÁSZANA, LÉGZÉS, BANDHA, DRISTI',
+  description:
+    'A Drámászana egy önismereti folyamat, amely az ászana, a légzés, a bandhák és a drishti segítségével segít felszínre hozni és megérteni a mélyebb mintákat és érzéseket.',
 };
 
 const huDramaszanaFaqs = dramaszanaFaqsData.HU;
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage
-        mobileImgUrl={mobileImage}
-        desktopImgUrl={desktopImage}
-        alt={metadata.title}
-        pageName={metadata.title}
-        containerClass="container--tight-desktop"
-    />
-    <div class="container container--tight-desktop">
-        <div class="dramaszana-wrapper tight--desktop--container">
-            <div class="row mt-40px mb-20px">
-                <h3 class="clr-brand-orange">
-                    Tízen együtt a körben. Oda megyünk, ahol nincsen arcod, nincsenek az otthonos szavak, az ismert
-                    mozdulatok, a megtartó jólneveltségen túlra megyünk. Tízen együtt, mégis külön-külön. Mert a döntő
-                    pillanatban egyedül vagy...
-                </h3>
-            </div>
-            <div class="row mb-20px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">A múlt rétegei</h3>
-                <p>
-                    A test fizikai rétegei alól lassan kibomlik mindaz, amit eddig hordtál: történetek, amelyek nem a
-                    jelenből, hanem a múltból származnak – ebből a születésből vagy egy másikból, a családból, anyádtól
-                    vagy apádtól, vagy mástól. Érzések, félelmek, amelyeket nem tudtál néven nevezni.
-                </p>
-            </div>
-            <div class="row mb-20px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">A külső burkon túl</h3>
-                <p>
-                    A póz mélyén nemcsak a csípőd nyílik, hanem a benned rejlő sötét anyag is megmozdul – lehet, hogy
-                    suttog, lehet, hogy üvölt, lehet, hogy beleremegsz. Ez a találkozás egyszerre lehet felszabadító és
-                    kíméletlen, mert mindenki mást hoz magával. A csípőnyitó ászana segít feltörni a test külső burkát,
-                    és hozzáférést nyit a finomtesthez – annak különleges, sokak számára ismeretlen világához. A kör
-                    tart, a munka belül zajlik – ott, ahol nem menekülhetsz a saját igazságod elől.
-                </p>
-            </div>
-            <div class="mb-40px mt-40px typewriter-wrapper">
-                <div class="">
-                    <Typewriter
-                        textArray={['Nem könnyű írni erről||||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Felkavaró, kimerítő, nehezen értelmezhető, || nehezen emészthető|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '|Két napig csak feküdtem az ágyban úgy kimerített fizikálisan és mentálisan, pedig csak egy óra volt|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Az első pár körben az ereszkedésről szólt a dolog, a ráhangolódásról|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Közeledtem valami fényességhez|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|De nem igazán tudtam minek is kell történnie, nem éreztem semmit|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '|Olyan voltam mint egy üres konzerves doboz, amiben nincs semmi kiürült, kiszáradt|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Nem adatható vissza, nem leírható|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '|Aztán a harmadik harmadban erős szexuális energia szabadult fel, nyilván a csípő nyitástól|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Erős agresszivitást, elfojtást éltem meg|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|De a lényeg ezután jött |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['|Itt se tudom mi történt |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '| Szóval megérkeztem valami nyugalomba valami békébe, minden annyira tiszta volt és egyértelmű|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Úgy éreztem már nem köt semmi kötőerő, hogy kiszabadultam |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Egyszerre mindent láttam és értettem|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Az egész csak illúzió, minden amit átélünk csak || ILLÚZIÓ |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '| Valami ilyen lehet amikor a testet elhagyjuk, éreztem a félelmet a testembe de tudtam hogy az csak ragaszkodás és nem valódi. Jó volt ott lenni|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Azóta transzba vagyok de már múlik|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Minden másképp szemlélek nyugodtabb vagyok |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Nem mondhatnám hogy felszabadultabb mert ez inkább melankólia mint öröm|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Itt a gyakorlás fizikai része tényleg semmit nem számít|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '| Nem számít, hogy hogy néz ki, milyen erős vagy hajlékony vagy. Semmit sem számít! |||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Viszont a testen keresztül lehet ide jutni, ahhoz meg fel kell törni|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Nagyon nehéz ezt az egészet felfogni! |||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Ami abban az egy órában történt|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={['| Az agyam azt mondja most, hogy csak álom volt|||']}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter
-                        textArray={[
-                            '| Azért remélem megmarad ez a szemlélet még mert a családomat nézve tegnap nagyon sok mindenre választ kaptam|||',
-                        ]}
-                        align="left"
-                        loopAll={true}
-                        cursorColor="orange"
-                    />
-                    <Typewriter textArray={['| |||']} align="left" loopAll={true} cursorColor="orange" />
-                </div>
-            </div>
-            <div class="island-section mb-20px">
-                <h3 class="font-family-primary text-align-center body--bold">FONTOS!</h3>
-                <p class="clr-brand-orange body--bold mt-20px">
-                    A Drámászana nem pszichoterápia. A folyamat során feljöhetnek nehéz, eltemetett érzések vagy
-                    emlékek. Mi a teret és a kereteket biztosítjuk, de a feldolgozás mindenkinek a saját felelőssége. Az
-                    esemény után nem tudunk személyes kísérést nyújtani. Pszichiátriai gyógyszeres kezelés alatt
-                    állóknak a részvételt nem javasoljuk. A jelentkezéssel minden résztvevő elfogadja, hogy az eseményen
-                    saját felelősségére vesz részt.
-                </p>
-            </div>
-            <div class="row mb-20px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">Belépés a körbe</h3>
-                <p>
-                    A Drámászana elsősorban a jógaiskolánk rendszeres gyakorlói számára jött létre, akik már otthonosan
-                    mozognak a gyakorlás és a közösség kereteiben. Külsős érdeklődők jelentkezésére is van lehetőség, de
-                    ebben az esetben előzetesen szükséges egy rövid beszélgetés a csoport vezetőjével, Istvánnal, hogy
-                    közösen lássuk: hogy kiderüljön, biztonságos és támogató lehet-e számodra a részvétel.
-                </p>
-            </div>
-            <h3 class="font-family-primary clr-brand-orange mb-20px">Részvételi tudnivalók</h3>
-            <div class="dramaszana-info mb-20px">
-                <h3 class="clr-flag-notify body--bold">
-                    A novemberi Drámászana önismereti műhelyre sajnos már nincs szabad helyünk.
-                </h3>
-            </div>
-            <div class="dramaszana-info mb-20px">
-                <div class="dramaszana-info__wrapper">
-                    <div class="dramaszana-info__section dramaszana-info__section--header">
-                        <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">
-                            2026. január 11, 18, 25.
-                        </p>
-                        <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
-                        <p class="dramaszana-info__subtitle clr-shades-gray body--bold mt-20px">
-                            Az alkalmak vasárnaponként 17:00–19:00 óra között kerülnek megrendezésre. Az eseményen
-                            maximum tíz résztvevő számára tudunk helyet biztosítani.
-                        </p>
-                    </div>
-                    <div class="dramaszana-info__section dramaszana-info__section--teacher mt-20px">
-                        <div class="dramaszana-info__content">
-                            <div class="dramaszana-teacher display-flex align-items-center gap-1rem">
-                                <Image
-                                    src={Istvan}
-                                    alt="Szalai István astanga jógaóktató"
-                                    class="lead-teacher__avatar-image avatar__image avatar__image--medium"
-                                />
-                                <div class="dramaszana-teacher__meta">
-                                    <a
-                                        href="/szalai-istvan/"
-                                        class="dramaszana-teacher__name clr-brand-orange body--bold"
-                                    >
-                                        <p class="body--bold">Szalai István</p>
-                                    </a>
-                                    <span class="font-family-secondary">csoportvezető</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dramaszana-info__section dramaszana-info__section--price mt-20px">
-                        <p class="dramaszana-info__label body--bold">Részvételi díj</p>
-                        <p class="dramaszana-info__content clr-shades-gray">30.000 Ft</p>
-                    </div>
-                    <div class="dramaszana-info__section dramaszana-info__section--apply">
-                        <a
-                            href="https://shop.bandha.works/products/dramaszana"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn--primary--solid btn--width-full-mobile"
-                        >
-                            Jelentkezem
-                        </a>
-                        <p class="dramaszana-info__subtitle clr-flag-notify body--bold mt-20px">
-                            Erre az eseményre kevesebb mint 3 szabad helyünk van.
-                        </p>
-                        <p class="body--bold mt-20px">
-                            Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki
-                            elfogadja, hogy a Drámászana műhelyen saját felelősségére vesz részt.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-40px mt-40px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
-                <div class="page-content__section page-content__section--faq mb-40px">
-                    {
-                        huDramaszanaFaqs.length > 0 ? (
-                            huDramaszanaFaqs.map((faq) => (
-                                <AccordionFaq
-                                    key={faq.id}
-                                    id={`accordion-${faq.id}`}
-                                    Egyedi
-                                    ID
-                                    minden
-                                    accordion
-                                    elemhez
-                                    className="accordion-title"
-                                    faqs={[faq]}
-                                    Egyedi
-                                    kérdés-válasz
-                                    átadása
-                                />
-                            ))
-                        ) : (
-                            <div>Nincs elérhető információ.</div>
-                        )
-                    }
-                </div>
-            </div>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="container container--tight-desktop">
+    <div class="dramaszana-wrapper tight--desktop--container">
+      <div class="row mt-40px mb-20px">
+        <h3 class="clr-brand-orange">
+          Tízen együtt a körben. Oda megyünk, ahol nincsen arcod, nincsenek az otthonos szavak, az ismert mozdulatok, a
+          megtartó jólneveltségen túlra megyünk. Tízen együtt, mégis külön-külön. Mert a döntő pillanatban egyedül
+          vagy...
+        </h3>
+      </div>
+      <div class="row mb-20px">
+        <h3 class="font-family-primary clr-brand-orange mb-20px">A múlt rétegei</h3>
+        <p>
+          A test fizikai rétegei alól lassan kibomlik mindaz, amit eddig hordtál: történetek, amelyek nem a jelenből,
+          hanem a múltból származnak – ebből a születésből vagy egy másikból, a családból, anyádtól vagy apádtól, vagy
+          mástól. Érzések, félelmek, amelyeket nem tudtál néven nevezni.
+        </p>
+      </div>
+      <div class="row mb-20px">
+        <h3 class="font-family-primary clr-brand-orange mb-20px">A külső burkon túl</h3>
+        <p>
+          A póz mélyén nemcsak a csípőd nyílik, hanem a benned rejlő sötét anyag is megmozdul – lehet, hogy suttog,
+          lehet, hogy üvölt, lehet, hogy beleremegsz. Ez a találkozás egyszerre lehet felszabadító és kíméletlen, mert
+          mindenki mást hoz magával. A csípőnyitó ászana segít feltörni a test külső burkát, és hozzáférést nyit a
+          finomtesthez – annak különleges, sokak számára ismeretlen világához. A kör tart, a munka belül zajlik – ott,
+          ahol nem menekülhetsz a saját igazságod elől.
+        </p>
+      </div>
+      <div class="mb-40px mt-40px typewriter-wrapper">
+        <div class="">
+          <Typewriter textArray={['Nem könnyű írni erről||||']} align="left" loopAll={true} cursorColor="orange" />
+          <Typewriter
+            textArray={['|Felkavaró, kimerítő, nehezen értelmezhető, || nehezen emészthető|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={[
+              '|Két napig csak feküdtem az ágyban úgy kimerített fizikálisan és mentálisan, pedig csak egy óra volt|||',
+            ]}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|Az első pár körben az ereszkedésről szólt a dolog, a ráhangolódásról|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|Közeledtem valami fényességhez|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|De nem igazán tudtam minek is kell történnie, nem éreztem semmit|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|Olyan voltam mint egy üres konzerves doboz, amiben nincs semmi kiürült, kiszáradt|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|Nem adatható vissza, nem leírható|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={[
+              '|Aztán a harmadik harmadban erős szexuális energia szabadult fel, nyilván a csípő nyitástól|||',
+            ]}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['|Erős agresszivitást, elfojtást éltem meg|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter textArray={['|De a lényeg ezután jött |||']} align="left" loopAll={true} cursorColor="orange" />
+          <Typewriter textArray={['|Itt se tudom mi történt |||']} align="left" loopAll={true} cursorColor="orange" />
+          <Typewriter
+            textArray={[
+              '| Szóval megérkeztem valami nyugalomba valami békébe, minden annyira tiszta volt és egyértelmű|||',
+            ]}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Úgy éreztem már nem köt semmi kötőerő, hogy kiszabadultam |||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Egyszerre mindent láttam és értettem|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Az egész csak illúzió, minden amit átélünk csak || ILLÚZIÓ |||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={[
+              '| Valami ilyen lehet amikor a testet elhagyjuk, éreztem a félelmet a testembe de tudtam hogy az csak ragaszkodás és nem valódi. Jó volt ott lenni|||',
+            ]}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Azóta transzba vagyok de már múlik|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Minden másképp szemlélek nyugodtabb vagyok |||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Nem mondhatnám hogy felszabadultabb mert ez inkább melankólia mint öröm|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Itt a gyakorlás fizikai része tényleg semmit nem számít|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Nem számít, hogy hogy néz ki, milyen erős vagy hajlékony vagy. Semmit sem számít! |||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Viszont a testen keresztül lehet ide jutni, ahhoz meg fel kell törni|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Nagyon nehéz ezt az egészet felfogni! |||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Ami abban az egy órában történt|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={['| Az agyam azt mondja most, hogy csak álom volt|||']}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter
+            textArray={[
+              '| Azért remélem megmarad ez a szemlélet még mert a családomat nézve tegnap nagyon sok mindenre választ kaptam|||',
+            ]}
+            align="left"
+            loopAll={true}
+            cursorColor="orange"
+          />
+          <Typewriter textArray={['| |||']} align="left" loopAll={true} cursorColor="orange" />
         </div>
+      </div>
+      <div class="island-section mb-20px">
+        <h3 class="font-family-primary text-align-center body--bold">FONTOS!</h3>
+        <p class="clr-brand-orange body--bold mt-20px">
+          A Drámászana nem pszichoterápia. A folyamat során feljöhetnek nehéz, eltemetett érzések vagy emlékek. Mi a
+          teret és a kereteket biztosítjuk, de a feldolgozás mindenkinek a saját felelőssége. Az esemény után nem tudunk
+          személyes kísérést nyújtani. Pszichiátriai gyógyszeres kezelés alatt állóknak a részvételt nem javasoljuk. A
+          jelentkezéssel minden résztvevő elfogadja, hogy az eseményen saját felelősségére vesz részt.
+        </p>
+      </div>
+      <div class="row mb-20px">
+        <h3 class="font-family-primary clr-brand-orange mb-20px">Belépés a körbe</h3>
+        <p>
+          A Drámászana elsősorban a jógaiskolánk rendszeres gyakorlói számára jött létre, akik már otthonosan mozognak a
+          gyakorlás és a közösség kereteiben. Külsős érdeklődők jelentkezésére is van lehetőség, de ebben az esetben
+          előzetesen szükséges egy rövid beszélgetés a csoport vezetőjével, Istvánnal, hogy közösen lássuk: hogy
+          kiderüljön, biztonságos és támogató lehet-e számodra a részvétel.
+        </p>
+      </div>
+      <h3 class="font-family-primary clr-brand-orange mb-20px">Részvételi tudnivalók</h3>
+      <div class="dramaszana-info mb-20px">
+        <h3 class="clr-flag-notify body--bold">
+          A januári Drámászana önismereti műhelyre sajnos már nincs szabad helyünk.
+        </h3>
+      </div>
+      <div class="dramaszana-info mb-20px">
+        <div class="dramaszana-info__wrapper">
+          <div class="dramaszana-info__section dramaszana-info__section--header">
+            <p class="dramaszana-info__date clr-brand-orange body--bold mb-20px">2026. április 12, 19, 26.</p>
+            <h3 class="dramaszana-info__title body--bold">Három alkalmas Drámászana önismereti műhely</h3>
+            <p class="dramaszana-info__subtitle clr-shades-gray body--bold mt-20px">
+              Az alkalmak vasárnaponként 17:00–19:00 óra között kerülnek megrendezésre. Az eseményen maximum tíz
+              résztvevő számára tudunk helyet biztosítani.
+            </p>
+          </div>
+          <div class="dramaszana-info__section dramaszana-info__section--teacher mt-20px">
+            <div class="dramaszana-info__content">
+              <div class="dramaszana-teacher display-flex align-items-center gap-1rem">
+                <Image
+                  src={Istvan}
+                  alt="Szalai István astanga jógaóktató"
+                  class="lead-teacher__avatar-image avatar__image avatar__image--medium"
+                />
+                <div class="dramaszana-teacher__meta">
+                  <a href="/szalai-istvan/" class="dramaszana-teacher__name clr-brand-orange body--bold">
+                    <p class="body--bold">Szalai István</p>
+                  </a>
+                  <span class="font-family-secondary">csoportvezető</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dramaszana-info__section dramaszana-info__section--price mt-20px">
+            <p class="dramaszana-info__label body--bold">Részvételi díj</p>
+            <p class="dramaszana-info__content clr-shades-gray">30.000 Ft</p>
+          </div>
+          <div class="dramaszana-info__section dramaszana-info__section--apply">
+            <a
+              href="https://shop.bandha.works/products/dramaszana"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary--solid btn--width-full-mobile"
+            >
+              Jelentkezem
+            </a>
+            <!-- <p class="dramaszana-info__subtitle clr-flag-notify body--bold mt-20px">
+              Erre az eseményre kevesebb mint 3 szabad helyünk van.
+            </p> -->
+            <p class="body--bold mt-20px">
+              Az eseményre a részvételi díj kiegyenlítésével tudsz jelentkezni. A részvétellel mindenki elfogadja, hogy
+              a Drámászana műhelyen saját felelősségére vesz részt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mb-40px mt-40px">
+        <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
+        <div class="page-content__section page-content__section--faq mb-40px">
+          {
+            huDramaszanaFaqs.length > 0 ? (
+              huDramaszanaFaqs.map((faq) => (
+                <AccordionFaq
+                  key={faq.id}
+                  id={`accordion-${faq.id}`}
+                  Egyedi
+                  ID
+                  minden
+                  accordion
+                  elemhez
+                  className="accordion-title"
+                  faqs={[faq]}
+                  Egyedi
+                  kérdés-válasz
+                  átadása
+                />
+              ))
+            ) : (
+              <div>Nincs elérhető információ.</div>
+            )
+          }
+        </div>
+      </div>
     </div>
+  </div>
 </BaseLayout>
