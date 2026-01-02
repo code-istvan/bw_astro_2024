@@ -1,26 +1,26 @@
 [
   {
     "monthValue": 1,
-    "year": 2025,
+    "year": 2026,
     "month": {
       "HU": "Január",
       "EN": "January"
     },
     "fullMoon": {
-      "HU": "13. (hétfő)",
-      "EN": "13th (Mon)"
+      "HU": "3. (szombat)",
+      "EN": "3rd (Sat)"
     },
     "newMoon": {
-      "HU": "30.* (csütörtök)",
-      "EN": "29th (Wed)"
+      "HU": "19.* (hétfő)",
+      "EN": "19th (Monday)"
     },
     "ekadashiNewMoon": {
-      "HU": "11. (szombat)",
-      "EN": "11th (Sat)"
+      "HU": "14. (szerda)",
+      "EN": "14th (Wed)"
     },
     "ekadashiFullMoon": {
-      "HU": "24. (péntek)",
-      "EN": "24th (Fri)"
+      "HU": "29. (csütörtök)",
+      "EN": "20th (Thu)"
     },
     "thirdMoon": [],
     "moonPhase": [],
