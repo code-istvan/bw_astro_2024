@@ -5,43 +5,42 @@ import mobileImage from '../../images/konferencia_mobil.jpeg';
 import desktopImage from '../../images/konferencia_desktop.jpeg';
 
 const metadata = {
-    title: 'CONFERENCE',
-    description: 'On this page you can read about the Ashtanga yoga conference held at the Bandha Works yoga school.',
+  title: 'CONFERENCE',
+  description: 'On this page you can read about the Ashtanga yoga conference held at the Bandha Works yoga school.',
 };
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
-    <HeroImage
-        mobileImgUrl={mobileImage}
-        desktopImgUrl={desktopImage}
-        alt={metadata.title}
-        pageName={metadata.title}
-        containerClass="container--tight-desktop"
-    />
-    <div class="container container--tight-desktop">
-        <div class="elsoalkalom-wrapper tight--desktop--container">
-            <div class="mt-40px mb-20px">
-                <h3 class="mb-20px clr-brand-orange">
-                    The tradition of the Ashtanga conference originates from the KPJAYI in Mysore (K Pattabhi Jois
-                    Ashtanga Yoga Institute), where practitioners at the institute gather weekly with the head teacher,
-                    Guruji Sharath Jois. SharathJi typically opens the conference by elaborating on a relevant topic,
-                    followed by a Q&A session where students can ask practice-related questions — something not possible
-                    during morning classes.
-                </h3>
-                <p class="mb-20px">
-                    Following this tradition, we also gather monthly to create an opportunity for practitioners to ask
-                    questions and deepen their understanding of the science of Ashtanga Yoga.
-                </p>
-                <p class="mb-20px">
-                    Participation in the conference is free for participants of our Mysore program, though we gladly
-                    welcome a small gift such as fruit, a vegan treat, or a beautiful flower for Patanjali.
-                </p>
-                <p class="mb-20px">
-                    <strong>Next event date:</strong> Saturday, September 21, 2025, 4:00 PM – 6:00 PM
-                </p>
-                <p class="mb-20px"><strong>Host:</strong> István Szalai, KPJAYI Authorized</p>
-                <p class="mb-20px"><strong>We warmly welcome you!</strong></p>
-            </div>
-        </div>
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={metadata.title}
+    pageName={metadata.title}
+    containerClass="container--tight-desktop"
+  />
+  <div class="container container--tight-desktop">
+    <div class="elsoalkalom-wrapper tight--desktop--container">
+      <div class="mt-40px mb-20px">
+        <h3 class="mb-20px clr-brand-orange">
+          The tradition of the Ashtanga conference originates from the KPJAYI in Mysore (K Pattabhi Jois Ashtanga Yoga
+          Institute), where practitioners at the institute gather weekly with the head teacher, Guruji Sharath Jois.
+          SharathJi typically opens the conference by elaborating on a relevant topic, followed by a Q&A session where
+          students can ask practice-related questions — something not possible during morning classes.
+        </h3>
+        <p class="mb-20px">
+          Following this tradition, we also gather monthly to create an opportunity for practitioners to ask questions
+          and deepen their understanding of the science of Ashtanga Yoga.
+        </p>
+        <p class="mb-20px">
+          Participation in the conference is free for participants of our Mysore program, though we gladly welcome a
+          small gift such as fruit, a vegan treat, or a beautiful flower for Patanjali.
+        </p>
+        <p class="mb-20px">
+          <strong>Next event date:</strong> Saturday, February 1, 2026, 4:00 PM – 6:00 PM
+        </p>
+        <p class="mb-20px"><strong>Host:</strong> István Szalai, KPJAYI Authorized</p>
+        <p class="mb-20px"><strong>We warmly welcome you!</strong></p>
+      </div>
     </div>
+  </div>
 </BaseLayout>
