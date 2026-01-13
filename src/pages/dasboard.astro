@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import mobileImage from '../images/elsoalkalom_mobil.jpg';
 import desktopImage from '../images/elsoalkalom_desktop.jpg';
-import firstTimeData from '../data/firstTime.json';
 import { turso } from '../turso';
+import { Image } from 'astro:assets';
 
 export const prerender = false;
 
@@ -15,13 +15,8 @@ const metadata = {
 };
 
 const token = await Astro.session?.get('user-session');
+if (!token) return Astro.redirect('/login');
 
-const huFirstTimeData = firstTimeData.HU;
-if (!token) {
-  return Astro.redirect('/login');
-}
-
-console.log('User token:', token);
 const { rows } = await turso.execute({
   sql: `
     SELECT
@@ -33,6 +28,7 @@ const { rows } = await turso.execute({
       u.last_asana,
       u.role,
       u.birthday,
+      u.avatar_url,
 
       p.id AS pass_id,
       p.pass_type,
@@ -41,35 +37,34 @@ const { rows } = await turso.execute({
       up.expires_at
 
     FROM users u
-    LEFT JOIN user_passes up
-      ON u.id = up.user_id
+    LEFT JOIN user_passes up ON u.id = up.user_id
     LEFT JOIN passes p
       ON up.pass_id = p.id
       AND p.pass_type = 'monthly'
 
     WHERE u.id = ?
-    ORDER BY up.assigned_at DESC
+    ORDER BY up.assigned_at IS NULL, up.assigned_at DESC
     LIMIT 1
   `,
   args: [token],
 });
 
-const { rows: passCheck } = await turso.execute({
-  sql: `SELECT * FROM users u
-    JOIN user_passes up ON u.id = up.user_id
-    JOIN passes p ON up.pass_id = p.id
-    WHERE u.id = ?`,
-  args: [token],
-});
-
-console.log('rows:', rows);
-console.log('passCheck:', passCheck);
-
 const user = rows[0] ?? null;
+if (!user) return Astro.redirect('/login');
 
-console.log('User:', user);
-// console.log('Pass ID:', user.pass_id);
-// console.log('Expiration:', user.expiration_date);
+if (import.meta.env.DEV) {
+  console.log('User token:', token);
+  console.log('user row:', user);
+}
+
+const avatarPath = typeof user.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
+
+const formatHuDate = (value) => {
+  if (!value) return '';
+  const d = new Date(String(value));
+  if (Number.isNaN(d.getTime())) return String(value);
+  return d.toLocaleDateString('hu-HU', { dateStyle: 'medium' });
+};
 ---
 
 <BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
@@ -82,50 +77,50 @@ console.log('User:', user);
   />
 
   <div class="container container--tight-desktop">
-    HELLO
+    <div>
+      {
+        avatarPath && (
+          <Image
+            src={avatarPath}
+            alt={`${user.first_name ?? ''} ${user.family_name ?? ''}`.trim() || 'User avatar'}
+            width={96}
+            height={96}
+            class="avatar__image avatar__image--medium"
+            loading="lazy"
+            decoding="async"
+          />
+        )
+      }
+    </div>
+
     <h1>{user.first_name}</h1>
     <h1>{user.family_name}</h1>
-    <p>
-      {user.birthday}
-    </p>
-    <p>
-      {user.phone_number}
-    </p>
-    <p>{user.last_asana}</p>
-    <p>
-      {user.pass_type}
-    </p>
-    <p>
-      {user.role}
-    </p>
+
+    {user.role && <p>{user.role}</p>}
+    {user.birthday && <p>{user.birthday}</p>}
+    {user.phone_number && <p>{user.phone_number}</p>}
+    {user.last_asana && <p>{user.last_asana}</p>}
 
     {
-      user?.pass_type === 'monthly' && (
+      user.pass_type === 'monthly' && (
         <div>
           <p>Bérlet típusa: havi</p>
-          <p>Vásárlás ideje: {user.assigned_at}</p>
-          <p>Érvényes eddig: {user.expires_at}</p>
+          <p>Vásárlás ideje: {formatHuDate(user.assigned_at)}</p>
+          <p>Érvényes eddig: {formatHuDate(user.expires_at)}</p>
         </div>
       )
     }
 
-    <button onclick="handleLogout()" id="logout_button">LOG OUT</button>
+    <button id="logout_button">LOG OUT</button>
   </div>
 
   <script>
     import { actions } from 'astro:actions';
     import { navigate } from 'astro:transitions/client';
 
-    const logoutBtn = document.getElementById('logout_button');
-
-    logoutBtn?.addEventListener('click', async () => {
-      const { data, error } = await actions.logout(new FormData());
-
-      if (error) {
-        console.error('Error:', error);
-        return;
-      }
-      navigate('/login');
+    document.getElementById('logout_button')?.addEventListener('click', async () => {
+      const { error } = await actions.logout(new FormData());
+      if (!error) navigate('/login');
     });
   </script>
 </BaseLayout>
