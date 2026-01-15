@@ -1,22 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
+import { Image } from 'astro:assets';
+import { turso } from '../turso';
+
 import mobileImage from '../images/zion_mobil.jpeg';
 import desktopImage from '../images/zion_desktop.jpeg';
-import { turso } from '../turso';
-import { Image } from 'astro:assets';
 
 export const prerender = false;
 
+/* ---------------------------------
+   Base metadata (fallback)
+---------------------------------- */
 const metadata = {
-  title: 'LOGIN OLDAL',
-  description:
-    'Ezen az oldalon találod azokat az információkat, amelyek segítenek az első alkalommal való részvétel során.',
+  title: 'Dashboard',
+  description: 'Your personal dashboard at Bandha Works Yoga Shala.',
 };
 
+/* ---------------------------------
+   Auth guard
+---------------------------------- */
 const token = await Astro.session?.get('user-session');
 if (!token) return Astro.redirect('/login');
 
+/* ---------------------------------
+   Load user + active monthly pass
+---------------------------------- */
 const { rows } = await turso.execute({
   sql: `
     SELECT
@@ -30,9 +39,7 @@ const { rows } = await turso.execute({
       u.birthday,
       u.avatar_url,
 
-      p.id AS pass_id,
       p.pass_type,
-
       up.assigned_at,
       up.expires_at
 
@@ -52,11 +59,14 @@ const { rows } = await turso.execute({
 const user = rows[0] ?? null;
 if (!user) return Astro.redirect('/login');
 
-if (import.meta.env.DEV) {
-  console.log('User token:', token);
-  console.log('user row:', user);
-}
+/* ---------------------------------
+   Dynamic page title
+---------------------------------- */
+const pageTitle = user.family_name && user.first_name ? `${user.family_name} ${user.first_name}` : metadata.title;
 
+/* ---------------------------------
+   Helpers
+---------------------------------- */
 const avatarPath = typeof user.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
 
 const formatHuDate = (value) => {
@@ -65,14 +75,21 @@ const formatHuDate = (value) => {
   if (Number.isNaN(d.getTime())) return String(value);
   return d.toLocaleDateString('hu-HU', { dateStyle: 'medium' });
 };
+
+/* ---------------------------------
+   Dev logs
+---------------------------------- */
+if (import.meta.env.DEV) {
+  console.log('Dashboard user:', user);
+}
 ---
 
-<BaseLayout title={metadata.title} description={metadata.description} image={desktopImage}>
+<BaseLayout title={pageTitle} description={metadata.description} image={desktopImage}>
   <HeroImage
     mobileImgUrl={mobileImage}
     desktopImgUrl={desktopImage}
-    alt={metadata.title}
-    pageName={metadata.title}
+    alt={pageTitle}
+    pageName={pageTitle}
     containerClass="container--tight-desktop"
   />
 
@@ -97,7 +114,7 @@ const formatHuDate = (value) => {
     <h1>{user.family_name}</h1>
 
     {user.role && <p>{user.role}</p>}
-    {user.birthday && <p>{user.birthday}</p>}
+    {user.birthday && <p>{formatHuDate(user.birthday)}</p>}
     {user.phone_number && <p>{user.phone_number}</p>}
     {user.last_asana && <p>{user.last_asana}</p>}
 
