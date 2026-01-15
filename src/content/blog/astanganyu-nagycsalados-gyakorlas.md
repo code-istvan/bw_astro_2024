@@ -12,7 +12,7 @@ date: 2022-10-11T16:26:00.000+02:00
 image: ../../images/uploads/desktop_img.jpg
 imageMobil: ../../images/uploads/mobil_img.jpg
 ---
-<h3 class="clr-brand-orange">Időhiány és túl korai kelés. Ez a két leggyakoribb ok, amire az **astanga** szimpatizánsok hivatkoznak, ha szóba kerül, hogy miért nem választják a napi rendszeres, reggeli mysore programot. Most induló interjúsorozatunkban két anyukával és egy apukával ismerkedhettek meg, akik lenyűgözően bűvészkednek az idővel, és rendszeres gyakorlással alapozzák meg a család jóllétét. Elsőként fogadjátok szeretettel Lillát.</h3>
+<h3 class="clr-brand-orange">Időhiány és túl korai kelés. Ez a két leggyakoribb ok, amire az astanga szimpatizánsok hivatkoznak, ha szóba kerül, hogy miért nem választják a napi rendszeres, reggeli mysore programot. Most induló interjúsorozatunkban két anyukával és egy apukával ismerkedhettek meg, akik lenyűgözően bűvészkednek az idővel, és rendszeres gyakorlással alapozzák meg a család jóllétét. Elsőként fogadjátok szeretettel Lillát.</h3>
 
 Lilla hivatását tekintve szülésznő és elhivatott gyakorló, aki jelenleg a negyedik kisbabáját várja. A legidősebb gyermeke 6 éves, így az elmúlt 6 év sűrű és koncentrált megtapasztalása volt számára az anyaságnak, és az anyaság-jóga kapcsolatának egyaránt.
 
