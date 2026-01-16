@@ -48,74 +48,16 @@
   font-family: 'Fira Mono', 'Consolas', monospace;
 }
 
-// .login-dialog h2,
-// .login-dialog p {
-//   font-family: inherit;
-//   color: #222;
-// }
-
 .login-dialog .align-left {
   align-self: flex-start;
   text-align: left;
   width: 100%;
 }
 
-/* Input mezők */
-// .login-dialog input[type='text'],
-// .login-dialog input[type='password'] {
-//   width: 100%;
-//   margin-bottom: 1rem;
-//   padding: 0.65rem 1rem;
-//   border: 2px solid colors.$color-shades-black;
-//   background-color: colors.$color-shades-gray;
-//   color: #222;
-//   font-size: 1.1rem;
-//   font-family: inherit;
-//   outline: none;
-//   transition:
-//     border-color 0.2s,
-//     background 0.2s;
-// }
-
-// .login-dialog input[type='text']:focus,
-// .login-dialog input[type='password']:focus {
-//   border-color: colors.$color-shades-black;
-//   background: rgba(255, 255, 255, 0.16);
-// }
-
-// .login-form {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-// }
-
-// .login-btn {
-//   margin-top: 0.5rem;
-//   padding: 0.65rem 1rem;
-//   border: 2px solid colors.$color-shades-black;
-//   background: rgba(255, 255, 255, 0.12);
-//   color: #222;
-//   font-size: 1.1rem;
-//   font-family: inherit;
-//   outline: none;
-//   cursor: pointer;
-//   transition:
-//     border-color 0.2s,
-//     background 0.2s,
-//     color 0.2s;
-// }
-
-// .login-btn:hover,
-// .login-btn:focus {
-//   border-color: colors.$color-brand-orange;
-//   background: rgba(255, 255, 255, 0.22);
-//   color: colors.$color-brand-orange;
-// }
-
 @media (max-width: 400px) {
   .login-dialog {
     min-width: unset;
     width: 96vw;
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    padding: 1.5rem 1.25rem 1.4rem;
   }
 }
