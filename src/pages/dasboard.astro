@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
 import { Image } from 'astro:assets';
 import { turso } from '../turso';
-
+import UserCard from '../components/Dashboard/UserCard/UserCard.astro';
 import mobileImage from '../images/zion_mobil.jpeg';
 import desktopImage from '../images/zion_desktop.jpeg';
 
@@ -16,6 +16,8 @@ const metadata = {
   title: 'Dashboard',
   description: 'Your personal dashboard at Bandha Works Yoga Shala.',
 };
+
+const HERO_TITLE = 'The Mula Gate';
 
 /* ---------------------------------
    Auth guard
@@ -88,47 +90,13 @@ if (import.meta.env.DEV) {
   <HeroImage
     mobileImgUrl={mobileImage}
     desktopImgUrl={desktopImage}
-    alt={pageTitle}
-    pageName={pageTitle}
+    alt={HERO_TITLE}
+    pageName={HERO_TITLE}
     containerClass="container--tight-desktop"
   />
 
   <div class="container container--tight-desktop">
-    <div>
-      {
-        avatarPath && (
-          <Image
-            src={avatarPath}
-            alt={`${user.first_name ?? ''} ${user.family_name ?? ''}`.trim() || 'User avatar'}
-            width={96}
-            height={96}
-            class="avatar__image avatar__image--medium"
-            loading="lazy"
-            decoding="async"
-          />
-        )
-      }
-    </div>
-
-    <h1>{user.first_name}</h1>
-    <h1>{user.family_name}</h1>
-
-    {user.role && <p>{user.role}</p>}
-    {user.birthday && <p>{formatHuDate(user.birthday)}</p>}
-    {user.phone_number && <p>{user.phone_number}</p>}
-    {user.last_asana && <p>{user.last_asana}</p>}
-
-    {
-      user.pass_type === 'monthly' && (
-        <div>
-          <p>Bérlet típusa: havi</p>
-          <p>Vásárlás ideje: {formatHuDate(user.assigned_at)}</p>
-          <p>Érvényes eddig: {formatHuDate(user.expires_at)}</p>
-        </div>
-      )
-    }
-
-    <button id="logout_button">LOG OUT</button>
+    <div class="dashboard-content"><UserCard user={user} lang="hu" /></div>
   </div>
 
   <script>
