@@ -12,18 +12,15 @@ interface Props {
 
 const { user, lang = 'hu' } = Astro.props;
 
-// Avatar: csak akkor próbáljuk az Astro Image optimalizálást,
-// ha local path ("/images/...") – a te eddigi logikád szerint.
 const avatarPath = typeof user?.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
 
-// Név – (Hero már nem user-specifikus, itt jelenik meg a teljes név)
 const fullName = `${user?.family_name ?? ''} ${user?.first_name ?? ''}`.trim();
 
-// Az "utolsó ászana" felirat, ahogy kérted
-const lastAsanaLabel = 'Utolsó ászana:';
+const isMonthly = user?.pass_type === 'monthly';
+const statusText = isMonthly ? 'ACTIVE' : 'LIMITED';
 ---
 
-<section class="user-card" aria-label="User profile">
+<section class="user-card" aria-label="User profile" data-user-card>
   <div class="user-card__header">
     {
       avatarPath && (
@@ -48,9 +45,7 @@ const lastAsanaLabel = 'Utolsó ászana:';
 
     <div class="user-card__status">
       <span class="user-card__status-label">STATUS</span>
-      <span class="user-card__status-value">
-        {user?.pass_type === 'monthly' ? 'ACTIVE' : 'LIMITED'}
-      </span>
+      <span class="user-card__status-value">{statusText}</span>
     </div>
   </div>
 
@@ -86,7 +81,7 @@ const lastAsanaLabel = 'Utolsó ászana:';
   {
     user?.last_asana && (
       <div class="user-card__highlight">
-        <div class="user-card__highlight-label">{lastAsanaLabel}</div>
+        <div class="user-card__highlight-label">Utolsó ászana:</div>
         <div class="user-card__highlight-value">{user.last_asana}</div>
       </div>
     )
@@ -96,7 +91,7 @@ const lastAsanaLabel = 'Utolsó ászana:';
     <div class="user-card__access-title">ACCESS</div>
 
     {
-      user?.pass_type === 'monthly' ? (
+      isMonthly ? (
         <div class="user-card__access-body">
           <div class="user-card__access-row">
             <span class="user-card__label-inline">Bérlet</span>
@@ -126,14 +121,15 @@ const lastAsanaLabel = 'Utolsó ászana:';
   </div>
 
   <div class="user-card__actions">
-    <button class="user-card__logout" id="logout_button" type="button">LOG OUT</button>
+    <button class="user-card__logout" type="button" data-logout>LOG OUT</button>
   </div>
 
   <script>
     import { actions } from 'astro:actions';
     import { navigate } from 'astro:transitions/client';
 
-    document.getElementById('logout_button')?.addEventListener('click', async () => {
+    const root = document.currentScript?.closest('[data-user-card]');
+    root?.querySelector('[data-logout]')?.addEventListener('click', async () => {
       const { error } = await actions.logout(new FormData());
       if (!error) navigate('/login');
     });

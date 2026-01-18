@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroImage from '../components/HeroImage/HeroImage.astro';
-import { Image } from 'astro:assets';
 import { turso } from '../turso';
 import UserCard from '../components/Dashboard/UserCard/UserCard.astro';
 import mobileImage from '../images/zion_mobil.jpeg';
@@ -61,29 +60,7 @@ const { rows } = await turso.execute({
 const user = rows[0] ?? null;
 if (!user) return Astro.redirect('/login');
 
-/* ---------------------------------
-   Dynamic page title
----------------------------------- */
 const pageTitle = user.family_name && user.first_name ? `${user.family_name} ${user.first_name}` : metadata.title;
-
-/* ---------------------------------
-   Helpers
----------------------------------- */
-const avatarPath = typeof user.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
-
-const formatHuDate = (value) => {
-  if (!value) return '';
-  const d = new Date(String(value));
-  if (Number.isNaN(d.getTime())) return String(value);
-  return d.toLocaleDateString('hu-HU', { dateStyle: 'medium' });
-};
-
-/* ---------------------------------
-   Dev logs
----------------------------------- */
-if (import.meta.env.DEV) {
-  console.log('Dashboard user:', user);
-}
 ---
 
 <BaseLayout title={pageTitle} description={metadata.description} image={desktopImage}>
@@ -95,17 +72,7 @@ if (import.meta.env.DEV) {
     containerClass="container--tight-desktop"
   />
 
-  <div class="container container--tight-desktop">
-    <div class="dashboard-content"><UserCard user={user} lang="hu" /></div>
+  <div class="container container--tight-desktop dashboard-content">
+    <UserCard user={user} lang="hu" />
   </div>
-
-  <script>
-    import { actions } from 'astro:actions';
-    import { navigate } from 'astro:transitions/client';
-
-    document.getElementById('logout_button')?.addEventListener('click', async () => {
-      const { error } = await actions.logout(new FormData());
-      if (!error) navigate('/login');
-    });
-  </script>
 </BaseLayout>
