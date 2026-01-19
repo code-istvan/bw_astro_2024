@@ -10,8 +10,8 @@ author: István
 tags:
   - interjú
 date: 2022-11-15T15:50:00.000+01:00
-image: ../../images/uploads/desktop_img.jpg
-imageMobil: ../../images/uploads/mobil_img.jpg
+image: ../../images/uploads/astangapu_desktop.jpeg
+imageMobil: ../../images/uploads/astangapu_mobil.jpeg
 ---
 ### Hogy jött az életedbe az astanga jóga?
 
