@@ -1,200 +1,318 @@
-@use '/src/sass/base/_colors' as colors;
-
-.dashboard-content {
-  position: relative;
-  z-index: 2;
-  margin-top: 2rem; // indulásnak
-}
+@use '/src/sass/base/fonts' as *;
 
 .user-card {
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(15, 12, 8, 0.85);
+  border: 2px solid #8b6914;
+  box-shadow:
+    0 0 30px rgba(255, 157, 0, 0.3),
+    inset 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  font-family: 'Courier New', monospace;
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 
-  background: rgba(20, 20, 20, 0.92);
-  border: 1px solid rgba(245, 166, 35, 0.25);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-  border-radius: 10px;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d4af37;
+  }
 
-  padding: 1.25rem;
+  &::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+  }
 }
 
-.user-card__header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1rem;
+.user-card__profile-section {
+  display: flex;
   align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(245, 166, 35, 0.18);
+  padding: 30px 40px;
+  gap: 30px;
+  border-bottom: 1px solid #8b6914;
+}
+
+.user-card__avatar-container {
+  position: relative;
+  flex-shrink: 0;
 }
 
 .user-card__avatar {
-  display: flex;
-  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-.user-card__avatar-img {
-  border-radius: 999px;
-  border: 2px solid rgba(245, 166, 35, 0.55);
-}
-
-.user-card__identity {
-  min-width: 0;
-}
-
-.user-card__name {
-  margin: 0;
-  font-size: 1.6rem;
-  letter-spacing: 0.02em;
-}
-
-.user-card__role {
-  margin: 0.25rem 0 0;
-  font-size: 0.85rem;
-  opacity: 0.7;
-  text-transform: uppercase;
-}
-
-.user-card__status {
-  text-align: right;
-}
-
-.user-card__status-label {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  opacity: 0.6;
-}
-
-.user-card__status-value {
-  display: inline-block;
-  margin-top: 0.25rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  padding: 0.35rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(245, 166, 35, 0.1);
-  border: 1px solid rgba(245, 166, 35, 0.22);
-}
-
-.user-card__grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 0.35rem 1rem;
-  padding: 1rem 0;
+.user-card__profile-info {
+  flex: 1;
 }
 
 .user-card__label {
-  opacity: 0.55;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  font-size: 0.9rem;
+  color: #ff9d00; // Fix label - narancssárga
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
 }
 
-.user-card__value {
+.user-card__name {
+  font-size: 48px;
+  color: #d4af37; // Dinamikus adat - aranysárga
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  font-weight: normal;
+  font-family: $font-family-primary;
+  animation: glitch 3s infinite;
+}
+
+.user-card__role {
+  color: #d4af37; // Dinamikus adat - aranysárga
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.user-card__status {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-card__status-dot {
+  width: 12px;
+  height: 12px;
+  background: #7cfc00;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #7cfc00;
+  animation: pulse 2s infinite;
+}
+
+.user-card__status-text {
+  color: #7cfc00;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glitch {
+  0%,
+  90%,
+  100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+  95% {
+    text-shadow:
+      -2px 0 rgba(255, 0, 0, 0.5),
+      2px 0 rgba(0, 255, 255, 0.5);
+  }
+}
+
+.user-card__info-grid {
+  padding: 30px 40px;
+  border-bottom: 1px solid #8b6914;
+}
+
+.user-card__info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.user-card__info-label {
+  color: #ff9d00; // Fix label - narancssárga
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.user-card__info-value {
+  color: #d4af37; // Dinamikus adat - aranysárga
+  font-size: 18px;
   text-align: right;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  font-size: 0.95rem;
 }
 
-.user-card__highlight {
-  margin: 0.75rem 0 1rem;
-  padding: 0.9rem 1rem;
-  border-left: 3px solid rgba(245, 166, 35, 0.75);
-  background: rgba(245, 166, 35, 0.06);
+.user-card__asana-section {
+  padding: 25px 40px;
+  background: rgba(139, 105, 20, 0.1);
+  border-left: 4px solid #ff9d00;
+  margin: 20px 40px;
 }
 
-.user-card__highlight-label {
-  font-size: 0.8rem;
-  opacity: 0.65;
-  margin-bottom: 0.35rem;
-  font-family: 'Fira Mono', 'Consolas', monospace;
+.user-card__asana-label {
+  color: #ff9d00; // Fix label - narancssárga
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.user-card__highlight-value {
-  font-size: 1.05rem;
-  font-style: italic;
-  letter-spacing: 0.01em;
+.user-card__asana-text {
+  color: #d4af37; // Dinamikus adat - aranysárga
+  font-size: 24px;
+  letter-spacing: 1px;
 }
 
-.user-card__access {
-  margin-top: 0.5rem;
-  padding: 1rem;
-  background: rgba(245, 166, 35, 0.06);
-  border: 1px solid rgba(245, 166, 35, 0.18);
-  border-radius: 10px;
+.user-card__access-section {
+  padding: 30px 40px;
+  border-top: 1px solid #8b6914;
+  border-bottom: 1px solid #8b6914;
 }
 
 .user-card__access-title {
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  opacity: 0.7;
-  margin-bottom: 0.75rem;
-  font-family: 'Fira Mono', 'Consolas', monospace;
+  text-align: center;
+  color: #d4af37;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '◆';
+    position: absolute;
+    color: #d4af37;
+  }
+
+  &::before {
+    left: 20px;
+  }
+
+  &::after {
+    right: 20px;
+  }
 }
 
-.user-card__access-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.25rem 0;
-}
+.user-card__access-body {
+  .user-card__info-row {
+    border-bottom: 1px solid rgba(139, 105, 20, 0.3);
 
-.user-card__label-inline {
-  opacity: 0.65;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-}
-
-.user-card__value-inline {
-  font-family: 'Fira Mono', 'Consolas', monospace;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 
 .user-card__muted {
-  margin: 0;
-  opacity: 0.7;
+  color: rgba(212, 175, 55, 0.6);
+  text-align: center;
+  font-style: italic;
+  padding: 15px 0;
 }
 
 .user-card__actions {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1rem;
+  padding: 30px 40px;
 }
 
 .user-card__logout {
-  background: rgba(245, 166, 35, 0.95);
-  color: #111;
-  border: none;
-  border-radius: 10px;
-  padding: 0.7rem 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 15px 60px;
+  font-size: 20px;
+  letter-spacing: 4px;
   cursor: pointer;
-}
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 
-.user-card__logout:hover {
-  filter: brightness(1.03);
-}
+  &::before {
+    content: '‹';
+    position: absolute;
+    left: 30px;
+  }
 
-@media (min-width: 900px) {
-  .user-card {
-    padding: 1.6rem;
+  &::after {
+    content: '›';
+    position: absolute;
+    right: 30px;
+  }
+
+  &:hover {
+    background: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 420px) {
-  .user-card {
-    padding: 1rem;
-    border-radius: 8px;
-  }
+.user-card__scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(transparent, rgba(212, 175, 55, 0.5));
+  pointer-events: none;
+  animation: scan 4s linear infinite;
+  z-index: 10;
+}
 
-  .user-card__header {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      'avatar identity'
-      'status status';
+@keyframes scan {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .user-card__profile-section {
+    flex-direction: column;
+    text-align: center;
   }
 
   .user-card__status {
-    text-align: left;
-    margin-top: 0.25rem;
+    margin: 20px auto 0;
+  }
+
+  .user-card__name {
+    font-size: 36px;
+  }
+
+  .user-card__info-value {
+    font-size: 14px;
+  }
+
+  .user-card__access-title {
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }

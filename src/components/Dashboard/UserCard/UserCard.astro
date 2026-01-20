@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import './UserCard.scss';
 import { formatDate } from '../../ts/utils';
+import './UserCard.scss';
 
 type UserRow = Record<string, any>;
 
@@ -11,26 +11,31 @@ interface Props {
 }
 
 const { user, lang = 'hu' } = Astro.props;
-
 const avatarPath = typeof user?.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
-
 const fullName = `${user?.family_name ?? ''} ${user?.first_name ?? ''}`.trim();
-
 const isMonthly = user?.pass_type === 'monthly';
 const statusText = isMonthly ? 'ACTIVE' : 'LIMITED';
+
+// Role fordítás
+const roleTranslations: Record<string, string> = {
+  practitioner: 'GYAKORLÓ',
+  admin: 'ADMINISZTRÁTOR',
+};
+
+const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] || user.role.toUpperCase() : null;
 ---
 
 <section class="user-card" aria-label="User profile" data-user-card>
-  <div class="user-card__header">
+  <div class="user-card__profile-section">
     {
       avatarPath && (
-        <div class="user-card__avatar">
+        <div class="user-card__avatar-container">
           <Image
             src={avatarPath}
             alt={fullName || 'User avatar'}
-            width={96}
-            height={96}
-            class="avatar__image avatar__image--medium user-card__avatar-img"
+            width={140}
+            height={140}
+            class="user-card__avatar"
             loading="lazy"
             decoding="async"
           />
@@ -38,77 +43,78 @@ const statusText = isMonthly ? 'ACTIVE' : 'LIMITED';
       )
     }
 
-    <div class="user-card__identity">
+    <div class="user-card__profile-info">
+      <div class="user-card__label">‹ NÉV :</div>
       <h2 class="user-card__name">{fullName || 'User'}</h2>
-      {user?.role && <p class="user-card__role">{user.role}</p>}
+      {translatedRole && <div class="user-card__role">| {translatedRole} |</div>}
     </div>
 
     <div class="user-card__status">
-      <span class="user-card__status-label">STATUS</span>
-      <span class="user-card__status-value">{statusText}</span>
+      <span class="user-card__status-dot"></span>
+      <span class="user-card__status-text">{statusText}</span>
     </div>
   </div>
 
-  <div class="user-card__grid">
+  <div class="user-card__info-grid">
     {
       user?.birthday && (
-        <>
-          <div class="user-card__label">Születési dátum</div>
-          <div class="user-card__value">{formatDate(user.birthday, lang)}</div>
-        </>
+        <div class="user-card__info-row">
+          <span class="user-card__info-label">‹ SZÜLETÉSI DÁTUM :</span>
+          <span class="user-card__info-value">{formatDate(user.birthday, lang)}</span>
+        </div>
       )
     }
 
     {
       user?.phone_number && (
-        <>
-          <div class="user-card__label">Telefon</div>
-          <div class="user-card__value">{user.phone_number}</div>
-        </>
+        <div class="user-card__info-row">
+          <span class="user-card__info-label">‹ TELEFON :</span>
+          <span class="user-card__info-value">{user.phone_number}</span>
+        </div>
       )
     }
 
     {
       user?.email && (
-        <>
-          <div class="user-card__label">Email</div>
-          <div class="user-card__value">{user.email}</div>
-        </>
+        <div class="user-card__info-row">
+          <span class="user-card__info-label">‹ EMAIL :</span>
+          <span class="user-card__info-value">{user.email}</span>
+        </div>
       )
     }
   </div>
 
   {
     user?.last_asana && (
-      <div class="user-card__highlight">
-        <div class="user-card__highlight-label">Utolsó ászana:</div>
-        <div class="user-card__highlight-value">{user.last_asana}</div>
+      <div class="user-card__asana-section">
+        <div class="user-card__asana-label">‹ UTOLSÓ ÁSZANÁD ›</div>
+        <div class="user-card__asana-text">{user.last_asana}</div>
       </div>
     )
   }
 
-  <div class="user-card__access">
-    <div class="user-card__access-title">ACCESS</div>
+  <div class="user-card__access-section">
+    <div class="user-card__access-title">• ACCESS STATUS •</div>
 
     {
       isMonthly ? (
         <div class="user-card__access-body">
-          <div class="user-card__access-row">
-            <span class="user-card__label-inline">Bérlet</span>
-            <span class="user-card__value-inline">Havi</span>
+          <div class="user-card__info-row">
+            <span class="user-card__info-label">‹ BÉRLET:</span>
+            <span class="user-card__info-value">HAVI</span>
           </div>
 
           {user?.assigned_at && (
-            <div class="user-card__access-row">
-              <span class="user-card__label-inline">Vásárlás</span>
-              <span class="user-card__value-inline">{formatDate(user.assigned_at, lang)}</span>
+            <div class="user-card__info-row">
+              <span class="user-card__info-label">‹ VÁSÁRLÁS:</span>
+              <span class="user-card__info-value">{formatDate(user.assigned_at, lang)}</span>
             </div>
           )}
 
           {user?.expires_at && (
-            <div class="user-card__access-row">
-              <span class="user-card__label-inline">Érvényes eddig</span>
-              <span class="user-card__value-inline">{formatDate(user.expires_at, lang)}</span>
+            <div class="user-card__info-row">
+              <span class="user-card__info-label">‹ ÉRVÉNYES:</span>
+              <span class="user-card__info-value">{formatDate(user.expires_at, lang)}</span>
             </div>
           )}
         </div>
@@ -121,17 +127,45 @@ const statusText = isMonthly ? 'ACTIVE' : 'LIMITED';
   </div>
 
   <div class="user-card__actions">
-    <button class="user-card__logout" type="button" data-logout>LOG OUT</button>
+    <button class="user-card__logout" type="button" data-logout>KILÉPÉS</button>
   </div>
 
   <script>
     import { actions } from 'astro:actions';
     import { navigate } from 'astro:transitions/client';
 
-    const root = document.currentScript?.closest('[data-user-card]');
-    root?.querySelector('[data-logout]')?.addEventListener('click', async () => {
-      const { error } = await actions.logout(new FormData());
-      if (!error) navigate('/login');
-    });
+    function initUserCard() {
+      const root = document.querySelector('[data-user-card]');
+      if (!root) return;
+
+      const logoutButton = root.querySelector('[data-logout]') as HTMLButtonElement;
+
+      logoutButton?.addEventListener('click', async () => {
+        logoutButton.textContent = 'LOGGING OUT...';
+        logoutButton.style.background = 'rgba(212, 175, 55, 0.3)';
+
+        const { error } = await actions.logout(new FormData());
+
+        if (!error) {
+          navigate('/login');
+        } else {
+          logoutButton.textContent = 'LOG OUT';
+          logoutButton.style.background = 'transparent';
+        }
+      });
+
+      // Scanline effect
+      if (!root.querySelector('.user-card__scanline')) {
+        const scanline = document.createElement('div');
+        scanline.className = 'user-card__scanline';
+        root.appendChild(scanline);
+      }
+    }
+
+    // Init on page load
+    initUserCard();
+
+    // Re-init after view transitions
+    document.addEventListener('astro:page-load', initUserCard);
   </script>
 </section>
