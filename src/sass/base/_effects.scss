@@ -1,0 +1,75 @@
+// ============================================
+// EFFECTS - Reusable animation effects
+// ============================================
+
+// Avatar/Image glitch effect
+// Usage: Add .effect-glitch class to any image or element
+.effect-glitch {
+  animation: avatar-glitch 5s ease-in-out infinite;
+}
+
+@keyframes avatar-glitch {
+  0%,
+  90%,
+  100% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+  91% {
+    transform: translate(-2px, 1px);
+    filter: hue-rotate(90deg) brightness(1.2);
+  }
+  92% {
+    transform: translate(2px, -1px);
+    filter: hue-rotate(-90deg) saturate(2);
+  }
+  93% {
+    transform: translate(-1px, -1px);
+    filter: contrast(1.3);
+  }
+  94% {
+    transform: translate(1px, 1px);
+    filter: hue-rotate(45deg);
+  }
+  95% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+}
+
+// Text glitch effect with color shift
+// Usage: Add .effect-text-glitch class to text elements
+.effect-text-glitch {
+  animation: text-glitch 3s infinite;
+}
+
+@keyframes text-glitch {
+  0%,
+  90%,
+  100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+  95% {
+    text-shadow:
+      -2px 0 rgba(255, 0, 0, 0.5),
+      2px 0 rgba(0, 255, 255, 0.5);
+  }
+}
+
+// Pulse effect for status indicators
+// Usage: Add .effect-pulse class to any element
+.effect-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}

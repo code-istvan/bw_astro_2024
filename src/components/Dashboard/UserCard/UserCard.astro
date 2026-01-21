@@ -35,7 +35,7 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
             alt={fullName || 'User avatar'}
             width={140}
             height={140}
-            class="user-card__avatar"
+            class="user-card__avatar effect-glitch"
             loading="lazy"
             decoding="async"
           />
@@ -101,20 +101,20 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
         <div class="user-card__access-body">
           <div class="user-card__info-row">
             <span class="user-card__info-label">‹ BÉRLET:</span>
-            <span class="user-card__info-value">HAVI</span>
+            <span class="user-card__info-value effect-text-glitch">HAVI</span>
           </div>
 
           {user?.assigned_at && (
             <div class="user-card__info-row">
               <span class="user-card__info-label">‹ VÁSÁRLÁS:</span>
-              <span class="user-card__info-value">{formatDate(user.assigned_at, lang)}</span>
+              <span class="user-card__info-value effect-text-glitch">{formatDate(user.assigned_at, lang)}</span>
             </div>
           )}
 
           {user?.expires_at && (
             <div class="user-card__info-row">
               <span class="user-card__info-label">‹ ÉRVÉNYES:</span>
-              <span class="user-card__info-value">{formatDate(user.expires_at, lang)}</span>
+              <span class="user-card__info-value effect-text-glitch">{formatDate(user.expires_at, lang)}</span>
             </div>
           )}
         </div>
