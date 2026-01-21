@@ -1,5 +1,4 @@
 @use '/src/sass/base/fonts' as *;
-
 // Késleltetések az access section sorokhoz
 .user-card__info-row:nth-child(1) .user-card__info-value {
   animation-delay: 1.8s;
@@ -352,6 +351,24 @@
   .user-card__profile-section {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+  }
+
+  .user-card__info-grid {
+    padding: 20px;
+  }
+
+  .user-card__asana-section {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .user-card__access-section {
+    padding: 20px;
+  }
+
+  .user-card__actions {
+    padding: 20px;
   }
 
   .user-card__status {
