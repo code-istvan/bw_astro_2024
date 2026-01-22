@@ -56,6 +56,7 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
   </div>
 
   <div class="user-card__info-grid">
+    <div class="user-card__info-title">SZEMÉLYES ADATOK</div>
     {
       user?.birthday && (
         <div class="user-card__info-row">
@@ -94,7 +95,7 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
   }
 
   <div class="user-card__access-section">
-    <div class="user-card__access-title">• BELÉPÉSI STÁTUSZ •</div>
+    <div class="user-card__access-title">BELÉPÉSI STÁTUSZ</div>
 
     {
       isMonthly ? (

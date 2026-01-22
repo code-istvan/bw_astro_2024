@@ -11,7 +11,6 @@
 .user-card__info-row:nth-child(3) .user-card__info-value {
   animation-delay: 2.4s;
 }
-
 // Késleltetések az info-grid sorokhoz
 .user-card__info-grid {
   .user-card__info-row:nth-child(1) .user-card__info-value {
@@ -128,7 +127,7 @@
   height: 12px;
   background: #d4af37;
   border-radius: 50%;
-  box-shadow: 0 0 15px#d4af37;
+  box-shadow: 0 0 15px #d4af37;
 }
 
 .user-card__status-text {
@@ -239,6 +238,16 @@
   position: relative;
 }
 
+.user-card__info-title {
+  text-align: center;
+  color: #d4af37;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .user-card__access-body {
   .user-card__info-row {
     border-bottom: 1px solid rgba(139, 105, 20, 0.3);
@@ -343,6 +352,25 @@
     padding: 20px;
   }
 
+  .user-card__info-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .user-card__info-label {
+    font-size: 12px;
+  }
+
+  .user-card__info-value {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    word-break: break-word;
+  }
+
   .user-card__asana-section {
     margin: 20px;
     padding: 20px;
@@ -350,6 +378,17 @@
 
   .user-card__access-section {
     padding: 20px;
+
+    .user-card__info-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .user-card__info-value {
+      text-align: center;
+    }
   }
 
   .user-card__actions {
@@ -364,14 +403,9 @@
     font-size: 36px;
   }
 
-  .user-card__info-value {
-    font-size: 14px;
-  }
-
   .user-card__access-title {
-    &::before,
-    &::after {
-      display: none;
-    }
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
   }
 }
