@@ -237,21 +237,6 @@
   letter-spacing: 4px;
   margin-bottom: 20px;
   position: relative;
-
-  &::before,
-  &::after {
-    content: '◆';
-    position: absolute;
-    color: #d4af37;
-  }
-
-  &::before {
-    left: 20px;
-  }
-
-  &::after {
-    right: 20px;
-  }
 }
 
 .user-card__access-body {
