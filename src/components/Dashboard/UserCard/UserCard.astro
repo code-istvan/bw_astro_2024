@@ -169,128 +169,161 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
           const style = document.createElement('style');
           style.id = 'scanline-keyframes';
           style.textContent = `
-            @keyframes scanline-anim {
-              0% {
-                transform: translateY(-3px) translateX(0);
-                opacity: 0;
-              }
-              1% { transform: translateY(0vh) translateX(-1px); }
-              2% {
-                opacity: 1;
-                transform: translateY(1vh) translateX(1px);
-              }
-              3% { transform: translateY(2vh) translateX(-0.5px); }
-              15% {
-                transform: translateY(15vh) translateX(0.5px);
-              }
-              15.2% {
-                transform: translateY(12vh) translateX(-2px);
-                filter: brightness(1.5);
-              }
-              15.4% {
-                transform: translateY(16vh) translateX(2px);
-              }
-              15.6% {
-                transform: translateY(14vh) translateX(-1px);
-                filter: brightness(1.2);
-              }
-              15.8% {
-                transform: translateY(15vh) translateX(0);
-                filter: brightness(1);
-              }
-              35% {
-                transform: translateY(35vh) translateX(-0.5px);
-              }
-              35.15% {
-                transform: translateY(38vh) translateX(2px);
-                filter: brightness(1.8);
-              }
-              35.3% {
-                transform: translateY(33vh) translateX(-2px);
-              }
-              35.45% {
-                transform: translateY(37vh) translateX(1px);
-                filter: brightness(1.3);
-              }
-              35.6% {
-                transform: translateY(35vh) translateX(0);
-                filter: brightness(1);
-              }
-              60% {
-                transform: translateY(60vh) translateX(0.5px);
-              }
-              60.1% {
-                transform: translateY(56vh) translateX(-2px);
-                filter: brightness(2);
-              }
-              60.2% {
-                transform: translateY(62vh) translateX(2px);
-              }
-              60.3% {
-                transform: translateY(58vh) translateX(-1px);
-                filter: brightness(1.5);
-              }
-              60.4% {
-                transform: translateY(61vh) translateX(1px);
-              }
-              60.5% {
-                transform: translateY(60vh) translateX(0);
-                filter: brightness(1);
-              }
-              85% {
-                transform: translateY(85vh) translateX(-0.5px);
-              }
-              85.1% {
-                transform: translateY(82vh) translateX(2px);
-                filter: brightness(1.7);
-              }
-              85.2% {
-                transform: translateY(87vh) translateX(-2px);
-              }
-              85.3% {
-                transform: translateY(83vh) translateX(1px);
-                filter: brightness(2);
-              }
-              85.4% {
-                transform: translateY(86vh) translateX(-1px);
-              }
-              85.5% {
-                transform: translateY(84vh) translateX(1px);
-              }
-              85.6% {
-                transform: translateY(85vh) translateX(0);
-                filter: brightness(1);
-              }
-              97% { transform: translateY(97vh) translateX(-1px); }
-              98% {
-                opacity: 1;
-                transform: translateY(98vh) translateX(1px);
-              }
-              100% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-              }
+          @keyframes scanline-anim {
+            0% {
+              top: -2px;
+              opacity: 0;
             }
-          `;
+            1% {
+              top: 0%;
+              transform: translateX(-1px);
+            }
+            2% {
+              opacity: 1;
+              top: 2%;
+              transform: translateX(1px);
+            }
+            3% {
+              top: 3%;
+              transform: translateX(-0.5px);
+            }
+            15% {
+              top: 15%;
+              transform: translateX(0.5px);
+            }
+            15.2% {
+              top: 12%;
+              transform: translateX(-2px);
+              filter: brightness(1.5);
+            }
+            15.4% {
+              top: 16%;
+              transform: translateX(2px);
+            }
+            15.6% {
+              top: 14%;
+              transform: translateX(-1px);
+              filter: brightness(1.2);
+            }
+            15.8% {
+              top: 15%;
+              transform: translateX(0);
+              filter: brightness(1);
+            }
+            35% {
+              top: 35%;
+              transform: translateX(-0.5px);
+            }
+            35.15% {
+              top: 38%;
+              transform: translateX(2px);
+              filter: brightness(1.8);
+            }
+            35.3% {
+              top: 33%;
+              transform: translateX(-2px);
+            }
+            35.45% {
+              top: 37%;
+              transform: translateX(1px);
+              filter: brightness(1.3);
+            }
+            35.6% {
+              top: 35%;
+              transform: translateX(0);
+              filter: brightness(1);
+            }
+            60% {
+              top: 60%;
+              transform: translateX(0.5px);
+            }
+            60.1% {
+              top: 56%;
+              transform: translateX(-2px);
+              filter: brightness(2);
+            }
+            60.2% {
+              top: 62%;
+              transform: translateX(2px);
+            }
+            60.3% {
+              top: 58%;
+              transform: translateX(-1px);
+              filter: brightness(1.5);
+            }
+            60.4% {
+              top: 61%;
+              transform: translateX(1px);
+            }
+            60.5% {
+              top: 60%;
+              transform: translateX(0);
+              filter: brightness(1);
+            }
+            85% {
+              top: 85%;
+              transform: translateX(-0.5px);
+            }
+            85.1% {
+              top: 82%;
+              transform: translateX(2px);
+              filter: brightness(1.7);
+            }
+            85.2% {
+              top: 87%;
+              transform: translateX(-2px);
+            }
+            85.3% {
+              top: 83%;
+              transform: translateX(1px);
+              filter: brightness(2);
+            }
+            85.4% {
+              top: 86%;
+              transform: translateX(-1px);
+            }
+            85.5% {
+              top: 84%;
+              transform: translateX(1px);
+            }
+            85.6% {
+              top: 85%;
+              transform: translateX(0);
+              filter: brightness(1);
+            }
+            97% {
+              top: 97%;
+              transform: translateX(-1px);
+            }
+            98% {
+              opacity: 1;
+              top: 98%;
+              transform: translateX(1px);
+            }
+            100% {
+              top: 100%;
+              transform: translateX(0);
+              opacity: 0;
+            }
+          }
+        `;
           document.head.appendChild(style);
         }
 
         const scanline = document.createElement('div');
         scanline.className = 'user-card__scanline';
         scanline.style.cssText = `
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.4), transparent);
-          box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-          pointer-events: none;
-          animation: scanline-anim 8s linear infinite;
-          z-index: 999;
-          will-change: transform;
-        `;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.4), transparent);
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+        pointer-events: none;
+        animation: scanline-anim 8s linear infinite;
+        z-index: 999;
+      `;
         root.appendChild(scanline);
         console.log('Scanline appended with animation');
       } else {
