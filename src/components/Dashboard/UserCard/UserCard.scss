@@ -1,14 +1,15 @@
 @use '/src/sass/base/fonts' as *;
+@use '/src/sass/base/colors' as *;
 
 .user-card {
   width: 100%;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(15, 12, 8, 0.85);
-  border: 2px solid #8b6914;
+  background: $color-cyberpunk-darkBg;
+  border: 2px solid $color-cyberpunk-darkGold;
   box-shadow:
-    0 0 30px rgba(255, 157, 0, 0.3),
-    inset 0 0 50px rgba(0, 0, 0, 0.5);
+    0 0 30px rgba($color-cyberpunk-orange, 0.3),
+    inset 0 0 50px rgba($color-shades-black, 0.5);
   position: relative;
   font-family: 'Courier New', monospace;
   animation: none !important;
@@ -21,7 +22,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 2px solid #d4af37;
+    border: 2px solid $color-cyberpunk-gold;
   }
 
   &::before {
@@ -44,7 +45,7 @@
   align-items: center;
   padding: 30px 40px;
   gap: 30px;
-  border-bottom: 1px solid #8b6914;
+  border-bottom: 1px solid $color-cyberpunk-darkGold;
 }
 
 .user-card__avatar-container {
@@ -56,9 +57,9 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 3px solid #d4af37;
+  border: 3px solid $color-cyberpunk-gold;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 20px rgba($color-cyberpunk-gold, 0.4);
 }
 
 .user-card__profile-info {
@@ -66,7 +67,7 @@
 }
 
 .user-card__label {
-  color: #ff9d00;
+  color: $color-cyberpunk-orange;
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -74,16 +75,16 @@
 
 .user-card__name {
   font-size: 48px;
-  color: #d4af37;
+  color: $color-cyberpunk-gold;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  text-shadow: 0 0 10px rgba($color-cyberpunk-gold, 0.3);
   font-weight: normal;
   font-family: $font-family-primary;
   animation-delay: 0s;
 }
 
 .user-card__role {
-  color: #d4af37;
+  color: $color-cyberpunk-gold;
   font-size: 16px;
   letter-spacing: 2px;
   animation-delay: 0.3s;
@@ -99,20 +100,20 @@
 .user-card__status-dot {
   width: 12px;
   height: 12px;
-  background: #d4af37;
+  background: $color-cyberpunk-gold;
   border-radius: 50%;
-  box-shadow: 0 0 15px #d4af37;
+  box-shadow: 0 0 15px $color-cyberpunk-gold;
 }
 
 .user-card__status-text {
-  color: #ff9d00;
+  color: $color-cyberpunk-orange;
   font-size: 16px;
   letter-spacing: 2px;
 }
 
 .user-card__info-grid {
   padding: 30px 40px;
-  border-bottom: 1px solid #8b6914;
+  border-bottom: 1px solid $color-cyberpunk-darkGold;
 
   .user-card__info-row:nth-child(2) .user-card__info-value {
     animation-delay: 0.6s;
@@ -131,7 +132,7 @@
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+  border-bottom: 1px solid rgba($color-cyberpunk-darkGold, 0.3);
 
   &:last-child {
     border-bottom: none;
@@ -139,13 +140,13 @@
 }
 
 .user-card__info-label {
-  color: #ff9d00;
+  color: $color-cyberpunk-orange;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
 .user-card__info-value {
-  color: #d4af37;
+  color: $color-cyberpunk-gold;
   font-size: 18px;
   text-align: right;
 }
@@ -153,7 +154,7 @@
 .user-card__access-title,
 .user-card__info-title {
   text-align: center;
-  color: #ff9d00;
+  color: $color-cyberpunk-orange;
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: 500;
@@ -163,20 +164,20 @@
 
 .user-card__asana-section {
   padding: 25px 40px;
-  background: rgba(139, 105, 20, 0.1);
-  border-left: 4px solid #ff9d00;
+  background: rgba($color-cyberpunk-darkGold, 0.1);
+  border-left: 4px solid $color-cyberpunk-orange;
   margin: 20px 40px;
 }
 
 .user-card__asana-label {
-  color: #ff9d00;
+  color: $color-cyberpunk-orange;
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
 .user-card__asana-text {
-  color: #d4af37;
+  color: $color-cyberpunk-gold;
   font-size: 24px;
   letter-spacing: 1px;
   animation-delay: 1.5s;
@@ -184,13 +185,13 @@
 
 .user-card__access-section {
   padding: 30px 40px;
-  border-top: 1px solid #8b6914;
-  border-bottom: 1px solid #8b6914;
+  border-top: 1px solid $color-cyberpunk-darkGold;
+  border-bottom: 1px solid $color-cyberpunk-darkGold;
 }
 
 .user-card__access-body {
   .user-card__info-row {
-    border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+    border-bottom: 1px solid rgba($color-cyberpunk-darkGold, 0.3);
 
     &:last-child {
       border-bottom: none;
@@ -211,7 +212,7 @@
 }
 
 .user-card__muted {
-  color: rgba(212, 175, 55, 0.6);
+  color: rgba($color-cyberpunk-gold, 0.6);
   text-align: center;
   font-style: italic;
   padding: 15px 0;
@@ -223,8 +224,8 @@
 
 .user-card__logout {
   background: transparent;
-  border: 2px solid #d4af37;
-  color: #d4af37;
+  border: 2px solid $color-cyberpunk-gold;
+  color: $color-cyberpunk-gold;
   padding: 15px 60px;
   font-size: 20px;
   letter-spacing: 4px;
@@ -249,8 +250,8 @@
   }
 
   &:hover {
-    background: rgba(212, 175, 55, 0.2);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    background: rgba($color-cyberpunk-gold, 0.2);
+    box-shadow: 0 0 20px rgba($color-cyberpunk-gold, 0.4);
     transform: translateY(-2px);
   }
 

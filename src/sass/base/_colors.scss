@@ -11,6 +11,17 @@ $colors: (
     'lightGray': hsl(0, 0%, 90%),
     'white': hsl(0, 0%, 100%),
   ),
+  cyberpunk: (
+    'gold': hsl(43, 74%, 49%),
+    // #d4af37
+    'darkGold': hsl(43, 70%, 30%),
+    // #8b6914
+    'orange': hsl(37, 100%, 50%),
+    // #ff9d00
+    'darkBg': hsla(30, 30%, 5%, 0.85),
+    // rgba(15, 12, 8, 0.85)
+  ),
+
   flag: (
     'notify': hsl(0, 73%, 50%),
   ),
@@ -24,6 +35,10 @@ $color-shades-gray: hsl(0, 0%, 77%);
 $color-shades-darkGray: hsl(0, 0%, 20%);
 $color-shades-darkerGray: hsl(0, 0%, 15%);
 $color-shades-lightBlack: hsl(240, 10%, 30%);
+$color-cyberpunk-gold: hsl(43, 74%, 49%);
+$color-cyberpunk-darkGold: hsl(43, 70%, 30%);
+$color-cyberpunk-orange: hsl(37, 100%, 50%);
+$color-cyberpunk-darkBg: hsla(30, 30%, 5%, 0.85);
 $color-error: hsl(0, 73%, 50%);
 $color-success: hsl(120, 39%, 45%);
 
