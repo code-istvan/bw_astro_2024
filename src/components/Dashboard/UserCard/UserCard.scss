@@ -1,30 +1,4 @@
 @use '/src/sass/base/fonts' as *;
-// Késleltetések az access section sorokhoz
-.user-card__info-row:nth-child(1) .user-card__info-value {
-  animation-delay: 1.8s;
-}
-
-.user-card__info-row:nth-child(2) .user-card__info-value {
-  animation-delay: 2.1s;
-}
-
-.user-card__info-row:nth-child(3) .user-card__info-value {
-  animation-delay: 2.4s;
-}
-// Késleltetések az info-grid sorokhoz
-.user-card__info-grid {
-  .user-card__info-row:nth-child(1) .user-card__info-value {
-    animation-delay: 0.6s;
-  }
-
-  .user-card__info-row:nth-child(2) .user-card__info-value {
-    animation-delay: 0.9s;
-  }
-
-  .user-card__info-row:nth-child(3) .user-card__info-value {
-    animation-delay: 1.2s;
-  }
-}
 
 .user-card {
   width: 100%;
@@ -92,7 +66,7 @@
 }
 
 .user-card__label {
-  color: #ff9d00; // Fix label - narancssárga
+  color: #ff9d00;
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -100,7 +74,7 @@
 
 .user-card__name {
   font-size: 48px;
-  color: #d4af37; // Dinamikus adat - aranysárga
+  color: #d4af37;
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   font-weight: normal;
@@ -109,7 +83,7 @@
 }
 
 .user-card__role {
-  color: #d4af37; // Dinamikus adat - aranysárga
+  color: #d4af37;
   font-size: 16px;
   letter-spacing: 2px;
   animation-delay: 0.3s;
@@ -136,32 +110,21 @@
   letter-spacing: 2px;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes glitch {
-  0%,
-  90%,
-  100% {
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-  }
-  95% {
-    text-shadow:
-      -2px 0 rgba(255, 0, 0, 0.5),
-      2px 0 rgba(0, 255, 255, 0.5);
-  }
-}
-
 .user-card__info-grid {
   padding: 30px 40px;
   border-bottom: 1px solid #8b6914;
+
+  .user-card__info-row:nth-child(2) .user-card__info-value {
+    animation-delay: 0.6s;
+  }
+
+  .user-card__info-row:nth-child(3) .user-card__info-value {
+    animation-delay: 0.9s;
+  }
+
+  .user-card__info-row:nth-child(4) .user-card__info-value {
+    animation-delay: 1.2s;
+  }
 }
 
 .user-card__info-row {
@@ -176,30 +139,26 @@
 }
 
 .user-card__info-label {
-  color: #ff9d00; // Fix label - narancssárga
+  color: #ff9d00;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
 .user-card__info-value {
-  color: #d4af37; // Dinamikus adat - aranysárga
+  color: #d4af37;
   font-size: 18px;
   text-align: right;
 }
 
-// Késleltetések az info-grid sorokhoz
-.user-card__info-grid {
-  .user-card__info-row:nth-child(1) .user-card__info-value {
-    animation-delay: 0.6s;
-  }
-
-  .user-card__info-row:nth-child(2) .user-card__info-value {
-    animation-delay: 0.9s;
-  }
-
-  .user-card__info-row:nth-child(3) .user-card__info-value {
-    animation-delay: 1.2s;
-  }
+.user-card__access-title,
+.user-card__info-title {
+  text-align: center;
+  color: #ff9d00;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .user-card__asana-section {
@@ -210,14 +169,14 @@
 }
 
 .user-card__asana-label {
-  color: #ff9d00; // Fix label - narancssárga
+  color: #ff9d00;
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
 .user-card__asana-text {
-  color: #d4af37; // Dinamikus adat - aranysárga
+  color: #d4af37;
   font-size: 24px;
   letter-spacing: 1px;
   animation-delay: 1.5s;
@@ -229,26 +188,6 @@
   border-bottom: 1px solid #8b6914;
 }
 
-.user-card__access-title {
-  text-align: center;
-  color: #ff9d00;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.user-card__info-title {
-  text-align: center;
-  color: #ff9d00;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  position: relative;
-}
-
 .user-card__access-body {
   .user-card__info-row {
     border-bottom: 1px solid rgba(139, 105, 20, 0.3);
@@ -258,7 +197,6 @@
     }
   }
 
-  // Késleltetések az access section sorokhoz
   .user-card__info-row:nth-child(1) .user-card__info-value {
     animation-delay: 1.8s;
   }
@@ -318,27 +256,6 @@
 
   &:active {
     transform: translateY(0);
-  }
-}
-
-.user-card__scanline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(transparent, rgba(212, 175, 55, 0.5));
-  pointer-events: none;
-  animation: scan 4s linear infinite;
-  z-index: 10;
-}
-
-@keyframes scan {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(100%);
   }
 }
 
@@ -402,11 +319,5 @@
 
   .user-card__name {
     font-size: 36px;
-  }
-
-  .user-card__access-title {
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: 500;
   }
 }
