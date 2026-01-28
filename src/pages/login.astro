@@ -14,7 +14,7 @@ const metadata = {
 const token = await Astro.session?.get('user-session');
 
 if (token) {
-  return Astro.redirect('/dasboard');
+  return Astro.redirect('/dashboard');
 }
 ---
 
@@ -83,7 +83,7 @@ if (token) {
     if (error) document.querySelector('.clr-red').textContent = error.message;
 
     if (!error) {
-      navigate('/dasboard');
+      navigate('/dashboard');
     }
   });
 </script>
