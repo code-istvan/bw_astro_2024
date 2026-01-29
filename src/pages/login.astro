@@ -12,7 +12,6 @@ const metadata = {
 };
 
 const token = await Astro.session?.get('user-session');
-
 if (token) {
   return Astro.redirect('/dashboard');
 }
@@ -21,11 +20,19 @@ if (token) {
 <LoginLayout title={metadata.title} description={metadata.description}>
   <div class="login-root">
     <Matrix style="matrix" color="color-one" />
+
+    <!-- Hyperspace Jump Effect -->
+    <div id="hyperspace-overlay" class="hyperspace-overlay">
+      <div class="hyperspace-container" id="hyperspace-container">
+        <!-- Csillagok dinamikusan generálódnak JS-ből -->
+      </div>
+    </div>
+
     <div class="dialog-overlay container">
       <dialog class="login-dialog" open>
         <h3 class="align-left">The Only Way Out is logIN</h3>
         <p class="mb-20px align-left clr-shades-gray">Please log in to your account to continue.</p>
-        <!-- Progressive enhancement: server-oldali submit alapból -->
+
         <div class="input-wrapper">
           <form id="login-form" class="login-form" method="post" action={actions.login}>
             <div class="row gap-1rem">
@@ -35,13 +42,18 @@ if (token) {
               <div class="col-12-xs">
                 <Input id="password" name="password" type="password" placeholder="Password" />
               </div>
-
               <div class="col-12-xs">
                 <p class="clr-red"></p>
               </div>
-
               <div class="col-12-xs">
-                <button type="submit" class="btn btn--primary--solid btn--width-full">LogIN</button>
+                <button type="submit" id="login-button" class="btn btn--primary--solid btn--width-full">
+                  <span class="btn-text">LogIN</span>
+                  <span class="btn-loader">
+                    <span class="loader-dot"></span>
+                    <span class="loader-dot"></span>
+                    <span class="loader-dot"></span>
+                  </span>
+                </button>
               </div>
               <IconButton
                 href="/"
@@ -67,23 +79,65 @@ if (token) {
   import { actions } from 'astro:actions';
   import { navigate } from 'astro:transitions/client';
 
-  const form = document.querySelector('#login-form');
-  console.log('Form:', form);
+  const form = document.querySelector('#login-form') as HTMLFormElement;
+  const button = document.querySelector('#login-button') as HTMLButtonElement;
+  const hyperspaceOverlay = document.querySelector('#hyperspace-overlay') as HTMLElement;
+  const hyperspaceContainer = document.querySelector('#hyperspace-container') as HTMLElement;
+
+  // Hipersebességi csillagok generálása
+  function generateHyperspaceStars() {
+    const starCount = 80; // Csillagok száma
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star-line';
+
+      // Random szög (körben minden irányba)
+      const angle = Math.random() * 360;
+
+      // Random késleltetés (0-300ms)
+      const delay = Math.random() * 0.3;
+
+      star.style.transform = `rotate(${angle}deg)`;
+      star.style.animationDelay = `${delay}s`;
+
+      hyperspaceContainer.appendChild(star);
+    }
+  }
+
+  // Csillagok generálása egyszer az oldal betöltésekor
+  generateHyperspaceStars();
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const formData = new FormData(form as HTMLFormElement);
+
+    // Gomb loading state aktiválása
+    button.classList.add('btn-loading');
+    button.disabled = true;
+
+    const formData = new FormData(form);
     const identifier = formData.get('identifier');
     const password = formData.get('password');
 
     const userData = new FormData();
-    userData.append('identifier', identifier);
-    userData.append('password', password);
-    const { data, error } = await actions.login(userData);
-    if (error) document.querySelector('.clr-red').textContent = error.message;
+    userData.append('identifier', identifier as string);
+    userData.append('password', password as string);
 
-    if (!error) {
-      navigate('/dashboard');
+    const { data, error } = await actions.login(userData);
+
+    if (error) {
+      // Hiba esetén leállítjuk a loadingot
+      button.classList.remove('btn-loading');
+      button.disabled = false;
+      document.querySelector('.clr-red')!.textContent = error.message;
+    } else {
+      // Sikeres login esetén hipersebességi ugrás!
+      hyperspaceOverlay.classList.add('active');
+
+      // Várunk az animációra, majd navigálunk
+      setTimeout(() => {
+        navigate('/dashboard');
+      }, 1800);
     }
   });
 </script>

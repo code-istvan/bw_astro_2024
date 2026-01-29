@@ -129,7 +129,14 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
   </div>
 
   <div class="user-card__actions">
-    <button class="user-card__logout" type="button" data-logout>KILÉPÉS</button>
+    <button class="user-card__logout" type="button" data-logout>
+      <span class="btn-text">KILÉPÉS</span>
+      <span class="btn-loader">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </span>
+    </button>
   </div>
 
   <script>
@@ -144,16 +151,18 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
       const logoutButton = root.querySelector('[data-logout]') as HTMLButtonElement;
 
       logoutButton?.addEventListener('click', async () => {
-        logoutButton.textContent = 'KILÉPÉS...';
-        logoutButton.style.background = 'rgba(212, 175, 55, 0.3)';
+        // Loading effect aktiválása
+        logoutButton.classList.add('btn-loading');
+        logoutButton.disabled = true;
 
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
           navigate('/login');
         } else {
-          logoutButton.textContent = 'KILÉPÉS';
-          logoutButton.style.background = 'transparent';
+          // Hiba esetén loading effect leállítása
+          logoutButton.classList.remove('btn-loading');
+          logoutButton.disabled = false;
         }
       });
 
