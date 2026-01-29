@@ -48,6 +48,8 @@ export interface UITranslations {
   galeriaLink: string;
   blog: string;
   blogLink: string;
+  login: string;
+  loginLink: string;
 
   // KapcsolatForm
   kapcsolatFormName: string;
@@ -163,6 +165,8 @@ export const ui: UI = {
     galeriaLink: '/galeria',
     blog: 'BLOG',
     blogLink: '/blog',
+    login: 'Login',
+    loginLink: '/login',
 
     // KapcsolatForm
     kapcsolatFormName: 'Név',
@@ -268,6 +272,8 @@ export const ui: UI = {
     galeriaLink: '/en/galeria',
     blog: 'BLOG',
     blogLink: '/en/blog',
+    login: 'Login',
+    loginLink: '/en/login',
 
     // KapcsolatForm
     kapcsolatFormName: 'Name',

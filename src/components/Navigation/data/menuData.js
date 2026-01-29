@@ -49,6 +49,10 @@ export const getMobileMenuHeader = (translatePath, t) => [
     link: translatePath(`/astanga-mysore-program/`),
     label: t('mysoreprogram'),
   },
+  {
+    link: translatePath(`/login/`),
+    label: t('login'),
+  },
 ];
 
 export const getMobileMenuFooter = (translatePath, t) => [
