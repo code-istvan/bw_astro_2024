@@ -117,3 +117,7 @@
   align-items: center;
   gap: 0.4em;
 }
+
+.login-link:hover h3 {
+  color: colors.$color-brand-orange;
+}

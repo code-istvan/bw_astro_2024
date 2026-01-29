@@ -14,79 +14,80 @@ const fomenuItems = getMenuItemsFomenu(translatePath, t);
 ---
 
 <div id="desktopMenu" class="desktop-menu">
-    <div class="desktop-menu__off-canvas-menu">
-        <div class="desktop-menu__item" id="menu1">
-            <div><h3 id="jogaorak-label-desktop" class="desktop-menu__label">{t('jogaorak')}</h3></div>
-            <div id="jogaorak-desktop" class="desktop-menu__dropdown-menu-content">
-                <ul>
-                    {
-                        jogaorakItems.map((item) => (
-                            <li class="desktop-menu__dropdown-menu-item">
-                                <h3>
-                                    <a
-                                        href={item.link}
-                                        class={`desktop-menu__link${item.extraClass ? ` ${item.extraClass}` : ''}`}
-                                    >
-                                        <span class="desktop-menu__label-and-icon">
-                                            {item.label}
-                                            {item.extraClass === 'highlighted' && (
-                                                <Icons name="ArrowLeft" color="orange" />
-                                            )}
-                                        </span>
-                                    </a>
-                                </h3>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-        </div>
-        <div class="desktop-menu__item" id="menu2">
-            <div><h3 id="tudnivalok-label-desktop" class="desktop-menu__label">{t('tudnivalok')}</h3></div>
-            <div id="tudnivalok-desktop" class="desktop-menu__dropdown-menu-content">
-                <ul>
-                    {
-                        tudnivalokItems.map((item) => (
-                            <li class="desktop-menu__dropdown-menu-item">
-                                <h3>
-                                    <a href={item.link} class="desktop-menu__link">
-                                        {item.label}
-                                    </a>
-                                </h3>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-        </div>
-        <div class="desktop-menu__item" id="menu3">
-            <div id="fomenuItems-desktop" class="desktop-menu__dropdown-menu-content">
-                <ul>
-                    {
-                        fomenuItems.map((item) => (
-                            <li class="desktop-menu__dropdown-menu-item">
-                                <h3>
-                                    <a href={item.link} class="desktop-menu__link">
-                                        {item.label}
-                                    </a>
-                                    {item.badge && <span class="menu-badge">{item.badge}</span>}
-                                </h3>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-        </div>
+  <div class="desktop-menu__off-canvas-menu">
+    <div class="desktop-menu__item" id="menu1">
+      <div><h3 id="jogaorak-label-desktop" class="desktop-menu__label">{t('jogaorak')}</h3></div>
+      <div id="jogaorak-desktop" class="desktop-menu__dropdown-menu-content">
+        <ul>
+          {
+            jogaorakItems.map((item) => (
+              <li class="desktop-menu__dropdown-menu-item">
+                <h3>
+                  <a href={item.link} class={`desktop-menu__link${item.extraClass ? ` ${item.extraClass}` : ''}`}>
+                    <span class="desktop-menu__label-and-icon">
+                      {item.label}
+                      {item.extraClass === 'highlighted' && <Icons name="ArrowLeft" color="orange" />}
+                    </span>
+                  </a>
+                </h3>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+    <div class="desktop-menu__item" id="menu2">
+      <div><h3 id="tudnivalok-label-desktop" class="desktop-menu__label">{t('tudnivalok')}</h3></div>
+      <div id="tudnivalok-desktop" class="desktop-menu__dropdown-menu-content">
+        <ul>
+          {
+            tudnivalokItems.map((item) => (
+              <li class="desktop-menu__dropdown-menu-item">
+                <h3>
+                  <a href={item.link} class="desktop-menu__link">
+                    {item.label}
+                  </a>
+                </h3>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="desktop-menu__item" id="menu3">
+      <div id="fomenuItems-desktop" class="desktop-menu__dropdown-menu-content">
+        <ul>
+          {
+            fomenuItems.map((item) => (
+              <li class="desktop-menu__dropdown-menu-item">
+                <h3>
+                  <a href={item.link} class="desktop-menu__link">
+                    {item.label}
+                  </a>
+                  {item.badge && <span class="menu-badge">{item.badge}</span>}
+                </h3>
+              </li>
+            ))
+          }
+        </ul>
+        <a href="/login/" class="no-underline login-link">
+          <div class="display-flex align-items-center gap-0_5rem">
+            <h3 class="clr-shades-gray">LOGIN</h3>
+            <Icons name="ArrowLeft" color="orange" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
-    const desktopMenu = document.getElementById('desktopMenu');
-    const hamburgerButton = document.getElementById('hamburgerButton');
+  const desktopMenu = document.getElementById('desktopMenu');
+  const hamburgerButton = document.getElementById('hamburgerButton');
 
-    if (hamburgerButton && desktopMenu) {
-        hamburgerButton.addEventListener('click', () => {
-            desktopMenu.classList.toggle('open');
-        });
-    }
+  if (hamburgerButton && desktopMenu) {
+    hamburgerButton.addEventListener('click', () => {
+      desktopMenu.classList.toggle('open');
+    });
+  }
 </script>
