@@ -5,9 +5,7 @@ import { turso } from '../turso';
 import UserCard from '../components/Dashboard/UserCard/UserCard.astro';
 import mobileImage from '../images/zion_mobil.jpeg';
 import desktopImage from '../images/zion_desktop.jpeg';
-
 export const prerender = false;
-
 /* ---------------------------------
    Base metadata (fallback)
 ---------------------------------- */
@@ -15,15 +13,12 @@ const metadata = {
   title: 'Dashboard',
   description: 'Your personal dashboard at Bandha Works Yoga Shala.',
 };
-
 const HERO_TITLE = 'The Source';
-
 /* ---------------------------------
    Auth guard
 ---------------------------------- */
 const token = await Astro.session?.get('user-session');
-if (!token) return Astro.redirect('/login');
-
+if (!token) return Astro.redirect('/');
 /* ---------------------------------
    Load user + active monthly pass
 ---------------------------------- */
@@ -39,27 +34,22 @@ const { rows } = await turso.execute({
       u.role,
       u.birthday,
       u.avatar_url,
-
       p.pass_type,
       up.assigned_at,
       up.expires_at
-
     FROM users u
     LEFT JOIN user_passes up ON u.id = up.user_id
     LEFT JOIN passes p
       ON up.pass_id = p.id
       AND p.pass_type = 'monthly'
-
     WHERE u.id = ?
     ORDER BY up.assigned_at IS NULL, up.assigned_at DESC
     LIMIT 1
   `,
   args: [token],
 });
-
 const user = rows[0] ?? null;
-if (!user) return Astro.redirect('/login');
-
+if (!user) return Astro.redirect('/');
 const pageTitle = user.family_name && user.first_name ? `${user.family_name} ${user.first_name}` : metadata.title;
 ---
 
@@ -71,7 +61,6 @@ const pageTitle = user.family_name && user.first_name ? `${user.family_name} ${u
     pageName={HERO_TITLE}
     containerClass="container--tight-desktop"
   />
-
   <div class="container container--tight-desktop dashboard-content">
     <UserCard user={user} lang="hu" />
   </div>

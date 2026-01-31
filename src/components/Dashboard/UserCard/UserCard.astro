@@ -164,10 +164,6 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
-          // Replace the current (dashboard) entry with home, then navigate
-          window.history.replaceState(null, '', '/');
-          // Small delay so the browser registers the replaceState
-          await new Promise((resolve) => setTimeout(resolve, 50));
           navigate('/');
         } else {
           // Hiba esetén loading effect leállítása
@@ -239,5 +235,6 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
 
     initUserCard();
     document.addEventListener('astro:page-load', initUserCard);
+    window.addEventListener('popstate', initUserCard);
   </script>
 </section>
