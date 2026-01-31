@@ -164,7 +164,8 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
-          navigate('/login', { history: 'replace' });
+          window.history.replaceState(null, '', '/login');
+          window.location.href = '/login';
         } else {
           // Hiba esetén loading effect leállítása
           logoutButton.classList.remove('btn-loading');
