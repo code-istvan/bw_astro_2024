@@ -164,8 +164,12 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
-          window.history.replaceState(null, '', '/login');
+          // Wait for navigate to finish, then replace the history entry
           navigate('/login');
+          // Use requestAnimationFrame to wait for the navigation to complete
+          requestAnimationFrame(() => {
+            window.history.replaceState(null, '', '/login');
+          });
         } else {
           // Hiba esetén loading effect leállítása
           logoutButton.classList.remove('btn-loading');
