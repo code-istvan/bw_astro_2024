@@ -164,10 +164,11 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
+          // Replace the current (dashboard) entry with home, then navigate
+          window.history.replaceState(null, '', '/');
+          // Small delay so the browser registers the replaceState
+          await new Promise((resolve) => setTimeout(resolve, 50));
           navigate('/');
-          requestAnimationFrame(() => {
-            window.history.replaceState(null, '', '/');
-          });
         } else {
           // Hiba esetén loading effect leállítása
           logoutButton.classList.remove('btn-loading');
