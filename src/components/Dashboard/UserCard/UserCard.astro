@@ -129,14 +129,7 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
   </div>
 
   <div class="user-card__actions">
-    <button class="user-card__logout" type="button" data-logout>
-      <span class="btn-text">KILÉPÉS</span>
-      <span class="btn-loader">
-        <span class="loader-dot"></span>
-        <span class="loader-dot"></span>
-        <span class="loader-dot"></span>
-      </span>
-    </button>
+    <button class="user-card__logout" type="button" data-logout>KILÉPÉS</button>
   </div>
 
   <script>
@@ -150,25 +143,11 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
 
       const logoutButton = root.querySelector('[data-logout]') as HTMLButtonElement;
 
-      // Cleanup: reset button state on page load
-      if (logoutButton) {
-        logoutButton.classList.remove('btn-loading');
-        logoutButton.disabled = false;
-      }
-
       logoutButton?.addEventListener('click', async () => {
-        // Loading effect aktiválása
-        logoutButton.classList.add('btn-loading');
-        logoutButton.disabled = true;
-
         const { error } = await actions.logout(new FormData());
 
         if (!error) {
           navigate('/');
-        } else {
-          // Hiba esetén loading effect leállítása
-          logoutButton.classList.remove('btn-loading');
-          logoutButton.disabled = false;
         }
       });
 
@@ -235,6 +214,5 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
 
     initUserCard();
     document.addEventListener('astro:page-load', initUserCard);
-    window.addEventListener('popstate', initUserCard);
   </script>
 </section>
