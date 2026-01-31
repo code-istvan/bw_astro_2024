@@ -165,7 +165,7 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
 
         if (!error) {
           window.history.replaceState(null, '', '/login');
-          window.location.href = '/login';
+          navigate('/login');
         } else {
           // Hiba esetén loading effect leállítása
           logoutButton.classList.remove('btn-loading');
