@@ -134,9 +134,10 @@ if (token) {
       // Sikeres login esetén hipersebességi ugrás!
       hyperspaceOverlay.classList.add('active');
 
-      // Várunk az animációra, majd navigálunk
+      // Admin vagy user redirect
       setTimeout(() => {
-        navigate('/dashboard');
+        const redirectUrl = (data as any).redirectTo || '/dashboard';
+        navigate(redirectUrl);
       }, 1800);
     }
   });

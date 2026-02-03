@@ -47,11 +47,15 @@ export const server = {
           const id = user.id;
           context.session.set('user-session', id, { maxAge: 60 * 60 * 24 * 7, httpOnly: true }); // 1 week
 
+          // Admin vagy user redirect meghatározása
+          const redirectTo = user.role === 'admin' ? '/manage' : '/dashboard';
+
           return {
             success: true,
             id,
             user: user,
             message: 'Login success',
+            redirectTo: redirectTo, // 🆕 ÚJ SOR
           };
         } else {
           throw new Error('BAD YOGI - Invalid credentials');
