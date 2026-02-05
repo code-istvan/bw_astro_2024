@@ -4,6 +4,7 @@ dist/
 # generated types
 .astro/
 .netlify/
+
 # dependencies
 node_modules/
 
@@ -19,3 +20,22 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# ---------------------------------
+# Local database files & backups
+# ---------------------------------
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+
+# sqlite WAL / SHM
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+
+# local SQL dumps / exports
+full_dump.sql
+bandhaworks_dump.sql
+user_passes_only*.sql
