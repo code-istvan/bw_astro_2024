@@ -43,13 +43,11 @@ const { rows } = await turso.execute({
     LEFT JOIN passes p
       ON up.pass_id = p.id
     WHERE u.id = ?
-      AND (p.pass_type IS NULL OR p.pass_type = 'monthly')
       AND (
         up.id IS NULL
         OR up.expires_at IS NULL
         OR date(up.expires_at) >= date('now')
       )
-    ORDER BY up.assigned_at IS NULL, up.assigned_at DESC
     LIMIT 1
   `,
   args: [token],
