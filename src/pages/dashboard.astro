@@ -38,16 +38,23 @@ const { rows } = await turso.execute({
       up.assigned_at,
       up.expires_at
     FROM users u
-    LEFT JOIN user_passes up ON u.id = up.user_id
+    LEFT JOIN user_passes up
+      ON u.id = up.user_id
     LEFT JOIN passes p
       ON up.pass_id = p.id
-      AND p.pass_type = 'monthly'
     WHERE u.id = ?
+      AND (p.pass_type IS NULL OR p.pass_type = 'monthly')
+      AND (
+        up.id IS NULL
+        OR up.expires_at IS NULL
+        OR date(up.expires_at) >= date('now')
+      )
     ORDER BY up.assigned_at IS NULL, up.assigned_at DESC
     LIMIT 1
   `,
   args: [token],
 });
+
 const user = rows[0] ?? null;
 if (!user) return Astro.redirect('/');
 const pageTitle = user.family_name && user.first_name ? `${user.family_name} ${user.first_name}` : metadata.title;
