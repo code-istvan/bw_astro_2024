@@ -48,7 +48,7 @@ export const server = {
           context.session.set('user-session', id, { maxAge: 60 * 60 * 24 * 7, httpOnly: true }); // 1 week
 
           // Admin vagy user redirect meghatározása
-          const redirectTo = user.role === 'admin' ? '/manage' : '/dashboard';
+          const redirectTo = user.role === 'admin' ? '/maha-dashboard' : '/dashboard';
 
           return {
             success: true,

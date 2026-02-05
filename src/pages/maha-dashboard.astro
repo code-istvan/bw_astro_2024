@@ -1,8 +1,17 @@
 ---
-export const prerender = false;
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { turso } from '../turso';
+import HeroImage from '../components/HeroImage/HeroImage.astro';
+import mobileImage from '../images/zion_mobil.jpeg';
+import desktopImage from '../images/zion_desktop.jpeg';
+
+export const prerender = false;
+
+const metadata = {
+  title: 'Maha Mula',
+  description: 'Your personal dashboard at Bandha Works Yoga Shala.',
+};
+const HERO_TITLE = 'The Source';
 
 /* ---------------------------------
    Auth guard
@@ -26,6 +35,13 @@ const user = rows[0];
 ---
 
 <BaseLayout title="Admin Panel" description="Admin management panel">
+  <HeroImage
+    mobileImgUrl={mobileImage}
+    desktopImgUrl={desktopImage}
+    alt={HERO_TITLE}
+    pageName={HERO_TITLE}
+    containerClass="container--tight-desktop"
+  />
   <div class="container">
     <h1>Welcome Admin!</h1>
     <p>You are logged in as: {user.role}</p>
