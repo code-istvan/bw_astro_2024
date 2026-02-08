@@ -13,8 +13,26 @@ interface Props {
 const { user, lang = 'hu' } = Astro.props;
 const avatarPath = typeof user?.avatar_url === 'string' && user.avatar_url.startsWith('/') ? user.avatar_url : null;
 const fullName = `${user?.family_name ?? ''} ${user?.first_name ?? ''}`.trim();
+
+// Bérlet típusok
 const isMonthly = user?.pass_type === 'monthly';
-const statusText = isMonthly ? 'ACTIVE' : 'LIMITED';
+const isYearly = user?.pass_type === 'yearly';
+const isTenPack = user?.pass_type === 'ten_pack';
+
+// Státusz szöveg
+let statusText = 'LIMITED';
+if (isMonthly || isYearly) {
+  statusText = 'ACTIVE';
+}
+
+// Bérlet típus megjelenítés
+const passTypeDisplay: Record<string, string> = {
+  monthly: 'HAVI',
+  yearly: 'ÉVES',
+  ten_pack: '10 ALKALMAS',
+};
+
+const displayPassType = user?.pass_type ? passTypeDisplay[user.pass_type] || user.pass_type.toUpperCase() : null;
 
 // Role fordítás
 const roleTranslations: Record<string, string> = {
@@ -99,11 +117,11 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
     <div class="user-card__access-title">| TAGSÁGI STÁTUSZ |</div>
 
     {
-      isMonthly ? (
+      isMonthly || isYearly ? (
         <div class="user-card__access-body">
           <div class="user-card__info-row">
             <span class="user-card__info-label">‹ BÉRLET:</span>
-            <span class="user-card__info-value effect-text-glitch">HAVI</span>
+            <span class="user-card__info-value effect-text-glitch">{displayPassType}</span>
           </div>
 
           {user?.assigned_at && (
@@ -120,9 +138,30 @@ const translatedRole = user?.role ? roleTranslations[user.role.toLowerCase()] ||
             </div>
           )}
         </div>
+      ) : isTenPack ? (
+        <div class="user-card__access-body">
+          <div class="user-card__info-row">
+            <span class="user-card__info-label">‹ BÉRLET:</span>
+            <span class="user-card__info-value effect-text-glitch">{displayPassType}</span>
+          </div>
+
+          {user?.uses_remaining !== null && user?.uses_remaining !== undefined && (
+            <div class="user-card__info-row">
+              <span class="user-card__info-label">‹ HÁTRALÉVŐ:</span>
+              <span class="user-card__info-value effect-text-glitch">{user.uses_remaining} ALKALOM</span>
+            </div>
+          )}
+
+          {user?.expires_at && (
+            <div class="user-card__info-row">
+              <span class="user-card__info-label">‹ ÉRVÉNYES:</span>
+              <span class="user-card__info-value effect-text-glitch">{formatDate(user.expires_at, lang)}</span>
+            </div>
+          )}
+        </div>
       ) : (
         <div class="user-card__access-body">
-          <p class="user-card__muted">Nincs aktív havi bérlet.</p>
+          <p class="user-card__muted">Nincs aktív bérlet.</p>
         </div>
       )
     }
