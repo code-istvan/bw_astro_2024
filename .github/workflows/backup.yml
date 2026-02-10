@@ -13,10 +13,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Turso CLI
-        uses: tursodatabase/setup-turso@v1
-        with:
-          version: latest
+      - name: Install Turso CLI
+        run: |
+          curl -sSfL https://get.tur.so/install.sh | bash
+          source ~/.bashrc || true
+
+      - name: Add Turso to PATH
+        run: echo "$HOME/.turso/bin" >> $GITHUB_PATH
+
+      - name: Verify Turso installation
+        run: |
+          which turso
+          turso --version
 
       - name: Authenticate Turso
         env:
