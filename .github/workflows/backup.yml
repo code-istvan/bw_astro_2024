@@ -13,21 +13,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create backup using Turso API
+      - name: Install Turso CLI
+        run: |
+          curl -sSfL https://get.tur.so/install.sh | bash
+
+      - name: Create backup
         env:
           TURSO_API_TOKEN: ${{ secrets.TURSO_API_TOKEN }}
         run: |
           mkdir -p backups
-
-          # Get database URL
-          DB_URL=$(curl -s -H "Authorization: Bearer $TURSO_API_TOKEN" \
-            https://api.turso.tech/v1/organizations/[ORG]/databases/bandhaworks \
-            | jq -r '.database.hostname')
-
-          # Download backup
-          curl -L -H "Authorization: Bearer $TURSO_API_TOKEN" \
-            "https://api.turso.tech/v1/organizations/[ORG]/databases/bandhaworks/backup" \
-            -o "backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql"
+          $HOME/.turso/bin/turso auth api-token $TURSO_API_TOKEN
+          $HOME/.turso/bin/turso db shell bandhaworks --instance aws-eu-west-1 .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
 
       - name: Upload backup artifact
         uses: actions/upload-artifact@v4
@@ -37,9 +33,4 @@ jobs:
           retention-days: 30
 
       - name: Commit backup to repo
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git add backups/
-          git commit -m "Automated backup $(date +%Y-%m-%d)" || echo "No changes"
-          git push || echo "Nothing to push"
+        run:
