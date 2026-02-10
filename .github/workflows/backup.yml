@@ -19,14 +19,12 @@ jobs:
 
       - name: Authenticate Turso
         run: |
-          export PATH="$HOME/.turso/bin:$PATH"
-          turso auth api-token ${{ secrets.TURSO_API_TOKEN }}
+          $HOME/.turso/bin/turso auth api-token ${{ secrets.TURSO_API_TOKEN }}
 
       - name: Create backup
         run: |
-          export PATH="$HOME/.turso/bin:$PATH"
           mkdir -p backups
-          turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
+          $HOME/.turso/bin/turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
 
       - name: Upload backup artifact
         uses: actions/upload-artifact@v4
