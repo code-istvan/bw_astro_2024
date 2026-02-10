@@ -13,18 +13,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Turso CLI
-        run: |
-          curl -sSfL https://get.tur.so/install.sh | bash
+      - name: Setup Turso CLI
+        uses: tursodatabase/setup-turso@v1
+        with:
+          version: latest
 
       - name: Authenticate Turso
+        env:
+          TURSO_API_TOKEN: ${{ secrets.TURSO_API_TOKEN }}
         run: |
-          $HOME/.turso/bin/turso auth api-token ${{ secrets.TURSO_API_TOKEN }}
+          turso auth api-token $TURSO_API_TOKEN
 
       - name: Create backup
         run: |
           mkdir -p backups
-          $HOME/.turso/bin/turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
+          turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
 
       - name: Upload backup artifact
         uses: actions/upload-artifact@v4
