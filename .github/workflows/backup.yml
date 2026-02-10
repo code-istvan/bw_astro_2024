@@ -2,8 +2,8 @@ name: Daily Database Backup
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Minden nap 02:00 UTC-kor (03:00 télen, 04:00 nyáron BP időben)
-  workflow_dispatch: # Manuális futtatás is lehetséges
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   backup:
@@ -16,14 +16,15 @@ jobs:
       - name: Install Turso CLI
         run: |
           curl -sSfL https://get.tur.so/install.sh | bash
-          echo "$HOME/.turso/bin" >> $GITHUB_PATH
 
       - name: Authenticate Turso
         run: |
+          export PATH="$HOME/.turso/bin:$PATH"
           turso auth api-token ${{ secrets.TURSO_API_TOKEN }}
 
       - name: Create backup
         run: |
+          export PATH="$HOME/.turso/bin:$PATH"
           mkdir -p backups
           turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
 
@@ -32,7 +33,7 @@ jobs:
         with:
           name: database-backup-${{ github.run_number }}
           path: backups/*.sql
-          retention-days: 30 # 30 napig tárolja
+          retention-days: 30
 
       - name: Commit backup to repo
         run: |
