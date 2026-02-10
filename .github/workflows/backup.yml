@@ -1,0 +1,43 @@
+name: Daily Database Backup
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Minden nap 02:00 UTC-kor (03:00 télen, 04:00 nyáron BP időben)
+  workflow_dispatch: # Manuális futtatás is lehetséges
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Turso CLI
+        run: |
+          curl -sSfL https://get.tur.so/install.sh | bash
+          echo "$HOME/.turso/bin" >> $GITHUB_PATH
+
+      - name: Authenticate Turso
+        run: |
+          turso auth api-token ${{ secrets.TURSO_API_TOKEN }}
+
+      - name: Create backup
+        run: |
+          mkdir -p backups
+          turso db shell bandhaworks .dump > backups/bandhaworks_backup_$(date +%Y%m%d_%H%M%S).sql
+
+      - name: Upload backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: database-backup-${{ github.run_number }}
+          path: backups/*.sql
+          retention-days: 30 # 30 napig tárolja
+
+      - name: Commit backup to repo
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add backups/
+          git commit -m "Automated backup $(date +%Y-%m-%d)" || echo "No changes"
+          git push || echo "Nothing to push"
