@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
-  console.log('🔍 Backup API called');
+  console.log('🔍 Backup API callededdddd');
 
   try {
     const now = new Date();
