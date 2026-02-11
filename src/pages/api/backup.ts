@@ -119,7 +119,7 @@ export const GET: APIRoute = async () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              message: `chore: automated backup ${timestamp}`,
+              message: `chore: automated backup ${timestamp}[skip ci]`,
               content: content,
               branch: 'main',
             }),
