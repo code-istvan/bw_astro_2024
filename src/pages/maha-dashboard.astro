@@ -45,5 +45,163 @@ const user = rows[0];
   <div class="container">
     <h1>Welcome Admin!</h1>
     <p>You are logged in as: {user.role}</p>
+    <!-- Backup gomb -->
+    <div class="admin-actions">
+      <button id="backup-btn" type="button">📦 Adatbázis mentés letöltése</button>
+
+      <button id="logout-btn" type="button">🚪 Kilépés</button>
+    </div>
   </div>
+
+  <script>
+    import { actions } from 'astro:actions';
+    import { navigate } from 'astro:transitions/client';
+
+    function initMahaDashboard() {
+      const backupBtn = document.getElementById('backup-btn') as HTMLButtonElement;
+      const logoutBtn = document.getElementById('logout-btn') as HTMLButtonElement;
+
+      // Ellenőrizzük hogy már inicializáltuk-e
+      if (backupBtn?.dataset.initialized === 'true') return;
+      if (logoutBtn?.dataset.initialized === 'true') return;
+
+      // Backup gomb
+      if (backupBtn) {
+        backupBtn.dataset.initialized = 'true';
+
+        backupBtn.addEventListener('click', async () => {
+          try {
+            backupBtn.textContent = '⏳ Mentés folyamatban...';
+            backupBtn.disabled = true;
+
+            const response = await fetch('/api/backup');
+
+            if (response.ok) {
+              const blob = await response.blob();
+              const url = window.URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+
+              const contentDisposition = response.headers.get('Content-Disposition');
+              const filenameMatch = contentDisposition?.match(/filename="(.+)"/);
+              const filename = filenameMatch?.[1] || `bandhaworks_backup_${new Date().toISOString().slice(0, 10)}.sql`;
+
+              a.download = filename;
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              window.URL.revokeObjectURL(url);
+
+              backupBtn.textContent = '✅ Mentés sikeres!';
+              setTimeout(() => {
+                backupBtn.textContent = '📦 Adatbázis mentés letöltése';
+                backupBtn.disabled = false;
+              }, 2000);
+            } else {
+              throw new Error('Backup failed');
+            }
+          } catch (error) {
+            console.error('Backup error:', error);
+            backupBtn.textContent = '❌ Hiba történt!';
+            setTimeout(() => {
+              backupBtn.textContent = '📦 Adatbázis mentés letöltése';
+              backupBtn.disabled = false;
+            }, 2000);
+          }
+        });
+      }
+
+      // Logout gomb
+      if (logoutBtn) {
+        logoutBtn.dataset.initialized = 'true';
+
+        logoutBtn.addEventListener('click', async () => {
+          try {
+            logoutBtn.textContent = '⏳ Mentés és kilépés...';
+            logoutBtn.disabled = true;
+
+            await fetch('/api/backup').then(async (response) => {
+              if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+
+                const contentDisposition = response.headers.get('Content-Disposition');
+                const filenameMatch = contentDisposition?.match(/filename="(.+)"/);
+                const filename =
+                  filenameMatch?.[1] || `bandhaworks_backup_${new Date().toISOString().slice(0, 10)}.sql`;
+
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+              }
+            });
+
+            await new Promise((resolve) => setTimeout(resolve, 500));
+
+            const { error } = await actions.logout(new FormData());
+            if (!error) {
+              navigate('/');
+            }
+          } catch (error) {
+            console.error('Logout error:', error);
+            logoutBtn.textContent = '🚪 Kilépés';
+            logoutBtn.disabled = false;
+          }
+        });
+      }
+    }
+
+    // Csak egyszer inicializálunk
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMahaDashboard);
+    } else {
+      initMahaDashboard();
+    }
+
+    document.addEventListener('astro:page-load', initMahaDashboard);
+  </script>
+
+  <style>
+    .admin-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .admin-actions button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #backup-btn {
+      background: #4caf50;
+      color: white;
+    }
+
+    #backup-btn:hover:not(:disabled) {
+      background: #45a049;
+    }
+
+    #logout-btn {
+      background: #f44336;
+      color: white;
+    }
+
+    #logout-btn:hover:not(:disabled) {
+      background: #da190b;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
 </BaseLayout>
