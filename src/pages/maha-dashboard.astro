@@ -75,26 +75,12 @@ const user = rows[0];
             backupBtn.disabled = true;
 
             const response = await fetch('/api/backup');
+            const result = await response.json();
 
-            if (response.ok) {
-              const blob = await response.blob();
-              const url = window.URL.createObjectURL(blob);
-              const a = document.createElement('a');
-              a.href = url;
-
-              const contentDisposition = response.headers.get('Content-Disposition');
-              const filenameMatch = contentDisposition?.match(/filename="(.+)"/);
-              const filename = filenameMatch?.[1] || `bandhaworks_backup_${new Date().toISOString().slice(0, 10)}.sql`;
-
-              a.download = filename;
-              document.body.appendChild(a);
-              a.click();
-              document.body.removeChild(a);
-              window.URL.revokeObjectURL(url);
-
-              backupBtn.textContent = '✅ Mentés sikeres!';
+            if (result.success) {
+              backupBtn.textContent = '✅ Mentés GitHub-ra sikeres!';
               setTimeout(() => {
-                backupBtn.textContent = '📦 Adatbázis mentés letöltése';
+                backupBtn.textContent = '📦 Adatbázis mentés GitHub-ra';
                 backupBtn.disabled = false;
               }, 2000);
             } else {
@@ -104,14 +90,14 @@ const user = rows[0];
             console.error('Backup error:', error);
             backupBtn.textContent = '❌ Hiba történt!';
             setTimeout(() => {
-              backupBtn.textContent = '📦 Adatbázis mentés letöltése';
+              backupBtn.textContent = '📦 Adatbázis mentés GitHub-ra';
               backupBtn.disabled = false;
             }, 2000);
           }
         });
       }
 
-      // Logout gomb
+      // Logout gomb - BACKUP + KILÉPÉS
       if (logoutBtn) {
         logoutBtn.dataset.initialized = 'true';
 
@@ -120,28 +106,13 @@ const user = rows[0];
             logoutBtn.textContent = '⏳ Mentés és kilépés...';
             logoutBtn.disabled = true;
 
-            await fetch('/api/backup').then(async (response) => {
-              if (response.ok) {
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
+            // 1. Backup GitHub-ra
+            await fetch('/api/backup');
 
-                const contentDisposition = response.headers.get('Content-Disposition');
-                const filenameMatch = contentDisposition?.match(/filename="(.+)"/);
-                const filename =
-                  filenameMatch?.[1] || `bandhaworks_backup_${new Date().toISOString().slice(0, 10)}.sql`;
-
-                a.download = filename;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-              }
-            });
-
+            // 2. Kis szünet
             await new Promise((resolve) => setTimeout(resolve, 500));
 
+            // 3. Logout
             const { error } = await actions.logout(new FormData());
             if (!error) {
               navigate('/');
