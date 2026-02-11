@@ -7,6 +7,8 @@ import path from 'path';
 const execAsync = promisify(exec);
 
 export const GET: APIRoute = async ({ request }) => {
+  console.log('🔍 Backup API called');
+
   try {
     // Dátum + időpont
     const now = new Date();
@@ -20,21 +22,31 @@ export const GET: APIRoute = async ({ request }) => {
     const timestamp = `${year}-${month}-${day}_${hours}-${minutes}-${seconds}`;
     const filename = `bandhaworks_backup_${timestamp}.sql`;
 
+    console.log('🔍 Timestamp:', timestamp);
+
     let sqlDump = '';
 
     // Próbáljuk lokálisan (dev)
     try {
+      console.log('🔍 Trying local Turso CLI...');
       const { stdout } = await execAsync('turso db shell bandhaworks .dump');
       sqlDump = stdout;
       console.log('✅ Local Turso CLI backup successful');
     } catch (localError) {
-      // Production: használjuk a Turso libSQL protokollt fetch-csel
+      // Production: használjuk a HTTP API-t
       console.log('ℹ️ Local Turso CLI not available, using HTTP API');
+      console.log('🔍 TURSO_DATABASE_URL:', import.meta.env.TURSO_DATABASE_URL ? 'SET' : 'MISSING');
+      console.log('🔍 TURSO_AUTH_TOKEN:', import.meta.env.TURSO_AUTH_TOKEN ? 'SET' : 'MISSING');
 
       const dbUrl = import.meta.env.TURSO_DATABASE_URL;
       const authToken = import.meta.env.TURSO_AUTH_TOKEN;
 
+      if (!dbUrl || !authToken) {
+        throw new Error('Missing TURSO_DATABASE_URL or TURSO_AUTH_TOKEN');
+      }
+
       // Lekérjük a táblákat
+      console.log('🔍 Fetching tables...');
       const tablesResponse = await fetch(dbUrl, {
         method: 'POST',
         headers: {
@@ -46,7 +58,15 @@ export const GET: APIRoute = async ({ request }) => {
         }),
       });
 
+      if (!tablesResponse.ok) {
+        const errorText = await tablesResponse.text();
+        console.error('❌ Tables fetch failed:', errorText);
+        throw new Error(`Tables fetch failed: ${tablesResponse.status}`);
+      }
+
       const tablesData = await tablesResponse.json();
+      console.log('🔍 Tables data:', tablesData);
+
       const tables = tablesData[0].results.rows;
 
       sqlDump = '-- Bandha Works Database Backup\n';
@@ -57,6 +77,7 @@ export const GET: APIRoute = async ({ request }) => {
       // Minden táblához
       for (const tableRow of tables) {
         const tableName = tableRow[0];
+        console.log(`🔍 Processing table: ${tableName}`);
 
         // CREATE TABLE
         const createResponse = await fetch(dbUrl, {
@@ -87,7 +108,6 @@ export const GET: APIRoute = async ({ request }) => {
 
         const rowsData = await dataResponse.json();
         const rows = rowsData[0].results.rows;
-        const columns = rowsData[0].results.columns;
 
         for (const row of rows) {
           const values = row.map((val: any) => {
@@ -104,35 +124,45 @@ export const GET: APIRoute = async ({ request }) => {
       sqlDump += 'COMMIT;\n';
     }
 
-    // Mentés fájlba
-    const backupsDir = path.join(process.cwd(), 'backups');
-    await fs.mkdir(backupsDir, { recursive: true });
-    const filepath = path.join(backupsDir, filename);
+    console.log('🔍 SQL dump size:', sqlDump.length);
 
-    await fs.writeFile(filepath, sqlDump, 'utf-8');
-    console.log(`✅ Backup saved: ${filename}`);
+    // Mentés fájlba (csak development-ben)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔍 Saving to file...');
+      const backupsDir = path.join(process.cwd(), 'backups');
+      await fs.mkdir(backupsDir, { recursive: true });
+      const filepath = path.join(backupsDir, filename);
 
-    // Git commit és push
-    try {
-      await execAsync(`
-        cd ${process.cwd()} &&
-        git config user.name "Backup Bot" &&
-        git config user.email "backup@bandhaworks.com" &&
-        git add backups/${filename} &&
-        git commit -m "chore: automated backup ${timestamp}" &&
-        git push origin main
-      `);
-      console.log('✅ Backup pushed to GitHub');
-    } catch (gitError) {
-      console.log('ℹ️ Git push skipped');
+      await fs.writeFile(filepath, sqlDump, 'utf-8');
+      console.log(`✅ Backup saved: ${filename}`);
+
+      // Git commit és push
+      try {
+        await execAsync(`
+          cd ${process.cwd()} &&
+          git config user.name "Backup Bot" &&
+          git config user.email "backup@bandhaworks.com" &&
+          git add backups/${filename} &&
+          git commit -m "chore: automated backup ${timestamp}" &&
+          git push origin main
+        `);
+        console.log('✅ Backup pushed to GitHub');
+      } catch (gitError) {
+        console.log('ℹ️ Git push failed:', gitError);
+      }
+    } else {
+      console.log('ℹ️ Production: File save skipped (no writable filesystem)');
     }
+
+    console.log('✅ Backup completed successfully');
 
     // JSON válasz
     return new Response(
       JSON.stringify({
         success: true,
         filename,
-        message: 'Backup saved to GitHub',
+        message: 'Backup completed',
+        size: sqlDump.length,
       }),
       {
         status: 200,
@@ -140,10 +170,16 @@ export const GET: APIRoute = async ({ request }) => {
       }
     );
   } catch (error) {
-    console.error('Backup error:', error);
-    return new Response(JSON.stringify({ success: false, error: String(error) }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    console.error('❌ Backup error:', error);
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: error instanceof Error ? error.message : String(error),
+      }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
   }
 };
