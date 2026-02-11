@@ -101,14 +101,15 @@ export const GET: APIRoute = async () => {
     // GitHub-ra commit-olás
     const githubToken = import.meta.env.GITHUB_TOKEN;
 
+    console.log('🔍 GITHUB_TOKEN exists:', !!githubToken);
+
     if (githubToken) {
       try {
         console.log('🔍 Committing to GitHub...');
 
-        // Base64 encode
         const content = Buffer.from(sqlDump).toString('base64');
+        console.log('🔍 Content encoded, length:', content.length);
 
-        // GitHub API: Create/Update file
         const githubResponse = await fetch(
           'https://api.github.com/repos/code-istvan/bw_astro_2024/contents/backups/' + filename,
           {
@@ -119,18 +120,21 @@ export const GET: APIRoute = async () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              message: `chore: automated backup ${timestamp}[skip ci]`,
+              message: `chore: automated backup ${timestamp} [skip ci]`,
               content: content,
               branch: 'main',
             }),
           }
         );
 
+        console.log('🔍 GitHub response status:', githubResponse.status);
+        const githubResponseText = await githubResponse.text();
+        console.log('🔍 GitHub response:', githubResponseText);
+
         if (githubResponse.ok) {
           console.log('✅ Backup committed to GitHub');
         } else {
-          const errorText = await githubResponse.text();
-          console.error('❌ GitHub commit failed:', githubResponse.status, errorText);
+          console.error('❌ GitHub commit failed:', githubResponse.status, githubResponseText);
         }
       } catch (githubError) {
         console.error('❌ GitHub error:', githubError);
