@@ -52,25 +52,23 @@ const user = rows[0];
       <button id="logout-btn" type="button">🚪 Kilépés</button>
     </div>
   </div>
+  <script is:inline>
+    console.log('🔍 Inline script loaded');
 
-  <script>
-    import { actions } from 'astro:actions';
-    import { navigate } from 'astro:transitions/client';
+    function setupButtons() {
+      console.log('🔍 setupButtons called');
 
-    function initMahaDashboard() {
-      console.log('🔍 initMahaDashboard called');
+      const backupBtn = document.getElementById('backup-btn');
+      const logoutBtn = document.getElementById('logout-btn');
 
-      const backupBtn = document.getElementById('backup-btn') as HTMLButtonElement;
-      const logoutBtn = document.getElementById('logout-btn') as HTMLButtonElement;
+      console.log('🔍 Backup button:', backupBtn);
+      console.log('🔍 Logout button:', logoutBtn);
 
-      console.log('🔍 Buttons found:', !!backupBtn, !!logoutBtn);
+      if (backupBtn) {
+        console.log('🔍 Setting up backup button');
+        backupBtn.addEventListener('click', async function () {
+          console.log('🔍 BACKUP CLICKED!!!');
 
-      // Backup gomb
-      if (backupBtn && !backupBtn.onclick) {
-        console.log('🔍 Adding backup listener');
-
-        backupBtn.addEventListener('click', async () => {
-          console.log('🔍 Backup clicked!');
           try {
             backupBtn.textContent = '⏳ Mentés folyamatban...';
             backupBtn.disabled = true;
@@ -78,59 +76,47 @@ const user = rows[0];
             const response = await fetch('/api/backup');
             const result = await response.json();
 
-            console.log('🔍 Backup result:', result);
+            console.log('🔍 Result:', result);
 
             if (result.success) {
-              backupBtn.textContent = '✅ Mentés GitHub-ra sikeres!';
-              setTimeout(() => {
-                backupBtn.textContent = '📦 Adatbázis mentés GitHub-ra';
-                backupBtn.disabled = false;
-              }, 2000);
+              backupBtn.textContent = '✅ Sikeres!';
             } else {
-              throw new Error('Backup failed');
+              backupBtn.textContent = '❌ Hiba!';
             }
-          } catch (error) {
-            console.error('Backup error:', error);
-            backupBtn.textContent = '❌ Hiba történt!';
+
             setTimeout(() => {
               backupBtn.textContent = '📦 Adatbázis mentés GitHub-ra';
               backupBtn.disabled = false;
             }, 2000);
+          } catch (error) {
+            console.error('Error:', error);
+            backupBtn.textContent = '❌ Hiba!';
+            backupBtn.disabled = false;
           }
         });
+
+        console.log('✅ Backup listener added');
       }
 
-      // Logout gomb
-      if (logoutBtn && !logoutBtn.onclick) {
-        console.log('🔍 Adding logout listener');
-
-        logoutBtn.addEventListener('click', async () => {
-          console.log('🔍 Logout clicked!');
-          try {
-            logoutBtn.textContent = '⏳ Mentés és kilépés...';
-            logoutBtn.disabled = true;
-
-            await fetch('/api/backup');
-            await new Promise((resolve) => setTimeout(resolve, 500));
-
-            const { error } = await actions.logout(new FormData());
-            if (!error) {
-              navigate('/');
-            }
-          } catch (error) {
-            console.error('Logout error:', error);
-            logoutBtn.textContent = '🚪 Kilépés';
-            logoutBtn.disabled = false;
-          }
+      if (logoutBtn) {
+        console.log('🔍 Setting up logout button');
+        logoutBtn.addEventListener('click', async function () {
+          console.log('🔍 LOGOUT CLICKED!!!');
+          window.location.href = '/';
         });
+
+        console.log('✅ Logout listener added');
       }
     }
 
-    // Azonnal fut
-    initMahaDashboard();
+    // Azonnal próbáljuk
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupButtons);
+    } else {
+      setupButtons();
+    }
 
-    // View transitions esetén
-    document.addEventListener('astro:page-load', initMahaDashboard);
+    console.log('🔍 Script finished');
   </script>
 
   <style>
