@@ -58,24 +58,27 @@ const user = rows[0];
     import { navigate } from 'astro:transitions/client';
 
     function initMahaDashboard() {
+      console.log('🔍 initMahaDashboard called');
+
       const backupBtn = document.getElementById('backup-btn') as HTMLButtonElement;
       const logoutBtn = document.getElementById('logout-btn') as HTMLButtonElement;
 
-      // Ellenőrizzük hogy már inicializáltuk-e
-      if (backupBtn?.dataset.initialized === 'true') return;
-      if (logoutBtn?.dataset.initialized === 'true') return;
+      console.log('🔍 Buttons found:', !!backupBtn, !!logoutBtn);
 
       // Backup gomb
-      if (backupBtn) {
-        backupBtn.dataset.initialized = 'true';
+      if (backupBtn && !backupBtn.onclick) {
+        console.log('🔍 Adding backup listener');
 
         backupBtn.addEventListener('click', async () => {
+          console.log('🔍 Backup clicked!');
           try {
             backupBtn.textContent = '⏳ Mentés folyamatban...';
             backupBtn.disabled = true;
 
             const response = await fetch('/api/backup');
             const result = await response.json();
+
+            console.log('🔍 Backup result:', result);
 
             if (result.success) {
               backupBtn.textContent = '✅ Mentés GitHub-ra sikeres!';
@@ -97,22 +100,19 @@ const user = rows[0];
         });
       }
 
-      // Logout gomb - BACKUP + KILÉPÉS
-      if (logoutBtn) {
-        logoutBtn.dataset.initialized = 'true';
+      // Logout gomb
+      if (logoutBtn && !logoutBtn.onclick) {
+        console.log('🔍 Adding logout listener');
 
         logoutBtn.addEventListener('click', async () => {
+          console.log('🔍 Logout clicked!');
           try {
             logoutBtn.textContent = '⏳ Mentés és kilépés...';
             logoutBtn.disabled = true;
 
-            // 1. Backup GitHub-ra
             await fetch('/api/backup');
-
-            // 2. Kis szünet
             await new Promise((resolve) => setTimeout(resolve, 500));
 
-            // 3. Logout
             const { error } = await actions.logout(new FormData());
             if (!error) {
               navigate('/');
@@ -126,13 +126,10 @@ const user = rows[0];
       }
     }
 
-    // Csak egyszer inicializálunk
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initMahaDashboard);
-    } else {
-      initMahaDashboard();
-    }
+    // Azonnal fut
+    initMahaDashboard();
 
+    // View transitions esetén
     document.addEventListener('astro:page-load', initMahaDashboard);
   </script>
 
