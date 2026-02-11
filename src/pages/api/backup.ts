@@ -12,14 +12,13 @@ export const GET: APIRoute = async () => {
     const authToken = import.meta.env.TURSO_AUTH_TOKEN;
 
     if (!dbUrl || !authToken) {
-      throw new Error('Missing environment variables');
+      throw new Error('Missing database environment variables');
     }
 
     // libsql:// → https://
     const httpUrl = dbUrl.replace('libsql://', 'https://');
-    console.log('🔍 Using URL:', httpUrl);
 
-    // Lekérjük a táblákat - JAVÍTOTT FORMÁTUM
+    // Lekérjük a táblákat
     console.log('🔍 Fetching tables...');
     const tablesResponse = await fetch(httpUrl, {
       method: 'POST',
@@ -34,14 +33,10 @@ export const GET: APIRoute = async () => {
 
     if (!tablesResponse.ok) {
       const errorText = await tablesResponse.text();
-      console.error('❌ Tables fetch failed:', tablesResponse.status, errorText);
       throw new Error(`Tables fetch failed: ${tablesResponse.status} - ${errorText}`);
     }
 
     const tablesData = await tablesResponse.json();
-    console.log('🔍 Tables data:', JSON.stringify(tablesData).slice(0, 300));
-
-    // Turso response formátum: array of results
     const tables = tablesData[0]?.results?.rows || [];
     console.log('🔍 Found tables:', tables.length);
 
@@ -101,7 +96,48 @@ export const GET: APIRoute = async () => {
 
     sqlDump += 'COMMIT;\n';
 
-    console.log('✅ Backup completed, size:', sqlDump.length);
+    console.log('✅ Backup SQL generated, size:', sqlDump.length);
+
+    // GitHub-ra commit-olás
+    const githubToken = import.meta.env.GITHUB_TOKEN;
+
+    if (githubToken) {
+      try {
+        console.log('🔍 Committing to GitHub...');
+
+        // Base64 encode
+        const content = Buffer.from(sqlDump).toString('base64');
+
+        // GitHub API: Create/Update file
+        const githubResponse = await fetch(
+          'https://api.github.com/repos/code-istvan/bw_astro_2024/contents/backups/' + filename,
+          {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${githubToken}`,
+              Accept: 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: `chore: automated backup ${timestamp}`,
+              content: content,
+              branch: 'main',
+            }),
+          }
+        );
+
+        if (githubResponse.ok) {
+          console.log('✅ Backup committed to GitHub');
+        } else {
+          const errorText = await githubResponse.text();
+          console.error('❌ GitHub commit failed:', githubResponse.status, errorText);
+        }
+      } catch (githubError) {
+        console.error('❌ GitHub error:', githubError);
+      }
+    } else {
+      console.log('ℹ️ GITHUB_TOKEN not set, skipping commit');
+    }
 
     return new Response(
       JSON.stringify({
@@ -110,6 +146,7 @@ export const GET: APIRoute = async () => {
         message: 'Backup completed',
         size: sqlDump.length,
         tables: tables.length,
+        githubCommit: !!githubToken,
       }),
       {
         status: 200,
