@@ -11,19 +11,15 @@ export const GET: APIRoute = async () => {
     const dbUrl = import.meta.env.TURSO_DATABASE_URL;
     const authToken = import.meta.env.TURSO_AUTH_TOKEN;
 
-    console.log('🔍 DB URL:', dbUrl);
-    console.log('🔍 Auth token exists:', !!authToken);
-
     if (!dbUrl || !authToken) {
       throw new Error('Missing environment variables');
     }
 
-    // Turso libSQL HTTP endpoint - JAVÍTOTT FORMÁTUM
-    // Ha libsql:// akkor átalakítjuk https://-re
+    // libsql:// → https://
     const httpUrl = dbUrl.replace('libsql://', 'https://');
-    console.log('🔍 HTTP URL:', httpUrl);
+    console.log('🔍 Using URL:', httpUrl);
 
-    // Lekérjük a táblákat
+    // Lekérjük a táblákat - JAVÍTOTT FORMÁTUM
     console.log('🔍 Fetching tables...');
     const tablesResponse = await fetch(httpUrl, {
       method: 'POST',
@@ -32,14 +28,7 @@ export const GET: APIRoute = async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        requests: [
-          {
-            type: 'execute',
-            stmt: {
-              sql: "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'",
-            },
-          },
-        ],
+        statements: ["SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"],
       }),
     });
 
@@ -50,16 +39,17 @@ export const GET: APIRoute = async () => {
     }
 
     const tablesData = await tablesResponse.json();
-    console.log('🔍 Tables response:', JSON.stringify(tablesData).slice(0, 200));
+    console.log('🔍 Tables data:', JSON.stringify(tablesData).slice(0, 300));
 
-    const tables = tablesData.results[0]?.response?.result?.rows || [];
+    // Turso response formátum: array of results
+    const tables = tablesData[0]?.results?.rows || [];
     console.log('🔍 Found tables:', tables.length);
 
     let sqlDump = `-- Bandha Works Database Backup\n-- Date: ${timestamp}\n\nPRAGMA foreign_keys=OFF;\nBEGIN TRANSACTION;\n\n`;
 
     // Minden táblához
     for (const tableRow of tables) {
-      const tableName = tableRow[0]?.value;
+      const tableName = tableRow[0];
       if (!tableName) continue;
 
       console.log(`🔍 Processing table: ${tableName}`);
@@ -72,19 +62,12 @@ export const GET: APIRoute = async () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          requests: [
-            {
-              type: 'execute',
-              stmt: {
-                sql: `SELECT sql FROM sqlite_master WHERE type='table' AND name='${tableName}'`,
-              },
-            },
-          ],
+          statements: [`SELECT sql FROM sqlite_master WHERE type='table' AND name='${tableName}'`],
         }),
       });
 
       const createData = await createResponse.json();
-      const createSql = createData.results[0]?.response?.result?.rows[0]?.[0]?.value;
+      const createSql = createData[0]?.results?.rows[0]?.[0];
       if (createSql) {
         sqlDump += `${createSql};\n`;
       }
@@ -97,23 +80,15 @@ export const GET: APIRoute = async () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          requests: [
-            {
-              type: 'execute',
-              stmt: {
-                sql: `SELECT * FROM ${tableName}`,
-              },
-            },
-          ],
+          statements: [`SELECT * FROM ${tableName}`],
         }),
       });
 
       const rowsData = await dataResponse.json();
-      const rows = rowsData.results[0]?.response?.result?.rows || [];
+      const rows = rowsData[0]?.results?.rows || [];
 
       for (const row of rows) {
-        const values = row.map((cell: any) => {
-          const val = cell?.value;
+        const values = row.map((val: any) => {
           if (val === null || val === undefined) return 'NULL';
           if (typeof val === 'number') return val;
           return `'${String(val).replace(/'/g, "''")}'`;
@@ -147,7 +122,6 @@ export const GET: APIRoute = async () => {
       JSON.stringify({
         success: false,
         error: error instanceof Error ? error.message : String(error),
-        stack: error instanceof Error ? error.stack : undefined,
       }),
       {
         status: 500,
