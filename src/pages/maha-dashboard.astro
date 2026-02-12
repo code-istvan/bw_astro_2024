@@ -72,6 +72,14 @@ const user = rows[0];
       console.log('● Backup button:', backupBtn);
       console.log('● Logout button:', logoutBtn);
 
+      // Load last backup time from localStorage
+      if (lastBackupTime) {
+        const savedTime = localStorage.getItem('lastBackupTime');
+        if (savedTime) {
+          lastBackupTime.textContent = savedTime;
+        }
+      }
+
       if (backupBtn) {
         console.log('● Setting up backup button');
         backupBtn.addEventListener('click', async () => {
@@ -92,9 +100,10 @@ const user = rows[0];
               backupBtn.textContent = '✅ Sikeres mentés!';
               backupBtn.style.backgroundColor = '#10b981';
 
-              // Update last backup time
+              // Update and save last backup time
               if (lastBackupTime && result.timestamp) {
                 lastBackupTime.textContent = result.timestamp;
+                localStorage.setItem('lastBackupTime', result.timestamp);
               }
             } else {
               backupBtn.textContent = '❌ Hiba történt';
@@ -126,9 +135,15 @@ const user = rows[0];
 
       if (logoutBtn) {
         console.log('● Setting up logout button');
-        logoutBtn.addEventListener('click', () => {
+        logoutBtn.addEventListener('click', async () => {
           console.log('● LOGOUT CLICKED!!!');
-          window.location.href = '/api/auth/signout';
+          try {
+            await fetch('/api/auth/signout');
+          } catch (e) {
+            console.log('Signout error (ignoring):', e);
+          }
+          // Always redirect to homepage
+          window.location.href = 'https://bandha.works';
         });
         console.log('✅ Logout listener added');
       }
