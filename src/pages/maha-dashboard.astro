@@ -53,70 +53,49 @@ const user = rows[0];
     </div>
   </div>
   <script is:inline>
-    console.log('🔍 Inline script loaded');
+    console.log('● Inline script loaded');
 
     function setupButtons() {
-      console.log('🔍 setupButtons called');
+      console.log('● setupButtons called');
 
       const backupBtn = document.getElementById('backup-btn');
       const logoutBtn = document.getElementById('logout-btn');
 
-      console.log('🔍 Backup button:', backupBtn);
-      console.log('🔍 Logout button:', logoutBtn);
+      console.log('● Backup button:', backupBtn);
+      console.log('● Logout button:', logoutBtn);
 
       if (backupBtn) {
-        console.log('🔍 Setting up backup button');
-        backupBtn.addEventListener('click', async function () {
-          console.log('🔍 BACKUP CLICKED!!!');
-
+        console.log('● Setting up backup button');
+        backupBtn.addEventListener('click', async () => {
+          console.log('● BACKUP CLICKED!!!');
           try {
-            backupBtn.textContent = '⏳ Mentés folyamatban...';
-            backupBtn.disabled = true;
-
-            const response = await fetch('/api/backup');
+            const response = await fetch('/api/backup.json'); // ← ÚJ URL!
             const result = await response.json();
-
-            console.log('🔍 Result:', result);
-
-            if (result.success) {
-              backupBtn.textContent = '✅ Sikeres!';
-            } else {
-              backupBtn.textContent = '❌ Hiba!';
-            }
-
-            setTimeout(() => {
-              backupBtn.textContent = '📦 Adatbázis mentés GitHub-ra';
-              backupBtn.disabled = false;
-            }, 2000);
+            console.log('● Result:', result);
           } catch (error) {
-            console.error('Error:', error);
-            backupBtn.textContent = '❌ Hiba!';
-            backupBtn.disabled = false;
+            console.error('● Error:', error);
           }
         });
-
         console.log('✅ Backup listener added');
       }
 
       if (logoutBtn) {
-        console.log('🔍 Setting up logout button');
-        logoutBtn.addEventListener('click', async function () {
-          console.log('🔍 LOGOUT CLICKED!!!');
-          window.location.href = '/';
+        console.log('● Setting up logout button');
+        logoutBtn.addEventListener('click', () => {
+          console.log('● LOGOUT CLICKED!!!');
+          window.location.href = '/api/auth/signout';
         });
-
         console.log('✅ Logout listener added');
       }
     }
 
-    // Azonnal próbáljuk
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', setupButtons);
     } else {
       setupButtons();
     }
 
-    console.log('🔍 Script finished');
+    console.log('● Script finished');
   </script>
 
   <style>

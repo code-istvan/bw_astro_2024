@@ -1,19 +1,21 @@
 import type { APIRoute } from 'astro';
 
+export const prerender = false; // ← EZ A KULCS!
+
 export const GET: APIRoute = async () => {
-  console.log('🔍 Step 3: SQL dump + GitHub commit');
+  console.log('🔍 Step 3: SQL dump + GitHub commit [RUNTIME]');
 
   try {
     const now = new Date();
     const timestamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}-${String(now.getMinutes()).padStart(2, '0')}-${String(now.getSeconds()).padStart(2, '0')}`;
     const filename = `bandhaworks_backup_${timestamp}.sql`;
 
-    console.log('🔍 Filename:', filename);
+    console.log('🔍 [RUNTIME] Filename:', filename);
 
     const dbUrl = import.meta.env.TURSO_DATABASE_URL;
     const authToken = import.meta.env.TURSO_AUTH_TOKEN;
 
-    console.log('🔍 DB credentials exist:', !!dbUrl, !!authToken);
+    console.log('🔍 [RUNTIME] DB credentials exist:', !!dbUrl, !!authToken);
 
     if (!dbUrl || !authToken) {
       throw new Error('Missing database credentials');
@@ -22,7 +24,7 @@ export const GET: APIRoute = async () => {
     const httpUrl = dbUrl.replace('libsql://', 'https://');
 
     // Get tables
-    console.log('🔍 Fetching tables...');
+    console.log('🔍 [RUNTIME] Fetching tables...');
     const tablesResponse = await fetch(httpUrl, {
       method: 'POST',
       headers: {
@@ -37,7 +39,7 @@ export const GET: APIRoute = async () => {
     const tablesData = await tablesResponse.json();
     const tables = tablesData[0]?.results?.rows || [];
 
-    console.log('✅ Found tables:', tables.length);
+    console.log('✅ [RUNTIME] Found tables:', tables.length);
 
     let sqlDump = `-- Bandha Works Database Backup\n-- Date: ${timestamp}\n\n`;
     sqlDump += 'PRAGMA foreign_keys=OFF;\nBEGIN TRANSACTION;\n\n';
@@ -45,7 +47,7 @@ export const GET: APIRoute = async () => {
     // Process each table
     for (const tableRow of tables) {
       const tableName = tableRow[0];
-      console.log(`🔍 Processing: ${tableName}`);
+      console.log(`🔍 [RUNTIME] Processing: ${tableName}`);
 
       // Get CREATE TABLE
       const createResp = await fetch(httpUrl, {
@@ -91,23 +93,23 @@ export const GET: APIRoute = async () => {
 
     sqlDump += 'COMMIT;\n';
 
-    console.log('✅ SQL dump generated, size:', sqlDump.length);
+    console.log('✅ [RUNTIME] SQL dump generated, size:', sqlDump.length);
 
     // GitHub commit
     const githubToken = import.meta.env.GITHUB_TOKEN;
-    console.log('🔍 GitHub token exists:', !!githubToken);
+    console.log('🔍 [RUNTIME] GitHub token exists:', !!githubToken);
 
     let githubSuccess = false;
 
     if (githubToken) {
       try {
-        console.log('🔍 Starting GitHub commit...');
+        console.log('🔍 [RUNTIME] Starting GitHub commit...');
 
         const content = Buffer.from(sqlDump).toString('base64');
-        console.log('🔍 Content encoded, length:', content.length);
+        console.log('🔍 [RUNTIME] Content encoded, length:', content.length);
 
         const githubUrl = `https://api.github.com/repos/code-istvan/bw_astro_2024/contents/backups/${filename}`;
-        console.log('🔍 GitHub URL:', githubUrl);
+        console.log('🔍 [RUNTIME] GitHub URL:', githubUrl);
 
         const githubResponse = await fetch(githubUrl, {
           method: 'PUT',
@@ -123,20 +125,20 @@ export const GET: APIRoute = async () => {
           }),
         });
 
-        console.log('🔍 GitHub response status:', githubResponse.status);
+        console.log('🔍 [RUNTIME] GitHub response status:', githubResponse.status);
 
         if (githubResponse.ok) {
-          console.log('✅ GitHub commit successful!');
+          console.log('✅ [RUNTIME] GitHub commit successful!');
           githubSuccess = true;
         } else {
           const errorText = await githubResponse.text();
-          console.error('❌ GitHub commit failed:', errorText);
+          console.error('❌ [RUNTIME] GitHub commit failed:', errorText);
         }
       } catch (githubError) {
-        console.error('❌ GitHub error:', githubError);
+        console.error('❌ [RUNTIME] GitHub error:', githubError);
       }
     } else {
-      console.log('⚠️ No GitHub token, skipping commit');
+      console.log('⚠️ [RUNTIME] No GitHub token, skipping commit');
     }
 
     return new Response(
@@ -148,6 +150,7 @@ export const GET: APIRoute = async () => {
         tables: tables.length,
         githubCommit: githubSuccess,
         step: 3,
+        runtime: true,
       }),
       {
         status: 200,
@@ -155,7 +158,7 @@ export const GET: APIRoute = async () => {
       }
     );
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error('❌ [RUNTIME] Error:', error);
     return new Response(
       JSON.stringify({
         success: false,
