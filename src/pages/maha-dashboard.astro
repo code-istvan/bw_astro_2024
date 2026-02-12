@@ -45,6 +45,12 @@ const user = rows[0];
   <div class="container">
     <h1>Welcome Admin!</h1>
     <p>You are logged in as: {user.role}</p>
+    <div class="mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        <span class="font-semibold">Utolsó mentés:</span>
+        <span id="last-backup-time" class="ml-2">-</span>
+      </p>
+    </div>
     <!-- Backup gomb -->
     <div class="admin-actions">
       <button id="backup-btn" type="button">📦 Adatbázis mentés letöltése</button>
@@ -61,6 +67,7 @@ const user = rows[0];
 
       const backupBtn = document.getElementById('backup-btn');
       const logoutBtn = document.getElementById('logout-btn');
+      const lastBackupTime = document.getElementById('last-backup-time');
 
       console.log('● Backup button:', backupBtn);
       console.log('● Logout button:', logoutBtn);
@@ -84,6 +91,11 @@ const user = rows[0];
             if (result.success && result.githubCommit) {
               backupBtn.textContent = '✅ Sikeres mentés!';
               backupBtn.style.backgroundColor = '#10b981';
+
+              // Update last backup time
+              if (lastBackupTime && result.timestamp) {
+                lastBackupTime.textContent = result.timestamp;
+              }
             } else {
               backupBtn.textContent = '❌ Hiba történt';
               backupBtn.style.backgroundColor = '#ef4444';

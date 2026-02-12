@@ -6,8 +6,11 @@ export const GET: APIRoute = async () => {
   console.log('🔍 Step 3: SQL dump + GitHub commit [RUNTIME]');
 
   try {
+    // Hungarian time (UTC+1)
     const now = new Date();
-    const timestamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}-${String(now.getMinutes()).padStart(2, '0')}-${String(now.getSeconds()).padStart(2, '0')}`;
+    const hungarianTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Budapest' }));
+    const timestamp = `${hungarianTime.getFullYear()}-${String(hungarianTime.getMonth() + 1).padStart(2, '0')}-${String(hungarianTime.getDate()).padStart(2, '0')}_${String(hungarianTime.getHours()).padStart(2, '0')}-${String(hungarianTime.getMinutes()).padStart(2, '0')}-${String(hungarianTime.getSeconds()).padStart(2, '0')}`;
+    const readableTimestamp = `${hungarianTime.getFullYear()}. ${String(hungarianTime.getMonth() + 1).padStart(2, '0')}. ${String(hungarianTime.getDate()).padStart(2, '0')}. ${String(hungarianTime.getHours()).padStart(2, '0')}:${String(hungarianTime.getMinutes()).padStart(2, '0')}:${String(hungarianTime.getSeconds()).padStart(2, '0')}`;
     const filename = `bandhaworks_backup_${timestamp}.sql`;
 
     console.log('🔍 [RUNTIME] Filename:', filename);
@@ -151,6 +154,7 @@ export const GET: APIRoute = async () => {
         githubCommit: githubSuccess,
         step: 3,
         runtime: true,
+        timestamp: readableTimestamp, // ← ÚJ!
       }),
       {
         status: 200,
