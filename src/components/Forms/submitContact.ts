@@ -13,8 +13,8 @@ export const submitContact = async (event: Event, language: 'hu' | 'en') => {
     return;
   }
 
-  const successPath = language === 'en' ? '/en/feliratkozas-sikeres/' : '/feliratkozas-sikeres/';
-  const errorPath = language === 'en' ? '/en/feliratkozas-sikertelen/' : '/feliratkozas-sikertelen/';
+  const successPath = language === 'en' ? '/en/uzenet-elkuldve/' : '/uzenet-elkuldve/';
+  const errorPath = language === 'en' ? '/en/uzenetkuldes-sikertelen/' : '/uzenetkuldes-sikertelen/';
 
   try {
     await fetch('/', {
