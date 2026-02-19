@@ -44,7 +44,7 @@ const { rows } = await turso.execute({
       ON up.pass_id = p.id
     WHERE u.id = ?
       AND (
-        up.id IS NULL
+        up.user_id IS NULL
         OR up.expires_at IS NULL
         OR date(up.expires_at) >= date('now')
       )
