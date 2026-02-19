@@ -9,15 +9,15 @@ import '../sass/global.scss';
 
 // Props interface
 interface Props {
-    title: string;
-    description?: string;
-    image?: string | ImageMetadata;
-    isHomePage?: boolean;
-    noindex?: boolean;
-    language?: 'Hungarian' | 'English';
-    canonical?: string;
-    canonicalLanguage?: 'Hungarian' | 'English';
-    titleBackground?: boolean;
+  title: string;
+  description?: string;
+  image?: string | ImageMetadata;
+  isHomePage?: boolean;
+  noindex?: boolean;
+  language?: 'Hungarian' | 'English';
+  canonical?: string;
+  canonicalLanguage?: 'Hungarian' | 'English';
+  titleBackground?: boolean;
 }
 
 const url = Astro.url;
@@ -28,92 +28,92 @@ const lang = currentUrl.startsWith('/en/') ? 'en' : 'hu';
 ---
 
 <!doctype html>
-<html lang={language === 'Hungarian' ? 'hu' : 'en'}>
-    <head>
-        <Seo {...Astro.props} />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+<html lang={language === 'English' ? 'en' : 'hu'}>
+  <head>
+    <Seo {...Astro.props} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-        <!-- DNS prefetch és preconnect -->
-        <link rel="dns-prefetch" href="https://identity.netlify.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- DNS prefetch és preconnect -->
+    <link rel="dns-prefetch" href="https://identity.netlify.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Favicon optimalizálva
+    <!-- Favicon optimalizálva
         <link rel="icon" type="image/svg+xml" href={faviconSvgSrc.src} />
         <link rel="apple-touch-icon" href={faviconSrc.src} />
         <link rel="manifest" href="/manifest.json" /> -->
 
-        <!-- Favicons (served from /public) -->
-        <!-- <link rel="icon" type="image/svg+xml" href="/favicon/icon.svg" /> -->
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/icon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/icon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png" />
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#f39e12" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Favicons (served from /public) -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon/icon.svg" /> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/icon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#f39e12" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        <!-- Font optimalizálva -->
-        <AstroFont
-            config={[
-                {
-                    src: [],
-                    name: 'Abril Fatface',
-                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
-                    preload: true,
-                    display: 'swap',
-                    selector: 'body',
-                    fallback: 'serif', // Eltávolítottuk a preloadFiles tulajdonságot
-                },
-            ]}
-        />
-        <script defer data-domain="bandha.works" src="https://plausible.io/js/script.js"></script>
+    <!-- Font optimalizálva -->
+    <AstroFont
+      config={[
+        {
+          src: [],
+          name: 'Abril Fatface',
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
+          preload: true,
+          display: 'swap',
+          selector: 'body',
+          fallback: 'serif', // Eltávolítottuk a preloadFiles tulajdonságot
+        },
+      ]}
+    />
+    <script defer data-domain="bandha.works" src="https://plausible.io/js/script.js"></script>
 
-        {noindex && <meta name="robots" content="noindex, nofollow" />}
-    </head>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+  </head>
 
-    <body>
-        <Header />
-        <div class="layout-content-wrapper">
-            <slot />
-        </div>
+  <body>
+    <Header />
+    <div class="layout-content-wrapper">
+      <slot />
+    </div>
 
-        <script>
-            // Netlify Identity típusok
-            interface NetlifyIdentity {
-                on: (event: string, callback: (user?: any) => void) => void;
-            }
+    <script>
+      // Netlify Identity típusok
+      interface NetlifyIdentity {
+        on: (event: string, callback: (user?: any) => void) => void;
+      }
 
-            declare global {
-                interface Window {
-                    netlifyIdentity?: NetlifyIdentity;
-                }
-            }
+      declare global {
+        interface Window {
+          netlifyIdentity?: NetlifyIdentity;
+        }
+      }
 
-            // Csak az admin oldalon töltjük be a Netlify Identity-t
-            if (window.location.pathname.includes('/admin')) {
-                const script = document.createElement('script');
-                script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
-                script.onload = () => {
-                    const netlifyIdentity = window.netlifyIdentity;
-                    if (netlifyIdentity) {
-                        netlifyIdentity.on('init', (user: any) => {
-                            if (!user) {
-                                netlifyIdentity.on('login', () => {
-                                    document.location.href = '/admin/';
-                                });
-                            }
-                        });
-                    }
-                };
-                document.body.appendChild(script);
-            }
-        </script>
-        <Footer lang={lang} />
-    </body>
+      // Csak az admin oldalon töltjük be a Netlify Identity-t
+      if (window.location.pathname.includes('/admin')) {
+        const script = document.createElement('script');
+        script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+        script.onload = () => {
+          const netlifyIdentity = window.netlifyIdentity;
+          if (netlifyIdentity) {
+            netlifyIdentity.on('init', (user: any) => {
+              if (!user) {
+                netlifyIdentity.on('login', () => {
+                  document.location.href = '/admin/';
+                });
+              }
+            });
+          }
+        };
+        document.body.appendChild(script);
+      }
+    </script>
+    <Footer lang={lang} />
+  </body>
 </html>

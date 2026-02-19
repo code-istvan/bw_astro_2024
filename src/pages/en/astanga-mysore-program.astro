@@ -20,9 +20,9 @@ import MysoreStructureCard from '../../components/Carousel/MysoreStructureCard.a
 import '../../sass/pages/_astangaMysoreProgram.scss';
 
 const metadata = {
-    title: 'ASHTANGA MYSORE PROGRAM',
-    description:
-        'Mysore style ashtanga yoga practice is an effective and personalized method that brings physical strength, flexibility, and inner peace. The continuous growth it offers and the teacher-student relationship provides an opportunity for deeper understanding and personal development.',
+  title: 'ASHTANGA MYSORE PROGRAM BUDAPEST',
+  description:
+    'Ashtanga Mysore Yoga Budapest - Mysore style ashtanga yoga practice is an effective and personalized method that brings physical strength, flexibility, and inner peace. The continuous growth it offers and the teacher-student relationship provides an opportunity for deeper understanding and personal development.',
 };
 
 const enMysoreSpecialitiesData = mysoreSpecialitiesData.EN;
@@ -31,285 +31,282 @@ const enMysoreReadings = mysoreReadingsData.EN;
 const enMysoreFaqs = mysoreFaqsData.EN;
 ---
 
-<BaseLayout title={metadata.title} image={desktopImage} description={metadata.description}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container page-content">
-        <div class="page-content__section page-content__section--intro mt-40px mb-40px">
-            <h3 class="clr-brand-orange">
-                <strong>
-                    Practicing Mysore-style ashtanga yoga is an effective and personalized method that brings physical
-                    strength, flexibility, and inner calm. The continuous progress it offers, along with the
-                    teacher-student relationship, provides an opportunity for deeper understanding and personal growth.
-                </strong>
-            </h3>
-        </div>
-        <div class="mb-20px">
-            <h3 class="clr-brand-orange font-family-primary">Asanas: The Foundations of Ashtanga Yoga</h3>
-        </div>
-        <div class="row">
-            <p>
-                The <a href="/en/vinyasza-jogairanyzatok" class="link-enhanced link-orange">ashtanga yoga</a> is an eight-limbed
-                system aimed at achieving the unity of body, mind, and soul. The path can be long and challenging, and it
-                begins with the practice of asanas. Through the practice of these specific postures, we can develop a strong
-                and flexible body, which serves as a foundation for progressing further within the Ashtanga yoga system.
-                While asana practice represents only a small part of the entire system, it is a crucial and indispensable
-                step for the "modern" Western individual, who, due to their lifestyle, often neglects their physical body.
-            </p>
-        </div>
-        <br />
-        <div class="row">
-            <p>
-                <p>
-                    The unique feature of ashtanga vinyasa yoga is that through the practice of asanas, we not only work
-                    on healing the physical body but also prepare for several higher-level limbs, such as pranayama,
-                    concentration, and meditative states of consciousness.
-                </p>
-            </p>
-            <div class="image-track-3 mt-20px">
-                <Image src={MysoreImage1} alt="Ashtanga yoga Mysore-style practice Utthitha adjustment" />
-                <Image src={MysoreImage2} alt="Ashtanga yoga Mysore-style practice ankle hold" />
-                <Image src={MysoreImage3} alt="Ashtanga yoga Mysore-style practice finishing poses" />
-            </div>
-            <div class="row">
-                <h3 class="mb-20px mt-40px clr-brand-orange font-family-primary">Mysore-style</h3>
-                <p>
-                    In ashtanga vinyasa yoga, the asanas are traditionally taught in Mysore-style (pronounced: my-sore).
-                    This method combines the benefits of group-led classes and individual practice. Its essence lies in
-                    the fact that all practitioners in the room perform the sequence independently, following the rhythm
-                    of their own breath. This allows the teacher to provide personalized adjustments and instructions to
-                    everyone without disrupting the flow of the session. As a result, it is perfectly fine if someone
-                    practices for a shorter time (e.g., beginners) or spends a longer time in the room (e.g., advanced
-                    practitioners) during the same class.
-                </p>
-            </div>
-            <div class="island-section text-align-center">
-                <h3 class="mb-20px clr-brand-orange font-family-primary">
-                    <strong>DID YOU KNOW?</strong>
-                </h3>
-                <p>
-                    <strong>
-                        The Mysore-style ashtanga practice is named after the South Indian city of Mysore. <a
-                            href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/"
-                            class="link-enhanced link-orange"
-                        >
-                            Pattabhi Jois
-                        </a> developed the modern ashtanga yoga system here at the Ashtanga Yoga Research Institute, founded
-                        in 1948.
-                    </strong>
-                </p>
-            </div>
-            <div class="row mt-40px">
-                <h3 class="clr-brand-orange font-family-primary mb-20px">The Ideal Time for Asana Practice</h3>
-                <p class="mb-40px">
-                    The practice time is fixed, with Mysore classes traditionally held in the morning. This is because
-                    the <i>Brahma muhurta</i> period, which is the hour and a half before sunrise or as close to it as possible,
-                    is most suitable for yoga practice. During this time, the air is fresh, the environment is quiet, and
-                    we wake up refreshed, not yet burdened by the impressions of a demanding workday. The mind can focus
-                    more easily and wanders less. The body is clean, the stomach empty, making conditions ideal for practice.
-                    Initially, the body may feel less flexible in the morning hours, but it quickly adapts to the new routine
-                </p>
-                <h3 class="clr-brand-orange font-family-primary mb-20px">Principles of Regular Practice</h3>
-                <p class="mb-40px">
-                    This traditional Mysore teaching method involves regular practice, with a goal of practicing six
-                    times a week; however, most practitioners achieve this gradually or practice less frequently.
-                    Saturdays and <a href="/en/holdnapok" class="link-enhanced link-orange">moon days</a> (full and new moon)
-                    are rest days, as well as the first three to five days of menstruation for women. While this may seem
-                    challenging at first, gradual progression is an essential element for undisturbed development in yoga.
-                    The teacher monitors students' progress, and when a student is ready, they receive new asanas to add
-                    to their practice.
-                </p>
-            </div>
-
-            <div class="text-left-mobile-center-desktop mb-40px">
-                <h3 class="clr-brand-orange font-family-primary">Characteristics of Mysore practice</h3>
-            </div>
-            <div class="row gap-1">
-                {
-                    enMysoreSpecialitiesData.map((program) => (
-                        <div class="col-12-xs col-6-md col-6-xl">
-                            <div class="card__mysore-program">
-                                <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
-                                <p>{program.description}</p>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-            <div class="page-content__section width-100 display-flex display-flex--justify-center">
-                <div class="counter text-align-center island-section-tradition island-section--orange-border">
-                    <h3 class="mb-20px font-family-primary clr-brand-orange">TRADITION</h3>
-                    <div class="col-12-xs mb-20px">
-                        <Counter client:only="react" language="eng" />
-                    </div>
-                    <p>Hungary's oldest</p><p>Ashtanga Mysore program</p>
-                    <p>With the blessing of</p><p><strong>Paramaguru</strong></p><p><strong>Sharath Jois</strong></p>
-                    <div class="mt-20px">
-                        <Icons name="SharatJiHandWriting" class="max-width-150" />
-                    </div>
-                </div>
-            </div>
-            <div
-                class="container page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px"
-            >
-                <h3 class="mysore-structure__title clr-brand-orange font-family-primary">
-                    The structure and elements of the Mysore program
-                </h3>
-                <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
-                    {
-                        enMysoreElements.map((element) => (
-                            <div class="framed-section-orange__card">
-                                <Icons name={element.iconName} />
-                                <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
-                                    {element.title}
-                                </h4>
-                                <p class="body clr-shades-gray">{element.description}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-                <div class="mysore-structure__body mysore-structure__cards--mobile">
-                    <Carousel>
-                        {
-                            enMysoreElements.map((element) => (
-                                <div class="section-social-proof__slide embla__slide">
-                                    <MysoreStructureCard
-                                        title={element.title}
-                                        description={element.description}
-                                        icon={element.iconName}
-                                    />
-                                </div>
-                            ))
-                        }
-                    </Carousel>
-                </div>
-            </div>
-
-            <div class="row mt-40px mb-40px">
-                <h3 class="clr-brand-orange font-family-primary mb-20px">
-                    Discipline and Blessing: The Path of Ashtanga Yoga
-                </h3>
-                <p>
-                    It is clear that this practice requires great commitment and serious discipline. However, within
-                    this framework, ashtanga vinyasa yoga is able to fully manifest its blessed effects. In addition to
-                    practitioners automatically switching to a healthier lifestyle (light meals, early bedtimes and
-                    rising, regular life rhythm) to maintain the practice, the mind also gradually transforms. Mysore
-                    practice almost forces us to be honest with ourselves, confronts us with our faults that pose
-                    obstacles on the spiritual path, and serves as a tool to overcome them.
-                </p>
-            </div>
-            <div
-                class="page-content__section page-content__section--lead-teacher island-section container-fluid display-flex--justify-center"
-            >
-                <div class="lead-teacher__header text-center">
-                    <h3 class="lead-teacher__title mb-20px font-family-primary clr-brand-orange">
-                        The leader of the Mysore program
-                    </h3>
-                </div>
-                <div class="lead-teacher__body display-flex display-flex--justify-center align-items-center">
-                    <Image
-                        src={Istvan}
-                        alt="Szalai István astanga jógaóktató"
-                        class="lead-teacher__avatar-image avatar__image avatar__image--medium"
-                    />
-                    <div>
-                        <p>
-                            <a href="/szalai-istvan" class="link-enhanced link-orange">
-                                <strong>István Szalai</strong>
-                            </a>
-                        </p>
-                        <p class="body body--small">KPJAYI Authorized Level 1</p>
-                        <p class="body body--small">ashtanga yoga teacher</p>
-                    </div>
-                </div>
-            </div>
-            <div class="page-content__section page-content__section--application mb-20px mt-40px">
-                <p>
-                    If you would like to join, you can do so through the
-
-                    <a href="/en/mysore-program-jelentkezes" class="link-enhanced link-orange">
-                        Application for the Mysore Program
-                    </a>
-                    page. Please wait for our response before coming to your first Mysore class. Useful information can be
-                    found under the{' '}
-                    <a href="/en/elso-alkalom" class="link-enhanced link-orange">first time</a>
-                    valamint <a href="/en/hazirend" class="link-enhanced link-orange">house rules</a> menu items.
-                </p>
-                <div class="row gap-1 mt-20px">
-                    <div class="application__buttons col-12-xs col-6-md col-6-xl">
-                        <a
-                            href="/en/mysore-program-jelentkezes"
-                            class="btn btn--width-full-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
-                            aria-label="Jelentkezés a Mysore-programba"
-                        >
-                            Application for the Mysore Program
-                        </a>
-                    </div>
-                    <div class="col-12-xs col-6-md col-6-xl application__buttons">
-                        <a
-                            href="/en/arak"
-                            class="btn btn--width-full-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
-                            aria-label="Jelentkezés a Mysore-programba"
-                        >
-                            Mysore Program Prices
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="page-content__section page-content__section--faq mb-40px mt-40px">
-                <h3 class="font-family-primary clr-brand-orange mb-20px">Frequently Asked Questions</h3>
-                <div class="page-content__section page-content__section--faq mb-40px">
-                    {
-                        enMysoreFaqs.length > 0 ? (
-                            enMysoreFaqs.map((faq) => (
-                                <AccordionFaq
-                                    key={faq.id}
-                                    id={`accordion-${faq.id}`}
-                                    Egyedi
-                                    ID
-                                    minden
-                                    accordion
-                                    elemhez
-                                    className="accordion-title"
-                                    faqs={[faq]}
-                                    Egyedi
-                                    kérdés-válasz
-                                    átadása
-                                />
-                            ))
-                        ) : (
-                            <div>No information available.</div>
-                        )
-                    }
-                </div>
-            </div>
-            <div class="page-content__section page-content__section--readings mb-20px">
-                <h3>Useful readings about Mysore practice</h3>
-                <div class="row unordered-list-style mt-20px mb-40px">
-                    <ul>
-                        {
-                            enMysoreReadings.map((item) => (
-                                <li class={item.classNames}>
-                                    <a href={item.link}>{item.title}</a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </div>
-        </div>
+<BaseLayout title={metadata.title} image={desktopImage} description={metadata.description} language="English">
+  <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+  <div class="container page-content">
+    <div class="page-content__section page-content__section--intro mt-40px mb-40px">
+      <h3 class="clr-brand-orange">
+        <strong>
+          Practicing Mysore-style ashtanga yoga is an effective and personalized method that brings physical strength,
+          flexibility, and inner calm. The continuous progress it offers, along with the teacher-student relationship,
+          provides an opportunity for deeper understanding and personal growth.
+        </strong>
+      </h3>
     </div>
+    <div class="mb-20px">
+      <h3 class="clr-brand-orange font-family-primary">Asanas: The Foundations of Ashtanga Yoga</h3>
+    </div>
+    <div class="row">
+      <p>
+        The <a href="/en/vinyasza-jogairanyzatok" class="link-enhanced link-orange">ashtanga yoga</a> is an eight-limbed system
+        aimed at achieving the unity of body, mind, and soul. The path can be long and challenging, and it begins with the
+        practice of asanas. Through the practice of these specific postures, we can develop a strong and flexible body, which
+        serves as a foundation for progressing further within the Ashtanga yoga system. While asana practice represents only
+        a small part of the entire system, it is a crucial and indispensable step for the "modern" Western individual, who,
+        due to their lifestyle, often neglects their physical body.
+      </p>
+    </div>
+    <br />
+    <div class="row">
+      <p>
+        <p>
+          The unique feature of ashtanga vinyasa yoga is that through the practice of asanas, we not only work on
+          healing the physical body but also prepare for several higher-level limbs, such as pranayama, concentration,
+          and meditative states of consciousness.
+        </p>
+      </p>
+      <div class="image-track-3 mt-20px">
+        <Image src={MysoreImage1} alt="Ashtanga yoga Mysore-style practice Utthitha adjustment" />
+        <Image src={MysoreImage2} alt="Ashtanga yoga Mysore-style practice ankle hold" />
+        <Image src={MysoreImage3} alt="Ashtanga yoga Mysore-style practice finishing poses" />
+      </div>
+      <div class="row">
+        <h3 class="mb-20px mt-40px clr-brand-orange font-family-primary">Mysore-style</h3>
+        <p>
+          In ashtanga vinyasa yoga, the asanas are traditionally taught in Mysore-style (pronounced: my-sore). This
+          method combines the benefits of group-led classes and individual practice. Its essence lies in the fact that
+          all practitioners in the room perform the sequence independently, following the rhythm of their own breath.
+          This allows the teacher to provide personalized adjustments and instructions to everyone without disrupting
+          the flow of the session. As a result, it is perfectly fine if someone practices for a shorter time (e.g.,
+          beginners) or spends a longer time in the room (e.g., advanced practitioners) during the same class.
+        </p>
+      </div>
+      <div class="island-section text-align-center">
+        <h3 class="mb-20px clr-brand-orange font-family-primary">
+          <strong>DID YOU KNOW?</strong>
+        </h3>
+        <p>
+          <strong>
+            The Mysore-style ashtanga practice is named after the South Indian city of Mysore. <a
+              href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/"
+              class="link-enhanced link-orange"
+            >
+              Pattabhi Jois
+            </a> developed the modern ashtanga yoga system here at the Ashtanga Yoga Research Institute, founded in 1948.
+          </strong>
+        </p>
+      </div>
+      <div class="row mt-40px">
+        <h3 class="clr-brand-orange font-family-primary mb-20px">The Ideal Time for Asana Practice</h3>
+        <p class="mb-40px">
+          The practice time is fixed, with Mysore classes traditionally held in the morning. This is because the <i>
+            Brahma muhurta
+          </i> period, which is the hour and a half before sunrise or as close to it as possible, is most suitable for yoga
+          practice. During this time, the air is fresh, the environment is quiet, and we wake up refreshed, not yet burdened
+          by the impressions of a demanding workday. The mind can focus more easily and wanders less. The body is clean, the
+          stomach empty, making conditions ideal for practice. Initially, the body may feel less flexible in the morning hours,
+          but it quickly adapts to the new routine
+        </p>
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Principles of Regular Practice</h3>
+        <p class="mb-40px">
+          This traditional Mysore teaching method involves regular practice, with a goal of practicing six times a week;
+          however, most practitioners achieve this gradually or practice less frequently. Saturdays and <a
+            href="/en/holdnapok"
+            class="link-enhanced link-orange"
+          >
+            moon days
+          </a> (full and new moon) are rest days, as well as the first three to five days of menstruation for women. While
+          this may seem challenging at first, gradual progression is an essential element for undisturbed development in yoga.
+          The teacher monitors students' progress, and when a student is ready, they receive new asanas to add to their practice.
+        </p>
+      </div>
+
+      <div class="text-left-mobile-center-desktop mb-40px">
+        <h3 class="clr-brand-orange font-family-primary">Characteristics of Mysore practice</h3>
+      </div>
+      <div class="row gap-1">
+        {
+          enMysoreSpecialitiesData.map((program) => (
+            <div class="col-12-xs col-6-md col-6-xl">
+              <div class="card__mysore-program">
+                <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
+                <p>{program.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="page-content__section width-100 display-flex display-flex--justify-center">
+        <div class="counter text-align-center island-section-tradition island-section--orange-border">
+          <h3 class="mb-20px font-family-primary clr-brand-orange">TRADITION</h3>
+          <div class="col-12-xs mb-20px">
+            <Counter client:only="react" language="eng" />
+          </div>
+          <p>Hungary's oldest</p><p>Ashtanga Mysore program</p>
+          <p>With the blessing of</p><p><strong>Paramaguru</strong></p><p><strong>Sharath Jois</strong></p>
+          <div class="mt-20px">
+            <Icons name="SharatJiHandWriting" class="max-width-150" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="container page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px"
+      >
+        <h3 class="mysore-structure__title clr-brand-orange font-family-primary">
+          The structure and elements of the Mysore program
+        </h3>
+        <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
+          {
+            enMysoreElements.map((element) => (
+              <div class="framed-section-orange__card">
+                <Icons name={element.iconName} />
+                <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">{element.title}</h4>
+                <p class="body clr-shades-gray">{element.description}</p>
+              </div>
+            ))
+          }
+        </div>
+        <div class="mysore-structure__body mysore-structure__cards--mobile">
+          <Carousel>
+            {
+              enMysoreElements.map((element) => (
+                <div class="section-social-proof__slide embla__slide">
+                  <MysoreStructureCard
+                    title={element.title}
+                    description={element.description}
+                    icon={element.iconName}
+                  />
+                </div>
+              ))
+            }
+          </Carousel>
+        </div>
+      </div>
+
+      <div class="row mt-40px mb-40px">
+        <h3 class="clr-brand-orange font-family-primary mb-20px">Discipline and Blessing: The Path of Ashtanga Yoga</h3>
+        <p>
+          It is clear that this practice requires great commitment and serious discipline. However, within this
+          framework, ashtanga vinyasa yoga is able to fully manifest its blessed effects. In addition to practitioners
+          automatically switching to a healthier lifestyle (light meals, early bedtimes and rising, regular life rhythm)
+          to maintain the practice, the mind also gradually transforms. Mysore practice almost forces us to be honest
+          with ourselves, confronts us with our faults that pose obstacles on the spiritual path, and serves as a tool
+          to overcome them.
+        </p>
+      </div>
+      <div
+        class="page-content__section page-content__section--lead-teacher island-section container-fluid display-flex--justify-center"
+      >
+        <div class="lead-teacher__header text-center">
+          <h3 class="lead-teacher__title mb-20px font-family-primary clr-brand-orange">
+            The leader of the Mysore program
+          </h3>
+        </div>
+        <div class="lead-teacher__body display-flex display-flex--justify-center align-items-center">
+          <Image
+            src={Istvan}
+            alt="Szalai István astanga jógaóktató"
+            class="lead-teacher__avatar-image avatar__image avatar__image--medium"
+          />
+          <div>
+            <p>
+              <a href="/szalai-istvan" class="link-enhanced link-orange">
+                <strong>István Szalai</strong>
+              </a>
+            </p>
+            <p class="body body--small">KPJAYI Authorized Level 1</p>
+            <p class="body body--small">ashtanga yoga teacher</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-content__section page-content__section--application mb-20px mt-40px">
+        <p>
+          If you would like to join, you can do so through the
+
+          <a href="/en/mysore-program-jelentkezes" class="link-enhanced link-orange">
+            Application for the Mysore Program
+          </a>
+          page. Please wait for our response before coming to your first Mysore class. Useful information can be found under
+          the{' '}
+          <a href="/en/elso-alkalom" class="link-enhanced link-orange">first time</a>
+          valamint <a href="/en/hazirend" class="link-enhanced link-orange">house rules</a> menu items.
+        </p>
+        <div class="row gap-1 mt-20px">
+          <div class="application__buttons col-12-xs col-6-md col-6-xl">
+            <a
+              href="/en/mysore-program-jelentkezes"
+              class="btn btn--width-full-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
+              aria-label="Jelentkezés a Mysore-programba"
+            >
+              Application for the Mysore Program
+            </a>
+          </div>
+          <div class="col-12-xs col-6-md col-6-xl application__buttons">
+            <a
+              href="/en/arak"
+              class="btn btn--width-full-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
+              aria-label="Jelentkezés a Mysore-programba"
+            >
+              Mysore Program Prices
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="page-content__section page-content__section--faq mb-40px mt-40px">
+        <h3 class="font-family-primary clr-brand-orange mb-20px">Frequently Asked Questions</h3>
+        <div class="page-content__section page-content__section--faq mb-40px">
+          {
+            enMysoreFaqs.length > 0 ? (
+              enMysoreFaqs.map((faq) => (
+                <AccordionFaq
+                  key={faq.id}
+                  id={`accordion-${faq.id}`}
+                  Egyedi
+                  ID
+                  minden
+                  accordion
+                  elemhez
+                  className="accordion-title"
+                  faqs={[faq]}
+                  Egyedi
+                  kérdés-válasz
+                  átadása
+                />
+              ))
+            ) : (
+              <div>No information available.</div>
+            )
+          }
+        </div>
+      </div>
+      <div class="page-content__section page-content__section--readings mb-20px">
+        <h3>Useful readings about Mysore practice</h3>
+        <div class="row unordered-list-style mt-20px mb-40px">
+          <ul>
+            {
+              enMysoreReadings.map((item) => (
+                <li class={item.classNames}>
+                  <a href={item.link}>{item.title}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const button = document.querySelector('#btn1');
-        if (button) {
-            button.addEventListener('click', () => {
-                const url = button.getAttribute('data-url');
-                if (url) {
-                    window.location.href = url;
-                }
-            });
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('#btn1');
+    if (button) {
+      button.addEventListener('click', () => {
+        const url = button.getAttribute('data-url');
+        if (url) {
+          window.location.href = url;
         }
-    });
+      });
+    }
+  });
 </script>

@@ -20,9 +20,9 @@ import MysoreStructureCard from '../components/Carousel/MysoreStructureCard.astr
 import '../sass/pages/_astangaMysoreProgram.scss';
 
 const metadata = {
-    title: 'ASTANGA MYSORE-PROGRAM',
-    description:
-        'A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
+  title: 'ASTANGA MYSORE-PROGRAM BUDAPEST',
+  description:
+    'Astanga Mysore-program Budapesten - A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt, rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.',
 };
 
 const huMysoreSpecialitiesData = mysoreSpecialitiesData.HU;
@@ -32,278 +32,265 @@ const huMysoreFaqs = mysoreFaqsData.HU;
 ---
 
 <BaseLayout title={metadata.title} image={desktopImage} description={metadata.description}>
-    <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
-    <div class="container page-content">
-        <div class="page-content__section page-content__section--intro mt-40px mb-40px">
-            <h3 class="clr-brand-orange">
-                <strong>
-                    A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt,
-                    rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány
-                    kapcsolat lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.
-                </strong>
-            </h3>
-        </div>
-        <div class="mb-20px">
-            <h3 class="clr-brand-orange font-family-primary">Ászanák: Az astanga jóga alapjai</h3>
-        </div>
-        <div class="row">
-            <p>
-                Az <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">astanga jóga</a>
-                egy nyolcágú jógarendszer, amelynek célja a test, az elme és a lélek egységének elérése. Az út hosszú és
-                rögös lehet, amit az ászanák gyakorlásával kell kezdeni. Ezen speciális testhelyzetek gyakorlásával elérhetjük,
-                hogy testünk erős és rugalmas legyen, ami alapul szolgál majd az astanga jógarendszerében történő továbblépésre.
-                Maga az ászanagyakorlás igen kicsi része a teljes rendszernek, viszont nagyon fontos, kihagyhatatlan a „modern”
-                nyugati ember számára, aki az életmódjából fakadóan igencsak elhanyagolja a fizikai testét.
-            </p>
-        </div>
-        <br />
-        <div class="row">
-            <p>
-                Az astanga vinyásza jóga sajátossága, hogy az ászanagyakorlás által, nemcsak a fizikai test gyógyításán
-                dolgozunk, hanem számos magasabb szintű ágat is előkészítünk, mint például a pránajáma, koncentráció
-                vagy a meditációs tudatállapotot.
-            </p>
-        </div>
-        <div class="image-track-3 mt-20px">
-            <Image src={MysoreImage1} alt="Astanga jóga Mysore stílusú gyakorlás Utthitha igazítás" />
-            <Image src={MysoreImage2} alt="Astanga jóga Mysore stílusú gyakorlás bokafogás" />
-            <Image src={MysoreImage3} alt="Astanga jóga Mysore stílusú gyakorlás levezető ászanák" />
-        </div>
-        <div class="row">
-            <h3 class="mb-20px mt-40px clr-brand-orange font-family-primary">Mysore-stílus</h3>
-            <p>
-                Az astanga vinyásza jógában az ászanákat tradicionálisan Mysore- (ejtsd: májszor) stílusban oktatják. A
-                módszer ötvözi a csoportos vezetett órák és az egyéni gyakorlás előnyeit. Lényege, hogy a teremben az
-                összes gyakorló a saját légzésének ritmusára önállóan végzi a sorozatot, ezáltal az oktató mindenkinek
-                egyénre szabott igazításokat, utasításokat tud adni, anélkül hogy ez megzavarná az óra dinamikáját. Így
-                az sem probléma, ha valaki rövidebben gyakorol (pl. kezdő gyakorlók), vagy ha valaki hosszabb időt tölt
-                a teremben (pl. haladó gyakorlók) ugyanazon az órán.
-            </p>
-        </div>
-        <div class="island-section text-align-center">
-            <h3 class="mb-20px clr-brand-orange font-family-primary">
-                <strong>TUDTAD?</strong>
-            </h3>
-            <p>
-                <strong>
-                    A Mysore-stílusú astanga gyakorlás a dél-indiai Mysore városáról kapta a nevét. <a
-                        href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/"
-                        class="link-enhanced link-orange"
-                    >
-                        Pattabhi Jois
-                    </a> itt fejlesztette ki a modernkori astanga jóga rendszerét az 1948-ban alapított Ashtanga Yoga Research
-                    Institute-ban (Astanga Jóga Kutató Intézet).
-                </strong>
-            </p>
-        </div>
-        <div class="row mt-40px">
-            <h3 class="clr-brand-orange font-family-primary mb-20px">Az ászanagyakorlás ideális időpontja</h3>
-            <p class="mb-40px">
-                A gyakorlás időpontja is meghatározott, a Mysore-órákat tradicionálisan reggel tartják. Ennek az az oka,
-                hogy a jógagyakorláshoz az úgynevezett <i>Brahma muhurta</i> napszak a legmegfelelőbb, azaz a napfelkelte
-                előtti másfél óra, vagy ehhez minél közelebbi időpont. Ekkor a levegő friss, a környezet csendes, frissen,
-                kipihenten ébredve még nem nyomasztanak bennünket a benyomások, amelyek a nehéz munkanap során értek minket.
-                Az elme könnyebben tud fókuszálni és kevésbé kalandozik el. A test tiszta, a gyomor üres, tehát a körülmények
-                ideálisak a gyakorláshoz. Kezdetben a test kevésbé hajlékonynak tűnhet a reggeli órákban, de gyorsan alkalmazkodik
-                az új rutinhoz.
-            </p>
-            <h3 class="clr-brand-orange font-family-primary mb-20px">A rendszeres gyakorlás elve</h3>
-            <p class="mb-40px">
-                Ehhez a hagyományos mysore-i oktatási módszerhez az is hozzátartozik, hogy mindenki rendszeresen
-                gyakorol, a cél a heti hatszori gyakorlás; de a legtöbb gyakorló ezt csak fokozatosan éri el, vagy
-                kevesebbszer gyakorol. A szombatok, illetve a teli- és az újhold, azaz a{' '}
-                <a href="/holdnapok" class="link-enhanced link-orange">holdnapok</a>
-                pihenőnapok, valamint a hölgyeknél a menstruáció első három-öt napja. Ez elsőre igen nagy kihívásnak tűnik,
-                de természetesen a jógában is a fokozatosság fontos eleme a zavartalan fejlődésnek. A tanár figyeli a gyakorlók
-                előrehaladását, és ha a tanítvány készen áll, akkor újabb ászanákat kap, amelyeket hozzá kell fűznie a többihez.
-            </p>
-        </div>
-
-        <div class="text-left-mobile-center-desktop mb-40px">
-            <h3 class="clr-brand-orange font-family-primary">A Mysore-gyakorlás jellegzetességei</h3>
-        </div>
-        <div class="row gap-1">
-            {
-                huMysoreSpecialitiesData.map((program) => (
-                    <div class="col-12-xs col-6-md col-6-xl">
-                        <div class="card__mysore-program">
-                            <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
-                            <p>{program.description}</p>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-        <div class="page-content__section display-flex display-flex--justify-center">
-            <div
-                class="counter text-align-center island-section island-section--orange-border island-section--orange-border__width"
-            >
-                <h3 class="mb-20px font-family-primary clr-brand-orange">TRADÍCIÓ</h3>
-                <div class="col-12-xs mb-20px">
-                    <Counter client:only="react" language="hu" />
-                </div>
-                <p>Magyarország legrégebbi astanga Mysore-programja</p>
-                <p>
-                    <strong>Paramaguru Sharath Jois</strong> áldásával
-                </p>
-                <div class="mt-20px">
-                    <Icons name="SharatJiHandWriting" class="max-width-150" />
-                </div>
-            </div>
-        </div>
-
-        <div class="page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px">
-            <h3 class="mysore-structure__title clr-brand-orange font-family-primary">
-                A Mysore-program felépítése, elemei
-            </h3>
-            <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
-                {
-                    huMysoreElements.map((element) => (
-                        <div class="framed-section-orange__card">
-                            <Icons name={element.iconName} />
-                            <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">
-                                {element.title}
-                            </h4>
-                            <p class="body clr-shades-gray">{element.description}</p>
-                        </div>
-                    ))
-                }
-            </div>
-            <div class="mysore-structure__body mysore-structure__cards--mobile">
-                <Carousel>
-                    {
-                        huMysoreElements.map((element) => (
-                            <div class="section-social-proof__slide embla__slide">
-                                <MysoreStructureCard
-                                    title={element.title}
-                                    description={element.description}
-                                    icon={element.iconName}
-                                />
-                            </div>
-                        ))
-                    }
-                </Carousel>
-            </div>
-        </div>
-
-        <div class="row mt-40px mb-40px">
-            <h3 class="clr-brand-orange font-family-primary mb-20px">Fegyelem és áldás: Az astanga jóga útja</h3>
-            <p>
-                Látszik, hogy nagy elkötelezettséget és komoly fegyelmet kíván ez az irányzat. Azonban az astanga
-                vinyásza jóga ezen keretek között képes kifejteni teljesen az áldásos hatását. Amellett, hogy a
-                gyakorlás fenntartásához automatikusan egészségesebb életmódra váltanak a gyakorlók (könnyű étkezések,
-                korai fekvés és kelés, rendszeres életritmus), az elme is fokozatosan átalakul. A Mysore-gyakorlás
-                szinte rákényszerít minket, hogy őszinték legyünk önmagunkkal, szembesít a hibáinkkal, amelyek akadályt
-                képeznek a spirituális úton, és eszközként szolgál a leküzdésükhöz.
-            </p>
-        </div>
-        <div
-            class="page-content__section page-content__section--lead-teacher island-section container-fluid display-flex--justify-center"
-        >
-            <div class="lead-teacher__header text-center">
-                <h3 class="lead-teacher__title mb-20px font-family-primary clr-brand-orange">
-                    A Mysore-program vezetője
-                </h3>
-            </div>
-            <div class="lead-teacher__body display-flex display-flex--justify-center align-items-center">
-                <Image
-                    src={Istvan}
-                    alt="Szalai István astanga jógaóktató"
-                    class="lead-teacher__avatar-image avatar__image avatar__image--medium"
-                />
-                <div>
-                    <p><a href="/szalai-istvan" class="link-enhanced link-orange"><strong>Szalai István</strong></a></p>
-                    <p class="body body--small">KPJAYI Authorized Level 1</p>
-                    <p class="body body--small">astanga jóga oktató</p>
-                </div>
-            </div>
-        </div>
-        <div class="page-content__section page-content__section--application mb-20px mt-40px">
-            <p>
-                Amennyiben szeretnél csatlakozni, ezt a
-
-                <a href="/mysore-program-jelentkezes" class="link-enhanced link-orange">
-                    jelentkezés a Mysore-programba
-                </a>
-                felületen keresztül teheted meg. Kérlek, mindenképp várd meg visszajelzésünket, mielőtt jössz az első Mysore-órára,
-                amelyhez hasznos információkat találhatsz a következő menüpontok alatt:{' '}
-                <a href="/elso-alkalom" class="link-enhanced link-orange">első alkalom</a>
-                valamint <a href="/hazirend" class="link-enhanced link-orange">házirend</a>.
-            </p>
-            <div class="row gap-1 mt-20px">
-                <div class="application__buttons col-12-xs col-6-md col-6-xl">
-                    <a
-                        href="/mysore-program-jelentkezes"
-                        class="btn btn--width-full-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
-                        aria-label="Jelentkezés a Mysore-programba"
-                    >
-                        Jelentkezés a Mysore-programba
-                    </a>
-                </div>
-                <div class="col-12-xs col-6-md col-6-xl application__buttons">
-                    <a
-                        href="/arak"
-                        class="btn btn--width-full-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
-                        aria-label="Jelentkezés a Mysore-programba"
-                    >
-                        Mysore-program árak
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="page-content__section page-content__section--faq mb-40px mt-40px">
-            <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
-            <div class="page-content__section page-content__section--faq mb-40px">
-                {
-                    huMysoreFaqs.length > 0 ? (
-                        huMysoreFaqs.map((faq) => (
-                            <AccordionFaq
-                                key={faq.id}
-                                id={`accordion-${faq.id}`}
-                                Egyedi
-                                ID
-                                minden
-                                accordion
-                                elemhez
-                                className="accordion-title"
-                                faqs={[faq]}
-                                Egyedi
-                                kérdés-válasz
-                                átadása
-                            />
-                        ))
-                    ) : (
-                        <div>Nincs elérhető információ.</div>
-                    )
-                }
-            </div>
-        </div>
-        <div class="page-content__section page-content__section--readings mb-20px">
-            <h3>Hasznos olvasmányok a Mysore-gyakorlásról</h3>
-            <div class="row unordered-list-style mt-20px mb-40px">
-                <ul>
-                    {
-                        huMysoreReadings.map((item) => (
-                            <li class={item.classNames}>
-                                <a href={item.link}>{item.title}</a>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-        </div>
+  <HeroImage mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} alt={metadata.title} pageName={metadata.title} />
+  <div class="container page-content">
+    <div class="page-content__section page-content__section--intro mt-40px mb-40px">
+      <h3 class="clr-brand-orange">
+        <strong>
+          A Mysore-stílusú astanga jóga gyakorlás hatékony és személyre szabott módszer, amely fizikai erőt,
+          rugalmasságot és belső nyugalmat hoz. Az általa kínált folyamatos fejlődés és az oktató-tanítvány kapcsolat
+          lehetőséget ad a mélyebb megértésre és a személyes fejlődésre.
+        </strong>
+      </h3>
     </div>
+    <div class="mb-20px">
+      <h3 class="clr-brand-orange font-family-primary">Ászanák: Az astanga jóga alapjai</h3>
+    </div>
+    <div class="row">
+      <p>
+        Az <a href="/vinyasza-jogairanyzatok" class="link-enhanced link-orange">astanga jóga</a>
+        egy nyolcágú jógarendszer, amelynek célja a test, az elme és a lélek egységének elérése. Az út hosszú és rögös lehet,
+        amit az ászanák gyakorlásával kell kezdeni. Ezen speciális testhelyzetek gyakorlásával elérhetjük, hogy testünk erős
+        és rugalmas legyen, ami alapul szolgál majd az astanga jógarendszerében történő továbblépésre. Maga az ászanagyakorlás
+        igen kicsi része a teljes rendszernek, viszont nagyon fontos, kihagyhatatlan a „modern” nyugati ember számára, aki
+        az életmódjából fakadóan igencsak elhanyagolja a fizikai testét.
+      </p>
+    </div>
+    <br />
+    <div class="row">
+      <p>
+        Az astanga vinyásza jóga sajátossága, hogy az ászanagyakorlás által, nemcsak a fizikai test gyógyításán
+        dolgozunk, hanem számos magasabb szintű ágat is előkészítünk, mint például a pránajáma, koncentráció vagy a
+        meditációs tudatállapotot.
+      </p>
+    </div>
+    <div class="image-track-3 mt-20px">
+      <Image src={MysoreImage1} alt="Astanga jóga Mysore stílusú gyakorlás Utthitha igazítás" />
+      <Image src={MysoreImage2} alt="Astanga jóga Mysore stílusú gyakorlás bokafogás" />
+      <Image src={MysoreImage3} alt="Astanga jóga Mysore stílusú gyakorlás levezető ászanák" />
+    </div>
+    <div class="row">
+      <h3 class="mb-20px mt-40px clr-brand-orange font-family-primary">Mysore-stílus</h3>
+      <p>
+        Az astanga vinyásza jógában az ászanákat tradicionálisan Mysore- (ejtsd: májszor) stílusban oktatják. A módszer
+        ötvözi a csoportos vezetett órák és az egyéni gyakorlás előnyeit. Lényege, hogy a teremben az összes gyakorló a
+        saját légzésének ritmusára önállóan végzi a sorozatot, ezáltal az oktató mindenkinek egyénre szabott
+        igazításokat, utasításokat tud adni, anélkül hogy ez megzavarná az óra dinamikáját. Így az sem probléma, ha
+        valaki rövidebben gyakorol (pl. kezdő gyakorlók), vagy ha valaki hosszabb időt tölt a teremben (pl. haladó
+        gyakorlók) ugyanazon az órán.
+      </p>
+    </div>
+    <div class="island-section text-align-center">
+      <h3 class="mb-20px clr-brand-orange font-family-primary">
+        <strong>TUDTAD?</strong>
+      </h3>
+      <p>
+        <strong>
+          A Mysore-stílusú astanga gyakorlás a dél-indiai Mysore városáról kapta a nevét. <a
+            href="/blog/astanga-ikonok-sri-k-pattabhi-jois-1-resz/"
+            class="link-enhanced link-orange"
+          >
+            Pattabhi Jois
+          </a> itt fejlesztette ki a modernkori astanga jóga rendszerét az 1948-ban alapított Ashtanga Yoga Research Institute-ban
+          (Astanga Jóga Kutató Intézet).
+        </strong>
+      </p>
+    </div>
+    <div class="row mt-40px">
+      <h3 class="clr-brand-orange font-family-primary mb-20px">Az ászanagyakorlás ideális időpontja</h3>
+      <p class="mb-40px">
+        A gyakorlás időpontja is meghatározott, a Mysore-órákat tradicionálisan reggel tartják. Ennek az az oka, hogy a
+        jógagyakorláshoz az úgynevezett <i>Brahma muhurta</i> napszak a legmegfelelőbb, azaz a napfelkelte előtti másfél óra,
+        vagy ehhez minél közelebbi időpont. Ekkor a levegő friss, a környezet csendes, frissen, kipihenten ébredve még nem
+        nyomasztanak bennünket a benyomások, amelyek a nehéz munkanap során értek minket. Az elme könnyebben tud fókuszálni
+        és kevésbé kalandozik el. A test tiszta, a gyomor üres, tehát a körülmények ideálisak a gyakorláshoz. Kezdetben a
+        test kevésbé hajlékonynak tűnhet a reggeli órákban, de gyorsan alkalmazkodik az új rutinhoz.
+      </p>
+      <h3 class="clr-brand-orange font-family-primary mb-20px">A rendszeres gyakorlás elve</h3>
+      <p class="mb-40px">
+        Ehhez a hagyományos mysore-i oktatási módszerhez az is hozzátartozik, hogy mindenki rendszeresen gyakorol, a cél
+        a heti hatszori gyakorlás; de a legtöbb gyakorló ezt csak fokozatosan éri el, vagy kevesebbszer gyakorol. A
+        szombatok, illetve a teli- és az újhold, azaz a{' '}
+        <a href="/holdnapok" class="link-enhanced link-orange">holdnapok</a>
+        pihenőnapok, valamint a hölgyeknél a menstruáció első három-öt napja. Ez elsőre igen nagy kihívásnak tűnik, de természetesen
+        a jógában is a fokozatosság fontos eleme a zavartalan fejlődésnek. A tanár figyeli a gyakorlók előrehaladását, és
+        ha a tanítvány készen áll, akkor újabb ászanákat kap, amelyeket hozzá kell fűznie a többihez.
+      </p>
+    </div>
+
+    <div class="text-left-mobile-center-desktop mb-40px">
+      <h3 class="clr-brand-orange font-family-primary">A Mysore-gyakorlás jellegzetességei</h3>
+    </div>
+    <div class="row gap-1">
+      {
+        huMysoreSpecialitiesData.map((program) => (
+          <div class="col-12-xs col-6-md col-6-xl">
+            <div class="card__mysore-program">
+              <h3 class="clr-brand-orange font-family-primary mb-20px">{program.title}</h3>
+              <p>{program.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="page-content__section display-flex display-flex--justify-center">
+      <div
+        class="counter text-align-center island-section island-section--orange-border island-section--orange-border__width"
+      >
+        <h3 class="mb-20px font-family-primary clr-brand-orange">TRADÍCIÓ</h3>
+        <div class="col-12-xs mb-20px">
+          <Counter client:only="react" language="hu" />
+        </div>
+        <p>Magyarország legrégebbi astanga Mysore-programja</p>
+        <p>
+          <strong>Paramaguru Sharath Jois</strong> áldásával
+        </p>
+        <div class="mt-20px">
+          <Icons name="SharatJiHandWriting" class="max-width-150" />
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content__section page-content__section--mysore-structure text-align-center mt-40px mb-20px">
+      <h3 class="mysore-structure__title clr-brand-orange font-family-primary">A Mysore-program felépítése, elemei</h3>
+      <div class="framed-section-orange__body mysore-structure__body mysore-structure__cards--desktop">
+        {
+          huMysoreElements.map((element) => (
+            <div class="framed-section-orange__card">
+              <Icons name={element.iconName} />
+              <h4 class="font-family-primary mb-20px mt-20px framed-section-orange-title--h4">{element.title}</h4>
+              <p class="body clr-shades-gray">{element.description}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mysore-structure__body mysore-structure__cards--mobile">
+        <Carousel>
+          {
+            huMysoreElements.map((element) => (
+              <div class="section-social-proof__slide embla__slide">
+                <MysoreStructureCard title={element.title} description={element.description} icon={element.iconName} />
+              </div>
+            ))
+          }
+        </Carousel>
+      </div>
+    </div>
+
+    <div class="row mt-40px mb-40px">
+      <h3 class="clr-brand-orange font-family-primary mb-20px">Fegyelem és áldás: Az astanga jóga útja</h3>
+      <p>
+        Látszik, hogy nagy elkötelezettséget és komoly fegyelmet kíván ez az irányzat. Azonban az astanga vinyásza jóga
+        ezen keretek között képes kifejteni teljesen az áldásos hatását. Amellett, hogy a gyakorlás fenntartásához
+        automatikusan egészségesebb életmódra váltanak a gyakorlók (könnyű étkezések, korai fekvés és kelés, rendszeres
+        életritmus), az elme is fokozatosan átalakul. A Mysore-gyakorlás szinte rákényszerít minket, hogy őszinték
+        legyünk önmagunkkal, szembesít a hibáinkkal, amelyek akadályt képeznek a spirituális úton, és eszközként szolgál
+        a leküzdésükhöz.
+      </p>
+    </div>
+    <div
+      class="page-content__section page-content__section--lead-teacher island-section container-fluid display-flex--justify-center"
+    >
+      <div class="lead-teacher__header text-center">
+        <h3 class="lead-teacher__title mb-20px font-family-primary clr-brand-orange">A Mysore-program vezetője</h3>
+      </div>
+      <div class="lead-teacher__body display-flex display-flex--justify-center align-items-center">
+        <Image
+          src={Istvan}
+          alt="Szalai István astanga jógaóktató"
+          class="lead-teacher__avatar-image avatar__image avatar__image--medium"
+        />
+        <div>
+          <p><a href="/szalai-istvan" class="link-enhanced link-orange"><strong>Szalai István</strong></a></p>
+          <p class="body body--small">KPJAYI Authorized Level 1</p>
+          <p class="body body--small">astanga jóga oktató</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-content__section page-content__section--application mb-20px mt-40px">
+      <p>
+        Amennyiben szeretnél csatlakozni, ezt a
+
+        <a href="/mysore-program-jelentkezes" class="link-enhanced link-orange">jelentkezés a Mysore-programba</a>
+        felületen keresztül teheted meg. Kérlek, mindenképp várd meg visszajelzésünket, mielőtt jössz az első Mysore-órára,
+        amelyhez hasznos információkat találhatsz a következő menüpontok alatt:{' '}
+        <a href="/elso-alkalom" class="link-enhanced link-orange">első alkalom</a>
+        valamint <a href="/hazirend" class="link-enhanced link-orange">házirend</a>.
+      </p>
+      <div class="row gap-1 mt-20px">
+        <div class="application__buttons col-12-xs col-6-md col-6-xl">
+          <a
+            href="/mysore-program-jelentkezes"
+            class="btn btn--width-full-mobile btn--primary--solid col col-12-xs col-6-md col-6-xl"
+            aria-label="Jelentkezés a Mysore-programba"
+          >
+            Jelentkezés a Mysore-programba
+          </a>
+        </div>
+        <div class="col-12-xs col-6-md col-6-xl application__buttons">
+          <a
+            href="/arak"
+            class="btn btn--width-full-mobile btn--primary--outline col col-12-xs col-6-md col-6-xl"
+            aria-label="Jelentkezés a Mysore-programba"
+          >
+            Mysore-program árak
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content__section page-content__section--faq mb-40px mt-40px">
+      <h3 class="font-family-primary clr-brand-orange mb-20px">Gyakran ismételt kérdések</h3>
+      <div class="page-content__section page-content__section--faq mb-40px">
+        {
+          huMysoreFaqs.length > 0 ? (
+            huMysoreFaqs.map((faq) => (
+              <AccordionFaq
+                key={faq.id}
+                id={`accordion-${faq.id}`}
+                Egyedi
+                ID
+                minden
+                accordion
+                elemhez
+                className="accordion-title"
+                faqs={[faq]}
+                Egyedi
+                kérdés-válasz
+                átadása
+              />
+            ))
+          ) : (
+            <div>Nincs elérhető információ.</div>
+          )
+        }
+      </div>
+    </div>
+    <div class="page-content__section page-content__section--readings mb-20px">
+      <h3>Hasznos olvasmányok a Mysore-gyakorlásról</h3>
+      <div class="row unordered-list-style mt-20px mb-40px">
+        <ul>
+          {
+            huMysoreReadings.map((item) => (
+              <li class={item.classNames}>
+                <a href={item.link}>{item.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const button = document.querySelector('#btn1');
-        if (button) {
-            button.addEventListener('click', () => {
-                const url = button.getAttribute('data-url');
-                if (url) {
-                    window.location.href = url;
-                }
-            });
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('#btn1');
+    if (button) {
+      button.addEventListener('click', () => {
+        const url = button.getAttribute('data-url');
+        if (url) {
+          window.location.href = url;
         }
-    });
+      });
+    }
+  });
 </script>
